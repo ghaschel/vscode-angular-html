@@ -16,6 +16,7 @@
 
 ## Resources
 - [vuejs/vetur](https://github.com/vuejs/vetur)
+- [vscode/extensions/html](https://github.com/Microsoft/vscode/tree/master/extensions/html)
 - [kkos/oniguruma/doc/RE](https://github.com/kkos/oniguruma/blob/master/doc/RE)
 - [Scope Naming](https://www.sublimetext.com/docs/3/scope_naming.html)
 - [vscode-textmate](https://github.com/Microsoft/vscode-textmate)

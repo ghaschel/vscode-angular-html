@@ -2,7 +2,7 @@
     "name": "vscode-angular-syntax",
     "displayName": "vscode-angular-syntax",
     "description": "Syntax highlighting for angular-html files. (WIP)",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "dunstontc",
     "repository": {
         "type": "git",

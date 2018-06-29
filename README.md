@@ -6,7 +6,7 @@
 
 <div align="center">
     <!-- <a href="https://github.com/Microsoft/vscode"> -->
-        <img src="https://raw.githubusercontent.com/dunstontc/vscode-angular-syntax/master/assets/angular-logo.png" alt="logo">
+        <!-- <img src="https://raw.githubusercontent.com/dunstontc/vscode-angular-syntax/master/assets/angular-logo.png" alt="logo"> -->
     <!-- </a> -->
 </div>
 

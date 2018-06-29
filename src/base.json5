@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "angular-html",
+	"scopeName": "source.angular-html",
+	"patterns": [
+    { "include": "#comment" },
+    { "include": "#constant" },
+    { "include": "#entity" },
+    { "include": "#invalid" },
+    { "include": "#keyword" },
+    { "include": "#meta" },
+    { "include": "#operator" },
+    { "include": "#punctuation" },
+    { "include": "#storage" },
+    { "include": "#string" },
+    { "include": "#support" },
+    { "include": "#type" },
+    { "include": "#variable" },
+  ],
+  "repository":{},
+}

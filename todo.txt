@@ -1,0 +1,4 @@
+Configure comments
+Add punctuation
+Replace "EXTENSION"
+Replace "LANGUAGE"

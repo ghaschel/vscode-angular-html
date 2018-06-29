@@ -1,7 +1,7 @@
 {
     "name": "vscode-angular-syntax",
     "displayName": "vscode-angular-syntax",
-    "description": "Syntax highlighting for angular-html files.",
+    "description": "Syntax highlighting for angular-html files. (WIP)",
     "version": "0.0.1",
     "publisher": "dunstontc",
     "repository": {
@@ -23,28 +23,9 @@
         ],
         "grammars": [
             {
-                "language": "Angular-html",
-                "scopeName": "angular-html",
-                "path": "./syntaxes/angular-html.tmLanguage.json",
-                "embeddedLanguages": {
-                  "text.html.basic": "html",
-                  "text.html.angular-html": "angular-html",
-                  "text.pug": "pug",
-                  "text.haml": "haml",
-                  "source.css": "css",
-                  "source.css.scss": "scss",
-                  "source.css.less": "less",
-                  "source.css.postcss": "postcss",
-                  "source.sass": "sass",
-                  "source.stylus": "stylus",
-                  "source.js": "javascript",
-                  "source.ts": "typescript",
-                  "source.coffee": "coffeescript",
-                  "text.html.markdown": "md",
-                  "source.yaml": "yaml",
-                  "source.json": "json",
-                  "source.php": "php"
-                }
+                "language": "angular-html",
+                "scopeName": "text.html.angular-html",
+                "path": "./syntaxes/angular-html.tmLanguage.json"
             }
         ]
     },

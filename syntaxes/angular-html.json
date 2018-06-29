@@ -308,6 +308,6 @@
             "name": "invalid.illegal.bad-angle-bracket.html"
         }
     ],
-    "name": "Angular-html",
+    "name": "angular-html",
     "scopeName": "text.html.angular-html"
 }

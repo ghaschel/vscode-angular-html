@@ -2,7 +2,7 @@
     "name": "vscode-angular-syntax",
     "displayName": "vscode-angular-syntax",
     "description": "Syntax highlighting for angular-html files. (WIP)",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "dunstontc",
     "repository": {
         "type": "git",
@@ -33,6 +33,7 @@
         "color": "#1e1e1e",
         "theme": "dark"
     },
+    "icon": "assets/angular.png",
     "devDependencies": {
         "gulp": "^3.9.1",
         "gulp-json5-to-json": "^0.2.1",

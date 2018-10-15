@@ -1,42 +1,59 @@
 {
-    "name": "vscode-angular-syntax",
-    "displayName": "vscode-angular-syntax",
-    "description": "Syntax highlighting for angular-html files. (WIP)",
-    "version": "0.0.3",
-    "publisher": "dunstontc",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/dunstontc/vscode-angular-syntax.git"
-    },
-    "bugs": {"url": "https://github.com/dunstontc/vscode-angular-syntax/issues"},
-    "scripts": {"start": "gulp watch"},
-    "engines": {"vscode": "^1.20.0"},
-    "categories": ["Programming Languages"],
-    "contributes": {
-        "languages": [
-            {
-                "id": "angular-html",
-                "aliases": ["Angular-html"],
-                "extensions": [".component.html"],
-                "configuration": "./language-configuration.json"
-            }
+  "name": "vscode-angular-html",
+  "displayName": "vscode-angular-html",
+  "description": "Syntax highlighting for angular-html files",
+  "version": "0.0.1",
+  "publisher": "ghaschel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghaschel/vscode-angular-syntax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ghaschel/vscode-angular-syntax/issues"
+  },
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "engines": {
+    "vscode": "^1.20.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "html",
+        "aliases": [
+          "HTML (Angular template)"
         ],
-        "grammars": [
-            {
-                "language": "angular-html",
-                "scopeName": "text.html.angular-html",
-                "path": "./syntaxes/angular-html.tmLanguage.json"
-            }
-        ]
-    },
-    "galleryBanner": {
-        "color": "#1e1e1e",
-        "theme": "dark"
-    },
-    "icon": "assets/angular.png",
-    "devDependencies": {
-        "gulp": "^3.9.1",
-        "gulp-json5-to-json": "^0.2.1",
-        "gulp-merge-json": "^1.3.0"
-    }
+        "extensions": [
+          ".component.html"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "html",
+        "scopeName": "text.html.angular-html",
+        "path": "./syntaxes/angular-html.tmLanguage.json"
+      }
+    ]
+  },
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "icon": "assets/angular.png",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-json5-to-json": "^0.2.1",
+    "gulp-merge-json": "^1.3.0"
+  },
+  "__metadata": {
+    "id": "392e2c01-7b41-47f4-9ac3-b189769e6966",
+    "publisherId": "564ecb85-8c09-42fc-b2da-902737b2e743",
+    "publisherDisplayName": "ghaschel"
+  }
 }

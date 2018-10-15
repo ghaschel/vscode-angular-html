@@ -1,0 +1,8 @@
+{
+  repository: {
+    "unquoted-attribute": {
+      match: "(?<==)(?:[^\\s<>/'\"]|/(?!>))+",
+      name: "string.unquoted.html"
+    }
+  }
+}

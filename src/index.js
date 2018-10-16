@@ -1,5 +1,5 @@
 function getJSON(path) {
-	return JSON.parse(fs.readFileSync(path));
+  return JSON.parse(fs.readFileSync(path));
 }
 
 const fs = require('fs');
@@ -16,7 +16,7 @@ const tagIdAttribute = getJSON('./json/repository/tag-id-attribute.json');
 const tagStuff = getJSON('./json/repository/tag-stuff.json');
 const unquotedAttribute = getJSON('./json/repository/unquoted-attribute.json');
 
-const pAngularInterpolations = getJSON('./json/patterns/angular.iterpolations.json');
+const pAngularInterpolations = getJSON('./json/patterns/angular.interpolations.json');
 const pCommentBlockHtml = getJSON('./json/patterns/comment.block.html.json');
 const pEntities = getJSON('./json/patterns/entities.json');
 const pInvalidIllegalBadAngleBracket = getJSON('./json/patterns/invalid.illegal.bad-angle-bracket.json');
@@ -33,40 +33,40 @@ const pMetaTagSgmlHtml = getJSON('./json/patterns/meta.tag.sgml.html.json');
 const pMetaTagStructureAnyHtml = getJSON('./json/patterns/meta.tag.structure.any.html.json');
 
 const base = {
-	repository: {
-		"entities": entities,
-		"unquoted-attribute": unquotedAttribute,
-		"string-single-quoted": stringSingleQuoted,
-		"string-double-quoted": stringDoubleQuoted,
-		"angular-interpolations": angularInterpolations,
-		"angular-directives": angularDirectives,
-		"tag-generic-attribute": tagGenericAttribute,
-		"tag-id-attribute": tagIdAttribute,
-		"tag-stuff": tagStuff,
-	},
-	patterns: [
-		pAngularInterpolations,
-		pMetaTagAnyHtml,
-		pMetaTagPreprocessorXmlHtml,
-		pCommentBlockHtml,
-		pMetaTagSgmlHtml,
-		pMetaTagBlockAnyHtml1,
-		pMetaTagAngularHtmlAnyHtml,
-		pMetaTagAngularHtmlContentAnyHtml,
-		pMetaTagStructureAnyHtml,
-		pMetaTagBlockAnyHtml2,
-		pMetaTagInlineAnyHtml,
-		pMetaTagOtherHtml,
-		pEntities,
-		pInvalidIllegalIncomplete,
-		pInvalidIllegalBadAngleBracket
-	],
-	name: "angular-html",
-	scopeName: "text.html.angular-html"
+  repository: {
+    "entities": entities,
+    "unquoted-attribute": unquotedAttribute,
+    "string-single-quoted": stringSingleQuoted,
+    "string-double-quoted": stringDoubleQuoted,
+    "angular-interpolations": angularInterpolations,
+    "angular-directives": angularDirectives,
+    "tag-generic-attribute": tagGenericAttribute,
+    "tag-id-attribute": tagIdAttribute,
+    "tag-stuff": tagStuff,
+  },
+  patterns: [
+    pAngularInterpolations,
+    pMetaTagAnyHtml,
+    pMetaTagPreprocessorXmlHtml,
+    pCommentBlockHtml,
+    pMetaTagSgmlHtml,
+    pMetaTagBlockAnyHtml1,
+    pMetaTagAngularHtmlAnyHtml,
+    pMetaTagAngularHtmlContentAnyHtml,
+    pMetaTagStructureAnyHtml,
+    pMetaTagBlockAnyHtml2,
+    pMetaTagInlineAnyHtml,
+    pMetaTagOtherHtml,
+    pEntities,
+    pInvalidIllegalIncomplete,
+    pInvalidIllegalBadAngleBracket
+  ],
+  name: "angular-html",
+  scopeName: "text.html.angular-html"
 }
 
 const json = beautify(base, null, 2, 80);
 
-saveFile(json, '../syntaxes/angular-html.tmLanguage.json', (err, data) => {
-	if (err) throw err;
+saveFile(json, '../syntaxes/angular-html.tmLanguage.json', (err) => {
+  if (err) throw err;
 });

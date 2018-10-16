@@ -1,0 +1,21 @@
+{
+	"beginCaptures": {
+		"2": {
+			"name": "entity.name.tag.other.html"
+		},
+		"1": {
+			"name": "punctuation.definition.tag.begin.html"
+		}
+	},
+	"patterns": [{
+		"include": "#tag-stuff"
+	}],
+	"begin": "(</?)([a-zA-Z0-9:-]+)",
+	"endCaptures": {
+		"1": {
+			"name": "punctuation.definition.tag.end.html"
+		}
+	},
+	"end": "(/?>)",
+	"name": "meta.tag.other.html"
+}

@@ -1,0 +1,21 @@
+{
+	"name": "meta.tag.angular-html.any.html",
+	"beginCaptures": {
+		"2": {
+			"name": "entity.name.tag.style.html"
+		},
+		"1": {
+			"name": "punctuation.definition.tag.begin.html"
+		}
+	},
+	"begin": "(<)(template)\\b(?=[^/>]*/>\\s*$)",
+	"endCaptures": {
+		"1": {
+			"name": "punctuation.definition.tag.end.html"
+		}
+	},
+	"end": "(/>)",
+	"patterns": [{
+		"include": "#tag-stuff"
+	}]
+}

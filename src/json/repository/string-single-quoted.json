@@ -1,0 +1,22 @@
+{
+  "beginCaptures": {
+    "0": {
+      "name": "punctuation.definition.string.begin.html"
+    }
+  },
+  "patterns": [{
+      "include": "#angular-interpolations"
+    },
+    {
+      "include": "#entities"
+    }
+  ],
+  "begin": "'",
+  "endCaptures": {
+    "0": {
+      "name": "punctuation.definition.string.end.html"
+    }
+  },
+  "end": "'",
+  "name": "string.quoted.single.html"
+}

@@ -1,6 +1,7 @@
-# Angular Syntax Highlighting 
+# Angular Syntax Highlighting
+
 [![GitHub issues](https://img.shields.io/github/issues/dunstontc/vscode-angular-syntax.svg)](https://github.com/dunstontc/vscode-angular-syntax/issues)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dunstontc/vscode-angular-syntax/blob/master/LICENSE) 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dunstontc/vscode-angular-syntax/blob/master/LICENSE)
 [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/dunstontc.vscode-angular-syntax.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=dunstontc.vscode-angular-syntax)
 [![Version](https://vsmarketplacebadge.apphb.com/version-short/dunstontc.vacode-angular-syntax.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=dunstontc.vscode-angular-syntax)
 
@@ -10,11 +11,12 @@
     <!-- </a> -->
 </div>
 
-
 ## Status
+
 > This project is currently in development and is not yet ready for use. I'll update this readme when the status changes.
 
 ## Resources
+
 - [vuejs/vetur](https://github.com/vuejs/vetur)
 - [vscode/extensions/html](https://github.com/Microsoft/vscode/tree/master/extensions/html)
 - [kkos/oniguruma/doc/RE](https://github.com/kkos/oniguruma/blob/master/doc/RE)
@@ -22,4 +24,3 @@
 - [vscode-textmate](https://github.com/Microsoft/vscode-textmate)
 
 ## [License](https://github.com/dunstontc/vscode-angular-syntax/blob/master/LICENSE)
-

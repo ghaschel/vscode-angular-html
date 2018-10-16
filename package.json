@@ -47,9 +47,8 @@
   },
   "icon": "assets/angular.png",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-json5-to-json": "^0.2.1",
-    "gulp-merge-json": "^1.3.0"
+    "json-beautify": "^1.0.1",
+    "save-file": "^1.2.1"
   },
   "__metadata": {
     "id": "392e2c01-7b41-47f4-9ac3-b189769e6966",

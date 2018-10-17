@@ -1,4 +1,0 @@
- {
-   "match": "(?<==)(?:[^\\s<>/'\"]|/(?!>))+",
-   "name": "string.unquoted.html"
- }

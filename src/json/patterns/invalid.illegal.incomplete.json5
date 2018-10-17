@@ -1,0 +1,9 @@
+{
+  patterns: [
+    {
+      index: 14,
+      match: "<>",
+      name: "invalid.illegal.incomplete.html"
+    }
+  ]
+}

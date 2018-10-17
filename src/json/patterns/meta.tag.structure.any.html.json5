@@ -1,0 +1,28 @@
+{
+  patterns: [
+    {
+      index: 9,
+      captures: {
+        "2": {
+          name: "entity.name.tag.structure.any.html"
+        },
+        "1": {
+          name: "punctuation.definition.tag.begin.html"
+        }
+      },
+      patterns: [
+        {
+          include: "#tag-stuff"
+        }
+      ],
+      begin: "(</?)((?i:body|head|html)\\b)",
+      endCaptures: {
+        "1": {
+          name: "punctuation.definition.tag.end.html"
+        }
+      },
+      end: "(>)",
+      name: "meta.tag.structure.any.html"
+    }
+  ]
+}

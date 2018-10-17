@@ -1,0 +1,21 @@
+{
+  patterns: [
+    {
+      index: 4,
+      captures: {
+        "0": {
+          name: "punctuation.definition.comment.html"
+        }
+      },
+      begin: "<!--",
+      end: "--\\s*>",
+      name: "comment.block.html",
+      patterns: [
+        {
+          match: "--",
+          name: "invalid.illegal.bad-comments-or-CDATA.html"
+        }
+      ]
+    }
+  ]
+}

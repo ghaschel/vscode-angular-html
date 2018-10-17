@@ -1,0 +1,9 @@
+{
+  patterns: [
+    {
+      index: 15,
+      match: "<",
+      name: "invalid.illegal.bad-angle-bracket.html"
+    }
+  ]
+}

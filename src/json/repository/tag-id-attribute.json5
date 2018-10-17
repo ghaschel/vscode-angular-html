@@ -1,0 +1,76 @@
+{
+  repository: {
+    "tag-id-attribute": {
+      captures: {
+        "2": {
+          name: "punctuation.separator.key-value.html"
+        },
+        "1": {
+          name: "entity.other.attribute-name.id.html"
+        }
+      },
+      begin: "\\b(id)\\b\\s*(=)",
+      end: "(?!\\G)(?<='|\"|[^\\s<>/])",
+      name: "meta.attribute-with-value.id.html",
+      patterns: [
+        {
+          beginCaptures: {
+            "0": {
+              name: "punctuation.definition.string.begin.html"
+            }
+          },
+          patterns: [
+            {
+              include: "#angular-interpolations"
+            },
+            {
+              include: "#entities"
+            }
+          ],
+          begin: '"',
+          endCaptures: {
+            "0": {
+              name: "punctuation.definition.string.end.html"
+            }
+          },
+          end: '"',
+          name: "string.quoted.double.html",
+          contentName: "meta.toc-list.id.html"
+        },
+        {
+          beginCaptures: {
+            "0": {
+              name: "punctuation.definition.string.begin.html"
+            }
+          },
+          patterns: [
+            {
+              include: "#angular-interpolations"
+            },
+            {
+              include: "#entities"
+            }
+          ],
+          begin: "'",
+          endCaptures: {
+            "0": {
+              name: "punctuation.definition.string.end.html"
+            }
+          },
+          end: "'",
+          name: "string.quoted.single.html",
+          contentName: "meta.toc-list.id.html"
+        },
+        {
+          captures: {
+            "0": {
+              name: "meta.toc-list.id.html"
+            }
+          },
+          match: "(?<==)(?:[^\\s<>/'\"]|/(?!>))+",
+          name: "string.unquoted.html"
+        }
+      ]
+    }
+  }
+}

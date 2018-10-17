@@ -8,12 +8,14 @@ gulp.task('default', () => {});
 gulp.task('compile-json', () => {
   gulp.src('./src/**/*.json5')
     .pipe(merge({
-      fileName: "shell.tmLanguage.json",
+      fileName: "angular-html.tmLanguage.json",
       json5: true,
       customizer: (objA, objB) => {
         // Sort elements to ensure we are keeping the pattern working
         if (objA instanceof Array && objB instanceof Array) {
-          return _.sortBy(objA.concat(objB), ['index']).forEach(el => delete el.index)
+          if (objA.some(el => el.index) && objB.some(el => el.index)) {
+            return _.sortBy(objA.concat(objB), ['index']);
+          }
         }
       },
     }))

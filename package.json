@@ -45,9 +45,10 @@
     "color": "#1e1e1e",
     "theme": "dark"
   },
-  "icon": "assets/angular.png",
+  "icon": "assets/angular-html.png",
   "devDependencies": {
     "json-beautify": "^1.0.1",
+    "lodash": "^4.17.11",
     "save-file": "^1.2.1"
   },
   "__metadata": {

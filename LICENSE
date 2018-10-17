@@ -1,6 +1,10 @@
+Copyright for portions of project vscode-angular-html are held by [Clay Dunston, 2018]
+as part of project vscode-angular-syntax. All other copyright for project
+vscode-angular-html are held by [Guilherme Haschel, 2018].
+
 MIT License
 
-Copyright (c) 2018 Clay Dunston <dunstontc@gmail.com>
+Copyright (c) 2018 Guilherme Haschel <ghaschel@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

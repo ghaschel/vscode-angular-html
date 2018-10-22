@@ -1,0 +1,43 @@
+{
+  repository: {
+    "tag-function-attribute": {
+      captures: {
+        "2": {
+          name: "punctuation.separator.key-value.html"
+        },
+        "1": {
+          name: "entity.other.attribute-name.function.html"
+        }
+      },
+      begin: "(onclick|onblur)\\s*(=)",
+      end: "(?!\\G)(?<='|\"|[^\\s<>/])",
+      name: "meta.attribute-with-value.function.html",
+      patterns: [
+        {
+          beginCaptures: {
+            "0": { name: "punctuation.definition.string.begin.html" }
+          },
+          patterns: [{ include: "source.js#expression" }],
+          begin: '"',
+          endCaptures: {
+            "0": { name: "punctuation.definition.string.end.html" }
+          },
+          end: '"',
+          name: "source.function.html"
+        },
+        {
+          beginCaptures: {
+            "0": { name: "punctuation.definition.string.begin.html" }
+          },
+          patterns: [{ include: "source.js#expression" }],
+          begin: "'",
+          endCaptures: {
+            "0": { name: "punctuation.definition.string.end.html" }
+          },
+          end: "'",
+          name: "source.function.html"
+        }
+      ]
+    }
+  }
+}

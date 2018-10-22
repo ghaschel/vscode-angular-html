@@ -1,8 +1,17 @@
 {
   repository: {
     "tag-generic-attribute": {
-      match: "(?<=[^=])\\b([a-zA-Z0-9:-]+)",
-      name: "entity.other.attribute-name.html"
+      name: "entity.other.attribute-name.html",
+      captures: {
+        "2": {
+          name: "punctuation.separator.key-value.html"
+        },
+        "1": {
+          name: "entity.other.attribute-name.generic.html"
+        }
+      },
+      match: "(?!\\b(onclick|onblur)\\b)(([a-zA-Z0-9\\-])*)\\s*(=)",
+      patterns: []
     }
   }
 }

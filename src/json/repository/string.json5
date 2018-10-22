@@ -48,7 +48,8 @@
     },
     "unquoted-attribute": {
       match: "(?<==)(?:[^\\s<>/'\"]|/(?!>))+",
-      name: "string.unquoted.html"
+      name: "string.unquoted.html",
+      patterns: []
     }
   }
 }

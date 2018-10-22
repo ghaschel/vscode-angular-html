@@ -14,6 +14,7 @@
     { include: "#operator" },
     { include: "#punctuation" },
     { include: "#string" },
+    { include: "#tag-function-attribute" },
     { include: "#tag-generic-attribute" },
     { include: "#tag-id-attrbute" },
     { include: "#tag-stuff" }

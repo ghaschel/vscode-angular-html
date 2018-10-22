@@ -1,0 +1,20 @@
+{
+  repository: {
+    operator: {
+      patterns: [
+        // {
+        //   "name": "keyword.operator.swift",
+        //   "match": "[\\/=\\-+!*%<>&|^~,\\?:\\[\\]]"
+        // },
+        // {
+        //   name: "keyword.operator.swift",
+        //   match: "\\B[\\/=\\-+!*%<>&|^~\\?:]\\B"
+        // },
+        // {
+        //   name: "keyword.operator.access.swift",
+        //   match: "[.](?!\\d)"
+        // }
+      ]
+    }
+  }
+}

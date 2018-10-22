@@ -1,0 +1,16 @@
+{
+  repository: {
+    punctuation: {
+      patterns: [
+        // {
+        //   name: "punctuation.other.comma.swift",
+        //   match: ","
+        // },
+        // {
+        //   name: "punctuation.other.paren.swift",
+        //   match: "[)(]"
+        // }
+      ]
+    }
+  }
+}

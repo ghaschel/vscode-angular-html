@@ -1,0 +1,20 @@
+{
+  repository: {
+    comment: {
+      patterns: [
+        {
+          name: "comment.block.html",
+          begin: "<!--",
+          beginCaptures: {
+            "0": { name: "punctuation.definition.comment.begin.html" }
+          },
+          end: "-->",
+          endCaptures: {
+            "0": { name: "punctuation.definition.comment.end.html" }
+          },
+          patterns: [{ include: "#comment" }]
+        }
+      ]
+    }
+  }
+}

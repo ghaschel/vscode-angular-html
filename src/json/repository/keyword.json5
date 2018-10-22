@@ -1,0 +1,36 @@
+{
+  repository: {
+    keyword: {
+      patterns: [
+        // {
+        //   name: "keyword.statement.swift",
+        //   match: "\\b(break|case|continue|catch|do|default|defer|else|fallthrough|for|guard|if|in|repeat|return|switch|try|where|while)\\b"
+        // },
+        // {
+        //   name: "keyword.declaration.swift",
+        //   match: "\\b(deinit|import|init|subscript)\\b"
+        // },
+        // {
+        //   name: "keyword.other.placeholder.swift",
+        //   match: "\\b(_)\\b"
+        // },
+        // // {
+        // //   "name": "keyword.other.swift",
+        // //   "match": "\\b(as|dynamicType|is|new|super|self|Self|Type|#column|#file|#function|#line)\\b"
+        // // },
+        // // {
+        // //   "name": "variable.language.swift",
+        // //   "match": "\\b(as|dynamicType|is|new|super|self|Self|Type|#column|#file|#function|#line)\\b"
+        // // },
+        // {
+        //   name: "variable.language.swift",
+        //   match: "\\b(new|super)\\b"
+        // },
+        // {
+        //   name: "keyword.reserved.swift",
+        //   match: "\\b(associativity|didSet|get|infix|inout|left|mutating|nonmutating|operator|override|postfix|precedence|prefix|right|set|unowned|unowned(safe)|unowned(unsafe)|weak|willSet)\\b"
+        // }
+      ]
+    }
+  }
+}

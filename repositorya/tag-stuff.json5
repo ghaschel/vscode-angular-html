@@ -1,0 +1,26 @@
+{
+  repository: {
+    "tag-stuff": {
+      patterns: [
+        {
+          include: "#angular-directives"
+        },
+        {
+          include: "#tag-id-attribute"
+        },
+        {
+          include: "#tag-generic-attribute"
+        },
+        {
+          include: "#string-double-quoted"
+        },
+        {
+          include: "#string-single-quoted"
+        },
+        {
+          include: "#unquoted-attribute"
+        }
+      ]
+    }
+  }
+}

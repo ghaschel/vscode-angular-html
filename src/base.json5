@@ -18,8 +18,6 @@
     { include: "#tag-generic-attribute" },
     { include: "#tag-id-attrbute" },
     { include: "#tag-stuff" }
-    // { include: "#type" },
-    // { include: "#variable" }
   ],
   repository: {}
 }

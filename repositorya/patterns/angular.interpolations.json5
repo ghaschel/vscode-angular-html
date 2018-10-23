@@ -1,8 +1,0 @@
-{
-  patterns: [
-    {
-      index: 1,
-      include: "#angular-interpolations"
-    }
-  ]
-}

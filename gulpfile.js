@@ -9,15 +9,7 @@ gulp.task('compile-json', () => {
   gulp.src('./src/**/*.json5')
     .pipe(merge({
       fileName: "angular-html.tmLanguage.json",
-      json5: true,
-      customizer: (objA, objB) => {
-        // Sort elements to ensure we are keeping the pattern working
-        if (objA instanceof Array && objB instanceof Array) {
-          if (objA.some(el => el.index) && objB.some(el => el.index)) {
-            return _.sortBy(objA.concat(objB), ['index']);
-          }
-        }
-      },
+      json5: true
     }))
     .pipe(json5({
       beautify: true,

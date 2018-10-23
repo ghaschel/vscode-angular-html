@@ -1,8 +1,0 @@
-{
-  patterns: [
-    {
-      index: 13,
-      include: "#entities"
-    }
-  ]
-}

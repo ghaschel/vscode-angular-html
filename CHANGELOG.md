@@ -1,6 +1,14 @@
 # Change Log
 
-# 0.0.4 (15/10/2018)
+# 0.0.5 (23/10/2018)
+
+- Changes in scopes names
+- Fixed the issue with tag auto closing
+- Fixed the issue with vscode-icons
+- Fixed some conflicts in HTML attributes and Angular directives.
+- [Support for DOM events (Common, Pointer, Internet Explorer-specific and XUL events)](https://en.wikipedia.org/wiki/DOM_events)
+
+# 0.0.4 (_15/10/2018_) - Fork
 
 - Code rewrite for a better maintability.
 - Added support for bindings and template variables: (), [], [()], #

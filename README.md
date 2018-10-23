@@ -2,8 +2,9 @@
 
 [![GitHub issues](https://img.shields.io/github/issues/ghaschel/vscode-angular-html.svg)](https://github.com/ghaschel/vscode-angular-syntax/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ghaschel/vscode-angular-html/blob/master/LICENSE)
-[![Installs](https://vsmarketplacebadge.apphb.com/installs-short/dunstontc.vscode-angular-syntax.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=dunstontc.vscode-angular-syntax)
-[![Version](https://vsmarketplacebadge.apphb.com/version-short/dunstontc.vacode-angular-syntax.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=dunstontc.vscode-angular-syntax)
+
+<!-- [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/dunstontc.vscode-angular-syntax.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=dunstontc.vscode-angular-syntax)
+[![Version](https://vsmarketplacebadge.apphb.com/version-short/dunstontc.vacode-angular-syntax.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=dunstontc.vscode-angular-syntax) -->
 
 <div align="center">
     <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-html.png" title="vscode-angular-html" alt="logo">

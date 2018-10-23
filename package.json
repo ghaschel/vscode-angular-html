@@ -2,7 +2,7 @@
   "name": "vscode-angular-html",
   "displayName": "vscode-angular-html",
   "description": "Syntax highlighting for angular-html files",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "publisher": "ghaschel",
   "repository": {
     "type": "git",
@@ -49,10 +49,5 @@
     "json-beautify": "^1.0.1",
     "lodash": "^4.17.11",
     "save-file": "^1.2.1"
-  },
-  "__metadata": {
-    "id": "392e2c01-7b41-47f4-9ac3-b189769e6966",
-    "publisherId": "564ecb85-8c09-42fc-b2da-902737b2e743",
-    "publisherDisplayName": "ghaschel"
   }
 }

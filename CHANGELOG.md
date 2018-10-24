@@ -1,6 +1,11 @@
 # Change Log
 
-# 0.0.5 (23/10/2018)
+# 0.0.6 (24/10/2018)
+
+- Fixed tag opening and closing recognition caused by conflicts.
+- Removal of XML pattern as it is not usable inside of the Angular template file.
+
+# 0.0.5 (_23/10/2018_)
 
 - Changes in scopes names
 - Fixed the issue with tag auto closing

@@ -15,6 +15,7 @@
     { include: "#punctuation" },
     { include: "#string" },
     { include: "#tag-events-attribute" },
+    { include: "#tag-opening-closing" },
     { include: "#tag-generic-attribute" },
     { include: "#tag-stuff" }
   ],

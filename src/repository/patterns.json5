@@ -3,6 +3,8 @@
     {
       include: "#angular-interpolations"
     },
+
+    // HTML elements
     {
       beginCaptures: {
         "2": {
@@ -37,30 +39,6 @@
       },
       end: "(>)(<)(/)(\\2)(>)",
       name: "meta.tag.any.html"
-    },
-    {
-      captures: {
-        "2": {
-          name: "entity.name.tag.xml.html"
-        },
-        "1": {
-          name: "punctuation.definition.tag.html"
-        }
-      },
-      begin: "(<\\?)(xml)",
-      end: "(\\?>)",
-      name: "meta.tag.preprocessor.xml.html",
-      patterns: [
-        {
-          include: "#tag-generic-attribute"
-        },
-        {
-          include: "#string-double-quoted"
-        },
-        {
-          include: "#string-single-quoted"
-        }
-      ]
     },
     {
       captures: {
@@ -99,6 +77,8 @@
         }
       ]
     },
+
+    // Unknown
     {
       beginCaptures: {
         "2": {
@@ -122,6 +102,8 @@
       end: "(>)",
       name: "meta.tag.block.any.html"
     },
+
+    // Style inline?
     {
       beginCaptures: {
         "2": {

@@ -1,9 +1,17 @@
 # Change Log
 
-# 0.0.6 (24/10/2018)
+# 0.0.7 (24/10/2018)
+
+- Changes in scope names
+- Added regex highlight (initial)
+- Added ng-template and ng-container as block elements alongside html5's template tag.
+- Removal of \[CDATA\] pattern as it is not usable inside of Angular's template file.
+- Fixed the case when attributes would have their "=" colored.
+
+# 0.0.6 (_24/10/2018_)
 
 - Fixed tag opening and closing recognition caused by conflicts.
-- Removal of XML pattern as it is not usable inside of the Angular template file.
+- Removal of XML pattern as it is not usable inside of Angular's template file.
 
 # 0.0.5 (_23/10/2018_)
 

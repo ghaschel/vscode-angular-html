@@ -13,10 +13,12 @@
     { include: "#meta" },
     { include: "#operator" },
     { include: "#punctuation" },
+    { include: "#regex" },
     { include: "#string" },
     { include: "#tag-events-attribute" },
     { include: "#tag-opening-closing" },
     { include: "#tag-generic-attribute" },
+    //{ include: "#tag-generic-without-value" },
     { include: "#tag-stuff" }
   ],
   repository: {}

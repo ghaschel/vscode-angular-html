@@ -4,10 +4,10 @@
       name: "entity.name.tag",
       captures: {
         "2": {
-          name: "punctuation.definition.tag.begin.html"
+          name: "entity.name.tag.begin.html"
         },
         "3": {
-          name: "punctuation.definition.tag.end.html"
+          name: "entity.name.tag.end.html"
         }
       },
       match: "((<\\/?)[a-zA-Z0-9\\-]++*>?)|\\/?>",

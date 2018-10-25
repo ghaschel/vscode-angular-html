@@ -228,9 +228,12 @@
             "name": "invalid.illegal.incomplete.html"
         },
         {
-            "include": "#string",
+            "include": "#regex",
             "match": "<",
             "name": "invalid.illegal.bad-angle-bracket.html"
+        },
+        {
+            "include": "#string"
         },
         {
             "include": "#tag-events-attribute"
@@ -255,7 +258,7 @@
                     "name": "punctuation.separator.key-value.html"
                 }
             },
-            "begin": "((?:\\b(v-)|((\\*|#)|(\\(|\\[){1,2}))([a-zA-Z0-9\\-]+)(?:\\:([a-zA-Z0-9\\-]+))?(?:\\.([a-zA-Z0-9\\-]+))?((\\)|\\]){1,2})*)\\s*(=)",
+            "begin": "((?:\\b(v-)|((\\*|#)|(\\(|\\[){1,2}))([a-zA-Z0-9\\-]+)(?:\\:([a-zA-Z0-9\\-]+))?(?:\\.([a-zA-Z0-9\\-]+))?((\\)|\\]){1,2}))(?==)",
             "end": "(?<='|\")|(?=[\\s<>`])",
             "name": "meta.directive.angular",
             "patterns": [
@@ -433,6 +436,11 @@
             "end": "\"",
             "name": "string.quoted.double.html"
         },
+        "regex": {
+            "match": "/([a-zA-Z0-9\\[\\]\\(\\)\\*+-^~:/;\\.\\,\\{\\}]+)/([nsxAgimuY]*+?)",
+            "name": "string.regexp",
+            "patterns": []
+        },
         "unquoted-attribute": {
             "match": "(?<==)(?:[^\\s<>/'\"]|/(?!>))+",
             "name": "string.unquoted.html",
@@ -447,7 +455,7 @@
                     "name": "punctuation.separator.key-value.html"
                 }
             },
-            "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting)\\s*(=)",
+            "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting)+(?==)",
             "end": "(?!\\G)(?<='|\"|[^\\s<>/])",
             "name": "meta.attribute-with-value.events.html",
             "patterns": [
@@ -503,17 +511,17 @@
                     "name": "punctuation.separator.key-value.html"
                 }
             },
-            "match": "(?!\\b(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting)\\b)(([a-zA-Z0-9\\-])*)\\s*(=)",
+            "match": "(?!\\b(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting)\\b)(([a-zA-Z0-9\\-])+)(?==)",
             "patterns": []
         },
         "tag-opening-closing": {
             "name": "entity.name.tag",
             "captures": {
                 "2": {
-                    "name": "punctuation.definition.tag.begin.html"
+                    "name": "entity.name.tag.begin.html"
                 },
                 "3": {
-                    "name": "punctuation.definition.tag.end.html"
+                    "name": "entity.name.tag.end.html"
                 }
             },
             "match": "((<\\/?)[a-zA-Z0-9\\-]++*>?)|\\/?>",

@@ -46,6 +46,11 @@
       end: '"',
       name: "string.quoted.double.html"
     },
+    regex: {
+      match: "/([a-zA-Z0-9\\[\\]\\(\\)\\*+-^~:/;\\.\\,\\{\\}]+)/([nsxAgimuY]*+?)",
+      name: "string.regexp",
+      patterns: []
+    },
     "unquoted-attribute": {
       match: "(?<==)(?:[^\\s<>/'\"]|/(?!>))+",
       name: "string.unquoted.html",

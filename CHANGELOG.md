@@ -1,6 +1,11 @@
 # Change Log
 
-# 0.0.8 (25/10/2018)
+# 0.0.9 (26/10/2018)
+
+- Changes in the deprecated tag recognition pattern for opening space for invalid attributes (not perfect yet)
+- Fixed angular directive patterns that stopped recognizing attributes begining with "#" and "\*" (not perfect yet)
+
+# 0.0.8 (_25/10/2018_)
 
 - Changed the angular interpolations scope from punctuation to regex to take advantage of a more commonly seen regex syntax highlighting
 - Improved the regex pattern matching

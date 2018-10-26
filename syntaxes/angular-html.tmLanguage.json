@@ -258,7 +258,7 @@
                     "name": "punctuation.separator.key-value.html"
                 }
             },
-            "begin": "((?:\\b(v-)|((\\*|#)|(\\(|\\[){1,2}))([a-zA-Z0-9\\-]+)(?:\\:([a-zA-Z0-9\\-]+))?(?:\\.([a-zA-Z0-9\\-]+))?((\\)|\\]){1,2}))(?==)",
+            "begin": "((?:\\b(v-)|(\\*|#)|([\\[\\(]{1,2}))([a-zA-Z0-9\\-]+)(?:\\:([a-zA-Z0-9\\-]+))?(?:\\.([a-zA-Z0-9\\-]+))*)([\\]\\)]{1,2})*\\s*(?==?)",
             "end": "(?<='|\")|(?=[\\s<>`])",
             "name": "meta.directive.angular",
             "patterns": [
@@ -444,7 +444,7 @@
             "patterns": []
         },
         "tag-deprecated": {
-            "match": "<\\/?(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r>\\=\\\"]+?)([\\w\\s\\n\\r\\=\\\">])*>?",
+            "match": ">?<\\/?(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r>\\=\\\"]+?)([\\s\\n\\r\\=\\\">])?",
             "name": "invalid.deprecated",
             "patterns": []
         },

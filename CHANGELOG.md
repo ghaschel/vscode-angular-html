@@ -1,6 +1,12 @@
 # Change Log
 
-# 0.0.7 (24/10/2018)
+# 0.0.8 (25/10/2018)
+
+- Changed the angular interpolation scope from punctuation to regex to take advantage of a more common regex syntax highlighting
+- Improved the regex pattern matching
+- Initial support for deprecated tags
+
+# 0.0.7 (_24/10/2018_)
 
 - Changes in scope names
 - Added regex highlight (initial)

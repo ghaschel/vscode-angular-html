@@ -148,7 +148,7 @@
             "name": "meta.tag.structure.any.html"
         },
         {
-            "include": "#invalid",
+            "include": "#keyword",
             "beginCaptures": {
                 "1": {
                     "name": "punctuation.definition.tag.begin.html"
@@ -172,7 +172,7 @@
             "name": "meta.tag.block.any.html"
         },
         {
-            "include": "#keyword",
+            "include": "#meta",
             "beginCaptures": {
                 "1": {
                     "name": "punctuation.definition.tag.begin.html"
@@ -196,7 +196,7 @@
             "name": "meta.tag.inline.any.html"
         },
         {
-            "include": "#meta",
+            "include": "#operator",
             "beginCaptures": {
                 "1": {
                     "name": "punctuation.definition.tag.begin.html"
@@ -223,12 +223,12 @@
             "include": "#entities"
         },
         {
-            "include": "#punctuation",
+            "include": "#regex",
             "match": "<>",
             "name": "invalid.illegal.incomplete.html"
         },
         {
-            "include": "#regex",
+            "include": "#tag-deprecated",
             "match": "<",
             "name": "invalid.illegal.bad-angle-bracket.html"
         },
@@ -309,7 +309,7 @@
                 {
                     "beginCaptures": {
                         "0": {
-                            "name": "punctuation.definition.generic.begin.html"
+                            "name": "string.regexp.interpolation.begin"
                         }
                     },
                     "patterns": [
@@ -320,7 +320,7 @@
                     "begin": "\\{\\{\\{?",
                     "endCaptures": {
                         "0": {
-                            "name": "punctuation.definition.generic.end.html"
+                            "name": "string.regexp.interpolation.end"
                         }
                     },
                     "end": "\\}\\}\\}?",
@@ -374,9 +374,6 @@
                     "name": "invalid.illegal.bad-ampersand.html"
                 }
             ]
-        },
-        "invalid": {
-            "patterns": []
         },
         "keyword": {
             "patterns": []
@@ -437,13 +434,18 @@
             "name": "string.quoted.double.html"
         },
         "regex": {
-            "match": "/([a-zA-Z0-9\\[\\]\\(\\)\\*+-^~:/;\\.\\,\\{\\}]+)/([nsxAgimuY]*+?)",
+            "match": "/([a-zA-Z0-9\\[\\]\\(\\)\\*\\+\\-\\^\\~\\:\\/\\;\\.\\,\\{\\}\\@\\\"\\\\]+)/([nsxAgimuY]*+?)",
             "name": "string.regexp",
             "patterns": []
         },
         "unquoted-attribute": {
             "match": "(?<==)(?:[^\\s<>/'\"]|/(?!>))+",
             "name": "string.unquoted.html",
+            "patterns": []
+        },
+        "tag-deprecated": {
+            "match": "<\\/?(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r>\\=\\\"]+?)([\\w\\s\\n\\r\\=\\\">])*>?",
+            "name": "invalid.deprecated",
             "patterns": []
         },
         "tag-events-attribute": {
@@ -534,9 +536,6 @@
                 },
                 {
                     "include": "#tag-generic-attribute"
-                },
-                {
-                    "include": "#tag-opening-closing"
                 },
                 {
                     "include": "#tag-events-attribute"

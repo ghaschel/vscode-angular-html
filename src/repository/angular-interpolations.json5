@@ -5,7 +5,7 @@
         {
           beginCaptures: {
             "0": {
-              name: "punctuation.definition.generic.begin.html"
+              name: "string.regexp.interpolation.begin"
             }
           },
           patterns: [
@@ -16,7 +16,7 @@
           begin: "\\{\\{\\{?",
           endCaptures: {
             "0": {
-              name: "punctuation.definition.generic.end.html"
+              name: "string.regexp.interpolation.end"
             }
           },
           end: "\\}\\}\\}?",

@@ -1,0 +1,9 @@
+{
+  repository: {
+    "tag-deprecated": {
+      match: '<\\/?(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r>\\=\\"]+?)([\\w\\s\\n\\r\\=\\">])*>?',
+      name: "invalid.deprecated",
+      patterns: []
+    }
+  }
+}

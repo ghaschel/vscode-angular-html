@@ -4,11 +4,9 @@
       patterns: [
         { include: "#angular-directives" },
         { include: "#tag-generic-attribute" },
-        { include: "#tag-opening-closing" },
         { include: "#tag-events-attribute" },
         { include: "#string-double-quoted" },
         { include: "#string-single-quoted" },
-        //{ include: "#tag-generic-without-value" },
         { include: "#unquoted-attribute" }
       ]
     }

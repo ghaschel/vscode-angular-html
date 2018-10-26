@@ -8,17 +8,16 @@
     { include: "#comment" },
     { include: "#constant" },
     { include: "#entity" },
-    { include: "#invalid" },
     { include: "#keyword" },
     { include: "#meta" },
     { include: "#operator" },
     { include: "#punctuation" },
     { include: "#regex" },
+    { include: "#tag-deprecated" },
     { include: "#string" },
     { include: "#tag-events-attribute" },
     { include: "#tag-opening-closing" },
     { include: "#tag-generic-attribute" },
-    //{ include: "#tag-generic-without-value" },
     { include: "#tag-stuff" }
   ],
   repository: {}

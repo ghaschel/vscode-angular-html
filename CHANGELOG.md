@@ -1,6 +1,11 @@
 # Change Log
 
-# 0.0.9 (26/10/2018)
+# 0.0.10 (26/10/2018)
+
+- Improved angular interpolation patterns to apply regex scope to brackets for a more readable content.
+- Fixed Angular directives bracket matching and conflicts with events.
+
+# 0.0.9 (_26/10/2018_)
 
 - Changes in the deprecated tag recognition pattern for opening space for invalid attributes (not perfect yet)
 - Fixed angular directive patterns that stopped recognizing attributes begining with "#" and "\*" (not perfect yet)

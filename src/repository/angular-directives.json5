@@ -2,33 +2,56 @@
   repository: {
     "angular-directives": {
       captures: {
-        "1": { name: "entity.other.attribute-name.html" },
-        "7": { name: "punctuation.separator.key-value.html" }
+        "1": {
+          name: "string.regexp"
+        },
+        "4": {
+          name: "entity.other.attribute-name.html"
+        },
+        "7": {
+          name: "string.regexp"
+        }
       },
-      begin: "((?:\\b(v-)|(\\*|#)|([\\[\\(]{1,2}))([a-zA-Z0-9\\-]+)(?:\\:([a-zA-Z0-9\\-]+))?(?:\\.([a-zA-Z0-9\\-]+))*)([\\]\\)]{1,2})*\\s*(?==?)",
+      begin: "((?:\\b(v-)|(\\*|\\#|[\\[\\(]{1,2}))([a-zA-Z0-9\\-]+)(?:\\:([a-zA-Z0-9\\-]+))?(?:\\.([a-zA-Z0-9\\-]+))*)([\\]\\)]{1,2})?\\s*(?==?)",
       end: "(?<='|\")|(?=[\\s<>`])",
       name: "meta.directive.angular",
       patterns: [
         {
           beginCaptures: {
-            "0": { name: "punctuation.definition.string.begin.html" }
+            "0": {
+              name: "punctuation.definition.string.begin.html"
+            }
           },
-          patterns: [{ include: "source.js#expression" }],
+          patterns: [
+            {
+              include: "source.js#expression"
+            }
+          ],
           begin: '"',
           endCaptures: {
-            "0": { name: "punctuation.definition.string.end.html" }
+            "0": {
+              name: "punctuation.definition.string.end.html"
+            }
           },
           end: '"',
           name: "source.directive.angular"
         },
         {
           beginCaptures: {
-            "0": { name: "punctuation.definition.string.begin.html" }
+            "0": {
+              name: "punctuation.definition.string.begin.html"
+            }
           },
-          patterns: [{ include: "source.js#expression" }],
+          patterns: [
+            {
+              include: "source.js#expression"
+            }
+          ],
           begin: "'",
           endCaptures: {
-            "0": { name: "punctuation.definition.string.end.html" }
+            "0": {
+              name: "punctuation.definition.string.end.html"
+            }
           },
           end: "'",
           name: "source.directive.angular"

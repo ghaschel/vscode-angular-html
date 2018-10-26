@@ -2,7 +2,7 @@
 
 # 0.0.8 (25/10/2018)
 
-- Changed the angular interpolation scope from punctuation to regex to take advantage of a more common regex syntax highlighting
+- Changed the angular interpolations scope from punctuation to regex to take advantage of a more commonly seen regex syntax highlighting
 - Improved the regex pattern matching
 - Initial support for deprecated tags
 
@@ -30,7 +30,7 @@
 # 0.0.4 (_15/10/2018_) - Fork
 
 - Code rewrite for a better maintability.
-- Added support for bindings and template variables: (), [], [()], #
+- Added support for bindings and template variables: (), [], \[()\], #
 
 ## 0.0.3 (_07-05-2018_)
 

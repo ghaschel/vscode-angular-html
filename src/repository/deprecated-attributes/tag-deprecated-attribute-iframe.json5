@@ -1,0 +1,18 @@
+{
+  repository: {
+    "tag-deprecated-attribute-iframe": {
+      name: "entity.other.attribute-name",
+      begin: "(?<=<iframe)",
+      end: "(?=[<>])",
+      patterns: [
+        {
+          name: "invalid.deprecated.attribute-name.iframe",
+          match: "[\\s\\n\\r\\t]*(\\b(align|frameborder|longdesc|marginheight|marginwidth|scrolling)\\b)(?==)"
+        },
+        {
+          include: "#tag-stuff"
+        }
+      ]
+    }
+  }
+}

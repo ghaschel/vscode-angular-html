@@ -1,6 +1,16 @@
 # Change Log
 
-# 0.0.10 (26/10/2018)
+# 0.0.12 (29/10/2018)
+
+- Changes in scope names
+- Initial support for invalid attributes in specific html tags (see deprecated-attributes.txt).
+- Improved generic attribute pattern recognition
+
+# 0.0.11 (_26/10/2018_)
+
+- Improved attributes and events pattern (they were conflicting with angular directives)
+
+# 0.0.10 (_26/10/2018_)
 
 - Improved angular interpolation patterns to apply regex scope to brackets for a more readable content.
 - Fixed Angular directives bracket matching and conflicts with events.
@@ -14,7 +24,7 @@
 
 - Changed the angular interpolations scope from punctuation to regex to take advantage of a more commonly seen regex syntax highlighting
 - Improved the regex pattern matching
-- Initial support for deprecated tags
+- Initial support for deprecated tags (see deprecated-tags.txt)
 
 # 0.0.7 (_24/10/2018_)
 
@@ -35,7 +45,7 @@
 - Fixed the issue with tag auto closing
 - Fixed the issue with vscode-icons
 - Fixed some conflicts in HTML attributes and Angular directives.
-- [Support for DOM events (Common, Pointer, Internet Explorer-specific and XUL events)](https://en.wikipedia.org/wiki/DOM_events)
+- [Support for DOM events (Common, Pointer, Internet Explorer-specific and XUL events)](https://en.wikipedia.org/wiki/DOM_events) (see dom-events.txt)
 
 # 0.0.4 (_15/10/2018_) - Fork
 

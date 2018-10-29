@@ -1,0 +1,18 @@
+{
+  repository: {
+    "tag-deprecated-attribute-head": {
+      name: "entity.other.attribute-name",
+      begin: "(?<=<head)",
+      end: "(?=[<>])",
+      patterns: [
+        {
+          name: "invalid.deprecated.attribute-name.head",
+          match: "[\\s\\n\\r\\t]*(\\b(profile)\\b)(?==)"
+        },
+        {
+          include: "#tag-stuff"
+        }
+      ]
+    }
+  }
+}

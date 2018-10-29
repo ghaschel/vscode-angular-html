@@ -1,0 +1,4 @@
+charset
+coords
+rev
+shape

@@ -3,10 +3,11 @@
     "tag-stuff": {
       patterns: [
         { include: "#angular-directives" },
-        { include: "#tag-generic-attribute" },
-        { include: "#tag-events-attribute" },
         { include: "#string-double-quoted" },
         { include: "#string-single-quoted" },
+        { include: "#tag-events-attribute" },
+        { include: "#tag-deprecated-attributes" },
+        { include: "#tag-generic-attribute" },
         { include: "#unquoted-attribute" }
       ]
     }

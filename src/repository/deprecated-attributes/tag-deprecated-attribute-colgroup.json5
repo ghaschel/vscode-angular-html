@@ -1,0 +1,18 @@
+{
+  repository: {
+    "tag-deprecated-attribute-colgroup": {
+      name: "entity.other.attribute-name",
+      begin: "(?<=<colgroup)",
+      end: "(?=[<>])",
+      patterns: [
+        {
+          name: "invalid.deprecated.attribute-name.colgroup",
+          match: "[\\s\\n\\r\\t]*(\\b(align|char|charoff|valign|width)\\b)(?==)"
+        },
+        {
+          include: "#tag-stuff"
+        }
+      ]
+    }
+  }
+}

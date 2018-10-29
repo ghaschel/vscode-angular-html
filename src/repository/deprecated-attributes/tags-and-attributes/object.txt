@@ -1,0 +1,10 @@
+archive
+border
+classid
+codebase
+codetype
+declare
+hspace
+standby
+vspace
+align

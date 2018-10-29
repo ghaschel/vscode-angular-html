@@ -1,0 +1,7 @@
+align
+bgcolor
+char
+charoff
+nowrap
+valign
+width

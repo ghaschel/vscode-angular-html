@@ -1,0 +1,18 @@
+{
+  repository: {
+    "tag-deprecated-attribute-h3": {
+      name: "entity.other.attribute-name",
+      begin: "(?<=<h3)",
+      end: "(?=[<>])",
+      patterns: [
+        {
+          name: "invalid.deprecated.attribute-name.h3",
+          match: "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+        },
+        {
+          include: "#tag-stuff"
+        }
+      ]
+    }
+  }
+}

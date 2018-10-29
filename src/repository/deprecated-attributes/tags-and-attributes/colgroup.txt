@@ -1,0 +1,5 @@
+align
+char
+charoff
+valign
+width

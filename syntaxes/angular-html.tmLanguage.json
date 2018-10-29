@@ -245,6 +245,126 @@
             "include": "#tag-generic-attribute"
         },
         {
+            "include": "#tag-deprecated-attribute-a"
+        },
+        {
+            "include": "#tag-deprecated-attribute-area"
+        },
+        {
+            "include": "#tag-deprecated-attribute-body"
+        },
+        {
+            "include": "#tag-deprecated-attribute-br"
+        },
+        {
+            "include": "#tag-deprecated-attribute-caption"
+        },
+        {
+            "include": "#tag-deprecated-attribute-col"
+        },
+        {
+            "include": "#tag-deprecated-attribute-colgroup"
+        },
+        {
+            "include": "#tag-deprecated-attribute-div"
+        },
+        {
+            "include": "#tag-deprecated-attribute-dl"
+        },
+        {
+            "include": "#tag-deprecated-attribute-h1"
+        },
+        {
+            "include": "#tag-deprecated-attribute-h2"
+        },
+        {
+            "include": "#tag-deprecated-attribute-h3"
+        },
+        {
+            "include": "#tag-deprecated-attribute-h4"
+        },
+        {
+            "include": "#tag-deprecated-attribute-h5"
+        },
+        {
+            "include": "#tag-deprecated-attribute-h6"
+        },
+        {
+            "include": "#tag-deprecated-attribute-head"
+        },
+        {
+            "include": "#tag-deprecated-attribute-hr"
+        },
+        {
+            "include": "#tag-deprecated-attribute-html"
+        },
+        {
+            "include": "#tag-deprecated-attribute-iframe"
+        },
+        {
+            "include": "#tag-deprecated-attribute-img"
+        },
+        {
+            "include": "#tag-deprecated-attribute-input"
+        },
+        {
+            "include": "#tag-deprecated-attribute-legend"
+        },
+        {
+            "include": "#tag-deprecated-attribute-li"
+        },
+        {
+            "include": "#tag-deprecated-attribute-link"
+        },
+        {
+            "include": "#tag-deprecated-attribute-menu"
+        },
+        {
+            "include": "#tag-deprecated-attribute-object"
+        },
+        {
+            "include": "#tag-deprecated-attribute-ol"
+        },
+        {
+            "include": "#tag-deprecated-attribute-p"
+        },
+        {
+            "include": "#tag-deprecated-attribute-param"
+        },
+        {
+            "include": "#tag-deprecated-attribute-pre"
+        },
+        {
+            "include": "#tag-deprecated-attribute-t"
+        },
+        {
+            "include": "#tag-deprecated-attribute-table"
+        },
+        {
+            "include": "#tag-deprecated-attribute-tbody"
+        },
+        {
+            "include": "#tag-deprecated-attribute-td"
+        },
+        {
+            "include": "#tag-deprecated-attribute-tfoot"
+        },
+        {
+            "include": "#tag-deprecated-attribute-th"
+        },
+        {
+            "include": "#tag-deprecated-attribute-thead"
+        },
+        {
+            "include": "#tag-deprecated-attribute-tr"
+        },
+        {
+            "include": "#tag-deprecated-attribute-ul"
+        },
+        {
+            "include": "#tag-deprecated-attributes"
+        },
+        {
             "include": "#tag-stuff"
         }
     ],
@@ -446,9 +566,130 @@
             "name": "string.unquoted.html",
             "patterns": []
         },
+        "deprecated-attributes": {
+            "patterns": [
+                {
+                    "include": "#tag-deprecated-attribute-a"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-area"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-body"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-br"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-caption"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-col"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-colgroup"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-div"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-dl"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-h1"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-h2"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-h3"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-h4"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-h5"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-h6"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-head"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-hr"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-html"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-iframe"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-img"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-input"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-legend"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-li"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-link"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-menu"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-object"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-ol"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-p"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-param"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-pre"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-t"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-table"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-tbody"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-td"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-tfoot"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-th"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-thead"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-tr"
+                },
+                {
+                    "include": "#tag-deprecated-attribute-ul"
+                }
+            ]
+        },
         "tag-deprecated": {
             "match": ">?<\\/?(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r>\\=\\\"]+?)([\\s\\n\\r\\=\\\">])?",
-            "name": "invalid.deprecated",
+            "name": "invalid.deprecated.tag",
             "patterns": []
         },
         "tag-events-attribute": {
@@ -510,7 +751,7 @@
                     "name": "entity.other.attribute-name.generic.html"
                 }
             },
-            "match": "(?!\\b(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting)\\b)\\b\\w+(?==)",
+            "match": "(?!\\b(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting)\\b)\\b[\\w\\-\\_]+(?==)",
             "patterns": []
         },
         "tag-opening-closing": {
@@ -532,19 +773,568 @@
                     "include": "#angular-directives"
                 },
                 {
-                    "include": "#tag-generic-attribute"
-                },
-                {
-                    "include": "#tag-events-attribute"
-                },
-                {
                     "include": "#string-double-quoted"
                 },
                 {
                     "include": "#string-single-quoted"
                 },
                 {
+                    "include": "#tag-events-attribute"
+                },
+                {
+                    "include": "#tag-deprecated-attributes"
+                },
+                {
+                    "include": "#tag-generic-attribute"
+                },
+                {
                     "include": "#unquoted-attribute"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-a": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<a)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.caption",
+                    "match": "[\\s\\n\\r\\t]*(\\b(charset|coords|rev|shape)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-area": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<area)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.area",
+                    "match": "[\\s\\n\\r\\t]*(\\b(nohref)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-body": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<body)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.body",
+                    "match": "[\\s\\n\\r\\t]*(\\b(alink|background|bgcolor|link|vlink)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-br": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<br)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.br",
+                    "match": "[\\s\\n\\r\\t]*(\\b(clear)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-caption": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<caption)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.caption",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-col": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<col)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.col",
+                    "match": "[\\s\\n\\r\\t]*(\\b(char|charoff|valign|width)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-colgroup": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<colgroup)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.colgroup",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align|char|charoff|valign|width)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-div": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<div)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.div",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-dl": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<dl)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.dl",
+                    "match": "[\\s\\n\\r\\t]*(\\b(compact)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-h1": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<h1)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.h1",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-h2": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<h2)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.h2",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-h3": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<h3)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.h3",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-h4": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<h4)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.h4",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-h5": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<h5)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.h5",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-h6": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<h6)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.h6",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-head": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<head)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.head",
+                    "match": "[\\s\\n\\r\\t]*(\\b(profile)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-hr": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<hr)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.hr",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align|noshade|size|width)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-html": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<html)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.html",
+                    "match": "[\\s\\n\\r\\t]*(\\b(version)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-iframe": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<iframe)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.iframe",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align|frameborder|longdesc|marginheight|marginwidth|scrolling)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-img": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<img)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.img",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align|hspace|longdesc|name|vspace)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-input": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<input)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.input",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-legend": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<legend)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.legend",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-li": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<li)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.li",
+                    "match": "[\\s\\n\\r\\t]*(\\b(type)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-link": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<link)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.link",
+                    "match": "[\\s\\n\\r\\t]*(\\b(charset|rev|target)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-menu": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<menu)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.menu",
+                    "match": "[\\s\\n\\r\\t]*(\\b(compact)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-object": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<object)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.object",
+                    "match": "[\\s\\n\\r\\t]*(\\b(archive|border|classid|codebase|codetype|declare|hspace|standby|vspace|align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-ol": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<ol)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.ol",
+                    "match": "[\\s\\n\\r\\t]*(\\b(compact|type)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-p": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<p)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.p",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-param": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<param)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.param",
+                    "match": "[\\s\\n\\r\\t]*(\\b(type|valuetype)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-pre": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<pre)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.pre",
+                    "match": "[\\s\\n\\r\\t]*(\\b(width)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-t": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<t)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.t",
+                    "match": "[\\s\\n\\r\\t]*(\\b(abbr|axis)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-table": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<table)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.table",
+                    "match": "[\\s\\n\\r\\t]*(\\b(bgcolor|border|cellpadding|cellspacing|frame|rules|scheme|width)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-tbody": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<tbody)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.tbody",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align|char|charoff|valign)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-td": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<td)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.td",
+                    "match": "[\\s\\n\\r\\t]*(\\b(abbr|align|axis|bgcolor|char|charoff|nowrap|scope|valign|width)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-tfoot": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<tfoot)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.tfoot",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align|char|charoff|valign)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-th": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<th)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.th",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align|bgcolor|char|charoff|nowrap|valign|width)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-thead": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<thead)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.thead",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align|char|charoff|valign)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-tr": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<tr)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.tr",
+                    "match": "[\\s\\n\\r\\t]*(\\b(align|bgcolor|char|charoff|valign)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-deprecated-attribute-ul": {
+            "name": "entity.other.attribute-name",
+            "begin": "(?<=<ul)",
+            "end": "(?=[<>])",
+            "patterns": [
+                {
+                    "name": "invalid.deprecated.attribute-name.ul",
+                    "match": "[\\s\\n\\r\\t]*(\\b(compact|type)\\b)(?==)"
+                },
+                {
+                    "include": "#tag-stuff"
                 }
             ]
         }

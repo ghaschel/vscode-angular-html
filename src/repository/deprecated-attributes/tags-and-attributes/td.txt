@@ -1,0 +1,10 @@
+abbr
+align
+axis
+bgcolor
+char
+charoff
+nowrap
+scope
+valign
+width

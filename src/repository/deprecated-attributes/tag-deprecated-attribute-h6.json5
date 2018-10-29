@@ -1,0 +1,18 @@
+{
+  repository: {
+    "tag-deprecated-attribute-h6": {
+      name: "entity.other.attribute-name",
+      begin: "(?<=<h6)",
+      end: "(?=[<>])",
+      patterns: [
+        {
+          name: "invalid.deprecated.attribute-name.h6",
+          match: "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+        },
+        {
+          include: "#tag-stuff"
+        }
+      ]
+    }
+  }
+}

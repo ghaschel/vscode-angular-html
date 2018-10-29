@@ -1,0 +1,18 @@
+{
+  repository: {
+    "tag-deprecated-attribute-param": {
+      name: "entity.other.attribute-name",
+      begin: "(?<=<param)",
+      end: "(?=[<>])",
+      patterns: [
+        {
+          name: "invalid.deprecated.attribute-name.param",
+          match: "[\\s\\n\\r\\t]*(\\b(type|valuetype)\\b)(?==)"
+        },
+        {
+          include: "#tag-stuff"
+        }
+      ]
+    }
+  }
+}

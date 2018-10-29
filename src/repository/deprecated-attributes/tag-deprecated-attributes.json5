@@ -1,0 +1,16 @@
+{
+  repository: {
+    "deprecated-attributes": {
+      patterns: [
+        { include: "#tag-deprecated-attribute-a" },
+        { include: "#tag-deprecated-attribute-area" },
+        { include: "#tag-deprecated-attribute-body" },
+        { include: "#tag-deprecated-attribute-br" },
+        { include: "#tag-deprecated-attribute-caption" },
+        { include: "#tag-deprecated-attribute-col" },
+        { include: "#tag-deprecated-attribute-colgroup" },
+        { include: "#tag-deprecated-attribute-div" }
+      ]
+    }
+  }
+}

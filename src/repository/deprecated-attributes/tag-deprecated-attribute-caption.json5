@@ -1,0 +1,18 @@
+{
+  repository: {
+    "tag-deprecated-attribute-caption": {
+      name: "entity.other.attribute-name",
+      begin: "(?<=<caption)",
+      end: "(?=[<>])",
+      patterns: [
+        {
+          name: "invalid.deprecated.attribute-name.caption",
+          match: "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+        },
+        {
+          include: "#tag-stuff"
+        }
+      ]
+    }
+  }
+}

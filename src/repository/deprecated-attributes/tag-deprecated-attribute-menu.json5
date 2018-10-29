@@ -1,0 +1,18 @@
+{
+  repository: {
+    "tag-deprecated-attribute-menu": {
+      name: "entity.other.attribute-name",
+      begin: "(?<=<menu)",
+      end: "(?=[<>])",
+      patterns: [
+        {
+          name: "invalid.deprecated.attribute-name.menu",
+          match: "[\\s\\n\\r\\t]*(\\b(compact)\\b)(?==)"
+        },
+        {
+          include: "#tag-stuff"
+        }
+      ]
+    }
+  }
+}

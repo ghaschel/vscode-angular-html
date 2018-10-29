@@ -1,0 +1,18 @@
+{
+  repository: {
+    "tag-deprecated-attribute-body": {
+      name: "entity.other.attribute-name",
+      begin: "(?<=<body)",
+      end: "(?=[<>])",
+      patterns: [
+        {
+          name: "invalid.deprecated.attribute-name.body",
+          match: "[\\s\\n\\r\\t]*(\\b(alink|background|bgcolor|link|vlink)\\b)(?==)"
+        },
+        {
+          include: "#tag-stuff"
+        }
+      ]
+    }
+  }
+}

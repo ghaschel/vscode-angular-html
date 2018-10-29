@@ -1,0 +1,4 @@
+align
+noshade
+size
+width

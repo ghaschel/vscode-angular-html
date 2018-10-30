@@ -1,8 +1,8 @@
 {
   "name": "vscode-angular-html",
   "displayName": "vscode-angular-html",
-  "description": "Syntax highlighting for angular-html files",
-  "version": "0.0.12",
+  "description": "Syntax highlighting for angular HTML Template files",
+  "version": "0.0.13",
   "publisher": "ghaschel",
   "repository": {
     "type": "git",

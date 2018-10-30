@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.12 (29/10/2018)
+# 0.0.13 (29/10/2018)
+
+- Added support for style inline.
+
+# 0.0.12 (_29/10/2018_)
 
 - Changes in scope names.
 - Initial support for invalid attributes in specific html tags. See [deprecated attributes](DEPRECATED-ATTRIBUTES.md).

@@ -1,42 +1,5 @@
 {
   patterns: [
-    // HTML elements - Should this be removed?
-    // {
-    //   beginCaptures: {
-    //     "2": {
-    //       name: "entity.name.tag.html"
-    //     },
-    //     "1": {
-    //       name: "punctuation.definition.tag.begin.html"
-    //     }
-    //   },
-    //   patterns: [
-    //     {
-    //       include: "#tag-stuff"
-    //     }
-    //   ],
-    //   begin: "(<)([a-zA-Z0-9:-]++)(?=[^>]*></\\2>)",
-    //   endCaptures: {
-    //     "2": {
-    //       name: "punctuation.definition.tag.begin.html meta.scope.between-tag-pair.html"
-    //     },
-    //     "3": {
-    //       name: "punctuation.definition.tag.begin.html"
-    //     },
-    //     "1": {
-    //       name: "punctuation.definition.tag.end.html"
-    //     },
-    //     "4": {
-    //       name: "entity.name.tag.html"
-    //     },
-    //     "5": {
-    //       name: "punctuation.definition.tag.end.html"
-    //     }
-    //   },
-    //   end: "(>)(<)(/)(\\2)(>)",
-    //   name: "meta.tag.any.html"
-    // },
-
     // DOCTYPE
     {
       captures: {
@@ -64,16 +27,6 @@
             }
           ]
         }
-        // Should this be removed?
-        // {
-        //   begin: "\\[CDATA\\[",
-        //   end: "]](?=>)",
-        //   name: "constant.other.inline-data.html"
-        // },
-        // {
-        //   match: "(\\s*)(?!--|>)\\S(\\s*)",
-        //   name: "invalid.illegal.bad-comments-or-CDATA.html"
-        // }
       ]
     },
 

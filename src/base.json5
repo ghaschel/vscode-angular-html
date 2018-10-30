@@ -58,6 +58,7 @@
     { include: "#tag-deprecated-attribute-tr" },
     { include: "#tag-deprecated-attribute-ul" },
     { include: "#tag-deprecated-attributes" },
+    { include: "#tag-script" },
     { include: "#tag-stuff" }
   ],
   repository: {}

@@ -1,8 +1,0 @@
-bgcolor
-border
-cellpadding
-cellspacing
-frame
-rules
-scheme
-width

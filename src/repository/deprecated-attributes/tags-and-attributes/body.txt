@@ -1,5 +1,0 @@
-alink
-background
-bgcolor
-link
-vlink

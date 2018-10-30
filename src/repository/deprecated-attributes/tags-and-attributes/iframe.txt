@@ -1,6 +1,0 @@
-align
-frameborder
-longdesc
-marginheight
-marginwidth
-scrolling

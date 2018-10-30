@@ -1,4 +1,0 @@
-align
-char
-charoff
-valign

@@ -1,4 +1,0 @@
-charset
-coords
-rev
-shape

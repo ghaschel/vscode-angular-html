@@ -1,4 +1,0 @@
-align
-noshade
-size
-width

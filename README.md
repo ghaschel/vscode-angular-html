@@ -1,17 +1,17 @@
-# Angular Syntax Highlighting
+# vscode-angular-html
 
 [![GitHub issues](https://img.shields.io/github/issues/ghaschel/vscode-angular-html.svg)](https://github.com/ghaschel/vscode-angular-syntax/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ghaschel/vscode-angular-html/blob/master/LICENSE)
 [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
 [![Version](https://vsmarketplacebadge.apphb.com/version-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
 
-<div align="center">
-    <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-html.png" title="vscode-angular-html" alt="logo">
+<div style="text-align: center;">
+    <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-html.png" title="vscode-angular-html" alt="Logo" />
 </div>
 
-## vscode-angular-html
+## Angular HTML Template Syntax Highlighting
 
-Synax highlighting for angular HTML templates focusing in the HTML5 syntax.
+This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events, empathyses deprecated and obsolute tag and attributes usage according to the current status of HTML.
 
 ## Resources
 
@@ -22,6 +22,10 @@ Synax highlighting for angular HTML templates focusing in the HTML5 syntax.
 
 ## Disclaimer
 
+> The development of this plugin serves as a way for me to learn Regex, so it's probably not 100% correct. Feel free to submit a pull request if needed.
+
 > Based in the original work of [dunstontc](https://github.com/dunstontc/vscode-angular-syntax)
 
 ## [License](https://github.com/ghaschel/vscode-angular-html/blob/master/LICENSE)
+
+## [ChangeLog](CHANGELOG.md)

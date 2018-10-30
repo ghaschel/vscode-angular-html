@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.13 (29/10/2018)
+# 0.0.14 (30/10/2018)
+
+- Added support for script tags with content (not perfect yet)
+
+# 0.0.13 (_29/10/2018_)
 
 - Added support for style inline.
 

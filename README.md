@@ -5,13 +5,13 @@
 [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
 [![Version](https://vsmarketplacebadge.apphb.com/version-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
 
-<div style="text-align: center;">
+<div align="center">
     <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-html.png" title="vscode-angular-html" alt="Logo" />
 </div>
 
 ## Angular HTML Template Syntax Highlighting
 
-This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events, empathyses deprecated and obsolute tag and attributes usage according to the current status of HTML.
+This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events, empathyses deprecated and obsolete tags and attributes usage according to the current status of HTML.
 
 ## Resources
 

@@ -10,7 +10,7 @@
           name: "entity.name.tag.end.html"
         }
       },
-      match: "((<\\/?)[a-zA-Z0-9\\-]++*>?)|\\/?>",
+      match: "((<\\/?)(?!script)[a-zA-Z0-9\\-]++*>?)|\\/?>",
       patterns: []
     }
   }

@@ -365,6 +365,9 @@
             "include": "#tag-deprecated-attributes"
         },
         {
+            "include": "#tag-script"
+        },
+        {
             "include": "#tag-stuff"
         }
     ],
@@ -764,8 +767,25 @@
                     "name": "entity.name.tag.end.html"
                 }
             },
-            "match": "((<\\/?)[a-zA-Z0-9\\-]++*>?)|\\/?>",
+            "match": "((<\\/?)(?!script)[a-zA-Z0-9\\-]++*>?)|\\/?>",
             "patterns": []
+        },
+        "tag-script": {
+            "captures": {
+                "1": {
+                    "name": "entity.name.tag.begin.html"
+                },
+                "2": {
+                    "name": "entity.name.tag.end.html"
+                }
+            },
+            "begin": ">?(<\\/?\\bscript\\b)>?",
+            "end": "(<\\/\\bscript\\b>)",
+            "patterns": [
+                {
+                    "include": "source.js#expression"
+                }
+            ]
         },
         "tag-stuff": {
             "patterns": [

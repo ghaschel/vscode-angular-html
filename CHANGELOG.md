@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.14 (30/10/2018)
+# 0.0.15 (30/10/2018)
+
+- Improved script tag pattern matching (still not perfect)
+
+# 0.0.14 (_30/10/2018_)
 
 - Added support for script tags with content (not perfect yet)
 

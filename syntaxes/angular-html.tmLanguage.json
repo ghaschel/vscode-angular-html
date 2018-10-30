@@ -779,7 +779,7 @@
                     "name": "entity.name.tag.end.html"
                 }
             },
-            "begin": ">?(<\\/?\\bscript\\b)>?",
+            "begin": "(<\\/?\\bscript\\b)(>)?",
             "end": "(<\\/\\bscript\\b>)",
             "patterns": [
                 {

@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.17 (31/10/2018)
+# 0.0.18 (31/10/2018)
+
+- Stupid mistake
+
+# 0.0.17 (_31/10/2018_)
 
 - Code normalization
 - Enforce entities scope to '=' on all occurrences (temporary)

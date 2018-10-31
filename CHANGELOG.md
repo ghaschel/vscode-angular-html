@@ -3,7 +3,7 @@
 # 0.0.16 (31/10/2018)
 
 - Improved regex matching
-- Improved invalid tag matching
+- Fixed some scope names
 - Fixed some includes
 - Clutter removal
 - Somehow managed to fix the issue with the attribute having no value (:ghosts:)

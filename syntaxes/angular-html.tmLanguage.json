@@ -396,6 +396,14 @@
                     },
                     "patterns": [
                         {
+                            "match": "\\?\\.|\\!\\.|\\.|\\,|\\;|\\?|\\!",
+                            "name": "keyword.operator.punctuation"
+                        },
+                        {
+                            "match": "\\blet\\b\\s",
+                            "name": "keyword.operator.let"
+                        },
+                        {
                             "include": "source.js#expression"
                         }
                     ],
@@ -415,6 +423,14 @@
                         }
                     },
                     "patterns": [
+                        {
+                            "match": "\\?\\.|\\!\\.|\\.|\\,|\\;|\\?|\\!",
+                            "name": "keyword.operator.punctuation"
+                        },
+                        {
+                            "match": "\\blet\\b\\s",
+                            "name": "keyword.operator.let"
+                        },
                         {
                             "include": "source.js#expression"
                         }
@@ -439,6 +455,10 @@
                         }
                     },
                     "patterns": [
+                        {
+                            "match": "\\?\\.|\\!\\.|\\.|\\!|\\?",
+                            "name": "keyword.operator.navigation"
+                        },
                         {
                             "include": "source.js#expression"
                         }
@@ -478,9 +498,6 @@
                 }
             ]
         },
-        "constant": {
-            "patterns": []
-        },
         "entities": {
             "patterns": [
                 {
@@ -500,18 +517,6 @@
                     "name": "invalid.illegal.bad-ampersand.html"
                 }
             ]
-        },
-        "keyword": {
-            "patterns": []
-        },
-        "meta": {
-            "patterns": []
-        },
-        "operator": {
-            "patterns": []
-        },
-        "punctuation": {
-            "patterns": []
         },
         "string-single-quoted": {
             "beginCaptures": {
@@ -560,7 +565,7 @@
             "name": "string.quoted.double.html"
         },
         "regex": {
-            "match": "/([a-zA-Z0-9\\[\\]\\(\\)\\*\\+\\-\\^\\~\\:\\/\\;\\.\\,\\{\\}\\@\\\"\\\\]+)/([nsxAgimuY]*+?)",
+            "match": "/([a-zA-Z0-9\\[\\]\\(\\)\\*\\+\\-\\^\\~\\:\\/\\;\\.\\,\\{\\}\\@\\\"\\\\#]+)/([nsxAgimuY]*+?)",
             "name": "string.regexp",
             "patterns": []
         },
@@ -691,7 +696,7 @@
             ]
         },
         "tag-deprecated": {
-            "match": ">?<\\/?(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r>\\=\\\"]+?)([\\s\\n\\r\\=\\\">])?",
+            "match": ">?<\\/?(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r\\/>\\=\\\"]+?)([\\s\\n\\r\\=\\\"\\/>]*)?",
             "name": "invalid.deprecated.tag",
             "patterns": []
         },
@@ -783,6 +788,14 @@
             "end": "(<\\/\\bscript\\b>)",
             "patterns": [
                 {
+                    "match": "\\b(let|const|var)\\b\\s",
+                    "name": "constant.language"
+                },
+                {
+                    "match": "\\.|\\,|\\|\\:|\\;",
+                    "name": "keyword.operator.navigation"
+                },
+                {
                     "include": "source.js#expression"
                 }
             ]
@@ -818,7 +831,7 @@
             "end": "(?=[<>])",
             "patterns": [
                 {
-                    "name": "invalid.deprecated.attribute-name.caption",
+                    "name": "invalid.deprecated.attribute-name.a",
                     "match": "[\\s\\n\\r\\t]*(\\b(charset|coords|rev|shape)\\b)(?==)"
                 },
                 {

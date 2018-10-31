@@ -6,7 +6,7 @@
       end: "(?=[<>])",
       patterns: [
         {
-          name: "invalid.deprecated.attribute-name.caption",
+          name: "invalid.deprecated.attribute-name.a",
           match: "[\\s\\n\\r\\t]*(\\b(charset|coords|rev|shape)\\b)(?==)"
         },
         {

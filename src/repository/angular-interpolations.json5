@@ -10,6 +10,10 @@
           },
           patterns: [
             {
+              match: "\\?\\.|\\!\\.|\\.|\\!|\\?",
+              name: "keyword.operator.navigation"
+            },
+            {
               include: "source.js#expression"
             }
           ],

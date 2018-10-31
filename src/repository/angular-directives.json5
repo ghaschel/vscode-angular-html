@@ -24,6 +24,14 @@
           },
           patterns: [
             {
+              match: "\\?\\.|\\!\\.|\\.|\\,|\\;|\\?|\\!",
+              name: "keyword.operator.punctuation"
+            },
+            {
+              match: "\\blet\\b\\s",
+              name: "keyword.operator.let"
+            },
+            {
               include: "source.js#expression"
             }
           ],
@@ -43,6 +51,14 @@
             }
           },
           patterns: [
+            {
+              match: "\\?\\.|\\!\\.|\\.|\\,|\\;|\\?|\\!",
+              name: "keyword.operator.punctuation"
+            },
+            {
+              match: "\\blet\\b\\s",
+              name: "keyword.operator.let"
+            },
             {
               include: "source.js#expression"
             }

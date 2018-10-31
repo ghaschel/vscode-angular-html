@@ -1,16 +1,16 @@
 {
   repository: {
-    "tag-opening-closing": {
-      name: "entity.name.tag",
+    'tag-opening-closing': {
+      name: 'entity.name.tag',
       captures: {
-        "2": {
-          name: "entity.name.tag.begin.html"
+        '2': {
+          name: 'entity.name.tag.begin.html'
         },
-        "3": {
-          name: "entity.name.tag.end.html"
+        '3': {
+          name: 'entity.name.tag.end.html'
         }
       },
-      match: "((<\\/?)(?!script)[a-zA-Z0-9\\-]++*>?)|\\/?>",
+      match: '((<\\/?)(?!script)[a-zA-Z0-9\\-]++*>?)|\\/?>',
       patterns: []
     }
   }

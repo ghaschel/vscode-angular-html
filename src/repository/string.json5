@@ -1,59 +1,59 @@
 {
   repository: {
-    "string-single-quoted": {
+    'string-single-quoted': {
       beginCaptures: {
-        "0": {
-          name: "punctuation.definition.string.begin.html"
+        '0': {
+          name: 'punctuation.definition.string.begin.html'
         }
       },
       patterns: [
         {
-          include: "#angular-interpolations"
+          include: '#angular-interpolations'
         },
         {
-          include: "#entities"
+          include: '#entities'
         }
       ],
       begin: "'",
       endCaptures: {
-        "0": {
-          name: "punctuation.definition.string.end.html"
+        '0': {
+          name: 'punctuation.definition.string.end.html'
         }
       },
       end: "'",
-      name: "string.quoted.single.html"
+      name: 'string.quoted.single.html'
     },
-    "string-double-quoted": {
+    'string-double-quoted': {
       beginCaptures: {
-        "0": {
-          name: "punctuation.definition.string.begin.html"
+        '0': {
+          name: 'punctuation.definition.string.begin.html'
         }
       },
       patterns: [
         {
-          include: "#angular-interpolations"
+          include: '#angular-interpolations'
         },
         {
-          include: "#entities"
+          include: '#entities'
         }
       ],
       begin: '"',
       endCaptures: {
-        "0": {
-          name: "punctuation.definition.string.end.html"
+        '0': {
+          name: 'punctuation.definition.string.end.html'
         }
       },
       end: '"',
-      name: "string.quoted.double.html"
+      name: 'string.quoted.double.html'
     },
     regex: {
       match: '/([a-zA-Z0-9\\[\\]\\(\\)\\*\\+\\-\\^\\~\\:\\/\\;\\.\\,\\{\\}\\@\\"\\\\#]+)/([nsxAgimuY]*+?)',
-      name: "string.regexp",
+      name: 'string.regexp',
       patterns: []
     },
-    "unquoted-attribute": {
-      match: "(?<==)(?:[^\\s<>/'\"]|/(?!>))+",
-      name: "string.unquoted.html",
+    'unquoted-attribute': {
+      match: '(?<==)(?:[^\\s<>/\'"]|/(?!>))+',
+      name: 'string.unquoted.html',
       patterns: []
     }
   }

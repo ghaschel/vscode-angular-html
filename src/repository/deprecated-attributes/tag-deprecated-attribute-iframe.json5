@@ -1,16 +1,24 @@
 {
   repository: {
-    "tag-deprecated-attribute-iframe": {
-      name: "entity.other.attribute-name",
-      begin: "(?<=<iframe)",
-      end: "(?=[<>])",
+    'tag-deprecated-attribute-iframe': {
+      name: 'entity.other.attribute-name',
+      begin: '(?<=<iframe)',
+      end: '(?=[<>])',
       patterns: [
         {
-          name: "invalid.deprecated.attribute-name.iframe",
-          match: "[\\s\\n\\r\\t]*(\\b(align|frameborder|longdesc|marginheight|marginwidth|scrolling)\\b)(?==)"
+          name: 'invalid.deprecated.attribute-name.iframe',
+          match: '[\\s\\n\\r\\t]*(\\b(align|frameborder|longdesc|marginheight|marginwidth|scrolling)\\b)(=)?',
+          captures: {
+            '2': {
+              name: 'invalid.deprecated.attribute-name.iframe'
+            },
+            '3': {
+              name: 'constant.character.entity.html'
+            }
+          }
         },
         {
-          include: "#tag-stuff"
+          include: '#tag-stuff'
         }
       ]
     }

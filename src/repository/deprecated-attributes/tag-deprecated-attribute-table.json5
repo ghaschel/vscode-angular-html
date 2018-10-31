@@ -1,16 +1,24 @@
 {
   repository: {
-    "tag-deprecated-attribute-table": {
-      name: "entity.other.attribute-name",
-      begin: "(?<=<table)",
-      end: "(?=[<>])",
+    'tag-deprecated-attribute-table': {
+      name: 'entity.other.attribute-name',
+      begin: '(?<=<table)',
+      end: '(?=[<>])',
       patterns: [
         {
-          name: "invalid.deprecated.attribute-name.table",
-          match: "[\\s\\n\\r\\t]*(\\b(bgcolor|border|cellpadding|cellspacing|frame|rules|scheme|width)\\b)(?==)"
+          name: 'invalid.deprecated.attribute-name.table',
+          match: '[\\s\\n\\r\\t]*(\\b(bgcolor|border|cellpadding|cellspacing|frame|rules|scheme|width)\\b)(=)?',
+          captures: {
+            '2': {
+              name: 'invalid.deprecated.attribute-name.table'
+            },
+            '3': {
+              name: 'constant.character.entity.html'
+            }
+          }
         },
         {
-          include: "#tag-stuff"
+          include: '#tag-stuff'
         }
       ]
     }

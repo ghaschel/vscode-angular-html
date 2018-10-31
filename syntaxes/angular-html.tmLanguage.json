@@ -124,7 +124,7 @@
             ]
         },
         {
-            "include": "#regex",
+            "include": "#operator",
             "captures": {
                 "1": {
                     "name": "punctuation.definition.tag.begin.html"
@@ -148,7 +148,7 @@
             "name": "meta.tag.structure.any.html"
         },
         {
-            "include": "#tag-deprecated",
+            "include": "#regex",
             "beginCaptures": {
                 "1": {
                     "name": "punctuation.definition.tag.begin.html"
@@ -172,7 +172,7 @@
             "name": "meta.tag.block.any.html"
         },
         {
-            "include": "#string",
+            "include": "#tag-deprecated",
             "beginCaptures": {
                 "1": {
                     "name": "punctuation.definition.tag.begin.html"
@@ -196,7 +196,7 @@
             "name": "meta.tag.inline.any.html"
         },
         {
-            "include": "#tag-events-attribute",
+            "include": "#string",
             "beginCaptures": {
                 "1": {
                     "name": "punctuation.definition.tag.begin.html"
@@ -223,14 +223,17 @@
             "include": "#entities"
         },
         {
-            "include": "#tag-generic-attribute",
+            "include": "#tag-opening-closing",
             "match": "<>",
             "name": "invalid.illegal.incomplete.html"
         },
         {
-            "include": "#tag-deprecated-attribute-a",
+            "include": "#tag-generic-attribute",
             "match": "<",
             "name": "invalid.illegal.bad-angle-bracket.html"
+        },
+        {
+            "include": "#tag-deprecated-attribute-a"
         },
         {
             "include": "#tag-deprecated-attribute-area"

@@ -1,16 +1,24 @@
 {
   repository: {
-    "tag-deprecated-attribute-object": {
-      name: "entity.other.attribute-name",
-      begin: "(?<=<object)",
-      end: "(?=[<>])",
+    'tag-deprecated-attribute-object': {
+      name: 'entity.other.attribute-name',
+      begin: '(?<=<object)',
+      end: '(?=[<>])',
       patterns: [
         {
-          name: "invalid.deprecated.attribute-name.object",
-          match: "[\\s\\n\\r\\t]*(\\b(archive|border|classid|codebase|codetype|declare|hspace|standby|vspace|align)\\b)(?==)"
+          name: 'invalid.deprecated.attribute-name.object',
+          match: '[\\s\\n\\r\\t]*(\\b(archive|border|classid|codebase|codetype|declare|hspace|standby|vspace|align)\\b)(=)?',
+          captures: {
+            '2': {
+              name: 'invalid.deprecated.attribute-name.object'
+            },
+            '3': {
+              name: 'constant.character.entity.html'
+            }
+          }
         },
         {
-          include: "#tag-stuff"
+          include: '#tag-stuff'
         }
       ]
     }

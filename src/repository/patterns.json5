@@ -3,27 +3,27 @@
     // DOCTYPE
     {
       captures: {
-        "0": {
-          name: "punctuation.definition.tag.html"
+        '0': {
+          name: 'punctuation.definition.tag.html'
         }
       },
-      begin: "<!",
-      end: ">",
-      name: "meta.tag.sgml.html",
+      begin: '<!',
+      end: '>',
+      name: 'meta.tag.sgml.html',
       patterns: [
         {
           captures: {
-            "1": {
-              name: "entity.name.tag.doctype.html"
+            '1': {
+              name: 'entity.name.tag.doctype.html'
             }
           },
-          begin: "(?i:DOCTYPE|doctype)",
-          end: "(?=>)",
-          name: "meta.tag.sgml.doctype.html",
+          begin: '(?i:DOCTYPE|doctype)',
+          end: '(?=>)',
+          name: 'meta.tag.sgml.doctype.html',
           patterns: [
             {
               match: '"[^">]*"',
-              name: "string.quoted.double.doctype.identifiers-and-DTDs.html"
+              name: 'string.quoted.double.doctype.identifiers-and-DTDs.html'
             }
           ]
         }
@@ -33,48 +33,48 @@
     // Block elements (template/ng-template/ng-container)
     {
       beginCaptures: {
-        "2": {
-          name: "entity.name.tag.block.any.html"
+        '2': {
+          name: 'entity.name.tag.block.any.html'
         },
-        "1": {
-          name: "punctuation.definition.tag.begin.html"
+        '1': {
+          name: 'punctuation.definition.tag.begin.html'
         }
       },
       patterns: [
         {
-          include: "#tag-stuff"
+          include: '#tag-stuff'
         }
       ],
-      begin: "(</?)((?i:template|ng-template|ng-container)[a-zA-Z0-9:-]+\\b)",
+      begin: '(</?)((?i:template|ng-template|ng-container)[a-zA-Z0-9:-]+\\b)',
       endCaptures: {
-        "1": {
-          name: "punctuation.definition.tag.end.html"
+        '1': {
+          name: 'punctuation.definition.tag.end.html'
         }
       },
-      end: "(>)",
-      name: "meta.tag.block.any.html"
+      end: '(>)',
+      name: 'meta.tag.block.any.html'
     },
 
     // Block elements (template/ng-template/ng-container)
     {
       beginCaptures: {
-        "2": {
-          name: "entity.name.tag.style.html"
+        '2': {
+          name: 'entity.name.tag.style.html'
         },
-        "1": {
-          name: "punctuation.definition.tag.begin.html"
+        '1': {
+          name: 'punctuation.definition.tag.begin.html'
         }
       },
-      begin: "(<)(template|ng-template|ng-container)\\b(?=[^/>]*/>\\s*$)",
+      begin: '(<)(template|ng-template|ng-container)\\b(?=[^/>]*/>\\s*$)',
       endCaptures: {
-        "1": {
-          name: "punctuation.definition.tag.end.html"
+        '1': {
+          name: 'punctuation.definition.tag.end.html'
         }
       },
-      end: "(/>)",
+      end: '(/>)',
       patterns: [
         {
-          include: "#tag-stuff"
+          include: '#tag-stuff'
         }
       ]
     },
@@ -82,44 +82,44 @@
     // Block elements (template/ng-template/ng-container)
     {
       beginCaptures: {
-        "2": {
-          name: "entity.name.tag.style.html"
+        '2': {
+          name: 'entity.name.tag.style.html'
         },
-        "1": {
-          name: "punctuation.definition.tag.begin.html"
+        '1': {
+          name: 'punctuation.definition.tag.begin.html'
         }
       },
-      begin: "(<)(template|ng-template|ng-container)",
+      begin: '(<)(template|ng-template|ng-container)',
       endCaptures: {
-        "2": {
-          name: "entity.name.tag.style.html"
+        '2': {
+          name: 'entity.name.tag.style.html'
         },
-        "3": {
-          name: "punctuation.definition.tag.end.html"
+        '3': {
+          name: 'punctuation.definition.tag.end.html'
         },
-        "1": {
-          name: "punctuation.definition.tag.begin.html"
+        '1': {
+          name: 'punctuation.definition.tag.begin.html'
         }
       },
-      end: "(</)(template|ng-template|ng-container)(>)",
+      end: '(</)(template|ng-template|ng-container)(>)',
       patterns: [
         {
-          include: "#tag-stuff"
+          include: '#tag-stuff'
         },
         {
           beginCaptures: {
-            "1": {
-              name: "punctuation.definition.tag.end.html"
+            '1': {
+              name: 'punctuation.definition.tag.end.html'
             }
           },
-          begin: "(>)",
-          end: "(?=</template|ng-template|ng-container>)",
+          begin: '(>)',
+          end: '(?=</template|ng-template|ng-container>)',
           patterns: [
             {
-              include: "text.html.html"
+              include: 'text.html.html'
             }
           ],
-          contentName: "text.html.html"
+          contentName: 'text.html.html'
         }
       ]
     },
@@ -127,118 +127,118 @@
     // Template structure (html / head / html)
     {
       captures: {
-        "2": {
-          name: "entity.name.tag.structure.any.html"
+        '2': {
+          name: 'entity.name.tag.structure.any.html'
         },
-        "1": {
-          name: "punctuation.definition.tag.begin.html"
+        '1': {
+          name: 'punctuation.definition.tag.begin.html'
         }
       },
       patterns: [
         {
-          include: "#tag-stuff"
+          include: '#tag-stuff'
         }
       ],
-      begin: "(</?)((?i:body|head|html)\\b)",
+      begin: '(</?)((?i:body|head|html)\\b)',
       endCaptures: {
-        "1": {
-          name: "punctuation.definition.tag.end.html"
+        '1': {
+          name: 'punctuation.definition.tag.end.html'
         }
       },
-      end: "(>)",
-      name: "meta.tag.structure.any.html"
+      end: '(>)',
+      name: 'meta.tag.structure.any.html'
     },
 
     // display block tags
     {
       beginCaptures: {
-        "2": {
-          name: "entity.name.tag.block.any.html"
+        '2': {
+          name: 'entity.name.tag.block.any.html'
         },
-        "1": {
-          name: "punctuation.definition.tag.begin.html"
+        '1': {
+          name: 'punctuation.definition.tag.begin.html'
         }
       },
       patterns: [
         {
-          include: "#tag-stuff"
+          include: '#tag-stuff'
         }
       ],
-      begin: "(</?)((?i:address|blockquote|dd|div|dl|dt|fieldset|form|frame|frameset|h1|h2|h3|h4|h5|h6|iframe|noframes|object|ol|p|ul|applet|center|dir|hr|menu|pre)(?!-)\\b)",
+      begin: '(</?)((?i:address|blockquote|dd|div|dl|dt|fieldset|form|frame|frameset|h1|h2|h3|h4|h5|h6|iframe|noframes|object|ol|p|ul|applet|center|dir|hr|menu|pre)(?!-)\\b)',
       endCaptures: {
-        "1": {
-          name: "punctuation.definition.tag.end.html"
+        '1': {
+          name: 'punctuation.definition.tag.end.html'
         }
       },
-      end: "(>)",
-      name: "meta.tag.block.any.html"
+      end: '(>)',
+      name: 'meta.tag.block.any.html'
     },
 
     // display inline tags
     {
       beginCaptures: {
-        "2": {
-          name: "entity.name.tag.inline.any.html"
+        '2': {
+          name: 'entity.name.tag.inline.any.html'
         },
-        "1": {
-          name: "punctuation.definition.tag.begin.html"
+        '1': {
+          name: 'punctuation.definition.tag.begin.html'
         }
       },
       patterns: [
         {
-          include: "#tag-stuff"
+          include: '#tag-stuff'
         }
       ],
-      begin: "(</?)((?i:a|abbr|acronym|area|b|base|basefont|bdo|big|br|button|caption|cite|code|col|colgroup|del|dfn|em|font|head|html|i|img|input|ins|isindex|kbd|label|legend|li|link|map|meta|noscript|optgroup|option|param|q|s|samp|script|select|small|span|strike|strong|style|sub|sup|table|tbody|td|textarea|tfoot|th|thead|title|tr|tt|u|var)(?!-)\\b)",
+      begin: '(</?)((?i:a|abbr|acronym|area|b|base|basefont|bdo|big|br|button|caption|cite|code|col|colgroup|del|dfn|em|font|head|html|i|img|input|ins|isindex|kbd|label|legend|li|link|map|meta|noscript|optgroup|option|param|q|s|samp|script|select|small|span|strike|strong|style|sub|sup|table|tbody|td|textarea|tfoot|th|thead|title|tr|tt|u|var)(?!-)\\b)',
       endCaptures: {
-        "1": {
-          name: "punctuation.definition.tag.end.html"
+        '1': {
+          name: 'punctuation.definition.tag.end.html'
         }
       },
-      end: "(/?>)",
-      name: "meta.tag.inline.any.html"
+      end: '(/?>)',
+      name: 'meta.tag.inline.any.html'
     },
 
     // other tags?
     {
       beginCaptures: {
-        "2": {
-          name: "entity.name.tag.other.html"
+        '2': {
+          name: 'entity.name.tag.other.html'
         },
-        "1": {
-          name: "punctuation.definition.tag.begin.html"
+        '1': {
+          name: 'punctuation.definition.tag.begin.html'
         }
       },
       patterns: [
         {
-          include: "#tag-stuff"
+          include: '#tag-stuff'
         }
       ],
-      begin: "(</?)([a-zA-Z0-9:-]+)",
+      begin: '(</?)([a-zA-Z0-9:-]+)',
       endCaptures: {
-        "1": {
-          name: "punctuation.definition.tag.end.html"
+        '1': {
+          name: 'punctuation.definition.tag.end.html'
         }
       },
-      end: "(/?>)",
-      name: "meta.tag.other.html"
+      end: '(/?>)',
+      name: 'meta.tag.other.html'
     },
 
     // entities and special chars
     {
-      include: "#entities"
+      include: '#entities'
     },
 
     // invalid and incomplete tags
     {
-      match: "<>",
-      name: "invalid.illegal.incomplete.html"
+      match: '<>',
+      name: 'invalid.illegal.incomplete.html'
     },
 
     // unmatched bracket
     {
-      match: "<",
-      name: "invalid.illegal.bad-angle-bracket.html"
+      match: '<',
+      name: 'invalid.illegal.bad-angle-bracket.html'
     }
   ]
 }

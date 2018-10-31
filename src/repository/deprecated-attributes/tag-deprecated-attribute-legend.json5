@@ -1,16 +1,24 @@
 {
   repository: {
-    "tag-deprecated-attribute-legend": {
-      name: "entity.other.attribute-name",
-      begin: "(?<=<legend)",
-      end: "(?=[<>])",
+    'tag-deprecated-attribute-legend': {
+      name: 'entity.other.attribute-name',
+      begin: '(?<=<legend)',
+      end: '(?=[<>])',
       patterns: [
         {
-          name: "invalid.deprecated.attribute-name.legend",
-          match: "[\\s\\n\\r\\t]*(\\b(align)\\b)(?==)"
+          name: 'invalid.deprecated.attribute-name.legend',
+          match: '[\\s\\n\\r\\t]*(\\b(align)\\b)(=)?',
+          captures: {
+            '2': {
+              name: 'invalid.deprecated.attribute-name.legend'
+            },
+            '3': {
+              name: 'constant.character.entity.html'
+            }
+          }
         },
         {
-          include: "#tag-stuff"
+          include: '#tag-stuff'
         }
       ]
     }

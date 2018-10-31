@@ -1,26 +1,26 @@
 {
   repository: {
-    "tag-script": {
+    'tag-script': {
       captures: {
-        "1": {
-          name: "entity.name.tag.begin.html"
+        '1': {
+          name: 'entity.name.tag.begin.html'
         },
-        "2": {
-          name: "entity.name.tag.end.html"
+        '2': {
+          name: 'entity.name.tag.end.html'
         }
       },
-      begin: "(<\\/?\\bscript\\b)(>)?",
-      end: "(<\\/\\bscript\\b>)",
+      begin: '(<\\/?\\bscript\\b)(>)?',
+      end: '(<\\/\\bscript\\b>)',
       patterns: [
         {
-          match: "\\b(let|const|var)\\b\\s",
-          name: "constant.language"
+          match: '\\b(let|const|var)\\b\\s',
+          name: 'constant.language'
         },
         {
-          match: "\\.|\\,|\\|\\:|\\;",
-          name: "keyword.operator.navigation"
+          match: '\\.|\\,|\\|\\:|\\;',
+          name: 'keyword.operator.navigation'
         },
-        { include: "source.js#expression" }
+        { include: 'source.js#expression' }
       ]
     }
   }

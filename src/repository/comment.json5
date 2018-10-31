@@ -3,16 +3,16 @@
     comment: {
       patterns: [
         {
-          name: "comment.block.html",
-          begin: "<!--",
+          name: 'comment.block.html',
+          begin: '<!--',
           beginCaptures: {
-            "0": { name: "punctuation.definition.comment.begin.html" }
+            '0': { name: 'punctuation.definition.comment.begin.html' }
           },
-          end: "-->",
+          end: '-->',
           endCaptures: {
-            "0": { name: "punctuation.definition.comment.end.html" }
+            '0': { name: 'punctuation.definition.comment.end.html' }
           },
-          patterns: [{ include: "#comment" }]
+          patterns: [{ include: '#comment' }]
         }
       ]
     }

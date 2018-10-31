@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.18 (31/10/2018)
+# 0.0.19 (31/10/2018)
+
+- Improved tag script matching (still not perfect)
+
+# 0.0.18 (_31/10/2018_)
 
 - Stupid mistake
 

@@ -776,15 +776,29 @@
             "patterns": []
         },
         "tag-script": {
-            "captures": {
+            "beginCaptures": {
                 "1": {
                     "name": "entity.name.tag.begin.html"
                 },
-                "2": {
+                "3": {
+                    "name": "entity.other.attribute-name.generic.html"
+                },
+                "4": {
+                    "name": "constant.character.entity.html"
+                },
+                "5": {
+                    "name": "string.quoted.double"
+                },
+                "6": {
+                    "name": "entity.name.tag.begin.html"
+                }
+            },
+            "endCaptures": {
+                "1": {
                     "name": "entity.name.tag.end.html"
                 }
             },
-            "begin": "(<\\/?\\bscript\\b)(>)?",
+            "begin": "(<\\/?\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\\w\"\\/]+)[\\s\\n]*)*(>)?",
             "end": "(<\\/\\bscript\\b>)",
             "patterns": [
                 {

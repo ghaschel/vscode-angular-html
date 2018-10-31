@@ -47,7 +47,7 @@
       name: "string.quoted.double.html"
     },
     regex: {
-      match: '/([a-zA-Z0-9\\[\\]\\(\\)\\*\\+\\-\\^\\~\\:\\/\\;\\.\\,\\{\\}\\@\\"\\\\]+)/([nsxAgimuY]*+?)',
+      match: '/([a-zA-Z0-9\\[\\]\\(\\)\\*\\+\\-\\^\\~\\:\\/\\;\\.\\,\\{\\}\\@\\"\\\\#]+)/([nsxAgimuY]*+?)',
       name: "string.regexp",
       patterns: []
     },

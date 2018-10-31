@@ -11,7 +11,17 @@
       },
       begin: "(<\\/?\\bscript\\b)(>)?",
       end: "(<\\/\\bscript\\b>)",
-      patterns: [{ include: "source.js#expression" }]
+      patterns: [
+        {
+          match: "\\b(let|const|var)\\b\\s",
+          name: "constant.language"
+        },
+        {
+          match: "\\.|\\,|\\|\\:|\\;",
+          name: "keyword.operator.navigation"
+        },
+        { include: "source.js#expression" }
+      ]
     }
   }
 }

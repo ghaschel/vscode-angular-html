@@ -1,6 +1,16 @@
 # Change Log
 
-# 0.0.15 (30/10/2018)
+# 0.0.16 (31/10/2018)
+
+- Improved regex matching
+- Improved invalid tag matching
+- Fixed some includes
+- Clutter removal
+- Somehow managed to fix the issue with the attribute having no value (:ghosts:)
+- Highlighting for operators, safe operators, dots, commas, semicolons in angular interpolations and angular directives
+- Improved punctuation and keyword such as var, let, const highlighting in inline script tags.
+
+# 0.0.15 (_30/10/2018_)
 
 - Improved script tag pattern matching (still not perfect)
 

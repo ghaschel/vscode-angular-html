@@ -3,7 +3,7 @@
     'tag-deprecated-attribute-caption': {
       name: 'entity.other.attribute-name',
       begin: '(?<=<caption)',
-      end: '(?=[<>])',
+      end: '(?=[>])',
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.caption',

@@ -3,7 +3,7 @@
     'tag-deprecated-attribute-tfoot': {
       name: 'entity.other.attribute-name',
       begin: '(?<=<tfoot)',
-      end: '(?=[<>])',
+      end: '(?=[>])',
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.tfoot',

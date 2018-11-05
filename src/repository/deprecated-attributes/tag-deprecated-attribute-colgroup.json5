@@ -3,7 +3,7 @@
     'tag-deprecated-attribute-colgroup': {
       name: 'entity.other.attribute-name',
       begin: '(?<=<colgroup)',
-      end: '(?=[<>])',
+      end: '(?=[>])',
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.colgroup',

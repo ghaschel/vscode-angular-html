@@ -3,7 +3,7 @@
     'tag-deprecated-attribute-div': {
       name: 'entity.other.attribute-name',
       begin: '(?<=<div)',
-      end: '(?=[<>])',
+      end: '(?=[>])',
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.div',

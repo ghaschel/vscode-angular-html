@@ -3,28 +3,37 @@
     'tag-script': {
       beginCaptures: {
         '1': {
-          name: 'entity.name.tag.begin.html'
+          name: 'string.regexp'
         },
-        '3': {
-          name: 'entity.other.attribute-name.generic.html'
+        '2': {
+          name: 'entity.name.tag.begin.html'
         },
         '4': {
-          name: 'constant.character.entity.html'
+          name: 'entity.other.attribute-name.generic.html'
         },
         '5': {
-          name: 'string.quoted.double'
+          name: 'constant.character.entity.html'
         },
         '6': {
-          name: 'entity.name.tag.begin.html'
+          name: 'string.quoted.double'
+        },
+        '7': {
+          name: 'string.regexp'
         }
       },
       endCaptures: {
         '1': {
+          name: 'string.regexp'
+        },
+        '2': {
           name: 'entity.name.tag.end.html'
+        },
+        '3': {
+          name: 'string.regexp'
         }
       },
-      begin: '(<\\/?\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\\w"\\/]+)[\\s\\n]*)*(>)?',
-      end: '(<\\/\\bscript\\b>)',
+      begin: '(<\\/?)(\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\\w"\\/]+)[\\s\\n]*)*(>)?',
+      end: '(<\\/)(\\bscript\\b)(>)',
       patterns: [
         {
           match: '\\b(let|const|var)\\b\\s',

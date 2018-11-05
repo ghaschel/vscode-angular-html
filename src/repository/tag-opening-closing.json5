@@ -3,14 +3,17 @@
     'tag-opening-closing': {
       name: 'entity.name.tag',
       captures: {
+        '1': {
+          name: 'string.regexp'
+        },
         '2': {
-          name: 'entity.name.tag.begin.html'
+          name: 'entity.name.tag.end.html'
         },
         '3': {
-          name: 'entity.name.tag.end.html'
+          name: 'string.regexp'
         }
       },
-      match: '((<\\/?)(?!script)[a-zA-Z0-9\\-]++*>?)|\\/?>',
+      match: '(<\\/?)((?!script)[a-zA-Z0-9\\-]++*)|(\\/?>)',
       patterns: []
     }
   }

@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.19 (31/10/2018)
+# 0.0.20 (04/11/2018)
+
+- Improved tag start and end highlighting. [#2](https://github.com/ghaschel/vscode-angular-html/issues/2)
+
+# 0.0.19 (_31/10/2018_)
 
 - Improved tag script matching (still not perfect)
 

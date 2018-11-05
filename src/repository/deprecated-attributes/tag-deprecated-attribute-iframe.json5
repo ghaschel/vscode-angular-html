@@ -3,7 +3,7 @@
     'tag-deprecated-attribute-iframe': {
       name: 'entity.other.attribute-name',
       begin: '(?<=<iframe)',
-      end: '(?=[<>])',
+      end: '(?=[>])',
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.iframe',

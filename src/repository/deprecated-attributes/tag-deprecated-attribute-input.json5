@@ -3,7 +3,7 @@
     'tag-deprecated-attribute-input': {
       name: 'entity.other.attribute-name',
       begin: '(?<=<input)',
-      end: '(?=[<>])',
+      end: '(?=[>])',
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.input',

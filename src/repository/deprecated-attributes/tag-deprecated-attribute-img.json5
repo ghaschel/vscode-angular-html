@@ -3,7 +3,7 @@
     'tag-deprecated-attribute-img': {
       name: 'entity.other.attribute-name',
       begin: '(?<=<img)',
-      end: '(?=[<>])',
+      end: '(?=[/>])',
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.img',

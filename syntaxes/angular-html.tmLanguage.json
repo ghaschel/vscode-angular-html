@@ -687,7 +687,21 @@
             ]
         },
         "tag-deprecated": {
-            "match": ">?<\\/?(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r\\/>\\=\\\"]+?)([\\s\\n\\r\\=\\\"\\/>]*)?",
+            "captures": {
+                "1": {
+                    "name": "string.regexp"
+                },
+                "2": {
+                    "name": "invalid.deprecated.tag"
+                },
+                "3": {
+                    "name": "string.regexp"
+                },
+                "4": {
+                    "name": "string.regexp"
+                }
+            },
+            "match": "(>?<\\/?)(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r\\/>\\=\\\"]+?)([\\s\\n\\r\\=\\\"\\/>]*)?",
             "name": "invalid.deprecated.tag",
             "patterns": []
         },
@@ -765,41 +779,53 @@
         "tag-opening-closing": {
             "name": "entity.name.tag",
             "captures": {
+                "1": {
+                    "name": "string.regexp"
+                },
                 "2": {
-                    "name": "entity.name.tag.begin.html"
+                    "name": "entity.name.tag.end.html"
                 },
                 "3": {
-                    "name": "entity.name.tag.end.html"
+                    "name": "string.regexp"
                 }
             },
-            "match": "((<\\/?)(?!script)[a-zA-Z0-9\\-]++*>?)|\\/?>",
+            "match": "(<\\/?)((?!script)[a-zA-Z0-9\\-]++*)|(\\/?>)",
             "patterns": []
         },
         "tag-script": {
             "beginCaptures": {
                 "1": {
-                    "name": "entity.name.tag.begin.html"
+                    "name": "string.regexp"
                 },
-                "3": {
-                    "name": "entity.other.attribute-name.generic.html"
+                "2": {
+                    "name": "entity.name.tag.begin.html"
                 },
                 "4": {
-                    "name": "constant.character.entity.html"
+                    "name": "entity.other.attribute-name.generic.html"
                 },
                 "5": {
-                    "name": "string.quoted.double"
+                    "name": "constant.character.entity.html"
                 },
                 "6": {
-                    "name": "entity.name.tag.begin.html"
+                    "name": "string.quoted.double"
+                },
+                "7": {
+                    "name": "string.regexp"
                 }
             },
             "endCaptures": {
                 "1": {
+                    "name": "string.regexp"
+                },
+                "2": {
                     "name": "entity.name.tag.end.html"
+                },
+                "3": {
+                    "name": "string.regexp"
                 }
             },
-            "begin": "(<\\/?\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\\w\"\\/]+)[\\s\\n]*)*(>)?",
-            "end": "(<\\/\\bscript\\b>)",
+            "begin": "(<\\/?)(\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\\w\"\\/]+)[\\s\\n]*)*(>)?",
+            "end": "(<\\/)(\\bscript\\b)(>)",
             "patterns": [
                 {
                     "match": "\\b(let|const|var)\\b\\s",
@@ -839,7 +865,7 @@
         "tag-deprecated-attribute-a": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<a)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.a",
@@ -861,7 +887,7 @@
         "tag-deprecated-attribute-area": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<area)",
-            "end": "(?=[<>])",
+            "end": "(?=[/>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.area",
@@ -883,7 +909,7 @@
         "tag-deprecated-attribute-body": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<body)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.body",
@@ -905,7 +931,7 @@
         "tag-deprecated-attribute-br": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<br)",
-            "end": "(?=[<>])",
+            "end": "(?=[/>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.br",
@@ -927,7 +953,7 @@
         "tag-deprecated-attribute-caption": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<caption)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.caption",
@@ -949,7 +975,7 @@
         "tag-deprecated-attribute-col": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<col)",
-            "end": "(?=[<>])",
+            "end": "(?=[/>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.col",
@@ -971,7 +997,7 @@
         "tag-deprecated-attribute-colgroup": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<colgroup)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.colgroup",
@@ -993,7 +1019,7 @@
         "tag-deprecated-attribute-div": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<div)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.div",
@@ -1015,7 +1041,7 @@
         "tag-deprecated-attribute-dl": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<dl)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.dl",
@@ -1037,7 +1063,7 @@
         "tag-deprecated-attribute-h1": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<h1)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.h1",
@@ -1059,7 +1085,7 @@
         "tag-deprecated-attribute-h2": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<h2)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.h2",
@@ -1081,7 +1107,7 @@
         "tag-deprecated-attribute-h3": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<h3)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.h3",
@@ -1103,7 +1129,7 @@
         "tag-deprecated-attribute-h4": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<h4)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.h4",
@@ -1125,7 +1151,7 @@
         "tag-deprecated-attribute-h5": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<h5)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.h5",
@@ -1147,7 +1173,7 @@
         "tag-deprecated-attribute-h6": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<h6)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.h6",
@@ -1169,7 +1195,7 @@
         "tag-deprecated-attribute-head": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<head)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.head",
@@ -1191,7 +1217,7 @@
         "tag-deprecated-attribute-hr": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<hr)",
-            "end": "(?=[<>])",
+            "end": "(?=[/>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.hr",
@@ -1213,7 +1239,7 @@
         "tag-deprecated-attribute-html": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<html)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.html",
@@ -1235,7 +1261,7 @@
         "tag-deprecated-attribute-iframe": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<iframe)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.iframe",
@@ -1257,7 +1283,7 @@
         "tag-deprecated-attribute-img": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<img)",
-            "end": "(?=[<>])",
+            "end": "(?=[/>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.img",
@@ -1279,7 +1305,7 @@
         "tag-deprecated-attribute-input": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<input)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.input",
@@ -1301,7 +1327,7 @@
         "tag-deprecated-attribute-legend": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<legend)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.legend",
@@ -1323,7 +1349,7 @@
         "tag-deprecated-attribute-li": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<li)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.li",
@@ -1345,7 +1371,7 @@
         "tag-deprecated-attribute-link": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<link)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.link",
@@ -1367,7 +1393,7 @@
         "tag-deprecated-attribute-menu": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<menu)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.menu",
@@ -1389,7 +1415,7 @@
         "tag-deprecated-attribute-object": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<object)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.object",
@@ -1411,7 +1437,7 @@
         "tag-deprecated-attribute-ol": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<ol)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.ol",
@@ -1433,7 +1459,7 @@
         "tag-deprecated-attribute-p": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<p)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.p",
@@ -1455,7 +1481,7 @@
         "tag-deprecated-attribute-param": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<param)",
-            "end": "(?=[<>])",
+            "end": "(?=[/>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.param",
@@ -1477,7 +1503,7 @@
         "tag-deprecated-attribute-pre": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<pre)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.pre",
@@ -1499,7 +1525,7 @@
         "tag-deprecated-attribute-t": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<t)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.t",
@@ -1521,7 +1547,7 @@
         "tag-deprecated-attribute-table": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<table)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.table",
@@ -1543,7 +1569,7 @@
         "tag-deprecated-attribute-tbody": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<tbody)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.tbody",
@@ -1565,7 +1591,7 @@
         "tag-deprecated-attribute-td": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<td)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.td",
@@ -1587,7 +1613,7 @@
         "tag-deprecated-attribute-tfoot": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<tfoot)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.tfoot",
@@ -1609,7 +1635,7 @@
         "tag-deprecated-attribute-th": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<th)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.th",
@@ -1631,7 +1657,7 @@
         "tag-deprecated-attribute-thead": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<thead)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.thead",
@@ -1653,7 +1679,7 @@
         "tag-deprecated-attribute-tr": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<tr)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.tr",
@@ -1675,7 +1701,7 @@
         "tag-deprecated-attribute-ul": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<ul)",
-            "end": "(?=[<>])",
+            "end": "(?=[>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.ul",

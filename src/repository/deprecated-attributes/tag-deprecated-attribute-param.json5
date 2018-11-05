@@ -3,7 +3,7 @@
     'tag-deprecated-attribute-param': {
       name: 'entity.other.attribute-name',
       begin: '(?<=<param)',
-      end: '(?=[<>])',
+      end: '(?=[/>])',
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.param',

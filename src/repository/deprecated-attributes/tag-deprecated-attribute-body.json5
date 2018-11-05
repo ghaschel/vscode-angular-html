@@ -3,7 +3,7 @@
     'tag-deprecated-attribute-body': {
       name: 'entity.other.attribute-name',
       begin: '(?<=<body)',
-      end: '(?=[<>])',
+      end: '(?=[>])',
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.body',

@@ -1,7 +1,21 @@
 {
   repository: {
     'tag-deprecated': {
-      match: '>?<\\/?(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r\\/>\\=\\"]+?)([\\s\\n\\r\\=\\"\\/>]*)?',
+      captures: {
+        '1': {
+          name: 'string.regexp'
+        },
+        '2': {
+          name: 'invalid.deprecated.tag'
+        },
+        '3': {
+          name: 'string.regexp'
+        },
+        '4': {
+          name: 'string.regexp'
+        }
+      },
+      match: '(>?<\\/?)(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r\\/>\\=\\"]+?)([\\s\\n\\r\\=\\"\\/>]*)?',
       name: 'invalid.deprecated.tag',
       patterns: []
     }

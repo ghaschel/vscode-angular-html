@@ -3,7 +3,7 @@
     'tag-deprecated-attribute-h2': {
       name: 'entity.other.attribute-name',
       begin: '(?<=<h2)',
-      end: '(?=[<>])',
+      end: '(?=[>])',
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.h2',

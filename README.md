@@ -1,8 +1,11 @@
 # vscode-angular-html
 
 [![GitHub issues](https://img.shields.io/github/issues/ghaschel/vscode-angular-html.svg)](https://github.com/ghaschel/vscode-angular-syntax/issues)
+
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ghaschel/vscode-angular-html/blob/master/LICENSE)
+
 [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
+
 [![Version](https://vsmarketplacebadge.apphb.com/version-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
 
 <div align="center">
@@ -30,56 +33,67 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 ### Comments
 
 <span name="comments"></span>
+
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/comments.png" title="vscode-angular-html" alt="Comments" />
 
-### Invalid attributes
+### Invalid attributes [see complete list](DEPRECATED-ATTRIBUTES.md)
 
 <span name="invalid-attributes"></span>
+
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/invalid-attributes.png" title="Invalid attributes" alt="Invalid attributes" />
 
 ### Angular directives
 
 <span name="angular-directives"></span>
+
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-directives.png" title="Angular directives" alt="Angular directives" />
 
 ### Angular interpolations (with safe navigation operator)
 
 <span name="angular-interpolations"></span>
+
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-interpolations.png" title="Angular Interpolations" alt="Angular Interpolations" />
 
 ### Entities
 
 <span name="html-entities"></span>
+
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/html-entities.png" title="HTML Entities" alt="HTML Entities" />
 
 ### Regex
 
 <span name="regex"></span>
+
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/regex.png" title="vscode-angular-html" alt="Regex" />
 
-### Deprecated tags
+### Deprecated tags [see complete list](DEPRECATED-TAGS.md)
 
 <span name="deprecated-tags"></span>
+
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/deprecated-tags.png" title="Deprecated tags" alt="Deprecated tags" />
 
-### DOM events
+### DOM events [see complete list](DOM-EVENTS.md)
 
 <span name="dom-events"></span>
+
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/dom-events.png" title="DOM events" alt="DOM events" />
 
 ### Style inline
 
 <span name="style-inline"></span>
+
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/style-inline.png" title="Style inline" alt="Style inline" />
 
 ### Script tag
 
 <span name="script-tags"></span>
+
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/script-tag.png" title="Script tags" alt="Script tag" />
 
 ### Generic attributes
 
 <span name="generic-attributes"></span>
+
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/generic-attributes.png" title="Generic attributes" alt="Generic attributes" />
 
 ## Resources
@@ -97,4 +111,4 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 
 ## [License](https://github.com/ghaschel/vscode-angular-html/blob/master/LICENSE)
 
-## [ChangeLog](CHANGELOG.md)
+## [Changelog](CHANGELOG.md)

@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.20 (04/11/2018)
+# 0.0.21 (07/11/2018)
+
+- Improved angular directive pattern matching to work with `[attr.test]`, `[@test]` and `[@$test]`
+
+# 0.0.20 (_04/11/2018_)
 
 - Improved tag start and end highlighting. [#2](https://github.com/ghaschel/vscode-angular-html/issues/2)
 
@@ -89,7 +93,7 @@
 # 0.0.4 (_15/10/2018_) - Fork
 
 - Code rewrite for a better maintability.
-- Added support for bindings and template variables: (), [], \[()\], #.
+- Added support for bindings and template variables: `()`, `[]`, `[()]`, `#`.
 
 ## 0.0.3 (_07-05-2018_)
 

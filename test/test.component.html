@@ -171,6 +171,9 @@ ANGULAR DIRECTIVES
 <div [binding]="to.element"
      [binding]="to.function('with-parameter');"
      [(binding)]="to.element"
+     [attr.href]="file?.link"
+     [@$visibility]="module.$visibility"
+     [@visibility]="getMenuState()"
      [(binding)]="to.function('with-parameter')"
      (click)="callback(parameter.test)"
      *ngIf="condition.met"
@@ -203,9 +206,7 @@ DEPRECATED TAGS
 
 <big class=""></big>
 
-<center class="">
-
-</center>
+<center class=""></center>
 
 <dir class=""></dir>
 
@@ -213,11 +214,15 @@ DEPRECATED TAGS
 
 <frame class="" />
 
-<frameset class=""></frameset>
+<frameset class="">
+
+</frameset>
 
 <isindex class="" />
 
-<noframes class=""></noframes>
+<noframes class="">
+
+</noframes>
 
 <s class=""></s>
 
@@ -349,7 +354,7 @@ STYLE INLINE
 
 <div style="
         display: block;
-        background-color: red;
+        background-color: rgb(255, 255, 255);
         color: rgba(33, 254, 12, 1);"></div>
 
 SCRIPT TAG
@@ -359,7 +364,7 @@ SCRIPT TAG
   const a = test.callback();
   let a = test;
 
-  function test(variable: TEST): boolean {
+  function test(variable) {
     return boolean;
   }
 
@@ -367,7 +372,7 @@ SCRIPT TAG
 
 GENERIC ATTRIBUTES
 
-<div align=""
+<div align
      [test]=""></div>
 
 <div class="test"

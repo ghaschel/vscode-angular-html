@@ -362,20 +362,26 @@
     "repository": {
         "angular-directives": {
             "captures": {
-                "1": {
+                "3": {
                     "name": "string.regexp"
                 },
                 "4": {
+                    "name": "constant.character.entity.html"
+                },
+                "5": {
                     "name": "entity.other.attribute-name.html"
                 },
                 "7": {
-                    "name": "string.regexp"
+                    "name": "constant.character.entity.html"
                 },
                 "8": {
+                    "name": "string.regexp"
+                },
+                "9": {
                     "name": "constant.character.entity.html"
                 }
             },
-            "begin": "((?:\\b(v-)|(\\*|\\#|[\\[\\(]{1,2}))([a-zA-Z0-9\\-]+)(?:\\:([a-zA-Z0-9\\-]+))?(?:\\.([a-zA-Z0-9\\-]+))*)([\\]\\)]{1,2})?\\s*(=)?",
+            "begin": "((?:\\b(v-)|(\\*|\\#|[\\[\\(]{1,2}))([@\\$]*)?([a-zA-Z0-9\\-]+)(?:\\:([a-zA-Z0-9\\-]+))?(?:\\.([a-zA-Z0-9\\-]+))*)([\\]\\)]{1,2})?\\s*(=)?",
             "end": "(?<='|\")|(?=[\\s<>`])",
             "name": "meta.directive.angular",
             "patterns": [

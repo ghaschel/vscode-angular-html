@@ -4,17 +4,21 @@
       name: 'entity.name.tag',
       captures: {
         '1': {
-          name: 'string.regexp'
+          name: 'punctuation.definition.tag.begin.html'
         },
         '2': {
           name: 'entity.name.tag.end.html'
         },
         '3': {
-          name: 'string.regexp'
+          name: 'punctuation.definition.tag.end.html'
         }
       },
       match: '(<\\/?)((?!script)[a-zA-Z0-9\\-]++*)|(\\/?>)',
-      patterns: []
+      patterns: [
+        {
+          include: '#tag-stuff'
+        }
+      ]
     }
   }
 }

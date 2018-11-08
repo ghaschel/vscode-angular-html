@@ -3,7 +3,7 @@
     'tag-script': {
       beginCaptures: {
         '1': {
-          name: 'string.regexp'
+          name: 'punctuation.definition.tag.begin.html'
         },
         '2': {
           name: 'entity.name.tag.begin.html'
@@ -18,18 +18,18 @@
           name: 'string.quoted.double'
         },
         '7': {
-          name: 'string.regexp'
+          name: 'punctuation.definition.tag.end.html'
         }
       },
       endCaptures: {
         '1': {
-          name: 'string.regexp'
+          name: 'punctuation.definition.tag.begin.html'
         },
         '2': {
           name: 'entity.name.tag.end.html'
         },
         '3': {
-          name: 'string.regexp'
+          name: 'punctuation.definition.tag.end.html'
         }
       },
       begin: '(<\\/?)(\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\\w"\\/]+)[\\s\\n]*)*(>)?',

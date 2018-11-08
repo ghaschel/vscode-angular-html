@@ -3,21 +3,15 @@
     'tag-deprecated': {
       beginCaptures: {
         '1': {
-          name: 'string.regexp'
+          name: 'punctuation.definition.tag.begin.html'
         },
         '2': {
           name: 'invalid.deprecated.tag'
-        },
-        '3': {
-          name: 'string.regexp'
-        },
-        '4': {
-          name: 'string.regexp'
         }
       },
       endCaptures: {
         '1': {
-          name: 'string.regexp'
+          name: 'punctuation.definition.tag.end.html'
         }
       },
       begin: '(<\\/?)\\b(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|s|tt|u)\\b([\\n\\s\\r\\/\\=\\"]+?)*([\\s\\n\\r\\=\\"\\/]*)?',

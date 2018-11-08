@@ -1,6 +1,12 @@
 # Change Log
 
-# 0.0.22 (07/11/2018)
+# 0.0.23 (08/11/2018)
+
+- Removed `$` from `[@]` highlight as it makes no sense.
+- Returned `</>` colors to default keep it similar to any other HTML highlighting (feedbacks are welcome)
+- Fixed issue with attributes value not being applied string scope name. [#4](https://github.com/ghaschel/vscode-angular-html/issues/4)
+
+# 0.0.22 (_07/11/2018_)
 
 - Fixed bug related to single quote. [#3](https://github.com/ghaschel/vscode-angular-html/issues/3)
 

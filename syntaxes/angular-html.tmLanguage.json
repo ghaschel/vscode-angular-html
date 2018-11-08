@@ -378,7 +378,7 @@
                     "name": "constant.character.entity.html"
                 }
             },
-            "begin": "((?:\\b(v-)|(\\*|\\#|[\\[\\(]{1,2}))([@\\$]*)?([a-zA-Z0-9\\-]+)(?:\\:([a-zA-Z0-9\\-]+))?(?:\\.([a-zA-Z0-9\\-]+))*)([\\]\\)]{1,2})?\\s*(=)?",
+            "begin": "((?:\\b(v-)|(\\*|\\#|[\\[\\(]{1,2}))(@)?([a-zA-Z0-9\\-\\$]+)(?:\\:([a-zA-Z0-9\\-]+))?(?:\\.([a-zA-Z0-9\\-]+))*)([\\]\\)]{1,2})?\\s*(=)?",
             "end": "(?<='|\")|(?=[\\s<>`])",
             "name": "meta.directive.angular",
             "patterns": [
@@ -692,21 +692,15 @@
         "tag-deprecated": {
             "beginCaptures": {
                 "1": {
-                    "name": "string.regexp"
+                    "name": "punctuation.definition.tag.begin.html"
                 },
                 "2": {
                     "name": "invalid.deprecated.tag"
-                },
-                "3": {
-                    "name": "string.regexp"
-                },
-                "4": {
-                    "name": "string.regexp"
                 }
             },
             "endCaptures": {
                 "1": {
-                    "name": "string.regexp"
+                    "name": "punctuation.definition.tag.end.html"
                 }
             },
             "begin": "(<\\/?)\\b(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|s|tt|u)\\b([\\n\\s\\r\\/\\=\\\"]+?)*([\\s\\n\\r\\=\\\"\\/]*)?",
@@ -784,31 +778,38 @@
                 },
                 "3": {
                     "name": "constant.character.entity.html"
+                },
+                "4": {
+                    "name": "string.quoted.double.html"
                 }
             },
-            "match": "(?!\\b(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_]+)(=)",
+            "match": "(?!\\b(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_]+)(=)(\".*\")?",
             "patterns": []
         },
         "tag-opening-closing": {
             "name": "entity.name.tag",
             "captures": {
                 "1": {
-                    "name": "string.regexp"
+                    "name": "punctuation.definition.tag.begin.html"
                 },
                 "2": {
                     "name": "entity.name.tag.end.html"
                 },
                 "3": {
-                    "name": "string.regexp"
+                    "name": "punctuation.definition.tag.end.html"
                 }
             },
             "match": "(<\\/?)((?!script)[a-zA-Z0-9\\-]++*)|(\\/?>)",
-            "patterns": []
+            "patterns": [
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
         },
         "tag-script": {
             "beginCaptures": {
                 "1": {
-                    "name": "string.regexp"
+                    "name": "punctuation.definition.tag.begin.html"
                 },
                 "2": {
                     "name": "entity.name.tag.begin.html"
@@ -823,18 +824,18 @@
                     "name": "string.quoted.double"
                 },
                 "7": {
-                    "name": "string.regexp"
+                    "name": "punctuation.definition.tag.end.html"
                 }
             },
             "endCaptures": {
                 "1": {
-                    "name": "string.regexp"
+                    "name": "punctuation.definition.tag.begin.html"
                 },
                 "2": {
                     "name": "entity.name.tag.end.html"
                 },
                 "3": {
-                    "name": "string.regexp"
+                    "name": "punctuation.definition.tag.end.html"
                 }
             },
             "begin": "(<\\/?)(\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\\w\"\\/]+)[\\s\\n]*)*(>)?",

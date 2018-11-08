@@ -1,11 +1,8 @@
 # vscode-angular-html
 
 [![GitHub issues](https://img.shields.io/github/issues/ghaschel/vscode-angular-html.svg)](https://github.com/ghaschel/vscode-angular-syntax/issues)
-
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ghaschel/vscode-angular-html/blob/master/LICENSE)
-
 [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
-
 [![Version](https://vsmarketplacebadge.apphb.com/version-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
 
 <div align="center">
@@ -14,7 +11,9 @@
 
 ## Angular HTML Template Syntax Highlighting
 
-This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events, empathyses deprecated and obsolete tags and attributes usage according to the current status of HTML.
+This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events and emphasizes deprecated and obsolete tags and attributes usage according to the current status of HTML.
+
+> Note: VSCode's default Dark+ theme doesn't have the highlighting displayed in these images. For that effect I recommend the using [dark-plus-syntax](https://github.com/dunstontc/dark-plus-syntax/) theme.
 
 ## Summary
 

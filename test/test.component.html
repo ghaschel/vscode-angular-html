@@ -172,6 +172,7 @@ ANGULAR DIRECTIVES
      [binding]="to.function('with-parameter');"
      [(binding)]="to.element"
      [attr.href]="file?.link"
+     [style.font-size.px]="10"
      [@$visibility]="module.$visibility"
      [@visibility]="getMenuState()"
      [(binding)]="to.function('with-parameter')"
@@ -385,3 +386,10 @@ GENERIC ATTRIBUTES
 <input type="">
 
 <label class="teste"></label>
+
+<button [attr.aria-label]=""></button>
+<button [style.background-color]="canSave ? 'cyan': 'grey'">Save</button>
+<button [style.font-size.em]="isSpecial ? 3 : 1">Big</button>
+
+<input />
+<input />

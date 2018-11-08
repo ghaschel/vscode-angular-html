@@ -1,6 +1,12 @@
 # Change Log
 
-# 0.0.23 (08/11/2018)
+# 0.0.24 (08/11/2018)
+
+- Support for style binding with units `[style.font-size.px]="15"`
+- Fixed self closing tags with space before being shown as blue instead of gray [#5](https://github.com/ghaschel/vscode-angular-html/issues/5)
+- Fixed invalid attribute tag input pattern matching
+
+# 0.0.23 (_08/11/2018_)
 
 - Removed `$` from `[@]` highlight as it makes no sense.
 - Returned `</>` colors to default keep it similar to any other HTML highlighting (feedbacks are welcome)

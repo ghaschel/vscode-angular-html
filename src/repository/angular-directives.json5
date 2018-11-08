@@ -11,8 +11,11 @@
         '5': {
           name: 'entity.other.attribute-name.html'
         },
-        '7': {
+        '6': {
           name: 'constant.character.entity.html'
+        },
+        '7': {
+          name: 'keyword.operator.unit'
         },
         '8': {
           name: 'string.regexp'
@@ -21,7 +24,7 @@
           name: 'constant.character.entity.html'
         }
       },
-      begin: '((?:\\b(v-)|(\\*|\\#|[\\[\\(]{1,2}))(@)?([a-zA-Z0-9\\-\\$]+)(?:\\:([a-zA-Z0-9\\-]+))?(?:\\.([a-zA-Z0-9\\-]+))*)([\\]\\)]{1,2})?\\s*(=)?',
+      begin: '((?:\\b(v-)|(\\*|\\#|[\\[\\(]{1,2}))(@)?([a-zA-Z0-9\\-\\$]+)(?:[\\:\\.]([a-zA-Z0-9\\-\\%]+))?(?:\\.([a-zA-Z0-9\\-\\%]+))*)([\\]\\)]{1,2})?\\s*(=)?',
       end: '(?<=\'|")|(?=[\\s<>`])',
       name: 'meta.directive.angular',
       patterns: [

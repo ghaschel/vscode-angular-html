@@ -13,7 +13,7 @@
           name: 'punctuation.definition.tag.end.html'
         }
       },
-      match: '(<\\/?)((?!script)[a-zA-Z0-9\\-]++*)|(\\/?>)',
+      match: '(<\\/?)((?!script)[a-zA-Z0-9\\-]++*)|(\\s*\\/?>)',
       patterns: [
         {
           include: '#tag-stuff'

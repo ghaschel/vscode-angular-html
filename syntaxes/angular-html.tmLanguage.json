@@ -354,9 +354,6 @@
         },
         {
             "include": "#tag-script"
-        },
-        {
-            "include": "#tag-stuff"
         }
     ],
     "repository": {
@@ -693,7 +690,7 @@
             ]
         },
         "tag-deprecated": {
-            "captures": {
+            "beginCaptures": {
                 "1": {
                     "name": "string.regexp"
                 },
@@ -707,9 +704,19 @@
                     "name": "string.regexp"
                 }
             },
-            "match": "(>?<\\/?)(acronym|applet|basefont|big|center|dir|font|frame|frameset|isindex|noframes|s|strike|tt|u)([\\n\\s\\r\\/>\\=\\\"]+?)([\\s\\n\\r\\=\\\"\\/>]*)?",
-            "name": "invalid.deprecated.tag",
-            "patterns": []
+            "endCaptures": {
+                "1": {
+                    "name": "string.regexp"
+                }
+            },
+            "begin": "(<\\/?)\\b(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|s|tt|u)\\b([\\n\\s\\r\\/\\=\\\"]+?)*([\\s\\n\\r\\=\\\"\\/]*)?",
+            "end": "(\\/?[\\s]*>)",
+            "name": "meta.tag.other.html",
+            "patterns": [
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
         },
         "tag-events-attribute": {
             "captures": {
@@ -1377,7 +1384,7 @@
         "tag-deprecated-attribute-link": {
             "name": "entity.other.attribute-name",
             "begin": "(?<=<link)",
-            "end": "(?=[>])",
+            "end": "(?=[\\/>])",
             "patterns": [
                 {
                     "name": "invalid.deprecated.attribute-name.link",

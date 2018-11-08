@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.21 (07/11/2018)
+# 0.0.22 (07/11/2018)
+
+- Fixed bug related to single quote. [#3](https://github.com/ghaschel/vscode-angular-html/issues/3)
+
+# 0.0.21 (_07/11/2018_)
 
 - Improved angular directive pattern matching to work with `[attr.test]`, `[@test]` and `[@$test]`
 

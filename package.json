@@ -21,21 +21,25 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "html",
-      "aliases": [
-        "HTML (Angular template)"
-      ],
-      "extensions": [
-        ".component.html"
-      ],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "html",
-      "scopeName": "text.html.html",
-      "path": "./syntaxes/angular-html.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "html",
+        "aliases": [
+          "HTML (Angular template)"
+        ],
+        "extensions": [
+          ".component.html"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "html",
+        "scopeName": "text.html.html",
+        "path": "./syntaxes/angular-html.tmLanguage.json"
+      }
+    ]
   },
   "galleryBanner": {
     "color": "#1e1e1e",

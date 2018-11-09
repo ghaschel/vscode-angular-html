@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.24 (08/11/2018)
+# 0.0.25 (09/11/2018)
+
+- Support for DOCTYPE
+
+# 0.0.24 (_08/11/2018_)
 
 - Support for style binding with units `[style.font-size.px]="15"`
 - Fixed self closing tags with space before being shown as blue instead of gray [#5](https://github.com/ghaschel/vscode-angular-html/issues/5)

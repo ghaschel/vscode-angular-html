@@ -1,8 +1,11 @@
 # vscode-angular-html
 
 [![GitHub issues](https://img.shields.io/github/issues/ghaschel/vscode-angular-html.svg)](https://github.com/ghaschel/vscode-angular-syntax/issues)
+
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ghaschel/vscode-angular-html/blob/master/LICENSE)
+
 [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
+
 [![Version](https://vsmarketplacebadge.apphb.com/version-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
 
 <div align="center">
@@ -17,6 +20,7 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 
 ## Summary
 
+- [Doctype](#doctype)
 - [Comments](#comments)
 - [Invalid attributes](#invalid-attributes)
 - [Angular directives](#angular-directives)
@@ -28,6 +32,12 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 - [Style inline](#style-inline)
 - [Script tags](#script-tags)
 - [Generic attributes](#generic-attributes)
+
+### Doctype
+
+<span name="doctype"></span>
+
+<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/doctype.png" title="vscode-angular-html" alt="Doctype" />
 
 ### Comments
 

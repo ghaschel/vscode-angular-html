@@ -1,0 +1,40 @@
+{
+  repository: {
+    doctype: {
+      patterns: [
+        {
+          endCaptures: {
+            '1': {
+              name: 'punctuation.definition.tag.end.html'
+            }
+          },
+          beginCaptures: {
+            '1': {
+              name: 'punctuation.definition.tag.begin.html'
+            },
+            '2': {
+              name: 'keyword.operator.exclamation'
+            },
+            '3': {
+              name: 'constant.character.entity.html'
+            }
+          },
+          begin: '(<)(!)((?i:doctype))',
+          end: '(>)',
+          name: 'entity.other.attribute-name.doctype.html',
+          patterns: [
+            {
+              patterns: [
+                {
+                  match: '("[\\w\\d\\D]*")',
+                  name: 'string.quoted.double'
+                }
+              ],
+              name: 'entity.other.attribute-name.generic.html'
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

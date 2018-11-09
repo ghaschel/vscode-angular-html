@@ -6,6 +6,7 @@
     { include: '#angular-directives' },
     { include: '#angular-interpolations' },
     { include: '#comment' },
+    { include: '#doctype' },
     { include: '#entity' },
     { include: '#operator' },
     { include: '#regex' },

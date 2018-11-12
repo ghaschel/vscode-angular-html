@@ -14,7 +14,7 @@
 
 This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events and emphasizes deprecated and obsolete tags and attributes usage according to the current status of HTML.
 
-> Note: VSCode's default Dark+ theme doesn't have the highlighting displayed in these images. For that effect I recommend the using [dark-plus-syntax](https://marketplace.visualstudio.com/items?itemName=dunstontc.dark-plus-syntax) theme.
+> Note: VSCode's default Dark+ theme doesn't have the highlighting displayed in these images. For that effect I recommend using [dark-plus-syntax](https://marketplace.visualstudio.com/items?itemName=dunstontc.dark-plus-syntax) theme.
 > Other themes that have similar highlighting: [cobalt2](https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2), [dracula / dracula soft](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula) and [and old hope classic](https://marketplace.visualstudio.com/items?itemName=dustinsanders.an-old-hope-theme-vscode).
 
 ## Summary
@@ -107,7 +107,7 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 
 ## Disclaimer
 
-> The development of this plugin serves as a way for me to learn Regex, so it's probably not 100% correct. Feel free to submit a pull request if needed.
+> The development of this plugin serves as a way for me to train Regex, so may not be 100% correct. Feel free to submit a pull request if needed.
 
 > Based in the original work of [dunstontc](https://github.com/dunstontc/vscode-angular-syntax)
 

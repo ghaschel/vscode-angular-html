@@ -3,10 +3,16 @@ const merge = require('gulp-merge-json');
 const json5 = require('gulp-json5-to-json');
 const _ = require('lodash');
 
-gulp.task('default', () => {});
+function watch() {
+  return gulp.watch('./src/**/*.json5', gulp.series(['compile-json']));
+}
+
+gulp.task('default', () => {
+  return watch()
+});
 
 gulp.task('compile-json', () => {
-  gulp.src('./src/**/*.json5')
+  return gulp.src('./src/**/*.json5')
     .pipe(merge({
       fileName: "angular-html.tmLanguage.json",
       json5: true
@@ -18,5 +24,5 @@ gulp.task('compile-json', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch('./src/**/*.json5', ['compile-json']);
+  return watch();
 });

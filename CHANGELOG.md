@@ -4,6 +4,7 @@
 
 - Fixed security issues pointed by Github with package-lock.json
 - Fixed gulpfile tasks
+- Fixes the case where normal attributes would apply text color to the next attributes that didn't have a newline before. [#6](https://github.com/ghaschel/vscode-angular-html/issues/6)
 
 # 0.0.25 (_09/11/2018_)
 

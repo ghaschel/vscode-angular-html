@@ -2,8 +2,9 @@
   "name": "vscode-angular-html",
   "displayName": "vscode-angular-html",
   "description": "Syntax highlighting for angular HTML Template files",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "publisher": "ghaschel",
+  "license": "MIT", 
   "repository": {
     "type": "git",
     "url": "https://github.com/ghaschel/vscode-angular-syntax.git"
@@ -47,7 +48,7 @@
   },
   "icon": "assets/angular-html.png",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-json5-to-json": "^0.2.1",
     "gulp-merge-json": "^1.3.1",
     "json-beautify": "^1.0.1",

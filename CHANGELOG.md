@@ -1,6 +1,11 @@
 # Change Log
 
-# 0.0.25 (09/11/2018)
+# 0.0.26 (12/11/2018)
+
+- Fixed security issues pointed by Github with package-lock.json
+- Fixed gulpfile tasks
+
+# 0.0.25 (_09/11/2018_)
 
 - Support for DOCTYPE
 

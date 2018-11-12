@@ -180,6 +180,7 @@ ANGULAR DIRECTIVES
      (click)="callback(parameter.test)"
      *ngIf="condition.met"
      *ngIf="condition?.met"
+     class="testing with non multiline"  [test]="test.test();"
      *ngFor="let a of b; index as c;"
      #templateVariable></div>
 
@@ -394,16 +395,3 @@ GENERIC ATTRIBUTES
 
 <input />
 <input />
-
-<div class="row no-gutters" *ngIf="selectedCustomer && selectedCustomer.id > 0">
-  <div class="col">
-    <kendo-grid #grid="kendoGrid"
-        *ngIf="!isExternalCheckIn"
-        [data]="gridView"
-        (cellClose)="onCellClose()">
-      <kendo-grid-column field="partTypeId" hidden="true"></kendo-grid-column>
-      <kendo-grid-column field="partName" title="Part" [editable]="false"></kendo-grid-column>
-      <kendo-grid-column field="partNumber" title="Part #" [editable]="false"></kendo-grid-column>
-    </kendo-grid>
-  </div>
-</div>

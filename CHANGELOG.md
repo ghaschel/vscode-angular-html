@@ -1,6 +1,12 @@
 # Change Log
 
-# 0.0.27 (12/11/2018)
+# 0.0.28 (14/11/2018)
+
+- Fixed deprecated tags
+- Removed unused patterns
+- Improved operator in angular directives and angular interpolations
+
+# 0.0.27 (_12/11/2018_)
 
 - Improves even further the previous issue
 

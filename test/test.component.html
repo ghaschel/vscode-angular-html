@@ -180,7 +180,8 @@ ANGULAR DIRECTIVES
      (click)="callback(parameter.test)"
      *ngIf="condition.met"
      *ngIf="condition?.met"
-     class="testing with non multiline"  [test]="test.test();"
+     class="testing with non multiline"
+     [test]="test.test();"
      *ngFor="let a of b; index as c;"
      #templateVariable></div>
 
@@ -197,7 +198,7 @@ ENTITIES
 
 REGEX
 
-/[^@\/#(){31231231}]]/
+/[^@\/#(){31231231}]/
 
 DEPRECATED TAGS
 
@@ -394,4 +395,4 @@ GENERIC ATTRIBUTES
 <button [style.font-size.em]="isSpecial ? 3 : 1">Big</button>
 
 <input />
-<input />
+<input/>

@@ -9,7 +9,8 @@
           name: 'constant.character.entity.html'
         },
         '5': {
-          name: 'entity.other.attribute-name.html'
+          // using another scope different from the one it fits to differentiate in color from objects and variables
+          name: 'support.type.object.module.html' 
         },
         '6': {
           name: 'constant.character.entity.html'

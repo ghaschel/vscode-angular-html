@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-deprecated-attribute-colgroup': {
-      name: 'entity.other.attribute-name',
       begin: '(?<=<colgroup)',
       end: '(?=[>])',
       patterns: [

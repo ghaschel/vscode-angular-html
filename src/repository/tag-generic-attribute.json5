@@ -1,13 +1,16 @@
 {
   repository: {
     'tag-generic-attribute': {
-      name: 'entity.other.attribute-name',
+      // using another scope different from the one it fits to differentiate in color from objects and variables
+      name: 'support.type.object.module.html',
       captures: {
         '1': {
-          name: 'entity.other.attribute-name.generic.html'
+          // using another scope different from the one it fits to differentiate in color from objects and variables
+          name: 'support.type.object.module.html' 
         },
         '2': {
-          name: 'entity.other.attribute-name.generic.html'
+          // using another scope different from the one it fits to differentiate in color from objects and variables
+          name: 'support.type.object.module.html' 
         },
         '3': {
           name: 'constant.character.entity.html'

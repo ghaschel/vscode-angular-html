@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-deprecated-attribute-input': {
-      name: 'entity.other.attribute-name',
       begin: '(?<=<input)',
       end: '(?=[\\/>])',
       patterns: [

@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-deprecated-attribute-p': {
-      name: 'entity.other.attribute-name',
       begin: '(?<=<p)',
       end: '(?=[>])',
       patterns: [

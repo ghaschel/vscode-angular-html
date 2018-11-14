@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-deprecated-attribute-tfoot': {
-      name: 'entity.other.attribute-name',
       begin: '(?<=<tfoot)',
       end: '(?=[>])',
       patterns: [

@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-deprecated-attribute-hr': {
-      name: 'entity.other.attribute-name',
       begin: '(?<=<hr)',
       end: '(?=[/>])',
       patterns: [

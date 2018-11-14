@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-deprecated-attribute-area': {
-      name: 'entity.other.attribute-name',
       begin: '(?<=<area)',
       end: '(?=[/>])',
       patterns: [

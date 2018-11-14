@@ -3,7 +3,8 @@
     'tag-events-attribute': {
       captures: {
         '1': {
-          name: 'entity.other.attribute-name.events.html'
+          // using another scope different from the one it fits to differentiate in color from objects and variables
+          name: 'support.type.object.module.html' 
         },
         '2': {
           name: 'constant.character.entity.html'

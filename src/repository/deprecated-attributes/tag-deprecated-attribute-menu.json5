@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-deprecated-attribute-menu': {
-      name: 'entity.other.attribute-name',
       begin: '(?<=<menu)',
       end: '(?=[>])',
       patterns: [

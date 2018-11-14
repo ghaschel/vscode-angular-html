@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-deprecated-attribute-iframe': {
-      name: 'entity.other.attribute-name',
       begin: '(?<=<iframe)',
       end: '(?=[>])',
       patterns: [

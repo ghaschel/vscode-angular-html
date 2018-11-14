@@ -319,7 +319,7 @@
                     "name": "constant.character.entity.html"
                 },
                 "5": {
-                    "name": "entity.other.attribute-name.html"
+                    "name": "support.type.object.module.html"
                 },
                 "6": {
                     "name": "constant.character.entity.html"
@@ -469,7 +469,7 @@
                     },
                     "begin": "(<)(!)((?i:doctype))",
                     "end": "(>)",
-                    "name": "entity.other.attribute-name.doctype.html",
+                    "name": "support.type.object.module.html",
                     "patterns": [
                         {
                             "patterns": [
@@ -478,7 +478,7 @@
                                     "name": "string.quoted.double"
                                 }
                             ],
-                            "name": "entity.other.attribute-name.generic.html"
+                            "name": "support.type.object.module.html"
                         }
                     ]
                 }
@@ -586,7 +586,7 @@
         "tag-events-attribute": {
             "captures": {
                 "1": {
-                    "name": "entity.other.attribute-name.events.html"
+                    "name": "support.type.object.module.html"
                 },
                 "2": {
                     "name": "constant.character.entity.html"
@@ -639,13 +639,13 @@
             ]
         },
         "tag-generic-attribute": {
-            "name": "entity.other.attribute-name",
+            "name": "support.type.object.module.html",
             "captures": {
                 "1": {
-                    "name": "entity.other.attribute-name.generic.html"
+                    "name": "support.type.object.module.html"
                 },
                 "2": {
-                    "name": "entity.other.attribute-name.generic.html"
+                    "name": "support.type.object.module.html"
                 },
                 "3": {
                     "name": "constant.character.entity.html"
@@ -686,7 +686,7 @@
                     "name": "entity.name.tag.begin.html"
                 },
                 "4": {
-                    "name": "entity.other.attribute-name.generic.html"
+                    "name": "support.type.object.module.html"
                 },
                 "5": {
                     "name": "constant.character.entity.html"
@@ -745,7 +745,6 @@
             ]
         },
         "tag-deprecated-attribute-a": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<a)",
             "end": "(?=[>])",
             "patterns": [
@@ -767,7 +766,6 @@
             ]
         },
         "tag-deprecated-attribute-area": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<area)",
             "end": "(?=[/>])",
             "patterns": [
@@ -789,7 +787,6 @@
             ]
         },
         "tag-deprecated-attribute-body": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<body)",
             "end": "(?=[>])",
             "patterns": [
@@ -811,7 +808,6 @@
             ]
         },
         "tag-deprecated-attribute-br": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<br)",
             "end": "(?=[/>])",
             "patterns": [
@@ -833,7 +829,6 @@
             ]
         },
         "tag-deprecated-attribute-caption": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<caption)",
             "end": "(?=[>])",
             "patterns": [
@@ -855,7 +850,6 @@
             ]
         },
         "tag-deprecated-attribute-col": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<col)",
             "end": "(?=[/>])",
             "patterns": [
@@ -877,7 +871,6 @@
             ]
         },
         "tag-deprecated-attribute-colgroup": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<colgroup)",
             "end": "(?=[>])",
             "patterns": [
@@ -899,7 +892,6 @@
             ]
         },
         "tag-deprecated-attribute-div": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<div)",
             "end": "(?=[>])",
             "patterns": [
@@ -921,7 +913,6 @@
             ]
         },
         "tag-deprecated-attribute-dl": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<dl)",
             "end": "(?=[>])",
             "patterns": [
@@ -943,7 +934,6 @@
             ]
         },
         "tag-deprecated-attribute-h1": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<h1)",
             "end": "(?=[>])",
             "patterns": [
@@ -965,7 +955,6 @@
             ]
         },
         "tag-deprecated-attribute-h2": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<h2)",
             "end": "(?=[>])",
             "patterns": [
@@ -987,7 +976,6 @@
             ]
         },
         "tag-deprecated-attribute-h3": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<h3)",
             "end": "(?=[>])",
             "patterns": [
@@ -1009,7 +997,6 @@
             ]
         },
         "tag-deprecated-attribute-h4": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<h4)",
             "end": "(?=[>])",
             "patterns": [
@@ -1031,7 +1018,6 @@
             ]
         },
         "tag-deprecated-attribute-h5": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<h5)",
             "end": "(?=[>])",
             "patterns": [
@@ -1053,7 +1039,6 @@
             ]
         },
         "tag-deprecated-attribute-h6": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<h6)",
             "end": "(?=[>])",
             "patterns": [
@@ -1075,7 +1060,6 @@
             ]
         },
         "tag-deprecated-attribute-head": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<head)",
             "end": "(?=[>])",
             "patterns": [
@@ -1097,7 +1081,6 @@
             ]
         },
         "tag-deprecated-attribute-hr": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<hr)",
             "end": "(?=[/>])",
             "patterns": [
@@ -1119,7 +1102,6 @@
             ]
         },
         "tag-deprecated-attribute-html": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<html)",
             "end": "(?=[>])",
             "patterns": [
@@ -1141,7 +1123,6 @@
             ]
         },
         "tag-deprecated-attribute-iframe": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<iframe)",
             "end": "(?=[>])",
             "patterns": [
@@ -1163,7 +1144,6 @@
             ]
         },
         "tag-deprecated-attribute-img": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<img)",
             "end": "(?=[/>])",
             "patterns": [
@@ -1185,7 +1165,6 @@
             ]
         },
         "tag-deprecated-attribute-input": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<input)",
             "end": "(?=[\\/>])",
             "patterns": [
@@ -1207,7 +1186,6 @@
             ]
         },
         "tag-deprecated-attribute-legend": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<legend)",
             "end": "(?=[>])",
             "patterns": [
@@ -1229,7 +1207,6 @@
             ]
         },
         "tag-deprecated-attribute-li": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<li)",
             "end": "(?=[>])",
             "patterns": [
@@ -1251,7 +1228,6 @@
             ]
         },
         "tag-deprecated-attribute-link": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<link)",
             "end": "(?=[\\/>])",
             "patterns": [
@@ -1273,7 +1249,6 @@
             ]
         },
         "tag-deprecated-attribute-menu": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<menu)",
             "end": "(?=[>])",
             "patterns": [
@@ -1295,7 +1270,6 @@
             ]
         },
         "tag-deprecated-attribute-object": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<object)",
             "end": "(?=[>])",
             "patterns": [
@@ -1317,7 +1291,6 @@
             ]
         },
         "tag-deprecated-attribute-ol": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<ol)",
             "end": "(?=[>])",
             "patterns": [
@@ -1339,7 +1312,6 @@
             ]
         },
         "tag-deprecated-attribute-p": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<p)",
             "end": "(?=[>])",
             "patterns": [
@@ -1361,7 +1333,6 @@
             ]
         },
         "tag-deprecated-attribute-param": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<param)",
             "end": "(?=[/>])",
             "patterns": [
@@ -1383,7 +1354,6 @@
             ]
         },
         "tag-deprecated-attribute-pre": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<pre)",
             "end": "(?=[>])",
             "patterns": [
@@ -1405,7 +1375,6 @@
             ]
         },
         "tag-deprecated-attribute-t": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<t)",
             "end": "(?=[>])",
             "patterns": [
@@ -1427,7 +1396,6 @@
             ]
         },
         "tag-deprecated-attribute-table": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<table)",
             "end": "(?=[>])",
             "patterns": [
@@ -1449,7 +1417,6 @@
             ]
         },
         "tag-deprecated-attribute-tbody": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<tbody)",
             "end": "(?=[>])",
             "patterns": [
@@ -1471,7 +1438,6 @@
             ]
         },
         "tag-deprecated-attribute-td": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<td)",
             "end": "(?=[>])",
             "patterns": [
@@ -1493,7 +1459,6 @@
             ]
         },
         "tag-deprecated-attribute-tfoot": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<tfoot)",
             "end": "(?=[>])",
             "patterns": [
@@ -1515,7 +1480,6 @@
             ]
         },
         "tag-deprecated-attribute-th": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<th)",
             "end": "(?=[>])",
             "patterns": [
@@ -1537,7 +1501,6 @@
             ]
         },
         "tag-deprecated-attribute-thead": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<thead)",
             "end": "(?=[>])",
             "patterns": [
@@ -1559,7 +1522,6 @@
             ]
         },
         "tag-deprecated-attribute-tr": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<tr)",
             "end": "(?=[>])",
             "patterns": [
@@ -1581,7 +1543,6 @@
             ]
         },
         "tag-deprecated-attribute-ul": {
-            "name": "entity.other.attribute-name",
             "begin": "(?<=<ul)",
             "end": "(?=[>])",
             "patterns": [

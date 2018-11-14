@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-deprecated-attribute-img': {
-      name: 'entity.other.attribute-name',
       begin: '(?<=<img)',
       end: '(?=[/>])',
       patterns: [

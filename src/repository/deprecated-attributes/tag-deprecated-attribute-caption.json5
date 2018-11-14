@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-deprecated-attribute-caption': {
-      name: 'entity.other.attribute-name',
       begin: '(?<=<caption)',
       end: '(?=[>])',
       patterns: [

@@ -1,5 +1,6 @@
 {
   "svn.ignoreMissingSvnWarning": true,
   "workbench.iconTheme": "vscode-icons",
+  "window.autoDetectHighContrast": false,
   "workbench.colorTheme": "dark-plus-syntax"
 }

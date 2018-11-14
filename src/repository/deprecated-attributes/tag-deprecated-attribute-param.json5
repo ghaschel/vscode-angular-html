@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-deprecated-attribute-param': {
-      name: 'entity.other.attribute-name',
       begin: '(?<=<param)',
       end: '(?=[/>])',
       patterns: [

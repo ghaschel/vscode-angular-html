@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.28 (14/11/2018)
+# 0.0.29 (14/11/2018)
+
+- Further differentiation from attribute names and variables in angular directions. (Applied `support.type.object.module.html` scope)
+
+# 0.0.28 (_14/11/2018_)
 
 - Fixed deprecated tags
 - Removed unused patterns

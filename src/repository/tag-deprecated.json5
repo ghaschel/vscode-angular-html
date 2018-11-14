@@ -16,7 +16,7 @@
       },
       begin: '(<\\/?)\\b(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|s|tt|u)\\b([\\n\\s\\r\\/\\=\\"]+?)*([\\s\\n\\r\\=\\"\\/]*)?',
       end: '(\\/?[\\s]*>)',
-      name: 'meta.tag.other.html',
+      name: 'invalid.deprecated.tag',
       patterns: [{ include: '#tag-stuff' }]
     }
   }

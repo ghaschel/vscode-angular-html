@@ -5,13 +5,13 @@
   patterns: [
     { include: '#angular-directives' },
     { include: '#angular-interpolations' },
+    { include: '#regex' },
     { include: '#comment' },
     { include: '#doctype' },
     { include: '#entity' },
     { include: '#operator' },
-    { include: '#regex' },
-    { include: '#tag-deprecated' },
     { include: '#string' },
+    { include: '#tag-deprecated' },
     { include: '#tag-events-attribute' },
     { include: '#tag-opening-closing' },
     { include: '#tag-generic-attribute' },
@@ -54,7 +54,6 @@
     { include: '#tag-deprecated-attribute-thead' },
     { include: '#tag-deprecated-attribute-tr' },
     { include: '#tag-deprecated-attribute-ul' },
-    { include: '#tag-deprecated-attributes' },
     { include: '#tag-script' }
   ],
   repository: {}

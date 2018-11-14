@@ -10,7 +10,7 @@
           },
           patterns: [
             {
-              match: '\\?\\.|\\!\\.|\\.|\\!|\\?',
+              match: '\\?\\.|\\!\\.|\\.|\\!|\\?|\\:|\\;|\\,',
               name: 'keyword.operator.navigation'
             },
             {

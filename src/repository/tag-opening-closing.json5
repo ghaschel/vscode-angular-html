@@ -9,11 +9,11 @@
         '2': {
           name: 'entity.name.tag.end.html'
         },
-        '3': {
+        '4': {
           name: 'punctuation.definition.tag.end.html'
         }
       },
-      match: '(<\\/?)((?!script)[a-zA-Z0-9\\-]++*)|(\\s*\\/?>)',
+      match: '(<\\/?)((?!\\b(script|acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|s|tt|u)\\b)[a-zA-Z0-9\\-]++*)|(\\s*\\/?>)',
       patterns: [
         {
           include: '#tag-stuff'
@@ -22,3 +22,4 @@
     }
   }
 }
+

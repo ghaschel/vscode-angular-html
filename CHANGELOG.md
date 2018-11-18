@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.29 (14/11/2018)
+# 0.0.30 (18/11/2018)
+
+- Improved generic attribute pattern
+
+# 0.0.29 (_14/11/2018_)
 
 - Further differentiation from attribute names and variables in angular directions. (Applied `support.type.object.module.html` scope)
 

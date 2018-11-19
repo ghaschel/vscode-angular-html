@@ -106,7 +106,6 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/generic-attributes.png" title="Generic attributes" alt="Generic attributes" />
 
-
 ## Disclaimer
 
 > The development of this plugin serves as a way for me to train Regex, so may not be 100% correct. Feel free to submit a pull request if needed.

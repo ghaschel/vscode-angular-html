@@ -10,13 +10,13 @@
         },
         '5': {
           // using another scope different from the one it fits to differentiate in color from objects and variables
-          name: 'support.type.object.module.html' 
+          name: 'constant.numeric.decimal.js'
         },
         '6': {
-          name: 'constant.character.entity.html'
+          name: 'keyword.operator.entity.html'
         },
         '7': {
-          name: 'keyword.operator.unit'
+          name: 'constant.character.unit'
         },
         '8': {
           name: 'string.regexp'
@@ -42,7 +42,7 @@
             },
             {
               match: '\\blet\\b\\s',
-              name: 'keyword.operator.let'
+              name: 'keyword.operator.expression.let.js'
             },
             {
               include: 'source.js#expression'
@@ -65,12 +65,15 @@
           },
           patterns: [
             {
+              include: '#string-single-quoted'
+            },
+            {
               match: '\\?\\.|\\!\\.|\\.|\\,|\\;|\\?|\\!',
               name: 'keyword.operator.punctuation'
             },
             {
               match: '\\blet\\b\\s',
-              name: 'keyword.operator.let'
+              name: 'keyword.operator.expression.let.js'
             },
             {
               include: 'source.js#expression'

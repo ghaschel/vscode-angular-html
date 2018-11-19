@@ -1,6 +1,12 @@
 # Change Log
 
-# 0.0.30 (18/11/2018)
+# 0.0.31 (19/11/2018)
+
+- Differentiation between angular directives (ngFor, ngIf, bindings) and html attributes. [Agree? Disagree? Vote here](https://github.com/ghaschel/vscode-angular-html/issues/12#issuecomment-439883428)
+- Fixed issue with `let`
+- Switched angular directive unit scope with directive attribute name for better highlighting.
+
+# 0.0.30 (_18/11/2018_)
 
 - Improved generic attribute pattern
 

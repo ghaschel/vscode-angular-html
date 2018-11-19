@@ -171,6 +171,9 @@ ANGULAR DIRECTIVES
 
 <div [binding]="to.element"
      [binding]="to.function('with-parameter');"
+     (click)="to.function(with?.parameter)"
+     (click)="to.function(with.parameter)"
+     (click)="to.function(with!.parameter)"
      [(binding)]="to.element"
      [attr.href]="file?.link"
      [style.font-size.px]="10"
@@ -180,6 +183,7 @@ ANGULAR DIRECTIVES
      (click)="callback(parameter.test)"
      *ngIf="condition.met"
      *ngIf="condition?.met"
+     [ngClass]="{'test': sdsdasda}"
      class="testing with non multiline"
      [test]="test.test();"
      *ngIf="selectedCustomer && selectedCustomer.id > 0"

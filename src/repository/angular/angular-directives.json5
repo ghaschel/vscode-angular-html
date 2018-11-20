@@ -31,8 +31,11 @@
       patterns: [
         {
           beginCaptures: {
-            '0': {
-              name: 'punctuation.definition.string.begin.html'
+            '1': {
+              name: 'string.quoted.double.html'
+            },
+            '2': {
+              name: 'string.regexp'
             }
           },
           patterns: [
@@ -48,44 +51,16 @@
               include: 'source.js#expression'
             }
           ],
-          begin: '"',
+          begin: '(")[\\s\\n]*(\\{)?',
           endCaptures: {
-            '0': {
-              name: 'punctuation.definition.string.end.html'
+            '1': {
+              name: 'string.regexp'
+            },
+            '2': {
+              name: 'string.quoted.single.html'
             }
           },
-          end: '"',
-          name: 'source.directive.angular'
-        },
-        {
-          beginCaptures: {
-            '0': {
-              name: 'punctuation.definition.string.begin.html'
-            }
-          },
-          patterns: [
-            {
-              include: '#string-single-quoted'
-            },
-            {
-              match: '\\?\\.|\\!\\.|\\.|\\,|\\;|\\?|\\!',
-              name: 'keyword.operator.punctuation'
-            },
-            {
-              match: '\\blet\\b\\s',
-              name: 'keyword.operator.expression.let.js'
-            },
-            {
-              include: 'source.js#expression'
-            }
-          ],
-          begin: "'",
-          endCaptures: {
-            '0': {
-              name: 'punctuation.definition.string.end.html'
-            }
-          },
-          end: "'",
+          end: '(\\})?[\\s\\n]*(")',
           name: 'source.directive.angular'
         }
       ]

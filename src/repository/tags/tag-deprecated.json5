@@ -14,8 +14,8 @@
           name: 'punctuation.definition.tag.end.html'
         }
       },
-      begin: '(<\\/?)\\b(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|s|tt|u)\\b([\\n\\s\\r\\/\\=\\"]+?)*([\\s\\n\\r\\=\\"\\/]*)?',
-      end: '(\\/?[\\s]*>)',
+      begin: '(<\\/?)(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|s|tt|u)\\b',
+      end: '(\\/?>)',
       name: 'invalid.deprecated.tag',
       patterns: [{ include: '#tag-stuff' }]
     }

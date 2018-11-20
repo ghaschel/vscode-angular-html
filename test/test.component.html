@@ -181,10 +181,14 @@ ANGULAR DIRECTIVES
      [@visibility]="getMenuState()"
      [(binding)]="to.function('with-parameter')"
      (click)="callback(parameter.test)"
+     [ngClass]="{
+        'test': test.isTruthy()
+     }"
      *ngIf="condition.met"
      *ngIf="condition?.met"
-     [ngClass]="{'test': sdsdasda}"
-     class="testing with non multiline"
+     [ngClass]="{ 'test': sdsdasda }"
+     class="testing with non multiline {{test}}"
+     test
      [test]="test.test();"
      *ngIf="selectedCustomer && selectedCustomer.id > 0"
      *ngFor="let a of b; index as c;"
@@ -364,10 +368,10 @@ DOM EVENTS
 
 STYLE INLINE
 
-<div style="
-        display: block;
-        background-color: rgb(255, 255, 255);
-        color: rgba(33, 254, 12, 1);"></div>
+<div style="display: block;
+            background-color: rgb(255, 255, 255);
+            color: rgba(33, 254, 12, 1);
+"></div>
 
 SCRIPT TAG
 
@@ -398,6 +402,8 @@ GENERIC ATTRIBUTES
 <button [attr.aria-label]=""></button>
 <button [style.background-color]="canSave ? 'cyan': 'grey'">Save</button>
 <button [style.font-size.em]="isSpecial ? 3 : 1">Big</button>
-<test class="asda\&$#@!\.,~`#$%&**(AZ)=-+_"></test>
+<test class="">
+
+</test>
 <input />
 <input />

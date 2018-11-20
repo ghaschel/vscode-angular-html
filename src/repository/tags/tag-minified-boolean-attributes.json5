@@ -1,0 +1,13 @@
+{
+  repository: {
+    'tag-minified-boolean-attributes': {
+      captures: {
+        '1': {
+          name: 'support.type.object.module.html'
+        }
+      },
+      match: '(?<!<|\\/)\\b([\\w\\-\\:]+)\\b\\s?',
+      name: 'punctuation.definition.tag.end.html'
+    }
+  }
+}

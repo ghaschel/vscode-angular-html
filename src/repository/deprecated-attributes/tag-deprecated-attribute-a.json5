@@ -1,8 +1,21 @@
 {
   repository: {
     'tag-deprecated-attribute-a': {
-      begin: '(?<=<a)',
-      end: '(?=[>])',
+      begin: '(<\\/?)(a)\\b',
+      end: '(\\/?>)',
+      beginCaptures: {
+        '2': {
+          name: 'entity.name.tag.other.html'
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html'
+        }
+      },
+      endCaptures: {
+        '1': {
+          name: 'punctuation.definition.tag.end.html'
+        }
+      },
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.a',

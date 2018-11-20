@@ -1,8 +1,21 @@
 {
   repository: {
     'tag-deprecated-attribute-h5': {
-      begin: '(?<=<h5)',
-      end: '(?=[>])',
+      begin: '(<\\/?)(h5)\\b',
+      end: '(\\/?>)',
+      beginCaptures: {
+        '2': {
+          name: 'entity.name.tag.other.html'
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html'
+        }
+      },
+      endCaptures: {
+        '1': {
+          name: 'punctuation.definition.tag.end.html'
+        }
+      },
       patterns: [
         {
           name: 'invalid.deprecated.attribute-name.h5',

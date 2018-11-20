@@ -10,8 +10,6 @@
     <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-html.png" title="vscode-angular-html" alt="Logo" />
 </div>
 
-[Help choosing a side if angular directives and html attributes should be differentiated](https://github.com/ghaschel/vscode-angular-html/issues/12#issuecomment-439883428)
-
 ## Angular HTML Template Syntax Highlighting
 
 This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events and emphasizes deprecated and obsolete tags and attributes usage according to the current status of HTML.

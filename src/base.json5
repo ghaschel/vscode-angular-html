@@ -4,6 +4,7 @@
   scopeName: 'text.html.html',
   patterns: [
     { include: '#tag-script' },
+    { include: '#tag-style' },
     { include: '#tag-deprecated-attribute-area' },
     { include: '#tag-deprecated-attribute-a' },
     { include: '#tag-deprecated-attribute-body' },

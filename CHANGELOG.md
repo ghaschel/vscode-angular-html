@@ -1,6 +1,10 @@
 # Change Log
 
-# 0.0.31 (20/11/2018)
+# 0.0.32 (21/11/2018)
+
+- Style tag support (scss/stylus)
+
+# 0.0.31 (_20/11/2018_)
 
 - Code was improved by a thousand percent
 - Removed unused patterns
@@ -10,7 +14,7 @@
 - Improved html entities
 - Fixed double quote recognition at the beginning of angular directives in other themes
 - Visual differentiation between angular directives (ngFor, ngIf, bindings) and html attributes.
-- Fixed issue with `let` [#13](https://github.com/ghaschel/vscode-angular-html/issues/13)
+- Fixed the issue with `let` [#13](https://github.com/ghaschel/vscode-angular-html/issues/13)
 - Switched angular directive unit scope with directive attribute name for better highlighting.
 
 # 0.0.30 (_18/11/2018_)

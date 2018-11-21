@@ -7,6 +7,9 @@
             "include": "#tag-script"
         },
         {
+            "include": "#tag-style"
+        },
+        {
             "include": "#tag-deprecated-attribute-area"
         },
         {
@@ -291,7 +294,7 @@
                     "name": "constant.character.entity.html"
                 },
                 "5": {
-                    "name": "constant.numeric.decimal.js"
+                    "name": "constant.numeric.angular.directives"
                 },
                 "6": {
                     "name": "keyword.operator.entity.html"
@@ -371,6 +374,252 @@
                     },
                     "end": "\\}\\}\\}?",
                     "name": "expression.embedded.angular"
+                }
+            ]
+        },
+        "tag-definition": {
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "3": {
+                    "name": "entity.name.tag.other.html"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "#tag-stuff"
+                }
+            ],
+            "begin": "(</?)(?!(acronym|applet|area|a|basefont|big|body|br|center|caption|colgroup|col|dir|div|dl|font|frameset|frame|h1|h2|h3|h4|h5|h6|head|hr|html|isindex|iframe|img|input|legend|li|link|menu|noframes|object|ol|p|param|pre|strike|s|t|table|tbody|td|tfoot|th|thead|tr|tt|ul|u)\\b)([a-zA-Z0-9:-]+)\\b",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "end": "(/?>)",
+            "name": "meta.tag.other.html"
+        },
+        "tag-deprecated": {
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "2": {
+                    "name": "invalid.deprecated.tag"
+                }
+            },
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "begin": "(<\\/?)(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|s|tt|u)\\b",
+            "end": "(\\/?>)",
+            "name": "invalid.deprecated.tag",
+            "patterns": [
+                {
+                    "include": "#tag-stuff"
+                }
+            ]
+        },
+        "tag-events-attribute": {
+            "captures": {
+                "1": {
+                    "name": "support.type.object.module.html"
+                },
+                "2": {
+                    "name": "constant.character.entity.html"
+                }
+            },
+            "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style)+(=)",
+            "end": "(?<='|\")|(?=[\\s<>`])",
+            "name": "meta.attribute-with-value.events.html",
+            "patterns": [
+                {
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.html"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "source.js#expression"
+                        }
+                    ],
+                    "begin": "\"",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.html"
+                        }
+                    },
+                    "end": "\"",
+                    "name": "source.events.html"
+                },
+                {
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.html"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "source.js#expression"
+                        }
+                    ],
+                    "begin": "'",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.html"
+                        }
+                    },
+                    "end": "'",
+                    "name": "source.events.html"
+                }
+            ]
+        },
+        "tag-generic-attribute": {
+            "name": "string.quoted.double.html",
+            "beginCaptures": {
+                "2": {
+                    "name": "support.type.object.module.html"
+                },
+                "3": {
+                    "name": "constant.character.entity.html"
+                },
+                "4": {
+                    "name": "string.quoted.double.html"
+                }
+            },
+            "endCaptures": {
+                "1": {
+                    "name": "string.quoted.double.html"
+                }
+            },
+            "begin": "(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_]+)(=)(\")",
+            "end": "(\")",
+            "patterns": [
+                {
+                    "include": "#angular-interpolations"
+                }
+            ]
+        },
+        "tag-minified-boolean-attributes": {
+            "captures": {
+                "1": {
+                    "name": "support.type.object.module.html"
+                }
+            },
+            "match": "(?<!<|\\/)\\b([\\w\\-\\:]+)\\b\\s?",
+            "name": "punctuation.definition.tag.end.html"
+        },
+        "tag-script": {
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "2": {
+                    "name": "entity.name.tag.begin.html"
+                },
+                "4": {
+                    "name": "support.type.object.module.html"
+                },
+                "5": {
+                    "name": "constant.character.entity.html"
+                },
+                "6": {
+                    "name": "string.quoted.double"
+                },
+                "7": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "2": {
+                    "name": "entity.name.tag.end.html"
+                },
+                "3": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "begin": "(<\\/?)(\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\\w\"\\/]+)[\\s\\n]*)*(>)?",
+            "end": "(<\\/)(\\bscript\\b)(>)",
+            "patterns": [
+                {
+                    "match": "\\b(let|const|var)\\b\\s",
+                    "name": "constant.language"
+                },
+                {
+                    "match": "\\.|\\,|\\|\\:|\\;",
+                    "name": "keyword.operator.navigation"
+                },
+                {
+                    "include": "source.js#expression"
+                }
+            ]
+        },
+        "tag-stuff": {
+            "patterns": [
+                {
+                    "include": "#string-double-quoted"
+                },
+                {
+                    "include": "#angular-directives"
+                },
+                {
+                    "include": "#tag-events-attribute"
+                },
+                {
+                    "include": "#tag-generic-attribute"
+                },
+                {
+                    "include": "#tag-minified-boolean-attributes"
+                }
+            ]
+        },
+        "tag-style": {
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "2": {
+                    "name": "entity.name.tag.begin.html"
+                },
+                "4": {
+                    "name": "support.type.object.module.html"
+                },
+                "5": {
+                    "name": "constant.character.entity.html"
+                },
+                "6": {
+                    "name": "string.quoted.double"
+                },
+                "7": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "2": {
+                    "name": "entity.name.tag.end.html"
+                },
+                "3": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "begin": "(<\\/?)(\\bstyle\\b)[\\s]*(([\\w-]+)(=)*([\\w\"\\/]+)[\\s\\n]*)*(>)?",
+            "end": "(<\\/)(\\bstyle\\b)(>)",
+            "patterns": [
+                {
+                    "include": "source.stylus"
+                },
+                {
+                    "include": "source.css.scss"
                 }
             ]
         },
@@ -1697,209 +1946,6 @@
                 },
                 {
                     "include": "#tag-stuff"
-                }
-            ]
-        },
-        "tag-definition": {
-            "beginCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.begin.html"
-                },
-                "3": {
-                    "name": "entity.name.tag.other.html"
-                }
-            },
-            "patterns": [
-                {
-                    "include": "#tag-stuff"
-                }
-            ],
-            "begin": "(</?)(?!(acronym|applet|area|a|basefont|big|body|br|center|caption|colgroup|col|dir|div|dl|font|frameset|frame|h1|h2|h3|h4|h5|h6|head|hr|html|isindex|iframe|img|input|legend|li|link|menu|noframes|object|ol|p|param|pre|strike|s|t|table|tbody|td|tfoot|th|thead|tr|tt|ul|u)\\b)([a-zA-Z0-9:-]+)\\b",
-            "endCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.end.html"
-                }
-            },
-            "end": "(/?>)",
-            "name": "meta.tag.other.html"
-        },
-        "tag-deprecated": {
-            "beginCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.begin.html"
-                },
-                "2": {
-                    "name": "invalid.deprecated.tag"
-                }
-            },
-            "endCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.end.html"
-                }
-            },
-            "begin": "(<\\/?)(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|s|tt|u)\\b",
-            "end": "(\\/?>)",
-            "name": "invalid.deprecated.tag",
-            "patterns": [
-                {
-                    "include": "#tag-stuff"
-                }
-            ]
-        },
-        "tag-events-attribute": {
-            "captures": {
-                "1": {
-                    "name": "support.type.object.module.html"
-                },
-                "2": {
-                    "name": "constant.character.entity.html"
-                }
-            },
-            "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style)+(=)",
-            "end": "(?<='|\")|(?=[\\s<>`])",
-            "name": "meta.attribute-with-value.events.html",
-            "patterns": [
-                {
-                    "beginCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.string.begin.html"
-                        }
-                    },
-                    "patterns": [
-                        {
-                            "include": "source.js#expression"
-                        }
-                    ],
-                    "begin": "\"",
-                    "endCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.string.end.html"
-                        }
-                    },
-                    "end": "\"",
-                    "name": "source.events.html"
-                },
-                {
-                    "beginCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.string.begin.html"
-                        }
-                    },
-                    "patterns": [
-                        {
-                            "include": "source.js#expression"
-                        }
-                    ],
-                    "begin": "'",
-                    "endCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.string.end.html"
-                        }
-                    },
-                    "end": "'",
-                    "name": "source.events.html"
-                }
-            ]
-        },
-        "tag-generic-attribute": {
-            "name": "string.quoted.double.html",
-            "beginCaptures": {
-                "2": {
-                    "name": "support.type.object.module.html"
-                },
-                "3": {
-                    "name": "constant.character.entity.html"
-                },
-                "4": {
-                    "name": "string.quoted.double.html"
-                }
-            },
-            "endCaptures": {
-                "1": {
-                    "name": "string.quoted.double.html"
-                }
-            },
-            "begin": "(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_]+)(=)(\")",
-            "end": "(\")",
-            "patterns": [
-                {
-                    "include": "#angular-interpolations"
-                }
-            ]
-        },
-        "tag-minified-boolean-attributes": {
-            "captures": {
-                "1": {
-                    "name": "support.type.object.module.html"
-                }
-            },
-            "match": "(?<!<|\\/)\\b([\\w\\-\\:]+)\\b\\s?",
-            "name": "punctuation.definition.tag.end.html"
-        },
-        "tag-script": {
-            "beginCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.begin.html"
-                },
-                "2": {
-                    "name": "entity.name.tag.begin.html"
-                },
-                "4": {
-                    "name": "support.type.object.module.html"
-                },
-                "5": {
-                    "name": "constant.character.entity.html"
-                },
-                "6": {
-                    "name": "string.quoted.double"
-                },
-                "7": {
-                    "name": "punctuation.definition.tag.end.html"
-                }
-            },
-            "endCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.begin.html"
-                },
-                "2": {
-                    "name": "entity.name.tag.end.html"
-                },
-                "3": {
-                    "name": "punctuation.definition.tag.end.html"
-                }
-            },
-            "begin": "(<\\/?)(\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\\w\"\\/]+)[\\s\\n]*)*(>)?",
-            "end": "(<\\/)(\\bscript\\b)(>)",
-            "patterns": [
-                {
-                    "match": "\\b(let|const|var)\\b\\s",
-                    "name": "constant.language"
-                },
-                {
-                    "match": "\\.|\\,|\\|\\:|\\;",
-                    "name": "keyword.operator.navigation"
-                },
-                {
-                    "include": "source.js#expression"
-                }
-            ]
-        },
-        "tag-stuff": {
-            "patterns": [
-                {
-                    "include": "#string-double-quoted"
-                },
-                {
-                    "include": "#angular-directives"
-                },
-                {
-                    "include": "#tag-events-attribute"
-                },
-                {
-                    "include": "#tag-generic-attribute"
-                },
-                {
-                    "include": "#tag-minified-boolean-attributes"
                 }
             ]
         }

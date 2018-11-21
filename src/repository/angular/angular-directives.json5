@@ -10,7 +10,7 @@
         },
         '5': {
           // using another scope different from the one it fits to differentiate in color from objects and variables
-          name: 'constant.numeric.decimal.js'
+          name: 'constant.numeric.angular.directives'
         },
         '6': {
           name: 'keyword.operator.entity.html'

@@ -29,6 +29,7 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 - [Deprecated tags](#deprecated-tags)
 - [DOM Events](#dom-events)
 - [Style inline](#style-inline)
+- [Style tag](#style-tag)
 - [Script tags](#script-tags)
 - [Generic attributes](#generic-attributes)
 
@@ -91,6 +92,14 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 <span name="style-inline"></span>
 
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/style-inline.png" title="Style inline" alt="Style inline" />
+
+### Style tag (scss/stylus)
+
+<span name="style-tag"></span>
+
+> Note: stylus is only supported via [language-stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus)
+
+<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/style-tag.png" title="Style tag" alt="Style tag" />
 
 ### Script tag
 

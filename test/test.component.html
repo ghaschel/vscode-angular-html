@@ -169,13 +169,15 @@ INVALID ATTRIBUTES
 
 ANGULAR DIRECTIVES
 
+<div *ngIf="selectCustomer as test"></div>
+
 <div [binding]="to.element"
-     [binding]="to.function('with-parameter');"
-     (click)="to.function(with?.parameter)"
+     [binding]="to.function('with-parameter')"
+     (click)="to.function(with.parameter)"
      (click)="to.function(with.parameter)"
      (click)="to.function(with!.parameter)"
-     [(binding)]="to.element"
-     [attr.href]="file?.link"
+     [(binding)]="to.element;"
+     [attr.href]="file?.link;"
      [style.font-size.px]="10"
      [@$visibility]="module.$visibility"
      [@visibility]="getMenuState()"
@@ -191,7 +193,7 @@ ANGULAR DIRECTIVES
      test
      [test]="test.test();"
      *ngIf="selectedCustomer && selectedCustomer.id > 0"
-     *ngFor="let a of b; index as c;"
+     *ngFor="let a of b; index as c"
      #templateVariable></div>
 
 ANGULAR INTERPOLATIONS

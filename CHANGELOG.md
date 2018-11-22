@@ -1,6 +1,11 @@
 # Change Log
 
-# 0.0.32 (21/11/2018)
+# 0.0.33 (22/11/2018)
+
+- Improvements in gulpfile
+- Although it's far from optimized yet, managed to fix the issue with angular expressions without semicolon at the end. [#15](https://github.com/ghaschel/vscode-angular-html/issues/15)
+
+# 0.0.32 (_21/11/2018_)
 
 - Style tag support (scss/stylus)
 

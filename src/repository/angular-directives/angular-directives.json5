@@ -48,7 +48,7 @@
               name: 'keyword.operator.expression.let.js'
             },
             {
-              include: 'source.js#expression'
+              include: '#expression'
             }
           ],
           begin: '(")[\\s\\n]*(\\{)?',

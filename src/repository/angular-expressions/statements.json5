@@ -1,0 +1,41 @@
+{
+  repository: {
+    "statements": {
+			"patterns": [
+        {
+          "include": "#ts-string"
+        },
+				{
+					"include": "#template"
+				},
+				{
+					"include": "#literal"
+				},
+				{
+					"include": "#declaration"
+				},
+				{
+					"include": "#switch-statement"
+				},
+				{
+					"include": "#for-loop"
+				},
+				{
+					"include": "#after-operator-block"
+				},
+				{
+					"include": "#decl-block"
+				},
+				{
+					"include": "#control-statement"
+				},
+				{
+					"include": "#expression"
+				},
+				{
+					"include": "#punctuation-semicolon"
+				}
+			]
+		}
+  }
+}

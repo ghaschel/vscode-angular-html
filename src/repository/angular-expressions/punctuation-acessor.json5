@@ -1,0 +1,8 @@
+{
+  repository: {
+    "punctuation-accessor": {
+			"name": "punctuation.accessor.ts",
+			"match": "\\?\\.|\\!\\.|\\."
+		}
+  }
+}

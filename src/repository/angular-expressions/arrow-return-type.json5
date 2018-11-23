@@ -1,0 +1,22 @@
+{
+  repository: {
+    "arrow-return-type": {
+			"name": "meta.return.type.arrow.ts",
+			"begin": "(?<=\\))\\s*(:)",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.operator.type.annotation.ts"
+				}
+			},
+			"end": "(?<!:)((?=$)|(?==>|;|\"|//))",
+			"patterns": [
+				{
+					"include": "#type-predicate-operator"
+				},
+				{
+					"include": "#type"
+				}
+			]
+		}
+  }
+}

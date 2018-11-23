@@ -1,0 +1,36 @@
+{
+  repository: {
+    "declaration": {
+			"name": "meta.declaration.ts",
+			"patterns": [
+				{
+					"include": "#decorator"
+				},
+				{
+					"include": "#var-expr"
+				},
+				{
+					"include": "#function-declaration"
+				},
+				{
+					"include": "#type-declaration"
+				},
+				{
+					"include": "#enum-declaration"
+				},
+				{
+					"include": "#namespace-declaration"
+				},
+				{
+					"include": "#import-equals-declaration"
+				},
+				{
+					"include": "#import-declaration"
+				},
+				{
+					"include": "#export-declaration"
+				}
+			]
+		}
+  }
+}

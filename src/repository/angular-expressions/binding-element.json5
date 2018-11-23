@@ -1,0 +1,20 @@
+{
+  repository: {
+    "binding-element": {
+			"patterns": [
+				{
+					"include": "#object-binding-pattern"
+				},
+				{
+					"include": "#array-binding-pattern"
+				},
+				{
+					"include": "#destructuring-variable-rest"
+				},
+				{
+					"include": "#variable-initializer"
+				}
+			]
+		}
+  }
+}

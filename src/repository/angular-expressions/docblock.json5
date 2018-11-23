@@ -1,0 +1,43 @@
+{
+  repository: {
+    "docblock": {
+			"patterns": [
+				{
+					"name": "storage.type.class.jsdoc",
+					"match": "(?<!\\w)@(abstract|access|alias|arg|argument|async|attribute|augments|author|beta|borrows|bubbes|callback|chainable|class|classdesc|code|config|const|constant|constructor|constructs|copyright|default|defaultvalue|define|deprecated|desc|description|dict|emits|enum|event|example|exports?|extends|extension|extension_for|extensionfor|external|file|fileoverview|final|fires|for|function|global|host|ignore|implements|inherit[Dd]oc|inner|instance|interface|kind|lends|license|listens|main|member|memberof|method|mixex|mixins?|module|name|namespace|nocollapse|nosideeffects|override|overview|package|param|preserve|private|prop|property|protected|public|read[Oo]nly|record|require[ds]|returns?|see|since|static|struct|submodule|summary|template|this|throws|todo|tutorial|type|typedef|unrestricted|uses|var|variation|version|virtual|writeOnce)\\b"
+				},
+				{
+					"match": "(?x)\n(?:(?<=@param)|(?<=@arg)|(?<=@argument)|(?<=@type))\n\\s+\n({(?:\n  \\* |                                        # {*} any type\n  \\? |                                        # {?} unknown type\n  (?:                                         # Check for a prefix\n    \\? |                                      # {?string} nullable type\n    !   |                                     # {!string} non-nullable type\n    \\.{3}                                     # {...string} variable number of parameters\n  )?\n  (?:\n    \\(                                        # Opening bracket of multiple types with parenthesis {(string|number)}\n      [a-zA-Z_$]+\n      (?:\n        (?:\n          [\\w$]*\n          (?:\\[\\])?                           # {(string[]|number)} type application, an array of strings or a number\n        ) |\n        \\.?<[\\w$]+(?:,\\s+[\\w$]+)*>            # {Array<string>} or {Object<string, number>} type application (optional .)\n      )\n      (?:\n        [\\.|~]                                # {Foo.bar} namespaced, {string|number} multiple, {Foo~bar} class-specific callback\n        [a-zA-Z_$]+\n        (?:\n          (?:\n            [\\w$]*\n            (?:\\[\\])?                        # {(string|number[])} type application, a string or an array of numbers\n          ) |\n          \\.?<[\\w$]+(?:,\\s+[\\w$]+)*>         # {Array<string>} or {Object<string, number>} type application (optional .)\n        )\n      )*\n    \\) |\n    [a-zA-Z_$]+\n    (?:\n      (?:\n        [\\w$]*\n        (?:\\[\\])?                            # {string[]|number} type application, an array of strings or a number\n      ) |\n      \\.?<[\\w$]+(?:,\\s+[\\w$]+)*>             # {Array<string>} or {Object<string, number>} type application (optional .)\n    )\n    (?:\n      [\\.|~]                                 # {Foo.bar} namespaced, {string|number} multiple, {Foo~bar} class-specific callback\n      [a-zA-Z_$]+\n      (?:\n        [\\w$]* |\n        \\.?<[\\w$]+(?:,\\s+[\\w$]+)*>           # {Array<string>} or {Object<string, number>} type application (optional .)\n      )\n    )*\n  )\n                                             # Check for suffix\n  (?:\\[\\])?                                  # {string[]} type application, an array of strings\n  =?                                         # {string=} optional parameter\n)})\n\\s+\n(\n  \\[                                         # [foo] optional parameter\n    \\s*\n    (?:\n      [a-zA-Z_$][\\w$]*\n      (?:\n        (?:\\[\\])?                            # Foo[].bar properties within an array\n        \\.                                   # Foo.Bar namespaced parameter\n        [a-zA-Z_$][\\w$]*\n      )*\n      (?:\n        \\s*\n        =                                    # [foo=bar] Default parameter value\n        \\s*\n        [\\w$\\s]*\n      )?\n    )\n    \\s*\n  \\] |\n  (?:\n    [a-zA-Z_$][\\w$]*\n    (?:\n      (?:\\[\\])?                              # Foo[].bar properties within an array\n      \\.                                     # Foo.Bar namespaced parameter\n      [a-zA-Z_$][\\w$]*\n    )*\n  )?\n)\n\\s+\n(?:-\\s+)?                                    # optional hyphen before the description\n((?:(?!\\*\\/).)*)                             # The type description",
+					"captures": {
+						"0": {
+							"name": "other.meta.jsdoc"
+						},
+						"1": {
+							"name": "entity.name.type.instance.jsdoc"
+						},
+						"2": {
+							"name": "variable.other.jsdoc"
+						},
+						"3": {
+							"name": "other.description.jsdoc"
+						}
+					}
+				},
+				{
+					"match": "(?x)\n({(?:\n  \\* |                                       # {*} any type\n  \\? |                                       # {?} unknown type\n\n  (?:                                        # Check for a prefix\n    \\? |                                     # {?string} nullable type\n    !   |                                    # {!string} non-nullable type\n    \\.{3}                                    # {...string} variable number of parameters\n  )?\n\n  (?:\n    \\(                                       # Opening bracket of multiple types with parenthesis {(string|number)}\n      [a-zA-Z_$]+\n      (?:\n        [\\w$]* |\n        \\.?<[\\w$]+(?:,\\s+[\\w$]+)*>           # {Array<string>} or {Object<string, number>} type application (optional .)\n      )\n      (?:\n        [\\.|~]                               # {Foo.bar} namespaced, {string|number} multiple, {Foo~bar} class-specific callback\n        [a-zA-Z_$]+\n        (?:\n          [\\w$]* |\n          \\.?<[\\w$]+(?:,\\s+[\\w$]+)*>         # {Array<string>} or {Object<string, number>} type application (optional .)\n        )\n      )*\n    \\) |\n    [a-zA-Z_$]+\n    (?:\n      [\\w$]* |\n      \\.?<[\\w$]+(?:,\\s+[\\w$]+)*>             # {Array<string>} or {Object<string, number>} type application (optional .)\n    )\n    (?:\n      [\\.|~]                                 # {Foo.bar} namespaced, {string|number} multiple, {Foo~bar} class-specific callback\n      [a-zA-Z_$]+\n      (?:\n        [\\w$]* |\n        \\.?<[\\w$]+(?:,\\s+[\\w$]+)*>           # {Array<string>} or {Object<string, number>} type application (optional .)\n      )\n    )*\n  )\n                                             # Check for suffix\n  (?:\\[\\])?                                  # {string[]} type application, an array of strings\n  =?                                         # {string=} optional parameter\n)})\n\\s+\n(?:-\\s+)?                                    # optional hyphen before the description\n((?:(?!\\*\\/).)*)                             # The type description",
+					"captures": {
+						"0": {
+							"name": "other.meta.jsdoc"
+						},
+						"1": {
+							"name": "entity.name.type.instance.jsdoc"
+						},
+						"2": {
+							"name": "other.description.jsdoc"
+						}
+					}
+				}
+			]
+		}
+  }
+}

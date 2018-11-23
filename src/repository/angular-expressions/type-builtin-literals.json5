@@ -1,0 +1,8 @@
+{
+  repository: {
+    "type-builtin-literals": {
+			"name": "support.type.builtin.ts",
+			"match": "(?<!\\.|\\$)\\b(this|true|false|undefined|null)\\b(?!\\$)"
+		}
+  }
+}

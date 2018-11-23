@@ -1,0 +1,51 @@
+{
+  repository: {
+    "control-statement": {
+			"patterns": [
+				{
+					"name": "keyword.control.trycatch.ts",
+					"match": "(?<!\\.|\\$)\\b(catch|finally|throw|try)\\b(?!\\$)"
+				},
+				{
+					"name": "keyword.control.loop.ts",
+					"match": "(?<!\\.|\\$)\\b(break|continue|do|goto|while)\\b(?!\\$)"
+				},
+				{
+					"name": "keyword.control.flow.ts",
+					"match": "(?<!\\.|\\$)\\b(return)\\b(?!\\$)"
+				},
+				{
+					"match": "(?<!\\.|\\$)\\b(yield)\\b(?!\\$)(?:\\s*(\\*))?",
+					"captures": {
+						"1": {
+							"name": "keyword.control.flow.ts"
+						},
+						"2": {
+							"name": "keyword.generator.asterisk.ts"
+						}
+					}
+				},
+				{
+					"name": "keyword.control.switch.ts",
+					"match": "(?<!\\.|\\$)\\b(case|default|switch)\\b(?!\\$)"
+				},
+				{
+					"name": "keyword.control.conditional.ts",
+					"match": "(?<!\\.|\\$)\\b(else|if)\\b(?!\\$)"
+				},
+				{
+					"name": "keyword.control.with.ts",
+					"match": "(?<!\\.|\\$)\\b(with)\\b(?!\\$)"
+				},
+				{
+					"name": "keyword.other.debugger.ts",
+					"match": "(?<!\\.|\\$)\\b(debugger)\\b(?!\\$)"
+				},
+				{
+					"name": "storage.modifier.ts",
+					"match": "(?<!\\.|\\$)\\b(declare)\\b(?!\\$)"
+				}
+			]
+		}
+  }
+}

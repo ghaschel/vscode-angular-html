@@ -1,0 +1,27 @@
+{
+  repository: {
+    "type-tuple": {
+			"name": "meta.type.tuple.ts",
+			"begin": "\\[",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.brace.square.ts"
+				}
+			},
+			"end": "\\]",
+			"endCaptures": {
+				"0": {
+					"name": "meta.brace.square.ts"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#type"
+				},
+				{
+					"include": "#punctuation-comma"
+				}
+			]
+		}
+  }
+}

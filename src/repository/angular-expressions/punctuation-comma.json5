@@ -1,0 +1,8 @@
+{
+  repository: {
+    "punctuation-comma": {
+			"name": "punctuation.separator.comma.ts",
+			"match": ","
+		}
+  }
+}

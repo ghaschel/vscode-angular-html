@@ -1,0 +1,24 @@
+{
+  repository: {
+    "cast": {
+			"name": "cast.expr.ts",
+			"begin": "(?:(?<=return|throw|yield|await|default|[=(,:>*]))\\s*(<)(?!<?\\=)",
+			"beginCaptures": {
+				"1": {
+					"name": "meta.brace.angle.ts"
+				}
+			},
+			"end": ">",
+			"endCaptures": {
+				"0": {
+					"name": "meta.brace.angle.ts"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#type"
+				}
+			]
+		}
+  }
+}

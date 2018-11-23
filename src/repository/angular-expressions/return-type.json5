@@ -1,0 +1,42 @@
+{
+  repository: {
+    "return-type": {
+			"name": "meta.return.type.ts",
+			"begin": "(?<=\\))\\s*(:)",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.operator.type.annotation.ts"
+				}
+			},
+			"end": "(?<!:)((?=$)|(?=\\{|;|//|\\}|\"))",
+			"patterns": [
+				{
+					"name": "meta.object.type.ts",
+					"begin": "(?<=:)\\s*(\\{)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#type-object-members"
+						}
+					]
+				},
+				{
+					"include": "#type-predicate-operator"
+				},
+				{
+					"include": "#type"
+				}
+			]
+		}
+  }
+}

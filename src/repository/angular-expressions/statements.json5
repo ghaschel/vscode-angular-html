@@ -30,7 +30,7 @@
 					"include": "#control-statement"
 				},
 				{
-					"include": "#expression"
+					"include": "#angular-expression"
 				},
 				{
 					"include": "#punctuation-semicolon"

@@ -8,7 +8,7 @@
 					"include": "#ternary-operator"
 				},
 				{
-					"include": "#expression"
+					"include": "#angular-expression"
 				}
 			]
 		}

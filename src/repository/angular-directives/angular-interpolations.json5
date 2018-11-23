@@ -14,7 +14,7 @@
               name: 'keyword.operator.navigation'
             },
             {
-              include: '#expression'
+              include: '#angular-expression'
             }
           ],
           begin: '\\{\\{\\{?',

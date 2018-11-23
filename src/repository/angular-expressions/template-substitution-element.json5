@@ -16,7 +16,7 @@
 			},
 			"patterns": [
 				{
-					"include": "#expression"
+					"include": "#angular-expression"
 				}
 			]
 		}

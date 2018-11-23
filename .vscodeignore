@@ -1,3 +1,6 @@
 .gitignore
 src/**
-reference
+test/**
+assets/**
+gulpfile.js
+travis.yml

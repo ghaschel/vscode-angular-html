@@ -44,7 +44,7 @@
           match: '\\.|\\,|\\|\\:|\\;',
           name: 'keyword.operator.navigation'
         },
-        { include: '#expression' }
+        { include: 'source.ts#expression' }
       ]
     }
   }

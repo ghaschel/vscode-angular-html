@@ -10,9 +10,6 @@
 					"include": "#var-expr"
 				},
 				{
-					"include": "#function-declaration"
-				},
-				{
 					"include": "#type-declaration"
 				},
 				{

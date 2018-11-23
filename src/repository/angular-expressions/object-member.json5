@@ -29,7 +29,7 @@
 							]
 						},
 						{
-							"include": "#expression"
+							"include": "#angular-expression"
 						}
 					]
 				},
@@ -50,7 +50,7 @@
 					"end": "(?=,|\\})",
 					"patterns": [
 						{
-							"include": "#expression"
+							"include": "#angular-expression"
 						}
 					]
 				},
@@ -68,7 +68,7 @@
 					"end": "(?=,|\\})",
 					"patterns": [
 						{
-							"include": "#expression"
+							"include": "#angular-expression"
 						}
 					]
 				},
@@ -83,7 +83,7 @@
 					"end": "(?=,|\\})",
 					"patterns": [
 						{
-							"include": "#expression"
+							"include": "#angular-expression"
 						}
 					]
 				},

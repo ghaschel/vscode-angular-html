@@ -33,7 +33,7 @@
             //   name: 'keyword.operator.expression.let.js'
             // },
             {
-              include: '#expression'
+              include: '#angular-expression'
             }
       ]
     }

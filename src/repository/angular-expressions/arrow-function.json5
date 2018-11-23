@@ -53,7 +53,7 @@
 							"include": "#decl-block"
 						},
 						{
-							"include": "#expression"
+							"include": "#angular-expression"
 						}
 					]
 				}

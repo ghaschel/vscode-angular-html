@@ -18,7 +18,7 @@
           beginCaptures: {
             '0': { name: 'punctuation.definition.string.begin.html' }
           },
-          patterns: [{ include: '#expression' }],
+          patterns: [{ include: '#angular-expression' }],
           begin: '"',
           endCaptures: {
             '0': { name: 'punctuation.definition.string.end.html' }
@@ -30,7 +30,7 @@
           beginCaptures: {
             '0': { name: 'punctuation.definition.string.begin.html' }
           },
-          patterns: [{ include: '#expression' }],
+          patterns: [{ include: '#angular-expression' }],
           begin: "'",
           endCaptures: {
             '0': { name: 'punctuation.definition.string.end.html' }

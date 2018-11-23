@@ -232,54 +232,7 @@
         "regex": {
             "match": "/([a-zA-Z0-9\\[\\]\\(\\)\\*\\+\\-\\^\\~\\:\\/\\;\\.\\,\\{\\}\\@\\\"\\\\#]+)/([nsxAgimuY]*+?)",
             "name": "string.regexp",
-            "patterns": [
-                {
-                    "name": "string.regex.ts",
-                    "begin": "(?<=[=(:,\\[?+!]|return|case|=>|&&|\\|\\||\\*\\/)\\s*(/)(?![/*])(?=(?:[^/\\\\\\[]|\\\\.|\\[([^\\]\\\\]|\\\\.)+\\])+/(?![/*])[gimy]*(?!\\s*[a-zA-Z0-9_$]))",
-                    "beginCaptures": {
-                        "1": {
-                            "name": "punctuation.definition.string.begin.ts"
-                        }
-                    },
-                    "end": "(/)([gimuy]*)",
-                    "endCaptures": {
-                        "1": {
-                            "name": "punctuation.definition.string.end.ts"
-                        },
-                        "2": {
-                            "name": "keyword.other.ts"
-                        }
-                    },
-                    "patterns": [
-                        {
-                            "include": "#regexp"
-                        }
-                    ]
-                },
-                {
-                    "name": "string.regex.ts",
-                    "begin": "/(?![/*])(?=(?:[^/\\\\\\[]|\\\\.|\\[([^\\]\\\\]|\\\\.)+\\])+/(?![/*])[gimy]*(?!\\s*[a-zA-Z0-9_$]))",
-                    "beginCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.string.begin.ts"
-                        }
-                    },
-                    "end": "(/)([gimuy]*)",
-                    "endCaptures": {
-                        "1": {
-                            "name": "punctuation.definition.string.end.ts"
-                        },
-                        "2": {
-                            "name": "keyword.other.ts"
-                        }
-                    },
-                    "patterns": [
-                        {
-                            "include": "#regexp"
-                        }
-                    ]
-                }
-            ]
+            "patterns": []
         },
         "string-single-quoted": {
             "beginCaptures": {
@@ -379,7 +332,7 @@
                             "name": "keyword.operator.expression.let.js"
                         },
                         {
-                            "include": "#expression"
+                            "include": "#angular-expression"
                         }
                     ],
                     "begin": "(\")[\\s\\n]*(\\{)?",
@@ -410,7 +363,7 @@
                             "name": "keyword.operator.navigation"
                         },
                         {
-                            "include": "#expression"
+                            "include": "#angular-expression"
                         }
                     ],
                     "begin": "\\{\\{\\{?",
@@ -421,35 +374,6 @@
                     },
                     "end": "\\}\\}\\}?",
                     "name": "expression.embedded.angular"
-                }
-            ]
-        },
-        "ng-if": {
-            "captures": {
-                "1": {
-                    "name": "string.regexp"
-                },
-                "2": {
-                    "name": "constant.numeric.angular.directives"
-                },
-                "3": {
-                    "name": "constant.character.entity.html"
-                },
-                "4": {
-                    "name": "string.quoted.double.html"
-                }
-            },
-            "begin": "(\\*)(ngIf)(=)(\")",
-            "end": "(\")",
-            "endCaptures": {
-                "1": {
-                    "name": "string.quoted.double.html"
-                }
-            },
-            "name": "meta.directive.angular",
-            "patterns": [
-                {
-                    "include": "#expression"
                 }
             ]
         },
@@ -470,6 +394,44 @@
             "patterns": [
                 {
                     "include": "#object-member"
+                }
+            ]
+        },
+        "angular-expression": {
+            "name": "meta.expression.ts",
+            "patterns": [
+                {
+                    "include": "#ts-string"
+                },
+                {
+                    "include": "#literal"
+                },
+                {
+                    "include": "#arrow-function"
+                },
+                {
+                    "include": "#ternary-expression"
+                },
+                {
+                    "include": "#object-literal"
+                },
+                {
+                    "include": "#expression-operators"
+                },
+                {
+                    "include": "#function-call"
+                },
+                {
+                    "include": "#identifiers"
+                },
+                {
+                    "include": "#paren-expression"
+                },
+                {
+                    "include": "#punctuation-comma"
+                },
+                {
+                    "include": "#punctuation-accessor"
                 }
             ]
         },
@@ -514,7 +476,7 @@
             },
             "patterns": [
                 {
-                    "include": "#expression"
+                    "include": "#angular-expression"
                 },
                 {
                     "include": "#punctuation-comma"
@@ -574,7 +536,7 @@
                             "include": "#decl-block"
                         },
                         {
-                            "include": "#expression"
+                            "include": "#angular-expression"
                         }
                     ]
                 }
@@ -623,26 +585,6 @@
                 {
                     "name": "constant.language.boolean.false.ts",
                     "match": "(?<!\\.|\\$)\\bfalse\\b(?!\\$)"
-                }
-            ]
-        },
-        "cast": {
-            "name": "cast.expr.ts",
-            "begin": "(?:(?<=return|throw|yield|await|default|[=(,:>*]))\\s*(<)(?!<?\\=)",
-            "beginCaptures": {
-                "1": {
-                    "name": "meta.brace.angle.ts"
-                }
-            },
-            "end": ">",
-            "endCaptures": {
-                "0": {
-                    "name": "meta.brace.angle.ts"
-                }
-            },
-            "patterns": [
-                {
-                    "include": "#type"
                 }
             ]
         },
@@ -721,9 +663,6 @@
                 },
                 {
                     "include": "#var-expr"
-                },
-                {
-                    "include": "#function-declaration"
                 },
                 {
                     "include": "#type-declaration"
@@ -988,59 +927,6 @@
                 }
             ]
         },
-        "expression": {
-            "name": "meta.expression.ts",
-            "patterns": [
-                {
-                    "include": "#ts-string"
-                },
-                {
-                    "include": "#regex"
-                },
-                {
-                    "include": "#template"
-                },
-                {
-                    "include": "#literal"
-                },
-                {
-                    "include": "#function-declaration"
-                },
-                {
-                    "include": "#arrow-function"
-                },
-                {
-                    "include": "#cast"
-                },
-                {
-                    "include": "#ternary-expression"
-                },
-                {
-                    "include": "#new-expr"
-                },
-                {
-                    "include": "#object-literal"
-                },
-                {
-                    "include": "#expression-operators"
-                },
-                {
-                    "include": "#function-call"
-                },
-                {
-                    "include": "#identifiers"
-                },
-                {
-                    "include": "#paren-expression"
-                },
-                {
-                    "include": "#punctuation-comma"
-                },
-                {
-                    "include": "#punctuation-accessor"
-                }
-            ]
-        },
         "field-declaration": {
             "name": "meta.field.declaration.ts",
             "begin": "(?<!\\()(?:(?<!\\.|\\$)\\b(readonly)\\s+)?(?=(([_$[:alpha:]][_$[:alnum:]]*)|(\\'[^']*\\')|(\\\"[^\"]*\\\")|(\\[([^\\[\\]]|\\[[^\\[\\]]+\\])+\\]))\\s*(\\?\\s*)?(=|:))",
@@ -1120,42 +1006,6 @@
                 },
                 {
                     "include": "#paren-expression"
-                }
-            ]
-        },
-        "function-declaration": {
-            "name": "meta.function.ts",
-            "begin": "(?<!\\.|\\$)\\b(?:(export)\\s+)?(?:(async)\\s+)?(function\\b)(?:\\s*(\\*))?(?:(?:\\s+|(?<=\\*))([_$[:alpha:]][_$[:alnum:]]*))?\\s*",
-            "beginCaptures": {
-                "1": {
-                    "name": "keyword.control.export.ts"
-                },
-                "2": {
-                    "name": "storage.modifier.async.ts"
-                },
-                "3": {
-                    "name": "storage.type.function.ts"
-                },
-                "4": {
-                    "name": "keyword.generator.asterisk.ts"
-                },
-                "5": {
-                    "name": "entity.name.function.ts"
-                }
-            },
-            "end": "(?=;|\\}|\")|(?<=\\}|\")",
-            "patterns": [
-                {
-                    "include": "#type-parameters"
-                },
-                {
-                    "include": "#function-parameters"
-                },
-                {
-                    "include": "#return-type"
-                },
-                {
-                    "include": "#decl-block"
                 }
             ]
         },
@@ -1421,24 +1271,6 @@
                 }
             ]
         },
-        "new-expr": {
-            "name": "new.expr.ts",
-            "begin": "(?<!\\.|\\$)\\b(new)\\b(?!\\$)",
-            "beginCaptures": {
-                "1": {
-                    "name": "keyword.operator.new.ts"
-                }
-            },
-            "end": "(?<=\\))|(?=[;),]|$|((?<!\\.|\\$)\\bnew\\b(?!\\$)))",
-            "patterns": [
-                {
-                    "include": "#paren-expression"
-                },
-                {
-                    "include": "#type"
-                }
-            ]
-        },
         "null-literal": {
             "name": "constant.language.null.ts",
             "match": "(?<!\\.|\\$)\\bnull\\b(?!\\$)"
@@ -1617,7 +1449,7 @@
                             ]
                         },
                         {
-                            "include": "#expression"
+                            "include": "#angular-expression"
                         }
                     ]
                 },
@@ -1638,7 +1470,7 @@
                     "end": "(?=,|\\})",
                     "patterns": [
                         {
-                            "include": "#expression"
+                            "include": "#angular-expression"
                         }
                     ]
                 },
@@ -1656,7 +1488,7 @@
                     "end": "(?=,|\\})",
                     "patterns": [
                         {
-                            "include": "#expression"
+                            "include": "#angular-expression"
                         }
                     ]
                 },
@@ -1671,7 +1503,7 @@
                     "end": "(?=,|\\})",
                     "patterns": [
                         {
-                            "include": "#expression"
+                            "include": "#angular-expression"
                         }
                     ]
                 },
@@ -1839,7 +1671,7 @@
             },
             "patterns": [
                 {
-                    "include": "#expression"
+                    "include": "#angular-expression"
                 },
                 {
                     "include": "#punctuation-comma"
@@ -1924,128 +1756,6 @@
                 }
             ]
         },
-        "regexp": {
-            "patterns": [
-                {
-                    "name": "keyword.control.anchor.regexp",
-                    "match": "\\\\[bB]|\\^|\\$"
-                },
-                {
-                    "name": "keyword.other.back-reference.regexp",
-                    "match": "\\\\[1-9]\\d*"
-                },
-                {
-                    "name": "keyword.operator.quantifier.regexp",
-                    "match": "[?+*]|\\{(\\d+,\\d+|\\d+,|,\\d+|\\d+)\\}\\??"
-                },
-                {
-                    "name": "keyword.operator.or.regexp",
-                    "match": "\\|"
-                },
-                {
-                    "name": "meta.group.assertion.regexp",
-                    "begin": "(\\()((\\?=)|(\\?!))",
-                    "beginCaptures": {
-                        "1": {
-                            "name": "punctuation.definition.group.regexp"
-                        },
-                        "2": {
-                            "name": "punctuation.definition.group.assertion.regexp"
-                        },
-                        "3": {
-                            "name": "meta.assertion.look-ahead.regexp"
-                        },
-                        "4": {
-                            "name": "meta.assertion.negative-look-ahead.regexp"
-                        }
-                    },
-                    "end": "(\\))",
-                    "endCaptures": {
-                        "1": {
-                            "name": "punctuation.definition.group.regexp"
-                        }
-                    },
-                    "patterns": [
-                        {
-                            "include": "#regexp"
-                        }
-                    ]
-                },
-                {
-                    "name": "meta.group.regexp",
-                    "begin": "\\((\\?:)?",
-                    "beginCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.group.regexp"
-                        },
-                        "1": {
-                            "name": "punctuation.definition.group.capture.regexp"
-                        }
-                    },
-                    "end": "\\)",
-                    "endCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.group.regexp"
-                        }
-                    },
-                    "patterns": [
-                        {
-                            "include": "#regexp"
-                        }
-                    ]
-                },
-                {
-                    "name": "constant.other.character-class.set.regexp",
-                    "begin": "(\\[)(\\^)?",
-                    "beginCaptures": {
-                        "1": {
-                            "name": "punctuation.definition.character-class.regexp"
-                        },
-                        "2": {
-                            "name": "keyword.operator.negation.regexp"
-                        }
-                    },
-                    "end": "(\\])",
-                    "endCaptures": {
-                        "1": {
-                            "name": "punctuation.definition.character-class.regexp"
-                        }
-                    },
-                    "patterns": [
-                        {
-                            "name": "constant.other.character-class.range.regexp",
-                            "match": "(?:.|(\\\\(?:[0-7]{3}|x\\h\\h|u\\h\\h\\h\\h))|(\\\\c[A-Z])|(\\\\.))\\-(?:[^\\]\\\\]|(\\\\(?:[0-7]{3}|x\\h\\h|u\\h\\h\\h\\h))|(\\\\c[A-Z])|(\\\\.))",
-                            "captures": {
-                                "1": {
-                                    "name": "constant.character.numeric.regexp"
-                                },
-                                "2": {
-                                    "name": "constant.character.control.regexp"
-                                },
-                                "3": {
-                                    "name": "constant.character.escape.backslash.regexp"
-                                },
-                                "4": {
-                                    "name": "constant.character.numeric.regexp"
-                                },
-                                "5": {
-                                    "name": "constant.character.control.regexp"
-                                },
-                                "6": {
-                                    "name": "constant.character.escape.backslash.regexp"
-                                }
-                            }
-                        },
-                        {
-                            "include": "#regex-character-class"
-                        }
-                    ]
-                },
-                {
-                    "include": "#regex-character-class"
-                }
-            ]
-        },
         "return-type": {
             "name": "meta.return.type.ts",
             "begin": "(?<=\\))\\s*(:)",
@@ -2114,7 +1824,7 @@
                     "include": "#control-statement"
                 },
                 {
-                    "include": "#expression"
+                    "include": "#angular-expression"
                 },
                 {
                     "include": "#punctuation-semicolon"
@@ -2141,7 +1851,7 @@
             },
             "patterns": [
                 {
-                    "include": "#expression"
+                    "include": "#angular-expression"
                 }
             ]
         },
@@ -2179,7 +1889,7 @@
                     "include": "#ternary-operator"
                 },
                 {
-                    "include": "#expression"
+                    "include": "#angular-expression"
                 }
             ]
         },
@@ -2198,7 +1908,7 @@
             },
             "patterns": [
                 {
-                    "include": "#expression"
+                    "include": "#angular-expression"
                 }
             ]
         },
@@ -2650,7 +2360,7 @@
             "end": "(?=$|[,);}\\]])",
             "patterns": [
                 {
-                    "include": "#expression"
+                    "include": "#angular-expression"
                 }
             ]
         },
@@ -4047,7 +3757,7 @@
                     },
                     "patterns": [
                         {
-                            "include": "#expression"
+                            "include": "#angular-expression"
                         }
                     ],
                     "begin": "\"",
@@ -4067,7 +3777,7 @@
                     },
                     "patterns": [
                         {
-                            "include": "#expression"
+                            "include": "#angular-expression"
                         }
                     ],
                     "begin": "'",
@@ -4160,7 +3870,7 @@
                     "name": "keyword.operator.navigation"
                 },
                 {
-                    "include": "#expression"
+                    "include": "source.ts#expression"
                 }
             ]
         },

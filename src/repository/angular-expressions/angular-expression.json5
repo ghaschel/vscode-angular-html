@@ -1,35 +1,35 @@
 {
   repository: {
-    "expression": {
+    "angular-expression": {
 			"name": "meta.expression.ts",
 			"patterns": [
         {
           "include": "#ts-string"
         },
-				{
-					"include": "#regex"
-				},
-				{
-					"include": "#template"
-				},
+				// {
+				// 	"include": "#regex"
+				// },
+				// {
+				// 	"include": "#template"
+				// },
 				{
 					"include": "#literal"
 				},
-				{
-					"include": "#function-declaration"
-				},
+				// {
+				// 	"include": "#function-declaration"
+				// },
 				{
 					"include": "#arrow-function"
 				},
-				{
-					"include": "#cast"
-				},
+				// {
+				// 	"include": "#cast"
+				// },
 				{
 					"include": "#ternary-expression"
 				},
-				{
-					"include": "#new-expr"
-				},
+				// {
+				// 	"include": "#new-expr"
+				// },
 				{
 					"include": "#object-literal"
 				},

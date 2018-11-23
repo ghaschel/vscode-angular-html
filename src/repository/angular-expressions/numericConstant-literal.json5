@@ -1,0 +1,16 @@
+{
+  repository: {
+    "numericConstant-literal": {
+			"patterns": [
+				{
+					"name": "constant.language.nan.ts",
+					"match": "(?<!\\.|\\$)\\bNaN\\b(?!\\$)"
+				},
+				{
+					"name": "constant.language.infinity.ts",
+					"match": "(?<!\\.|\\$)\\bInfinity\\b(?!\\$)"
+				}
+			]
+		}
+  }
+}

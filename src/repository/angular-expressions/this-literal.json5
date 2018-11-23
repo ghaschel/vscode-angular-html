@@ -1,0 +1,8 @@
+{
+  repository: {
+    "this-literal": {
+			"name": "variable.language.this.ts",
+			"match": "(?<!\\.|\\$)\\bthis\\b(?!\\$)"
+		}
+  }
+}

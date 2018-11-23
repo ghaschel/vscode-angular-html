@@ -1,0 +1,29 @@
+{
+  repository: {
+    "parameter-array-binding-pattern": {
+			"begin": "(?:(\\.\\.\\.)\\s*)?(\\[)",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.operator.rest.ts"
+				},
+				"2": {
+					"name": "punctuation.definition.binding-pattern.array.ts"
+				}
+			},
+			"end": "\\]",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.binding-pattern.array.ts"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#parameter-binding-element"
+				},
+				{
+					"include": "#punctuation-comma"
+				}
+			]
+		}
+  }
+}

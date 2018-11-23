@@ -1,5 +1,11 @@
 # Change Log
 
+# 0.0.34 (23/11/2018)
+
+- Fixed issue with safe operators inside function parameters
+- Transformed adapted ts json to multiple json5 for a better maintability.
+- Removed some surely not used ts scopes on templates (not all of them yet)
+
 # 0.0.33 (22/11/2018)
 
 - Improvements in gulpfile

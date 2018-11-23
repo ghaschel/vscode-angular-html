@@ -1,0 +1,19 @@
+{
+  repository: {
+    "type-annotation": {
+      "name": "meta.type.annotation.ts",
+      "begin": ":",
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.operator.type.annotation.ts"
+        }
+      },
+      "end": "(?=$|[,);\\}\\]]|//|\")|(?==[^>])|(?<=[\\}>\\]\\)]|[_$[:alpha:]])\\s*(?=\\{)",
+      "patterns": [
+        {
+          "include": "#type"
+        }
+      ]
+    }
+  }
+}

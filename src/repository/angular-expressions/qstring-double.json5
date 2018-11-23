@@ -1,0 +1,27 @@
+{
+  repository: {
+    "qstring-double": {
+			"name": "string.quoted.double.ts",
+			"begin": "\"",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.ts"
+				}
+			},
+			"end": "(\")|((?:[^\\\\\\n])$)",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.definition.string.end.ts"
+				},
+				"2": {
+					"name": "invalid.illegal.newline.ts"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#string-character-escape"
+				}
+			]
+		}
+  }
+}

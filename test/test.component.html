@@ -170,11 +170,12 @@ INVALID ATTRIBUTES
 ANGULAR DIRECTIVES
 
 <div *ngIf="selectCustomer as test"></div>
+<div *ngFor="let selectCustomer of asdf.teste as test; index as i"></div>
 
-<div [binding]="to.element"
-     [binding]="to.function('with-parameter')"
-     (click)="to.function(with.parameter)"
-     (click)="to.function(with.parameter)"
+<div [binding]="a ? s : 't';"
+     [binding]="to?.function('with-parameter')"
+     (click)="to.function(with.parameter) "
+     (click)="to.function(with?.parameter)"
      (click)="to.function(with!.parameter)"
      [(binding)]="to.element;"
      [attr.href]="file?.link;"

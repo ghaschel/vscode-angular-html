@@ -1,0 +1,52 @@
+{
+  repository: {
+    "type-fn-type-parameters": {
+			"patterns": [
+				{
+					"name": "meta.type.constructor.ts",
+					"match": "(?<!\\.|\\$)\\b(new)\\b(?=\\s*\\<)",
+					"captures": {
+						"1": {
+							"name": "keyword.control.new.ts"
+						}
+					}
+				},
+				{
+					"name": "meta.type.constructor.ts",
+					"begin": "(?<!\\.|\\$)\\b(new)\\b\\s*(?=\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.control.new.ts"
+						}
+					},
+					"end": "(?<=\\))",
+					"patterns": [
+						{
+							"include": "#function-parameters"
+						}
+					]
+				},
+				{
+					"name": "meta.type.function.ts",
+					"begin": "(?<=\\>)\\s*(?=\\()",
+					"end": "(?<=\\))",
+					"patterns": [
+						{
+							"include": "#function-parameters"
+						}
+					]
+				},
+				{
+					"name": "meta.type.function.ts",
+					"begin": "(?x)( (?= [(]\\s*( ([)]) |  (\\.\\.\\.) | ([_$[:alnum:]]+\\s*( ([:,?=])| ([)]\\s*=>) )) ) ) )",
+					"end": "(?<=\\))",
+					"patterns": [
+						{
+							"include": "#function-parameters"
+						}
+					]
+				}
+			]
+		}
+  }
+}

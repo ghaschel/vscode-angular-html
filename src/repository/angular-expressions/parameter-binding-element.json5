@@ -1,0 +1,20 @@
+{
+  repository: {
+    "parameter-binding-element": {
+			"patterns": [
+				{
+					"include": "#parameter-object-binding-pattern"
+				},
+				{
+					"include": "#parameter-array-binding-pattern"
+				},
+				{
+					"include": "#destructuring-parameter-rest"
+				},
+				{
+					"include": "#variable-initializer"
+				}
+			]
+		}
+  }
+}

@@ -1,0 +1,19 @@
+{
+  repository: {
+    "type-operators": {
+			"patterns": [
+				{
+					"include": "#typeof-operator"
+				},
+				{
+					"name": "keyword.operator.type.ts",
+					"match": "[&|]"
+				},
+				{
+					"name": "keyword.operator.expression.keyof.ts",
+					"match": "(?<!\\.|\\$)\\bkeyof\\b(?!\\$)"
+				}
+			]
+		}
+  }
+}

@@ -1,0 +1,34 @@
+{
+  repository: {
+    "destructuring-variable": {
+			"patterns": [
+				{
+					"name": "meta.object-binding-pattern-variable.ts",
+					"begin": "(?<!=|:|of|in)\\s*(?=\\{)",
+					"end": "(?=$|\"|[;,=}]|(\\s+(of|in)\\s+))",
+					"patterns": [
+						{
+							"include": "#object-binding-pattern"
+						},
+						{
+							"include": "#type-annotation"
+						}
+					]
+				},
+				{
+					"name": "meta.array-binding-pattern-variable.ts",
+					"begin": "(?<!=|:|of|in)\\s*(?=\\[)",
+					"end": "(?=$|\"|[;,=}]|(\\s+(of|in)\\s+))",
+					"patterns": [
+						{
+							"include": "#array-binding-pattern"
+						},
+						{
+							"include": "#type-annotation"
+						}
+					]
+				}
+			]
+		}
+  }
+}

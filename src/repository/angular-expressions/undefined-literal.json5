@@ -1,0 +1,8 @@
+{
+  repository: {
+    "undefined-literal": {
+			"name": "constant.language.undefined.ts",
+			"match": "(?<!\\.|\\$)\\bundefined\\b(?!\\$)"
+		}
+  }
+}

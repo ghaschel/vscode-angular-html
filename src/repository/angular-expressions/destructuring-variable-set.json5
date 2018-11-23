@@ -1,0 +1,15 @@
+{
+  repository: {
+    "destructuring-variable-rest": {
+			"match": "(?:(\\.\\.\\.)\\s*)?([_$[:alpha:]][_$[:alnum:]]*)",
+			"captures": {
+				"1": {
+					"name": "keyword.operator.rest.ts"
+				},
+				"2": {
+					"name": "variable.other.readwrite.ts"
+				}
+			}
+		}
+  }
+}

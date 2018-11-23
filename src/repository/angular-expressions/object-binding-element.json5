@@ -1,0 +1,32 @@
+{
+  repository: {
+    "object-binding-element": {
+			"patterns": [
+				{
+					"begin": "(?=(([_$[:alpha:]][_$[:alnum:]]*)|(\\'[^']*\\')|(\\\"[^\"]*\\\")|(\\[([^\\[\\]]|\\[[^\\[\\]]+\\])+\\]))\\s*(:))",
+					"end": "(?=,|\\})",
+					"patterns": [
+						{
+							"include": "#object-binding-element-propertyName"
+						},
+						{
+							"include": "#binding-element"
+						}
+					]
+				},
+				{
+					"include": "#object-binding-pattern"
+				},
+				{
+					"include": "#destructuring-variable-rest"
+				},
+				{
+					"include": "#variable-initializer"
+				},
+				{
+					"include": "#punctuation-comma"
+				}
+			]
+		}
+  }
+}

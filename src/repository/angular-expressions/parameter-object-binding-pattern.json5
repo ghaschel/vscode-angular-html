@@ -1,0 +1,26 @@
+{
+  repository: {
+    "parameter-object-binding-pattern": {
+			"begin": "(?:(\\.\\.\\.)\\s*)?(\\{)",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.operator.rest.ts"
+				},
+				"2": {
+					"name": "punctuation.definition.binding-pattern.object.ts"
+				}
+			},
+			"end": "\\}",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.binding-pattern.object.ts"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#parameter-object-binding-element"
+				}
+			]
+		}
+  }
+}

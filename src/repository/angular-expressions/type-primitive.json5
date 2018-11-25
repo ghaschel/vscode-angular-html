@@ -1,8 +1,0 @@
-{
-  repository: {
-    "type-primitive": {
-			"name": "support.type.primitive.ts",
-			"match": "(?<!\\.|\\$)\\b(string|number|boolean|symbol|any|void|never)\\b(?!\\$)"
-		}
-  }
-}

@@ -1,8 +1,0 @@
-{
-  repository: {
-    "type-predicate-operator": {
-			"name": "keyword.operator.expression.is.ts",
-			"match": "(?<!\\.|\\$)\\bis\\b(?!\\$)"
-		}
-  }
-}

@@ -1,12 +1,16 @@
 # Change Log
 
-# 0.0.34 (23/11/2018)
+# 0.0.35 (25/11/2018)
+
+- Cleaning in angular template expressions
+
+# 0.0.34 (_23/11/2018_)
 
 - Fixed issue with safe operators inside function parameters
 - Transformed adapted ts json to multiple json5 for a better maintability.
 - Removed some surely not used ts scopes on templates (not all of them yet)
 
-# 0.0.33 (22/11/2018)
+# 0.0.33 (_22/11/2018_)
 
 - Improvements in gulpfile
 - Although it's far from optimized yet, managed to fix the issue with angular expressions without semicolon at the end. [#15](https://github.com/ghaschel/vscode-angular-html/issues/15)

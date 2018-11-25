@@ -1,6 +1,5 @@
 .gitignore
 src/**
 test/**
-assets/**
 gulpfile.js
 travis.yml

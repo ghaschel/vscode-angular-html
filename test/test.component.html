@@ -184,14 +184,14 @@ ANGULAR DIRECTIVES
      [ngClass]="{
         'test': test.isTruthy()
      }"
-     *ngIf="condition.met"
+     *ngIf="condition.met()"
      *ngIf="condition?.met"
      [ngClass]="{ 'test': sdsdasda }"
      class="testing with non multiline {{test}}"
      test
      [test]="test.test();"
      *ngIf="selectedCustomer && selectedCustomer.id > 0"
-     *ngFor="let a of b[a.teste.asd]; index as c"
+     *ngFor="let a of b['a'][teste].asd; index as c"
      #templateVariable></div>
 
 ANGULAR INTERPOLATIONS
@@ -199,6 +199,52 @@ ANGULAR INTERPOLATIONS
 {{angular.interpolations || test}}
 {{angular?.interpolations}}
 {{angular!.interpolations}}
+
+<span>
+  Hello {{ 1 + 1 === 3 ? 'me' : 'you' }}
+</span>
+{{ user?.preferences?.avatar }}
+{{ user?.name | uppercase }}
+{{ user!.preferences!.nickName | uppercase }}
+
+<input type="text"
+       #color
+       placeholder="Hex color value">
+<button (click)="printValue(color.value)">
+  Show color
+</button>
+<span>
+  Published: {{ publishedDate | date:'fullDate' }}
+</span>
+
+<span *ngIf="publishedDate">
+  Published: {{ publishedDate | date:'fullDate' }}
+</span>
+
+<span *ngIf="publishedDate; else noPublishedDate">
+  Published: {{ publishedDate | date:'fullDate' }}
+</span>
+<ng-template #noPublishedDate>
+  😿 No published date
+</ng-template>
+
+<ul>
+  <li *ngFor="let user of users">
+    name: {{ user.name }}, email: {{ user.email }}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let user of users; index as i">
+    {{ i + 1 }}- name: {{ user.name }}, email: {{ user.email }}
+  </li>
+</ul>
+
+<div [ngSwitch]="user.gender">
+  <span *ngSwitchCase="'m'">Male</span>
+  <span *ngSwitchCase="'f'">Female</span>
+  <span *ngSwitchDefault>Not provided</span>
+</div>
 
 ENTITIES
 

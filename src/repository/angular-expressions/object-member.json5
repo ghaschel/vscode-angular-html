@@ -71,21 +71,6 @@
         },
         {
           name: 'meta.object.member.ts',
-          begin: '\\.\\.\\.',
-          beginCaptures: {
-            '0': {
-              name: 'keyword.operator.spread.ts'
-            }
-          },
-          end: '(?=,|\\})',
-          patterns: [
-            {
-              include: '#angular-expression'
-            }
-          ]
-        },
-        {
-          name: 'meta.object.member.ts',
           match: '([_$[:alpha:]][_$[:alnum:]]*)\\s*(?=,|\\}|$)',
           captures: {
             '1': {

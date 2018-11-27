@@ -13,9 +13,6 @@
           include: '#type-builtin-literals'
         },
         {
-          include: '#type-parameters'
-        },
-        {
           include: '#type-tuple'
         },
         {
@@ -29,9 +26,6 @@
         },
         {
           include: '#type-paren-or-function-parameters'
-        },
-        {
-          include: '#type-function-return-type'
         },
         {
           include: '#type-name'

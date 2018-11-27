@@ -5,20 +5,20 @@
         {
           include: '#type-annotation'
         },
-        {
-          begin: '\\.\\.\\.',
-          beginCaptures: {
-            '0': {
-              name: 'keyword.operator.spread.ts'
-            }
-          },
-          end: '(?=\\}|;|,|"|$)|(?<=\\})',
-          patterns: [
-            {
-              include: '#type'
-            }
-          ]
-        },
+        // {
+        //   begin: '\\.\\.\\.',
+        //   beginCaptures: {
+        //     '0': {
+        //       name: 'keyword.operator.spread.ts'
+        //     }
+        //   },
+        //   end: '(?=\\}|;|,|"|$)|(?<=\\})',
+        //   patterns: [
+        //     {
+        //       include: '#type'
+        //     }
+        //   ]
+        // },
         {
           include: '#punctuation-comma'
         },

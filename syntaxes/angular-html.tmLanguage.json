@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "angular-html",
-    "scopeName": "text.html.html",
+    "scopeName": "text.html.angular",
     "patterns": [
         {
             "include": "#tag-script"
@@ -194,7 +194,7 @@
                     },
                     "begin": "(<)(!)((?i:doctype))",
                     "end": "(>)",
-                    "name": "support.type.object.module.html",
+                    "name": "support.type.object.html-attribute",
                     "patterns": [
                         {
                             "patterns": [
@@ -294,7 +294,7 @@
                     "name": "constant.character.entity.html"
                 },
                 "5": {
-                    "name": "constant.numeric.angular.directives"
+                    "name": "constant.numeric.angular-directive"
                 },
                 "6": {
                     "name": "keyword.operator.entity.html"
@@ -354,7 +354,7 @@
                 {
                     "beginCaptures": {
                         "0": {
-                            "name": "string.regexp.interpolation.begin"
+                            "name": "string.regexp.angular-interpolation.begin"
                         }
                     },
                     "patterns": [
@@ -369,11 +369,11 @@
                     "begin": "\\{\\{\\{?",
                     "endCaptures": {
                         "0": {
-                            "name": "string.regexp.interpolation.end"
+                            "name": "string.regexp.angular-interpolation.end"
                         }
                     },
                     "end": "\\}\\}\\}?",
-                    "name": "expression.embedded.angular"
+                    "name": "expression.angular-interpolation"
                 }
             ]
         },
@@ -2733,7 +2733,7 @@
                 }
             },
             "end": "(/?>)",
-            "name": "meta.tag.other.html"
+            "name": "text.html.angular.tag"
         },
         "tag-deprecated": {
             "beginCaptures": {
@@ -2761,7 +2761,7 @@
         "tag-events-attribute": {
             "captures": {
                 "1": {
-                    "name": "support.type.object.module.html"
+                    "name": "support.type.object.html-events"
                 },
                 "2": {
                     "name": "constant.character.entity.html"
@@ -2769,7 +2769,7 @@
             },
             "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style)+(=)",
             "end": "(?<='|\")|(?=[\\s<>`])",
-            "name": "meta.attribute-with-value.events.html",
+            "name": "text.html.angular.events",
             "patterns": [
                 {
                     "beginCaptures": {
@@ -2817,7 +2817,7 @@
             "name": "string.quoted.double.html",
             "beginCaptures": {
                 "2": {
-                    "name": "support.type.object.module.html"
+                    "name": "support.type.object.html-attribute"
                 },
                 "3": {
                     "name": "constant.character.entity.html"
@@ -2842,7 +2842,7 @@
         "tag-minified-boolean-attributes": {
             "captures": {
                 "1": {
-                    "name": "support.type.object.module.html"
+                    "name": "support.type.object.html-attribute"
                 }
             },
             "match": "(?<!<|\\/)\\b([\\w\\-\\:]+)\\b\\s?",
@@ -2857,7 +2857,7 @@
                     "name": "entity.name.tag.begin.html"
                 },
                 "4": {
-                    "name": "support.type.object.module.html"
+                    "name": "support.type.object.html-attribute"
                 },
                 "5": {
                     "name": "constant.character.entity.html"
@@ -2924,7 +2924,7 @@
                     "name": "entity.name.tag.begin.html"
                 },
                 "4": {
-                    "name": "support.type.object.module.html"
+                    "name": "support.type.object.html-attribute"
                 },
                 "5": {
                     "name": "constant.character.entity.html"

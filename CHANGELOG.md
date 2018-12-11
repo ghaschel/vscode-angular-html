@@ -1,6 +1,11 @@
 # Change Log
 
-# 0.10.4 (27/11/2018)
+# 1.0.0 (11/12/2018)
+
+- Changed a lot of scope names for a more concise naming. See [scope names](SCOPE-NAMES.md) (Work in Progress)
+- Changed language id from html to angular-html, so that it doesn't overwrite the default html syntax highlighting. (Althought this breaks support for icons on vscode-icons)
+
+# 0.10.4 (_27/11/2018_)
 
 - Cleaning in angular template expressions
 - Updated version numbers and changelog to properly follow SemVer

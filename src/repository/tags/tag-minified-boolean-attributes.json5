@@ -3,7 +3,7 @@
     'tag-minified-boolean-attributes': {
       captures: {
         '1': {
-          name: 'support.type.object.module.html'
+          name: 'support.type.object.html-attribute'
         }
       },
       match: '(?<!<|\\/)\\b([\\w\\-\\:]+)\\b\\s?',

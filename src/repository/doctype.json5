@@ -22,7 +22,7 @@
           begin: '(<)(!)((?i:doctype))',
           end: '(>)',
           // using another scope different from the one it fits to differentiate in color from objects and variables
-          name: 'support.type.object.module.html',
+          name: 'support.type.object.html-attribute',
           patterns: [
             {
               patterns: [
@@ -32,7 +32,7 @@
                 }
               ],
               // using another scope different from the one it fits to differentiate in color from objects and variables
-              name: 'support.type.object.module.html' 
+              name: 'support.type.object.module.html'
             }
           ]
         }

@@ -1,6 +1,10 @@
 # Change Log
 
-# 1.0.0 (11/12/2018)
+# 1.0.1 (12/12/2018)
+
+- Returned the language id to html until I figure it out the language server thing and prevent it from not having intelisense support for HTML.
+
+# 1.0.0 (_11/12/2018_)
 
 - Changed a lot of scope names for a more concise naming. See [scope names](SCOPE-NAMES.md) (Work in Progress)
 - Changed language id from html to angular-html, so that it doesn't overwrite the default html syntax highlighting. (Althought this breaks support for icons on vscode-icons)

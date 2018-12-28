@@ -341,7 +341,7 @@
                             "name": "string.regexp"
                         },
                         "2": {
-                            "name": "string.quoted.single.html"
+                            "name": "string.quoted.double.html"
                         }
                     },
                     "end": "(\\})?[\\s\\n]*(\")",

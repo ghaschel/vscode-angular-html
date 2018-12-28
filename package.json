@@ -2,7 +2,7 @@
   "name": "vscode-angular-html",
   "displayName": "vscode-angular-html",
   "description": "Syntax highlighting for angular HTML Template files",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "ghaschel",
   "license": "MIT",
   "repository": {
@@ -25,7 +25,7 @@
   "contributes": {
     "languages": [
       {
-        "id": "html",
+        "id": "angular-html",
         "aliases": [
           "HTML (Angular template)"
         ],
@@ -37,7 +37,7 @@
     ],
     "grammars": [
       {
-        "language": "html",
+        "language": "angular-html",
         "scopeName": "text.html.angular",
         "path": "./syntaxes/angular-html.tmLanguage.json"
       }

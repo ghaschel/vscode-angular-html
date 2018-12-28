@@ -1,6 +1,10 @@
 # Change Log
 
-# 1.0.1 (12/12/2018)
+# 1.0.2 (28/12/2018)
+
+- Minor fixes in scope naming
+
+# 1.0.1 (_12/12/2018_)
 
 - Returned the language id to html until I figure it out the language server thing and prevent it from not having intelisense support for HTML.
 

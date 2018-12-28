@@ -1,5 +1,9 @@
 # Change Log
 
+# 1.0.3 (28/12/2018)
+
+- Stupid mistake
+
 # 1.0.2 (28/12/2018)
 
 - Minor fixes in scope naming

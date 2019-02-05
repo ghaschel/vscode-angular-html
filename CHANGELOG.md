@@ -1,10 +1,14 @@
 # Change Log
 
-# 1.0.3 (28/12/2018)
+# 1.1.0 (02/02/2019)
+
+- Added highlighting for uppercase constants (it was white before)
+
+# 1.0.3 (_28/12/2018_)
 
 - Stupid mistake
 
-# 1.0.2 (28/12/2018)
+# 1.0.2 (_28/12/2018_)
 
 - Minor fixes in scope naming
 

@@ -1,6 +1,10 @@
 # Change Log
 
-# 1.1.0 (02/02/2019)
+# 1.1.1 (02/02/2019)
+
+- Removed junk
+
+# 1.1.0 (_02/02/2019_)
 
 - Added highlighting for uppercase constants (it was white before)
 

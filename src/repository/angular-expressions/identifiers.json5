@@ -65,7 +65,7 @@
 					}
 				},
 				{
-					"name": "constant.other.ts",
+					"name": "constant.character.other",
 					"match": "([[:upper:]][_$[:digit:][:upper:]]*)(?![_$[:alnum:]])"
 				},
 				{

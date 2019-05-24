@@ -1,5 +1,9 @@
 # Change Log
 
+# 1.1.2 (24/05/2019)
+
+- Fixed an issue with angular attributes with underlines
+
 # 1.1.1 (02/02/2019)
 
 - Removed junk

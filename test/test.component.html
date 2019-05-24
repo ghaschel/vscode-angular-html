@@ -171,13 +171,14 @@ ANGULAR DIRECTIVES
 
 <div [binding]="to.element"
      [binding]="to.function('with-parameter')"
+     [element_binding]="to.function_with_underline('with-parameter')"
      (click)="to.function(with.parameter)"
      (click)="to.function(with!.parameter)"
      (click)="to.function(with?.parameter)"
      [(binding)]="to.element"
      [attr.href]="file?.link"
      [style.font-size.px]="10"
-     [@$visibility]="module.$visibility"
+     [@$visi_bility]="module.$visibility"
      [@visibility]="getMenuState()"
      [(binding)]="to.function('with-parameter')"
      (click)="callback(parameter.test)"
@@ -420,7 +421,11 @@ STYLE INLINE
 "></div>
 
 SCRIPT TAG
-
+<script type="text/javascript" src="runtime.js"></script>
+<script type="text/javascript" src="polyfills.js"></script>
+<script type="text/javascript" src="styles.js"></script>
+<script type="text/javascript" src="vendor.js"></script>
+<script type="text/javascript" src="main.js"></script>
 <script type="text/javascript">
   var a;
   const a = test.callback();
@@ -451,7 +456,6 @@ GENERIC ATTRIBUTES
 <test class="asda\&$#@!\.,~`#$%&**(AZ)=-+_">
 
 </test>
-<input />
 <input />
 
 <style>

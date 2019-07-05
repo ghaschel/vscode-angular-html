@@ -1,2 +1,2 @@
 test/* linguist-vendored
-assets/* linguist-vendored
+*.png binary

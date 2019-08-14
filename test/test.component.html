@@ -182,6 +182,7 @@ ANGULAR DIRECTIVES
      [@visibility]="getMenuState()"
      [(binding)]="to.function('with-parameter')"
      (click)="callback(parameter.test)"
+     mat-header-cell *matHeaderCellDef class="test"
      [ngClass]="{
         'test': test.isTruthy()
      }"
@@ -419,23 +420,6 @@ STYLE INLINE
             background-color: rgb(255, 255, 255);
             color: rgba(33, 254, 12, 1);
 "></div>
-
-SCRIPT TAG
-<script type="text/javascript" src="runtime.js"></script>
-<script type="text/javascript" src="polyfills.js"></script>
-<script type="text/javascript" src="styles.js"></script>
-<script type="text/javascript" src="vendor.js"></script>
-<script type="text/javascript" src="main.js"></script>
-<script type="text/javascript">
-  var a;
-  const a = test.callback();
-  let a = test;
-
-  function test(variable) {
-    return boolean;
-  }
-
-</script>
 
 GENERIC ATTRIBUTES
 

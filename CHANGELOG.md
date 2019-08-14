@@ -1,5 +1,9 @@
 # Change Log
 
+# 1.1.3 (14/08/2019)
+
+- Fixed an issue with multiple directives/attributes at the sime line. [#20](https://github.com/ghaschel/vscode-angular-html/issues/20)
+
 # 1.1.2 (24/05/2019)
 
 - Fixed an issue with angular attributes with underlines

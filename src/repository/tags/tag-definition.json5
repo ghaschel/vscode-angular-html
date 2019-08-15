@@ -2,7 +2,7 @@
   repository: {
     'tag-definition': {
       beginCaptures: {
-        '3': {
+        '2': {
           name: 'entity.name.tag.other.html'
         },
         '1': {
@@ -14,7 +14,7 @@
           include: '#tag-stuff'
         }
       ],
-      begin: '(</?)(?!(acronym|applet|area|a|basefont|big|body|br|center|caption|colgroup|col|dir|div|dl|font|frameset|frame|h1|h2|h3|h4|h5|h6|head|hr|html|isindex|iframe|img|input|legend|li|link|menu|noframes|object|ol|p|param|pre|strike|s|t|table|tbody|td|tfoot|th|thead|tr|tt|ul|u)\\b)([a-zA-Z0-9:-]+)\\b',
+      begin: '(</?)([a-zA-Z0-9:-]+)\\b',
       endCaptures: {
         '1': {
           name: 'punctuation.definition.tag.end.html'

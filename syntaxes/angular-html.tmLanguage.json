@@ -222,10 +222,6 @@
                     },
                     "match": "(&)([a-zA-Z0-9]+|#[0-9]+|#x[0-9a-fA-F]+)(;)",
                     "name": "constant.character.entity.html"
-                },
-                {
-                    "match": "&",
-                    "name": "invalid.illegal.bad-ampersand.html"
                 }
             ]
         },
@@ -1387,7 +1383,7 @@
             ]
         },
         "tag-deprecated-attribute-a": {
-            "begin": "(<\\/?)(a)\\b",
+            "begin": "(<\\/?)(a)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1421,7 +1417,7 @@
             ]
         },
         "tag-deprecated-attribute-area": {
-            "begin": "(<\\/?)(area)\\b",
+            "begin": "(<\\/?)(area)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1455,7 +1451,7 @@
             ]
         },
         "tag-deprecated-attribute-body": {
-            "begin": "(<\\/?)(body)\\b",
+            "begin": "(<\\/?)(body)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1489,7 +1485,7 @@
             ]
         },
         "tag-deprecated-attribute-br": {
-            "begin": "(<\\/?)(br)\\b",
+            "begin": "(<\\/?)(br)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1523,7 +1519,7 @@
             ]
         },
         "tag-deprecated-attribute-caption": {
-            "begin": "(<\\/?)(caption)\\b",
+            "begin": "(<\\/?)(caption)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1557,7 +1553,7 @@
             ]
         },
         "tag-deprecated-attribute-col": {
-            "begin": "(<\\/?)(col)\\b",
+            "begin": "(<\\/?)(col)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1591,7 +1587,7 @@
             ]
         },
         "tag-deprecated-attribute-colgroup": {
-            "begin": "(<\\/?)(colgroup)\\b",
+            "begin": "(<\\/?)(colgroup)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1625,7 +1621,7 @@
             ]
         },
         "tag-deprecated-attribute-div": {
-            "begin": "(<\\/?)(div)\\b",
+            "begin": "(<\\/?)(div)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1659,7 +1655,7 @@
             ]
         },
         "tag-deprecated-attribute-dl": {
-            "begin": "(<\\/?)(dl)\\b",
+            "begin": "(<\\/?)(dl)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1693,7 +1689,7 @@
             ]
         },
         "tag-deprecated-attribute-h1": {
-            "begin": "(<\\/?)(h1)\\b",
+            "begin": "(<\\/?)(h1)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1727,7 +1723,7 @@
             ]
         },
         "tag-deprecated-attribute-h2": {
-            "begin": "(<\\/?)(h2)\\b",
+            "begin": "(<\\/?)(h2)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1761,7 +1757,7 @@
             ]
         },
         "tag-deprecated-attribute-h3": {
-            "begin": "(<\\/?)(h3)\\b",
+            "begin": "(<\\/?)(h3)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1795,7 +1791,7 @@
             ]
         },
         "tag-deprecated-attribute-h4": {
-            "begin": "(<\\/?)(h4)\\b",
+            "begin": "(<\\/?)(h4)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1829,7 +1825,7 @@
             ]
         },
         "tag-deprecated-attribute-h5": {
-            "begin": "(<\\/?)(h5)\\b",
+            "begin": "(<\\/?)(h5)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1863,7 +1859,7 @@
             ]
         },
         "tag-deprecated-attribute-h6": {
-            "begin": "(<\\/?)(h6)\\b",
+            "begin": "(<\\/?)(h6)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1897,7 +1893,7 @@
             ]
         },
         "tag-deprecated-attribute-head": {
-            "begin": "(<\\/?)(head)\\b",
+            "begin": "(<\\/?)(head)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1931,7 +1927,7 @@
             ]
         },
         "tag-deprecated-attribute-hr": {
-            "begin": "(<\\/?)(hr)\\b",
+            "begin": "(<\\/?)(hr)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1965,7 +1961,7 @@
             ]
         },
         "tag-deprecated-attribute-html": {
-            "begin": "(<\\/?)(html)\\b",
+            "begin": "(<\\/?)(html)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -1999,7 +1995,7 @@
             ]
         },
         "tag-deprecated-attribute-iframe": {
-            "begin": "(<\\/?)(iframe)\\b",
+            "begin": "(<\\/?)(iframe)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2033,7 +2029,7 @@
             ]
         },
         "tag-deprecated-attribute-img": {
-            "begin": "(<\\/?)(img)\\b",
+            "begin": "(<\\/?)(img)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2067,7 +2063,7 @@
             ]
         },
         "tag-deprecated-attribute-input": {
-            "begin": "(<\\/?)(input)\\b",
+            "begin": "(<\\/?)(input)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2101,7 +2097,7 @@
             ]
         },
         "tag-deprecated-attribute-legend": {
-            "begin": "(<\\/?)(legend)\\b",
+            "begin": "(<\\/?)(legend)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2135,7 +2131,7 @@
             ]
         },
         "tag-deprecated-attribute-li": {
-            "begin": "(<\\/?)(li)\\b",
+            "begin": "(<\\/?)(li)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2169,7 +2165,7 @@
             ]
         },
         "tag-deprecated-attribute-link": {
-            "begin": "(<\\/?)(link)\\b",
+            "begin": "(<\\/?)(link)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2203,7 +2199,7 @@
             ]
         },
         "tag-deprecated-attribute-menu": {
-            "begin": "(<\\/?)(menu)\\b",
+            "begin": "(<\\/?)(menu)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2237,7 +2233,7 @@
             ]
         },
         "tag-deprecated-attribute-object": {
-            "begin": "(<\\/?)(object)\\b",
+            "begin": "(<\\/?)(object)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2271,7 +2267,7 @@
             ]
         },
         "tag-deprecated-attribute-ol": {
-            "begin": "(<\\/?)(ol)\\b",
+            "begin": "(<\\/?)(ol)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2305,7 +2301,7 @@
             ]
         },
         "tag-deprecated-attribute-p": {
-            "begin": "(<\\/?)(p)\\b",
+            "begin": "(<\\/?)(p)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2339,7 +2335,7 @@
             ]
         },
         "tag-deprecated-attribute-param": {
-            "begin": "(<\\/?)(param)\\b",
+            "begin": "(<\\/?)(param)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2373,7 +2369,7 @@
             ]
         },
         "tag-deprecated-attribute-pre": {
-            "begin": "(<\\/?)(pre)\\b",
+            "begin": "(<\\/?)(pre)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2407,7 +2403,7 @@
             ]
         },
         "tag-deprecated-attribute-t": {
-            "begin": "(<\\/?)(t)\\b",
+            "begin": "(<\\/?)(t)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2441,7 +2437,7 @@
             ]
         },
         "tag-deprecated-attribute-table": {
-            "begin": "(<\\/?)(table)\\b",
+            "begin": "(<\\/?)(table)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2475,7 +2471,7 @@
             ]
         },
         "tag-deprecated-attribute-tbody": {
-            "begin": "(<\\/?)(tbody)\\b",
+            "begin": "(<\\/?)(tbody)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2509,7 +2505,7 @@
             ]
         },
         "tag-deprecated-attribute-td": {
-            "begin": "(<\\/?)(td)",
+            "begin": "(<\\/?)(td)(?!-)",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2543,7 +2539,7 @@
             ]
         },
         "tag-deprecated-attribute-tfoot": {
-            "begin": "(<\\/?)(tfoot)\\b",
+            "begin": "(<\\/?)(tfoot)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2577,7 +2573,7 @@
             ]
         },
         "tag-deprecated-attribute-th": {
-            "begin": "(<\\/?)(th)\\b",
+            "begin": "(<\\/?)(th)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2611,7 +2607,7 @@
             ]
         },
         "tag-deprecated-attribute-thead": {
-            "begin": "(<\\/?)(thead)\\b",
+            "begin": "(<\\/?)(thead)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2645,7 +2641,7 @@
             ]
         },
         "tag-deprecated-attribute-tr": {
-            "begin": "(<\\/?)(tr)\\b",
+            "begin": "(<\\/?)(tr)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2679,7 +2675,7 @@
             ]
         },
         "tag-deprecated-attribute-ul": {
-            "begin": "(<\\/?)(ul)\\b",
+            "begin": "(<\\/?)(ul)(?!-)\\b",
             "end": "(\\/?>)",
             "beginCaptures": {
                 "1": {
@@ -2717,7 +2713,7 @@
                 "1": {
                     "name": "punctuation.definition.tag.begin.html"
                 },
-                "3": {
+                "2": {
                     "name": "entity.name.tag.other.html"
                 }
             },
@@ -2726,7 +2722,7 @@
                     "include": "#tag-stuff"
                 }
             ],
-            "begin": "(</?)(?!(acronym|applet|area|a|basefont|big|body|br|center|caption|colgroup|col|dir|div|dl|font|frameset|frame|h1|h2|h3|h4|h5|h6|head|hr|html|isindex|iframe|img|input|legend|li|link|menu|noframes|object|ol|p|param|pre|strike|s|t|table|tbody|td|tfoot|th|thead|tr|tt|ul|u)\\b)([a-zA-Z0-9:-]+)\\b",
+            "begin": "(</?)([a-zA-Z0-9:-]+)\\b",
             "endCaptures": {
                 "1": {
                     "name": "punctuation.definition.tag.end.html"
@@ -2845,7 +2841,7 @@
                     "name": "support.type.object.html-attribute"
                 }
             },
-            "match": "(?<!<|\\/)\\b([\\w\\-\\:]+)\\b\\s?",
+            "match": "(?<!<|\\/)\\s(\\b[\\w\\-\\:]+)\\b\\s?",
             "name": "punctuation.definition.tag.end.html"
         },
         "tag-script": {

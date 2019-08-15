@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-legend': {
-      begin: '(<\\/?)(legend)\\b',
+      begin: '(<\\/?)(legend)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

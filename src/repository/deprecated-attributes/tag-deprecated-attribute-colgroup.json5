@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-colgroup': {
-      begin: '(<\\/?)(colgroup)\\b',
+      begin: '(<\\/?)(colgroup)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-iframe': {
-      begin: '(<\\/?)(iframe)\\b',
+      begin: '(<\\/?)(iframe)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

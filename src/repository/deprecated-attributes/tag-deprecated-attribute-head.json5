@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-head': {
-      begin: '(<\\/?)(head)\\b',
+      begin: '(<\\/?)(head)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

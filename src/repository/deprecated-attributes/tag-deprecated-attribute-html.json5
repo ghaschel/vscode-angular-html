@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-html': {
-      begin: '(<\\/?)(html)\\b',
+      begin: '(<\\/?)(html)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

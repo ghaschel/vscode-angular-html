@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-dl': {
-      begin: '(<\\/?)(dl)\\b',
+      begin: '(<\\/?)(dl)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

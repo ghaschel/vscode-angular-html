@@ -6,7 +6,7 @@
           name: 'support.type.object.html-attribute'
         }
       },
-      match: '(?<!<|\\/)\\b([\\w\\-\\:]+)\\b\\s?',
+      match: '(?<!<|\\/)\\s(\\b[\\w\\-\\:]+)\\b\\s?',
       name: 'punctuation.definition.tag.end.html'
     }
   }

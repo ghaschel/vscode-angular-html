@@ -167,6 +167,9 @@ INVALID ATTRIBUTES
     charoff=""
     valign=""></tr>
 
+<div-test></div-test>
+<menu-test></menu-test>
+
 ANGULAR DIRECTIVES
 
 <div [binding]="to.element"
@@ -182,7 +185,9 @@ ANGULAR DIRECTIVES
      [@visibility]="getMenuState()"
      [(binding)]="to.function('with-parameter')"
      (click)="callback(parameter.test)"
-     mat-header-cell *matHeaderCellDef class="test"
+     mat-header-cell
+     *matHeaderCellDef
+     class="test"
      [ngClass]="{
         'test': test.isTruthy()
      }"
@@ -209,9 +214,11 @@ ANGULAR INTERPOLATIONS
 {{ user?.name | uppercase }}
 {{ user!.preferences!.nickName | uppercase }}
 
-<input type="text"
+<input 
+      type="text"
        #color
-       placeholder="Hex color value">
+       placeholder="Hex color value"
+>
 <button (click)="printValue(color.value)">
   Show color
 </button>
@@ -423,7 +430,8 @@ STYLE INLINE
 
 GENERIC ATTRIBUTES
 
-<div class="test"
+<div 
+     class="test"
      id="test"
      aria-label="test"
      no-value

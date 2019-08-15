@@ -50,7 +50,7 @@
     { include: '#regex' },
     { include: '#comment' },
     { include: '#doctype' },
-    { include: '#entities' }
+    { include: '#entities' },
   ],
   repository: {}
 }

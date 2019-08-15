@@ -1,5 +1,9 @@
 # Change Log
 
+# 1.1.4 (15/08/2018)
+
+- Fixed an issue with tags starting with deprecated tag names [#22](https://github.com/ghaschel/vscode-angular-html/issues/22)
+
 # 1.1.3 (14/08/2019)
 
 - Fixed an issue with multiple directives/attributes at the sime line. [#20](https://github.com/ghaschel/vscode-angular-html/issues/20)

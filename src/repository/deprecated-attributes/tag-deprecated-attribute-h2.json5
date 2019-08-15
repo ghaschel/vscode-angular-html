@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-h2': {
-      begin: '(<\\/?)(h2)\\b',
+      begin: '(<\\/?)(h2)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

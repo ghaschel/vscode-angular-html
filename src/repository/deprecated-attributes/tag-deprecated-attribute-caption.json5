@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-caption': {
-      begin: '(<\\/?)(caption)\\b',
+      begin: '(<\\/?)(caption)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

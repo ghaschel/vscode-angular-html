@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-param': {
-      begin: '(<\\/?)(param)\\b',
+      begin: '(<\\/?)(param)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

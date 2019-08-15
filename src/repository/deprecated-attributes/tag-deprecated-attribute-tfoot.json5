@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-tfoot': {
-      begin: '(<\\/?)(tfoot)\\b',
+      begin: '(<\\/?)(tfoot)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

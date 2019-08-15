@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-area': {
-      begin: '(<\\/?)(area)\\b',
+      begin: '(<\\/?)(area)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

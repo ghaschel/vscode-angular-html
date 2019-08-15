@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-deprecated-attribute-hr': {
-      begin: '(<\\/?)(hr)\\b',
+      begin: '(<\\/?)(hr)(?!-)\\b',
       end: '(\\/?>)',
       beginCaptures: {
         '2': {

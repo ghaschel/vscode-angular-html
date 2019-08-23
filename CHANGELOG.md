@@ -1,5 +1,11 @@
 # Change Log
 
+# 1.3.0 (23/08/2019)
+
+- Fixed missing `router-outlet` to structural tags differentiation [#24](https://github.com/ghaschel/vscode-angular-html/issues/24)
+- Added color differentiatio for pipes [#26](https://github.com/ghaschel/vscode-angular-html/issues/26)
+- Fixed missing highlighting for single asterisk [#27](https://github.com/ghaschel/vscode-angular-html/issues/27)
+
 # 1.2.0 (23/08/2019)
 
 - Fixed the dom events that were being overwritted by the attributes without equal [#25](https://github.com/ghaschel/vscode-angular-html/issues/25)

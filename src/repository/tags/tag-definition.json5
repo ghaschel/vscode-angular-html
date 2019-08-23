@@ -17,7 +17,7 @@
           include: '#tag-stuff'
         }
       ],
-      begin: '(</?)((ng-container|ng-content|ng-template)|([a-zA-Z0-9:-]+))\\b',
+      begin: '(</?)((ng-container|ng-content|ng-template|router-outlet)|([a-zA-Z0-9:-]+))\\b',
       endCaptures: {
         '1': {
           name: 'punctuation.definition.tag.end.html'

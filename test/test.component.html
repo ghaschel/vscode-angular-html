@@ -221,12 +221,16 @@ ANGULAR STRUCTURAL TAGS
 </ng-content>
 
 <ng-container *ngIf="condition?.met">
-
+  <test-component></test-component>
 </ng-container>
 
 <ng-template #noPublishedDate>
-  😿 No published date
+  No published date
 </ng-template>
+
+<router-outlet></router-outlet>
+
+<div * test=""></div>
 
 <input 
       type="text"
@@ -255,7 +259,7 @@ ANGULAR STRUCTURAL TAGS
 </ul>
 
 <ul>
-  <li *ngFor="let user of users; index as i">
+  <li *ngFor="let user of users | async as test; index as i;">
     {{ i + 1 }}- name: {{ user.name }}, email: {{ user.email }}
   </li>
 </ul>

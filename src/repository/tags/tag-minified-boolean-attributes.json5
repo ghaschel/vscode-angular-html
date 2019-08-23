@@ -3,10 +3,13 @@
     'tag-minified-boolean-attributes': {
       captures: {
         '1': {
+          name: 'string.regexp'
+        },
+        '2': {
           name: 'support.type.object.html-attribute'
         }
       },
-      match: '(?<!<|\\/)\\s(\\b[\\w\\-\\:]+)\\b\\s?(?!=)',
+      match: '(?<!<|\\/)(\\*)+|\\s(\\b[\\w\\-\\:]+)\\b\\s?(?!=)',
       name: 'punctuation.definition.tag.end.html'
     }
   }

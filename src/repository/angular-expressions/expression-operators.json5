@@ -3,6 +3,17 @@
     'expression-operators': {
       patterns: [
         {
+          match: '((?<!\\|)(\\|)(?!\\|))\\s?([a-zA-Z0-9\\-\\_]*)',
+          captures: {
+            '2': {
+              name: 'keyword.operator.logical.ts'
+            },
+            '3': {
+              name: 'entity.name.function.pipe.ng'
+            }
+          }
+        },
+        {
           name: 'keyword.control.flow.ts',
           match: '(?<!\\.|\\$)\\b(await)\\b(?!\\$)'
         },

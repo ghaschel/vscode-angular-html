@@ -197,7 +197,7 @@ ANGULAR DIRECTIVES
      class="testing with non multiline {{test}}"
      test
      [test]="test.test();"
-     *ngIf="selectedCustomer && selectedCustomer.id > 0"
+     *ngIf="selectedCustomer && selectedCustomer.id > 0; else block1; then block2"
      *ngFor="let a of b['a'][teste].asd; index as c"
      #templateVariable></div>
 
@@ -213,6 +213,20 @@ ANGULAR INTERPOLATIONS
 {{ user?.preferences?.avatar }}
 {{ user?.name | uppercase }}
 {{ user!.preferences!.nickName | uppercase }}
+
+ANGULAR STRUCTURAL TAGS
+
+<ng-content>
+  <span [class]="test()"></span>
+</ng-content>
+
+<ng-container *ngIf="condition?.met">
+
+</ng-container>
+
+<ng-template #noPublishedDate>
+  😿 No published date
+</ng-template>
 
 <input 
       type="text"
@@ -233,9 +247,6 @@ ANGULAR INTERPOLATIONS
 <span *ngIf="publishedDate; else noPublishedDate">
   Published: {{ publishedDate | date:'fullDate' }}
 </span>
-<ng-template #noPublishedDate>
-  😿 No published date
-</ng-template>
 
 <ul>
   <li *ngFor="let user of users">

@@ -1,6 +1,12 @@
 # Change Log
 
-# 1.1.4 (15/08/2018)
+# 1.2.0 (23/08/2019)
+
+- Fixed the dom events that were being overwritted by the attributes without equal [#25](https://github.com/ghaschel/vscode-angular-html/issues/25)
+- Added `else` and `then` keywords to *ngIf directives [#23](https://github.com/ghaschel/vscode-angular-html/issues/23)
+- Added color differentiation for angular structural tags [#24](https://github.com/ghaschel/vscode-angular-html/issues/24)
+
+# 1.1.4 (15/08/2019)
 
 - Fixed an issue with tags starting with deprecated tag names [#22](https://github.com/ghaschel/vscode-angular-html/issues/22)
 

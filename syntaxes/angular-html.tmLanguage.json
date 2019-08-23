@@ -469,6 +469,14 @@
                     "match": "(?<!\\.|\\$)\\bof\\b(?!\\$)"
                 },
                 {
+                    "name": "keyword.control.else.ts",
+                    "match": "(?<!\\.|\\$)\\belse\\b(?!\\$)"
+                },
+                {
+                    "name": "keyword.control.then.ts",
+                    "match": "(?<!\\.|\\$)\\bthen\\b(?!\\$)"
+                },
+                {
                     "name": "keyword.operator.expression.instanceof.ts",
                     "match": "(?<!\\.|\\$)\\binstanceof\\b(?!\\$)"
                 },
@@ -2713,7 +2721,10 @@
                 "1": {
                     "name": "punctuation.definition.tag.begin.html"
                 },
-                "2": {
+                "3": {
+                    "name": "constant.character.entity.ng-html"
+                },
+                "4": {
                     "name": "entity.name.tag.other.html"
                 }
             },
@@ -2722,7 +2733,7 @@
                     "include": "#tag-stuff"
                 }
             ],
-            "begin": "(</?)([a-zA-Z0-9:-]+)\\b",
+            "begin": "(</?)((ng-container|ng-content|ng-template)|([a-zA-Z0-9:-]+))\\b",
             "endCaptures": {
                 "1": {
                     "name": "punctuation.definition.tag.end.html"
@@ -2841,7 +2852,7 @@
                     "name": "support.type.object.html-attribute"
                 }
             },
-            "match": "(?<!<|\\/)\\s(\\b[\\w\\-\\:]+)\\b\\s?",
+            "match": "(?<!<|\\/)\\s(\\b[\\w\\-\\:]+)\\b\\s?(?!=)",
             "name": "punctuation.definition.tag.end.html"
         },
         "tag-script": {

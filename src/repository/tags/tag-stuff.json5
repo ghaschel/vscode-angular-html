@@ -2,7 +2,6 @@
   repository: {
     'tag-stuff': {
       patterns: [
-        // { include: '#ng-if'},
         { include: '#string-double-quoted' },
         { include: '#angular-directives' },
         { include: '#tag-events-attribute' },

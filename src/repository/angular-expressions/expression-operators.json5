@@ -19,6 +19,14 @@
           match: '(?<!\\.|\\$)\\bof\\b(?!\\$)'
         },
         {
+          name: 'keyword.control.else.ts',
+          match: '(?<!\\.|\\$)\\belse\\b(?!\\$)'
+        },
+        {
+          name: 'keyword.control.then.ts',
+          match: '(?<!\\.|\\$)\\bthen\\b(?!\\$)'
+        },
+        {
           name: 'keyword.operator.expression.instanceof.ts',
           match: '(?<!\\.|\\$)\\binstanceof\\b(?!\\$)'
         },

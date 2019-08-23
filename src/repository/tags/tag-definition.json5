@@ -2,8 +2,11 @@
   repository: {
     'tag-definition': {
       beginCaptures: {
-        '2': {
+        '4': {
           name: 'entity.name.tag.other.html'
+        },
+        '3': {
+          name: 'constant.character.entity.ng-html'
         },
         '1': {
           name: 'punctuation.definition.tag.begin.html'
@@ -14,7 +17,7 @@
           include: '#tag-stuff'
         }
       ],
-      begin: '(</?)([a-zA-Z0-9:-]+)\\b',
+      begin: '(</?)((ng-container|ng-content|ng-template)|([a-zA-Z0-9:-]+))\\b',
       endCaptures: {
         '1': {
           name: 'punctuation.definition.tag.end.html'

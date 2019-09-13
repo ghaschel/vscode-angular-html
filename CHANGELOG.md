@@ -1,5 +1,9 @@
 # Change Log
 
+# 1.3.1 (13/09/2019)
+
+- Fixed `s` tag being marked as deprecated [#29](https://github.com/ghaschel/vscode-angular-html/issues/29)
+
 # 1.3.0 (23/08/2019)
 
 - Fixed missing `router-outlet` to structural tags differentiation [#24](https://github.com/ghaschel/vscode-angular-html/issues/24)
@@ -9,7 +13,7 @@
 # 1.2.0 (23/08/2019)
 
 - Fixed the dom events that were being overwritted by the attributes without equal [#25](https://github.com/ghaschel/vscode-angular-html/issues/25)
-- Added `else` and `then` keywords to *ngIf directives [#23](https://github.com/ghaschel/vscode-angular-html/issues/23)
+- Added `else` and `then` keywords to \*ngIf directives [#23](https://github.com/ghaschel/vscode-angular-html/issues/23)
 - Added color differentiation for angular structural tags [#24](https://github.com/ghaschel/vscode-angular-html/issues/24)
 
 # 1.1.4 (15/08/2019)

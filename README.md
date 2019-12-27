@@ -20,10 +20,10 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 
 ## Summary
 
+- [Angular directives](#angular-directives)
 - [Doctype](#doctype)
 - [Comments](#comments)
 - [Invalid attributes](#invalid-attributes)
-- [Angular directives](#angular-directives)
 - [Angular interpolations](#angular-interpolations)
 - [Angular structural tags](#angular-structural-tags)
 - [Entities](#html-entities)
@@ -34,6 +34,12 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 - [Style tag](#style-tag)
 - [Script tags](#script-tags)
 - [Generic attributes](#generic-attributes)
+
+### Angular directives
+
+<span name="angular-directives"></span>
+
+<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-directives.gif" title="Angular directives" alt="Angular directives" />
 
 ### Doctype
 
@@ -53,11 +59,6 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/invalid-attributes.png" title="Invalid attributes" alt="Invalid attributes" />
 
-### Angular directives
-
-<span name="angular-directives"></span>
-
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-directives.png" title="Angular directives" alt="Angular directives" />
 
 ### Angular interpolations (with safe navigation operator)
 

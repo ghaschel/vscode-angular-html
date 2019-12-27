@@ -1,8 +1,9 @@
 {
   $schema: 'https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json',
   name: 'angular-html',
-  scopeName: 'text.html.angular',
+  scopeName: 'template.ng',
   patterns: [
+    { include: '#angular-interpolations' },
     { include: '#tag-script' },
     { include: '#tag-style' },
     { include: '#tag-deprecated-attribute-area' },
@@ -46,7 +47,6 @@
     { include: '#tag-deprecated-attribute-ul' },
     { include: '#tag-deprecated' },
     { include: '#tag-definition' },
-    { include: '#angular-interpolations' },
     { include: '#regex' },
     { include: '#comment' },
     { include: '#doctype' },

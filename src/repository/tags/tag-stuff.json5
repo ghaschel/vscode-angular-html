@@ -6,7 +6,7 @@
         { include: '#angular-directives' },
         { include: '#tag-events-attribute' },
         { include: '#tag-generic-attribute' },
-        { include: '#tag-minified-boolean-attributes' }
+        { include: '#tag-minified-boolean-attributes' },
       ]
     }
   }

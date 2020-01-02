@@ -190,23 +190,26 @@ ANGULAR DIRECTIVES
      [style.font-size.px]="10"
      [@$visi_bility]="module.$visibility"
      [@visibility]="getMenuState()"
+     [@visibility.done]="doSomething()"
      [(binding)]="to.function('with-parameter')"
      (click)="callback(parameter.test)"
      mat-header-cell
-     *ngFor="let obs of observable | async"
+     *ngFor="let obs of observable | async as test;"
      *matHeaderCellDef
      class="test"
      [ngClass]="{
         'test': test.isTruthy()
      }"
      *
-     ref-test
-     let-test 
+     ref-variable
+     ref-assingVariable="test"
+     let-col
+     let-i="index"
      *ngIf="condition.met()"
      *ngIf="condition?.met"
      [ngClass]="{ 'test': sdsdasda }"
      class="testing with non multiline {{test}}"
-     est
+     test
      [test]="test.test();"
      *ngIf="selectedCustomer && selectedCustomer.id > 0; else block1; then block2"
      *ngFor="let a of b['a'][teste].asd; index as c"
@@ -484,9 +487,8 @@ GENERIC ATTRIBUTES
   // stylus
   .stylus
     .way
-      &-of-doing-it
-        [with-attr]
-          color: red;
+      &-of-doing-it[with-attr]
+        color: red;
 
   // scss
   .class {

@@ -305,7 +305,7 @@
                     "name": "constant.character.entity.html"
                 }
             },
-            "begin": "((?:\\b(v-)|(\\*|\\#|ref\\-|\\@|[\\[\\(]{1,2}))(@)?([a-zA-Z0-9\\-_\\$]+)(?:[\\:\\.]([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*)([\\]\\)]{1,2})?*(=)?",
+            "begin": "((?:\\b(v-)|(\\*|\\#|\\@|[\\[\\(]{1,2}))(@)?([a-zA-Z0-9\\-_\\$]+)(?:[\\:\\.]([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*)([\\]\\)]{1,2})?*(=)?",
             "end": "(?<='|\")|(?=[\\s<>`])",
             "name": "meta.directive.angular",
             "patterns": [
@@ -2849,7 +2849,7 @@
                     "name": "string.quoted.double.html"
                 }
             },
-            "begin": "(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_]+)(=)(\")",
+            "begin": "(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style|let\\-|ref\\-)\\b)\\b([\\w\\-\\_]+)(=)(\")",
             "end": "(\")",
             "patterns": [
                 {
@@ -2863,14 +2863,55 @@
                     "name": "string.regexp"
                 },
                 "2": {
-                    "name": "string.regexp"
+                    "name": "keyword.operator.expression.let.js"
                 },
                 "3": {
                     "name": "support.type.object.html-attribute"
+                },
+                "4": {
+                    "name": "string.regexp"
+                },
+                "5": {
+                    "name": "support.type.object.html-attribute"
+                },
+                "6": {
+                    "name": "support.type.object.html-attribute"
                 }
             },
-            "match": "(?<!<|\\/)(\\*)+|\\s?(ref\\-)?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)",
+            "match": "(?<!<|\\/)(\\*)+?|(let\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)|(ref\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)|(\\b[\\w\\-\\:]+)\\b\\s?(?!=)",
             "name": "punctuation.definition.tag.end.html"
+        },
+        "tag-prefixed-attribute": {
+            "name": "string.quoted.double.html",
+            "beginCaptures": {
+                "2": {
+                    "name": "keyword.operator.expression.let.js"
+                },
+                "3": {
+                    "name": "string.regexp"
+                },
+                "4": {
+                    "name": "support.type.object.html-attribute"
+                },
+                "5": {
+                    "name": "constant.character.entity.html"
+                },
+                "6": {
+                    "name": "string.quoted.double.html"
+                }
+            },
+            "endCaptures": {
+                "1": {
+                    "name": "string.quoted.double.html"
+                }
+            },
+            "begin": "((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)(=)(\")",
+            "end": "(\")",
+            "patterns": [
+                {
+                    "include": "#angular-expression"
+                }
+            ]
         },
         "tag-script": {
             "beginCaptures": {
@@ -2924,6 +2965,9 @@
             "patterns": [
                 {
                     "include": "#string-double-quoted"
+                },
+                {
+                    "include": "#tag-prefixed-attribute"
                 },
                 {
                     "include": "#angular-directives"

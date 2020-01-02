@@ -6,13 +6,22 @@
           name: 'string.regexp'
         },
         '2': {
-          name: 'string.regexp'
+          name: 'keyword.operator.expression.let.js'
         },
         '3': {
           name: 'support.type.object.html-attribute'
-        }
+        },
+        '4': {
+          name: 'string.regexp'
+        },
+        '5': {
+          name: 'support.type.object.html-attribute'
+        },
+        '6': {
+          name: 'support.type.object.html-attribute'
+        },
       },
-      match: '(?<!<|\\/)(\\*)+|\\s?(ref\\-)?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)',
+      match: '(?<!<|\\/)(\\*)+?|(let\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)|(ref\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)|(\\b[\\w\\-\\:]+)\\b\\s?(?!=)',
       name: 'punctuation.definition.tag.end.html'
     }
   }

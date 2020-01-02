@@ -3,6 +3,7 @@
     'tag-stuff': {
       patterns: [
         { include: '#string-double-quoted' },
+        { include: '#tag-prefixed-attribute' },
         { include: '#angular-directives' },
         { include: '#tag-events-attribute' },
         { include: '#tag-generic-attribute' },

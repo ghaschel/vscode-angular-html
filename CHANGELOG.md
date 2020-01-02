@@ -1,4 +1,18 @@
-# Change Log
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.5.0](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.4.0...v1.5.0) (2020-01-02)
+
+
+### Features
+
+* **prefixed-attributes:** added highlighting for let- and ref prefix ([b4ed81d](https://github.com/ghaschel/vscode-angular-syntax/commit/b4ed81dd6a9ee8c669b77594fea3f0bef4096886))
+
+
+### Bug Fixes
+
+* **main-scope:** attempt to fix a bug where highlithting strips off ([f113a35](https://github.com/ghaschel/vscode-angular-syntax/commit/f113a35dffaf4e75de33ad2ef0d104f5a97500a1)), closes [#32](https://github.com/ghaschel/vscode-angular-syntax/issues/32)
 
 # 1.3.1 (13/09/2019)
 

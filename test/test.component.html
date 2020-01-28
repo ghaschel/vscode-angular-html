@@ -2,10 +2,7 @@ DOCTYPE
 
 <!DOCTYPE html>
 <!DOCTYPE HTML
-          PUBLIC
-          "-//W3C//DTD HTML 4.01 Transitional//EN" 
-          "http://www.w3.org/TR/html4/loose.dtd"
->
+          PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 COMMENTS
 
@@ -455,8 +452,7 @@ STYLE INLINE
 
 <div style="display: block;
             background-color: rgb(255, 255, 255);
-            color: rgba(33, 254, 12, 1);"
-></div>
+            color: rgba(33, 254, 12, 1);"></div>
 
 GENERIC ATTRIBUTES
 
@@ -464,31 +460,21 @@ GENERIC ATTRIBUTES
      id="test"
      aria-label="test"
      no-value
-     novalidate
-></div>
+     novalidate></div>
 
 <input type="text">
 
 <label class="test"></label>
 
-<button
-  [attr.aria-label]="'test'"
-></button>
+<button [attr.aria-label]="'test'"></button>
 
-<button
-  [style.background-color]="canSave ? 'cyan': 'grey'"
->Save</button>
+<button [style.background-color]="canSave ? 'cyan': 'grey'">Save</button>
 
-<button
-  [style.font-size.em]="isSpecial ? 3 : 1"
->Big</button>
+<button [style.font-size.em]="isSpecial ? 3 : 1">Big</button>
 
 <style>
   // stylus
-  .stylus
-    .way
-      &-of-doing-it[with-attr]
-        color: red;
+  .stylus .way &-of-doing-it[with-attr] color: red;
 
   // scss
   .class {
@@ -502,6 +488,7 @@ GENERIC ATTRIBUTES
       }
     }
   }
+
 </style>
 
 <script type="text/javascript">
@@ -509,7 +496,7 @@ GENERIC ATTRIBUTES
   const b = 123;
   new Class();
 
-  function test() { 
+  function test() {
     test.callback();
   }
 </script>

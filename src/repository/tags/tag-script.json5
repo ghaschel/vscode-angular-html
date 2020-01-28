@@ -33,7 +33,7 @@
           name: 'punctuation.definition.tag.end.html'
         }
       },
-      begin: '(<\\/?)(\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\\w"\\/]+)[\\s\\n]*)*(>)?',
+      begin: '(<\\/?)(\\bscript\\b)[\\s]*(([\\w-]+)(=)*(["\\w\\:\\/\\.\\-\\_]+)[\\n\\s]*)(>)?',
       end: '(<\\/)(\\bscript\\b)(>)',
       patterns: [
         {

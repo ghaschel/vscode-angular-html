@@ -2,7 +2,7 @@
   "name": "vscode-angular-html",
   "displayName": "vscode-angular-html",
   "description": "Syntax highlighting for angular HTML Template files",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "publisher": "ghaschel",
   "license": "MIT",
   "repository": {

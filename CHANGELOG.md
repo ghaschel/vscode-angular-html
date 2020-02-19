@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.6.0...v1.7.0) (2020-02-19)
+
+
+### Features
+
+* **mat-drawer:** added support for mat-drawer and mat-drawer-content ([787efd9](https://github.com/ghaschel/vscode-angular-syntax/commit/787efd9d826ade8a16de4ca0ad030d8205ef6c38))
+
 ## [1.6.0](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.5.0...v1.6.0) (2020-01-28)
 
 

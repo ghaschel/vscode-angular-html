@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.1](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.0...v1.7.1) (2022-05-03)
+
+
+### Bug Fixes
+
+* **style-tag:** fixed style tag detection to allow detection of components starting with <style ([70e209a](https://github.com/ghaschel/vscode-angular-syntax/commit/70e209ad23a1094728fbcc8ab3fae5e90c355f1f)), closes [#48](https://github.com/ghaschel/vscode-angular-syntax/issues/48)
+
 ## [1.7.0](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.6.0...v1.7.0) (2020-02-19)
 
 

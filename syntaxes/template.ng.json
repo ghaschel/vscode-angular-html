@@ -1143,6 +1143,276 @@
                 "include": "#angular-expression"
             }]
         },
+        "tag-definition": {
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "3": {
+                    "name": "constant.character.entity.ng-html"
+                },
+                "4": {
+                    "name": "entity.name.tag.other.html"
+                }
+            },
+            "patterns": [{
+                "include": "#tag-stuff"
+            }],
+            "begin": "(</?)((ng-container|ng-content|ng-template|router-outlet|mat-accordion|mat-action-list|mat-action-row|mat-autocomplete|mat-card-actions|mat-card-content|mat-card-header|mat-card-footer|mat-card-subtitle|mat-card-title|mat-card-title-group|mat-card|mat-checkbox|mat-chip-list|mat-datepicker-toggle|mat-datepicker|mat-drawer-content|mat-drawer|mat-divider|mat-error|mat-expansion-panel-header|mat-expansion-panel|mat-form-field|mat-grid-list|mat-grid-tile-footer|mat-grid-tile-header|mat-grid-title|mat-hint|mat-icon|mat-label|mat-list-item|mat-list|mat-menu|mat-nav-list|mat-optgroup|mat-option|mat-panel-description|mat-panel-title|mat-radio-button|mat-radio-group|mat-select-trigger|mat-select|mat-sidenav-content|mat-sidenav-container|mat-sidenav|mat-slide-toggle|mat-slider|mat-toolbar-row|mat-toolbar|mat-horizontal-stepper|mat-step|mat-vertical-stepper|mat-tab-group|mat-tab|mat-nav-tab-bar|mat-tree-node|mat-tree|mat-nested-tree-node|mat-button-toggle-group|mat-button-toggle|mat-chip-list|mat-chip|mat-basic-chip|mat-progress-spinner|mat-spinner|mat-progress-bar|mat-dialog-content|mat-dialog-actions|mat-paginator|mat-text-column|mat-header-row|mat-header-cell|mat-table|mat-cell|mat-row|cdk-step|cdk-virtual-scroll-viewport|cdk-header-cell|cdk-cell|cdk-table|cdk-header-row|cdk-row|cdk-tree-node|cdk-tree|cdk-nested-tree-node)|([a-zA-Z0-9:-]+))\\b",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "end": "(/?>)",
+            "name": "template.ng.tag"
+        },
+        "tag-deprecated": {
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "2": {
+                    "name": "invalid.deprecated.tag"
+                }
+            },
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "begin": "(<\\/?)(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|tt|u)\\b",
+            "end": "(\\/?>)",
+            "name": "invalid.deprecated.tag",
+            "patterns": [{
+                "include": "#tag-stuff"
+            }]
+        },
+        "tag-events-attribute": {
+            "captures": {
+                "1": {
+                    "name": "support.type.object.html-events"
+                },
+                "2": {
+                    "name": "constant.character.entity.html"
+                }
+            },
+            "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style)+(=)",
+            "end": "(?<='|\")|(?=[\\s<>`])",
+            "name": "template.ng.events",
+            "patterns": [{
+                "beginCaptures": {
+                    "0": {
+                        "name": "punctuation.definition.string.begin.html"
+                    }
+                },
+                "patterns": [{
+                    "include": "#angular-expression"
+                }],
+                "begin": "\"",
+                "endCaptures": {
+                    "0": {
+                        "name": "punctuation.definition.string.end.html"
+                    }
+                },
+                "end": "\"",
+                "name": "source.events.html"
+            }, {
+                "beginCaptures": {
+                    "0": {
+                        "name": "punctuation.definition.string.begin.html"
+                    }
+                },
+                "patterns": [{
+                    "include": "#angular-expression"
+                }],
+                "begin": "'",
+                "endCaptures": {
+                    "0": {
+                        "name": "punctuation.definition.string.end.html"
+                    }
+                },
+                "end": "'",
+                "name": "source.events.html"
+            }]
+        },
+        "tag-generic-attribute": {
+            "name": "string.quoted.double.html",
+            "beginCaptures": {
+                "2": {
+                    "name": "support.type.object.html-attribute"
+                },
+                "3": {
+                    "name": "constant.character.entity.html"
+                },
+                "4": {
+                    "name": "string.quoted.double.html"
+                }
+            },
+            "endCaptures": {
+                "1": {
+                    "name": "string.quoted.double.html"
+                }
+            },
+            "begin": "(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style|let\\-|ref\\-)\\b)\\b([\\w\\-\\_]+)(=)(\")",
+            "end": "(\")",
+            "patterns": [{
+                "include": "#angular-interpolations"
+            }]
+        },
+        "tag-minified-boolean-attributes": {
+            "captures": {
+                "1": {
+                    "name": "string.regexp"
+                },
+                "2": {
+                    "name": "keyword.operator.expression.let.js"
+                },
+                "3": {
+                    "name": "support.type.object.html-attribute"
+                },
+                "4": {
+                    "name": "string.regexp"
+                },
+                "5": {
+                    "name": "support.type.object.html-attribute"
+                },
+                "6": {
+                    "name": "support.type.object.html-attribute"
+                }
+            },
+            "match": "(?<!<|\\/)(\\*)+?|(let\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)|(ref\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)|(\\b[\\w\\-\\:]+)\\b\\s?(?!=)",
+            "name": "punctuation.definition.tag.end.html"
+        },
+        "tag-prefixed-attribute": {
+            "name": "string.quoted.double.html",
+            "beginCaptures": {
+                "2": {
+                    "name": "keyword.operator.expression.let.js"
+                },
+                "3": {
+                    "name": "string.regexp"
+                },
+                "4": {
+                    "name": "support.type.object.html-attribute"
+                },
+                "5": {
+                    "name": "constant.character.entity.html"
+                },
+                "6": {
+                    "name": "string.quoted.double.html"
+                }
+            },
+            "endCaptures": {
+                "1": {
+                    "name": "string.quoted.double.html"
+                }
+            },
+            "begin": "((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)(=)(\")",
+            "end": "(\")",
+            "patterns": [{
+                "include": "#angular-expression"
+            }]
+        },
+        "tag-script": {
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "2": {
+                    "name": "entity.name.tag.begin.html"
+                },
+                "4": {
+                    "name": "support.type.object.html-attribute"
+                },
+                "5": {
+                    "name": "constant.character.entity.html"
+                },
+                "6": {
+                    "name": "string.quoted.double"
+                },
+                "7": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "2": {
+                    "name": "entity.name.tag.end.html"
+                },
+                "3": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "begin": "(<\\/?)(\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\"\\w\\:\\/\\.\\-\\_]+)[\\n\\s]*)(>)?",
+            "end": "(<\\/)(\\bscript\\b)(>)",
+            "patterns": [{
+                "match": "\\b(let|const|var)\\b\\s",
+                "name": "constant.language"
+            }, {
+                "match": "\\.|\\,|\\|\\:|\\;",
+                "name": "keyword.operator.navigation"
+            }, {
+                "include": "source.ts#expression"
+            }]
+        },
+        "tag-stuff": {
+            "patterns": [{
+                "include": "#string-double-quoted"
+            }, {
+                "include": "#tag-prefixed-attribute"
+            }, {
+                "include": "#angular-directives"
+            }, {
+                "include": "#tag-events-attribute"
+            }, {
+                "include": "#tag-generic-attribute"
+            }, {
+                "include": "#tag-minified-boolean-attributes"
+            }]
+        },
+        "tag-style": {
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "2": {
+                    "name": "entity.name.tag.begin.html"
+                },
+                "4": {
+                    "name": "support.type.object.html-attribute"
+                },
+                "5": {
+                    "name": "constant.character.entity.html"
+                },
+                "6": {
+                    "name": "string.quoted.double"
+                },
+                "7": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html"
+                },
+                "2": {
+                    "name": "entity.name.tag.end.html"
+                },
+                "3": {
+                    "name": "punctuation.definition.tag.end.html"
+                }
+            },
+            "begin": "(<\\/?)(\\bstyle\\b(?![\\w-]))[\\s]*(([\\w-]+)(=)*([\\w\"\\/]+)[\\s\\n]*)*(>)?",
+            "end": "(<\\/)(\\bstyle\\b)(>)",
+            "patterns": [{
+                "include": "source.stylus"
+            }, {
+                "include": "source.css.scss"
+            }]
+        },
         "tag-deprecated-attribute-a": {
             "begin": "(<\\/?)(a)(?!-)\\b",
             "end": "(\\/?>)",
@@ -2350,276 +2620,6 @@
                 }
             }, {
                 "include": "#tag-stuff"
-            }]
-        },
-        "tag-definition": {
-            "beginCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.begin.html"
-                },
-                "3": {
-                    "name": "constant.character.entity.ng-html"
-                },
-                "4": {
-                    "name": "entity.name.tag.other.html"
-                }
-            },
-            "patterns": [{
-                "include": "#tag-stuff"
-            }],
-            "begin": "(</?)((ng-container|ng-content|ng-template|router-outlet|mat-accordion|mat-action-list|mat-action-row|mat-autocomplete|mat-card-actions|mat-card-content|mat-card-header|mat-card-footer|mat-card-subtitle|mat-card-title|mat-card-title-group|mat-card|mat-checkbox|mat-chip-list|mat-datepicker-toggle|mat-datepicker|mat-drawer-content|mat-drawer|mat-divider|mat-error|mat-expansion-panel-header|mat-expansion-panel|mat-form-field|mat-grid-list|mat-grid-tile-footer|mat-grid-tile-header|mat-grid-title|mat-hint|mat-icon|mat-label|mat-list-item|mat-list|mat-menu|mat-nav-list|mat-optgroup|mat-option|mat-panel-description|mat-panel-title|mat-radio-button|mat-radio-group|mat-select-trigger|mat-select|mat-sidenav-content|mat-sidenav-container|mat-sidenav|mat-slide-toggle|mat-slider|mat-toolbar-row|mat-toolbar|mat-horizontal-stepper|mat-step|mat-vertical-stepper|mat-tab-group|mat-tab|mat-nav-tab-bar|mat-tree-node|mat-tree|mat-nested-tree-node|mat-button-toggle-group|mat-button-toggle|mat-chip-list|mat-chip|mat-basic-chip|mat-progress-spinner|mat-spinner|mat-progress-bar|mat-dialog-content|mat-dialog-actions|mat-paginator|mat-text-column|mat-header-row|mat-header-cell|mat-table|mat-cell|mat-row|cdk-step|cdk-virtual-scroll-viewport|cdk-header-cell|cdk-cell|cdk-table|cdk-header-row|cdk-row|cdk-tree-node|cdk-tree|cdk-nested-tree-node)|([a-zA-Z0-9:-]+))\\b",
-            "endCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.end.html"
-                }
-            },
-            "end": "(/?>)",
-            "name": "template.ng.tag"
-        },
-        "tag-deprecated": {
-            "beginCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.begin.html"
-                },
-                "2": {
-                    "name": "invalid.deprecated.tag"
-                }
-            },
-            "endCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.end.html"
-                }
-            },
-            "begin": "(<\\/?)(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|tt|u)\\b",
-            "end": "(\\/?>)",
-            "name": "invalid.deprecated.tag",
-            "patterns": [{
-                "include": "#tag-stuff"
-            }]
-        },
-        "tag-events-attribute": {
-            "captures": {
-                "1": {
-                    "name": "support.type.object.html-events"
-                },
-                "2": {
-                    "name": "constant.character.entity.html"
-                }
-            },
-            "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style)+(=)",
-            "end": "(?<='|\")|(?=[\\s<>`])",
-            "name": "template.ng.events",
-            "patterns": [{
-                "beginCaptures": {
-                    "0": {
-                        "name": "punctuation.definition.string.begin.html"
-                    }
-                },
-                "patterns": [{
-                    "include": "#angular-expression"
-                }],
-                "begin": "\"",
-                "endCaptures": {
-                    "0": {
-                        "name": "punctuation.definition.string.end.html"
-                    }
-                },
-                "end": "\"",
-                "name": "source.events.html"
-            }, {
-                "beginCaptures": {
-                    "0": {
-                        "name": "punctuation.definition.string.begin.html"
-                    }
-                },
-                "patterns": [{
-                    "include": "#angular-expression"
-                }],
-                "begin": "'",
-                "endCaptures": {
-                    "0": {
-                        "name": "punctuation.definition.string.end.html"
-                    }
-                },
-                "end": "'",
-                "name": "source.events.html"
-            }]
-        },
-        "tag-generic-attribute": {
-            "name": "string.quoted.double.html",
-            "beginCaptures": {
-                "2": {
-                    "name": "support.type.object.html-attribute"
-                },
-                "3": {
-                    "name": "constant.character.entity.html"
-                },
-                "4": {
-                    "name": "string.quoted.double.html"
-                }
-            },
-            "endCaptures": {
-                "1": {
-                    "name": "string.quoted.double.html"
-                }
-            },
-            "begin": "(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style|let\\-|ref\\-)\\b)\\b([\\w\\-\\_]+)(=)(\")",
-            "end": "(\")",
-            "patterns": [{
-                "include": "#angular-interpolations"
-            }]
-        },
-        "tag-minified-boolean-attributes": {
-            "captures": {
-                "1": {
-                    "name": "string.regexp"
-                },
-                "2": {
-                    "name": "keyword.operator.expression.let.js"
-                },
-                "3": {
-                    "name": "support.type.object.html-attribute"
-                },
-                "4": {
-                    "name": "string.regexp"
-                },
-                "5": {
-                    "name": "support.type.object.html-attribute"
-                },
-                "6": {
-                    "name": "support.type.object.html-attribute"
-                }
-            },
-            "match": "(?<!<|\\/)(\\*)+?|(let\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)|(ref\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)|(\\b[\\w\\-\\:]+)\\b\\s?(?!=)",
-            "name": "punctuation.definition.tag.end.html"
-        },
-        "tag-prefixed-attribute": {
-            "name": "string.quoted.double.html",
-            "beginCaptures": {
-                "2": {
-                    "name": "keyword.operator.expression.let.js"
-                },
-                "3": {
-                    "name": "string.regexp"
-                },
-                "4": {
-                    "name": "support.type.object.html-attribute"
-                },
-                "5": {
-                    "name": "constant.character.entity.html"
-                },
-                "6": {
-                    "name": "string.quoted.double.html"
-                }
-            },
-            "endCaptures": {
-                "1": {
-                    "name": "string.quoted.double.html"
-                }
-            },
-            "begin": "((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)(=)(\")",
-            "end": "(\")",
-            "patterns": [{
-                "include": "#angular-expression"
-            }]
-        },
-        "tag-script": {
-            "beginCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.begin.html"
-                },
-                "2": {
-                    "name": "entity.name.tag.begin.html"
-                },
-                "4": {
-                    "name": "support.type.object.html-attribute"
-                },
-                "5": {
-                    "name": "constant.character.entity.html"
-                },
-                "6": {
-                    "name": "string.quoted.double"
-                },
-                "7": {
-                    "name": "punctuation.definition.tag.end.html"
-                }
-            },
-            "endCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.begin.html"
-                },
-                "2": {
-                    "name": "entity.name.tag.end.html"
-                },
-                "3": {
-                    "name": "punctuation.definition.tag.end.html"
-                }
-            },
-            "begin": "(<\\/?)(\\bscript\\b)[\\s]*(([\\w-]+)(=)*([\"\\w\\:\\/\\.\\-\\_]+)[\\n\\s]*)(>)?",
-            "end": "(<\\/)(\\bscript\\b)(>)",
-            "patterns": [{
-                "match": "\\b(let|const|var)\\b\\s",
-                "name": "constant.language"
-            }, {
-                "match": "\\.|\\,|\\|\\:|\\;",
-                "name": "keyword.operator.navigation"
-            }, {
-                "include": "source.ts#expression"
-            }]
-        },
-        "tag-stuff": {
-            "patterns": [{
-                "include": "#string-double-quoted"
-            }, {
-                "include": "#tag-prefixed-attribute"
-            }, {
-                "include": "#angular-directives"
-            }, {
-                "include": "#tag-events-attribute"
-            }, {
-                "include": "#tag-generic-attribute"
-            }, {
-                "include": "#tag-minified-boolean-attributes"
-            }]
-        },
-        "tag-style": {
-            "beginCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.begin.html"
-                },
-                "2": {
-                    "name": "entity.name.tag.begin.html"
-                },
-                "4": {
-                    "name": "support.type.object.html-attribute"
-                },
-                "5": {
-                    "name": "constant.character.entity.html"
-                },
-                "6": {
-                    "name": "string.quoted.double"
-                },
-                "7": {
-                    "name": "punctuation.definition.tag.end.html"
-                }
-            },
-            "endCaptures": {
-                "1": {
-                    "name": "punctuation.definition.tag.begin.html"
-                },
-                "2": {
-                    "name": "entity.name.tag.end.html"
-                },
-                "3": {
-                    "name": "punctuation.definition.tag.end.html"
-                }
-            },
-            "begin": "(<\\/?)(\\bstyle\\b)[\\s]*(([\\w-]+)(=)*([\\w\"\\/]+)[\\s\\n]*)*(>)?",
-            "end": "(<\\/)(\\bstyle\\b)(>)",
-            "patterns": [{
-                "include": "source.stylus"
-            }, {
-                "include": "source.css.scss"
             }]
         }
     }

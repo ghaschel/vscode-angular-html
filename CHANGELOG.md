@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.4](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.3...v1.7.4) (2022-06-01)
+
+
+### Bug Fixes
+
+* **tag-definition:** added missing mat-pseudo-checkbox tag ([c977af0](https://github.com/ghaschel/vscode-angular-syntax/commit/c977af0a67a23cdba1e663b19dffeb456a241f5e))
+
 ### [1.7.3](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.2...v1.7.3) (2022-06-01)
 
 

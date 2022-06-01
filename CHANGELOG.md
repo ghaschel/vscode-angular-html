@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.3](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.2...v1.7.3) (2022-06-01)
+
+
+### Bug Fixes
+
+* **added missing ng structural tag:** added missing mat-selection-list material tag ([5e40843](https://github.com/ghaschel/vscode-angular-syntax/commit/5e4084331c70fad465971da72236ac4545fa65a8))
+
 ### [1.7.2](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.1...v1.7.2) (2022-06-01)
 
 

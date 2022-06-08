@@ -1,28 +1,34 @@
 {
   repository: {
-    'tag-minified-boolean-attributes': {
+    "tag-minified-boolean-attributes": {
       captures: {
-        '1': {
-          name: 'string.regexp'
+        "1": {
+          name: "string.regexp",
         },
-        '2': {
-          name: 'keyword.operator.expression.let.js'
+        "2": {
+          name: "keyword.operator.expression.let.js",
         },
-        '3': {
-          name: 'support.type.object.html-attribute'
+        "3": {
+          name: "support.type.object.html-attribute",
         },
-        '4': {
-          name: 'string.regexp'
+        "4": {
+          name: "constant.character.entity.html",
         },
-        '5': {
-          name: 'support.type.object.html-attribute'
+        "5": {
+          name: "string.regexp",
         },
-        '6': {
-          name: 'support.type.object.html-attribute'
+        "6": {
+          name: "support.type.object.html-attribute",
+        },
+        "7": {
+          name: "constant.character.entity.html",
+        },
+        "8": {
+          name: "support.type.object.html-attribute",
         },
       },
-      match: '(?<!<|\\/)(\\*)+?|(let\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)|(ref\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?(?!=)|(\\b[\\w\\-\\:]+)\\b\\s?(?!=)',
-      name: 'punctuation.definition.tag.end.html'
-    }
-  }
+      match: "(?<!<|\\/)(\\*)+?|(let\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?([$])*(?!=)|(ref\\-)+?(\\b[\\w\\-\\:]+)\\b\\s?([$])*(?!=)|(\\b[\\w\\-\\:]+)\\b\\s?(?!=)",
+      name: "punctuation.definition.tag.end.html",
+    },
+  },
 }

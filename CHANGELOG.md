@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.4...v1.8.0) (2022-06-08)
+
+
+### Features
+
+* **tags and attributes:** added missing angular material and cdk tags and improved attributes ([5789d20](https://github.com/ghaschel/vscode-angular-syntax/commit/5789d2049d205ae79802edf81c85898309242b0a))
+
 ### [1.7.4](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.3...v1.7.4) (2022-06-01)
 
 

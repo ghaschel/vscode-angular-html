@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.1](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.8.0...v1.8.1) (2022-08-05)
+
+
+### Bug Fixes
+
+* **multiple scopes:** scopes fixes to match correctly with inline templates ([a68da4f](https://github.com/ghaschel/vscode-angular-syntax/commit/a68da4fb9e155c02f8fe43971c2de7f9fe911d64))
+
 ## [1.8.0](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.4...v1.8.0) (2022-06-08)
 
 

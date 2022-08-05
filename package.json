@@ -7,10 +7,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ghaschel/vscode-angular-syntax.git"
+    "url": "https://github.com/ghaschel/vscode-angular-html.git"
   },
   "bugs": {
-    "url": "https://github.com/ghaschel/vscode-angular-syntax/issues"
+    "url": "https://github.com/ghaschel/vscode-angular-html/issues"
   },
   "scripts": {
     "watch": "gulp watch",

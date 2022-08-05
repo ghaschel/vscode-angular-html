@@ -204,7 +204,7 @@ ANGULAR DIRECTIVES
      let-col$
      let-i="index"
      *ngIf="condition.met()"
-     *ngIf="condition?.met"
+     *ngIf="condition?.met()"
      [ngClass]="{ 'test': sdsdasda }"
      class="testing with non multiline {{test}}"
      test
@@ -212,7 +212,9 @@ ANGULAR DIRECTIVES
      *ngIf="selectedCustomer && selectedCustomer.id > 0; else block1; then block2"
      *ngFor="let a of b['a'][teste].asd; index as c"
      #templateVariable
-     test></div>
+     test>
+  test-component
+</div>
 
 ANGULAR INTERPOLATIONS
 

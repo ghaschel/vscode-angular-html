@@ -40,12 +40,11 @@
       {
         "language": "html",
         "scopeName": "template.ng",
-        "path": "./syntaxes/template.ng.json"
-      },
-      {
-        "language": "html",
-        "scopeName": "text.angular.html",
-        "path": "./syntaxes/text.angular.html.json"
+        "path": "./syntaxes/template.ng.json",
+        "injectTo": [
+          "text.html",
+          "text.html.derivative"
+        ]
       }
     ]
   },

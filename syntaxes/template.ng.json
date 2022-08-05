@@ -240,7 +240,7 @@
             },
             "begin": "((?:\\b(v-)|(\\*|\\#|\\@|[\\[\\(]{1,2}))(@)?([a-zA-Z0-9\\-_\\$]+)(?:[\\:\\.]([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*)([\\]\\)]{1,2})?*(=)?",
             "end": "(?<='|\")|(?=[\\s<>`])",
-            "name": "meta.directive.angular",
+            "name": "source.ts",
             "patterns": [{
                 "beginCaptures": {
                     "1": {
@@ -269,7 +269,7 @@
                     }
                 },
                 "end": "(\\})?[\\s\\n]*(\")",
-                "name": "source.directive.angular"
+                "name": "source.ts"
             }]
         },
         "angular-interpolations": {
@@ -541,16 +541,6 @@
                     }
                 }
             }, {
-                "match": "(\\?\\.|\\!\\.|\\.)\\s*([_$[:alpha:]][_$[:alnum:]]*)",
-                "captures": {
-                    "1": {
-                        "name": "punctuation.accessor.ts"
-                    },
-                    "2": {
-                        "name": "variable.other.property.ts"
-                    }
-                }
-            }, {
                 "match": "(?x)(?:\n  ([[:upper:]][_$[:digit:][:upper:]]*) |\n  ([_$[:alpha:]][_$[:alnum:]]*)\n)(?=\\s*\\.\\s*[_$[:alpha:]][_$[:alnum:]]*)",
                 "captures": {
                     "1": {
@@ -564,7 +554,7 @@
                 "name": "constant.character.other",
                 "match": "([[:upper:]][_$[:digit:][:upper:]]*)(?![_$[:alnum:]])"
             }, {
-                "name": "variable.other.readwrite.ts",
+                "name": "variable.other.property.ts",
                 "match": "[_$[:alpha:]][_$[:alnum:]]*"
             }]
         },

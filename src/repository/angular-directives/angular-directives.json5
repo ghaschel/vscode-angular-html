@@ -1,69 +1,69 @@
 {
   repository: {
-    'angular-directives': {
+    "angular-directives": {
       captures: {
-        '3': {
-          name: 'string.regexp'
+        "3": {
+          name: "string.regexp",
         },
-        '4': {
-          name: 'constant.character.entity.html'
+        "4": {
+          name: "constant.character.entity.html",
         },
-        '5': {
+        "5": {
           // using another scope different from the one it fits to differentiate in color from objects and variables
-          name: 'constant.numeric.angular-directive'
+          name: "constant.numeric.angular-directive",
         },
-        '6': {
-          name: 'keyword.operator.entity.html'
+        "6": {
+          name: "keyword.operator.entity.html",
         },
-        '7': {
-          name: 'constant.character.unit'
+        "7": {
+          name: "constant.character.unit",
         },
-        '8': {
-          name: 'string.regexp'
+        "8": {
+          name: "string.regexp",
         },
-        '9': {
-          name: 'constant.character.entity.html'
-        }
+        "9": {
+          name: "constant.character.entity.html",
+        },
       },
-      begin: '((?:\\b(v-)|(\\*|\\#|\\@|[\\[\\(]{1,2}))(@)?([a-zA-Z0-9\\-_\\$]+)(?:[\\:\\.]([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*)([\\]\\)]{1,2})?*(=)?',
-      end: '(?<=\'|")|(?=[\\s<>`])',
-      name: 'meta.directive.angular',
+      begin: "((?:\\b(v-)|(\\*|\\#|\\@|[\\[\\(]{1,2}))(@)?([a-zA-Z0-9\\-_\\$]+)(?:[\\:\\.]([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*)([\\]\\)]{1,2})?*(=)?",
+      end: "(?<='|\")|(?=[\\s<>`])",
+      name: "source.ts",
       patterns: [
         {
           beginCaptures: {
-            '1': {
-              name: 'string.quoted.double.html'
+            "1": {
+              name: "string.quoted.double.html",
             },
-            '2': {
-              name: 'string.regexp'
-            }
+            "2": {
+              name: "string.regexp",
+            },
           },
           patterns: [
             {
-              match: '\\?\\.|\\!\\.|\\.|\\,|\\;|\\?|\\!|\\:',
-              name: 'keyword.operator.punctuation'
+              match: "\\?\\.|\\!\\.|\\.|\\,|\\;|\\?|\\!|\\:",
+              name: "keyword.operator.punctuation",
             },
             {
-              match: '\\blet\\b\\s',
-              name: 'keyword.operator.expression.let.js'
+              match: "\\blet\\b\\s",
+              name: "keyword.operator.expression.let.js",
             },
             {
-              include: '#angular-expression'
-            }
+              include: "#angular-expression",
+            },
           ],
           begin: '(")[\\s\\n]*(\\{)?',
           endCaptures: {
-            '1': {
-              name: 'string.regexp'
+            "1": {
+              name: "string.regexp",
             },
-            '2': {
-              name: 'string.quoted.double.html'
-            }
+            "2": {
+              name: "string.quoted.double.html",
+            },
           },
           end: '(\\})?[\\s\\n]*(")',
-          name: 'source.directive.angular'
-        }
-      ]
-    }
-  }
+          name: "source.ts",
+        },
+      ],
+    },
+  },
 }

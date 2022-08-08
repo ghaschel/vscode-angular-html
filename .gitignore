@@ -4,3 +4,5 @@ node_modules
 .vscode
 *.sh
 .hushlogin
+test/externalGrammars/*.json
+test/externalGrammars/*.plist

@@ -1,8 +1,10 @@
+<!-- SYNTAX TEST "template.ng"
+-->
+
 DOCTYPE
 
 <!DOCTYPE html>
-<!DOCTYPE HTML
-          PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 COMMENTS
 
@@ -10,31 +12,17 @@ COMMENTS
 
 INVALID ATTRIBUTES
 
-<a charset="dasdasda"
-   coords=""
-   rev=""
-   shape=""></a>
+<a charset="dasdasda" coords="" rev="" shape=""></a>
 
 <area nohref="" />
 
-<body alink=""
-      background=""
-      bgcolor=""
-      link=""
-      vlink=""></body>
+<body alink="" background="" bgcolor="" link="" vlink=""></body>
 
 <br clear="" />
 
-<col char=""
-     charoff=""
-     valign=""
-     width="" />
+<col char="" charoff="" valign="" width="" />
 
-<colgroup align=""
-          char=""
-          charoff=""
-          valign=""
-          width=""></colgroup>
+<colgroup align="" char="" charoff="" valign="" width=""></colgroup>
 
 <dl compact=""></dl>
 
@@ -44,34 +32,17 @@ INVALID ATTRIBUTES
   <title>Teste</title>
 </head>
 
-<hr align=""
-    noshade=""
-    size=""
-    width="" />
+<hr align="" noshade="" size="" width="" />
 
-<html version="">
+<html version=""></html>
 
-</html>
+<iframe align="" frameborder="" longdesc="" marginheight="" marginwidth="" scrolling=""></iframe>
 
-<iframe align=""
-        frameborder=""
-        longdesc=""
-        marginheight=""
-        marginwidth=""
-        scrolling=""></iframe>
-
-
-<img align=""
-     hspace=""
-     longdesc=""
-     name=""
-     vspace="" />
+<img align="" hspace="" longdesc="" name="" vspace="" />
 
 <li type=""></li>
 
-<link charset=""
-      rev=""
-      target="" />
+<link charset="" rev="" target="" />
 
 <caption align=""></caption>
 
@@ -95,138 +66,100 @@ INVALID ATTRIBUTES
 
 <p align=""></p>
 
-<ol compact=""
-    type=""></ol>
+<ol compact="" type=""></ol>
 
-<ul compact="teste"
-    type=""></ul>
+<ul compact="teste" type=""></ul>
 
-<object archive=""
-        border=""
-        classid=""
-        codebase=""
-        codetype=""
-        declare=""
-        hspace=""
-        standby=""
-        vspace=""
-        align=""></object>
+<object
+  archive=""
+  border=""
+  classid=""
+  codebase=""
+  codetype=""
+  declare=""
+  hspace=""
+  standby=""
+  vspace=""
+  align=""
+></object>
 
-<param type=""
-       valuetype="" />
-
+<param type="" valuetype="" />
 
 <pre width=""></pre>
 
-<t abbr=""
-   axis=""></t>
+<t abbr="" axis=""></t>
 
-<table bgcolor=""
-       border=""
-       cellpadding=""
-       cellspacing=""
-       frame=""
-       rules=""
-       scheme=""
-       width=""></table>
+<table bgcolor="" border="" cellpadding="" cellspacing="" frame="" rules="" scheme="" width=""></table>
 
-<tbody align=""
-       char=""
-       charoff=""
-       valign=""></tbody>
+<tbody align="" char="" charoff="" valign=""></tbody>
 
-<td abbr=""
-    align=""
-    axis=""
-    bgcolor=""
-    char=""
-    charoff=""
-    nowrap=""
-    scope=""
-    valign=""
-    width=""></td>
+<td abbr="" align="" axis="" bgcolor="" char="" charoff="" nowrap="" scope="" valign="" width=""></td>
 
-<tfoot align=""
-       char=""
-       charoff=""
-       valign=""></tfoot>
+<tfoot align="" char="" charoff="" valign=""></tfoot>
 
-<th align=""
-    bgcolor=""
-    char=""
-    charoff=""
-    nowrap=""
-    valign=""
-    width=""></th>
+<th align="" bgcolor="" char="" charoff="" nowrap="" valign="" width=""></th>
 
-<thead align=""
-       char=""
-       charoff=""
-       valign=""></thead>
+<thead align="" char="" charoff="" valign=""></thead>
 
-<tr align=""
-    bgcolor=""
-    char=""
-    charoff=""
-    valign=""></tr>
+<tr align="" bgcolor="" char="" charoff="" valign=""></tr>
 
 <div-test></div-test>
 <menu-test></menu-test>
 
 ANGULAR DIRECTIVES
 
-<div [binding]="to.element"
-     [binding]="to.function('with-parameter')"
-     @animationTrigger
-     [element_binding]="to.function_with_underline('with-parameter')"
-     (click)="to.function(with.parameter)"
-     (click)="to.function(with!.parameter)"
-     (click)="to.function(with?.parameter)"
-     [(binding)]="to.element"
-     [attr.href]="file?.link"
-     [style.font-size.px]="10"
-     [@$visi_bility]="module.$visibility"
-     [@visibility]="getMenuState()"
-     [@visibility.done]="doSomething()"
-     [(binding)]="to.function('with-parameter')"
-     (click)="callback(parameter.test)"
-     mat-header-cell
-     *ngFor="let obs of observable | async as test;"
-     *matHeaderCellDef
-     class="test"
-     [ngClass]="{
-        'test': test.isTruthy()
-     }"
-     *
-     ref-variable
-     ref-assingVariable="test"
-     let-col$="test"
-     let-col$
-     let-i="index"
-     *ngIf="condition.met()"
-     *ngIf="condition?.met()"
-     [ngClass]="{ 'test': sdsdasda }"
-     class="testing with non multiline {{test}}"
-     test
-     [test]="test.test();"
-     *ngIf="selectedCustomer && selectedCustomer.id > 0; else block1; then block2"
-     *ngFor="let a of b['a'][teste].asd; index as c"
-     #templateVariable
-     test>
+<div
+  [binding]="to.element"
+  [binding]="to.function('with-parameter')"
+  @animationTrigger
+  [element_binding]="to.function_with_underline('with-parameter')"
+  (click)="to.function(with.parameter)"
+  (click)="to.function(with!.parameter)"
+  (click)="to.function(with?.parameter)"
+  [(binding)]="to.element"
+  [attr.href]="file?.link"
+  [style.font-size.px]="10"
+  [@$visi_bility]="module.$visibility"
+  [@visibility]="getMenuState()"
+  [@visibility.done]="doSomething()"
+  [(binding)]="to.function('with-parameter')"
+  (click)="callback(parameter.test)"
+  mat-header-cell
+  *ngFor="let obs of observable | async as test"
+  *matHeaderCellDef
+  class="test"
+  [ngClass]="{
+    test: test.isTruthy()
+  }"
+  *
+  ref-variable
+  ref-assingVariable="test"
+  let-col$="test"
+  let-col$
+  let-i="index"
+  *ngIf="condition.met()"
+  *ngIf="condition?.met()"
+  [ngClass]="{ test: sdsdasda }"
+  class="testing with non multiline {{ test }}"
+  test
+  [test]="test.test();"
+  *ngIf="selectedCustomer && selectedCustomer.id > 0; else block1; then: block2"
+  *ngFor="let a of b['a'][teste].asd; index as c"
+  #templateVariable
+  test
+>
   test-component
 </div>
 
 ANGULAR INTERPOLATIONS
 
 {{ test | pipe }}
-{{ test | pipe:'withParameters' }}
+{{ test | pipe: 'withParameters' }}
 {{ angular.interpolations || test }}
 {{ angular?.interpolations }}
 {{ angular!.interpolations }}
 
-<span>
-  Hello {{ 1 + 1 === 3 ? 'me' : 'you' }}
-</span>
+<span> Hello {{ 1 + 1 === 3 ? 'me' : 'you' }} </span>
 {{ user?.preferences?.avatar }}
 {{ user?.name | uppercase }}
 {{ user!.preferences!.nickName | uppercase }}
@@ -241,42 +174,26 @@ ANGULAR STRUCTURAL TAGS
   <test-component></test-component>
 </ng-container>
 
-<ng-template #noPublishedDate>
-  No published date
-</ng-template>
+<ng-template #noPublishedDate> No published date </ng-template>
 
 <router-outlet></router-outlet>
 
-<div *
-     test="">
-</div>
+<div * test=""></div>
 
-<input type="text"
-       #color
-       placeholder="Hex color value">
-<button (click)="printValue(color.value)">
-  Show color
-</button>
-<span>
-  Published: {{ publishedDate | date:'fullDate' }}
-</span>
+<input type="text" #color placeholder="Hex color value" />
+<button (click)="printValue(color.value)">Show color</button>
+<span> Published: {{ publishedDate | date: 'fullDate' }} </span>
 
-<span *ngIf="publishedDate">
-  Published: {{ publishedDate | date:'fullDate' }}
-</span>
+<span *ngIf="publishedDate"> Published: {{ publishedDate | date: 'fullDate' }} </span>
 
-<span *ngIf="publishedDate; else noPublishedDate">
-  Published: {{ publishedDate | date:'fullDate' }}
-</span>
+<span *ngIf="publishedDate; else noPublishedDate"> Published: {{ publishedDate | date: 'fullDate' }} </span>
 
 <ul>
-  <li *ngFor="let user of users">
-    name: {{ user.name }}, email: {{ user.email }}
-  </li>
+  <li *ngFor="let user of users">name: {{ user.name }}, email: {{ user.email }}</li>
 </ul>
 
 <ul>
-  <li *ngFor="let user of users | async as test; index as i;">
+  <li *ngFor="let user of users | async as test; index as i">
     {{ i + 1 }}- name: {{ user.name }}, email: {{ user.email }}
   </li>
 </ul>
@@ -287,22 +204,13 @@ ANGULAR STRUCTURAL TAGS
   <span *ngSwitchDefault>Not provided</span>
 </div>
 
-ENTITIES
-
-&nbsp;
-&#0098;
-
-REGEX
-
-/[^@\/#(){31231231}]/
-
-DEPRECATED TAGS
+ENTITIES &nbsp; &#0098; REGEX /[^@\/#(){31231231}]/ DEPRECATED TAGS
 
 <acronym class=""></acronym>
 
 <applet class=""></applet>
 
-<basefont class="" />
+<basefont class=""> </basefont>
 
 <big class=""></big>
 
@@ -312,166 +220,154 @@ DEPRECATED TAGS
 
 <font class=""></font>
 
-<frame class="" />
+<frame class=""></frame>
 
-<frameset class="">
+<frameset class=""> </frameset>
 
-</frameset>
+<isindex class="dsadsdasd"> </isindex>
 
-<isindex class="dsadsdasd" />
-
-<noframes class="">
-
-</noframes>
+<noframes class=""> </noframes>
 
 <strike class="ste">teste testestestestes </strike>
 
 <tt> </tt>
 
-<u>
-  the single quote won't bother anymore
-  neither will the double one "
-</u>
-
+<u> the single quote won't bother anymore neither will the double one " </u>
 
 DOM EVENTS
 
-<div DOMMenuItemActive="callback()"
-     DOMMenuItemInactive="callback()"
-     DOMMouseScroll="callback()"
-     onabort="callback()"
-     onafterprint="callback()"
-     onafterupdate="callback()"
-     onbeforecopy="callback()"
-     onbeforecut="callback()"
-     onbeforeeditfocus="callback()"
-     onbeforepaste="callback()"
-     onbeforeprint="callback()"
-     onbeforeunload="callback()"
-     onbeforeupdate="callback()"
-     onblur="callback()"
-     onbounce="callback()"
-     onbroadcast="callback()"
-     oncanplay="callback()"
-     oncanplaythrough="callback()"
-     oncellchange="callback()"
-     onchange="callback()"
-     onclick="callback()"
-     onclose="callback()"
-     oncommand="callback()"
-     oncommandupdate="callback()"
-     oncontextmenu="callback()"
-     oncopy="callback()"
-     oncut="callback()"
-     ondataavailable="callback()"
-     ondatasetchanged="callback()"
-     ondatasetcomplete="callback()"
-     ondblclick="callback()"
-     ondrag="callback()"
-     ondragdrop="callback()"
-     ondragend="callback()"
-     ondragenter="callback()"
-     ondragexit="callback()"
-     ondraggesture="callback()"
-     ondragleave="callback()"
-     ondragover="callback()"
-     ondragstart="callback()"
-     ondrop="callback()"
-     ondurationchange="callback()"
-     onemptied="callback()"
-     onended="callback()"
-     onerror="callback()"
-     onerrorupdate="callback()"
-     onfilterchange="callback()"
-     onfinish="callback()"
-     onfocus="callback()"
-     onformchange="callback()"
-     onforminput="callback()"
-     ongotpointercapture="callback()"
-     onhelp="callback()"
-     oninput="callback()"
-     oninvalid="callback()"
-     onkeydown="callback()"
-     onkeypress="callback()"
-     onkeyup="callback()"
-     onload="callback()"
-     onloadeddata="callback()"
-     onloadedmetadata="callback()"
-     onloadstart="callback()"
-     onlosecapture="callback()"
-     onlostpointercapture="callback()"
-     onmousedown="callback()"
-     onmousemove="callback()"
-     onmouseout="callback()"
-     onmouseover="callback()"
-     onmouseup="callback()"
-     onmousewheel="callback()"
-     onoverflow="callback()"
-     onoverflowchanged="callback()"
-     onpaste="callback()"
-     onpause="callback()"
-     onplay="callback()"
-     onplaying="callback()"
-     onpointercancel="callback()"
-     onpointerdown="callback()"
-     onpointerenter="callback()"
-     onpointerleave="callback()"
-     onpointermove="callback()"
-     onpointerout="callback()"
-     onpointerover="callback()"
-     onpointerup="callback()"
-     onpopuphidden="callback()"
-     onpopuphiding="callback()"
-     onpopupshowing="callback()"
-     onpopupshown="callback()"
-     onprogress="callback()"
-     onpropertychange="callback()"
-     onratechange="callback()"
-     onreadystatechange="callback()"
-     onreset="callback()"
-     onresize="callback()"
-     onrowenter="callback()"
-     onrowexit="callback()"
-     onrowinserted="callback()"
-     onrowsdelete="callback()"
-     onscroll="callback()"
-     onseeked="callback()"
-     onseeking="callback()"
-     onselect="callback()"
-     onselectstart="callback()"
-     onshow="callback()"
-     onstalled="callback()"
-     onstart="callback()"
-     onstop="callback()"
-     onsubmit="callback()"
-     onsuspend="callback()"
-     ontimeupdate="callback()"
-     onunderflow="callback()"
-     onunload="callback()"
-     onvolumechange="callback()"
-     onwaiting="callback()"></div>
+<div
+  DOMMenuItemActive="callback()"
+  DOMMenuItemInactive="callback()"
+  DOMMouseScroll="callback()"
+  onabort="callback()"
+  onafterprint="callback()"
+  onafterupdate="callback()"
+  onbeforecopy="callback()"
+  onbeforecut="callback()"
+  onbeforeeditfocus="callback()"
+  onbeforepaste="callback()"
+  onbeforeprint="callback()"
+  onbeforeunload="callback()"
+  onbeforeupdate="callback()"
+  onblur="callback()"
+  onbounce="callback()"
+  onbroadcast="callback()"
+  oncanplay="callback()"
+  oncanplaythrough="callback()"
+  oncellchange="callback()"
+  onchange="callback()"
+  onclick="callback()"
+  onclose="callback()"
+  oncommand="callback()"
+  oncommandupdate="callback()"
+  oncontextmenu="callback()"
+  oncopy="callback()"
+  oncut="callback()"
+  ondataavailable="callback()"
+  ondatasetchanged="callback()"
+  ondatasetcomplete="callback()"
+  ondblclick="callback()"
+  ondrag="callback()"
+  ondragdrop="callback()"
+  ondragend="callback()"
+  ondragenter="callback()"
+  ondragexit="callback()"
+  ondraggesture="callback()"
+  ondragleave="callback()"
+  ondragover="callback()"
+  ondragstart="callback()"
+  ondrop="callback()"
+  ondurationchange="callback()"
+  onemptied="callback()"
+  onended="callback()"
+  onerror="callback()"
+  onerrorupdate="callback()"
+  onfilterchange="callback()"
+  onfinish="callback()"
+  onfocus="callback()"
+  onformchange="callback()"
+  onforminput="callback()"
+  ongotpointercapture="callback()"
+  onhelp="callback()"
+  oninput="callback()"
+  oninvalid="callback()"
+  onkeydown="callback()"
+  onkeypress="callback()"
+  onkeyup="callback()"
+  onload="callback()"
+  onloadeddata="callback()"
+  onloadedmetadata="callback()"
+  onloadstart="callback()"
+  onlosecapture="callback()"
+  onlostpointercapture="callback()"
+  onmousedown="callback()"
+  onmousemove="callback()"
+  onmouseout="callback()"
+  onmouseover="callback()"
+  onmouseup="callback()"
+  onmousewheel="callback()"
+  onoverflow="callback()"
+  onoverflowchanged="callback()"
+  onpaste="callback()"
+  onpause="callback()"
+  onplay="callback()"
+  onplaying="callback()"
+  onpointercancel="callback()"
+  onpointerdown="callback()"
+  onpointerenter="callback()"
+  onpointerleave="callback()"
+  onpointermove="callback()"
+  onpointerout="callback()"
+  onpointerover="callback()"
+  onpointerup="callback()"
+  onpopuphidden="callback()"
+  onpopuphiding="callback()"
+  onpopupshowing="callback()"
+  onpopupshown="callback()"
+  onprogress="callback()"
+  onpropertychange="callback()"
+  onratechange="callback()"
+  onreadystatechange="callback()"
+  onreset="callback()"
+  onresize="callback()"
+  onrowenter="callback()"
+  onrowexit="callback()"
+  onrowinserted="callback()"
+  onrowsdelete="callback()"
+  onscroll="callback()"
+  onseeked="callback()"
+  onseeking="callback()"
+  onselect="callback()"
+  onselectstart="callback()"
+  onshow="callback()"
+  onstalled="callback()"
+  onstart="callback()"
+  onstop="callback()"
+  onsubmit="callback()"
+  onsuspend="callback()"
+  ontimeupdate="callback()"
+  onunderflow="callback()"
+  onunload="callback()"
+  onvolumechange="callback()"
+  onwaiting="callback()"
+></div>
 
 STYLE INLINE
 
-<div style="display: block;
-            background-color: rgb(255, 255, 255);
-            color: rgba(33, 254, 12, 1);"></div>
+<div style="display: block; background-color: rgb(255, 255, 255); color: rgba(33, 254, 12, 1)"></div>
 
 GENERIC ATTRIBUTES
 
-<div class="test"
-     id="test"
-     aria-label="test"
-     no-value
-     novalidate></div>
+<div class="test" id="test" aria-label="test" no-value novalidate></div>
 
-<input type="text">
+<input type="text" />
 
 <label class="test"></label>
 
 <button [attr.aria-label]="'test'"></button>
 
-<button [style.background-color]="canSave ? 'cyan': 'grey'">Save</button>
+<button [style.background-color]="canSave ? 'cyan' : 'grey'">Save</button>
 
 <button [style.font-size.em]="isSpecial ? 3 : 1">Big</button>
 
@@ -491,7 +387,6 @@ GENERIC ATTRIBUTES
       }
     }
   }
-
 </style>
 
 <script type="text/javascript">
@@ -502,7 +397,6 @@ GENERIC ATTRIBUTES
   function test() {
     test.callback();
   }
-
 </script>
 
 <ng-container></ng-container>
@@ -613,141 +507,21 @@ GENERIC ATTRIBUTES
 <cdk-footer-cell></cdk-footer-cell>
 <cdk-footer-row></cdk-footer-row>
 
-matNativeControl
-disableRipple
-matRipple
-ng-option-tmp
-ng-optgroup-tmp
-ng-multi-label-tmp
-matStepLabel
-matStepperNext
-matStepperPrevious
-matStepContent
-hideToggle
-maxLength
-minLength
-opened
-ng-label-tmp
-mat-raised-button
-mat-button
-mat-stroked-button
-mat-flat-button
-mat-icon-button
-mat-mini-fab
-mat-fab
-matInput
-mat-table
-mat-header-cell
-mat-cell
-matSortDisableClear
-matSort
-mat-footer-cell
-mat-footer-row
-disableClear
-matSuffix
-matPrefix
-matStartDate
-matEndDate
-mat-list-item
-matDateRangePickerCancel
-matDatepickerToggleIcon
-matDatepickerApply
-touchUi
-mat-dialog-title
-mat-dialog-conten
-mat-header-row
-mat-row
-mat-dialog-actions
-mat-menu-item
-multiTemplateDataRows
-mat-dialog-close
-cdkFocusInitial
-inset
-vertical
-multiple
-mat-card-avata
-mat-card-image
-mat-line
-mat-menu-item
-mat-subheader
-mat-card-sm-image
-mat-card-md-image
-mat-card-lg-image
-autosize
-ngModel
-ngNativeValidate
-mat-card-xl-image
-multi
-matLine
-matListIcon
-matListAvatar
-mat-list-icon
-matSubheader
-vertical
-invert
-inline
-linear
-cdkDropList
-cdkDrag
-matChipRemove
-thumbLabel
-matSort
-mat-sort-header
-showFirstLastButtons
-cdkDropList
-matTreeNodeOutlet
-matTreeNodeToggle
-matTreeNodePadding
-mat-tab-label
-dynamicHeight
-matTabContent
-backgroundColor
-mat-tab-nav-bar
-mat-tab-link
-cdkScrollable
-mat-stretch-tabs
-headerPosition=""
-animationDuration=""
-matTooltip=""
-matTooltipHideDelay=""
-matTooltipShowDelay=""
-matTooltipDisabled=""
-matTooltipPosition=""
-matTooltipClass=""
-cdkDropListOrientation=""
-headerText=""
-justify=""
-matSortActive=""
-matSortDirection=""
-matColumnDef=""
-matStepperIcon=""
-orientation=""
-mat-sort-header=""
-tickInterval=""
-mat-align-tabs=""
-cols=""
-position=""
-routerLink=""
-rowHeight=""
-fontSet=""
-yPosition=""
-xPosition=""
-fontIcon=""
-svgIcon=""
-min=""
-max=""
-step=""
-floatLabel=""
-cdkDropListOrientation=""
-align=""
-mode=""
-appearance=""
-startView=""
-panelClass=""
-formControlName=""
-formGroupName=""
-color=""
-matBadge=""
-matBadgeColor=""
-matBadgeOverlap=""
+matNativeControl disableRipple matRipple ng-option-tmp ng-optgroup-tmp ng-multi-label-tmp matStepLabel matStepperNext
+matStepperPrevious matStepContent hideToggle maxLength minLength opened ng-label-tmp mat-raised-button mat-button
+mat-stroked-button mat-flat-button mat-icon-button mat-mini-fab mat-fab matInput mat-table mat-header-cell mat-cell
+matSortDisableClear matSort mat-footer-cell mat-footer-row disableClear matSuffix matPrefix matStartDate matEndDate
+mat-list-item matDateRangePickerCancel matDatepickerToggleIcon matDatepickerApply touchUi mat-dialog-title
+mat-dialog-conten mat-header-row mat-row mat-dialog-actions mat-menu-item multiTemplateDataRows mat-dialog-close
+cdkFocusInitial inset vertical multiple mat-card-avata mat-card-image mat-line mat-menu-item mat-subheader
+mat-card-sm-image mat-card-md-image mat-card-lg-image autosize ngModel ngNativeValidate mat-card-xl-image multi matLine
+matListIcon matListAvatar mat-list-icon matSubheader vertical invert inline linear cdkDropList cdkDrag matChipRemove
+thumbLabel matSort mat-sort-header showFirstLastButtons cdkDropList matTreeNodeOutlet matTreeNodeToggle
+matTreeNodePadding mat-tab-label dynamicHeight matTabContent backgroundColor mat-tab-nav-bar mat-tab-link cdkScrollable
+mat-stretch-tabs headerPosition="" animationDuration="" matTooltip="" matTooltipHideDelay="" matTooltipShowDelay=""
+matTooltipDisabled="" matTooltipPosition="" matTooltipClass="" cdkDropListOrientation="" headerText="" justify=""
+matSortActive="" matSortDirection="" matColumnDef="" matStepperIcon="" orientation="" mat-sort-header="" tickInterval=""
+mat-align-tabs="" cols="" position="" routerLink="" rowHeight="" fontSet="" yPosition="" xPosition="" fontIcon=""
+svgIcon="" min="" max="" step="" floatLabel="" cdkDropListOrientation="" align="" mode="" appearance="" startView=""
+panelClass="" formControlName="" formGroupName="" color="" matBadge="" matBadgeColor="" matBadgeOverlap=""
 matBadgePosition=""

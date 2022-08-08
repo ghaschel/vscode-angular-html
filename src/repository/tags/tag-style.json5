@@ -1,41 +1,46 @@
 {
   repository: {
-    "tag-style": {
+    'tag-style': {
       beginCaptures: {
-        "1": {
-          name: "punctuation.definition.tag.begin.html",
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
         },
-        "2": {
-          name: "entity.name.tag.begin.html",
+        '2': {
+          name: 'entity.name.tag.begin.html',
         },
-        "4": {
+        '4': {
           // using another scope different from the one it fits to differentiate in color from objects and variables
-          name: "support.type.object.html-attribute",
+          name: 'support.type.object.html-attribute',
         },
-        "5": {
-          name: "constant.character.entity.html",
+        '5': {
+          name: 'constant.character.entity.html',
         },
-        "6": {
-          name: "string.quoted.double",
+        '6': {
+          name: 'string.quoted.double',
         },
-        "7": {
-          name: "punctuation.definition.tag.end.html",
+        '7': {
+          name: 'punctuation.definition.tag.end.html',
         },
       },
       endCaptures: {
-        "1": {
-          name: "punctuation.definition.tag.begin.html",
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
         },
-        "2": {
-          name: "entity.name.tag.end.html",
+        '2': {
+          name: 'entity.name.tag.end.html',
         },
-        "3": {
-          name: "punctuation.definition.tag.end.html",
+        '3': {
+          name: 'punctuation.definition.tag.end.html',
         },
       },
       begin: '(<\\/?)(\\bstyle\\b(?![\\w-]))[\\s]*(([\\w-]+)(=)*([\\w"\\/]+)[\\s\\n]*)*(>)?',
-      end: "(<\\/)(\\bstyle\\b)(>)",
-      patterns: [{ include: "source.stylus" }, { include: "source.css.scss" }],
+      end: '(<\\/)(\\bstyle\\b)(>)',
+      patterns: [
+        { include: 'source.stylus' },
+        { include: 'source.css.scss' },
+        { include: 'source.css.less' },
+        { include: 'source.css' },
+      ],
     },
   },
 }

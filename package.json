@@ -15,7 +15,11 @@
   "scripts": {
     "watch": "gulp watch",
     "compile-json": "gulp compile-json",
-    "publish": "standard-version && git push --follow-tags origin master && vsce publish"
+    "publish": "standard-version && git push --follow-tags origin master && vsce publish",
+    "postinstall": "node scripts/postinstall.js",
+    "prepare": "husky install",
+    "test": "npx vscode-tmgrammar-test -g syntaxes/template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json test/*.html",
+    "update-snapshots": "npx vscode-tmgrammar-snap -s template.ng -g syntaxes/template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json --updateSnapshot test/*.html"
   },
   "engines": {
     "vscode": "^1.20.0"
@@ -31,6 +35,7 @@
           "HTML (Angular template)"
         ],
         "extensions": [
+          ".html",
           ".component.html"
         ],
         "configuration": "./language-configuration.json"
@@ -54,26 +59,22 @@
   },
   "icon": "assets/angular-html.png",
   "devDependencies": {
-    "@commitlint/cli": "^16.2.4",
-    "@commitlint/config-conventional": "^16.2.4",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "gulp": "^4.0.2",
     "gulp-json-editor": "^2.5.6",
     "gulp-json5-to-json": "^0.2.1",
     "gulp-merge-json": "^2.1.2",
-    "husky": "^7.0.4",
+    "gulp-prettier": "^4.0.0",
+    "husky": "^7.0.0",
     "json-beautify": "^1.1.1",
+    "prettier": "^2.7.1",
     "pretty-quick": "^3.1.3",
-    "standard-version": "^9.3.2"
+    "standard-version": "^9.5.0",
+    "vscode-tmgrammar-test": "^0.1.1"
   },
   "config": {
-    "husky": {
-      "hooks": {
-        "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-        "pre-commit": "npm run compile-json && pretty-quick --staged",
-        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-      }
-    },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }

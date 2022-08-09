@@ -2,79 +2,74 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.8.1](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.8.0...v1.8.1) (2022-08-05)
-
+### [1.8.2](https://github.com/ghaschel/vscode-angular-html/compare/v1.8.1...v1.8.2) (2022-08-09)
 
 ### Bug Fixes
 
-* **multiple scopes:** scopes fixes to match correctly with inline templates ([a68da4f](https://github.com/ghaschel/vscode-angular-syntax/commit/a68da4fb9e155c02f8fe43971c2de7f9fe911d64))
+- **scope name:** fixed grammar no longer working. possibly fixed integration with vscode-html-css ([2e60e1e](https://github.com/ghaschel/vscode-angular-html/commit/2e60e1e2ec0d02c7d9e5559749678e5a19b42ac9)), closes [#51](https://github.com/ghaschel/vscode-angular-html/issues/51)
+
+### [1.8.1](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.8.0...v1.8.1) (2022-08-05)
+
+### Bug Fixes
+
+- **multiple scopes:** scopes fixes to match correctly with inline templates ([a68da4f](https://github.com/ghaschel/vscode-angular-syntax/commit/a68da4fb9e155c02f8fe43971c2de7f9fe911d64))
 
 ## [1.8.0](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.4...v1.8.0) (2022-06-08)
 
-
 ### Features
 
-* **tags and attributes:** added missing angular material and cdk tags and improved attributes ([5789d20](https://github.com/ghaschel/vscode-angular-syntax/commit/5789d2049d205ae79802edf81c85898309242b0a))
+- **tags and attributes:** added missing angular material and cdk tags and improved attributes ([5789d20](https://github.com/ghaschel/vscode-angular-syntax/commit/5789d2049d205ae79802edf81c85898309242b0a))
 
 ### [1.7.4](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.3...v1.7.4) (2022-06-01)
 
-
 ### Bug Fixes
 
-* **tag-definition:** added missing mat-pseudo-checkbox tag ([c977af0](https://github.com/ghaschel/vscode-angular-syntax/commit/c977af0a67a23cdba1e663b19dffeb456a241f5e))
+- **tag-definition:** added missing mat-pseudo-checkbox tag ([c977af0](https://github.com/ghaschel/vscode-angular-syntax/commit/c977af0a67a23cdba1e663b19dffeb456a241f5e))
 
 ### [1.7.3](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.2...v1.7.3) (2022-06-01)
 
-
 ### Bug Fixes
 
-* **added missing ng structural tag:** added missing mat-selection-list material tag ([5e40843](https://github.com/ghaschel/vscode-angular-syntax/commit/5e4084331c70fad465971da72236ac4545fa65a8))
+- **added missing ng structural tag:** added missing mat-selection-list material tag ([5e40843](https://github.com/ghaschel/vscode-angular-syntax/commit/5e4084331c70fad465971da72236ac4545fa65a8))
 
 ### [1.7.2](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.1...v1.7.2) (2022-06-01)
 
-
 ### Bug Fixes
 
-* **tag-definition:** fixed an issue with mat-list-option and mat-card-title-group ([9f78b18](https://github.com/ghaschel/vscode-angular-syntax/commit/9f78b18037581dace8a02e95cb97d0aa6697d21e))
+- **tag-definition:** fixed an issue with mat-list-option and mat-card-title-group ([9f78b18](https://github.com/ghaschel/vscode-angular-syntax/commit/9f78b18037581dace8a02e95cb97d0aa6697d21e))
 
 ### [1.7.1](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.7.0...v1.7.1) (2022-05-03)
 
-
 ### Bug Fixes
 
-* **style-tag:** fixed style tag detection to allow detection of components starting with <style ([70e209a](https://github.com/ghaschel/vscode-angular-syntax/commit/70e209ad23a1094728fbcc8ab3fae5e90c355f1f)), closes [#48](https://github.com/ghaschel/vscode-angular-syntax/issues/48)
+- **style-tag:** fixed style tag detection to allow detection of components starting with <style ([70e209a](https://github.com/ghaschel/vscode-angular-syntax/commit/70e209ad23a1094728fbcc8ab3fae5e90c355f1f)), closes [#48](https://github.com/ghaschel/vscode-angular-syntax/issues/48)
 
 ## [1.7.0](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.6.0...v1.7.0) (2020-02-19)
 
-
 ### Features
 
-* **mat-drawer:** added support for mat-drawer and mat-drawer-content ([787efd9](https://github.com/ghaschel/vscode-angular-syntax/commit/787efd9d826ade8a16de4ca0ad030d8205ef6c38))
+- **mat-drawer:** added support for mat-drawer and mat-drawer-content ([787efd9](https://github.com/ghaschel/vscode-angular-syntax/commit/787efd9d826ade8a16de4ca0ad030d8205ef6c38))
 
 ## [1.6.0](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.5.0...v1.6.0) (2020-01-28)
 
-
 ### Features
 
-* **prefixed-attributes:** added highlighting for let- and ref prefix ([22df9bc](https://github.com/ghaschel/vscode-angular-syntax/commit/22df9bcd6e74fc45a6be0f5d71dc601348d64094))
-
+- **prefixed-attributes:** added highlighting for let- and ref prefix ([22df9bc](https://github.com/ghaschel/vscode-angular-syntax/commit/22df9bcd6e74fc45a6be0f5d71dc601348d64094))
 
 ### Bug Fixes
 
-* **main-scope:** attempt to fix a bug where highlithting strips off ([658bbd9](https://github.com/ghaschel/vscode-angular-syntax/commit/658bbd914088e587efba77c85f615bba40cc7f09)), closes [#32](https://github.com/ghaschel/vscode-angular-syntax/issues/32)
-* **script-tag:** fixed script tag with src attributes ([00a9e82](https://github.com/ghaschel/vscode-angular-syntax/commit/00a9e82dc8d38c15a3754649b27f16c7b3ad4bc2))
+- **main-scope:** attempt to fix a bug where highlithting strips off ([658bbd9](https://github.com/ghaschel/vscode-angular-syntax/commit/658bbd914088e587efba77c85f615bba40cc7f09)), closes [#32](https://github.com/ghaschel/vscode-angular-syntax/issues/32)
+- **script-tag:** fixed script tag with src attributes ([00a9e82](https://github.com/ghaschel/vscode-angular-syntax/commit/00a9e82dc8d38c15a3754649b27f16c7b3ad4bc2))
 
 ## [1.5.0](https://github.com/ghaschel/vscode-angular-syntax/compare/v1.4.0...v1.5.0) (2020-01-02)
 
-
 ### Features
 
-* **prefixed-attributes:** added highlighting for let- and ref prefix ([b4ed81d](https://github.com/ghaschel/vscode-angular-syntax/commit/b4ed81dd6a9ee8c669b77594fea3f0bef4096886))
-
+- **prefixed-attributes:** added highlighting for let- and ref prefix ([b4ed81d](https://github.com/ghaschel/vscode-angular-syntax/commit/b4ed81dd6a9ee8c669b77594fea3f0bef4096886))
 
 ### Bug Fixes
 
-* **main-scope:** attempt to fix a bug where highlithting strips off ([f113a35](https://github.com/ghaschel/vscode-angular-syntax/commit/f113a35dffaf4e75de33ad2ef0d104f5a97500a1)), closes [#32](https://github.com/ghaschel/vscode-angular-syntax/issues/32)
+- **main-scope:** attempt to fix a bug where highlithting strips off ([f113a35](https://github.com/ghaschel/vscode-angular-syntax/commit/f113a35dffaf4e75de33ad2ef0d104f5a97500a1)), closes [#32](https://github.com/ghaschel/vscode-angular-syntax/issues/32)
 
 # 1.3.1 (13/09/2019)
 

@@ -52,5 +52,5 @@
     { include: '#doctype' },
     { include: '#entities' },
   ],
-  repository: {}
+  repository: {},
 }

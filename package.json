@@ -18,8 +18,8 @@
     "publish": "standard-version && git push --follow-tags origin master && vsce publish",
     "postinstall": "node scripts/postinstall.js",
     "prepare": "husky install",
-    "test": "npx vscode-tmgrammar-test -g syntaxes/template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json test/*.html",
-    "update-snapshots": "npx vscode-tmgrammar-snap -s template.ng -g syntaxes/template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json --updateSnapshot test/*.html"
+    "test": "npx vscode-tmgrammar-test -g syntaxes/html-template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json test/*.html",
+    "update-snapshots": "npx vscode-tmgrammar-snap -s html-template.ng -g syntaxes/html-template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json --updateSnapshot test/*.html"
   },
   "engines": {
     "vscode": "^1.20.0"
@@ -28,27 +28,14 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [
-      {
-        "id": "html",
-        "aliases": [
-          "HTML (Angular template)"
-        ],
-        "extensions": [
-          ".html",
-          ".component.html"
-        ],
-        "configuration": "./language-configuration.json"
-      }
-    ],
     "grammars": [
       {
         "language": "html",
-        "scopeName": "template.ng",
-        "path": "./syntaxes/template.ng.json",
+        "scopeName": "html-template.ng",
+        "path": "./syntaxes/html-template.ng.json",
         "injectTo": [
           "text.html",
-          "text.html.derivative"
+          "template.ng"
         ]
       }
     ]

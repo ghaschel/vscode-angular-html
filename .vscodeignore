@@ -1,7 +1,6 @@
 .github/**
 .husky/**
 .vscode/**
-assets/**
 node_modules/**
 scripts/**
 src/**

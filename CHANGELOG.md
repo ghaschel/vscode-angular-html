@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.4](https://github.com/ghaschel/vscode-angular-html/compare/v1.8.3...v1.8.4) (2022-08-11)
+
+### Bug Fixes
+
+- **suggestion:** fixed compability with suggestion plugins ([76e621b](https://github.com/ghaschel/vscode-angular-html/commit/76e621bf41c7c9080b8afaaf4695933ad11a31b0)), closes [#46](https://github.com/ghaschel/vscode-angular-html/issues/46)
+
 ### [1.8.3](https://github.com/ghaschel/vscode-angular-html/compare/v1.8.2...v1.8.3) (2022-08-09)
 
 ### [1.8.2](https://github.com/ghaschel/vscode-angular-html/compare/v1.8.1...v1.8.2) (2022-08-09)

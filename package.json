@@ -38,7 +38,14 @@
           "template.ng"
         ]
       }
-    ]
+    ],
+    "configurationDefaults": {
+      "[html]": {
+        "editor.quickSuggestions": {
+          "strings": "on"
+        }
+      }
+    }
   },
   "galleryBanner": {
     "color": "#1e1e1e",

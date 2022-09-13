@@ -1,9 +1,27 @@
 {
   repository: {
     regex: {
-      match: '/([a-zA-Z0-9\\[\\]\\(\\)\\*\\+\\-\\^\\~\\:\\/\\;\\.\\,\\{\\}\\@\\"\\\\#]+)/([nsxAgimuY]*+?)',
-      name: 'string.regexp',
-      patterns: [],
+      name: 'string.regexp.ts',
+      begin: '\\/(?![\\/*])(?=(?:[^\\/\\\\\\[]|\\\\.|\\[([^\\]\\\\]|\\\\.)*\\])+\\/([dgimsuy]+|(?![\\/\\*])|(?=\\/\\*))(?!\\s*[a-zA-Z0-9_$]))',
+      beginCaptures: {
+        '0': {
+          name: 'punctuation.definition.string.begin.ts',
+        },
+      },
+      end: '(/)([dgimsuy]*)',
+      endCaptures: {
+        '1': {
+          name: 'punctuation.definition.string.end.ts',
+        },
+        '2': {
+          name: 'keyword.other.ts',
+        },
+      },
+      patterns: [
+        {
+          include: 'source.ts#regexp',
+        },
+      ],
     },
   },
 }

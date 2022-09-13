@@ -44,6 +44,184 @@
         "editor.quickSuggestions": {
           "strings": "on"
         }
+      },
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": "html-template.ng meta.tag.metadata.doctype.html keyword.operator.exclamation",
+            "settings": {
+              "foreground": "#C586C0"
+            }
+          },
+          {
+            "scope": "html-template.ng meta.tag.metadata.doctype.html entity.name.tag.html.doctype",
+            "settings": {
+              "foreground": "#D7BA7D"
+            }
+          },
+          {
+            "scope": "html-template.ng meta.tag.metadata.doctype.html entity.other.attribute-name.html",
+            "settings": {
+              "foreground": "#4EC9B0"
+            }
+          },
+          {
+            "scope": "puctuation.separator.key-value.html-template.ng",
+            "settings": {
+              "foreground": "#D7BA7D"
+            }
+          },
+          {
+            "scope": "entity.name.tag.html.ng",
+            "settings": {
+              "foreground": "#D7BA7D"
+            }
+          },
+          {
+            "scope": "html-template.ng.interpolation.begin",
+            "settings": {
+              "foreground": "#D16969"
+            }
+          },
+          {
+            "scope": "html-template.ng.interpolation.end",
+            "settings": {
+              "foreground": "#D16969"
+            }
+          },
+          {
+            "scope": "html-template.ng.entities.amperstand",
+            "settings": {
+              "foreground": "#C586C0"
+            }
+          },
+          {
+            "scope": "html-template.ng.entities.semicolon",
+            "settings": {
+              "foreground": "#C586C0"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.events",
+            "settings": {
+              "foreground": "#4EC9B0"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.generic",
+            "settings": {
+              "foreground": "#4EC9B0"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.prefix.let",
+            "settings": {
+              "foreground": "#569CD6"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.prefix.ref",
+            "settings": {
+              "foreground": "#D16969"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.suffix.name",
+            "settings": {
+              "foreground": "#4EC9B0"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.suffix.rxjs",
+            "settings": {
+              "foreground": "#C586C0"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.template.prefix",
+            "settings": {
+              "foreground": "#D16969"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.template.variable",
+            "settings": {
+              "foreground": "#DCDCAA"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.animationtrigger.prefix",
+            "settings": {
+              "foreground": "#D16969"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.animationtrigger.variable",
+            "settings": {
+              "foreground": "#DCDCAA"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.prefix.sugar",
+            "settings": {
+              "foreground": "#D16969"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.suffix.sugar",
+            "settings": {
+              "foreground": "#DCDCAA"
+            }
+          },
+          {
+            "scope": "punctuation.definition.ng-binding-name.begin.html",
+            "settings": {
+              "foreground": "#D16969"
+            }
+          },
+          {
+            "scope": "punctuation.definition.ng-binding-name.end.html",
+            "settings": {
+              "foreground": "#D16969"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.event-handler",
+            "settings": {
+              "foreground": "#DCDCAA"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.input-binding.animationTrigger-decorator",
+            "settings": {
+              "foreground": "#D7BA7D"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.input-binding.first-level",
+            "settings": {
+              "foreground": "#DCDCAA"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.input-binding.second-level",
+            "settings": {
+              "foreground": "#C586C0"
+            }
+          },
+          {
+            "scope": "html-template.ng.attributes.input-binding.third-level",
+            "settings": {
+              "foreground": "#DCDCAA"
+            }
+          },
+          {
+            "scope": "string.quoted.double.html html-template.ng.style.language.identifier",
+            "settings": {
+              "foreground": "#DCDCAA"
+            }
+          }
+        ]
       }
     }
   },

@@ -1,0 +1,21 @@
+{
+  repository: {
+    'tag-minified-boolean-prefixed-attributes': {
+      captures: {
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.let',
+        },
+        '3': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.ref',
+        },
+        '4': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.name',
+        },
+        '5': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs',
+        },
+      },
+      match: '((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?',
+    },
+  },
+}

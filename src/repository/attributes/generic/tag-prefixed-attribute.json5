@@ -1,0 +1,39 @@
+{
+  repository: {
+    'tag-prefixed-attribute': {
+      name: 'string.quoted.double.html',
+      beginCaptures: {
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.let',
+        },
+        '3': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.ref',
+        },
+        '4': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.name',
+        },
+        '5': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs',
+        },
+        '6': {
+          name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+        },
+        '7': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      endCaptures: {
+        '1': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      begin: '((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)([$]*)(=)(")',
+      end: '(")',
+      patterns: [
+        {
+          include: '#angular-expression',
+        },
+      ],
+    },
+  },
+}

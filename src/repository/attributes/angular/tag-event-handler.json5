@@ -1,0 +1,35 @@
+{
+  repository: {
+    'tag-event-handler': {
+      captures: {
+        '1': {
+          name: 'entity.other.attribute-name.html entity.other.ng-binding-name.event.html punctuation.definition.ng-binding-name.begin.html',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html entity.other.ng-binding-name.event.html	entity.other.ng-binding-name.$2.html html-template.ng.attributes.event-handler',
+        },
+        '3': {
+          name: 'entity.other.attribute-name.html entity.other.ng-binding-name.event.html punctuation.definition.ng-binding-name.end.html',
+        },
+        '4': {
+          name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+        },
+        '5': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      endCaptures: {
+        '1': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      begin: '(?<!\\[)(\\()([a-zA-Z0-9\\-_\\$]+)*(\\))(=)(")',
+      end: '(")',
+      patterns: [
+        {
+          include: '#angular-expression',
+        },
+      ],
+    },
+  },
+}

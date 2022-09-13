@@ -1,0 +1,24 @@
+{
+  repository: {
+    'tag-stuff': {
+      patterns: [
+        { include: '#generic-style-attribute' },
+        { include: '#tag-double-way-non-standard' },
+        { include: '#tag-double-way-standard' },
+        { include: '#tag-input-binding' },
+        { include: '#tag-event-handler' },
+        { include: '#tag-sugar-attributes' },
+        { include: '#tag-boolean-sugar-attributes' },
+        { include: '#tag-annimation-trigger' },
+        { include: '#tag-template-variable' },
+        { include: '#tag-boolean-template-variable' },
+        { include: '#tag-prefixed-attribute' },
+        { include: '#tag-minified-boolean-prefixed-attributes' },
+        { include: '#tag-generic-attribute' },
+        { include: '#tag-events-attribute' },
+        { include: '#string-double-quoted-capture' },
+        { include: '#tag-minified-boolean-attributes' },
+      ],
+    },
+  },
+}

@@ -1,0 +1,42 @@
+{
+  repository: {
+    'style-type-attribute': {
+      patterns: [
+        {
+          match: '[\\s]*(type)(=)("(text|stylesheet)/(css|scss|less|sass|stylus|postcss)")',
+          captures: {
+            '1': {
+              name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+            },
+            '2': {
+              name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+            },
+            '3': {
+              name: 'string.quoted.double.html',
+            },
+            '5': {
+              name: 'string.quoted.double.html html-template.ng.style.language.identifier',
+            },
+          },
+        },
+        {
+          match: "[\\s]*(type)(=)('(text|stylesheet)/(css|scss|less|sass|stylus|postcss)')",
+          captures: {
+            '1': {
+              name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+            },
+            '2': {
+              name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+            },
+            '3': {
+              name: 'string.quoted.single.html',
+            },
+            '5': {
+              name: 'html-template.ng.style.language.identifier',
+            },
+          },
+        },
+      ],
+    },
+  },
+}

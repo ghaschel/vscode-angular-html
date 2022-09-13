@@ -6,3 +6,4 @@ node_modules
 .hushlogin
 test/externalGrammars/*.json
 test/externalGrammars/*.plist
+*.todo

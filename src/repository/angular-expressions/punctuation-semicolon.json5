@@ -1,8 +1,0 @@
-{
-  repository: {
-    "punctuation-semicolon": {
-      "name": "punctuation.terminator.statement.ts",
-      "match": ";"
-    }
-  }
-}

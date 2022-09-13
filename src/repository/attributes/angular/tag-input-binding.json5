@@ -1,0 +1,44 @@
+{
+  repository: {
+    'tag-input-binding': {
+      captures: {
+        '1': {
+          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.begin.html',
+        },
+        '2': {
+          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html html-template.ng.attributes.input-binding.animationTrigger-decorator',
+        },
+        '3': {
+          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html	entity.other.ng-binding-name.$3.html html-template.ng.attributes.input-binding.first-level',
+        },
+        '4': {
+          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html	entity.other.ng-binding-name.$4.html html-template.ng.attributes.input-binding.second-level',
+        },
+        '5': {
+          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html	entity.other.ng-binding-name.$5.html html-template.ng.attributes.input-binding.third-level',
+        },
+        '6': {
+          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.end.html',
+        },
+        '7': {
+          name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+        },
+        '8': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      endCaptures: {
+        '1': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      begin: '(?<!\\()(\\[)(@)?([a-zA-Z0-9\\-_\\$]+)(?:[\\:\\.]([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*(\\])(=)(")',
+      end: '(")',
+      patterns: [
+        {
+          include: '#angular-expression',
+        },
+      ],
+    },
+  },
+}

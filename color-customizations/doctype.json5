@@ -1,0 +1,22 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng meta.tag.metadata.doctype.html keyword.operator.exclamation',
+      settings: {
+        foreground: '#C586C0',
+      },
+    },
+    {
+      scope: 'html-template.ng meta.tag.metadata.doctype.html entity.name.tag.html.doctype',
+      settings: {
+        foreground: '#4EC9B0',
+      },
+    },
+    {
+      scope: 'html-template.ng meta.tag.metadata.doctype.html entity.other.attribute-name.html',
+      settings: {
+        foreground: '#4EC9B0',
+      },
+    },
+  ],
+}

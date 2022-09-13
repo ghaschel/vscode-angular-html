@@ -1,0 +1,32 @@
+{
+  repository: {
+    'angular-interpolations': {
+      patterns: [
+        {
+          beginCaptures: {
+            '0': {
+              name: 'punctuation.definition.block.ts html-template.ng.interpolation.begin',
+            },
+          },
+          patterns: [
+            {
+              match: '\\?\\.|\\!\\.|\\.|\\!|\\?|\\:|\\;|\\,',
+              name: 'keyword.operator.navigation',
+            },
+            {
+              include: '#angular-expression',
+            },
+          ],
+          begin: '\\{\\{\\{?',
+          endCaptures: {
+            '0': {
+              name: 'punctuation.definition.block.ts html-template.ng.interpolation.end',
+            },
+          },
+          end: '\\}\\}\\}?',
+          name: 'html-template.ng.interpolation.expression',
+        },
+      ],
+    },
+  },
+}

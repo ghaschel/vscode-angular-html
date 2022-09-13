@@ -1,0 +1,36 @@
+{
+  repository: {
+    'tag-sugar-attributes': {
+      name: 'string.quoted.double.html',
+      beginCaptures: {
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.sugar',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.sugar',
+        },
+        '3': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs',
+        },
+        '4': {
+          name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+        },
+        '5': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      endCaptures: {
+        '1': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      begin: '(\\*)\\b([\\w\\-\\_]+)([$]*)(=)(")',
+      end: '(")',
+      patterns: [
+        {
+          include: '#angular-expression',
+        },
+      ],
+    },
+  },
+}

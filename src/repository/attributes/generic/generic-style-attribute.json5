@@ -1,0 +1,90 @@
+{
+  repository: {
+    'generic-style-attribute': {
+      name: 'meta.property-list.scss',
+      beginCaptures: {
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+        },
+        '2': {
+          name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+        },
+        '3': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      endCaptures: {
+        '1': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      begin: '(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)\\b(style)+\\b(=)(")',
+      end: '.?(")',
+      patterns: [
+        {
+          begin: '(?<![-a-z]|\\(|, |:)(?=[-a-z])',
+          end: '$|(?![-a-z])',
+          name: 'meta.property-name.scss',
+          patterns: [
+            {
+              match: '\\b(source|scroll-offsets|syntax|initialvalue|inherits)\\b',
+              name: 'support.type.property-name.css',
+            },
+            {
+              include: 'source.css#property-names',
+            },
+          ],
+        },
+        {
+          begin: '(:)\\s*(?!(\\s*{))',
+          beginCaptures: {
+            '1': {
+              name: 'punctuation.separator.key-value.scss',
+            },
+          },
+          end: '\\s*(;|(?="|\\)))',
+          endCaptures: {
+            '1': {
+              name: 'punctuation.terminator.rule.scss',
+            },
+          },
+          contentName: 'meta.property-value.scss',
+          patterns: [
+            {
+              match: '\\b(false|true)\\b',
+              name: 'constant.language.boolean.css',
+            },
+            {
+              begin: '\\b(selector)(\\()',
+              beginCaptures: {
+                '1': {
+                  name: 'support.function.misc.scss',
+                },
+                '2': {
+                  name: 'punctuation.section.function.scss',
+                },
+              },
+              end: '(\\))',
+              endCaptures: {
+                '1': {
+                  name: 'punctuation.section.function.scss',
+                },
+              },
+              patterns: [
+                {
+                  include: 'source.css.scss#selectors',
+                },
+              ],
+            },
+            {
+              include: 'source.css.scss#general',
+            },
+            {
+              include: 'source.css.scss#property_values',
+            },
+          ],
+        },
+      ],
+    },
+  },
+}

@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npm run compile-json;
-npm test;
-npx pretty-quick --staged
+# npm test;
+# npx pretty-quick --staged

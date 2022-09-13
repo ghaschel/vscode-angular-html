@@ -1,55 +1,69 @@
 {
   repository: {
+    'string-double-quoted-capture': {
+      begin: '"',
+      end: '"',
+      name: 'string.quoted.double.html',
+      patterns: [
+        {
+          include: '#angular-interpolations',
+        },
+        {
+          include: '#entities',
+        },
+      ],
+    },
+    // \/ maybe rename it or remove it?
     'string-single-quoted': {
       beginCaptures: {
         '0': {
-          name: 'punctuation.definition.string.begin.html'
-        }
+          name: 'punctuation.definition.string.begin.html',
+        },
       },
       patterns: [
         {
-          include: '#angular-interpolations'
+          include: '#angular-interpolations',
         },
         {
-          include: '#entities'
-        }
+          include: '#entities',
+        },
       ],
       begin: "'",
       endCaptures: {
         '0': {
-          name: 'punctuation.definition.string.end.html'
-        }
+          name: 'punctuation.definition.string.end.html',
+        },
       },
       end: "'",
-      name: 'string.quoted.single.html'
+      name: 'string.quoted.single.html',
     },
     'string-double-quoted': {
       beginCaptures: {
         '0': {
-          name: 'punctuation.definition.string.begin.html'
-        }
+          name: 'punctuation.definition.string.begin.html',
+        },
       },
       patterns: [
         {
-          include: '#angular-interpolations'
+          include: '#angular-interpolations',
         },
         {
-          include: '#entities'
-        }
+          include: '#entities',
+        },
       ],
       begin: '"',
       endCaptures: {
         '0': {
-          name: 'punctuation.definition.string.end.html'
-        }
+          name: 'punctuation.definition.string.end.html',
+        },
       },
       end: '"',
-      name: 'string.quoted.double.html'
+      name: 'string.quoted.double.html',
     },
     'unquoted-attribute': {
       match: '(?<==)(?:[^\\s<>/\'"]|/(?!>))+',
       name: 'string.unquoted.html',
-      patterns: []
-    }
-  }
+      patterns: [],
+    },
+  },
 }

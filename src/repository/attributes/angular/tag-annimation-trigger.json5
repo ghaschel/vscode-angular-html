@@ -1,0 +1,18 @@
+{
+  repository: {
+    'tag-annimation-trigger': {
+      captures: {
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.animationtrigger.prefix',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.animationtrigger.variable',
+        },
+        '3': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs',
+        },
+      },
+      match: '(?<!\\[|\\()(@)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?',
+    },
+  },
+}

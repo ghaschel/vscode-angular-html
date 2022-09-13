@@ -5,38 +5,35 @@
         {
           endCaptures: {
             '1': {
-              name: 'punctuation.definition.tag.end.html'
-            }
+              name: 'punctuation.definition.tag.end.html',
+            },
           },
           beginCaptures: {
             '1': {
-              name: 'punctuation.definition.tag.begin.html'
+              name: 'punctuation.definition.tag.begin.html',
             },
             '2': {
-              name: 'keyword.operator.exclamation'
+              name: 'keyword.operator.exclamation',
             },
             '3': {
-              name: 'constant.character.entity.html'
-            }
+              name: 'entity.name.tag.html.doctype',
+            },
           },
           begin: '(<)(!)((?i:doctype))',
           end: '(>)',
           // using another scope different from the one it fits to differentiate in color from objects and variables
-          name: 'support.type.object.html-attribute',
+          name: 'meta.tag.metadata.doctype.html',
           patterns: [
             {
-              patterns: [
-                {
-                  match: '("[\\w\\d\\D]*")',
-                  name: 'string.quoted.double'
-                }
-              ],
-              // using another scope different from the one it fits to differentiate in color from objects and variables
-              name: 'support.type.object.module.html'
-            }
-          ]
-        }
-      ]
-    }
-  }
+              include: '#string-double-quoted-capture',
+            },
+            {
+              match: '[^\\s>]+',
+              name: 'entity.other.attribute-name.html',
+            },
+          ],
+        },
+      ],
+    },
+  },
 }

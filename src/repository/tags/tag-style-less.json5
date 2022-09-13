@@ -1,0 +1,83 @@
+{
+  repository: {
+    'tag-style-less': {
+      begin: '(^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type="text/postcss"|[\\s\\n\\D\\W]*type="text/sass"|[\\s\\n\\D\\W]*type="text/css"|[\\s\\n\\D\\W]*type="text/stylus"|[\\s\\n\\D\\W]*type="text/scss"))(?=[\\s\\n]*type="text/less"))',
+      beginCaptures: {
+        '1': {
+          name: 'punctuation.whitespace.embedded.leading.html',
+        },
+      },
+      end: '(?!\\G)([\\t]*$\\n?)?',
+      endCaptures: {
+        '1': {
+          name: 'punctuation.whitespace.embedded.trailing.html',
+        },
+      },
+      patterns: [
+        {
+          begin: '(?i)(<)(style)(?=\\s|/?>)',
+          beginCaptures: {
+            '0': {
+              name: 'meta.tag.metadata.style.start.html',
+            },
+            '1': {
+              name: 'punctuation.definition.tag.begin.html',
+            },
+            '2': {
+              name: 'entity.name.tag.html',
+            },
+          },
+          end: '(?i)((<)/)(style)\\s*(>)',
+          endCaptures: {
+            '0': {
+              name: 'meta.tag.metadata.style.end.html',
+            },
+            '1': {
+              name: 'punctuation.definition.tag.begin.html',
+            },
+            '2': {
+              name: 'source.css-ignored-vscode',
+            },
+            '3': {
+              name: 'entity.name.tag.html',
+            },
+            '4': {
+              name: 'punctuation.definition.tag.end.html',
+            },
+          },
+          name: 'meta.embedded.block.html',
+          patterns: [
+            {
+              begin: '\\G',
+              captures: {
+                '1': {
+                  name: 'punctuation.definition.tag.end.html',
+                },
+              },
+              end: '(>)',
+              name: 'meta.tag.metadata.style.start.html',
+              patterns: [
+                {
+                  include: '#style-type-attribute',
+                },
+                {
+                  include: '#tag-stuff',
+                },
+              ],
+            },
+            {
+              begin: '(?!\\G)',
+              end: '(?=</(?i:style))',
+              name: 'source.css.less',
+              patterns: [
+                {
+                  include: 'source.css.less',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+}

@@ -1,0 +1,22 @@
+{
+  repository: {
+    'xml-processing': {
+      begin: '(<\\?)(xml)',
+      captures: {
+        '1': {
+          name: 'punctuation.definition.tag.html',
+        },
+        '2': {
+          name: 'entity.name.tag.html',
+        },
+      },
+      end: '(\\?>)',
+      name: 'meta.tag.metadata.processing.xml.html',
+      patterns: [
+        {
+          include: '#tag-stuff',
+        },
+      ],
+    },
+  },
+}

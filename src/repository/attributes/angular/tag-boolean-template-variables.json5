@@ -1,0 +1,18 @@
+{
+  repository: {
+    'tag-boolean-template-variable': {
+      captures: {
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.template.prefix',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.template.variable',
+        },
+        '3': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs',
+        },
+      },
+      match: '(#)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?',
+    },
+  },
+}

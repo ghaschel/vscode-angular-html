@@ -1,0 +1,10 @@
+{
+  textMateRules: [
+    {
+      scope: 'string.quoted.double.html html-template.ng.style.language.identifier',
+      settings: {
+        foreground: '#DCDCAA',
+      },
+    },
+  ],
+}

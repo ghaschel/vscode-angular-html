@@ -1,0 +1,16 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.attributes.template.prefix',
+      settings: {
+        foreground: '#D16969',
+      },
+    },
+    {
+      scope: 'html-template.ng.attributes.template.variable',
+      settings: {
+        foreground: '#DCDCAA',
+      },
+    },
+  ],
+}

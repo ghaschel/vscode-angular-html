@@ -1,0 +1,10 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.attributes.generic',
+      settings: {
+        foreground: '#4EC9B0',
+      },
+    },
+  ],
+}

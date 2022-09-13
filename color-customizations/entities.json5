@@ -1,0 +1,16 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.entities.amperstand',
+      settings: {
+        foreground: '#C586C0',
+      },
+    },
+    {
+      scope: 'html-template.ng.entities.semicolon',
+      settings: {
+        foreground: '#C586C0',
+      },
+    },
+  ],
+}

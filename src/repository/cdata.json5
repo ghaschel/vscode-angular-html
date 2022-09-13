@@ -1,0 +1,20 @@
+{
+  repository: {
+    cdata: {
+      begin: '<!\\[CDATA\\[',
+      beginCaptures: {
+        '0': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+      },
+      contentName: 'string.other.inline-data.html',
+      end: ']]>',
+      endCaptures: {
+        '0': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      name: 'meta.tag.metadata.cdata.html',
+    },
+  },
+}

@@ -1,0 +1,14 @@
+{
+  repository: {
+    'tag-minified-boolean-attributes': {
+      captures: {
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+        },
+      },
+      match: '(?<!\\S)(?!(?:ref|let)?-)([\\w-]+)\\b(?!=)',
+      name: 'punctuation.definition.tag.end.html',
+      patterns: [],
+    },
+  },
+}

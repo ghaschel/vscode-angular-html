@@ -1,22 +1,19 @@
-# Scope names
+# Custom Scope Names
 
-> This file aims to be used as a way to point out the main matches of the angular template highlighting just in case any theme developer wants to add support for this highlighting.
+> This file aims to be used as a way to point out the matched scopes with custom matches for themes to be able to support them
 
 ## Summary
 
-- [Doctype](#doctype)
-- [Comments](#comments)
-- [Invalid attributes](#invalid-attributes)
-- [Angular directives](#angular-directives)
-- [Angular interpolations](#angular-interpolations)
-- [Entities](#html-entities)
-- [Regex](#regex)
-- [Deprecated tags](#deprecated-tags)
-- [DOM Events](#dom-events)
-- [Style inline](#style-inline)
-- [Style tag](#style-tag)
-- [Script tags](#script-tags)
-- [Generic attributes](#generic-attributes)
+- [Custom Scope Names](#custom-scope-names)
+  - [Summary](#summary)
+    - [Doctype](#doctype)
+    - [Comments](#comments)
+    - [Invalid attributes see complete list](#invalid-attributes-see-complete-list)
+    - [Angular directives](#angular-directives)
+    - [String](#string)
+    - [Angular-specific tags](#angular-specific-tags)
+    - [Angular Interpolation](#angular-interpolation)
+    - [HTML Entities](#html-entities)
 
 ### Doctype
 
@@ -26,9 +23,10 @@
 
 - `<` - (punctuation.definition.tag.begin.html)
 - `!` - (keyword.operator.exclamation)
-- `DOCTYPE` - (constant.character.entity.html)
-- `html` - (support.type.object.html-attribute)
-- `"any string"` - (string.quoted.double)
+- `DOCTYPE` - (entity.name.tag.html.doctype)
+- `html` - (entity.other.attribute-name.html)
+- `"any string"` - ([SEE STRING MATCHING](#string))
+- `>` - (punctuation.definition.tag.end.html)
 
 ### Comments
 
@@ -46,11 +44,12 @@
 
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/invalid-attributes.png" title="Invalid attributes" alt="Invalid attributes" />
 
-- `<` - (punctuation.definition.tag.begin.html)
-- `TAG` - (entity.name.tag.other.html)
-- `attributes` - (invalid.deprecated.attribute-name.`TAG_NAME`) ([see TAG_NAME list](DEPRECATED-ATTRIBUTES.md))
+- `<` - (punctuation.definition.tag.begin.html) <b>not changed</b>
+- `TAG` - (entity.name.tag.html)
+- `attributes` - (invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.`TAG_NAME`.`TAG_ATTRIBUTE`) ([see DEPRECATED-TAGS list](DEPRECATED-TAGS.md) and [see DEPRECATED-ATTRIBUTES list](DEPRECATED-ATTRIBUTES.md))
+- `=` - (<b>puctuation.separator.key-value.html-template.ng</b> punctuation.separator.key-value.html)
 - `"` - (punctuation.definition.string.begin.html)
-- `ANYTHING` - (string.quoted.double.html)
+- `STRING` - ([SEE STRING MATCHING](#string))
 - `"` - punctuation.definition.string.end.html
 
 ### Angular directives
@@ -58,3 +57,19 @@
 <span name="angular-directives"></span>
 
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-directives.png" title="Angular directives" alt="Angular directives" />
+
+### String
+
+<span name="string"></span>
+
+### Angular-specific tags
+
+- DO IT
+
+### Angular Interpolation
+
+-- DO IT
+
+### HTML Entities
+
+-- DO IT (SEE HTML ENTITIES LIST)

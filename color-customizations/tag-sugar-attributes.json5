@@ -1,0 +1,16 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.attributes.prefix.sugar',
+      settings: {
+        foreground: '#D16969',
+      },
+    },
+    {
+      scope: 'html-template.ng.attributes.suffix.sugar',
+      settings: {
+        foreground: '#DCDCAA',
+      },
+    },
+  ],
+}

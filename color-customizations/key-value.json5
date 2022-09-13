@@ -1,0 +1,10 @@
+{
+  textMateRules: [
+    {
+      scope: 'puctuation.separator.key-value.html-template.ng',
+      settings: {
+        foreground: '#D7BA7D',
+      },
+    },
+  ],
+}

@@ -71,6 +71,9 @@
               name: 'source.postcss',
               patterns: [
                 {
+                  include: '#cdata',
+                },
+                {
                   include: 'source.postcss',
                 },
               ],

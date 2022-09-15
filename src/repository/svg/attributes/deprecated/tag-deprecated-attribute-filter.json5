@@ -1,0 +1,42 @@
+{
+  repository: {
+    'tag-deprecated-attribute-filter': {
+      begin: '(<\\/?)((?i:filter))\\b(?![\\w-])\\b',
+      comment: "This refers only for the filter element and it's attributes when within a SVG element",
+      end: '(\\/?>)',
+      beginCaptures: {
+        '2': {
+          name: 'entity.name.tag.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+      },
+      endCaptures: {
+        '1': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      patterns: [
+        {
+          name: 'meta.attribute.$1.svg',
+          match: '[\\s\\n\\r\\t]*(\\b(filterRes|xlink:arcrole|xlink:href|xlink:title|xlink:type|xml:space|xml:lang|xml:base)\\b)(=)?',
+          captures: {
+            '2': {
+              name: 'invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.filter.$1',
+            },
+            '3': {
+              name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+            },
+          },
+        },
+        {
+          include: '#svg-non-string-attributes',
+        },
+        {
+          include: '#tag-stuff',
+        },
+      ],
+    },
+  },
+}

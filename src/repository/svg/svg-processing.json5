@@ -1,0 +1,150 @@
+{
+  repository: {
+    'tag-svg': {
+      begin: '(^[\\t]+)?(?=<(?i:svg)\\b(?!(?:[\\w-])))',
+      beginCaptures: {
+        '1': {
+          name: 'punctuation.whitespace.embedded.leading.html',
+        },
+      },
+      end: '(?!\\G)([\\t]*$\\n?)?',
+      endCaptures: {
+        '1': {
+          name: 'punctuation.whitespace.embedded.trailing.html',
+        },
+      },
+      patterns: [
+        {
+          begin: '(?i)(<)(svg)(?=\\s|/?>)',
+          beginCaptures: {
+            '0': {
+              name: 'meta.tag.metadata.svg.start.html',
+            },
+            '1': {
+              name: 'punctuation.definition.tag.begin.html',
+            },
+            '2': {
+              name: 'entity.name.tag.html',
+            },
+          },
+          end: '(?i)((<)/)(svg)\\s*(>)',
+          endCaptures: {
+            '0': {
+              name: 'meta.tag.metadata.svg.end.html',
+            },
+            '1': {
+              name: 'punctuation.definition.tag.begin.html',
+            },
+            '2': {
+              name: 'source.css-ignored-vscode',
+            },
+            '3': {
+              name: 'entity.name.tag.html',
+            },
+            '4': {
+              name: 'punctuation.definition.tag.end.html',
+            },
+          },
+          name: 'meta.embedded.block.html',
+          patterns: [
+            {
+              begin: '\\G',
+              captures: {
+                '1': {
+                  name: 'punctuation.definition.tag.end.html',
+                },
+              },
+              end: '(>)',
+              name: 'meta.tag.metadata.svg.start.html',
+              patterns: [
+                {
+                  name: 'meta.attribute.$1.svg',
+                  match: '[\\s\\n\\r\\t]*(\\b(baseProfile|contentStyleType|contentScriptType|clip|requiredFeatures|enable-background|zoomAndPan|version|xml:space|xml:lang|xml:base)\\b)(=)?',
+                  captures: {
+                    '2': {
+                      name: 'invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.svg.$1',
+                    },
+                    '3': {
+                      name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+                    },
+                  },
+                },
+                {
+                  include: '#tag-stuff',
+                },
+              ],
+            },
+            {
+              begin: '(?!\\G)',
+              end: '(?=</(?i:svg))',
+              name: 'meta.element.structure.svg.html',
+              patterns: [
+                { include: '#tag-deprecated-attribute-altGlyph' },
+                { include: '#tag-deprecated-attribute-marker' },
+                { include: '#tag-deprecated-attribute-font-face-name' },
+                { include: '#tag-deprecated-attribute-font-face-format' },
+                { include: '#tag-deprecated-attribute-missing-glyph' },
+                { include: '#tag-deprecated-attribute-view' },
+                { include: '#tag-deprecated-attribute-vkern' },
+                { include: '#tag-deprecated-attribute-hkern' },
+                { include: '#tag-deprecated-attribute-a' },
+                { include: '#tag-deprecated-attribute-font-face-uri' },
+                { include: '#tag-deprecated-attribute-font-face' },
+                { include: '#tag-deprecated-attribute-font' },
+                { include: '#tag-deprecated-attribute-tspan' },
+                { include: '#tag-deprecated-attribute-text' },
+                { include: '#tag-deprecated-attribute-foreignObject' },
+                { include: '#tag-deprecated-attribute-glyph' },
+                { include: '#tag-deprecated-attribute-switch' },
+                { include: '#tag-deprecated-attribute-symbol' },
+                { include: '#tag-deprecated-attribute-polygon' },
+                { include: '#tag-deprecated-attribute-polyline' },
+                { include: '#tag-deprecated-attribute-rect' },
+                { include: '#tag-deprecated-attribute-path' },
+                { include: '#tag-deprecated-attribute-line' },
+                { include: '#tag-deprecated-attribute-ellipse' },
+                { include: '#tag-deprecated-attribute-clipPath' },
+                { include: '#tag-deprecated-attribute-circle' },
+                { include: '#tag-deprecated-attribute-mask' },
+                { include: '#tag-deprecated-attribute-g' },
+                { include: '#tag-deprecated-attribute-defs' },
+                { include: '#tag-deprecated-attribute-feConvolveMatrix' },
+                { include: '#tag-deprecated-attribute-feDiffuseLighting' },
+                { include: '#tag-deprecated-attribute-feSpecularLighting' },
+                { include: '#tag-deprecated-attribute-glyphRef' },
+                { include: '#tag-deprecated-attribute-filter' },
+                { include: '#tag-deprecated-attribute-set' },
+                { include: '#tag-deprecated-attribute-animateTransform' },
+                { include: '#tag-deprecated-attribute-animateMotion' },
+                { include: '#tag-deprecated-attribute-animateColor' },
+                { include: '#tag-deprecated-attribute-animate' },
+                { include: '#tag-deprecated-attribute-cursor' },
+                { include: '#tag-deprecated-attribute-use' },
+                { include: '#tag-deprecated-attribute-tref' },
+                { include: '#tag-deprecated-attribute-textPath' },
+                { include: '#tag-deprecated-attribute-radialGradient' },
+                { include: '#tag-deprecated-attribute-linearGradient' },
+                { include: '#tag-deprecated-attribute-feImage' },
+                { include: '#tag-deprecated-attribute-image' },
+                { include: '#tag-deprecated-attribute-pattern' },
+                { include: '#tag-deprecated-attribute-mpath' },
+                { include: '#tag-script-dart' },
+                { include: '#tag-script-coffeescript' },
+                { include: '#tag-script-typescript' },
+                { include: '#tag-script-javascript' },
+                { include: '#tag-style-postcss' },
+                { include: '#tag-style-stylus' },
+                { include: '#tag-style-less' },
+                { include: '#tag-style-scss' },
+                { include: '#tag-style-sass' },
+                { include: '#tag-style-css' },
+                { include: '#tag-deprecated-svg' },
+                { include: '#svg-tag-definition' },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+}

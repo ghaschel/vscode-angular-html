@@ -6,5 +6,17 @@
         foreground: '#4EC9B0',
       },
     },
+    {
+      scope: 'html-template.ng.attributes.colon',
+      settings: {
+        foreground: '#D16969',
+      },
+    },
+    {
+      scope: 'html-template.ng.attributes.suffix',
+      settings: {
+        foreground: '#C586C0',
+      },
+    },
   ],
 }

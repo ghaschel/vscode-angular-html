@@ -13,10 +13,10 @@
               name: 'punctuation.definition.tag.begin.html',
             },
             '2': {
-              name: 'keyword.operator.exclamation',
+              name: 'keyword.operator.exclamation html-template.ng.exclamation.doctype',
             },
             '3': {
-              name: 'entity.name.tag.html.doctype',
+              name: 'entity.name.tag.html.doctype html-template.ng.doctype',
             },
           },
           begin: '(<)(!)((?i:doctype))',
@@ -25,11 +25,22 @@
           name: 'meta.tag.metadata.doctype.html',
           patterns: [
             {
+              begin: '(\\[)',
+              beginCaptures: {
+                name: 'punctuation.definition.dtd.begin.html',
+              },
+              end: '(\\])',
+              endCaptures: {
+                name: 'punctuation.definition.dtd.end.html',
+              },
+              patterns: [{ include: '#xml-dtd' }],
+            },
+            {
               include: '#string-double-quoted-capture',
             },
             {
               match: '[^\\s>]+',
-              name: 'entity.other.attribute-name.html',
+              name: 'entity.other.attribute-name.html html-template.ng.attribute.doctype',
             },
           ],
         },

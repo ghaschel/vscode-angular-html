@@ -1,9 +1,15 @@
 {
   repository: {
     'tag-deprecated-attribute-li': {
-      begin: '(<\\/?)(li)(?!-)\\b',
+      begin: '(<\\/?)(li)(?!-)\\b(:)?([\\w\\-\\_$]+)?',
       end: '(\\/?>)',
       beginCaptures: {
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
         '2': {
           name: 'entity.name.tag.html',
         },

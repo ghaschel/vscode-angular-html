@@ -71,6 +71,9 @@
               name: 'source.stylus',
               patterns: [
                 {
+                  include: '#cdata',
+                },
+                {
                   include: 'source.stylus',
                 },
               ],

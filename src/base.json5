@@ -4,6 +4,7 @@
   scopeName: '#GHOST-SCOPE-NAME#',
   patterns: [
     { include: '#angular-interpolations' },
+    { include: '#tag-svg' },
     { include: '#tag-script-dart' },
     { include: '#tag-script-coffeescript' },
     { include: '#tag-script-typescript' },

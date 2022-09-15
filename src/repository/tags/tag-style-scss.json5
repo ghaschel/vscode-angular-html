@@ -71,6 +71,9 @@
               name: 'source.css.scss',
               patterns: [
                 {
+                  include: '#cdata',
+                },
+                {
                   include: 'source.css.scss',
                 },
               ],

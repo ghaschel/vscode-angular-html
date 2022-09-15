@@ -1,19 +1,19 @@
 {
   textMateRules: [
     {
-      scope: 'html-template.ng meta.tag.metadata.doctype.html keyword.operator.exclamation',
+      scope: 'html-template.ng.exclamation.doctype',
       settings: {
         foreground: '#C586C0',
       },
     },
     {
-      scope: 'html-template.ng meta.tag.metadata.doctype.html entity.name.tag.html.doctype',
+      scope: 'html-template.ng.doctype',
       settings: {
         foreground: '#4EC9B0',
       },
     },
     {
-      scope: 'html-template.ng meta.tag.metadata.doctype.html entity.other.attribute-name.html',
+      scope: 'html-template.ng.attribute.doctype',
       settings: {
         foreground: '#4EC9B0',
       },

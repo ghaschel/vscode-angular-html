@@ -71,6 +71,9 @@
               name: 'source.css.less',
               patterns: [
                 {
+                  include: '#cdata',
+                },
+                {
                   include: 'source.css.less',
                 },
               ],

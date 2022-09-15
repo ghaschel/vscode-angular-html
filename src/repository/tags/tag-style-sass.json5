@@ -71,6 +71,9 @@
               name: 'source.sass',
               patterns: [
                 {
+                  include: '#cdata',
+                },
+                {
                   include: 'source.sass',
                 },
               ],

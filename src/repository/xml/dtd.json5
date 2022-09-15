@@ -1,0 +1,40 @@
+{
+  repository: {
+    'xml-dtd': {
+      begin: '(<)(!)(ELEMENT|ATTLIST|ENTITY|NOTATION)',
+      captures: {
+        '1': {
+          name: 'punctuation.definition.tag.begin.dtd',
+        },
+        '2': {
+          name: 'keyword.operator.exclamation html-template.ng.exclamation.dtd',
+        },
+        '3': {
+          name: 'entity.name.tag.dtd html-template.ng.dtd',
+        },
+      },
+      end: '\\s*(>)',
+      name: 'meta.tag.type.dtd',
+      patterns: [
+        {
+          match: '\\s+(CDATA|IDREFS|IDREF|ID|NMTOKENS|NMTOKEN|ENTITY|ENTITIES|NOTATION|SYSTEM|NDATA)',
+          name: 'keyword.other.data-type.dtd',
+        },
+        {
+          match: '(#[A-Z]+)|(ANY)|(EMPTY)',
+          name: 'constant.language.dtd',
+        },
+        {
+          begin: '\'|"',
+          end: '\'|"',
+          name: 'string.quoted.double.dtd',
+        },
+        {
+          begin: '(%[a-zA-Z][a-zA-Z0-9_-])',
+          end: ';',
+          name: 'variable.language.dtd',
+        },
+      ],
+    },
+  },
+}

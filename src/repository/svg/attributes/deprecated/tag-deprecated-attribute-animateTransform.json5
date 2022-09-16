@@ -1,10 +1,16 @@
 {
   repository: {
     'tag-deprecated-attribute-animateTransform': {
-      begin: '(<\\/?)((?i:animateTransform))\\b(?![\\w-])\\b',
+      begin: '(<\\/?)((?i:animateTransform))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the animateTransform element and it's attributes when within a SVG element",
       end: '(\\/?>)',
       beginCaptures: {
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
         '2': {
           name: 'entity.name.tag.html',
         },

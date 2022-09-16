@@ -78,9 +78,15 @@
             }
           },
           {
-            "scope": "html-template.ng.attribute.doctype",
+            "scope": "html-template.ng.occurrence.dtd",
             "settings": {
-              "foreground": "#4EC9B0"
+              "foreground": "#D16969"
+            }
+          },
+          {
+            "scope": "html-template.ng.qualifier.dtd",
+            "settings": {
+              "foreground": "#C586C0"
             }
           },
           {
@@ -262,6 +268,12 @@
             "settings": {
               "foreground": "#C586C0"
             }
+          },
+          {
+            "scope": "html-template.ng.svg.path.commands",
+            "settings": {
+              "foreground": "#C586C0"
+            }
           }
         ]
       }
@@ -275,6 +287,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@prettier/plugin-xml": "^2.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "gulp": "^4.0.2",
     "gulp-json-editor": "^2.5.6",

@@ -1,10 +1,16 @@
 {
   repository: {
     'tag-deprecated-attribute-font-face-format': {
-      begin: '(<\\/?)((?i:font-face-format))\\b(?![\\w-])\\b',
+      begin: '(<\\/?)((?i:font-face-format))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the font-face-format element and it's attributes when within a SVG element",
       end: '(\\/?>)',
       beginCaptures: {
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
         '2': {
           name: 'invalid.deprecated.tag',
         },

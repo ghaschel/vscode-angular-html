@@ -172,6 +172,9 @@
       "include": "#doctype"
     },
     {
+      "include": "#xml-stylesheet-processing"
+    },
+    {
       "include": "#xml-processing"
     },
     {
@@ -515,6 +518,9 @@
               "end": "(>)",
               "name": "meta.tag.metadata.svg.start.html",
               "patterns": [
+                {
+                  "include": "#svg-non-string-attributes"
+                },
                 {
                   "name": "meta.attribute.$1.svg",
                   "match": "[\\s\\n\\r\\t]*(\\b(baseProfile|contentStyleType|contentScriptType|clip|requiredFeatures|enable-background|zoomAndPan|version|xml:space|xml:lang|xml:base)\\b)(=)?",
@@ -1628,6 +1634,14 @@
           "name": "keyword.other.data-type.dtd"
         },
         {
+          "match": "((?<!(?:\\!|\\(|,|\\||#))(\\b[A-Za-z0-9]+\\b)(?!\\)))",
+          "name": "entity.other.attribute-name.html html-template.ng.attribute.doctype"
+        },
+        {
+          "match": "\\?|\\+|\\*|\\|",
+          "name": "entity.name.occurrence.dtd html-template.ng.occurrence.dtd"
+        },
+        {
           "match": "(#[A-Z]+)|(ANY)|(EMPTY)",
           "name": "constant.language.dtd"
         },
@@ -1640,11 +1654,44 @@
           "begin": "(%[a-zA-Z][a-zA-Z0-9_-])",
           "end": ";",
           "name": "variable.language.dtd"
+        },
+        {
+          "begin": "\\(",
+          "end": "\\)",
+          "name": "meta.tag.type.dtd",
+          "patterns": [
+            {
+              "match": "\\s+(CDATA|IDREFS|IDREF|ID|NMTOKENS|NMTOKEN|ENTITY|ENTITIES|NOTATION|SYSTEM|NDATA)",
+              "name": "keyword.other.data-type.dtd"
+            },
+            {
+              "match": "(#[A-Z]+)|(ANY)|(EMPTY)",
+              "name": "constant.language.dtd"
+            },
+            {
+              "begin": "'|\"",
+              "end": "'|\"",
+              "name": "string.quoted.double.dtd"
+            },
+            {
+              "match": "\\?|\\+|\\*|\\|",
+              "name": "entity.name.occurrence.dtd html-template.ng.occurrence.dtd"
+            },
+            {
+              "begin": "(%[a-zA-Z][a-zA-Z0-9_-])",
+              "end": ";",
+              "name": "variable.language.dtd"
+            },
+            {
+              "match": "(?<!#)\\b[A-Za-z0-9]+",
+              "name": "entity.name.qualifier.dtd html-template.ng.qualifier.dtd"
+            }
+          ]
         }
       ]
     },
     "xml-processing": {
-      "begin": "(<\\?)(xml)",
+      "begin": "(<\\?)(xml)(?!-)",
       "captures": {
         "1": {
           "name": "punctuation.definition.tag.html"
@@ -1658,6 +1705,65 @@
       "patterns": [
         {
           "include": "#tag-stuff"
+        }
+      ]
+    },
+    "xml-stylesheet-processing": {
+      "begin": "(<\\?)(xml-stylesheet)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.tag.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html"
+        }
+      },
+      "end": "(\\?>)",
+      "name": "meta.tag.metadata.processing.xml.html",
+      "patterns": [
+        {
+          "include": "#xml-stylesheet-type-attribute"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "xml-stylesheet-type-attribute": {
+      "patterns": [
+        {
+          "match": "[\\s]*(type)(=)(\"(text)/(css|xml|xsl)\")",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.double.html"
+            },
+            "5": {
+              "name": "string.quoted.double.html html-template.ng.style.language.identifier"
+            }
+          }
+        },
+        {
+          "match": "[\\s]*(type)(=)('(text)/(css|xml|xsl)')",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.single.html"
+            },
+            "5": {
+              "name": "html-template.ng.style.language.identifier"
+            }
+          }
         }
       ]
     },
@@ -2964,7 +3070,7 @@
       ]
     },
     "tag-deprecated-attribute-a": {
-      "begin": "(<\\/?)((?i:a))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:a))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "end": "(\\/?>)",
       "name": "entity.name.tag.html",
       "beginCaptures": {
@@ -4289,7 +4395,7 @@
       ]
     },
     "tag-deprecated-attribute-td": {
-      "begin": "(<\\/?)(td)(:)?([\\w\\-\\_$]+)?(?!-)",
+      "begin": "(<\\/?)(td)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
       "end": "(\\/?>)",
       "beginCaptures": {
         "1": {
@@ -4623,7 +4729,7 @@
           "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
         }
       },
-      "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting)+(=)",
+      "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting)+(=)",
       "end": "(?<='|\")|(?=[\\s<>`])",
       "name": "template.ng.events",
       "patterns": [
@@ -4693,7 +4799,7 @@
           "name": "string.quoted.double.html"
         }
       },
-      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommand|oncommandupdate|oncontextmenu|oncopy|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondrag|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onerrorupdate|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|onloadedmetadata|onloadstart|onlosecapture|onlostpointercapture|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflow|onoverflowchanged|onpaste|onpause|onplay|onplaying|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselect|onselectstart|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_$]+)(:)?([\\w\\-\\_$]+)?\\b(=)(\")",
+      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_$]+)(:)?([\\w\\-\\_$]+)?\\b(=)(\")",
       "end": "(\")",
       "patterns": [
         {
@@ -4848,8 +4954,8 @@
     "svg-non-string-attributes": {
       "patterns": [
         {
-          "name": "string.quoted.double.html",
-          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(amplitude|azimuth|baseFrequency|begin|bias|by|clip-path|color|cursor|cx|cy|diffuseConstant|divisor|d|dur|dx|dy|elevation|end|exponent|fill-opacity|fill|filter|flood-color|flood-opacity|font-size-adjust|font-size|font-weight|from|fr|fx|fy|gradientTransform|hatchpath|height|intercept|k1|k2|k3|k4|kernelMatrix|keyPoints|keySplines|keyTimes|letter-spacing|lighting-color|limitingConeAngle|marker-end|marker-mid|marker-start|markerHeight|markerWidth|mask|max|media|min|numOctaves|offset|opacity|order|overline-position|overline-thickness|pathLength|patternTransform|pointsAtX|pointsAtY|pointsAtZ|points|radius|refX|refY|repeatCount|repeatDur|rotate|rx|ry|r|scale|seed|solid-color|solid-opacity|specularConstant|specularExponent|startOffset|stdDeviation|stop-color|stop-opacity|strikethrough-position|strikethrough-thickness|stroke-dashoffset|stroke-dassharray|stroke-miterlimit|stroke-width|stroke|surfaceScale|tabindex|tableValues|targetX|targetY|textLength|to|transform-origin|transform2|transform|underline-position|underline-thickness|values|viewbox|width|word-spacing|x1|x2|x|y1|y2|y|z))\\b(?![\\w-]))(=)(\")",
+          "name": "meta.element.attribute.$2.svg",
+          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(d))\\b(?![\\w-]))(=)(\")",
           "beginCaptures": {
             "2": {
               "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
@@ -4859,14 +4965,51 @@
             },
             "4": {
               "name": "string.quoted.double.html"
-            },
-            "5": {
-              "name": "constant.numeric.css"
             }
           },
-          "end": ".?(\")",
+          "end": "(\")",
           "endCaptures": {
             "1": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "patterns": [
+            {
+              "match": "([0-9]+)|([MmLlHhVvCcSsQqTtAaZz]+)|([\\.\\,\\-]+)",
+              "captures": {
+                "1": {
+                  "name": "constant.numeric.css"
+                },
+                "2": {
+                  "name": "keyword.other.commands.path.svg html-template.ng.svg.path.commands"
+                },
+                "3": {
+                  "name": "punctuation.separator.delimiter.scss"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "meta.element.attribute.$2.svg",
+          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(amplitude|azimuth|baseFrequency|begin|bias|by|clip-path|color|cursor|cx|cy|diffuseConstant|divisor|dur|dx|dy|elevation|end|exponent|fill-opacity|fill|filter|flood-color|flood-opacity|font-size-adjust|font-size|font-weight|from|fr|fx|fy|gradientTransform|hatchpath|height|intercept|k1|k2|k3|k4|kernelMatrix|keyPoints|keySplines|keyTimes|letter-spacing|lighting-color|limitingConeAngle|marker-end|marker-mid|marker-start|markerHeight|markerWidth|mask|max|media|min|numOctaves|offset|opacity|order|overline-position|overline-thickness|pathLength|patternTransform|pointsAtX|pointsAtY|pointsAtZ|points|radius|refX|refY|repeatCount|repeatDur|rotate|rx|ry|r|scale|seed|solid-color|solid-opacity|specularConstant|specularExponent|startOffset|stdDeviation|stop-color|stop-opacity|strikethrough-position|strikethrough-thickness|stroke-dashoffset|stroke-dassharray|stroke-miterlimit|stroke-width|stroke|surfaceScale|tabindex|tableValues|targetX|targetY|textLength|to|transform-origin|transform2|transform|underline-position|underline-thickness|values|viewbox|width|word-spacing|x1|x2|x|y1|y2|y|z))\\b(?![\\w-]))(=)(\")",
+          "beginCaptures": {
+            "2": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "3": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "4": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "end": "([\\D]*?)(\")",
+          "endCaptures": {
+            "1": {
+              "name": "string.quoted.double.html"
+            },
+            "2": {
               "name": "string.quoted.double.html"
             }
           },
@@ -4923,7 +5066,7 @@
       "name": "meta.element.structure.svg.html"
     },
     "tag-deprecated-attribute-altGlyph": {
-      "begin": "(<\\/?)((?i:altGlyph))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:altGlyph))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the altGlyph element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -4932,6 +5075,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -4961,7 +5110,7 @@
       ]
     },
     "tag-deprecated-attribute-animate": {
-      "begin": "(<\\/?)((?i:animate))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:animate))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the animate element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -4970,6 +5119,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -4999,7 +5154,7 @@
       ]
     },
     "tag-deprecated-attribute-animateColor": {
-      "begin": "(<\\/?)((?i:animateColor))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:animateColor))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the animateColor element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5008,6 +5163,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5037,7 +5198,7 @@
       ]
     },
     "tag-deprecated-attribute-animateMotion": {
-      "begin": "(<\\/?)((?i:animateMotion))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:animateMotion))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the animateMotion element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5046,6 +5207,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5075,7 +5242,7 @@
       ]
     },
     "tag-deprecated-attribute-animateTransform": {
-      "begin": "(<\\/?)((?i:animateTransform))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:animateTransform))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the animateTransform element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5084,6 +5251,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5113,7 +5286,7 @@
       ]
     },
     "tag-deprecated-attribute-circle": {
-      "begin": "(<\\/?)((?i:circle))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:circle))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the circle element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5122,6 +5295,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5151,7 +5330,7 @@
       ]
     },
     "tag-deprecated-attribute-clipPath": {
-      "begin": "(<\\/?)((?i:clipPath))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:clipPath))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the clipPath element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5160,6 +5339,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5189,7 +5374,7 @@
       ]
     },
     "tag-deprecated-attribute-cursor": {
-      "begin": "(<\\/?)((?i:cursor))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:cursor))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the cursor element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5198,6 +5383,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5227,7 +5418,7 @@
       ]
     },
     "tag-deprecated-attribute-defs": {
-      "begin": "(<\\/?)((?i:defs))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:defs))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the defs element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5236,6 +5427,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5265,7 +5462,7 @@
       ]
     },
     "tag-deprecated-attribute-ellipse": {
-      "begin": "(<\\/?)((?i:ellipse))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:ellipse))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the ellipse element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5274,6 +5471,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5303,7 +5506,7 @@
       ]
     },
     "tag-deprecated-attribute-feConvolveMatrix": {
-      "begin": "(<\\/?)((?i:feConvolveMatrix))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:feConvolveMatrix))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the feConvolveMatrix element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5312,6 +5515,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5341,7 +5550,7 @@
       ]
     },
     "tag-deprecated-attribute-feDiffuseLighting": {
-      "begin": "(<\\/?)((?i:feDiffuseLighting))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:feDiffuseLighting))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the feDiffuseLighting element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5350,6 +5559,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5379,7 +5594,7 @@
       ]
     },
     "tag-deprecated-attribute-feImage": {
-      "begin": "(<\\/?)((?i:feImage))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:feImage))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the feImage element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5388,6 +5603,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5417,7 +5638,7 @@
       ]
     },
     "tag-deprecated-attribute-feSpecularLighting": {
-      "begin": "(<\\/?)((?i:feSpecularLighting))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:feSpecularLighting))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the feSpecularLighting element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5426,6 +5647,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5455,7 +5682,7 @@
       ]
     },
     "tag-deprecated-attribute-filter": {
-      "begin": "(<\\/?)((?i:filter))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:filter))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the filter element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5464,6 +5691,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5493,7 +5726,7 @@
       ]
     },
     "tag-deprecated-attribute-font-face-format": {
-      "begin": "(<\\/?)((?i:font-face-format))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:font-face-format))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the font-face-format element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5502,6 +5735,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5531,7 +5770,7 @@
       ]
     },
     "tag-deprecated-attribute-font-face-name": {
-      "begin": "(<\\/?)((?i:font-face-name))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:font-face-name))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the font-face-name element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5540,6 +5779,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5569,7 +5814,7 @@
       ]
     },
     "tag-deprecated-attribute-font-face-uri": {
-      "begin": "(<\\/?)((?i:font-face-uri))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:font-face-uri))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the font-face-uri element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5578,6 +5823,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5607,7 +5858,7 @@
       ]
     },
     "tag-deprecated-attribute-font-face": {
-      "begin": "(<\\/?)((?i:font-face))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:font-face))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the font-face element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5616,6 +5867,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5645,7 +5902,7 @@
       ]
     },
     "tag-deprecated-attribute-font": {
-      "begin": "(<\\/?)((?i:font))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:font))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the font element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5654,6 +5911,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5683,7 +5946,7 @@
       ]
     },
     "tag-deprecated-attribute-foreignObject": {
-      "begin": "(<\\/?)((?i:foreignObject))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:foreignObject))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the foreignObject element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5692,6 +5955,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5721,7 +5990,7 @@
       ]
     },
     "tag-deprecated-attribute-g": {
-      "begin": "(<\\/?)((?i:g))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:g))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the g element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5730,6 +5999,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5759,7 +6034,7 @@
       ]
     },
     "tag-deprecated-attribute-glyph": {
-      "begin": "(<\\/?)((?i:glyph))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:glyph))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the glyph element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5768,6 +6043,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5797,7 +6078,7 @@
       ]
     },
     "tag-deprecated-attribute-radialGradient": {
-      "begin": "(<\\/?)((?i:radialGradient))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:radialGradient))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the radialGradient element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5806,6 +6087,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5835,7 +6122,7 @@
       ]
     },
     "tag-deprecated-attribute-hkern": {
-      "begin": "(<\\/?)((?i:hkern))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:hkern))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the hkern element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5844,6 +6131,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5873,7 +6166,7 @@
       ]
     },
     "tag-deprecated-attribute-image": {
-      "begin": "(<\\/?)((?i:image))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:image))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the image element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5882,6 +6175,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5911,7 +6210,7 @@
       ]
     },
     "tag-deprecated-attribute-line": {
-      "begin": "(<\\/?)((?i:line))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:line))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the line element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5920,6 +6219,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5949,7 +6254,7 @@
       ]
     },
     "tag-deprecated-attribute-linearGradient": {
-      "begin": "(<\\/?)((?i:linearGradient))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:linearGradient))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the linearGradient element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5958,6 +6263,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -5987,7 +6298,7 @@
       ]
     },
     "tag-deprecated-attribute-marker": {
-      "begin": "(<\\/?)((?i:marker))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:marker))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the a element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -5996,6 +6307,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6025,7 +6342,7 @@
       ]
     },
     "tag-deprecated-attribute-mask": {
-      "begin": "(<\\/?)((?i:mask))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:mask))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the mask element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6034,6 +6351,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6063,7 +6386,7 @@
       ]
     },
     "tag-deprecated-attribute-missing-glyph": {
-      "begin": "(<\\/?)((?i:missing-glyph))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:missing-glyph))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the missing-glyph element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6072,6 +6395,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6101,7 +6430,7 @@
       ]
     },
     "tag-deprecated-attribute-mpath": {
-      "begin": "(<\\/?)((?i:mpath))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:mpath))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the mpath element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6110,6 +6439,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6139,7 +6474,7 @@
       ]
     },
     "tag-deprecated-attribute-path": {
-      "begin": "(<\\/?)((?i:path))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:path))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the path element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6148,6 +6483,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6177,7 +6518,7 @@
       ]
     },
     "tag-deprecated-attribute-pattern": {
-      "begin": "(<\\/?)((?i:pattern))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:pattern))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the pattern element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6186,6 +6527,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6215,7 +6562,7 @@
       ]
     },
     "tag-deprecated-attribute-polygon": {
-      "begin": "(<\\/?)((?i:polygon))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:polygon))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the polygon element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6224,6 +6571,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6253,7 +6606,7 @@
       ]
     },
     "tag-deprecated-attribute-polyline": {
-      "begin": "(<\\/?)((?i:polyline))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:polyline))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the polyline element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6262,6 +6615,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6291,7 +6650,7 @@
       ]
     },
     "tag-deprecated-attribute-rect": {
-      "begin": "(<\\/?)((?i:rect))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:rect))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the rect element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6300,6 +6659,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6347,7 +6712,7 @@
       ]
     },
     "tag-deprecated-attribute-set": {
-      "begin": "(<\\/?)((?i:set))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:set))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the set element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6356,6 +6721,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6385,7 +6756,7 @@
       ]
     },
     "tag-deprecated-attribute-switch": {
-      "begin": "(<\\/?)((?i:switch))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:switch))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the switch element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6394,6 +6765,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6423,7 +6800,7 @@
       ]
     },
     "tag-deprecated-attribute-symbol": {
-      "begin": "(<\\/?)((?i:symbol))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:symbol))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the symbol element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6432,6 +6809,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6461,7 +6844,7 @@
       ]
     },
     "tag-deprecated-attribute-text": {
-      "begin": "(<\\/?)((?i:text))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:text))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the text element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6470,6 +6853,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6499,7 +6888,7 @@
       ]
     },
     "tag-deprecated-attribute-textPath": {
-      "begin": "(<\\/?)((?i:textPath))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:textPath))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the textPath element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6508,6 +6897,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6537,7 +6932,7 @@
       ]
     },
     "tag-deprecated-attribute-tref": {
-      "begin": "(<\\/?)((?i:tref))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:tref))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the tref element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6546,6 +6941,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6575,7 +6976,7 @@
       ]
     },
     "tag-deprecated-attribute-tspan": {
-      "begin": "(<\\/?)((?i:tspan))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:tspan))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the tspan element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6584,6 +6985,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6613,7 +7020,7 @@
       ]
     },
     "tag-deprecated-attribute-use": {
-      "begin": "(<\\/?)((?i:use))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:use))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the use element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6622,6 +7029,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6651,7 +7064,7 @@
       ]
     },
     "tag-deprecated-attribute-view": {
-      "begin": "(<\\/?)((?i:view))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:view))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the view element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6660,6 +7073,12 @@
         },
         "2": {
           "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {
@@ -6689,7 +7108,7 @@
       ]
     },
     "tag-deprecated-attribute-vkern": {
-      "begin": "(<\\/?)((?i:vkern))\\b(?![\\w-])\\b",
+      "begin": "(<\\/?)((?i:vkern))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the vkern element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
@@ -6698,6 +7117,12 @@
         },
         "2": {
           "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
       "endCaptures": {

@@ -1,10 +1,16 @@
 {
   repository: {
     'tag-deprecated-attribute-animateColor': {
-      begin: '(<\\/?)((?i:animateColor))\\b(?![\\w-])\\b',
+      begin: '(<\\/?)((?i:animateColor))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the animateColor element and it's attributes when within a SVG element",
       end: '(\\/?>)',
       beginCaptures: {
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
         '2': {
           name: 'invalid.deprecated.tag',
         },

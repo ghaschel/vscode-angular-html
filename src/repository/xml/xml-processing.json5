@@ -1,7 +1,7 @@
 {
   repository: {
     'xml-processing': {
-      begin: '(<\\?)(xml)',
+      begin: '(<\\?)(xml)(?!-)',
       captures: {
         '1': {
           name: 'punctuation.definition.tag.html',

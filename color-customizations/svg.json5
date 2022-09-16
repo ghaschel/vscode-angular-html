@@ -1,0 +1,10 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.svg.path.commands',
+      settings: {
+        foreground: '#C586C0',
+      },
+    },
+  ],
+}

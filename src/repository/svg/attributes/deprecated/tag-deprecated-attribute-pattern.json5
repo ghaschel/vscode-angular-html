@@ -1,10 +1,16 @@
 {
   repository: {
     'tag-deprecated-attribute-pattern': {
-      begin: '(<\\/?)((?i:pattern))\\b(?![\\w-])\\b',
+      begin: '(<\\/?)((?i:pattern))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the pattern element and it's attributes when within a SVG element",
       end: '(\\/?>)',
       beginCaptures: {
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
         '2': {
           name: 'entity.name.tag.html',
         },

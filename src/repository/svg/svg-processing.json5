@@ -58,6 +58,9 @@
               name: 'meta.tag.metadata.svg.start.html',
               patterns: [
                 {
+                  include: '#svg-non-string-attributes',
+                },
+                {
                   name: 'meta.attribute.$1.svg',
                   match: '[\\s\\n\\r\\t]*(\\b(baseProfile|contentStyleType|contentScriptType|clip|requiredFeatures|enable-background|zoomAndPan|version|xml:space|xml:lang|xml:base)\\b)(=)?',
                   captures: {

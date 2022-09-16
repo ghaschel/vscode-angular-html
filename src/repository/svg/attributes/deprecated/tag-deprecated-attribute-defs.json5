@@ -1,10 +1,16 @@
 {
   repository: {
     'tag-deprecated-attribute-defs': {
-      begin: '(<\\/?)((?i:defs))\\b(?![\\w-])\\b',
+      begin: '(<\\/?)((?i:defs))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the defs element and it's attributes when within a SVG element",
       end: '(\\/?>)',
       beginCaptures: {
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
         '2': {
           name: 'entity.name.tag.html',
         },

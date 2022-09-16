@@ -59,6 +59,7 @@
     { include: '#regex' },
     { include: '#comment' },
     { include: '#doctype' },
+    { include: '#xml-stylesheet-processing' },
     { include: '#xml-processing' },
     { include: '#cdata' },
     { include: '#entities' },

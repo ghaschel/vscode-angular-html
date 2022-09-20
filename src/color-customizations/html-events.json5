@@ -1,0 +1,8 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.attributes.events',
+      configRule: 'vscode-angular-html.htmlEventsAttributes',
+    },
+  ],
+}

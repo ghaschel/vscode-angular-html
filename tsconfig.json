@@ -1,0 +1,27 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "paths": {
+      "vscode": ["./node_modules/@types/vscode"]
+    },
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2020",
+    "module": "CommonJS",
+    "outDir": "out",
+    "lib": ["ES2020"],
+    "rootDir": "src/ts",
+    "strict": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true
+  }
+}

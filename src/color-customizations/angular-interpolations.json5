@@ -1,0 +1,12 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.interpolation.begin',
+      configRule: 'vscode-angular-html.angularExpression',
+    },
+    {
+      scope: 'html-template.ng.interpolation.end',
+      configRule: 'vscode-angular-html.angularExpression',
+    },
+  ],
+}

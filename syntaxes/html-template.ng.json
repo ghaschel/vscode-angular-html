@@ -1744,7 +1744,7 @@
               "name": "string.quoted.double.html"
             },
             "5": {
-              "name": "string.quoted.double.html html-template.ng.style.language.identifier"
+              "name": "string.quoted.double.html html-template.ng.xmlStylesheet.language.identifier"
             }
           }
         },
@@ -1761,7 +1761,7 @@
               "name": "string.quoted.single.html"
             },
             "5": {
-              "name": "html-template.ng.style.language.identifier"
+              "name": "html-template.ng.xmlStylesheet.language.identifier"
             }
           }
         }
@@ -4890,7 +4890,7 @@
               "name": "string.quoted.double.html"
             },
             "5": {
-              "name": "string.quoted.double.html html-template.ng.style.language.identifier"
+              "name": "string.quoted.double.html html-template.ng.script.language.identifier"
             }
           }
         },
@@ -4907,7 +4907,7 @@
               "name": "string.quoted.single.html"
             },
             "5": {
-              "name": "html-template.ng.style.language.identifier"
+              "name": "html-template.ng.script.language.identifier"
             }
           }
         }
@@ -5902,7 +5902,7 @@
       ]
     },
     "tag-deprecated-attribute-font": {
-      "begin": "(<\\/?)((?i:font))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "begin": "(<\\/?)((?i:font))\\b(?![\\w\\-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the font element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {

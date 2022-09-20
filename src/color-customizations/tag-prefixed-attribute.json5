@@ -1,0 +1,20 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.attributes.prefix.let',
+      configRule: 'vscode-angular-html.AngularPrefixedAttributesLetPrefix',
+    },
+    {
+      scope: 'html-template.ng.attributes.prefix.ref',
+      configRule: 'vscode-angular-html.AngularPrefixedAttributesRefPrefix',
+    },
+    {
+      scope: 'html-template.ng.attributes.suffix.name',
+      configRule: 'vscode-angular-html.AngularPrefixedAttributesVariableName',
+    },
+    {
+      scope: 'html-template.ng.attributes.suffix.rxjs',
+      configRule: 'vscode-angular-html.AngularPrefixedAttributesRxjsSuffix',
+    },
+  ],
+}

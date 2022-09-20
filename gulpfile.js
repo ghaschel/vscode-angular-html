@@ -9,13 +9,13 @@ const prettierConfig = require('./.prettierrc.json');
 const scopes = package.contributes.grammars.map(scope => scope.scopeName);
 
 function watch() {
-  return gulp.watch('./src/**/*.json5', gulp.series(['compile-json']));
+  return gulp.watch('./src/grammar/**/*.json5', gulp.series(['compile-json']));
 }
 
 gulp.task('compile', async done => {
   scopes.forEach(scope => {
     gulp
-      .src('./src/**/*.json5')
+      .src('./src/grammar/**/*.json5')
       .pipe(
         merge({
           fileName: `${scope}.json`,
@@ -39,6 +39,28 @@ gulp.task('compile', async done => {
   done();
 });
 
+gulp.task('compile-color-customizations', async done => {
+  gulp
+    .src('./src/color-customizations/*.json5')
+    .pipe(
+      merge({
+        fileName: 'tokens.json',
+        json5: true,
+        mergeArrays: true,
+        concatArrays: true,
+      }),
+    )
+    .pipe(
+      json5({
+        beautify: true,
+      }),
+    )
+    .pipe(prettier({ ...prettierConfig, editorConfig: true }))
+    .pipe(gulp.dest('./src/ts/token-customization'));
+
+  done();
+});
+
 gulp.task('copy', async done => {
   scopes.forEach(scope => {
     gulp
@@ -47,13 +69,19 @@ gulp.task('copy', async done => {
   });
 
   gulp
+    .src(['./out/**/*'])
+    .pipe(gulp.dest(`${homedir}/.vscode/extensions/ghaschel.vscode-angular-html-${package.version}/out`));
+
+  gulp
     .src(`./package.json`)
     .pipe(gulp.dest(`${homedir}/.vscode/extensions/ghaschel.vscode-angular-html-${package.version}`));
 
   done();
 });
 
-gulp.task('compile-json', gulp.series(['compile', 'copy']));
+gulp.task('compile-json', gulp.series(['compile', 'copy', 'compile-color-customizations']));
+
+gulp.task('compile-color-customizations', gulp.series(['compile-color-customizations']));
 
 gulp.task('watch', () => {
   return watch();

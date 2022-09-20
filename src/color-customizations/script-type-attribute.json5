@@ -1,0 +1,8 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.script.language.identifier',
+      configRule: 'vscode-angular-html.htmlScriptAttributesLanguageIdentifier',
+    },
+  ],
+}

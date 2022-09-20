@@ -1,0 +1,8 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.svg.path.commands',
+      configRule: 'vscode-angular-html.SvgDAttributePathCommands',
+    },
+  ],
+}

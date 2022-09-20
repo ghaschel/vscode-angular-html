@@ -1,0 +1,12 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.entities.amperstand',
+      configRule: 'vscode-angular-html.htmlEntitiesAmperstand',
+    },
+    {
+      scope: 'html-template.ng.entities.semicolon',
+      configRule: 'vscode-angular-html.htmlEntitiesSemicolon',
+    },
+  ],
+}

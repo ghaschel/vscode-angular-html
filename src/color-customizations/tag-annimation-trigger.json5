@@ -1,0 +1,12 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.attributes.animationtrigger.prefix',
+      configRule: 'vscode-angular-html.AngularAnimationTriggerPrefix',
+    },
+    {
+      scope: 'html-template.ng.attributes.animationtrigger.variable',
+      configRule: 'vscode-angular-html.AngularAnimationTriggerVariableName',
+    },
+  ],
+}

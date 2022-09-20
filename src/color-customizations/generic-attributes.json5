@@ -1,0 +1,8 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.attributes.generic',
+      configRule: 'vscode-angular-html.htmlGenericAttributesFollowedByParameter',
+    },
+  ],
+}

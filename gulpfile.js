@@ -44,10 +44,10 @@ gulp.task('compile-color-customizations', async done => {
     .src('./src/color-customizations/*.json5')
     .pipe(
       merge({
+        concatArrays: true,
         fileName: 'tokens.json',
         json5: true,
         mergeArrays: true,
-        concatArrays: true,
       }),
     )
     .pipe(
@@ -56,7 +56,7 @@ gulp.task('compile-color-customizations', async done => {
       }),
     )
     .pipe(prettier({ ...prettierConfig, editorConfig: true }))
-    .pipe(gulp.dest('./src/ts/token-customization'));
+    .pipe(gulp.dest('./src/ts/resources'));
 
   done();
 });

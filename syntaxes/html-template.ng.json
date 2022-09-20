@@ -3069,6 +3069,323 @@
         }
       ]
     },
+    "generic-style-attribute": {
+      "name": "meta.property-list.scss",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+        },
+        "2": {
+          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+        },
+        "3": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)\\b(style)+\\b(=)(\")",
+      "end": ".?(\")",
+      "patterns": [
+        {
+          "begin": "(?<![-a-z]|\\(|, |:)(?=[-a-z])",
+          "end": "$|(?![-a-z])",
+          "name": "meta.property-name.scss",
+          "patterns": [
+            {
+              "match": "\\b(source|scroll-offsets|syntax|initialvalue|inherits)\\b",
+              "name": "support.type.property-name.css"
+            },
+            {
+              "include": "source.css#property-names"
+            }
+          ]
+        },
+        {
+          "begin": "(:)\\s*(?!(\\s*{))",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.separator.key-value.scss"
+            }
+          },
+          "end": "\\s*(;|(?=\"|\\)))",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.terminator.rule.scss"
+            }
+          },
+          "contentName": "meta.property-value.scss",
+          "patterns": [
+            {
+              "match": "\\b(false|true)\\b",
+              "name": "constant.language.boolean.css"
+            },
+            {
+              "begin": "\\b(selector)(\\()",
+              "beginCaptures": {
+                "1": {
+                  "name": "support.function.misc.scss"
+                },
+                "2": {
+                  "name": "punctuation.section.function.scss"
+                }
+              },
+              "end": "(\\))",
+              "endCaptures": {
+                "1": {
+                  "name": "punctuation.section.function.scss"
+                }
+              },
+              "patterns": [
+                {
+                  "include": "source.css.scss#selectors"
+                }
+              ]
+            },
+            {
+              "include": "source.css.scss#general"
+            },
+            {
+              "include": "source.css.scss#property_values"
+            }
+          ]
+        }
+      ]
+    },
+    "tag-events-attribute": {
+      "captures": {
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.events"
+        },
+        "2": {
+          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+        }
+      },
+      "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting)+(=)",
+      "end": "(?<='|\")|(?=[\\s<>`])",
+      "name": "template.ng.events",
+      "patterns": [
+        {
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.html"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#angular-expression"
+            }
+          ],
+          "begin": "\"",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.html"
+            }
+          },
+          "end": "\"",
+          "name": "source.events.html"
+        },
+        {
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.html"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#angular-expression"
+            }
+          ],
+          "begin": "'",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.html"
+            }
+          },
+          "end": "'",
+          "name": "source.events.html"
+        }
+      ]
+    },
+    "tag-generic-attribute": {
+      "name": "string.quoted.double.html",
+      "beginCaptures": {
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
+        },
+        "4": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
+        },
+        "5": {
+          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+        },
+        "6": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_$]+)(:)?([\\w\\-\\_$]+)?\\b(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-interpolations"
+        }
+      ]
+    },
+    "tag-minified-boolean-attributes": {
+      "captures": {
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
+        }
+      },
+      "match": "(?<!\\S)(?!(?:ref|let)?-)([\\w-]+)(:)?([\\w\\-\\_$]+)?\\b(?!=)",
+      "name": "punctuation.definition.tag.end.html",
+      "patterns": []
+    },
+    "tag-minified-boolean-prefixed-attributes": {
+      "captures": {
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
+        },
+        "4": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
+        },
+        "5": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        }
+      },
+      "match": "((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
+    },
+    "tag-prefixed-attribute": {
+      "name": "string.quoted.double.html",
+      "beginCaptures": {
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
+        },
+        "4": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
+        },
+        "5": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        },
+        "6": {
+          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+        },
+        "7": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)([$]*)(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-expression"
+        }
+      ]
+    },
+    "script-type-attribute": {
+      "patterns": [
+        {
+          "match": "[\\s]*(type)(=)(\"(text|application)/(javascript|typescript|coffeescript|dart)\")",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.double.html"
+            },
+            "5": {
+              "name": "string.quoted.double.html html-template.ng.script.language.identifier"
+            }
+          }
+        },
+        {
+          "match": "[\\s]*(type)(=)('(text|application)/(javascript|typescript|coffeescript|dart)')",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.single.html"
+            },
+            "5": {
+              "name": "html-template.ng.script.language.identifier"
+            }
+          }
+        }
+      ]
+    },
+    "style-type-attribute": {
+      "patterns": [
+        {
+          "match": "[\\s]*(type)(=)(\"(text|stylesheet)/(css|scss|less|sass|stylus|postcss)\")",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.double.html"
+            },
+            "5": {
+              "name": "string.quoted.double.html html-template.ng.style.language.identifier"
+            }
+          }
+        },
+        {
+          "match": "[\\s]*(type)(=)('(text|stylesheet)/(css|scss|less|sass|stylus|postcss)')",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.single.html"
+            },
+            "5": {
+              "name": "html-template.ng.style.language.identifier"
+            }
+          }
+        }
+      ]
+    },
     "tag-deprecated-attribute-a": {
       "begin": "(<\\/?)((?i:a))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "end": "(\\/?>)",
@@ -4631,323 +4948,6 @@
         },
         {
           "include": "#tag-stuff"
-        }
-      ]
-    },
-    "generic-style-attribute": {
-      "name": "meta.property-list.scss",
-      "beginCaptures": {
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-        },
-        "2": {
-          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-        },
-        "3": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)\\b(style)+\\b(=)(\")",
-      "end": ".?(\")",
-      "patterns": [
-        {
-          "begin": "(?<![-a-z]|\\(|, |:)(?=[-a-z])",
-          "end": "$|(?![-a-z])",
-          "name": "meta.property-name.scss",
-          "patterns": [
-            {
-              "match": "\\b(source|scroll-offsets|syntax|initialvalue|inherits)\\b",
-              "name": "support.type.property-name.css"
-            },
-            {
-              "include": "source.css#property-names"
-            }
-          ]
-        },
-        {
-          "begin": "(:)\\s*(?!(\\s*{))",
-          "beginCaptures": {
-            "1": {
-              "name": "punctuation.separator.key-value.scss"
-            }
-          },
-          "end": "\\s*(;|(?=\"|\\)))",
-          "endCaptures": {
-            "1": {
-              "name": "punctuation.terminator.rule.scss"
-            }
-          },
-          "contentName": "meta.property-value.scss",
-          "patterns": [
-            {
-              "match": "\\b(false|true)\\b",
-              "name": "constant.language.boolean.css"
-            },
-            {
-              "begin": "\\b(selector)(\\()",
-              "beginCaptures": {
-                "1": {
-                  "name": "support.function.misc.scss"
-                },
-                "2": {
-                  "name": "punctuation.section.function.scss"
-                }
-              },
-              "end": "(\\))",
-              "endCaptures": {
-                "1": {
-                  "name": "punctuation.section.function.scss"
-                }
-              },
-              "patterns": [
-                {
-                  "include": "source.css.scss#selectors"
-                }
-              ]
-            },
-            {
-              "include": "source.css.scss#general"
-            },
-            {
-              "include": "source.css.scss#property_values"
-            }
-          ]
-        }
-      ]
-    },
-    "tag-events-attribute": {
-      "captures": {
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.events"
-        },
-        "2": {
-          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-        }
-      },
-      "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting)+(=)",
-      "end": "(?<='|\")|(?=[\\s<>`])",
-      "name": "template.ng.events",
-      "patterns": [
-        {
-          "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.begin.html"
-            }
-          },
-          "patterns": [
-            {
-              "include": "#angular-expression"
-            }
-          ],
-          "begin": "\"",
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.end.html"
-            }
-          },
-          "end": "\"",
-          "name": "source.events.html"
-        },
-        {
-          "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.begin.html"
-            }
-          },
-          "patterns": [
-            {
-              "include": "#angular-expression"
-            }
-          ],
-          "begin": "'",
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.end.html"
-            }
-          },
-          "end": "'",
-          "name": "source.events.html"
-        }
-      ]
-    },
-    "tag-generic-attribute": {
-      "name": "string.quoted.double.html",
-      "beginCaptures": {
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
-        },
-        "5": {
-          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-        },
-        "6": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_$]+)(:)?([\\w\\-\\_$]+)?\\b(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-interpolations"
-        }
-      ]
-    },
-    "tag-minified-boolean-attributes": {
-      "captures": {
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
-        }
-      },
-      "match": "(?<!\\S)(?!(?:ref|let)?-)([\\w-]+)(:)?([\\w\\-\\_$]+)?\\b(?!=)",
-      "name": "punctuation.definition.tag.end.html",
-      "patterns": []
-    },
-    "tag-minified-boolean-prefixed-attributes": {
-      "captures": {
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
-        },
-        "5": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        }
-      },
-      "match": "((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
-    },
-    "tag-prefixed-attribute": {
-      "name": "string.quoted.double.html",
-      "beginCaptures": {
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
-        },
-        "5": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        },
-        "6": {
-          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-        },
-        "7": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)([$]*)(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-expression"
-        }
-      ]
-    },
-    "script-type-attribute": {
-      "patterns": [
-        {
-          "match": "[\\s]*(type)(=)(\"(text|application)/(javascript|typescript|coffeescript|dart)\")",
-          "captures": {
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-            },
-            "3": {
-              "name": "string.quoted.double.html"
-            },
-            "5": {
-              "name": "string.quoted.double.html html-template.ng.script.language.identifier"
-            }
-          }
-        },
-        {
-          "match": "[\\s]*(type)(=)('(text|application)/(javascript|typescript|coffeescript|dart)')",
-          "captures": {
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-            },
-            "3": {
-              "name": "string.quoted.single.html"
-            },
-            "5": {
-              "name": "html-template.ng.script.language.identifier"
-            }
-          }
-        }
-      ]
-    },
-    "style-type-attribute": {
-      "patterns": [
-        {
-          "match": "[\\s]*(type)(=)(\"(text|stylesheet)/(css|scss|less|sass|stylus|postcss)\")",
-          "captures": {
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-            },
-            "3": {
-              "name": "string.quoted.double.html"
-            },
-            "5": {
-              "name": "string.quoted.double.html html-template.ng.style.language.identifier"
-            }
-          }
-        },
-        {
-          "match": "[\\s]*(type)(=)('(text|stylesheet)/(css|scss|less|sass|stylus|postcss)')",
-          "captures": {
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-            },
-            "3": {
-              "name": "string.quoted.single.html"
-            },
-            "5": {
-              "name": "html-template.ng.style.language.identifier"
-            }
-          }
         }
       ]
     },

@@ -1,5 +1,7 @@
 {
   "search.exclude": {
     "out": true
-  }
+  },
+  "vscode-angular-html.colorCustomizations": true,
+  "editor.codeLensFontSize": 0
 }

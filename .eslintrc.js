@@ -56,7 +56,7 @@ var baseTsRules = {
   'no-caller': 'error',
   'no-case-declarations': 'error',
   'no-confusing-arrow': 'error',
-  'no-console': ['error', { allow: ['warn', 'error'] }],
+  'no-console': ['error', { allow: ['log', 'warn', 'error'] }],
   'no-continue': 'error',
   'no-else-return': ['error', { allowElseIf: true }],
   'no-empty': 'error',
@@ -67,7 +67,7 @@ var baseTsRules = {
   'no-extra-bind': 'error',
   'no-extra-label': 'error',
   'no-floating-decimal': 'error',
-  'no-implicit-coercion': ['error', { disallowTemplateShorthand: true }],
+  'no-implicit-coercion': ['error', { disallowTemplateShorthand: false }],
   'no-implied-eval': 'off',
   'no-invalid-this': 'off',
   'no-iterator': 'error',
@@ -109,7 +109,6 @@ var baseTsRules = {
   'no-shadow': 'off',
   'no-shadow-restricted-names': 'error',
   'no-throw-literal': 'off',
-  'no-undefined': 'error',
   'no-unneeded-ternary': 'error',
   'no-unused-expressions': 'off',
   'no-useless-call': 'error',
@@ -358,7 +357,7 @@ var baseTsRules = {
   '@typescript-eslint/ban-tslint-comment': 'warn',
   '@typescript-eslint/class-literal-property-style': ['error', 'getters'],
   '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
-  '@typescript-eslint/consistent-indexed-object-style': ['error', 'index-signature'],
+  '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
   '@typescript-eslint/explicit-function-return-type': [
     'error',
     {
@@ -399,7 +398,7 @@ var baseTsRules = {
     },
     {
       selector: 'objectLiteralProperty',
-      format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+      format: null,
     },
     {
       selector: 'typeLike',
@@ -426,6 +425,7 @@ var baseTsRules = {
     },
   ],
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing': ['error'],
+  '@typescript-eslint/no-non-null-assertion': ['off'],
   '@typescript-eslint/no-redundant-type-constituents': ['error'],
   '@typescript-eslint/no-unnecessary-condition': ['error'],
   '@typescript-eslint/prefer-enum-initializers': ['error'],

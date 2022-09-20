@@ -32,7 +32,9 @@
   ],
   "main": "./out/extension.js",
   "activationEvents": [
+    "onStartupFinished",
     "onCommand:vscode-angular-html.updateTokenCustomization",
+    "onCommand:vscode-angular-html.disableTokenCustomization",
     "onCommand:vscode-angular-html.addLegacyColorCustomizations"
   ],
   "contributes": {
@@ -279,6 +281,10 @@
       {
         "command": "vscode-angular-html.updateTokenCustomization",
         "title": "vscode-angular-html: Update Token Color Customizations"
+      },
+      {
+        "command": "vscode-angular-html.disableTokenCustomization",
+        "title": "vscode-angular-html: Disable Token Color Customizations"
       },
       {
         "command": "vscode-angular-html.addLegacyColorCustomizations",

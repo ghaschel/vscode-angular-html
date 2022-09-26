@@ -5,7 +5,7 @@ export interface PackageNls {
   'ext.settings.html.htmlDoctypeElement': string;
   'ext.settings.html.htmlEntitiesAmperstand': string;
   'ext.settings.html.htmlEntitiesSemicolon': string;
-  'ext.settings.html.matchesGenericAttributes': string;
+  'ext.settings.html.htmlGenericAttributesFollowedByParameter': string;
   'ext.settings.html.htmlEventsAttributes': string;
   'ext.settings.html.htmlAttributeValueSeparator': string;
   'ext.settings.html.htmlStyleAttributesLanguageIdentifier': string;

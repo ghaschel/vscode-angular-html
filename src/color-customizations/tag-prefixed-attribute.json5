@@ -2,19 +2,19 @@
   textMateRules: [
     {
       scope: 'html-template.ng.attributes.prefix.let',
-      configRule: 'vscode-angular-html.AngularPrefixedAttributesLetPrefix',
+      configRule: 'vscode-angular-html.angularPrefixedAttributesLetPrefix',
     },
     {
       scope: 'html-template.ng.attributes.prefix.ref',
-      configRule: 'vscode-angular-html.AngularPrefixedAttributesRefPrefix',
+      configRule: 'vscode-angular-html.angularPrefixedAttributesRefPrefix',
     },
     {
       scope: 'html-template.ng.attributes.suffix.name',
-      configRule: 'vscode-angular-html.AngularPrefixedAttributesVariableName',
+      configRule: 'vscode-angular-html.angularPrefixedAttributesVariableName',
     },
     {
       scope: 'html-template.ng.attributes.suffix.rxjs',
-      configRule: 'vscode-angular-html.AngularPrefixedAttributesRxjsSuffix',
+      configRule: 'vscode-angular-html.angularPrefixedAttributesRxjsSuffix',
     },
   ],
 }

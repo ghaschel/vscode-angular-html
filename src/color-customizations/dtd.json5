@@ -9,12 +9,12 @@
       configRule: 'vscode-angular-html.dtdDoctypeElement',
     },
     {
-      scope: 'html-template.ng.occurrence.dtd',
-      configRule: 'vscode-angular-html.dtdDoctypeQuantifier',
-    },
-    {
       scope: 'html-template.ng.qualifier.dtd',
       name: 'vscode-angular-html.dtdDoctypeQualifier',
+    },
+    {
+      scope: 'html-template.ng.occurrence.dtd',
+      configRule: 'vscode-angular-html.dtdDoctypeQuantifier',
     },
   ],
 }

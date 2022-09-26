@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 export interface LocaleKeys {
   settings: {
     general: {
@@ -7,54 +8,54 @@ export interface LocaleKeys {
       description: string;
     };
     html: {
-      matchesDoctypeAttr: string;
-      matchesDoctypeExclamation: string;
-      matchesDoctypeElement: string;
-      matchesEntitiesAmperstand: string;
-      matchesEntitiesSemicolon: string;
-      matchesGenericAttributes: string;
-      matchesHtmlEventsAttributes: string;
-      matchesHtmlAttributeValueSeparator: string;
-      matchesHtmlStyleAttributesLanguageIdentifier: string;
-      matchesHtmlScriptAttributeLanguageIdentifier: string;
+      htmlDoctypeAttributes: string;
+      htmlDoctypeExclamation: string;
+      htmlDoctypeElement: string;
+      htmlEntitiesAmperstand: string;
+      htmlEntitiesSemicolon: string;
+      htmlGenericAttributesFollowedByParameter: string;
+      htmlEventsAttributes: string;
+      htmlAttributeValueSeparator: string;
+      htmlStyleAttributesLanguageIdentifier: string;
+      htmlScriptAttributesLanguageIdentifier: string;
       seeHtmlEvents: string;
     };
     angular: {
-      matchesAngularExpression: string;
-      matchesAngularAndAngularMaterialElementTags: string;
-      matchesAngularAnimationTriggerPrefix: string;
-      matchesAngularAnimationTriggerName: string;
-      matchesAngularBindingAttributeDelimiter: string;
-      matchesAngularEventHandlerName: string;
-      matchesAngularOneWayBindingAnimationTriggerDecorator: string;
-      matchesAngularOneWayBindingFirstLevelDepth: string;
-      matchesAngularOneWayBindingSecondLevelDepth: string;
-      matchesAngularOneWayBindingThirdLevelDepth: string;
-      matchesAngularPrefixedAttributesLetPrefix: string;
-      matchesAngularPrefixedAttributesRefPrefix: string;
-      matchesAngularPrefixedAttributesVariableName: string;
-      matchesAngularPrefixedAttributesRxjsSuffix: string;
-      matchesAngularSyntaxSugarAttributesPrefix: string;
-      matchesAngularSyntaxSugarAttributesName: string;
-      matchesAngularTemplateVariablePrefix: string;
-      matchcesAngularTemplateVariableName: string;
+      angularExpression: string;
+      angularAndAngularMaterialElementTags: string;
+      angularAnimationTriggerPrefix: string;
+      angularAnimationTriggerVariableName: string;
+      angularBindingAttributeDelimiter: string;
+      angularEventHandlerName: string;
+      angularOneWayBindingAnimationTriggerDecorator: string;
+      angularOneWayBindingFirstLevelDepth: string;
+      angularOneWayBindingSecondLevelDepth: string;
+      angularOneWayBindingThirdLevelDepth: string;
+      angularPrefixedAttributesLetPrefix: string;
+      angularPrefixedAttributesRefPrefix: string;
+      angularPrefixedAttributesVariableName: string;
+      angularPrefixedAttributesRxjsSuffix: string;
+      angularSyntaxSugarAttributesPrefix: string;
+      angularSyntaxSugarAttributesName: string;
+      angularTemplateVariablePrefix: string;
+      angularTemplateVariableName: string;
       seeAngularTags: string;
     };
     svg: {
-      matchesSvgDAttributePathCommands: string;
+      svgDAttributePathCommands: string;
     };
     xml: {
-      matchesXmlTagNamespaceDivider: string;
-      matchesXmlTagNamespaceSuffix: string;
-      matchesXmlAttributeNamespaceDivider: string;
-      matchesXmlAttributeNamespaceSuffix: string;
-      matchesXmlStylesheetAttributesLanguageIdentifier: string;
+      xmlTagNamespaceDivider: string;
+      xmlTagNamespaceSuffix: string;
+      xmlAttributeNamespaceDivider: string;
+      xmlAttributeNamespaceSuffix: string;
+      xmlStylesheetAttributesLanguageIdentifier: string;
     };
     dtd: {
-      matchesDtdDoctypeExclamation: string;
-      matchesDtdDoctypeElement: string;
-      matchesDtdDoctypeQualifier: string;
-      matchesDtdDoctypeQuantifier: string;
+      dtdDoctypeExclamation: string;
+      dtdDoctypeElement: string;
+      dtdDoctypeQualifier: string;
+      dtdDoctypeQuantifier: string;
     };
   };
   commands: {

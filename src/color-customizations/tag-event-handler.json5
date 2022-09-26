@@ -2,7 +2,7 @@
   textMateRules: [
     {
       scope: 'html-template.ng.attributes.event-handler',
-      configRule: 'vscode-angular-html.AngularEventHandlerName',
+      configRule: 'vscode-angular-html.angularEventHandlerName',
     },
   ],
 }

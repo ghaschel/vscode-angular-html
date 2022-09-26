@@ -2,20 +2,19 @@
   textMateRules: [
     {
       scope: 'html-template.ng.attributes.input-binding.animationTrigger.prefix',
-      configRule: 'vscode-angular-html.OneWayBindingAnimationTriggerDecorator',
+      configRule: 'vscode-angular-html.angularOneWayBindingAnimationTriggerDecorator',
     },
     {
       scope: 'html-template.ng.attributes.input-binding.first-level',
-      configRule: 'vscode-angular-html.AngularOneWayBindingFirstLevelDepth',
+      configRule: 'vscode-angular-html.angularOneWayBindingFirstLevelDepth',
     },
     {
       scope: 'html-template.ng.attributes.input-binding.second-level',
-      configRule: 'vscode-angular-html.AngularOneWayBindingSecondLevelDepth',
+      configRule: 'vscode-angular-html.angularOneWayBindingSecondLevelDepth',
     },
     {
       scope: 'html-template.ng.attributes.input-binding.third-level',
-      configRule: 'vscode-angular-html.AngularOneWayBindingThirdLevelDepth',
+      configRule: 'vscode-angular-html.angularOneWayBindingThirdLevelDepth',
     },
   ],
 }
-

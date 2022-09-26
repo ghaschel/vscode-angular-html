@@ -93,7 +93,7 @@
           "vscode-angular-html.htmlGenericAttributesFollowedByParameter": {
             "type": "string",
             "default": "",
-            "markdownDescription": "%ext.settings.html.matchesGenericAttributes%"
+            "markdownDescription": "%ext.settings.html.htmlGenericAttributesFollowedByParameter%"
           },
           "vscode-angular-html.htmlEventsAttributes": {
             "type": "string",
@@ -125,87 +125,87 @@
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularExpression%"
           },
-          "vscode-angular-html.AngularAndAngularMaterialElementTags": {
+          "vscode-angular-html.angularAndAngularMaterialElementTags": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularAndAngularMaterialElementTags%"
           },
-          "vscode-angular-html.AngularAnimationTriggerPrefix": {
+          "vscode-angular-html.angularAnimationTriggerPrefix": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularAnimationTriggerPrefix%"
           },
-          "vscode-angular-html.AngularAnimationTriggerVariableName": {
+          "vscode-angular-html.angularAnimationTriggerVariableName": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularAnimationTriggerVariableName%"
           },
-          "vscode-angular-html.AngularBindingAttributeDelimiter": {
+          "vscode-angular-html.angularBindingAttributeDelimiter": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularBindingAttributeDelimiter%"
           },
-          "vscode-angular-html.AngularEventHandlerName": {
+          "vscode-angular-html.angularEventHandlerName": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularEventHandlerName%"
           },
-          "vscode-angular-html.AngularOneWayBindingAnimationTriggerDecorator": {
+          "vscode-angular-html.angularOneWayBindingAnimationTriggerDecorator": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularOneWayBindingAnimationTriggerDecorator%"
           },
-          "vscode-angular-html.AngularOneWayBindingFirstLevelDepth": {
+          "vscode-angular-html.angularOneWayBindingFirstLevelDepth": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularOneWayBindingFirstLevelDepth%"
           },
-          "vscode-angular-html.AngularOneWayBindingSecondLevelDepth": {
+          "vscode-angular-html.angularOneWayBindingSecondLevelDepth": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularOneWayBindingSecondLevelDepth%"
           },
-          "vscode-angular-html.AngularOneWayBindingThirdLevelDepth": {
+          "vscode-angular-html.angularOneWayBindingThirdLevelDepth": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularOneWayBindingThirdLevelDepth%"
           },
-          "vscode-angular-html.AngularPrefixedAttributesLetPrefix": {
+          "vscode-angular-html.angularPrefixedAttributesLetPrefix": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesLetPrefix%"
           },
-          "vscode-angular-html.AngularPrefixedAttributesRefPrefix": {
+          "vscode-angular-html.angularPrefixedAttributesRefPrefix": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesRefPrefix%"
           },
-          "vscode-angular-html.AngularPrefixedAttributesVariableName": {
+          "vscode-angular-html.angularPrefixedAttributesVariableName": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesVariableName%"
           },
-          "vscode-angular-html.AngularPrefixedAttributesRxjsSuffix": {
+          "vscode-angular-html.angularPrefixedAttributesRxjsSuffix": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesRxjsSuffix%"
           },
-          "vscode-angular-html.AngularSyntaxSugarAttributesPrefix": {
+          "vscode-angular-html.angularSyntaxSugarAttributesPrefix": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularSyntaxSugarAttributesPrefix%"
           },
-          "vscode-angular-html.AngularSyntaxSugarAttributesName": {
+          "vscode-angular-html.angularSyntaxSugarAttributesName": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularSyntaxSugarAttributesName%"
           },
-          "vscode-angular-html.AngularTemplateVariablePrefix": {
+          "vscode-angular-html.angularTemplateVariablePrefix": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularTemplateVariablePrefix%"
           },
-          "vscode-angular-html.AngularTemplateVariableName": {
+          "vscode-angular-html.angularTemplateVariableName": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularTemplateVariableName%"
@@ -215,7 +215,7 @@
       {
         "title": "SVG",
         "properties": {
-          "vscode-angular-html.SvgDAttributePathCommands": {
+          "vscode-angular-html.svgDAttributePathCommands": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.svg.svgDAttributePathCommands%"
@@ -225,27 +225,27 @@
       {
         "title": "XML",
         "properties": {
-          "vscode-angular-html.XmlTagNamespaceDivider": {
+          "vscode-angular-html.xmlTagNamespaceDivider": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.xml.xmlTagNamespaceDivider%"
           },
-          "vscode-angular-html.XmlTagNamespaceSuffix": {
+          "vscode-angular-html.xmlTagNamespaceSuffix": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.xml.xmlTagNamespaceSuffix%"
           },
-          "vscode-angular-html.XmlAttributeNamespaceDivider": {
+          "vscode-angular-html.xmlAttributeNamespaceDivider": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.xml.xmlAttributeNamespaceDivider%"
           },
-          "vscode-angular-html.XmlAttributeNamespaceSuffix": {
+          "vscode-angular-html.xmlAttributeNamespaceSuffix": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.xml.xmlAttributeNamespaceSuffix%"
           },
-          "vscode-angular-html.XmlStylesheetAttributesLanguageIdentifier": {
+          "vscode-angular-html.xmlStylesheetAttributesLanguageIdentifier": {
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.xml.xmlStylesheetAttributesLanguageIdentifier%"
@@ -335,6 +335,7 @@
     "postcss-syntax": "^0.36.2",
     "prettier": "^2.7.1",
     "pretty-quick": "^3.1.3",
+    "rimraf": "^3.0.2",
     "standard-version": "^9.5.0",
     "stylelint": "^14.12.1",
     "stylelint-config-html": "^1.1.0",

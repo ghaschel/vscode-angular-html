@@ -2,11 +2,11 @@
   "settings": {
     "html": {
       "htmlDoctypeAttributes": "\n\n* <&#x21;DOCTYPE `html` `PUBLIC`>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\n",
-      "doctypeExclamation": "\n\n* <`!`DOCTYPE html PUBLIC>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\n",
+      "htmlDoctypeExclamation": "\n\n* <`!`DOCTYPE html PUBLIC>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\n",
       "htmlDoctypeElement": "\n\n* <&#x21;`DOCTYPE` html PUBLIC>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\n",
       "htmlEntitiesAmperstand": "\n\n* `&`amp;\n\n* `&`#174;\n\n```html\n\n&amp;\n&#174;\n\n\n```\n",
       "htmlEntitiesSemicolon": "\n\n* &amp;amp`;`\n\n* &amp;#174`;`\n\n```html\n\n&amp;\n&#174;\n\n\n```\n",
-      "htmlGenericAttributes": "\n\n* &#60;div `class`=\"class\"&#62;&#60;/div&#62;\n\n* &#60;div `generic-attribute`=\"parameter\"&#62;&#60;/div&#62;\n\n```html\n\n<div class=\"class\"></div>\n<div generic-attribute=\"parameter\"></div>\n\n\n```\n",
+      "htmlGenericAttributesFollowedByParameter": "\n\n* &#60;div `class`=\"class\"&#62;&#60;/div&#62;\n\n* &#60;div `generic-attribute`=\"parameter\"&#62;&#60;/div&#62;\n\n```html\n\n<div class=\"class\"></div>\n<div generic-attribute=\"parameter\"></div>\n\n\n```\n",
       "htmlEventsAttributes": "\n\n* &#60;div `onpointercancel`=\"callback()\"&#62;&#60;/div&#62;\n\n* &#60;div `onclick`=\"callback('with-parameters', variable)\"&#62;&#60;/div&#62;\n\n```html\n\n<div onpointercancel=\"callback()\"></div>\n<div onclick=\"callback('with-parameters', variable)\"></div>\n\n\n```\n",
       "htmlAttributeValueSeparator": "\n\n* &#60;div onpointercancel`=`\"callback()\"&#62;&#60;/div&#62;\n\n* &#60;div class`=`\"test\"&#62;&#60;/div&#62;\n\n```html\n\n<div onpointercancel=\"callback()\"></div>\n<div class=\"test\"></div>\n\n\n```\n",
       "htmlStyleAttributesLanguageIdentifier": "\n\n* &#60;style type=\"text/`css`\"&#62;&#60;/style&#62;\n\n* &#60;style type=\"text/`scss`\"&#62;&#60;/style&#62;\n\n* &#60;style type=\"text/`sass`\"&#62;&#60;/style&#62;\n\n```html\n\n<style type=\"text/css\"></style>\n<style type=\"text/scss\"></style>\n<style type=\"text/sass\"></style>\n<style type=\"text/stylus\"></style>\n<style type=\"text/less\"></style>\n<style type=\"text/postcss\"></style>\n\n\n```\n",
@@ -14,39 +14,39 @@
     },
     "angular": {
       "angularExpression": "\n\n* `{{`condition?.met() ? 'value' : 'otherwise'`}}`\n\n* &#60;div class=\"class `{{`condition?.met() ? 'value' : 'otherwise'`}}`\"&#62;&#60;/div&#62;\n\n```html\n\n<div class=\"class {{condition?.met() ? 'value' : 'otherwise'}}\">\n\t{{condition?.met() ? 'value' : 'otherwise'}}\n</div>\n\n\n```\n",
-      "AngularAndAngularMaterialElementTags": "\n\n* &#60;`ng-container`&#62;&#60;/`ng-container`&#62;\n\n* &#60;`mat-action-list`&#62;&#60;/`mat-action-list`&#62;\n\n```html\n\n<ng-container></ng-container>\n<mat-action-list></mat-action-list>\n\n\n```\n",
-      "AngularAnimationTriggerPrefix": "\n\n* &#60;div `@`animationTrigger&#62;&#60;/div&#62;\n\n```html\n\n<div @animationTrigger></div>\n\n\n```\n",
-      "AngularAnimationTriggerVariableName": "\n\n* &#60;div @`animationTrigger`&#62;&#60;/div&#62;\n\n```html\n\n<div @animationTrigger></div>\n\n\n```\n",
-      "AngularBindingAttributeDelimiter": "\n\n* &#60;div `(`click`)`=\"callback()\"&#62;&#60;/div&#62;\n\n* &#60;div `[`input`]`=\"element\"&#62;&#60;/div&#62;\n\n* &#60;div `[(`doubleWay`)]`=\"binding\"&#62;&#60;/div&#62;\n\n```html\n\n<div (click)=\"callback()\"></div>\n<div [input]=\"element\"></div>\n<div [(doubleWay)]=\"binding\"></div>\n<div ([nonStandardDoubleWay])=\"binding\"></div>\n\n\n```\n",
-      "AngularEventHandlerName": "\n\n* &#60;div (`click`)=\"callback()\"&#62;&#60;/div&#62;\n\n```html\n\n<div (click)=\"callback()\"></div>\n\n\n```\n",
-      "AngularOneWayBindingAnimationTriggerDecorator": "\n\n* &#60;div [`@`visibility]=\"getMenuState()\"&#62;&#60;/div&#62;\n\n```html\n\n<div [@visibility]=\"getMenuState()\"></div>\n\n\n```\n",
-      "AngularOneWayBindingFirstLevelDepth": "\n\n* &#60;div [`style`.font-size.px]=\"10\"&#62;&#60;/div&#62;\n\n* &#60;div [`property`]=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div [style.font-size.px]=\"10\"></div>\n<div [property]=\"element\"></div>\n\n\n```\n",
-      "AngularOneWayBindingSecondLevelDepth": "\n\n* &#60;div [style.`font-size`.px]=\"10\"&#62;&#60;/div&#62;\n\n```html\n\n<div [style.font-size.px]=\"10\"></div>\n\n\n```\n",
-      "AngularOneWayBindingThirdLevelDepth": "\n\n* &#60;div [style.font-size.`px`]=\"10\"&#62;&#60;/div&#62;\n\n```html\n\n<div [style.font-size.px]=\"10\"></div>\n\n\n```\n",
-      "AngularPrefixedAttributesLetPrefix": "\n\n* &#60;div `let-`variable=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div let-variable=\"element\"></div>\n\n\n```\n",
-      "AngularPrefixedAttributesRefPrefix": "\n\n* &#60;div `ref-`variable=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div ref-variable=\"element\"></div>\n\n\n```\n",
-      "AngularPrefixedAttributesVariableName": "\n\n* &#60;div ref-`variable`=\"element\"&#62;&#60;/div&#62;\n\n* &#60;div let-`variable`=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div ref-variable=\"element\"></div>\n<div let-variable=\"element\"></div>\n\n\n```\n",
-      "AngularPrefixedAttributesRxjsSuffix": "\n\n* &#60;div let-variable`$`=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div let-variable$=\"element\"></div>\n\n\n```\n",
-      "AngularSyntaxSugarAttributesPrefix": "\n\n* &#60;div `*`ngFor=\"let obs of observable | async as test\"&#62;&#60;/div&#62;\n\n```html\n\n<div \n\t*ngFor=\"let obs of observable | async as test\"\n\t *matHeaderCellDef\n>\n</div>\n\n\n```\n",
-      "AngularSyntaxSugarAttributesName": "\n\n* &#60;div *`ngFor`=\"let obs of observable | async as test\"&#62;&#60;/div&#62;\n\n```html\n\n<div \n\t*ngFor=\"let obs of observable | async as test\"\n\t *matHeaderCellDef\n>\n</div>\n\n\n```\n",
-      "AngularTemplateVariablePrefix": "\n\n* &#60;div `#`menu=\"parsedMenu\"&#62;&#60;/div&#62;\n\n```html\n\n<div #menu=\"parsedMenu\"></div>\n\n\n```\n",
-      "AngularTemplateVariableName": "\n\n* &#60;div #`menu`=\"parsedMenu\"&#62;&#60;/div&#62;\n\n```html\n\n<div #menu=\"parsedMenu\"></div>\n\n\n```\n"
+      "angularAndAngularMaterialElementTags": "\n\n* &#60;`ng-container`&#62;&#60;/`ng-container`&#62;\n\n* &#60;`mat-action-list`&#62;&#60;/`mat-action-list`&#62;\n\n```html\n\n<ng-container></ng-container>\n<mat-action-list></mat-action-list>\n\n\n```\n",
+      "angularAnimationTriggerPrefix": "\n\n* &#60;div `@`animationTrigger&#62;&#60;/div&#62;\n\n```html\n\n<div @animationTrigger></div>\n\n\n```\n",
+      "angularAnimationTriggerVariableName": "\n\n* &#60;div @`animationTrigger`&#62;&#60;/div&#62;\n\n```html\n\n<div @animationTrigger></div>\n\n\n```\n",
+      "angularBindingAttributeDelimiter": "\n\n* &#60;div `(`click`)`=\"callback()\"&#62;&#60;/div&#62;\n\n* &#60;div `[`input`]`=\"element\"&#62;&#60;/div&#62;\n\n* &#60;div `[(`doubleWay`)]`=\"binding\"&#62;&#60;/div&#62;\n\n```html\n\n<div (click)=\"callback()\"></div>\n<div [input]=\"element\"></div>\n<div [(doubleWay)]=\"binding\"></div>\n<div ([nonStandardDoubleWay])=\"binding\"></div>\n\n\n```\n",
+      "angularEventHandlerName": "\n\n* &#60;div (`click`)=\"callback()\"&#62;&#60;/div&#62;\n\n```html\n\n<div (click)=\"callback()\"></div>\n\n\n```\n",
+      "angularOneWayBindingAnimationTriggerDecorator": "\n\n* &#60;div [`@`visibility]=\"getMenuState()\"&#62;&#60;/div&#62;\n\n```html\n\n<div [@visibility]=\"getMenuState()\"></div>\n\n\n```\n",
+      "angularOneWayBindingFirstLevelDepth": "\n\n* &#60;div [`style`.font-size.px]=\"10\"&#62;&#60;/div&#62;\n\n* &#60;div [`property`]=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div [style.font-size.px]=\"10\"></div>\n<div [property]=\"element\"></div>\n\n\n```\n",
+      "angularOneWayBindingSecondLevelDepth": "\n\n* &#60;div [style.`font-size`.px]=\"10\"&#62;&#60;/div&#62;\n\n```html\n\n<div [style.font-size.px]=\"10\"></div>\n\n\n```\n",
+      "angularOneWayBindingThirdLevelDepth": "\n\n* &#60;div [style.font-size.`px`]=\"10\"&#62;&#60;/div&#62;\n\n```html\n\n<div [style.font-size.px]=\"10\"></div>\n\n\n```\n",
+      "angularPrefixedAttributesLetPrefix": "\n\n* &#60;div `let-`variable=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div let-variable=\"element\"></div>\n\n\n```\n",
+      "angularPrefixedAttributesRefPrefix": "\n\n* &#60;div `ref-`variable=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div ref-variable=\"element\"></div>\n\n\n```\n",
+      "angularPrefixedAttributesVariableName": "\n\n* &#60;div ref-`variable`=\"element\"&#62;&#60;/div&#62;\n\n* &#60;div let-`variable`=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div ref-variable=\"element\"></div>\n<div let-variable=\"element\"></div>\n\n\n```\n",
+      "angularPrefixedAttributesRxjsSuffix": "\n\n* &#60;div let-variable`$`=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div let-variable$=\"element\"></div>\n\n\n```\n",
+      "angularSyntaxSugarAttributesPrefix": "\n\n* &#60;div `*`ngFor=\"let obs of observable | async as test\"&#62;&#60;/div&#62;\n\n```html\n\n<div \n\t*ngFor=\"let obs of observable | async as test\"\n\t *matHeaderCellDef\n>\n</div>\n\n\n```\n",
+      "angularSyntaxSugarAttributesName": "\n\n* &#60;div *`ngFor`=\"let obs of observable | async as test\"&#62;&#60;/div&#62;\n\n```html\n\n<div \n\t*ngFor=\"let obs of observable | async as test\"\n\t *matHeaderCellDef\n>\n</div>\n\n\n```\n",
+      "angularTemplateVariablePrefix": "\n\n* &#60;div `#`menu=\"parsedMenu\"&#62;&#60;/div&#62;\n\n```html\n\n<div #menu=\"parsedMenu\"></div>\n\n\n```\n",
+      "angularTemplateVariableName": "\n\n* &#60;div #`menu`=\"parsedMenu\"&#62;&#60;/div&#62;\n\n```html\n\n<div #menu=\"parsedMenu\"></div>\n\n\n```\n"
     },
     "svg": {
-      "SvgDAttributePathCommands": "\n\n* &#60;path d=\"`M`202.35,163.64`l`-4.38-13.1`h`-2.13`v`-3.85`h`9.1`v`3.85`h`-1.82`l`2.05,6.2`l`3.41-10.05\" /&#62;\n\n```html\n\n<svg>\n\t<path d=\"M202.35,163.64l-4.38-13.1h-2.13v-3.85h9.1v3.85h-1.82l2.05,6.2l3.41-10.05\" />\n</svg>\n\n\n```\n"
+      "svgDAttributePathCommands": "\n\n* &#60;path d=\"`M`202.35,163.64`l`-4.38-13.1`h`-2.13`v`-3.85`h`9.1`v`3.85`h`-1.82`l`2.05,6.2`l`3.41-10.05\" /&#62;\n\n```html\n\n<svg>\n\t<path d=\"M202.35,163.64l-4.38-13.1h-2.13v-3.85h9.1v3.85h-1.82l2.05,6.2l3.41-10.05\" />\n</svg>\n\n\n```\n"
     },
     "xml": {
-      "XmlTagNamespaceDivider": "\n\n* &#60;li`:`title&#62;Book Title&#60;/li`:`title&#62;\n\n```html\n\n<li:title>Book Title</li:title>\n\n\n```\n",
-      "XmlTagNamespaceSuffix": "\n\n* &#60;li:`title`&#62;Book Title&#60;/li:`title`&#62;\n\n```html\n\n<li:title>Book Title</li:title>\n\n\n```\n",
-      "XmlAttributeNamespaceDivider": "\n\n* &#60;li:book xmlns`:`li=\"bookURI\"&#62;[...]&#60;/li:book&#62;\n\n```html\n\n<li:book xmlns:li=\"bookURI\">[...]</li:book>\n\n\n```\n",
-      "XmlAttributeNamespaceSuffix": "\n\n* &#60;li:book xmlns:`li`=\"bookURI\"&#62;[...]&#60;/li:book&#62;\n\n```html\n\n<li:book xmlns:li=\"bookURI\">[...]</li:book>\n\n\n```\n",
-      "XmlStylesheetAttributesLanguageIdentifier": "\n\n* <&#63;xml-stylesheet ref=\"shakespeare.xsl\" type=\"text/`xsl`\"?>\n\n* <&#63;xml-stylesheet ref=\"shakespeare.css\" type=\"text/`css`\"?>\n\n* <&#63;xml-stylesheet ref=\"shakespeare.xml\" type=\"text/`xml`\"?>\n\n```html\n\n<?xml-stylesheet ref=\"shakespeare.xsl\" type=\"text/xsl\"?>\n<?xml-stylesheet ref=\"shakespeare.css\" type=\"text/css\"?>\n<?xml-stylesheet ref=\"shakespeare.xml\" type=\"text/xml\"?>\n\n\n```\n"
+      "xmlTagNamespaceDivider": "\n\n* &#60;li`:`title&#62;Book Title&#60;/li`:`title&#62;\n\n```html\n\n<li:title>Book Title</li:title>\n\n\n```\n",
+      "xmlTagNamespaceSuffix": "\n\n* &#60;li:`title`&#62;Book Title&#60;/li:`title`&#62;\n\n```html\n\n<li:title>Book Title</li:title>\n\n\n```\n",
+      "xmlAttributeNamespaceDivider": "\n\n* &#60;li:book xmlns`:`li=\"bookURI\"&#62;[...]&#60;/li:book&#62;\n\n```html\n\n<li:book xmlns:li=\"bookURI\">[...]</li:book>\n\n\n```\n",
+      "xmlAttributeNamespaceSuffix": "\n\n* &#60;li:book xmlns:`li`=\"bookURI\"&#62;[...]&#60;/li:book&#62;\n\n```html\n\n<li:book xmlns:li=\"bookURI\">[...]</li:book>\n\n\n```\n",
+      "xmlStylesheetAttributesLanguageIdentifier": "\n\n* <&#63;xml-stylesheet ref=\"shakespeare.xsl\" type=\"text/`xsl`\"?>\n\n* <&#63;xml-stylesheet ref=\"shakespeare.css\" type=\"text/`css`\"?>\n\n* <&#63;xml-stylesheet ref=\"shakespeare.xml\" type=\"text/`xml`\"?>\n\n```html\n\n<?xml-stylesheet ref=\"shakespeare.xsl\" type=\"text/xsl\"?>\n<?xml-stylesheet ref=\"shakespeare.css\" type=\"text/css\"?>\n<?xml-stylesheet ref=\"shakespeare.xml\" type=\"text/xml\"?>\n\n\n```\n"
     },
     "dtd": {
-      "DtdDoctypeExclamation": "\n\n* <`!`ELEMENT BANNER (#PCDATA)>\n\n* <`!`ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>\n\t<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n]>\n\n\n```\n",
-      "DtdDoctypeElement": "\n\n* <&#x21;`ELEMENT` `BANNER` (#PCDATA)>\n\n* <&#x21;`ATTLIST` TVSCHEDULE NAME CDATA #REQUIRED>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>\n\t<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n]>\n\n\n```\n",
-      "DtdDoctypeQualifier": "\n\n* <&#x21;ELEMENT DAY (`DATE`,(`HOLIDAY`|`PROGRAMSLOT`+)+)>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>\n\t<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n]>\n\n\n```\n",
-      "DtdDoctypeQuantifier": "\n\n* <&#x21;ELEMENT DAY (DATE,(HOLIDAY`|`PROGRAMSLOT`+`)`*`)>\n\n* <&#x21;ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION`?`)>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)*)>\n\t<!ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION?)>\n]>\n\n\n```\n"
+      "dtdDoctypeExclamation": "\n\n* <`!`ELEMENT BANNER (#PCDATA)>\n\n* <`!`ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>\n\t<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n]>\n\n\n```\n",
+      "dtdDoctypeElement": "\n\n* <&#x21;`ELEMENT` `BANNER` (#PCDATA)>\n\n* <&#x21;`ATTLIST` TVSCHEDULE NAME CDATA #REQUIRED>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>\n\t<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n]>\n\n\n```\n",
+      "dtdDoctypeQualifier": "\n\n* <&#x21;ELEMENT DAY (`DATE`,(`HOLIDAY`|`PROGRAMSLOT`+)+)>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>\n\t<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n]>\n\n\n```\n",
+      "dtdDoctypeQuantifier": "\n\n* <&#x21;ELEMENT DAY (DATE,(HOLIDAY`|`PROGRAMSLOT`+`)`*`)>\n\n* <&#x21;ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION`?`)>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)*)>\n\t<!ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION?)>\n]>\n\n\n```\n"
     }
   }
 }

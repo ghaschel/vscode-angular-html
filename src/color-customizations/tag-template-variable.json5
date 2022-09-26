@@ -2,11 +2,11 @@
   textMateRules: [
     {
       scope: 'html-template.ng.attributes.template.prefix',
-      configRule: 'vscode-angular-html.AngularTemplateVariablePrefix',
+      configRule: 'vscode-angular-html.angularTemplateVariablePrefix',
     },
     {
       scope: 'html-template.ng.attributes.template.variable',
-      configRule: 'vscode-angular-html.AngularTemplateVariableName',
+      configRule: 'vscode-angular-html.angularTemplateVariableName',
     },
   ],
 }

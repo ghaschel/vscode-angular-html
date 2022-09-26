@@ -2,11 +2,11 @@
   textMateRules: [
     {
       scope: 'punctuation.definition.ng-binding-name.begin.html',
-      configRule: 'vscode-angular-html.AngularBindingAttributeDelimiter',
+      configRule: 'vscode-angular-html.angularBindingAttributeDelimiter',
     },
     {
       scope: 'punctuation.definition.ng-binding-name.end.html',
-      configRule: 'vscode-angular-html.AngularBindingAttributeDelimiter',
+      configRule: 'vscode-angular-html.angularBindingAttributeDelimiter',
     },
   ],
 }

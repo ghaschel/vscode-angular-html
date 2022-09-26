@@ -3,7 +3,7 @@
     'style-type-attribute': {
       patterns: [
         {
-          match: '[\\s]*(type)(=)("(text|stylesheet)/(css|scss|less|sass|stylus|postcss)")',
+          match: '[\\s]*(type)(=)("(text|stylesheet)/(css|scss|less|sass|stylus|styl|postcss)")',
           captures: {
             '1': {
               name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
@@ -20,7 +20,7 @@
           },
         },
         {
-          match: "[\\s]*(type)(=)('(text|stylesheet)/(css|scss|less|sass|stylus|postcss)')",
+          match: '[\\s]*(lang)(=)("(css|scss|less|sass|stylus|styl|postcss)")',
           captures: {
             '1': {
               name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
@@ -31,7 +31,7 @@
             '3': {
               name: 'string.quoted.single.html',
             },
-            '5': {
+            '4': {
               name: 'html-template.ng.style.language.identifier',
             },
           },

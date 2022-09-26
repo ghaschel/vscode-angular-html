@@ -78,7 +78,7 @@ const addLegacyColorCustomizations = async (): Promise<void> => {
   await vscode.workspace.getConfiguration('vscode-angular-html').update('angularExpression', '#D16969', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('htmlDoctypeExclamation', '#C586C0', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('htmlDoctypeElement', '#D7BA7D', true);
-  await vscode.workspace.getConfiguration('vscode-angular-html').update('doctypeAttributes', '#4EC9B0', true);
+  await vscode.workspace.getConfiguration('vscode-angular-html').update('htmlDoctypeAttributes', '#4EC9B0', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('dtdDoctypeExclamation', '#C586C0', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('dtdDoctypeElement', '#D7BA7D', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('dtdDoctypeQuantifier', '#D16969', true);

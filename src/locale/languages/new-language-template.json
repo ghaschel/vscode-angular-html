@@ -1,0 +1,70 @@
+{
+  "settings": {
+    "general": {
+      "leaveEmpty": ""
+    },
+    "colorCustomizations": {
+      "description": ""
+    },
+    "html": {
+      "matchesDoctypeAttr": "",
+      "matchesDoctypeExclamation": "",
+      "matchesDoctypeElement": "",
+      "matchesEntitiesAmperstand": "",
+      "matchesEntitiesSemicolon": "",
+      "matchesGenericAttributes": "",
+      "matchesHtmlEventsAttributes": "",
+      "matchesHtmlAttributeValueSeparator": "",
+      "matchesHtmlStyleAttributesLanguageIdentifier": "",
+      "matchesHtmlScriptAttributeLanguageIdentifier": "",
+      "seeHtmlEvents": ""
+    },
+    "angular": {
+      "matchesAngularExpression": "",
+      "matchesAngularAndAngularMaterialElementTags": "",
+      "matchesAngularAnimationTriggerPrefix": "",
+      "matchesAngularAnimationTriggerName": "",
+      "matchesAngularBindingAttributeDelimiter": "",
+      "matchesAngularEventHandlerName": "",
+      "matchesAngularOneWayBindingAnimationTriggerDecorator": "",
+      "matchesAngularOneWayBindingFirstLevelDepth": "",
+      "matchesAngularOneWayBindingSecondLevelDepth": "",
+      "matchesAngularOneWayBindingThirdLevelDepth": "",
+      "matchesAngularPrefixedAttributesLetPrefix": "",
+      "matchesAngularPrefixedAttributesRefPrefix": "",
+      "matchesAngularPrefixedAttributesVariableName": "",
+      "matchesAngularPrefixedAttributesRxjsSuffix": "",
+      "matchesAngularSyntaxSugarAttributesPrefix": "",
+      "matchesAngularSyntaxSugarAttributesName": "",
+      "matchesAngularTemplateVariablePrefix": "",
+      "matchcesAngularTemplateVariableName": "",
+      "seeAngularTags": ""
+    },
+    "svg": {
+      "matchesSvgDAttributePathCommands": ""
+    },
+    "xml": {
+      "matchesXmlTagNamespaceDivider": "",
+      "matchesXmlTagNamespaceSuffix": "",
+      "matchesXmlAttributeNamespaceDivider": "",
+      "matchesXmlAttributeNamespaceSuffix": "",
+      "matchesXmlStylesheetAttributesLanguageIdentifier": ""
+    },
+    "dtd": {
+      "matchesDtdDoctypeExclamation": "",
+      "matchesDtdDoctypeElement": "",
+      "matchesDtdDoctypeQualifier": "",
+      "matchesDtdDoctypeQuantifier": ""
+    }
+  },
+  "commands": {
+    "updateTokenCustomization": "",
+    "disableTokenCustomization": "",
+    "addLegacyColorCustomizations": ""
+  },
+  "messages": {
+    "updateNotice": "",
+    "enableLegacyColors": "",
+    "goToSettingsPage": ""
+  }
+}

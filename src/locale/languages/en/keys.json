@@ -1,0 +1,70 @@
+{
+  "settings": {
+    "general": {
+      "leaveEmpty": "Leave it empty to disable for this item only"
+    },
+    "colorCustomizations": {
+      "description": "Manage extra matched characters color customizations. Set to `false` to turn it off"
+    },
+    "html": {
+      "matchesDoctypeAttr": "Matches the DOCTYPE attributes:",
+      "matchesDoctypeExclamation": "Matches the exclamation point preceding the DOCTYPE tag:",
+      "matchesDoctypeElement": "Matches the DOCTYPE tag:",
+      "matchesEntitiesAmperstand": "Matches the amperstand in HTML entities:",
+      "matchesEntitiesSemicolon": "Matches the semicolon in HTML entities:",
+      "matchesGenericAttributes": "Matches HTML attributes followed by equals and a parameter.\nIt does not matches the HTML and SVG events attributes.",
+      "matchesHtmlEventsAttributes": "Matches HTML event attributes.",
+      "matchesHtmlAttributeValueSeparator": "Matches HTML attribute-value separator (=).\nThis is a global match.",
+      "matchesHtmlStyleAttributesLanguageIdentifier": "Matches HTML Style Type Attribute language identifier.",
+      "matchesHtmlScriptAttributeLanguageIdentifier": "Matches HTML Script Type Attribute language identifier.",
+      "seeHtmlEvents": "See HTML and SVG Events"
+    },
+    "angular": {
+      "matchesAngularExpression": "Matches the curly braces preceding and succeeding an angular expression.\nFor both template string interpolation and temlate expressions.",
+      "matchesAngularAndAngularMaterialElementTags": "Matches Angular-and-Angular-Material-specific element tags.",
+      "matchesAngularAnimationTriggerPrefix": "Matches Angular animation trigger attribute prefix.",
+      "matchesAngularAnimationTriggerName": "Matches Angular animation trigger attribute variable name.",
+      "matchesAngularBindingAttributeDelimiter": "Matches Angular binding parenthesis and brackets delimiters.\nThis matches all angular bindings delimiters.",
+      "matchesAngularEventHandlerName": "Matches Angular event name.",
+      "matchesAngularOneWayBindingAnimationTriggerDecorator": "Matches Angular animation trigger decorator inside one-way bindings.",
+      "matchesAngularOneWayBindingFirstLevelDepth": "Matches Angular fisrt level depth properties in one-way bindings.",
+      "matchesAngularOneWayBindingSecondLevelDepth": "Matches Angular second level depth properties in one-way bindings.",
+      "matchesAngularOneWayBindingThirdLevelDepth": "Matches Angular third level depth properties in one-way bindings.",
+      "matchesAngularPrefixedAttributesLetPrefix": "Matches Angular let- prefixed attributes' prefix.",
+      "matchesAngularPrefixedAttributesRefPrefix": "Matches Angular ref- prefixed attributes' prefix.",
+      "matchesAngularPrefixedAttributesVariableName": "Matches Angular ref- and let- prefixed attributes' variable name.",
+      "matchesAngularPrefixedAttributesRxjsSuffix": "Matches Angular ref- and let- prefixed attributes' RxJS suffix.",
+      "matchesAngularSyntaxSugarAttributesPrefix": "Matches Angular syntax sugar attribute decorator.",
+      "matchesAngularSyntaxSugarAttributesName": "Matches Angular syntax sugar attribute name.",
+      "matchesAngularTemplateVariablePrefix": "Matches Angular template variable decorator.",
+      "matchcesAngularTemplateVariableName": "Matches Angular template variable name.",
+      "seeAngularTags": "See Angular-specific tags"
+    },
+    "svg": {
+      "matchesSvgDAttributePathCommands": "Matches SVG d attribute path commands."
+    },
+    "xml": {
+      "matchesXmlTagNamespaceDivider": "Matches XML/HTML element namespace colon separator.",
+      "matchesXmlTagNamespaceSuffix": "Matches XML/HTML element namespace suffix.",
+      "matchesXmlAttributeNamespaceDivider": "Matches XML/HTML attribute namespace colon separator.",
+      "matchesXmlAttributeNamespaceSuffix": "Matches XML/HTML attribute namespace suffix.",
+      "matchesXmlStylesheetAttributesLanguageIdentifier": "Matches xml-stylesheet Type Attribute language identifier."
+    },
+    "dtd": {
+      "matchesDtdDoctypeExclamation": "Matches the exclamation point preceding DTD element tags:",
+      "matchesDtdDoctypeElement": "Matches the DTD element tags:",
+      "matchesDtdDoctypeQualifier": "Matches the DTD qualifiers:",
+      "matchesDtdDoctypeQuantifier": "Matches the DTD quantifiers:"
+    }
+  },
+  "commands": {
+    "updateTokenCustomization": "vscode-angular-html: Update color customizations",
+    "disableTokenCustomization": "vscode-angular-html: Disable color customizations",
+    "addLegacyColorCustomizations": "vscode-angular-html: Set legacy color customizations"
+  },
+  "messages": {
+    "updateNotice": "vscode-angular-html was updated and it now allows color customizations 🎉!  Please check-out the settings page :)",
+    "enableLegacyColors": "Enable Legacy Colors",
+    "goToSettingsPage": "Go to Settings Page"
+  }
+}

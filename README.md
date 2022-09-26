@@ -21,20 +21,26 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 
 ## Summary
 
-- [Angular directives](#angular-directives)
-- [Doctype](#doctype)
-- [Comments](#comments)
-- [Invalid attributes](#invalid-attributes)
-- [Angular interpolations](#angular-interpolations)
-- [Angular structural tags](#angular-structural-tags)
-- [Entities](#html-entities)
-- [Regex](#regex)
-- [Deprecated tags](#deprecated-tags)
-- [DOM Events](#dom-events)
-- [Style inline](#style-inline)
-- [Style tag](#style-tag)
-- [Script tags](#script-tags)
-- [Generic attributes](#generic-attributes)
+- [vscode-angular-html](#vscode-angular-html)
+  - [Angular HTML Template Syntax Highlighting](#angular-html-template-syntax-highlighting)
+  - [Summary](#summary)
+    - [Angular directives](#angular-directives)
+    - [Doctype](#doctype)
+    - [Comments](#comments)
+    - [Invalid attributes see complete list](#invalid-attributes-see-complete-list)
+    - [Angular interpolations (with safe navigation operator)](#angular-interpolations-with-safe-navigation-operator)
+    - [Angular structural tags](#angular-structural-tags)
+    - [Entities](#entities)
+    - [Regex](#regex)
+    - [Deprecated tags see complete list](#deprecated-tags-see-complete-list)
+    - [DOM events see complete list](#dom-events-see-complete-list)
+    - [Style inline](#style-inline)
+    - [Style tag (scss/stylus)](#style-tag-scssstylus)
+    - [Script tag](#script-tag)
+    - [Generic attributes](#generic-attributes)
+  - [Disclaimer](#disclaimer)
+  - [Changelog](#changelog)
+- [title](#title)
 
 ### Angular directives
 
@@ -59,7 +65,6 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 <span name="invalid-attributes"></span>
 
 <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/invalid-attributes.png" title="Invalid attributes" alt="Invalid attributes" />
-
 
 ### Angular interpolations (with safe navigation operator)
 
@@ -130,3 +135,43 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 > Based in the original work of [dunstontc](https://github.com/dunstontc/vscode-angular-syntax)
 
 ## [Changelog](CHANGELOG.md)
+
+# title
+
+```less
+@variable: test;
+@variable: test;
+
+body {
+  &:extends(.test) {
+    color: gray;
+    display: block;
+  }
+}
+```
+
+```scss
+@mixin test {
+  $variable: test;
+
+  @return $variable;
+}
+
+body {
+  color: gray;
+  display: block;
+
+  @include test();
+}
+```
+
+```stylus
+test()
+  $variable
+
+body
+  color gray
+  display block
+  test()
+
+```

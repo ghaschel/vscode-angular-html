@@ -6,7 +6,7 @@
           name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.begin.html',
         },
         '2': {
-          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html html-template.ng.attributes.input-binding.animationTrigger-decorator',
+          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html html-template.ng.attributes.input-binding.animationTrigger.prefix',
         },
         '3': {
           name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html	entity.other.ng-binding-name.$3.html html-template.ng.attributes.input-binding.first-level',
@@ -42,3 +42,4 @@
     },
   },
 }
+

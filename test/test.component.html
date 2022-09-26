@@ -517,17 +517,10 @@ GENERIC ATTRIBUTES
 
 <button [style.font-size.em]="isSpecial ? 3 : 1">Big</button>
 
-<style type="text/css">
+<style lang="css" type="text/css">
   /*
   * CSS
   */
-
-  /*<![CDATA[*/
-  body {
-    background: #eee;
-  }
-
-  /*]]>*/
 
   :root {
     --blue: #1e90ff;
@@ -535,8 +528,8 @@ GENERIC ATTRIBUTES
   }
 
   body {
-    background-color: var(--blue);
     display: block;
+    background-color: var(--blue);
   }
 
   h2 {
@@ -544,110 +537,96 @@ GENERIC ATTRIBUTES
   }
 
   .container {
-    color: var(--blue);
-    background-color: var(--white);
     padding: 15px;
+    background-color: var(--white);
+    color: var(--blue);
   }
-
 </style>
 
-<style type="text/postcss">
+<style type="text/less" lang="less">
   /*
-   * PostCSS
+   * LESS
    */
 
-   /*<![CDATA[*/
-		body {
-			background: #eee;
-		}
-	/*]]>*/
+   @red: red;
 
-  @custom-media --md (width >= 640px);
-  @custom-heading :--heading h1, h2, h3, h4, h5, h6;
+   .test {
+      color: @red;
+   }
 
-  :--heading {
-    font-size: 125%;
+  @header-font: Arial;
+
+  h1 {
+    display: block;
+    color: @red;
+
+    &:extend(.test) {
+      font-family: @header-font;
+    }
   }
 
-  @media (--md) {
-    font-size: 150%;
+  .concrete {
+    .test {
+      font-family: @header-font;
+    }
   }
 </style>
 
-<style type="text/sass">
-  /*
-   * SASS
-   */
-
-   /*<![CDATA[*/
-		body
-			background: #eee
-	/*]]>*/
-
-  $base-color: #c6538c
-  $border-dark: rgba($base-color, 0.88)
-
-  .alert
-    border: 1px solid $border-dark
-</style>
-
-<style type="text/scss">
+<style lang="scss" type="text/scss" test="test">
   /*
    * SCSS
    */
-
-	/*<![CDATA[*/
-		body {
-			background: #eee;
-		}
-	/*]]>*/
 
   $base-color: #c6538c;
   $border-dark: rgba($base-color, 0.88);
 
   .alert {
-    border: 1px solid $border-dark;
+    .test {
+      border: 1px solid $border-dark;
+    }
   }
 </style>
 
-<style type="text/stylus">
+<style type="text/postcss" lang="postcss">
   /*
-   * Stylus
+   * PostCSS
    */
 
-	/*<![CDATA[*/
-		body
-			background: #eee;
-	/*]]>*/
+  @custom-media --md (width >= 640px);
+  @custom-heading :--heading h1, h2, h3, h4, h5, h6;
 
+  :--heading {
+    font-size: 1.2rem;
+  }
+
+  @media (--md) {
+    font-size: 1.6rem;
+  }
+</style>
+
+<style type="text/stylus" lang="stylus">
+  // Stylus
 
   $font-size = 14px
-  font-stack = "Lucida Grande", Arial, sans-serif
+  $font-stack = "Lucida Grande", Arial, sans-serif
 
   body
-    font $font-size font-stack
+    span
+      font $font-size $font-stack
+
 </style>
 
-<style type="text/less">
+<style lang="sass" type="text/sass">
   /*
-   * LESS
+   * SASS
    */
 
-   /*<![CDATA[*/
-		body {
-			background: #eee;
-		}
-	/*]]>*/
+  $base-color: #c6538c
+  $border-dark: rgba($base-color, 0.88)
 
-  @header-font: Arial;
+  .alert
+    border: 1px solidsdasa $border-dark
 
-  h1 {
-    font-family: @header-font;
-  }
-
-  .concrete {
-    font-family: @header-font;
-  }
 </style>
 
 <script type="text/javascript">
@@ -665,7 +644,7 @@ GENERIC ATTRIBUTES
 
 </script>
 
-<script type="text/coffeescript">
+<script type="text/coffeescript" lang="coffeescript">
   ###
   ## CoffeeScript
   ###

@@ -12,7 +12,7 @@ function watch() {
   return gulp.watch('./src/grammar/**/*.json5', gulp.series(['compile-json']));
 }
 
-gulp.task('compile', async done => {
+gulp.task('compile', done => {
   scopes.forEach(scope => {
     gulp
       .src('./src/grammar/**/*.json5')
@@ -39,7 +39,7 @@ gulp.task('compile', async done => {
   done();
 });
 
-gulp.task('compile-color-customizations', async done => {
+gulp.task('compile-color-customizations', done => {
   gulp
     .src('./src/color-customizations/*.json5')
     .pipe(
@@ -61,7 +61,7 @@ gulp.task('compile-color-customizations', async done => {
   done();
 });
 
-gulp.task('copy', async done => {
+gulp.task('copy', done => {
   scopes.forEach(scope => {
     gulp
       .src(`./syntaxes/${scope}.json`)
@@ -79,14 +79,8 @@ gulp.task('copy', async done => {
   done();
 });
 
-gulp.task('compile-json', gulp.series(['compile', 'copy', 'compile-color-customizations']));
-
+gulp.task('copy', gulp.series(['copy']));
+gulp.task('compile-json', gulp.series(['compile']));
 gulp.task('compile-color-customizations', gulp.series(['compile-color-customizations']));
-
-gulp.task('watch', () => {
-  return watch();
-});
-
-gulp.task('default', () => {
-  return watch();
-});
+gulp.task('watch', () => watch());
+gulp.task('default', () => watch());

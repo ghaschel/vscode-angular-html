@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-style-stylus': {
-      begin: '(^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type="text/postcss"|[\\s\\n\\D\\W]*type="text/scss"|[\\s\\n\\D\\W]*type="text/css"|[\\s\\n\\D\\W]*type="text/sass"|[\\s\\n\\D\\W]*type="text/less"))(?=[\\s\\n]*type="text/stylus"))',
+      begin: '((^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type="text/postcss"|[\\s\\n\\D\\W]*type="text/scss"|[\\s\\n\\D\\W]*type="text/css"|[\\s\\n\\D\\W]*type="text/sass"|[\\s\\n\\D\\W]*type="text/less"))(?=[\\s\\n]*type="text/styl(us)?"))|(^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*lang="postcss"|[\\s\\n\\D\\W]*lang="scss"|[\\s\n\\D\\W]*lang="css"|[\\s\\n\\D\\W]*lang="sass"|[\\s\\n\\D\\W]*lang="less"))(?=[\\s\\n]*lang="styl(us)?")))',
       beginCaptures: {
         '1': {
           name: 'punctuation.whitespace.embedded.leading.html',
@@ -84,3 +84,4 @@
     },
   },
 }
+

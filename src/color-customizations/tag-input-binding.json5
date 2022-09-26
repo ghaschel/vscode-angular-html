@@ -1,7 +1,7 @@
 {
   textMateRules: [
     {
-      scope: 'html-template.ng.attributes.input-binding.animationTrigger-decorator',
+      scope: 'html-template.ng.attributes.input-binding.animationTrigger.prefix',
       configRule: 'vscode-angular-html.OneWayBindingAnimationTriggerDecorator',
     },
     {
@@ -18,3 +18,4 @@
     },
   ],
 }
+

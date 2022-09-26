@@ -1,0 +1,12 @@
+{
+  textMateRules: [
+    {
+      scope: 'punctuation.definition.ng-binding-name.begin.html',
+      configRule: 'vscode-angular-html.AngularBindingAttributeDelimiter',
+    },
+    {
+      scope: 'punctuation.definition.ng-binding-name.end.html',
+      configRule: 'vscode-angular-html.AngularBindingAttributeDelimiter',
+    },
+  ],
+}

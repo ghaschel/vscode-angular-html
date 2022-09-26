@@ -10,7 +10,7 @@
     },
     {
       scope: 'html-template.ng.attribute.doctype',
-      configRule: 'vscode-angular-html.doctypeAttributes',
+      configRule: 'vscode-angular-html.htmlDoctypeAttributes',
     },
   ],
 }

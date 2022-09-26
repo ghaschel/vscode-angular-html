@@ -2,6 +2,49 @@
   "search.exclude": {
     "out": true
   },
-  "vscode-angular-html.colorCustomizations": true,
-  "editor.codeLensFontSize": 0
+  "eslint.options": {
+    "extensions": [
+      ".ts"
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "[typescript]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  "stylelint.snippet": [
+    "css",
+    "postcss",
+    "stylus",
+    "styl",
+    "scss",
+    "sass",
+    "less",
+    "html"
+  ],
+  "scss.validate": false,
+  "css.validate": false,
+  "less.validate": false,
+  "stylelint.enable": true,
+  "stylelint.packageManager": "npm",
+  "stylelint.configFile": ".stylelintrc",
+  "stylelint.validate": [
+    "html"
+  ]
+  //   "postcss",
+  //   "less",
+  //   "pcss",
+  //   "stylus",
+  //   "styl",
+  //   "css",
+  //   "sass",
+  //   "scss"
+  // ]
 }

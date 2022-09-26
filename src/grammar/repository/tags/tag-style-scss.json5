@@ -1,7 +1,7 @@
 {
   repository: {
     'tag-style-scss': {
-      begin: '(^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type="text/postcss"|[\\s\\n\\D\\W]*type="text/sass"|[\\s\\n\\D\\W]*type="text/css"|[\\s\\n\\D\\W]*type="text/stylus"|[\\s\\n\\D\\W]*type="text/less"))(?=[\\s\\n]*type="text/scss"))',
+      begin: '((^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type="text/postcss"|[\\s\\n\\D\\W]*type="text/sass"|[\\s\\n\\D\\W]*type="text/css"|[\\s\\n\\D\\W]*type="text/stylus"|[\\s\\n\\D\\W]*type="text/less"))(?=[\\s\\n]*type="text/scss"))|(^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*lang="postcss"|[\\s\\n\\D\\W]*lang="sass"|[\\s\n\\D\\W]*lang="css"|[\\s\\n\\D\\W]*lang="stylus"|[\\s\\n\\D\\W]*lang="less"|[\\s\\n\\D\\W]*lang="styl"))(?=[\\s\\n]*lang="scss")))',
       beginCaptures: {
         '1': {
           name: 'punctuation.whitespace.embedded.leading.html',
@@ -84,3 +84,4 @@
     },
   },
 }
+

@@ -385,6 +385,10 @@ var baseTsRules = {
       format: ['camelCase'],
       leadingUnderscore: 'allow',
       trailingUnderscore: 'allow',
+      filter: {
+        regex: '[.]',
+        match: false,
+      },
     },
     {
       selector: 'enumMember',
@@ -481,7 +485,7 @@ var tsRules = {
 
 module.exports = {
   root: true,
-  ignorePatterns: ['.eslintrc.js'],
+  ignorePatterns: ['*.js'],
   plugins: ['@typescript-eslint', 'prettier', 'import'],
   settings: {
     'import/resolver': {
@@ -492,7 +496,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['!(*.spec|*.spec.cy).ts'],
+      files: ['*.ts'],
       parserOptions: {
         project: ['tsconfig.json'],
         createDefaultProgram: true,

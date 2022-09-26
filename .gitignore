@@ -6,3 +6,4 @@ node_modules
 test/externalGrammars/*.json
 test/externalGrammars/*.plist
 *.todo
+out/

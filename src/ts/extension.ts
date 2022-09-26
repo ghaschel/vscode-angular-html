@@ -1,7 +1,3 @@
-/*
- * The module 'vscode' contains the VS Code extensibility API
- * Import the module and reference it with the alias vscode in your code below
- */
 import {
   addLegacyColorCustomizations,
   disableTokenCustomization,
@@ -9,22 +5,28 @@ import {
 } from './token-customization';
 
 import * as vscode from 'vscode';
+import { localize, init as nlsInit } from 'vscode-nls-i18n';
 
 const activate = function activate(context: vscode.ExtensionContext): void {
+  nlsInit(context.extensionPath);
+
   vscode.window
     .showInformationMessage(
-      'vscode-angular-html was updated and it now allows color customizations 🎉!  Please, check-out the settings page :)',
-      'Enable Legacy Colors',
-      'Go to Settings Page',
+      localize(
+        'ext.messages.updateNotice',
+        'vscode-angular-html was updated and it now allows color customizations 🎉!  Please, check-out the settings page :)',
+      ),
+      localize('ext.messages.enableLegacyColors', 'Enable Legacy Colors'),
+      localize('ext.messages.goToSettingsPage', 'Go to Settings Page'),
     )
     .then(value => {
       switch (value) {
-        case 'Enable Legacy Colors': {
+        case localize('ext.messages.enableLegacyColors', 'Enable Legacy Colors'): {
           vscode.commands.executeCommand('vscode-angular-html.addLegacyColorCustomizations');
           break;
         }
 
-        case 'Go to Settings Page': {
+        case localize('ext.messages.goToSettingsPage', 'Go to Settings Page'): {
           vscode.commands.executeCommand('workbench.action.openSettings', '@ext:ghaschel.vscode-angular-html');
           break;
         }

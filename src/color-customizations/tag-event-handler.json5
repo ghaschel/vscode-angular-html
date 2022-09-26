@@ -1,14 +1,6 @@
 {
   textMateRules: [
     {
-      scope: 'punctuation.definition.ng-binding-name.begin.html',
-      configRule: 'vscode-angular-html.AngularEventHandlerParenthesis',
-    },
-    {
-      scope: 'punctuation.definition.ng-binding-name.end.html',
-      configRule: 'vscode-angular-html.AngularEventHandlerParenthesis',
-    },
-    {
       scope: 'html-template.ng.attributes.event-handler',
       configRule: 'vscode-angular-html.AngularEventHandlerName',
     },

@@ -14,9 +14,11 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "compile-json": "gulp compile-json",
+    "compile": "npm run compile-color-customizations && npm run compile-json:prod && npm run compile-locale && tsc -p ./",
+    "watch": "npm run compile-color-customizations && npm run compile-json:prod && npm run compile-locale && tsc -watch -p ./",
+    "compile-locale": "ts-node src/locale",
+    "compile-json:dev": "gulp compile-json && gulp copy",
+    "compile-json:prod": "gulp compile-json",
     "compile-color-customizations": "gulp compile-color-customizations",
     "publish": "standard-version && git push --follow-tags origin master && vsce publish",
     "postinstall": "node scripts/postinstall.js",
@@ -54,8 +56,7 @@
         "title": "Color Customizations",
         "properties": {
           "vscode-angular-html.colorCustomizations": {
-            "title": "Enable color customizations",
-            "markdownDescription": "Manage extra matched characters color customizations. Set to `false` to turn it off",
+            "markdownDescription": "%ext.settings.colorCustomizations.description%",
             "type": "boolean",
             "default": false
           }
@@ -64,55 +65,55 @@
       {
         "title": "HTML",
         "properties": {
-          "vscode-angular-html.doctypeAttributes": {
+          "vscode-angular-html.htmlDoctypeAttributes": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches the DOCTYPE attributes:\n\n* <&#x21;DOCTYPE `html` `PUBLIC`>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.html.htmlDoctypeAttributes%"
           },
           "vscode-angular-html.htmlDoctypeExclamation": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches the exclamation point preceding the DOCTYPE tag:\n\n* <`!`DOCTYPE html PUBLIC>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.html.htmlDoctypeExclamation%"
           },
           "vscode-angular-html.htmlDoctypeElement": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches the DOCTYPE tag:\n\n* <&#x21;`DOCTYPE` html PUBLIC>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.html.htmlDoctypeElement%"
           },
           "vscode-angular-html.htmlEntitiesAmperstand": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches the amperstand in HTML entities:\n\n* `&`amp;\n\n* `&`#174;\n\n```html\n\n&amp;\n&#174;\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.html.htmlEntitiesAmperstand%"
           },
           "vscode-angular-html.htmlEntitiesSemicolon": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches the semicolon in HTML entities:\n\n* &amp;amp`;`\n\n* &amp;#174`;`\n\n```html\n\n&amp;\n&#174;\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.html.htmlEntitiesSemicolon%"
           },
           "vscode-angular-html.htmlGenericAttributesFollowedByParameter": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches HTML attributes followed by equals and a parameter.\nIt does not matches the HTML and SVG events attributes. [See HTML Events](#ADD-LINK).\n\n* &#60;div `class`=\"class\"&#62;&#60;/div&#62;\n\n* &#60;div `generic-attribute`=\"parameter\"&#62;&#60;/div&#62;\n\n```html\n\n<div class=\"class\"></div>\n<div generic-attribute=\"parameter\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.html.matchesGenericAttributes%"
           },
           "vscode-angular-html.htmlEventsAttributes": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches HTML event attributes.\n[See HTML Events](#ADD-LINK).\n\n* &#60;div `onpointercancel`=\"callback()\"&#62;&#60;/div&#62;\n\n* &#60;div `onclick`=\"callback('with-parameters', variable)\"&#62;&#60;/div&#62;\n\n```html\n\n<div onpointercancel=\"callback()\"></div>\n<div onclick=\"callback('with-parameters', variable)\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.html.htmlEventsAttributes%"
           },
           "vscode-angular-html.htmlAttributeValueSeparator": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches HTML attribute-value separator (=).\nThis is a global match.\n\n* &#60;div onpointercancel`=`\"callback()\"&#62;&#60;/div&#62;\n\n* &#60;div class`=`\"test\"&#62;&#60;/div&#62;\n\n```html\n\n<div onpointercancel=\"callback()\"></div>\n<div class=\"test\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.html.htmlAttributeValueSeparator%"
           },
           "vscode-angular-html.htmlStyleAttributesLanguageIdentifier": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches HTML Style Type Attribute language identifier.\n\n* &#60;style type=\"text/`css`\"&#62;&#60;/style&#62;\n\n* &#60;style type=\"text/`scss`\"&#62;&#60;/style&#62;\n\n* &#60;style type=\"text/`sass`\"&#62;&#60;/style&#62;\n\n```html\n\n<style type=\"text/css\"></style>\n<style type=\"text/scss\"></style>\n<style type=\"text/sass\"></style>\n<style type=\"text/stylus\"></style>\n<style type=\"text/less\"></style>\n<style type=\"text/postcss\"></style>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.html.htmlStyleAttributesLanguageIdentifier%"
           },
           "vscode-angular-html.htmlScriptAttributesLanguageIdentifier": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches HTML Script Type Attribute language identifier.\n\n* &#60;script type=\"text/`javascript`\"&#62;&#60;/script&#62;\n\n* &#60;script type=\"text/`typescript`\"&#62;&#60;/script&#62;\n\n* &#60;script type=\"application/`dart`\"&#62;&#60;/script&#62;\n\n```html\n\n<script type=\"text/javascript\"></script>\n<script type=\"text/typescript\"></script>\n<script type=\"text/coffeescript\"></script>\n<script type=\"application/dart\"></script>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.html.htmlScriptAttributesLanguageIdentifier%"
           }
         }
       },
@@ -122,92 +123,92 @@
           "vscode-angular-html.angularExpression": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches the curly braces preceding and succeeding an angular expression.\nFor both template string interpolation and temlate expressions.\n\n* `{{`condition?.met() ? 'value' : 'otherwise'`}}`\n\n* &#60;div class=\"class `{{`condition?.met() ? 'value' : 'otherwise'`}}`\"&#62;&#60;/div&#62;\n\n```html\n\n<div class=\"class {{condition?.met() ? 'value' : 'otherwise'}}\">\n\t{{condition?.met() ? 'value' : 'otherwise'}}\n</div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularExpression%"
           },
           "vscode-angular-html.AngularAndAngularMaterialElementTags": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular-and-Angular-Material-specific element tags.\n[See Angular-specific tags)(#ADD-LINK).\n\n* &#60;`ng-container`&#62;&#60;/`ng-container`&#62;\n\n* &#60;`mat-action-list`&#62;&#60;/`mat-action-list`&#62;\n\n```html\n\n<ng-container></ng-container>\n<mat-action-list></mat-action-list>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularAndAngularMaterialElementTags%"
           },
           "vscode-angular-html.AngularAnimationTriggerPrefix": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular animation trigger attribute prefix.\n\n* &#60;div `@`animationTrigger&#62;&#60;/div&#62;\n\n```html\n\n<div @animationTrigger></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularAnimationTriggerPrefix%"
           },
           "vscode-angular-html.AngularAnimationTriggerVariableName": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular animation trigger attribute variable name.\n\n* &#60;div @`animationTrigger`&#62;&#60;/div&#62;\n\n```html\n\n<div @animationTrigger></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularAnimationTriggerVariableName%"
           },
           "vscode-angular-html.AngularBindingAttributeDelimiter": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular binding's parenthesis and brackets delimiters.\nThis matches all angular bindings delimiters.\n\n* &#60;div `(`click`)`=\"callback()\"&#62;&#60;/div&#62;\n\n* &#60;div `[`input`]`=\"element\"&#62;&#60;/div&#62;\n\n* &#60;div `[(`doubleWay`)]`=\"binding\"&#62;&#60;/div&#62;\n\n```html\n\n<div (click)=\"callback()\"></div>\n<div [input]=\"element\"></div>\n<div [(doubleWay)]=\"binding\"></div>\n<div ([nonStandardDoubleWay])=\"binding\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularBindingAttributeDelimiter%"
           },
           "vscode-angular-html.AngularEventHandlerName": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular event handler's name.\n\n* &#60;div (`click`)=\"callback()\"&#62;&#60;/div&#62;\n\n```html\n\n<div (click)=\"callback()\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularEventHandlerName%"
           },
           "vscode-angular-html.AngularOneWayBindingAnimationTriggerDecorator": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular animation trigger decorator inside one-way bindings.\n\n* &#60;div [`@`visibility]=\"getMenuState()\"&#62;&#60;/div&#62;\n\n```html\n\n<div [@visibility]=\"getMenuState()\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularOneWayBindingAnimationTriggerDecorator%"
           },
           "vscode-angular-html.AngularOneWayBindingFirstLevelDepth": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular fisrt level depth properties in one-way bindings.\n\n* &#60;div [`style`.font-size.px]=\"10\"&#62;&#60;/div&#62;\n\n* &#60;div [`property`]=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div [style.font-size.px]=\"10\"></div>\n<div [property]=\"element\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularOneWayBindingFirstLevelDepth%"
           },
           "vscode-angular-html.AngularOneWayBindingSecondLevelDepth": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular second level depth properties in one-way bindings.\n\n* &#60;div [style.`font-size`.px]=\"10\"&#62;&#60;/div&#62;\n\n```html\n\n<div [style.font-size.px]=\"10\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularOneWayBindingSecondLevelDepth%"
           },
           "vscode-angular-html.AngularOneWayBindingThirdLevelDepth": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular third level depth properties in one-way bindings.\n\n* &#60;div [style.font-size.`px`]=\"10\"&#62;&#60;/div&#62;\n\n```html\n\n<div [style.font-size.px]=\"10\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularOneWayBindingThirdLevelDepth%"
           },
           "vscode-angular-html.AngularPrefixedAttributesLetPrefix": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular let- prefixed attributes' prefix.\n\n* &#60;div `let-`variable=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div let-variable=\"element\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesLetPrefix%"
           },
           "vscode-angular-html.AngularPrefixedAttributesRefPrefix": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular ref- prefixed attributes' prefix.\n\n* &#60;div `ref-`variable=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div ref-variable=\"element\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesRefPrefix%"
           },
           "vscode-angular-html.AngularPrefixedAttributesVariableName": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular ref- and let- prefixed attributes' variable name.\n\n* &#60;div ref-`variable`=\"element\"&#62;&#60;/div&#62;\n\n* &#60;div let-`variable`=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div ref-variable=\"element\"></div>\n<div let-variable=\"element\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesVariableName%"
           },
           "vscode-angular-html.AngularPrefixedAttributesRxjsSuffix": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular ref- and let- prefixed attributes' RXJS suffix.\n\n* &#60;div let-variable`$`=\"element\"&#62;&#60;/div&#62;\n\n```html\n\n<div let-variable$=\"element\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesRxjsSuffix%"
           },
           "vscode-angular-html.AngularSyntaxSugarAttributesPrefix": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular sytax sugar attributes' prefix.\n\n* &#60;div `*`ngFor=\"let obs of observable | async as test\"&#62;&#60;/div&#62;\n\n```html\n\n<div \n\t*ngFor=\"let obs of observable | async as test\"\n\t *matHeaderCellDef\n>\n</div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularSyntaxSugarAttributesPrefix%"
           },
           "vscode-angular-html.AngularSyntaxSugarAttributesName": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular sytax sugar attributes' name.\n\n* &#60;div *`ngFor`=\"let obs of observable | async as test\"&#62;&#60;/div&#62;\n\n```html\n\n<div \n\t*ngFor=\"let obs of observable | async as test\"\n\t *matHeaderCellDef\n>\n</div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularSyntaxSugarAttributesName%"
           },
           "vscode-angular-html.AngularTemplateVariablePrefix": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular template variable prefix.\n\n* &#60;div `#`menu=\"parsedMenu\"&#62;&#60;/div&#62;\n\n```html\n\n<div #menu=\"parsedMenu\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularTemplateVariablePrefix%"
           },
           "vscode-angular-html.AngularTemplateVariableName": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches Angular template variable name.\n\n* &#60;div #`menu`=\"parsedMenu\"&#62;&#60;/div&#62;\n\n```html\n\n<div #menu=\"parsedMenu\"></div>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.angular.angularTemplateVariableName%"
           }
         }
       },
@@ -217,7 +218,7 @@
           "vscode-angular-html.SvgDAttributePathCommands": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches SVG d attribute path commands.\n\n* &#60;path d=\"`M`202.35,163.64`l`-4.38-13.1`h`-2.13`v`-3.85`h`9.1`v`3.85`h`-1.82`l`2.05,6.2`l`3.41-10.05\" /&#62;\n\n```html\n\n<svg>\n\t<path d=\"M202.35,163.64l-4.38-13.1h-2.13v-3.85h9.1v3.85h-1.82l2.05,6.2l3.41-10.05\" />\n</svg>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.svg.svgDAttributePathCommands%"
           }
         }
       },
@@ -227,27 +228,27 @@
           "vscode-angular-html.XmlTagNamespaceDivider": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches XML/HTML element namespace colon separator.\n\n* &#60;li`:`title&#62;Book Title&#60;/li`:`title&#62;\n\n```html\n\n<li:title>Book Title</li:title>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.xml.xmlTagNamespaceDivider%"
           },
           "vscode-angular-html.XmlTagNamespaceSuffix": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches XML/HTML element namespace suffix.\n\n* &#60;li:`title`&#62;Book Title&#60;/li:`title`&#62;\n\n```html\n\n<li:title>Book Title</li:title>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.xml.xmlTagNamespaceSuffix%"
           },
           "vscode-angular-html.XmlAttributeNamespaceDivider": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches XML/HTML attribute namespace colon separator.\n\n* &#60;li:book xmlns`:`li=\"bookURI\"&#62;[...]&#60;/li:book&#62;\n\n```html\n\n<li:book xmlns:li=\"bookURI\">[...]</li:book>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.xml.xmlAttributeNamespaceDivider%"
           },
           "vscode-angular-html.XmlAttributeNamespaceSuffix": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches XML/HTML attribute namespace suffix.\n\n* &#60;li:book xmlns:`li`=\"bookURI\"&#62;[...]&#60;/li:book&#62;\n\n```html\n\n<li:book xmlns:li=\"bookURI\">[...]</li:book>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.xml.xmlAttributeNamespaceSuffix%"
           },
           "vscode-angular-html.XmlStylesheetAttributesLanguageIdentifier": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches xml-stylesheet Type Attribute language identifier.\n\n* <&#63;xml-stylesheet ref=\"shakespeare.xsl\" type=\"text/`xsl`\"?>\n\n* <&#63;xml-stylesheet ref=\"shakespeare.css\" type=\"text/`css`\"?>\n\n* <&#63;xml-stylesheet ref=\"shakespeare.xml\" type=\"text/`xml`\"?>\n\n```html\n\n<?xml-stylesheet ref=\"shakespeare.xsl\" type=\"text/xsl\"?>\n<?xml-stylesheet ref=\"shakespeare.css\" type=\"text/css\"?>\n<?xml-stylesheet ref=\"shakespeare.xml\" type=\"text/xml\"?>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.xml.xmlStylesheetAttributesLanguageIdentifier%"
           }
         }
       },
@@ -257,22 +258,22 @@
           "vscode-angular-html.dtdDoctypeExclamation": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches the exclamation point preceding DTD element tags:\n\n* <`!`ELEMENT BANNER (#PCDATA)>\n\n* <`!`ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>\n\t<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n]>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.dtd.dtdDoctypeExclamation%"
           },
           "vscode-angular-html.dtdDoctypeElement": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches the DTD element tags:\n\n* <&#x21;`ELEMENT` `BANNER` (#PCDATA)>\n\n* <&#x21;`ATTLIST` TVSCHEDULE NAME CDATA #REQUIRED>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>\n\t<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n]>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.dtd.dtdDoctypeElement%"
           },
           "vscode-angular-html.dtdDoctypeQualifier": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches the DTD qualifiers:\n\n* <&#x21;ELEMENT DAY (`DATE`,(`HOLIDAY`|`PROGRAMSLOT`+)+)>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>\n\t<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n]>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.dtd.dtdDoctypeQualifier%"
           },
           "vscode-angular-html.dtdDoctypeQuantifier": {
             "type": "string",
             "default": "",
-            "markdownDescription": "Matches the DTD qualifiers:\n\n* <&#x21;ELEMENT DAY (DATE,(HOLIDAY`|`PROGRAMSLOT`+`)`*`)>\n\n* <&#x21;ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION`?`)>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)*)>\n\t<!ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION?)>\n]>\n\n\n```\nLeave it empty to disable for this item only"
+            "markdownDescription": "%ext.settings.dtd.dtdDoctypeQuantifier%"
           }
         }
       }
@@ -280,15 +281,15 @@
     "commands": [
       {
         "command": "vscode-angular-html.updateTokenCustomization",
-        "title": "vscode-angular-html: Update Token Color Customizations"
+        "title": "%ext.commands.updateTokenCustomization%"
       },
       {
         "command": "vscode-angular-html.disableTokenCustomization",
-        "title": "vscode-angular-html: Disable Token Color Customizations"
+        "title": "%ext.commands.disableTokenCustomization%"
       },
       {
         "command": "vscode-angular-html.addLegacyColorCustomizations",
-        "title": "vscode-angular-html: Set legacy color Customizations"
+        "title": "%ext.commands.addLegacyColorCustomizations%"
       }
     ],
     "configurationDefaults": {
@@ -326,9 +327,23 @@
     "gulp-prettier": "^4.0.0",
     "husky": "^8.0.1",
     "json-beautify": "^1.1.1",
+    "postcss-html": "^1.5.0",
+    "postcss-less": "^6.0.0",
+    "postcss-sass": "^0.5.0",
+    "postcss-scss": "^4.0.5",
+    "postcss-styl": "^0.11.1",
+    "postcss-syntax": "^0.36.2",
     "prettier": "^2.7.1",
     "pretty-quick": "^3.1.3",
     "standard-version": "^9.5.0",
+    "stylelint": "^14.12.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-less": "^1.0.6",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "ts-node": "^10.9.1",
     "typescript": "^4.7.4",
     "vscode-tmgrammar-test": "^0.1.1"
   },
@@ -338,6 +353,9 @@
     }
   },
   "dependencies": {
-    "jsonc-parser": "^3.2.0"
+    "jsonc-parser": "^3.2.0",
+    "stylelint-stylus": "^0.17.0",
+    "vscode-nls": "^5.2.0",
+    "vscode-nls-i18n": "^0.2.4"
   }
 }

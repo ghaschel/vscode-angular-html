@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run compile-json;
+npm run compile-json:prod;
 # npm test;
 # npx pretty-quick --staged

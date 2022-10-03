@@ -486,7 +486,7 @@ var tsRules = {
 module.exports = {
   root: true,
   ignorePatterns: ['*.js'],
-  plugins: ['@typescript-eslint', 'prettier', 'import'],
+  plugins: ['@typescript-eslint', 'html', 'prettier', 'import'],
   settings: {
     'import/resolver': {
       typescript: {
@@ -503,6 +503,17 @@ module.exports = {
       },
       extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
       rules: tsRules,
+    },
+    {
+      files: ['*.html'],
+      parserOptions: {
+        parser: 'angular', // original parser goes here (you must specify one to use this option).
+        sourceType: 'module', // any original parser config options you had.
+        ecmaVersion: 6,
+      },
+      excludedFiles: ['*inline-template-*.component.html'],
+      extends: ['plugin:prettier/recommended'],
+      rules: {},
     },
   ],
 };

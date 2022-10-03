@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-marker': {
+    'tag-deprecated-svg-attribute-marker': {
       begin: '(<\\/?)((?i:marker))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the a element and it's attributes when within a SVG element",
       end: '(\\/?>)',

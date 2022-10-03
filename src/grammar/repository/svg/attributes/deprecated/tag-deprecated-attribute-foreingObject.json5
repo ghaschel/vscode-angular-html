@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-foreignObject': {
+    'tag-deprecated-svg-attribute-foreignObject': {
       begin: '(<\\/?)((?i:foreignObject))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the foreignObject element and it's attributes when within a SVG element",
       end: '(\\/?>)',

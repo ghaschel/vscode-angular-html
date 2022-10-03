@@ -13,16 +13,22 @@
     "url": "https://github.com/ghaschel/vscode-angular-html/issues"
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "npm run compile-color-customizations && npm run compile-json:prod && npm run compile-locale && tsc -p ./",
-    "watch": "npm run compile-color-customizations && npm run compile-json:prod && npm run compile-locale && tsc -watch -p ./",
-    "compile-locale": "ts-node src/locale",
-    "compile-json:dev": "gulp compile-json && gulp copy",
-    "compile-json:prod": "gulp compile-json",
-    "compile-color-customizations": "gulp compile-color-customizations",
+    "clean": "rimraf out/**/* && rimraf src/ts/resources/*.json && rimraf package.nls*.json && rimraf syntaxes/*",
+    "vscode:prepublish": "npm run clean && npm run compile",
+    "compile": "npm run clean && npm run compile:assets && tsc -p ./",
+    "watch": "npm run clean && npm run compile:assets && tsc -watch -p ./",
+    "compile:assets": "npm run compile:color-customizations && npm run compile:json:prod && npm run compile:locale",
+    "compile:locale": "ts-node src/locale",
+    "compile:json:dev": "gulp compile:json && gulp copy",
+    "compile:json:prod": "gulp compile:json",
+    "compile:color-customizations": "gulp compile:color-customizations",
+    "lint:ts": "eslint src/**/*.ts",
+    "lint:style": "stylelint test/test.component.html",
     "publish": "standard-version && git push --follow-tags origin master && vsce publish",
-    "postinstall": "node scripts/postinstall.js",
-    "prepare": "husky install",
+    "postinstall": "node -e \"process.env.NODE_ENV != 'production' && process.exit(1)\" || npm run postinstall:dev",
+    "postinstall:dev": "node scripts/postinstall.js",
+    "prepare": "node -e \"process.env.NODE_ENV != 'production' && process.exit(1)\" || npm run prepare:dev",
+    "prepare:dev": "husky install",
     "test": "npx vscode-tmgrammar-test -g syntaxes/html-template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json test/*.html",
     "update-snapshots": "npx vscode-tmgrammar-snap -s html-template.ng -g syntaxes/html-template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json --updateSnapshot test/*.html"
   },
@@ -45,8 +51,21 @@
         "language": "html",
         "scopeName": "html-template.ng",
         "path": "./syntaxes/html-template.ng.json",
+        "embeddedLanguages": {
+          "source.coffee": "coffeescript",
+          "source.js": "javascript",
+          "source.ts": "typescript",
+          "source.dart": "dart",
+          "source.css": "css",
+          "source.css.less": "less",
+          "source.postcss": "postcss",
+          "source.sass": "sass",
+          "source.css.scss": "scss",
+          "source.stylus": "stylus"
+        },
         "injectTo": [
           "text.html",
+          "text.xml",
           "template.ng"
         ]
       }
@@ -281,15 +300,15 @@
     "commands": [
       {
         "command": "vscode-angular-html.updateTokenCustomization",
-        "title": "%ext.commands.updateTokenCustomization%"
+        "title": "%ext.command.updateTokenCustomization.title%"
       },
       {
         "command": "vscode-angular-html.disableTokenCustomization",
-        "title": "%ext.commands.disableTokenCustomization%"
+        "title": "%ext.command.disableTokenCustomization.title%"
       },
       {
         "command": "vscode-angular-html.addLegacyColorCustomizations",
-        "title": "%ext.commands.addLegacyColorCustomizations%"
+        "title": "%ext.command.addLegacyColorCustomizations.title%"
       }
     ],
     "configurationDefaults": {
@@ -318,6 +337,8 @@
     "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.5.1",
+    "eslint-plugin-coffee": "^0.1.15",
+    "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "gulp": "^4.0.2",

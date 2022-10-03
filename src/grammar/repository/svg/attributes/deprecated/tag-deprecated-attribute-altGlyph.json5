@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-altGlyph': {
+    'tag-deprecated-svg-attribute-altGlyph': {
       begin: '(<\\/?)((?i:altGlyph))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the altGlyph element and it's attributes when within a SVG element",
       end: '(\\/?>)',

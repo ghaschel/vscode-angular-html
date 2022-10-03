@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-vkern': {
+    'tag-deprecated-svg-attribute-vkern': {
       begin: '(<\\/?)((?i:vkern))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the vkern element and it's attributes when within a SVG element",
       end: '(\\/?>)',

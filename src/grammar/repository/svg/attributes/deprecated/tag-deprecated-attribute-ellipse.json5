@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-ellipse': {
+    'tag-deprecated-svg-attribute-ellipse': {
       begin: '(<\\/?)((?i:ellipse))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the ellipse element and it's attributes when within a SVG element",
       end: '(\\/?>)',

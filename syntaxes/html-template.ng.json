@@ -10,34 +10,10 @@
       "include": "#tag-svg"
     },
     {
-      "include": "#tag-script-dart"
+      "include": "#tag-script"
     },
     {
-      "include": "#tag-script-coffeescript"
-    },
-    {
-      "include": "#tag-script-typescript"
-    },
-    {
-      "include": "#tag-script-javascript"
-    },
-    {
-      "include": "#tag-style-postcss"
-    },
-    {
-      "include": "#tag-style-stylus"
-    },
-    {
-      "include": "#tag-style-less"
-    },
-    {
-      "include": "#tag-style-scss"
-    },
-    {
-      "include": "#tag-style-sass"
-    },
-    {
-      "include": "#tag-style-css"
+      "include": "#tag-style"
     },
     {
       "include": "#tag-deprecated-attribute-area"
@@ -544,151 +520,151 @@
               "name": "meta.element.structure.svg.html",
               "patterns": [
                 {
-                  "include": "#tag-deprecated-attribute-altGlyph"
+                  "include": "#tag-deprecated-svg-attribute-altGlyph"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-marker"
+                  "include": "#tag-deprecated-svg-attribute-marker"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-font-face-name"
+                  "include": "#tag-deprecated-svg-attribute-font-face-name"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-font-face-format"
+                  "include": "#tag-deprecated-svg-attribute-font-face-format"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-missing-glyph"
+                  "include": "#tag-deprecated-svg-attribute-missing-glyph"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-view"
+                  "include": "#tag-deprecated-svg-attribute-view"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-vkern"
+                  "include": "#tag-deprecated-svg-attribute-vkern"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-hkern"
+                  "include": "#tag-deprecated-svg-attribute-hkern"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-a"
+                  "include": "#tag-deprecated-svg-attribute-a"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-font-face-uri"
+                  "include": "#tag-deprecated-svg-attribute-font-face-uri"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-font-face"
+                  "include": "#tag-deprecated-svg-attribute-font-face"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-font"
+                  "include": "#tag-deprecated-svg-attribute-font"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-tspan"
+                  "include": "#tag-deprecated-svg-attribute-tspan"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-text"
+                  "include": "#tag-deprecated-svg-attribute-text"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-foreignObject"
+                  "include": "#tag-deprecated-svg-attribute-foreignObject"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-glyph"
+                  "include": "#tag-deprecated-svg-attribute-glyph"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-switch"
+                  "include": "#tag-deprecated-svg-attribute-switch"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-symbol"
+                  "include": "#tag-deprecated-svg-attribute-symbol"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-polygon"
+                  "include": "#tag-deprecated-svg-attribute-polygon"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-polyline"
+                  "include": "#tag-deprecated-svg-attribute-polyline"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-rect"
+                  "include": "#tag-deprecated-svg-attribute-rect"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-path"
+                  "include": "#tag-deprecated-svg-attribute-path"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-line"
+                  "include": "#tag-deprecated-svg-attribute-line"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-ellipse"
+                  "include": "#tag-deprecated-svg-attribute-ellipse"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-clipPath"
+                  "include": "#tag-deprecated-svg-attribute-clipPath"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-circle"
+                  "include": "#tag-deprecated-svg-attribute-circle"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-mask"
+                  "include": "#tag-deprecated-svg-attribute-mask"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-g"
+                  "include": "#tag-deprecated-svg-attribute-g"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-defs"
+                  "include": "#tag-deprecated-svg-attribute-defs"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-feConvolveMatrix"
+                  "include": "#tag-deprecated-svg-attribute-feConvolveMatrix"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-feDiffuseLighting"
+                  "include": "#tag-deprecated-svg-attribute-feDiffuseLighting"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-feSpecularLighting"
+                  "include": "#tag-deprecated-svg-attribute-feSpecularLighting"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-glyphRef"
+                  "include": "#tag-deprecated-svg-attribute-glyphRef"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-filter"
+                  "include": "#tag-deprecated-svg-attribute-filter"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-set"
+                  "include": "#tag-deprecated-svg-attribute-set"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-animateTransform"
+                  "include": "#tag-deprecated-svg-attribute-animateTransform"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-animateMotion"
+                  "include": "#tag-deprecated-svg-attribute-animateMotion"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-animateColor"
+                  "include": "#tag-deprecated-svg-attribute-animateColor"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-animate"
+                  "include": "#tag-deprecated-svg-attribute-animate"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-cursor"
+                  "include": "#tag-deprecated-svg-attribute-cursor"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-use"
+                  "include": "#tag-deprecated-svg-attribute-use"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-tref"
+                  "include": "#tag-deprecated-svg-attribute-tref"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-textPath"
+                  "include": "#tag-deprecated-svg-attribute-textPath"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-radialGradient"
+                  "include": "#tag-deprecated-svg-attribute-radialGradient"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-linearGradient"
+                  "include": "#tag-deprecated-svg-attribute-linearGradient"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-feImage"
+                  "include": "#tag-deprecated-svg-attribute-feImage"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-image"
+                  "include": "#tag-deprecated-svg-attribute-image"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-pattern"
+                  "include": "#tag-deprecated-svg-attribute-pattern"
                 },
                 {
-                  "include": "#tag-deprecated-attribute-mpath"
+                  "include": "#tag-deprecated-svg-attribute-mpath"
                 },
                 {
                   "include": "#tag-script-dart"
@@ -703,22 +679,7 @@
                   "include": "#tag-script-javascript"
                 },
                 {
-                  "include": "#tag-style-postcss"
-                },
-                {
-                  "include": "#tag-style-stylus"
-                },
-                {
-                  "include": "#tag-style-less"
-                },
-                {
-                  "include": "#tag-style-scss"
-                },
-                {
                   "include": "#tag-style-sass"
-                },
-                {
-                  "include": "#tag-style-css"
                 },
                 {
                   "include": "#tag-deprecated-svg"
@@ -784,7 +745,7 @@
           "name": "punctuation.definition.tag.end.html"
         }
       },
-      "begin": "(<\\/?)(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|tt|u)(:)?([\\w\\-\\_$]+)?(?!(?:[\\w-]))\\b",
+      "begin": "(<\\/?)(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|tt|u)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
       "end": "(\\/?>)",
       "name": "invalid.deprecated.tag",
       "patterns": [
@@ -793,22 +754,40 @@
         }
       ]
     },
-    "tag-script-coffeescript": {
-      "begin": "(^[\\t]+)?(?=<(?i:script)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type=\"text/javascript\"|[\\s\\n\\D\\W]*type=\"text/typescript\"|[\\s\\n\\D\\W]*type=\"application/dart\"))(?=[\\s\\n]*type=\"text/coffeescript\"))",
+    "tag-script": {
+      "begin": "(^[\\t]+)?(?=<(?i:script)\\b(?!-))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.whitespace.embedded.leading.html"
         }
       },
-      "end": "(?!\\G)([\\t]*$\\n?)?",
-      "endCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.trailing.html"
-        }
-      },
+      "end": "(?=</(?i:script)>)\\n?",
       "patterns": [
         {
-          "begin": "(?i)(<)(script)(?=\\s|/?>)",
+          "begin": "(<)((?i:script))(>)",
+          "beginCaptures": {
+            "0": {
+              "name": "meta.tag.metadata.script.start.html"
+            },
+            "1": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.html"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.end.html"
+            }
+          },
+          "end": "(?=(?=<(?=/(?=script(?=>)))))",
+          "patterns": [
+            {
+              "include": "source.js"
+            }
+          ]
+        },
+        {
+          "begin": "(<)((?i:script))\\b",
           "beginCaptures": {
             "0": {
               "name": "meta.tag.metadata.script.start.html"
@@ -820,54 +799,170 @@
               "name": "entity.name.tag.html"
             }
           },
-          "end": "(?i)((<)/)(script)\\s*(>)",
-          "endCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.script.end.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "source.css-ignored-vscode"
-            },
-            "3": {
-              "name": "entity.name.tag.html"
-            },
-            "4": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "name": "meta.embedded.block.html",
+          "end": "(?=(?=<(?=/(?=script(?=>)))))",
           "patterns": [
             {
               "begin": "\\G",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.tag.end.html"
-                }
-              },
-              "end": "(>)",
-              "name": "meta.tag.metadata.script.start.html",
+              "end": "(?=<(?=/(?=script(?=>))))",
               "patterns": [
                 {
-                  "include": "#script-type-attribute"
+                  "begin": "(?=(type(?=[\\s=]['\"](text/(typescript|x-typescript)|application/((x-)?typescript))[\\s\"'])|(lang(?=[\\s=]['\"]typescript[\\s\"']))))",
+                  "end": "(?=<(?=/(?=script>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/script>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.script.start.html",
+                          "patterns": [
+                            {
+                              "include": "#script-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</script>)",
+                          "patterns": [
+                            {
+                              "include": "source.ts"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
-                  "include": "#svg-deprecated-script-attributes"
+                  "begin": "(?=(type(?=[\\s=]['\"]((module)|(text/(javascript|x-javascript)|application/((x-)?javascript)))[\\s\"'])|(lang(?=[\\s=]['\"]javascript[\\s\"']))))",
+                  "end": "(?=<(?=/(?=script>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/script>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.script.start.html",
+                          "patterns": [
+                            {
+                              "include": "#script-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</script>)",
+                          "patterns": [
+                            {
+                              "include": "source.js"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/(coffeescript|x-coffeescript)|application/((x-)?coffeescript))[\\s\"'])|(lang(?=[\\s=]['\"]coffeescript[\\s\"']))))",
+                  "end": "(?=<(?=/(?=script>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/script>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.script.start.html",
+                          "patterns": [
+                            {
+                              "include": "#script-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</script>)",
+                          "patterns": [
+                            {
+                              "include": "source.coffee"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/(dart|x-dart)|application/((x-)?dart))[\\s\"'])|(lang(?=[\\s=]['\"]dart[\\s\"']))))",
+                  "end": "(?=<(?=/(?=script>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/script>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.script.start.html",
+                          "patterns": [
+                            {
+                              "include": "#script-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</script>)",
+                          "patterns": [
+                            {
+                              "include": "source.dart"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "include": "#tag-stuff"
-                }
-              ]
-            },
-            {
-              "begin": "(?!\\G)",
-              "end": "(?=</(?i:script))",
-              "name": "source.coffee",
-              "patterns": [
-                {
-                  "include": "source.coffee"
                 }
               ]
             }
@@ -875,268 +970,43 @@
         }
       ]
     },
-    "tag-script-dart": {
-      "begin": "(^[\\t]+)?(?=<(?i:script)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type=\"text/javascript\"|[\\s\\n\\D\\W]*type=\"text/typescript\"|[\\s\\n\\D\\W]*type=\"text/coffeescript\"))(?=[\\s\\n]*type=\"application/dart\"))",
+    "tag-style": {
+      "begin": "(^[\\t]+)?(?=<(?i:style)\\b(?!-))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.whitespace.embedded.leading.html"
         }
       },
-      "end": "(?!\\G)([\\t]*$\\n?)?",
-      "endCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.trailing.html"
-        }
-      },
+      "end": "(?=</(?i:style)>)\\n?",
       "patterns": [
         {
-          "begin": "(?i)(<)(script)(?=\\s|/?>)",
+          "begin": "(<)((?i:style))(>)",
           "beginCaptures": {
             "0": {
-              "name": "meta.tag.metadata.script.start.html"
+              "name": "meta.tag.metadata.style.start.html"
             },
             "1": {
               "name": "punctuation.definition.tag.begin.html"
             },
             "2": {
               "name": "entity.name.tag.html"
-            }
-          },
-          "end": "(?i)((<)/)(script)\\s*(>)",
-          "endCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.script.end.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "source.css-ignored-vscode"
             },
             "3": {
-              "name": "entity.name.tag.html"
-            },
-            "4": {
               "name": "punctuation.definition.tag.end.html"
             }
           },
-          "name": "meta.embedded.block.html",
+          "end": "(?=(?=<(?=/(?=style(?=>)))))",
           "patterns": [
             {
-              "begin": "\\G",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.tag.end.html"
-                }
-              },
-              "end": "(>)",
-              "name": "meta.tag.metadata.script.start.html",
-              "patterns": [
-                {
-                  "include": "#script-type-attribute"
-                },
-                {
-                  "include": "#svg-deprecated-script-attributes"
-                },
-                {
-                  "include": "#tag-stuff"
-                }
-              ]
+              "include": "#cdata"
             },
             {
-              "begin": "(?!\\G)",
-              "end": "(?=</(?i:script))",
-              "name": "source.dart",
-              "patterns": [
-                {
-                  "include": "source.dart"
-                }
-              ]
+              "include": "source.css"
             }
           ]
-        }
-      ]
-    },
-    "tag-script-javascript": {
-      "begin": "(^[\\t]+)?(?=<(?i:script)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type=\"text/typescript\"|[\\s\\n\\D\\W]*type=\"text/coffeescript\"|[\\s\\n\\D\\W]*type=\"application/dart\")))",
-      "beginCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.leading.html"
-        }
-      },
-      "end": "(?!\\G)([\\t]*$\\n?)?",
-      "endCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.trailing.html"
-        }
-      },
-      "patterns": [
+        },
         {
-          "begin": "(?i)(<)(script)(?=\\s|/?>)",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.script.start.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            }
-          },
-          "end": "(?i)((<)/)(script)\\s*(>)",
-          "endCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.script.end.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "source.css-ignored-vscode"
-            },
-            "3": {
-              "name": "entity.name.tag.html"
-            },
-            "4": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "name": "meta.embedded.block.html",
-          "patterns": [
-            {
-              "begin": "\\G",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.tag.end.html"
-                }
-              },
-              "end": "(>)",
-              "name": "meta.tag.metadata.script.start.html",
-              "patterns": [
-                {
-                  "include": "#script-type-attribute"
-                },
-                {
-                  "include": "#svg-deprecated-script-attributes"
-                },
-                {
-                  "include": "#tag-stuff"
-                }
-              ]
-            },
-            {
-              "begin": "(?!\\G)",
-              "end": "(?=</(?i:script))",
-              "name": "source.js",
-              "patterns": [
-                {
-                  "include": "source.js"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "tag-script-typescript": {
-      "begin": "(^[\\t]+)?(?=<(?i:script)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type=\"text/javascript\"|[\\s\\n\\D\\W]*type=\"text/coffeescript\"|[\\s\\n\\D\\W]*type=\"application/dart\"))(?=[\\s\\n]*type=\"text/typescript\"))",
-      "beginCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.leading.html"
-        }
-      },
-      "end": "(?!\\G)([\\t]*$\\n?)?",
-      "endCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.trailing.html"
-        }
-      },
-      "patterns": [
-        {
-          "begin": "(?i)(<)(script)(?=\\s|/?>)",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.script.start.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            }
-          },
-          "end": "(?i)((<)/)(script)\\s*(>)",
-          "endCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.script.end.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "source.css-ignored-vscode"
-            },
-            "3": {
-              "name": "entity.name.tag.html"
-            },
-            "4": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "name": "meta.embedded.block.html",
-          "patterns": [
-            {
-              "begin": "\\G",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.tag.end.html"
-                }
-              },
-              "end": "(>)",
-              "name": "meta.tag.metadata.script.start.html",
-              "patterns": [
-                {
-                  "include": "#script-type-attribute"
-                },
-                {
-                  "include": "#svg-deprecated-script-attributes"
-                },
-                {
-                  "include": "#tag-stuff"
-                }
-              ]
-            },
-            {
-              "begin": "(?!\\G)",
-              "end": "(?=</(?i:script))",
-              "name": "source.ts",
-              "patterns": [
-                {
-                  "include": "source.ts"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "tag-style-css": {
-      "begin": "(^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type=\"text/postcss\"|[\\s\\n\\D\\W]*type=\"text/scss\"|[\\s\\n\\D\\W]*type=\"text/sass\"|[\\s\\n\\D\\W]*type=\"text/stylus\"|[\\s\\n\\D\\W]*type=\"text/less\")))",
-      "beginCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.leading.html"
-        }
-      },
-      "end": "(?!\\G)([\\t]*$\\n?)?",
-      "endCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.trailing.html"
-        }
-      },
-      "patterns": [
-        {
-          "begin": "(?i)(<)(style)(?=\\s|/?>)",
+          "begin": "(<)((?i:style))\\b",
           "beginCaptures": {
             "0": {
               "name": "meta.tag.metadata.style.start.html"
@@ -1148,464 +1018,266 @@
               "name": "entity.name.tag.html"
             }
           },
-          "end": "(?i)((<)/)(style)\\s*(>)",
-          "endCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.end.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "source.css-ignored-vscode"
-            },
-            "3": {
-              "name": "entity.name.tag.html"
-            },
-            "4": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "name": "meta.embedded.block.html",
+          "end": "(?=(?=<(?=/(?=style(?=>)))))",
           "patterns": [
             {
               "begin": "\\G",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.tag.end.html"
-                }
-              },
-              "end": "(>)",
-              "name": "meta.tag.metadata.style.start.html",
+              "end": "(?=<(?=/(?=style(?=>))))",
               "patterns": [
                 {
-                  "include": "#style-type-attribute"
+                  "begin": "(?=(type(?=[\\s=]['\"](text/css[\\s\"'>]))|(lang(?=[\\s=]['\"]css[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.css"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/less[\\s\"'>]))|(lang(?=[\\s=]['\"]less[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.css.less"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/postcss[\\s\"'>]))|(lang(?=[\\s=]['\"]postcss[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.postcss"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/sass[\\s\"'>]))|(lang(?=[\\s=]['\"]sass[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.sass"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/scss[\\s\"'>]))|(lang(?=[\\s=]['\"]scss[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.css.scss"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/styl(us)?[\\s\"'>]))|(lang(?=[\\s=]['\"]styl(us)?[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.stylus"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "include": "#tag-stuff"
-                }
-              ]
-            },
-            {
-              "begin": "(?!\\G)",
-              "end": "(?=</(?i:style))",
-              "name": "source.css",
-              "patterns": [
-                {
-                  "include": "#cdata"
-                },
-                {
-                  "include": "source.css"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "tag-style-less": {
-      "begin": "((^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type=\"text/postcss\"|[\\s\\n\\D\\W]*type=\"text/sass\"|[\\s\\n\\D\\W]*type=\"text/css\"|[\\s\\n\\D\\W]*type=\"text/stylus\"|[\\s\\n\\D\\W]*type=\"text/scss\"))(?=[\\s\\n]*type=\"text/less\"))|(^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*lang=\"postcss\"|[\\s\\n\\D\\W]*lang=\"scss\"|[\\s\n\\D\\W]*lang=\"css\"|[\\s\\n\\D\\W]*lang=\"stylus\"|[\\s\\n\\D\\W]*lang=\"sass\"|[\\s\\n\\D\\W]*lang=\"styl\"))(?=[\\s\\n]*lang=\"less\")))",
-      "beginCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.leading.html"
-        }
-      },
-      "end": "(?!\\G)([\\t]*$\\n?)?",
-      "endCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.trailing.html"
-        }
-      },
-      "patterns": [
-        {
-          "begin": "(?i)(<)(style)(?=\\s|/?>)",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.start.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            }
-          },
-          "end": "(?i)((<)/)(style)\\s*(>)",
-          "endCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.end.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "source.css-ignored-vscode"
-            },
-            "3": {
-              "name": "entity.name.tag.html"
-            },
-            "4": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "name": "meta.embedded.block.html",
-          "patterns": [
-            {
-              "begin": "\\G",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.tag.end.html"
-                }
-              },
-              "end": "(>)",
-              "name": "meta.tag.metadata.style.start.html",
-              "patterns": [
-                {
-                  "include": "#style-type-attribute"
-                },
-                {
-                  "include": "#tag-stuff"
-                }
-              ]
-            },
-            {
-              "begin": "(?!\\G)",
-              "end": "(?=</(?i:style))",
-              "name": "source.css.less",
-              "patterns": [
-                {
-                  "include": "#cdata"
-                },
-                {
-                  "include": "source.css.less"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "tag-style-postcss": {
-      "begin": "((^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type=\"text/less\"|[\\s\\n\\D\\W]*type=\"text/sass\"|[\\s\\n\\D\\W]*type=\"text/css\"|[\\s\\n\\D\\W]*type=\"text/stylus\"|[\\s\\n\\D\\W]*type=\"text/scss\"))(?=[\\s\\n]*type=\"text/postcss\"))|(^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*lang=\"sass\"|[\\s\\n\\D\\W]*lang=\"scss\"|[\\s\n\\D\\W]*lang=\"css\"|[\\s\\n\\D\\W]*lang=\"stylus\"|[\\s\\n\\D\\W]*lang=\"less\"|[\\s\\n\\D\\W]*lang=\"styl\"))(?=[\\s\\n]*lang=\"postcss\")))",
-      "beginCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.leading.html"
-        }
-      },
-      "end": "(?!\\G)([\\t]*$\\n?)?",
-      "endCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.trailing.html"
-        }
-      },
-      "patterns": [
-        {
-          "begin": "(?i)(<)(style)(?=\\s|/?>)",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.start.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            }
-          },
-          "end": "(?i)((<)/)(style)\\s*(>)",
-          "endCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.end.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "source.css-ignored-vscode"
-            },
-            "3": {
-              "name": "entity.name.tag.html"
-            },
-            "4": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "name": "meta.embedded.block.html",
-          "patterns": [
-            {
-              "begin": "\\G",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.tag.end.html"
-                }
-              },
-              "end": "(>)",
-              "name": "meta.tag.metadata.style.start.html",
-              "patterns": [
-                {
-                  "include": "#style-type-attribute"
-                },
-                {
-                  "include": "#tag-stuff"
-                }
-              ]
-            },
-            {
-              "begin": "(?!\\G)",
-              "end": "(?=</(?i:style))",
-              "name": "source.postcss",
-              "patterns": [
-                {
-                  "include": "#cdata"
-                },
-                {
-                  "include": "source.postcss"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "tag-style-sass": {
-      "begin": "((^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type=\"text/postcss\"|[\\s\\n\\D\\W]*type=\"text/scss\"|[\\s\\n\\D\\W]*type=\"text/css\"|[\\s\\n\\D\\W]*type=\"text/stylus\"|[\\s\\n\\D\\W]*type=\"text/less\"))(?=[\\s\\n]*type=\"text/sass\"))|(^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*lang=\"postcss\"|[\\s\\n\\D\\W]*lang=\"scss\"|[\\s\n\\D\\W]*lang=\"css\"|[\\s\\n\\D\\W]*lang=\"stylus\"|[\\s\\n\\D\\W]*lang=\"less\"|[\\s\\n\\D\\W]*lang=\"styl\"))(?=[\\s\\n]*lang=\"sass\")))",
-      "beginCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.leading.html"
-        }
-      },
-      "end": "(?!\\G)([\\t]*$\\n?)?",
-      "endCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.trailing.html"
-        }
-      },
-      "patterns": [
-        {
-          "begin": "(?i)(<)(style)(?=\\s|/?>)",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.start.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            }
-          },
-          "end": "(?i)((<)/)(style)\\s*(>)",
-          "endCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.end.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "source.css-ignored-vscode"
-            },
-            "3": {
-              "name": "entity.name.tag.html"
-            },
-            "4": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "name": "meta.embedded.block.html",
-          "patterns": [
-            {
-              "begin": "\\G",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.tag.end.html"
-                }
-              },
-              "end": "(>)",
-              "name": "meta.tag.metadata.style.start.html",
-              "patterns": [
-                {
-                  "include": "#style-type-attribute"
-                },
-                {
-                  "include": "#tag-stuff"
-                }
-              ]
-            },
-            {
-              "begin": "(?!\\G)",
-              "end": "(?=</(?i:style))",
-              "name": "source.sass",
-              "patterns": [
-                {
-                  "include": "#cdata"
-                },
-                {
-                  "include": "source.sass"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "tag-style-scss": {
-      "begin": "((^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type=\"text/postcss\"|[\\s\\n\\D\\W]*type=\"text/sass\"|[\\s\\n\\D\\W]*type=\"text/css\"|[\\s\\n\\D\\W]*type=\"text/stylus\"|[\\s\\n\\D\\W]*type=\"text/less\"))(?=[\\s\\n]*type=\"text/scss\"))|(^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*lang=\"postcss\"|[\\s\\n\\D\\W]*lang=\"sass\"|[\\s\n\\D\\W]*lang=\"css\"|[\\s\\n\\D\\W]*lang=\"stylus\"|[\\s\\n\\D\\W]*lang=\"less\"|[\\s\\n\\D\\W]*lang=\"styl\"))(?=[\\s\\n]*lang=\"scss\")))",
-      "beginCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.leading.html"
-        }
-      },
-      "end": "(?!\\G)([\\t]*$\\n?)?",
-      "endCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.trailing.html"
-        }
-      },
-      "patterns": [
-        {
-          "begin": "(?i)(<)(style)(?=\\s|/?>)",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.start.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            }
-          },
-          "end": "(?i)((<)/)(style)\\s*(>)",
-          "endCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.end.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "source.css-ignored-vscode"
-            },
-            "3": {
-              "name": "entity.name.tag.html"
-            },
-            "4": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "name": "meta.embedded.block.html",
-          "patterns": [
-            {
-              "begin": "\\G",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.tag.end.html"
-                }
-              },
-              "end": "(>)",
-              "name": "meta.tag.metadata.style.start.html",
-              "patterns": [
-                {
-                  "include": "#style-type-attribute"
-                },
-                {
-                  "include": "#tag-stuff"
-                }
-              ]
-            },
-            {
-              "begin": "(?!\\G)",
-              "end": "(?=</(?i:style))",
-              "name": "source.css.scss",
-              "patterns": [
-                {
-                  "include": "#cdata"
-                },
-                {
-                  "include": "source.css.scss"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "tag-style-stylus": {
-      "begin": "((^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*type=\"text/postcss\"|[\\s\\n\\D\\W]*type=\"text/scss\"|[\\s\\n\\D\\W]*type=\"text/css\"|[\\s\\n\\D\\W]*type=\"text/sass\"|[\\s\\n\\D\\W]*type=\"text/less\"))(?=[\\s\\n]*type=\"text/styl(us)?\"))|(^[\\t]+)?(?=<(?i:style)\\b(?!(?:[\\w-]|[\\s\\n\\D\\W]*lang=\"postcss\"|[\\s\\n\\D\\W]*lang=\"scss\"|[\\s\n\\D\\W]*lang=\"css\"|[\\s\\n\\D\\W]*lang=\"sass\"|[\\s\\n\\D\\W]*lang=\"less\"))(?=[\\s\\n]*lang=\"styl(us)?\")))",
-      "beginCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.leading.html"
-        }
-      },
-      "end": "(?!\\G)([\\t]*$\\n?)?",
-      "endCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.trailing.html"
-        }
-      },
-      "patterns": [
-        {
-          "begin": "(?i)(<)(style)(?=\\s|/?>)",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.start.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            }
-          },
-          "end": "(?i)((<)/)(style)\\s*(>)",
-          "endCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.end.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "source.css-ignored-vscode"
-            },
-            "3": {
-              "name": "entity.name.tag.html"
-            },
-            "4": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "name": "meta.embedded.block.html",
-          "patterns": [
-            {
-              "begin": "\\G",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.tag.end.html"
-                }
-              },
-              "end": "(>)",
-              "name": "meta.tag.metadata.style.start.html",
-              "patterns": [
-                {
-                  "include": "#style-type-attribute"
-                },
-                {
-                  "include": "#tag-stuff"
-                }
-              ]
-            },
-            {
-              "begin": "(?!\\G)",
-              "end": "(?=</(?i:style))",
-              "name": "source.stylus",
-              "patterns": [
-                {
-                  "include": "#cdata"
-                },
-                {
-                  "include": "source.stylus"
                 }
               ]
             }
@@ -3069,8 +2741,359 @@
         }
       ]
     },
+    "generic-style-attribute": {
+      "name": "meta.property-list.scss",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+        },
+        "2": {
+          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+        },
+        "3": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)\\b(style)+\\b(=)(\")",
+      "end": ".?(\")",
+      "patterns": [
+        {
+          "begin": "(?<![-a-z]|\\(|, |:)(?=[-a-z])",
+          "end": "$|(?![-a-z])",
+          "name": "meta.property-name.scss",
+          "patterns": [
+            {
+              "match": "\\b(source|scroll-offsets|syntax|initialvalue|inherits)\\b",
+              "name": "support.type.property-name.css"
+            },
+            {
+              "include": "source.css#property-names"
+            }
+          ]
+        },
+        {
+          "begin": "(:)\\s*(?!(\\s*{))",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.separator.key-value.scss"
+            }
+          },
+          "end": "\\s*(;|(?=\"|\\)))",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.terminator.rule.scss"
+            }
+          },
+          "contentName": "meta.property-value.scss",
+          "patterns": [
+            {
+              "match": "\\b(false|true)\\b",
+              "name": "constant.language.boolean.css"
+            },
+            {
+              "begin": "\\b(selector)(\\()",
+              "beginCaptures": {
+                "1": {
+                  "name": "support.function.misc.scss"
+                },
+                "2": {
+                  "name": "punctuation.section.function.scss"
+                }
+              },
+              "end": "(\\))",
+              "endCaptures": {
+                "1": {
+                  "name": "punctuation.section.function.scss"
+                }
+              },
+              "patterns": [
+                {
+                  "include": "source.css.scss#selectors"
+                }
+              ]
+            },
+            {
+              "include": "source.css.scss#general"
+            },
+            {
+              "include": "source.css.scss#property_values"
+            }
+          ]
+        }
+      ]
+    },
+    "tag-events-attribute": {
+      "captures": {
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.events"
+        },
+        "2": {
+          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+        }
+      },
+      "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting)+(=)",
+      "end": "(?<='|\")|(?=[\\s<>`])",
+      "name": "template.ng.events",
+      "patterns": [
+        {
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.html"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#angular-expression"
+            }
+          ],
+          "begin": "\"",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.html"
+            }
+          },
+          "end": "\"",
+          "name": "source.events.html"
+        },
+        {
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.html"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#angular-expression"
+            }
+          ],
+          "begin": "'",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.html"
+            }
+          },
+          "end": "'",
+          "name": "source.events.html"
+        }
+      ]
+    },
+    "tag-generic-attribute": {
+      "name": "string.quoted.double.html",
+      "beginCaptures": {
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
+        },
+        "4": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
+        },
+        "5": {
+          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+        },
+        "6": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)(?!(DOMMenuIemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_$]+)(:)?([\\w\\-\\_$]+)?\\b(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-interpolations"
+        }
+      ]
+    },
+    "tag-minified-boolean-attributes": {
+      "captures": {
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
+        }
+      },
+      "match": "(?<!\\S)(?!(?:ref|let)?-)([\\w-]+)(:)?([\\w\\-\\_$]+)?\\b(?!=)",
+      "name": "punctuation.definition.tag.end.html",
+      "patterns": []
+    },
+    "tag-minified-boolean-prefixed-attributes": {
+      "captures": {
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
+        },
+        "4": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
+        },
+        "5": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        }
+      },
+      "match": "((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
+    },
+    "tag-prefixed-attribute": {
+      "name": "string.quoted.double.html",
+      "beginCaptures": {
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
+        },
+        "4": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
+        },
+        "5": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        },
+        "6": {
+          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+        },
+        "7": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)([$]*)(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-expression"
+        }
+      ]
+    },
+    "script-type-attribute": {
+      "patterns": [
+        {
+          "match": "[\\s]*(type)(=)(\"(text|application)/(javascript|typescript|coffeescript|dart)\")",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.double.html"
+            },
+            "5": {
+              "name": "string.quoted.double.html html-template.ng.script.language.identifier"
+            }
+          }
+        },
+        {
+          "match": "[\\s]*(type)(=)('(text|application)/(javascript|typescript|coffeescript|dart)')",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.single.html"
+            },
+            "5": {
+              "name": "html-template.ng.script.language.identifier"
+            }
+          }
+        },
+        {
+          "match": "[\\s]*(lang)(=)(\"(javascript|typescript|coffeescript|dart)\")",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.double.html"
+            },
+            "4": {
+              "name": "string.quoted.double.html html-template.ng.script.language.identifier"
+            }
+          }
+        },
+        {
+          "match": "[\\s]*(lang)(=)('(javascript|typescript|coffeescript|dart)')",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.single.html"
+            },
+            "4": {
+              "name": "html-template.ng.script.language.identifier"
+            }
+          }
+        }
+      ]
+    },
+    "style-type-attribute": {
+      "patterns": [
+        {
+          "match": "[\\s]*(type)(=)(\"(text|stylesheet)/(css|scss|less|sass|stylus|styl|postcss)\")",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.double.html"
+            },
+            "5": {
+              "name": "string.quoted.double.html html-template.ng.style.language.identifier"
+            }
+          }
+        },
+        {
+          "match": "[\\s]*(lang)(=)(\"(css|scss|less|sass|stylus|styl|postcss)\")",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            },
+            "3": {
+              "name": "string.quoted.single.html"
+            },
+            "4": {
+              "name": "html-template.ng.style.language.identifier"
+            }
+          }
+        }
+      ]
+    },
     "tag-deprecated-attribute-a": {
-      "begin": "(<\\/?)((?i:a))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "begin": "(<\\/?)(a)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
       "end": "(\\/?>)",
       "name": "entity.name.tag.html",
       "beginCaptures": {
@@ -3094,8 +3117,8 @@
       },
       "patterns": [
         {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(enable-background|requiredFeatures|xlink:arcrole|xlink:href|xlink:title|xlink:show|xlink:type|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "name": "meta.attribute.$1.html",
+          "match": "[\\s\\n\\r\\t]*(\\b(charset|coords|rev|shape)\\b)(=)?",
           "captures": {
             "2": {
               "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.a.$1"
@@ -3106,13 +3129,9 @@
           }
         },
         {
-          "include": "#svg-non-string-attributes"
-        },
-        {
           "include": "#tag-stuff"
         }
-      ],
-      "comment": "This refers only for the a element and it's attributes when within a SVG element"
+      ]
     },
     "tag-deprecated-attribute-area": {
       "begin": "(<\\/?)(area)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
@@ -4634,323 +4653,6 @@
         }
       ]
     },
-    "generic-style-attribute": {
-      "name": "meta.property-list.scss",
-      "beginCaptures": {
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-        },
-        "2": {
-          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-        },
-        "3": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)\\b(style)+\\b(=)(\")",
-      "end": ".?(\")",
-      "patterns": [
-        {
-          "begin": "(?<![-a-z]|\\(|, |:)(?=[-a-z])",
-          "end": "$|(?![-a-z])",
-          "name": "meta.property-name.scss",
-          "patterns": [
-            {
-              "match": "\\b(source|scroll-offsets|syntax|initialvalue|inherits)\\b",
-              "name": "support.type.property-name.css"
-            },
-            {
-              "include": "source.css#property-names"
-            }
-          ]
-        },
-        {
-          "begin": "(:)\\s*(?!(\\s*{))",
-          "beginCaptures": {
-            "1": {
-              "name": "punctuation.separator.key-value.scss"
-            }
-          },
-          "end": "\\s*(;|(?=\"|\\)))",
-          "endCaptures": {
-            "1": {
-              "name": "punctuation.terminator.rule.scss"
-            }
-          },
-          "contentName": "meta.property-value.scss",
-          "patterns": [
-            {
-              "match": "\\b(false|true)\\b",
-              "name": "constant.language.boolean.css"
-            },
-            {
-              "begin": "\\b(selector)(\\()",
-              "beginCaptures": {
-                "1": {
-                  "name": "support.function.misc.scss"
-                },
-                "2": {
-                  "name": "punctuation.section.function.scss"
-                }
-              },
-              "end": "(\\))",
-              "endCaptures": {
-                "1": {
-                  "name": "punctuation.section.function.scss"
-                }
-              },
-              "patterns": [
-                {
-                  "include": "source.css.scss#selectors"
-                }
-              ]
-            },
-            {
-              "include": "source.css.scss#general"
-            },
-            {
-              "include": "source.css.scss#property_values"
-            }
-          ]
-        }
-      ]
-    },
-    "tag-events-attribute": {
-      "captures": {
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.events"
-        },
-        "2": {
-          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-        }
-      },
-      "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting)+(=)",
-      "end": "(?<='|\")|(?=[\\s<>`])",
-      "name": "template.ng.events",
-      "patterns": [
-        {
-          "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.begin.html"
-            }
-          },
-          "patterns": [
-            {
-              "include": "#angular-expression"
-            }
-          ],
-          "begin": "\"",
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.end.html"
-            }
-          },
-          "end": "\"",
-          "name": "source.events.html"
-        },
-        {
-          "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.begin.html"
-            }
-          },
-          "patterns": [
-            {
-              "include": "#angular-expression"
-            }
-          ],
-          "begin": "'",
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.end.html"
-            }
-          },
-          "end": "'",
-          "name": "source.events.html"
-        }
-      ]
-    },
-    "tag-generic-attribute": {
-      "name": "string.quoted.double.html",
-      "beginCaptures": {
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
-        },
-        "5": {
-          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-        },
-        "6": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_$]+)(:)?([\\w\\-\\_$]+)?\\b(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-interpolations"
-        }
-      ]
-    },
-    "tag-minified-boolean-attributes": {
-      "captures": {
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
-        }
-      },
-      "match": "(?<!\\S)(?!(?:ref|let)?-)([\\w-]+)(:)?([\\w\\-\\_$]+)?\\b(?!=)",
-      "name": "punctuation.definition.tag.end.html",
-      "patterns": []
-    },
-    "tag-minified-boolean-prefixed-attributes": {
-      "captures": {
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
-        },
-        "5": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        }
-      },
-      "match": "((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
-    },
-    "tag-prefixed-attribute": {
-      "name": "string.quoted.double.html",
-      "beginCaptures": {
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
-        },
-        "5": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        },
-        "6": {
-          "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-        },
-        "7": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "((let\\-)|(ref\\-))\\b([\\w\\-\\_]+)([$]*)(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-expression"
-        }
-      ]
-    },
-    "script-type-attribute": {
-      "patterns": [
-        {
-          "match": "[\\s]*(type)(=)(\"(text|application)/(javascript|typescript|coffeescript|dart)\")",
-          "captures": {
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-            },
-            "3": {
-              "name": "string.quoted.double.html"
-            },
-            "5": {
-              "name": "string.quoted.double.html html-template.ng.script.language.identifier"
-            }
-          }
-        },
-        {
-          "match": "[\\s]*(type)(=)('(text|application)/(javascript|typescript|coffeescript|dart)')",
-          "captures": {
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-            },
-            "3": {
-              "name": "string.quoted.single.html"
-            },
-            "5": {
-              "name": "html-template.ng.script.language.identifier"
-            }
-          }
-        }
-      ]
-    },
-    "style-type-attribute": {
-      "patterns": [
-        {
-          "match": "[\\s]*(type)(=)(\"(text|stylesheet)/(css|scss|less|sass|stylus|styl|postcss)\")",
-          "captures": {
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-            },
-            "3": {
-              "name": "string.quoted.double.html"
-            },
-            "5": {
-              "name": "string.quoted.double.html html-template.ng.style.language.identifier"
-            }
-          }
-        },
-        {
-          "match": "[\\s]*(lang)(=)(\"(css|scss|less|sass|stylus|styl|postcss)\")",
-          "captures": {
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
-            },
-            "3": {
-              "name": "string.quoted.single.html"
-            },
-            "4": {
-              "name": "html-template.ng.style.language.identifier"
-            }
-          }
-        }
-      ]
-    },
     "svg-non-string-attributes": {
       "patterns": [
         {
@@ -5065,7 +4767,51 @@
       "end": "(/?>)",
       "name": "meta.element.structure.svg.html"
     },
-    "tag-deprecated-attribute-altGlyph": {
+    "tag-deprecated-svg-attribute-a": {
+      "begin": "(<\\/?)((?i:a))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the a element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(enable-background|requiredFeatures|xlink:arcrole|xlink:href|xlink:title|xlink:show|xlink:type|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.a.$1"
+            },
+            "3": {
+              "name": "puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-altGlyph": {
       "begin": "(<\\/?)((?i:altGlyph))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the altGlyph element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5109,7 +4855,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-animate": {
+    "tag-deprecated-svg-attribute-animate": {
       "begin": "(<\\/?)((?i:animate))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the animate element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5153,7 +4899,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-animateColor": {
+    "tag-deprecated-svg-attribute-animateColor": {
       "begin": "(<\\/?)((?i:animateColor))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the animateColor element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5197,7 +4943,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-animateMotion": {
+    "tag-deprecated-svg-attribute-animateMotion": {
       "begin": "(<\\/?)((?i:animateMotion))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the animateMotion element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5241,7 +4987,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-animateTransform": {
+    "tag-deprecated-svg-attribute-animateTransform": {
       "begin": "(<\\/?)((?i:animateTransform))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the animateTransform element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5285,7 +5031,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-circle": {
+    "tag-deprecated-svg-attribute-circle": {
       "begin": "(<\\/?)((?i:circle))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the circle element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5329,7 +5075,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-clipPath": {
+    "tag-deprecated-svg-attribute-clipPath": {
       "begin": "(<\\/?)((?i:clipPath))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the clipPath element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5373,7 +5119,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-cursor": {
+    "tag-deprecated-svg-attribute-cursor": {
       "begin": "(<\\/?)((?i:cursor))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the cursor element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5417,7 +5163,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-defs": {
+    "tag-deprecated-svg-attribute-defs": {
       "begin": "(<\\/?)((?i:defs))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the defs element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5461,7 +5207,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-ellipse": {
+    "tag-deprecated-svg-attribute-ellipse": {
       "begin": "(<\\/?)((?i:ellipse))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the ellipse element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5505,7 +5251,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-feConvolveMatrix": {
+    "tag-deprecated-svg-attribute-feConvolveMatrix": {
       "begin": "(<\\/?)((?i:feConvolveMatrix))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the feConvolveMatrix element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5549,7 +5295,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-feDiffuseLighting": {
+    "tag-deprecated-svg-attribute-feDiffuseLighting": {
       "begin": "(<\\/?)((?i:feDiffuseLighting))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the feDiffuseLighting element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5593,7 +5339,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-feImage": {
+    "tag-deprecated-svg-attribute-feImage": {
       "begin": "(<\\/?)((?i:feImage))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the feImage element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5637,7 +5383,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-feSpecularLighting": {
+    "tag-deprecated-svg-attribute-feSpecularLighting": {
       "begin": "(<\\/?)((?i:feSpecularLighting))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the feSpecularLighting element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5681,7 +5427,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-filter": {
+    "tag-deprecated-svg-attribute-filter": {
       "begin": "(<\\/?)((?i:filter))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the filter element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5725,7 +5471,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-font-face-format": {
+    "tag-deprecated-svg-attribute-font-face-format": {
       "begin": "(<\\/?)((?i:font-face-format))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the font-face-format element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5769,7 +5515,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-font-face-name": {
+    "tag-deprecated-svg-attribute-font-face-name": {
       "begin": "(<\\/?)((?i:font-face-name))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the font-face-name element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5813,7 +5559,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-font-face-uri": {
+    "tag-deprecated-svg-attribute-font-face-uri": {
       "begin": "(<\\/?)((?i:font-face-uri))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the font-face-uri element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5857,7 +5603,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-font-face": {
+    "tag-deprecated-svg-attribute-font-face": {
       "begin": "(<\\/?)((?i:font-face))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the font-face element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5901,7 +5647,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-font": {
+    "tag-deprecated-svg-attribute-font": {
       "begin": "(<\\/?)((?i:font))\\b(?![\\w\\-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the font element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5945,7 +5691,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-foreignObject": {
+    "tag-deprecated-svg-attribute-foreignObject": {
       "begin": "(<\\/?)((?i:foreignObject))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the foreignObject element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -5989,7 +5735,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-g": {
+    "tag-deprecated-svg-attribute-g": {
       "begin": "(<\\/?)((?i:g))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the g element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6033,7 +5779,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-glyph": {
+    "tag-deprecated-svg-attribute-glyph": {
       "begin": "(<\\/?)((?i:glyph))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the glyph element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6077,7 +5823,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-radialGradient": {
+    "tag-deprecated-svg-attribute-radialGradient": {
       "begin": "(<\\/?)((?i:radialGradient))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the radialGradient element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6121,7 +5867,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-hkern": {
+    "tag-deprecated-svg-attribute-hkern": {
       "begin": "(<\\/?)((?i:hkern))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the hkern element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6165,7 +5911,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-image": {
+    "tag-deprecated-svg-attribute-image": {
       "begin": "(<\\/?)((?i:image))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the image element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6209,7 +5955,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-line": {
+    "tag-deprecated-svg-attribute-line": {
       "begin": "(<\\/?)((?i:line))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the line element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6253,7 +5999,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-linearGradient": {
+    "tag-deprecated-svg-attribute-linearGradient": {
       "begin": "(<\\/?)((?i:linearGradient))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the linearGradient element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6297,7 +6043,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-marker": {
+    "tag-deprecated-svg-attribute-marker": {
       "begin": "(<\\/?)((?i:marker))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the a element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6341,7 +6087,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-mask": {
+    "tag-deprecated-svg-attribute-mask": {
       "begin": "(<\\/?)((?i:mask))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the mask element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6385,7 +6131,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-missing-glyph": {
+    "tag-deprecated-svg-attribute-missing-glyph": {
       "begin": "(<\\/?)((?i:missing-glyph))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the missing-glyph element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6429,7 +6175,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-mpath": {
+    "tag-deprecated-svg-attribute-mpath": {
       "begin": "(<\\/?)((?i:mpath))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the mpath element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6473,7 +6219,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-path": {
+    "tag-deprecated-svg-attribute-path": {
       "begin": "(<\\/?)((?i:path))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the path element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6517,7 +6263,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-pattern": {
+    "tag-deprecated-svg-attribute-pattern": {
       "begin": "(<\\/?)((?i:pattern))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the pattern element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6561,7 +6307,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-polygon": {
+    "tag-deprecated-svg-attribute-polygon": {
       "begin": "(<\\/?)((?i:polygon))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the polygon element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6605,7 +6351,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-polyline": {
+    "tag-deprecated-svg-attribute-polyline": {
       "begin": "(<\\/?)((?i:polyline))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the polyline element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6649,7 +6395,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-rect": {
+    "tag-deprecated-svg-attribute-rect": {
       "begin": "(<\\/?)((?i:rect))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the rect element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6693,7 +6439,7 @@
         }
       ]
     },
-    "svg-deprecated-script-attributes": {
+    "svg-deprecated-svg-script-attributes": {
       "patterns": [
         {
           "match": "[\\s]*(xlink:type|xlink:title|xlink:href|xlink:arcrole|xml:space|xml:lang|xml:base)(=)(\".*\")",
@@ -6711,7 +6457,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-set": {
+    "tag-deprecated-svg-attribute-set": {
       "begin": "(<\\/?)((?i:set))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the set element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6755,7 +6501,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-switch": {
+    "tag-deprecated-svg-attribute-switch": {
       "begin": "(<\\/?)((?i:switch))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the switch element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6799,7 +6545,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-symbol": {
+    "tag-deprecated-svg-attribute-symbol": {
       "begin": "(<\\/?)((?i:symbol))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the symbol element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6843,7 +6589,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-text": {
+    "tag-deprecated-svg-attribute-text": {
       "begin": "(<\\/?)((?i:text))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the text element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6887,7 +6633,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-textPath": {
+    "tag-deprecated-svg-attribute-textPath": {
       "begin": "(<\\/?)((?i:textPath))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the textPath element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6931,7 +6677,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-tref": {
+    "tag-deprecated-svg-attribute-tref": {
       "begin": "(<\\/?)((?i:tref))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the tref element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -6975,7 +6721,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-tspan": {
+    "tag-deprecated-svg-attribute-tspan": {
       "begin": "(<\\/?)((?i:tspan))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the tspan element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -7019,7 +6765,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-use": {
+    "tag-deprecated-svg-attribute-use": {
       "begin": "(<\\/?)((?i:use))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the use element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -7063,7 +6809,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-view": {
+    "tag-deprecated-svg-attribute-view": {
       "begin": "(<\\/?)((?i:view))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the view element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
@@ -7107,7 +6853,7 @@
         }
       ]
     },
-    "tag-deprecated-attribute-vkern": {
+    "tag-deprecated-svg-attribute-vkern": {
       "begin": "(<\\/?)((?i:vkern))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the vkern element and it's attributes when within a SVG element",
       "end": "(\\/?>)",

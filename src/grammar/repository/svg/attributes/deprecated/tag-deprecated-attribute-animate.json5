@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-animate': {
+    'tag-deprecated-svg-attribute-animate': {
       begin: '(<\\/?)((?i:animate))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the animate element and it's attributes when within a SVG element",
       end: '(\\/?>)',

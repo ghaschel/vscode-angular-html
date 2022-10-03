@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-hkern': {
+    'tag-deprecated-svg-attribute-hkern': {
       begin: '(<\\/?)((?i:hkern))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the hkern element and it's attributes when within a SVG element",
       end: '(\\/?>)',

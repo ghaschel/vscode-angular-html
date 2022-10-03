@@ -1,0 +1,235 @@
+{
+  repository: {
+    'tag-script': {
+      begin: '(^[\\t]+)?(?=<(?i:script)\\b(?!-))',
+      beginCaptures: {
+        '1': {
+          name: 'punctuation.whitespace.embedded.leading.html',
+        },
+      },
+      end: '(?=</(?i:script)>)\\n?',
+      patterns: [
+        {
+          begin: '(<)((?i:script))(>)',
+          beginCaptures: {
+            '0': {
+              name: 'meta.tag.metadata.script.start.html',
+            },
+            '1': {
+              name: 'punctuation.definition.tag.begin.html',
+            },
+            '2': {
+              name: 'entity.name.tag.html',
+            },
+            '3': {
+              name: 'punctuation.definition.tag.end.html',
+            },
+          },
+          end: '(?=(?=<(?=/(?=script(?=>)))))',
+          patterns: [
+            {
+              include: '#cdata',
+            },
+            {
+              include: 'source.js',
+            },
+          ],
+        },
+        {
+          begin: '(<)((?i:script))\\b',
+          beginCaptures: {
+            '0': {
+              name: 'meta.tag.metadata.script.start.html',
+            },
+            '1': {
+              name: 'punctuation.definition.tag.begin.html',
+            },
+            '2': {
+              name: 'entity.name.tag.html',
+            },
+          },
+          end: '(?=(?=<(?=/(?=script(?=>)))))',
+          patterns: [
+            {
+              begin: '\\G',
+              end: '(?=<(?=/(?=script(?=>))))',
+              patterns: [
+                {
+                  begin: '(?=(type(?=[\\s=][\'"](text/(typescript|x-typescript)|application/((x-)?typescript))[\\s"\'])|(lang(?=[\\s=][\'"]typescript[\\s"\']))))',
+                  end: '(?=<(?=/(?=script>)))',
+                  patterns: [
+                    {
+                      begin: '\\G',
+                      end: '(?=<(?=/script>))',
+                      patterns: [
+                        {
+                          begin: '\\G',
+                          end: '(>)',
+                          endCaptures: {
+                            '1': {
+                              name: 'punctuation.definition.tag.end.html',
+                            },
+                          },
+                          name: 'meta.tag.metadata.script.start.html',
+                          patterns: [
+                            {
+                              include: '#script-type-attribute',
+                            },
+                            {
+                              include: '#tag-stuff',
+                            },
+                          ],
+                        },
+                        {
+                          begin: '(?!\\G)',
+                          end: '(?=</script>)',
+                          patterns: [
+                            {
+                              include: '#cdata',
+                            },
+                            {
+                              include: 'source.ts',
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  begin: '(?=(type(?=[\\s=][\'"]((module)|(text/(javascript|x-javascript)|application/((x-)?javascript)))[\\s"\'])|(lang(?=[\\s=][\'"]javascript[\\s"\']))))',
+                  end: '(?=<(?=/(?=script>)))',
+                  patterns: [
+                    {
+                      begin: '\\G',
+                      end: '(?=<(?=/script>))',
+                      patterns: [
+                        {
+                          begin: '\\G',
+                          end: '(>)',
+                          endCaptures: {
+                            '1': {
+                              name: 'punctuation.definition.tag.end.html',
+                            },
+                          },
+                          name: 'meta.tag.metadata.script.start.html',
+                          patterns: [
+                            {
+                              include: '#script-type-attribute',
+                            },
+                            {
+                              include: '#tag-stuff',
+                            },
+                          ],
+                        },
+                        {
+                          begin: '(?!\\G)',
+                          end: '(?=</script>)',
+                          patterns: [
+                            {
+                              include: '#cdata',
+                            },
+                            {
+                              include: 'source.js',
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  begin: '(?=(type(?=[\\s=][\'"](text/(coffeescript|x-coffeescript)|application/((x-)?coffeescript))[\\s"\'])|(lang(?=[\\s=][\'"]coffeescript[\\s"\']))))',
+                  end: '(?=<(?=/(?=script>)))',
+                  patterns: [
+                    {
+                      begin: '\\G',
+                      end: '(?=<(?=/script>))',
+                      patterns: [
+                        {
+                          begin: '\\G',
+                          end: '(>)',
+                          endCaptures: {
+                            '1': {
+                              name: 'punctuation.definition.tag.end.html',
+                            },
+                          },
+                          name: 'meta.tag.metadata.script.start.html',
+                          patterns: [
+                            {
+                              include: '#script-type-attribute',
+                            },
+                            {
+                              include: '#tag-stuff',
+                            },
+                          ],
+                        },
+                        {
+                          begin: '(?!\\G)',
+                          end: '(?=</script>)',
+                          patterns: [
+                            {
+                              include: '#cdata',
+                            },
+                            {
+                              include: 'source.coffee',
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  begin: '(?=(type(?=[\\s=][\'"](text/(dart|x-dart)|application/((x-)?dart))[\\s"\'])|(lang(?=[\\s=][\'"]dart[\\s"\']))))',
+                  end: '(?=<(?=/(?=script>)))',
+                  patterns: [
+                    {
+                      begin: '\\G',
+                      end: '(?=<(?=/script>))',
+                      patterns: [
+                        {
+                          begin: '\\G',
+                          end: '(>)',
+                          endCaptures: {
+                            '1': {
+                              name: 'punctuation.definition.tag.end.html',
+                            },
+                          },
+                          name: 'meta.tag.metadata.script.start.html',
+                          patterns: [
+                            {
+                              include: '#script-type-attribute',
+                            },
+                            {
+                              include: '#tag-stuff',
+                            },
+                          ],
+                        },
+                        {
+                          begin: '(?!\\G)',
+                          end: '(?=</script>)',
+                          patterns: [
+                            {
+                              include: '#cdata',
+                            },
+                            {
+                              include: 'source.dart',
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  include: '#tag-stuff',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+}

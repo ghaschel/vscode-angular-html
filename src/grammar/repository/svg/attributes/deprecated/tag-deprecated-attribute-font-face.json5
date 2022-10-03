@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-font-face': {
+    'tag-deprecated-svg-attribute-font-face': {
       begin: '(<\\/?)((?i:font-face))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the font-face element and it's attributes when within a SVG element",
       end: '(\\/?>)',
@@ -46,3 +46,4 @@
     },
   },
 }
+

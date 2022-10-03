@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-image': {
+    'tag-deprecated-svg-attribute-image': {
       begin: '(<\\/?)((?i:image))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the image element and it's attributes when within a SVG element",
       end: '(\\/?>)',

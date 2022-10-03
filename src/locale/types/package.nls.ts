@@ -38,9 +38,9 @@ export interface PackageNls {
   'ext.settings.dtd.dtdDoctypeElement': string;
   'ext.settings.dtd.dtdDoctypeQualifier': string;
   'ext.settings.dtd.dtdDoctypeQuantifier': string;
-  'ext.commands.updateTokenCustomization': string;
-  'ext.commands.disableTokenCustomization': string;
-  'ext.commands.addLegacyColorCustomizations': string;
+  'ext.command.updateTokenCustomization.title': string;
+  'ext.command.disableTokenCustomization.title': string;
+  'ext.command.addLegacyColorCustomizations.title': string;
   'ext.messages.updateNotice': string;
   'ext.messages.enableLegacyColors': string;
   'ext.messages.goToSettingsPage': string;

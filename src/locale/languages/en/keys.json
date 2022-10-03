@@ -57,10 +57,16 @@
       "dtdDoctypeQuantifier": "Matches the DTD quantifiers:"
     }
   },
-  "commands": {
-    "updateTokenCustomization": "vscode-angular-html: Update color customizations",
-    "disableTokenCustomization": "vscode-angular-html: Disable color customizations",
-    "addLegacyColorCustomizations": "vscode-angular-html: Set legacy color customizations"
+  "command": {
+    "updateTokenCustomization": {
+      "title": "vscode-angular-html: Update color customizations"
+    },
+    "disableTokenCustomization": {
+      "title": "vscode-angular-html: Disable color customizations"
+    },
+    "addLegacyColorCustomizations": {
+      "title": "vscode-angular-html: Set legacy color customizations"
+    }
   },
   "messages": {
     "updateNotice": "vscode-angular-html was updated and it now allows color customizations 🎉!  Please check-out the settings page :)",

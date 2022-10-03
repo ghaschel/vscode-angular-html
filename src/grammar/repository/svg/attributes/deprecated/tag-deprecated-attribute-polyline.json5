@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-polyline': {
+    'tag-deprecated-svg-attribute-polyline': {
       begin: '(<\\/?)((?i:polyline))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the polyline element and it's attributes when within a SVG element",
       end: '(\\/?>)',

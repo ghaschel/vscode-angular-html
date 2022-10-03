@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-use': {
+    'tag-deprecated-svg-attribute-use': {
       begin: '(<\\/?)((?i:use))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the use element and it's attributes when within a SVG element",
       end: '(\\/?>)',

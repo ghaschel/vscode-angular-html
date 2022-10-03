@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-missing-glyph': {
+    'tag-deprecated-svg-attribute-missing-glyph': {
       begin: '(<\\/?)((?i:missing-glyph))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the missing-glyph element and it's attributes when within a SVG element",
       end: '(\\/?>)',

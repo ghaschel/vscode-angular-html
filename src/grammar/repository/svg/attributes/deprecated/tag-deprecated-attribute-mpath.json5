@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-mpath': {
+    'tag-deprecated-svg-attribute-mpath': {
       begin: '(<\\/?)((?i:mpath))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the mpath element and it's attributes when within a SVG element",
       end: '(\\/?>)',

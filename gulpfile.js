@@ -9,7 +9,7 @@ const prettierConfig = require('./.prettierrc.json');
 const scopes = package.contributes.grammars.map(scope => scope.scopeName);
 
 function watch() {
-  return gulp.watch('./src/grammar/**/*.json5', gulp.series(['compile-json']));
+  return gulp.watch('./src/grammar/**/*.json5', gulp.series(['compile:json']));
 }
 
 gulp.task('compile', done => {
@@ -39,7 +39,7 @@ gulp.task('compile', done => {
   done();
 });
 
-gulp.task('compile-color-customizations', done => {
+gulp.task('compile:color-customizations', done => {
   gulp
     .src('./src/color-customizations/*.json5')
     .pipe(
@@ -80,7 +80,7 @@ gulp.task('copy', done => {
 });
 
 gulp.task('copy', gulp.series(['copy']));
-gulp.task('compile-json', gulp.series(['compile']));
-gulp.task('compile-color-customizations', gulp.series(['compile-color-customizations']));
+gulp.task('compile:json', gulp.series(['compile']));
+gulp.task('compile:color-customizations', gulp.series(['compile:color-customizations']));
 gulp.task('watch', () => watch());
 gulp.task('default', () => watch());

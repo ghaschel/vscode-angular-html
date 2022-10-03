@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-path': {
+    'tag-deprecated-svg-attribute-path': {
       begin: '(<\\/?)((?i:path))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the path element and it's attributes when within a SVG element",
       end: '(\\/?>)',

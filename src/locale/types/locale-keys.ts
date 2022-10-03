@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 export interface LocaleKeys {
   settings: {
     general: {
@@ -58,10 +57,16 @@ export interface LocaleKeys {
       dtdDoctypeQuantifier: string;
     };
   };
-  commands: {
-    updateTokenCustomization: string;
-    disableTokenCustomization: string;
-    addLegacyColorCustomizations: string;
+  command: {
+    updateTokenCustomization: {
+      title: string;
+    };
+    disableTokenCustomization: {
+      title: string;
+    };
+    addLegacyColorCustomizations: {
+      title: string;
+    };
   };
   messages: {
     updateNotice: string;

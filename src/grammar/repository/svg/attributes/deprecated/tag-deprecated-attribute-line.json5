@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-line': {
+    'tag-deprecated-svg-attribute-line': {
       begin: '(<\\/?)((?i:line))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the line element and it's attributes when within a SVG element",
       end: '(\\/?>)',

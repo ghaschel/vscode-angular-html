@@ -16,6 +16,7 @@ COMMENTS
 INVALID ATTRIBUTES
 
 <a
+  enable-background=""
   charset="dasdasda"
   coords=""
   rev=""
@@ -215,6 +216,78 @@ INVALID ATTRIBUTES
   valign=""
 ></tr>
 
+<script>
+  /*
+   * TypeScript
+   */
+
+  let a = '123';
+  let b: number = 123;
+  const b = 'asdf';
+  new Class();
+
+  function test() {
+    test.callback();
+  }
+
+</script>
+
+<script
+type="text/typescript"
+>
+  /*
+   * TypeScript
+   */
+
+  let a = '123';
+  let b: number = 123;
+  const b = 'asdf';
+  new Class();
+
+  function test() {
+    test.callback();
+  }
+
+</script>
+
+<script
+(click)="test"
+(click)="test"
+type="application/dart"
+lang="dart"
+>
+  /* <![CDATA[ */
+    var number = 42
+    var opposite = true
+  /* ]]> */
+
+  /*
+   * Dart
+   */
+
+  int fibonacci(int n) {
+    if (n == 0 || n == 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+
+  var result = fibonacci(20);
+</script>
+
+<script type="text/javascript">
+  /*
+   * JavaScript
+   */
+
+  let sssb = '123';
+  const sssb = 123;
+  new Class();
+
+  function test() {
+    test.callback();
+  }
+
+</script>
+
 <div-test></div-test>
 <menu-test></menu-test>
 
@@ -271,7 +344,9 @@ ANGULAR INTERPOLATIONS
 {{ test | pipe }}
 {{ test | pipe: 'withParameters' }}
 {{ angular.interpolations || test }}
-{{ angular?.interpolations }}
+{{ angular?.interpolations(
+  'tesst'
+) }}
 {{ angular!.interpolations }}
 {{ (null || undefined) ?? "Hello World "; }}
 
@@ -517,7 +592,38 @@ GENERIC ATTRIBUTES
 
 <button [style.font-size.em]="isSpecial ? 3 : 1">Big</button>
 
-<style lang="css" type="text/css">
+
+<style
+type="text/sass"
+>
+  /* <![CDATA[ */
+  .container
+    padding: 15px
+    background-color: red
+
+  /* ]]> */
+
+  /*
+   * SASS
+   */
+
+  $base-color: #c6538c
+  $border-dark: rgba($base-color, 0.88)
+
+  .alert
+    border: 1px solidsdasa $border-dark
+
+</style>
+
+<style type="text/css" lang="css">
+  /* <![CDATA[ */
+  .container {
+    padding: 15px;
+    background-color: var(--white);
+    color: var(--blue);
+  }
+  /* ]]> */
+
   /*
   * CSS
   */
@@ -544,6 +650,15 @@ GENERIC ATTRIBUTES
 </style>
 
 <style type="text/less" lang="less">
+
+  /* <![CDATA[ */
+  .container {
+    padding: 15px;
+    background-color: red;
+    color: blue;
+  }
+  /* ]]> */
+
   /*
    * LESS
    */
@@ -572,7 +687,15 @@ GENERIC ATTRIBUTES
   }
 </style>
 
-<style lang="scss" type="text/scss" test="test">
+<style type="text/scss">
+  /* <![CDATA[ */
+  .container {
+    padding: 15px;
+    background-color: red;
+    color: white;
+  }
+  /* ]]> */
+
   /*
    * SCSS
    */
@@ -588,6 +711,14 @@ GENERIC ATTRIBUTES
 </style>
 
 <style type="text/postcss" lang="postcss">
+  /* <![CDATA[ */
+  .container {
+    padding: 15px;
+    background-color: red;
+    color: blue;
+  }
+  /* ]]> */
+
   /*
    * PostCSS
    */
@@ -605,6 +736,15 @@ GENERIC ATTRIBUTES
 </style>
 
 <style type="text/stylus" lang="stylus">
+
+  // <![CDATA[
+  .container {
+    padding: 15px;
+    background-color: red;
+    color: white;
+  }
+  // ]]>
+
   // Stylus
 
   $font-size = 14px
@@ -616,7 +756,10 @@ GENERIC ATTRIBUTES
 
 </style>
 
-<style lang="sass" type="text/sass">
+<style
+  type="module"
+  type="text/sass"
+>
   /*
    * SASS
    */
@@ -629,22 +772,14 @@ GENERIC ATTRIBUTES
 
 </style>
 
-<script type="text/javascript">
-  /*
-   * JavaScript
-   */
 
-  let a = '123';
-  const b = 123;
-  new Class();
+<script (click)="test" type="text/coffeescript" class="test">
 
-  function test() {
-    test.callback();
-  }
+  ### <![CDATA[ ###
+  number = 42
+  opposite = true
+  ### ]]> ###
 
-</script>
-
-<script type="text/coffeescript" lang="coffeescript">
   ###
   ## CoffeeScript
   ###
@@ -668,27 +803,21 @@ GENERIC ATTRIBUTES
   cubes = (math.cube num for num in list)
 </script>
 
-<script type="application/dart">
-  /*
-   * Dart
-   */
 
-  int fibonacci(int n) {
-    if (n == 0 || n == 1) return n;
-    return fibonacci(n - 1) + fibonacci(n - 2);
-  }
+<script type="text/typescript" lang="typescript">
 
-  var result = fibonacci(20);
+  /* <![CDATA[ */
+  number = 42
+  opposite = true
+  /* ]]> */
 
-</script>
-
-<script type="text/typescript">
   /*
    * TypeScript
    */
 
   let a = '123';
-  const b: number = 123;
+  let b: number = 123;
+  const b = 'asdf';
   new Class();
 
   function test() {
@@ -696,6 +825,31 @@ GENERIC ATTRIBUTES
   }
 
 </script>
+
+<script>
+  // JS
+</script>
+
+<script type="text/javascript" lang="javascript">
+  /* <![CDATA[ */
+  number = 42
+  opposite = true
+  /* ]]> */
+
+  /*
+   * JavaScript
+   */
+
+  let sssb = '123';
+  const sssb = 123;
+  new Class();
+
+  function test() {
+    test.callback();
+  }
+
+</script>
+
 
 <ng-container></ng-container>
 <ng-content></ng-content>
@@ -1112,8 +1266,14 @@ XML
 </div>
 
 <font-face:test alphabetic=""></font-face:test>
-
 <font:face></font:face>
+
+<a
+charset="dasdasda"
+coords=""
+rev=""
+shape=""
+></a>
 
 <svg
   width="100%"
@@ -1154,7 +1314,7 @@ XML
      * JavaScript
      */
 
-    let a = '123';
+    let dasdasdasdasdadasda = '123';
     const b = 123;
     new Class();
 

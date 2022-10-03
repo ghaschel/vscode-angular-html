@@ -36,7 +36,42 @@
             },
           },
         },
+        {
+          match: '[\\s]*(lang)(=)("(javascript|typescript|coffeescript|dart)")',
+          captures: {
+            '1': {
+              name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+            },
+            '2': {
+              name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+            },
+            '3': {
+              name: 'string.quoted.double.html',
+            },
+            '4': {
+              name: 'string.quoted.double.html html-template.ng.script.language.identifier',
+            },
+          },
+        },
+        {
+          match: "[\\s]*(lang)(=)('(javascript|typescript|coffeescript|dart)')",
+          captures: {
+            '1': {
+              name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+            },
+            '2': {
+              name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+            },
+            '3': {
+              name: 'string.quoted.single.html',
+            },
+            '4': {
+              name: 'html-template.ng.script.language.identifier',
+            },
+          },
+        },
       ],
     },
   },
 }
+

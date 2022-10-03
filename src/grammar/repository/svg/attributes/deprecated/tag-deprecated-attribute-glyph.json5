@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-glyph': {
+    'tag-deprecated-svg-attribute-glyph': {
       begin: '(<\\/?)((?i:glyph))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the glyph element and it's attributes when within a SVG element",
       end: '(\\/?>)',
@@ -46,3 +46,4 @@
     },
   },
 }
+

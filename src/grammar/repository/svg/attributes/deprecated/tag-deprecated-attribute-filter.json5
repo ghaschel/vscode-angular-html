@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-filter': {
+    'tag-deprecated-svg-attribute-filter': {
       begin: '(<\\/?)((?i:filter))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the filter element and it's attributes when within a SVG element",
       end: '(\\/?>)',

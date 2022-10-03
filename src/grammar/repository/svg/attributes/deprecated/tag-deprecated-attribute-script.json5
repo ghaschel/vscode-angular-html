@@ -1,6 +1,6 @@
 {
   repository: {
-    'svg-deprecated-script-attributes': {
+    'svg-deprecated-svg-script-attributes': {
       patterns: [
         {
           match: '[\\s]*(xlink:type|xlink:title|xlink:href|xlink:arcrole|xml:space|xml:lang|xml:base)(=)(".*")',

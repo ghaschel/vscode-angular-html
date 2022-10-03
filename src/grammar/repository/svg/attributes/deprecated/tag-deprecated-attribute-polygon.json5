@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-polygon': {
+    'tag-deprecated-svg-attribute-polygon': {
       begin: '(<\\/?)((?i:polygon))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the polygon element and it's attributes when within a SVG element",
       end: '(\\/?>)',

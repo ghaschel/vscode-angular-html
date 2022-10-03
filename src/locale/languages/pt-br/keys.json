@@ -57,10 +57,16 @@
       "dtdDoctypeQuantifier": "Corresponde aos quantificadores DTD:"
     }
   },
-  "commands": {
-    "updateTokenCustomization": "vscode-angular-html: Atualizar customização de cores",
-    "disableTokenCustomization": "vscode-angular-html: Desabilitar customização de cores",
-    "addLegacyColorCustomizations": "vscode-angular-html: Setar customização de cores de legado"
+  "command": {
+    "updateTokenCustomization": {
+      "title": "vscode-angular-html: Atualizar customização de cores"
+    },
+    "disableTokenCustomization": {
+      "title": "vscode-angular-html: Desabilitar customização de cores"
+    },
+    "addLegacyColorCustomizations": {
+      "title": "vscode-angular-html: Setar customização de cores de legado"
+    }
   },
   "messages": {
     "updateNotice": "vscode-angular-html foi atualizado e agora suporta customização de cores 🎉!  Por favor, dê uma olhada na página de configurações :)",

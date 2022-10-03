@@ -38,9 +38,9 @@
   "ext.settings.dtd.dtdDoctypeElement": "Corresponde a tags de elemento DTD:\n\n* <&#x21;`ELEMENT` `BANNER` (#PCDATA)>\n\n* <&#x21;`ATTLIST` TVSCHEDULE NAME CDATA #REQUIRED>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>\n\t<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n]>\n\n\n```\nDeixe em branco para desativar para este item.",
   "ext.settings.dtd.dtdDoctypeQualifier": "Corresponde aos qualificadores DTD:\n\n* <&#x21;ELEMENT DAY (`DATE`,(`HOLIDAY`|`PROGRAMSLOT`+)+)>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>\n\t<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>\n]>\n\n\n```\nDeixe em branco para desativar para este item.",
   "ext.settings.dtd.dtdDoctypeQuantifier": "Corresponde aos quantificadores DTD:\n\n* <&#x21;ELEMENT DAY (DATE,(HOLIDAY`|`PROGRAMSLOT`+`)`*`)>\n\n* <&#x21;ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION`?`)>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)*)>\n\t<!ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION?)>\n]>\n\n\n```\nDeixe em branco para desativar para este item.",
-  "ext.commands.updateTokenCustomization": "vscode-angular-html: Atualizar customização de cores",
-  "ext.commands.disableTokenCustomization": "vscode-angular-html: Desabilitar customização de cores",
-  "ext.commands.addLegacyColorCustomizations": "vscode-angular-html: Setar customização de cores de legado",
+  "ext.command.updateTokenCustomization.title": "vscode-angular-html: Atualizar customização de cores",
+  "ext.command.disableTokenCustomization.title": "vscode-angular-html: Desabilitar customização de cores",
+  "ext.command.addLegacyColorCustomizations.title": "vscode-angular-html: Setar customização de cores de legado",
   "ext.messages.updateNotice": "vscode-angular-html foi atualizado e agora suporta customização de cores 🎉!  Por favor, dê uma olhada na página de configurações :)",
   "ext.messages.enableLegacyColors": "Habilitar cores de legado",
   "ext.messages.goToSettingsPage": "Ir para página de configurações"

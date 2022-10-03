@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-switch': {
+    'tag-deprecated-svg-attribute-switch': {
       begin: '(<\\/?)((?i:switch))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the switch element and it's attributes when within a SVG element",
       end: '(\\/?>)',

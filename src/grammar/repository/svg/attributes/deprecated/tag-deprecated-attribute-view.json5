@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-view': {
+    'tag-deprecated-svg-attribute-view': {
       begin: '(<\\/?)((?i:view))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the view element and it's attributes when within a SVG element",
       end: '(\\/?>)',

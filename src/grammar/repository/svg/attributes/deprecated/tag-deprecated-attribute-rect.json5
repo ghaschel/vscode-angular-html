@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-rect': {
+    'tag-deprecated-svg-attribute-rect': {
       begin: '(<\\/?)((?i:rect))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the rect element and it's attributes when within a SVG element",
       end: '(\\/?>)',

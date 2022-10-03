@@ -1,6 +1,6 @@
 {
   repository: {
-    'tag-deprecated-attribute-defs': {
+    'tag-deprecated-svg-attribute-defs': {
       begin: '(<\\/?)((?i:defs))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b',
       comment: "This refers only for the defs element and it's attributes when within a SVG element",
       end: '(\\/?>)',

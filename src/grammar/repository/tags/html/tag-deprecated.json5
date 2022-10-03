@@ -1,0 +1,28 @@
+{
+  repository: {
+    'tag-deprecated': {
+      beginCaptures: {
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'invalid.deprecated.tag',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+      },
+      endCaptures: {
+        '1': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      begin: '(<\\/?)(acronym|applet|basefont|big|center|dir|font|frameset|frame|isindex|noframes|strike|tt|u)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b',
+      end: '(\\/?>)',
+      patterns: [{ include: '#tag-stuff' }],
+    },
+  },
+}

@@ -1,6 +1,7 @@
 {
   repository: {
     'tag-event-handler': {
+      name: 'meta.ng-binding.event.html',
       captures: {
         '1': {
           name: 'entity.other.attribute-name.html entity.other.ng-binding-name.event.html punctuation.definition.ng-binding-name.begin.html',
@@ -12,7 +13,7 @@
           name: 'entity.other.attribute-name.html entity.other.ng-binding-name.event.html punctuation.definition.ng-binding-name.end.html',
         },
         '4': {
-          name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+          name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
         },
         '5': {
           name: 'string.quoted.double.html',

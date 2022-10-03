@@ -6,7 +6,7 @@ var baseTsRules = {
       checkForEach: true,
     },
   ],
-  'linebreak-style': ['error', 'windows'],
+  'linebreak-style': ['error', 'unix'],
   'no-constant-binary-expression': 'error',
   'no-constructor-return': 'error',
   'no-duplicate-imports': 'off',

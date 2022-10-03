@@ -1,0 +1,326 @@
+{
+  repository: {
+    'tag-style': {
+      begin: '(^[\\t]+)?(?=<(?i:style)\\b(?!-))',
+      beginCaptures: {
+        '1': {
+          name: 'punctuation.whitespace.embedded.leading.html',
+        },
+      },
+      end: '(?=</(?i:style)>)\\n?',
+      patterns: [
+        {
+          begin: '(<)((?i:style))(>)',
+          beginCaptures: {
+            '0': {
+              name: 'meta.tag.metadata.style.start.html',
+            },
+            '1': {
+              name: 'punctuation.definition.tag.begin.html',
+            },
+            '2': {
+              name: 'entity.name.tag.html',
+            },
+            '3': {
+              name: 'punctuation.definition.tag.end.html',
+            },
+          },
+          end: '(?=(?=<(?=/(?=style(?=>)))))',
+          name: 'source.css',
+          patterns: [
+            {
+              include: '#cdata',
+            },
+            {
+              include: 'source.css',
+            },
+          ],
+        },
+        {
+          begin: '(<)((?i:style))\\b',
+          beginCaptures: {
+            '0': {
+              name: 'meta.tag.metadata.style.start.html',
+            },
+            '1': {
+              name: 'punctuation.definition.tag.begin.html',
+            },
+            '2': {
+              name: 'entity.name.tag.html',
+            },
+          },
+          end: '(?=(?=<(?=/(?=style(?=>)))))',
+          patterns: [
+            {
+              begin: '\\G',
+              end: '(?=<(?=/(?=style(?=>))))',
+              patterns: [
+                {
+                  begin: '(?=(type(?=[\\s=][\'"](text/css[\\s"\'>]))|(lang(?=[\\s=][\'"]css[\\s"\'>]))))',
+                  end: '(?=<(?=/(?=style>)))',
+                  patterns: [
+                    {
+                      begin: '\\G',
+                      end: '(?=<(?=/style>))',
+                      patterns: [
+                        {
+                          begin: '\\G',
+                          end: '(>)',
+                          endCaptures: {
+                            '1': {
+                              name: 'punctuation.definition.tag.end.html',
+                            },
+                          },
+                          name: 'meta.tag.metadata.style.start.html',
+                          patterns: [
+                            {
+                              include: '#style-type-attribute',
+                            },
+                            {
+                              include: '#tag-stuff',
+                            },
+                          ],
+                        },
+                        {
+                          begin: '(?!\\G)',
+                          end: '(?=</style>)',
+                          name: 'source.css',
+                          patterns: [
+                            {
+                              include: '#cdata',
+                            },
+                            {
+                              include: 'source.css',
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  begin: '(?=(type(?=[\\s=][\'"](text/less[\\s"\'>]))|(lang(?=[\\s=][\'"]less[\\s"\'>]))))',
+                  end: '(?=<(?=/(?=style>)))',
+                  patterns: [
+                    {
+                      begin: '\\G',
+                      end: '(?=<(?=/style>))',
+                      patterns: [
+                        {
+                          begin: '\\G',
+                          end: '(>)',
+                          endCaptures: {
+                            '1': {
+                              name: 'punctuation.definition.tag.end.html',
+                            },
+                          },
+                          name: 'meta.tag.metadata.style.start.html',
+                          patterns: [
+                            {
+                              include: '#style-type-attribute',
+                            },
+                            {
+                              include: '#tag-stuff',
+                            },
+                          ],
+                        },
+                        {
+                          begin: '(?!\\G)',
+                          end: '(?=</style>)',
+                          name: 'source.css.less',
+                          patterns: [
+                            {
+                              include: '#cdata',
+                            },
+                            {
+                              include: 'source.css.less',
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  begin: '(?=(type(?=[\\s=][\'"](text/postcss[\\s"\'>]))|(lang(?=[\\s=][\'"]postcss[\\s"\'>]))))',
+                  end: '(?=<(?=/(?=style>)))',
+                  patterns: [
+                    {
+                      begin: '\\G',
+                      end: '(?=<(?=/style>))',
+                      patterns: [
+                        {
+                          begin: '\\G',
+                          end: '(>)',
+                          endCaptures: {
+                            '1': {
+                              name: 'punctuation.definition.tag.end.html',
+                            },
+                          },
+                          name: 'meta.tag.metadata.style.start.html',
+                          patterns: [
+                            {
+                              include: '#style-type-attribute',
+                            },
+                            {
+                              include: '#tag-stuff',
+                            },
+                          ],
+                        },
+                        {
+                          begin: '(?!\\G)',
+                          end: '(?=</style>)',
+                          name: 'source.postcss',
+                          patterns: [
+                            {
+                              include: '#cdata',
+                            },
+                            {
+                              include: 'source.postcss',
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  begin: '(?=(type(?=[\\s=][\'"](text/sass[\\s"\'>]))|(lang(?=[\\s=][\'"]sass[\\s"\'>]))))',
+                  end: '(?=<(?=/(?=style>)))',
+                  patterns: [
+                    {
+                      begin: '\\G',
+                      end: '(?=<(?=/style>))',
+                      patterns: [
+                        {
+                          begin: '\\G',
+                          end: '(>)',
+                          endCaptures: {
+                            '1': {
+                              name: 'punctuation.definition.tag.end.html',
+                            },
+                          },
+                          name: 'meta.tag.metadata.style.start.html',
+                          patterns: [
+                            {
+                              include: '#style-type-attribute',
+                            },
+                            {
+                              include: '#tag-stuff',
+                            },
+                          ],
+                        },
+                        {
+                          begin: '(?!\\G)',
+                          end: '(?=</style>)',
+                          name: 'source.sass',
+                          patterns: [
+                            {
+                              include: '#cdata',
+                            },
+                            {
+                              include: 'source.sass',
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  begin: '(?=(type(?=[\\s=][\'"](text/scss[\\s"\'>]))|(lang(?=[\\s=][\'"]scss[\\s"\'>]))))',
+                  end: '(?=<(?=/(?=style>)))',
+                  patterns: [
+                    {
+                      begin: '\\G',
+                      end: '(?=<(?=/style>))',
+                      patterns: [
+                        {
+                          begin: '\\G',
+                          end: '(>)',
+                          endCaptures: {
+                            '1': {
+                              name: 'punctuation.definition.tag.end.html',
+                            },
+                          },
+                          name: 'meta.tag.metadata.style.start.html',
+                          patterns: [
+                            {
+                              include: '#style-type-attribute',
+                            },
+                            {
+                              include: '#tag-stuff',
+                            },
+                          ],
+                        },
+                        {
+                          begin: '(?!\\G)',
+                          end: '(?=</style>)',
+                          name: 'source.css.scss',
+                          patterns: [
+                            {
+                              include: '#cdata',
+                            },
+                            {
+                              include: 'source.css.scss',
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  begin: '(?=(type(?=[\\s=][\'"](text/styl(us)?[\\s"\'>]))|(lang(?=[\\s=][\'"]styl(us)?[\\s"\'>]))))',
+                  end: '(?=<(?=/(?=style>)))',
+                  patterns: [
+                    {
+                      begin: '\\G',
+                      end: '(?=<(?=/style>))',
+                      patterns: [
+                        {
+                          begin: '\\G',
+                          end: '(>)',
+                          endCaptures: {
+                            '1': {
+                              name: 'punctuation.definition.tag.end.html',
+                            },
+                          },
+                          name: 'meta.tag.metadata.style.start.html',
+                          patterns: [
+                            {
+                              include: '#style-type-attribute',
+                            },
+                            {
+                              include: '#tag-stuff',
+                            },
+                          ],
+                        },
+                        {
+                          begin: '(?!\\G)',
+                          end: '(?=</style>)',
+                          name: 'source.stylus',
+                          patterns: [
+                            {
+                              include: '#cdata',
+                            },
+                            {
+                              include: 'source.stylus',
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  include: '#tag-stuff',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+}

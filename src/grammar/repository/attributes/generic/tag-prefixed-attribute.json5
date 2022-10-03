@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-prefixed-attribute': {
-      name: 'string.quoted.double.html',
       beginCaptures: {
         '2': {
           name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.let',
@@ -16,7 +15,7 @@
           name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs',
         },
         '6': {
-          name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+          name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
         },
         '7': {
           name: 'string.quoted.double.html',

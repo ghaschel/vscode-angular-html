@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-generic-attribute': {
-      name: 'string.quoted.double.html',
       beginCaptures: {
         '2': {
           name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
@@ -13,7 +12,7 @@
           name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix',
         },
         '5': {
-          name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+          name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
         },
         '6': {
           name: 'string.quoted.double.html',
@@ -24,9 +23,12 @@
           name: 'string.quoted.double.html',
         },
       },
-      begin: '(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)(?!(DOMMenuIemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_$]+)(:)?([\\w\\-\\_$]+)?\\b(=)(")',
+      begin: '(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_$]+)(:)?([\\w\\-\\_$]+)?\\b(=)(")',
       end: '(")',
       patterns: [
+        {
+          include: '#string-double-quoted-capture-between',
+        },
         {
           include: '#angular-interpolations',
         },
@@ -34,4 +36,3 @@
     },
   },
 }
-

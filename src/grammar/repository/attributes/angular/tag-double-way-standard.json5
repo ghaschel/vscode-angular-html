@@ -21,7 +21,7 @@
           name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.end.html',
         },
         '7': {
-          name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+          name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
         },
         '8': {
           name: 'string.quoted.double.html',
@@ -42,4 +42,3 @@
     },
   },
 }
-

@@ -1,7 +1,6 @@
 {
   repository: {
     'tag-boolean-sugar-attributes': {
-      name: 'string.quoted.double.html',
       captures: {
         '1': {
           name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.sugar',

@@ -57,12 +57,12 @@ const updateTokenCustomization = async (): Promise<void> => {
     config.get('vscode-angular-html') as vscode.WorkspaceConfiguration,
   );
 
-  const tokenColorCustomizations = config.get('editor.tokenColorCustomizations') as {
+  const tokenColorCustomizations = config.get<{
     textMateRules?: TextMateRule[];
-  };
+  }>('editor.tokenColorCustomizations');
 
-  if (tokenColorCustomizations.textMateRules!.length > -1) {
-    const activeRules = tokenColorCustomizations.textMateRules as TextMateRule[];
+  if ((tokenColorCustomizations?.textMateRules?.length as number) > -1) {
+    const activeRules = tokenColorCustomizations!.textMateRules as TextMateRule[];
     currentRules = getTextMateRulesWithoutEmptyOnes(activeRules, tokens.textMateRules);
   }
 

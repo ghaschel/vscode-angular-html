@@ -9,7 +9,7 @@
               name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
             },
             '2': {
-              name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+              name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
             },
             '3': {
               name: 'string.quoted.double.html',
@@ -26,7 +26,7 @@
               name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
             },
             '2': {
-              name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+              name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
             },
             '3': {
               name: 'string.quoted.single.html',
@@ -43,7 +43,7 @@
               name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
             },
             '2': {
-              name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+              name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
             },
             '3': {
               name: 'string.quoted.double.html',
@@ -60,7 +60,7 @@
               name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
             },
             '2': {
-              name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+              name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
             },
             '3': {
               name: 'string.quoted.single.html',
@@ -74,4 +74,3 @@
     },
   },
 }
-

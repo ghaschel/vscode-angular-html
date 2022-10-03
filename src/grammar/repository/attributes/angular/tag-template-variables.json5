@@ -12,7 +12,7 @@
           name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs',
         },
         '4': {
-          name: 'puctuation.separator.key-value.html-template.ng punctuation.separator.key-value.html',
+          name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
         },
         '5': {
           name: 'string.quoted.double.html',

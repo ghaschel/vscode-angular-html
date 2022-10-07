@@ -11,7 +11,7 @@
         },
       },
       end: '(\\?>)',
-      name: 'meta.tag.metadata.processing.xml.html',
+      name: 'meta.tag.metadata.processing.xml-stylesheet.html',
       patterns: [
         {
           include: '#xml-stylesheet-type-attribute',

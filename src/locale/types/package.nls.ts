@@ -10,6 +10,8 @@ export interface PackageNls {
   'ext.settings.html.htmlAttributeValueSeparator': string;
   'ext.settings.html.htmlStyleAttributesLanguageIdentifier': string;
   'ext.settings.html.htmlScriptAttributesLanguageIdentifier': string;
+  'ext.settings.html.htmlTags': string;
+  'ext.settings.html.htmlCustomTags': string;
   'ext.settings.angular.angularExpression': string;
   'ext.settings.angular.angularAndAngularMaterialElementTags': string;
   'ext.settings.angular.angularAnimationTriggerPrefix': string;
@@ -28,6 +30,8 @@ export interface PackageNls {
   'ext.settings.angular.angularSyntaxSugarAttributesName': string;
   'ext.settings.angular.angularTemplateVariablePrefix': string;
   'ext.settings.angular.angularTemplateVariableName': string;
+  'ext.settings.angular.angularExpressionOperatorsAndNavigatorsColor': string;
+  'ext.settings.svg.svgTags': string;
   'ext.settings.svg.svgDAttributePathCommands': string;
   'ext.settings.xml.xmlTagNamespaceDivider': string;
   'ext.settings.xml.xmlTagNamespaceSuffix': string;

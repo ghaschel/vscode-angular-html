@@ -2,6 +2,9 @@
   repository: {
     'tag-annimation-trigger': {
       captures: {
+        '0': {
+          name: 'meta.ng-animation-trigger.property.html',
+        },
         '1': {
           name: 'entity.other.attribute-name.html html-template.ng.attributes.animationtrigger.prefix',
         },

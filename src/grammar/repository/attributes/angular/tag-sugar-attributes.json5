@@ -2,6 +2,9 @@
   repository: {
     'tag-sugar-attributes': {
       beginCaptures: {
+        '0': {
+          name: 'meta.ng-binding.template.sugar.html',
+        },
         '1': {
           name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.sugar',
         },
@@ -19,6 +22,9 @@
         },
       },
       endCaptures: {
+        '0': {
+          name: 'meta.ng-binding.template.sugar.html',
+        },
         '1': {
           name: 'string.quoted.double.html',
         },

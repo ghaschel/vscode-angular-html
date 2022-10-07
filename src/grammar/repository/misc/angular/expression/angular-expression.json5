@@ -1,8 +1,15 @@
 {
   repository: {
     'angular-expression': {
-      name: 'meta.expression.ts',
+      // name: 'meta.expression.ts',
+      name: 'expression.ng',
       patterns: [
+        {
+          include: '#var-keywords',
+        },
+        {
+          include: '#operator-navigator',
+        },
         {
           include: '#ts-string',
         },

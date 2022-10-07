@@ -84,6 +84,16 @@
       {
         "title": "HTML",
         "properties": {
+          "vscode-angular-html.htmlTags": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlTags%"
+          },
+          "vscode-angular-html.htmlCustomTags": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlCustomTags%"
+          },
           "vscode-angular-html.htmlDoctypeAttributes": {
             "type": "string",
             "default": "",
@@ -143,6 +153,11 @@
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularExpression%"
+          },
+          "vscode-angular-html.angularExpressionOperatorsAndNavigatorsColor": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularExpressionOperatorsAndNavigatorsColor%"
           },
           "vscode-angular-html.angularAndAngularMaterialElementTags": {
             "type": "string",
@@ -234,6 +249,11 @@
       {
         "title": "SVG",
         "properties": {
+          "vscode-angular-html.svgTags": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.svg.svgTags%"
+          },
           "vscode-angular-html.svgDAttributePathCommands": {
             "type": "string",
             "default": "",

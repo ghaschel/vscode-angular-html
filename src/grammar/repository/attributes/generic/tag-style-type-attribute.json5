@@ -5,6 +5,9 @@
         {
           match: '[\\s]*(type)(=)("(text|stylesheet)/(css|scss|less|sass|stylus|styl|postcss)")',
           captures: {
+            '0': {
+              name: 'meta.attribute.$1.html',
+            },
             '1': {
               name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
             },
@@ -22,6 +25,9 @@
         {
           match: '[\\s]*(lang)(=)("(css|scss|less|sass|stylus|styl|postcss)")',
           captures: {
+            '0': {
+              name: 'meta.attribute.$1.html',
+            },
             '1': {
               name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
             },

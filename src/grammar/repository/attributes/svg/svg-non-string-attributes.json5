@@ -6,6 +6,9 @@
           name: 'meta.element.attribute.$2.svg',
           begin: '[\\s\\n\\r\\t]*(\\b(?i:(d))\\b(?![\\w-]))(=)(")',
           beginCaptures: {
+            '0': {
+              name: 'meta.attribute.svg.$2.html',
+            },
             '2': {
               name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
             },

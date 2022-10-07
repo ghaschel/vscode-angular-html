@@ -1,0 +1,39 @@
+{
+  repository: {
+    'tag-definition-inline': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.tag.inline.$2.start.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'meta.tag.inline.html entity.name.tag.html html-template.tag.html',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+      },
+      patterns: [
+        {
+          include: '#tag-stuff',
+        },
+      ],
+      begin: '(</?)(var|time|sup|sub|strong|span|small|samp|s\\b|ruby|rt|rp|q|mark|kbd|ins|i|em|dfn|del|data|code|cite|bdo|bdi|b|abbr)(:)?([\\w\\-\\_$]+)?\\b',
+      endCaptures: {
+        '0': {
+          name: 'meta.tag.inline.$2.end.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      end: '(/?>)',
+      name: 'meta.element.inline.html',
+    },
+  },
+}

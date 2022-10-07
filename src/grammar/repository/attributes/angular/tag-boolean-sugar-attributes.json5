@@ -2,6 +2,9 @@
   repository: {
     'tag-boolean-sugar-attributes': {
       captures: {
+        '0': {
+          name: 'meta.ng-binding.template.sugar.boolean.html',
+        },
         '1': {
           name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.sugar',
         },

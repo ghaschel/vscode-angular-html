@@ -14,15 +14,34 @@
       ],
     },
     'string-double-quoted-capture': {
-      begin: '"',
-      end: '"',
-      name: 'string.quoted.double.html',
+      begin: '(")',
+      beginCaptures: {
+        '0': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      end: '(")',
+      endCaptures: {
+        '0': {
+          name: 'string.quoted.double.html',
+        },
+      },
       patterns: [
         {
-          include: '#angular-interpolations',
-        },
-        {
-          include: '#entities',
+          begin: '(?<=")',
+          end: '(?=")',
+          patterns: [
+            {
+              match: '([[:alpha:]0-9\\s\\-_&$@!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})',
+              name: 'string.quoted.double.html',
+            },
+            {
+              include: '#angular-interpolations',
+            },
+            {
+              include: '#entities',
+            },
+          ],
         },
       ],
     },

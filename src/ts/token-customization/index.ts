@@ -88,9 +88,12 @@ const addLegacyColorCustomizations = async (): Promise<void> => {
   await vscode.workspace.getConfiguration('vscode-angular-html').update('htmlGenericAttributesFollowedByParameter', '#4EC9B0', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('htmlEventsAttributes', '#4EC9B0', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('htmlAttributeValueSeparator', '#D7BA7D', true);
+  await vscode.workspace.getConfiguration('vscode-angular-html').update('htmlTags', '#569CD6', true);
+  await vscode.workspace.getConfiguration('vscode-angular-html').update('htmlCustomTags', '#569CD6', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('angularAndAngularMaterialElementTags', '#D7BA7D', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('htmlScriptAttributesLanguageIdentifier', '#DCDCAA', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('htmlStyleAttributesLanguageIdentifier', '#DCDCAA', true);
+  await vscode.workspace.getConfiguration('vscode-angular-html').update('svgTags', '#569CD6', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('svgDAttributePathCommands', '#C586C0', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('angularAnimationTriggerPrefix', '#D16969', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('angularAnimationTriggerVariableName', '#DCDCAA', true);
@@ -108,6 +111,7 @@ const addLegacyColorCustomizations = async (): Promise<void> => {
   await vscode.workspace.getConfiguration('vscode-angular-html').update('angularSyntaxSugarAttributesName', '#DCDCAA', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('angularTemplateVariablePrefix', '#D16969', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('angularTemplateVariableName', '#DCDCAA', true);
+  await vscode.workspace.getConfiguration('vscode-angular-html').update('angularExpressionOperatorsAndNavigatorsColor', '#C586C0', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('xmlStylesheetAttributesLanguageIdentifier', '#DCDCAA', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('xmlTagNamespaceDivider', '#D16969', true);
   await vscode.workspace.getConfiguration('vscode-angular-html').update('xmlTagNamespaceSuffix', '#C586C0', true);

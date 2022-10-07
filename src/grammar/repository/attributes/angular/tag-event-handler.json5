@@ -3,6 +3,9 @@
     'tag-event-handler': {
       name: 'meta.ng-binding.event.html',
       captures: {
+        '0': {
+          name: 'meta.ng-binding.event.html',
+        },
         '1': {
           name: 'entity.other.attribute-name.html entity.other.ng-binding-name.event.html punctuation.definition.ng-binding-name.begin.html',
         },
@@ -20,6 +23,9 @@
         },
       },
       endCaptures: {
+        '0': {
+          name: 'meta.ng-binding.event.html',
+        },
         '1': {
           name: 'string.quoted.double.html',
         },

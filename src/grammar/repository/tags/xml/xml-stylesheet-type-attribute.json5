@@ -5,6 +5,9 @@
         {
           match: '[\\s]*(type)(=)("(text)/(css|xml|xsl)")',
           captures: {
+            '0': {
+              name: 'meta.attribute.type.xml',
+            },
             '1': {
               name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
             },
@@ -22,6 +25,9 @@
         {
           match: "[\\s]*(type)(=)('(text)/(css|xml|xsl)')",
           captures: {
+            '0': {
+              name: 'meta.attribute.type.xml',
+            },
             '1': {
               name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
             },

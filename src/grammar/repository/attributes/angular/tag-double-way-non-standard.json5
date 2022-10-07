@@ -2,6 +2,9 @@
   repository: {
     'tag-double-way-non-standard': {
       captures: {
+        '0': {
+          name: 'meta.ng-binding.two-way-non-standard.html',
+        },
         '1': {
           name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.begin.html',
         },
@@ -28,6 +31,9 @@
         },
       },
       endCaptures: {
+        '0': {
+          name: 'meta.ng-binding.two-way-non-standard.html',
+        },
         '1': {
           name: 'string.quoted.double.html',
         },

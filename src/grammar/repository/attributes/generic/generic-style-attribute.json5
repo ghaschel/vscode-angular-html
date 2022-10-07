@@ -3,6 +3,9 @@
     'generic-style-attribute': {
       name: 'meta.property-list.scss',
       beginCaptures: {
+        '0': {
+          name: 'meta.attribute.style.html',
+        },
         '1': {
           name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
         },
@@ -24,7 +27,7 @@
         {
           begin: '(?<![-a-z]|\\(|, |:)(?=[-a-z])',
           end: '$|(?![-a-z])',
-          name: 'meta.property-name.scss',
+          name: 'meta.embeded.line.css meta.property-name.scss',
           patterns: [
             {
               match: '\\b(source|scroll-offsets|syntax|initialvalue|inherits)\\b',

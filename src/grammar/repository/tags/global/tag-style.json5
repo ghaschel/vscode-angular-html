@@ -7,7 +7,21 @@
           name: 'punctuation.whitespace.embedded.leading.html',
         },
       },
-      end: '(?=</(?i:style)>)\\n?',
+      end: '(</)[\\s]*((?i:style))[\\s]*(>)\\n?',
+      endCaptures: {
+        '0': {
+          name: 'meta.tag.metadata.style.start.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'meta.tag.metadata.html entity.name.tag.html html-template.tag.html',
+        },
+        '3': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
       patterns: [
         {
           begin: '(<)((?i:style))(>)',

@@ -7,7 +7,21 @@
           name: 'punctuation.whitespace.embedded.leading.html',
         },
       },
-      end: '(?=</(?i:script)>)\\n?',
+      end: '(</)[\\s]*((?i:script))[\\s]*(>)\\n?',
+      endCaptures: {
+        '0': {
+          name: 'meta.tag.metadata.script.start.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'meta.tag.metadata.html entity.name.tag.html html-template.tag.html',
+        },
+        '3': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
       patterns: [
         {
           begin: '(<)((?i:script))(>)',
@@ -19,7 +33,7 @@
               name: 'punctuation.definition.tag.begin.html',
             },
             '2': {
-              name: 'entity.name.tag.html',
+              name: 'entity.name.tag.html html-template.tag.html',
             },
             '3': {
               name: 'punctuation.definition.tag.end.html',
@@ -46,7 +60,7 @@
               name: 'punctuation.definition.tag.begin.html',
             },
             '2': {
-              name: 'entity.name.tag.html',
+              name: 'entity.name.tag.html html-template.tag.html',
             },
           },
           end: '(?=(?=<(?=/(?=script(?=>)))))',

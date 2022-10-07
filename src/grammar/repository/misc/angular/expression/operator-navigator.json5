@@ -1,0 +1,8 @@
+{
+  repository: {
+    'operator-navigator': {
+      match: '\\?\\.|\\!\\.|\\.|\\,|\\;|\\?|\\!|\\:',
+      name: 'keyword.operator.punctuation html-template.ng.expression.operator.navigator',
+    },
+  },
+}

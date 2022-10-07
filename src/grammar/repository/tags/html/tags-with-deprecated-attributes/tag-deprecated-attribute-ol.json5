@@ -4,6 +4,9 @@
       begin: '(<\\/?)(ol)(?!-)\\b(:)?([\\w\\-\\_$]+)?',
       end: '(\\/?>)',
       beginCaptures: {
+        '0': {
+          name: 'meta.tag.structure.ol.start.html',
+        },
         '4': {
           name: 'entity.name.tag.html html-template.ng.tag.suffix',
         },
@@ -11,13 +14,16 @@
           name: 'entity.name.tag.html html-template.ng.tag.colon',
         },
         '2': {
-          name: 'entity.name.tag.html',
+          name: 'entity.name.tag.html html-template.tag.html',
         },
         '1': {
           name: 'punctuation.definition.tag.begin.html',
         },
       },
       endCaptures: {
+        '0': {
+          name: 'meta.tag.structure.ol.end.html',
+        },
         '1': {
           name: 'punctuation.definition.tag.end.html',
         },

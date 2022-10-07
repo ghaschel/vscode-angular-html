@@ -17,6 +17,8 @@
       "htmlAttributeValueSeparator": "Matches HTML attribute-value separator (=).\nThis is a global match.",
       "htmlStyleAttributesLanguageIdentifier": "Matches HTML Style Type Attribute language identifier.",
       "htmlScriptAttributesLanguageIdentifier": "Matches HTML Script Type Attribute language identifier.",
+      "htmlTags": "Matches HTML known elements.",
+      "htmlCustomTags": "Matches non-standard HTML elements.",
       "seeHtmlEvents": "See HTML and SVG Events"
     },
     "angular": {
@@ -38,9 +40,11 @@
       "angularSyntaxSugarAttributesName": "Matches Angular syntax sugar attribute name.",
       "angularTemplateVariablePrefix": "Matches Angular template variable decorator.",
       "angularTemplateVariableName": "Matches Angular template variable name.",
+      "angularExpressionOperatorsAndNavigatorsColor": "Matches Angular expressions' operators and navigators.",
       "seeAngularTags": "See Angular-specific tags"
     },
     "svg": {
+      "svgTags": "Matches known SVG elements.",
       "svgDAttributePathCommands": "Matches SVG d attribute path commands."
     },
     "xml": {

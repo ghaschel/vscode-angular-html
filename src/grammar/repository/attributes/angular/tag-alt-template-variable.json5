@@ -1,0 +1,41 @@
+{
+  repository: {
+    'tag-alt-template-variable': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.ng-binding.template.variable.alt.html',
+        },
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.ref',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.name',
+        },
+        '3': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs',
+        },
+        '4': {
+          name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+        },
+        '5': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      endCaptures: {
+        '0': {
+          name: 'meta.ng-binding.template.variable.alt.html',
+        },
+        '1': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      begin: '(ref\\-)\\b([\\w\\-\\_]+)([$]*)(=)(")',
+      end: '(")',
+      patterns: [
+        {
+          include: '#angular-expression',
+        },
+      ],
+    },
+  },
+}

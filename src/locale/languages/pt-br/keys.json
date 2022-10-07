@@ -17,6 +17,8 @@
       "htmlAttributeValueSeparator": "Corresponde ao separador de atributo-valor (=) HTML.\nEsta é uma correspondência global.",
       "htmlStyleAttributesLanguageIdentifier": "Corresponde ao identificador de linguagem no atributo type da tag script.",
       "htmlScriptAttributesLanguageIdentifier": "Corresponde ao identificador de linguagem no atributo type da tag style.",
+      "htmlTags": "Corresponde a elementos conhecidos do HTML.",
+      "htmlCustomTags": "Corresponde a elements não conhecidos do HTML.",
       "seeHtmlEvents": "Ver Eventos HTML"
     },
     "angular": {
@@ -38,9 +40,11 @@
       "angularSyntaxSugarAttributesName": "Corresponde ao nome dos atributos do tipo syntax sugar do Angular.",
       "angularTemplateVariablePrefix": "Corresponde ao decorador de variaveis de template do Angular.",
       "angularTemplateVariableName": "Corresponde ao nome das variaveis de template do Angular.",
+      "angularExpressionOperatorsAndNavigatorsColor": "Corresponde aos operadores e navegadores das expressoes Angular.",
       "seeAngularTags": "Ver tags específicas do Angular"
     },
     "svg": {
+      "svgTags": "Corresponde a elementos conhecidos do SVG.",
       "svgDAttributePathCommands": "Corresponde a comandos do atributo d de tags path no SVG."
     },
     "xml": {

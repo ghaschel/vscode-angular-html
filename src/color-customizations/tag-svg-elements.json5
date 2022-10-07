@@ -1,0 +1,8 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.tag.svg',
+      configRule: 'vscode-angular-html.svgTags',
+    },
+  ],
+}

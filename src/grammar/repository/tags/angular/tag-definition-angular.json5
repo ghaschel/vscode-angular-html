@@ -1,0 +1,39 @@
+{
+  repository: {
+    'tag-definition-angular': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.tag.ng.$4.start.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'meta.tag.structure.html entity.name.tag.html.ng entity.name.tag.html.ng.$2',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+      },
+      patterns: [
+        {
+          include: '#tag-stuff',
+        },
+      ],
+      begin: '(</?)(cdk-accordion-item|cdk-accordion|cdk-cell|cdk-footer-cell|cdk-footer-row|cdk-header-cell|cdk-header-row|cdk-nested-tree-node|cdk-row|cdk-step|cdk-table|cdk-tree-node|cdk-tree|cdk-virtual-scroll-viewport|mat-accordion|mat-action-list|mat-action-row|mat-autocomplete|mat-basic-chip|mat-button-toggle-group|mat-button-toggle|mat-calendar|mat-card-actions|mat-card-content|mat-card-footer|mat-card-header|mat-card-subtitle|mat-card-title-group|mat-card-title|mat-card|mat-cell|mat-checkbox|mat-chip-avatar|mat-chip-list|mat-chip|mat-date-range-input|mat-date-range-picker|mat-datepicker-actions|mat-datepicker-toggle|mat-datepicker|mat-dialog-actions|mat-dialog-content|mat-divider|mat-drawer-content|mat-drawer-container|mat-drawer|mat-error|mat-expansion-panel-header|mat-expansion-panel|mat-form-field|mat-grid-tile-footer|mat-grid-tile-header|mat-grid-tile|mat-grid-list|mat-grid-title|mat-header-cell|mat-header-row|mat-hint|mat-horizontal-stepper|mat-icon|mat-label|mat-list-item|mat-list-option|mat-list|mat-menu|mat-nav-list|mat-nav-tab-bar|mat-nested-tree-node|mat-optgroup|mat-option|mat-paginator|mat-panel-description|mat-panel-title|mat-progress-bar|mat-progress-spinner|mat-pseudo-checkbox|mat-radio-button|mat-radio-group|mat-row|mat-select-trigger|mat-selection-list|mat-select|mat-sidenav-container|mat-sidenav-content|mat-sidenav|mat-slide-toggle|mat-slider|mat-spinner|mat-stepper|mat-step|mat-tab-group|mat-tab-nav-panel|mat-table|mat-tab|mat-text-column|mat-toolbar-row|mat-toolbar|mat-tree-node|mat-tree|mat-vertical-stepper|ng-container|ng-content|ng-template|router-outlet)(:)?([\\w\\-\\_$]+)?\\b',
+      endCaptures: {
+        '0': {
+          name: 'meta.tag.ng.$4.end.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      end: '(/?>)',
+      name: 'meta.element.ng.html',
+    },
+  },
+}

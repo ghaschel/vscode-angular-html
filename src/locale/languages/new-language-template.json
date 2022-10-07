@@ -17,6 +17,8 @@
       "htmlAttributeValueSeparator": "",
       "htmlStyleAttributesLanguageIdentifier": "",
       "htmlScriptAttributesLanguageIdentifier": "",
+      "htmlTags": "",
+      "htmlCustomTags": "",
       "seeHtmlEvents": ""
     },
     "angular": {
@@ -38,9 +40,11 @@
       "angularSyntaxSugarAttributesName": "",
       "angularTemplateVariablePrefix": "",
       "angularTemplateVariableName": "",
+      "angularExpressionOperatorsAndNavigatorsColor": "",
       "seeAngularTags": ""
     },
     "svg": {
+      "svgTags": "",
       "svgDAttributePathCommands": ""
     },
     "xml": {

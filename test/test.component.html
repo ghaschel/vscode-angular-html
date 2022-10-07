@@ -15,6 +15,7 @@ COMMENTS
 
 INVALID ATTRIBUTES
 
+
 <a
   href="https://{{interpolatedUrl}}.com/"
   charset="interpolated {{value}}"
@@ -35,6 +36,10 @@ INVALID ATTRIBUTES
 
 <br clear="" />
 
+<caption
+  align="test"
+></caption>
+
 <col
   char=""
   charoff=""
@@ -50,9 +55,16 @@ INVALID ATTRIBUTES
   width=""
 ></colgroup>
 
+<div align="" (click)=""></div>
+
 <dl compact=""></dl>
 
-<menu compact=""></menu>
+<h1 align=""></h1>
+<h2 align=""></h2>
+<h3 align=""></h3>
+<h4 align=""></h4>
+<h5 align=""></h5>
+<h6 align=""></h6>
 
 <head profile="test">
   <title>Teste</title>
@@ -65,9 +77,7 @@ INVALID ATTRIBUTES
   width=""
 />
 
-<html version="">
-
-</html>
+<html version=""></html>
 
 <iframe
   align=""
@@ -86,6 +96,10 @@ INVALID ATTRIBUTES
   vspace=""
 />
 
+<input align="" />
+
+<legend align=""></legend>
+
 <li type=""></li>
 
 <link
@@ -94,37 +108,7 @@ INVALID ATTRIBUTES
   target=""
 />
 
-<caption align=""></caption>
-
-<div align=""></div>
-
-<h1 align=""></h1>
-
-<h2 align=""></h2>
-
-<h3 align=""></h3>
-
-<h4 align=""></h4>
-
-<h5 align=""></h5>
-
-<h6 align=""></h6>
-
-<input align="" />
-
-<legend align=""></legend>
-
-<p align=""></p>
-
-<ol
-  compact=""
-  type=""
-></ol>
-
-<ul
-  compact="teste"
-  type=""
-></ul>
+<menu compact=""></menu>
 
 <object
   archive=""
@@ -139,18 +123,19 @@ INVALID ATTRIBUTES
   align=""
 ></object>
 
+<ol
+  compact=""
+  type=""
+></ol>
+
+<p align=""></p>
+
 <param
   type=""
   valuetype=""
 />
 
 <pre width=""></pre>
-
-<t:test
-  abbr=""
-  axis=""
->
-</t:test>
 
 <table
   bgcolor=""
@@ -216,6 +201,11 @@ INVALID ATTRIBUTES
   valign=""
 ></tr>
 
+<ul
+  compact="teste"
+  type=""
+></ul>
+
 CUSTOM ELEMENTS
 
 <custom-component
@@ -249,7 +239,7 @@ ANGULAR DIRECTIVES
   *matHeaderCellDef
   class="test"
   [ngClass]="{
-    test: test.isTruthy()
+    'test': test.isTruthy()
   }"
   *
   let-col$
@@ -264,7 +254,7 @@ ANGULAR DIRECTIVES
   test
   [test]="test.test();"
   *ngIf="selectedCustomer && selectedCustomer.id > 0; else block1; then: block2"
-  *ngFor="let a of b['a'][teste].asd; index as c"
+  *ngFor="let a of b['a'][teste]!.asd; index as c | pipe"
   #templateVariable
   #menu="test"
   test
@@ -279,7 +269,7 @@ ANGULAR INTERPOLATIONS
 {{ angular.interpolations || test }}
 {{ angular?.interpolations(
   'newLineTest'
-) }}
+) && test}}
 {{ angular!.interpolations }}
 {{ (null || undefined) ?? "Hello World "; }}
 
@@ -353,8 +343,7 @@ DEPRECATED TAGS
 
 <applet class=""></applet>
 
-<basefont class="">
-</basefont>
+<basefont class="" />
 
 <big class=""></big>
 
@@ -364,12 +353,11 @@ DEPRECATED TAGS
 
 <font class=""></font>
 
-<frame class=""></frame>
+<frame class="" />
 
 <frameset class=""> </frameset>
 
-<isindex class="dsadsdasd">
-</isindex>
+<isindex class="dsadsdasd" />
 
 <noframes class=""> </noframes>
 
@@ -504,7 +492,7 @@ STYLE INLINE
 <div style="display: block; background-color: rgb(255, 255, 255); color: rgba(33, 254, 12, 1)"></div>
 
 GENERIC ATTRIBUTES
-
+<test-component></test-component>
 <div
   class="test {{test}}"
   id="test"
@@ -564,19 +552,21 @@ XML PROCESSING (WITH DTD SUPPORT)
         ]]>
       </entities>
     </Enddate>
-    <list:book xmlns:list="listurl">
+    <lista:book xmlns:list="listurl">
       <li:book xmlns:li="libookurl">
         <li:title>Book Title</li:title>
         <li:author>Ernest Cline</li:author>
       </li:book>
-      </lista>
+    </lista:book>
   </empl>
 </SoftwareEngineer>
+
+<lista></lista>
 
 <?xml-stylesheet ref="shakespeare.xsl" type="text/xsl"?>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <t:test> Displaying the Mathematical function </title>
+    <t:test> Displaying the Mathematical function </t:test>
   </head>
 
   <a:test></a:test>
@@ -608,7 +598,9 @@ SVG
   xml:space="preserve"
 >
 
-  <test clip-path="test url(test)"></test>
+  <a enable-background=""></a>
+
+  <title></title>
 
   <g
     id="cameraTarget"
@@ -986,7 +978,7 @@ ANGULAR & ANGULAR MATERIAL STRUCTURAL TAGS
 
 STYLE TAGS
 
-<style type="text/css" lang="css">
+<style test="" type="text/css" lang="css">
   /*
   * CSS
   */
@@ -1294,5 +1286,4 @@ SCRIPT TAGS
   function testTwo() {
     test.callback();
   }
-
 </script>

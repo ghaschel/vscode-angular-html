@@ -5,26 +5,32 @@
         {
           beginCaptures: {
             '0': {
+              name: 'expression.ng',
+            },
+            '1': {
               name: 'punctuation.definition.block.ts html-template.ng.interpolation.begin',
             },
           },
           patterns: [
             {
-              match: '\\?\\.|\\!\\.|\\.|\\!|\\?|\\:|\\;|\\,',
-              name: 'keyword.operator.navigation',
+              match: '\\?\\.|\\!\\.|\\.|\\!|\\?|\\:',
+              name: 'keyword.operator.navigation html-template.ng.expression.operator.navigator',
             },
             {
               include: '#angular-expression',
             },
           ],
-          begin: '\\{\\{\\{?',
+          begin: '(\\{\\{\\{?)',
           endCaptures: {
             '0': {
+              name: 'expression.ng',
+            },
+            '1': {
               name: 'punctuation.definition.block.ts html-template.ng.interpolation.end',
             },
           },
-          end: '\\}\\}\\}?',
-          name: 'html-template.ng.interpolation.expression',
+          end: '(\\}\\}\\}?)',
+          name: 'expression.ng html-template.ng.interpolation.expression',
         },
       ],
     },

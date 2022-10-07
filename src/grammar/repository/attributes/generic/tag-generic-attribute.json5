@@ -2,6 +2,9 @@
   repository: {
     'tag-generic-attribute': {
       beginCaptures: {
+        '0': {
+          name: 'meta.attribute.$2.html',
+        },
         '2': {
           name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
         },
@@ -27,10 +30,17 @@
       end: '(")',
       patterns: [
         {
-          include: '#string-double-quoted-capture-between',
-        },
-        {
-          include: '#angular-interpolations',
+          begin: '(?<=")',
+          end: '(?=")',
+          patterns: [
+            {
+              match: '([[:alpha:]0-9\\s\\-_&$@!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})',
+              name: 'string.quoted.double.html',
+            },
+            {
+              include: '#angular-interpolations',
+            },
+          ],
         },
       ],
     },

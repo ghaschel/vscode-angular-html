@@ -1,0 +1,8 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.tag.custom',
+      configRule: 'vscode-angular-html.htmlCustomTags',
+    },
+  ],
+}

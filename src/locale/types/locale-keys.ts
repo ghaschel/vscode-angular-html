@@ -17,6 +17,8 @@ export interface LocaleKeys {
       htmlAttributeValueSeparator: string;
       htmlStyleAttributesLanguageIdentifier: string;
       htmlScriptAttributesLanguageIdentifier: string;
+      htmlTags: string;
+      htmlCustomTags: string;
       seeHtmlEvents: string;
     };
     angular: {
@@ -38,9 +40,11 @@ export interface LocaleKeys {
       angularSyntaxSugarAttributesName: string;
       angularTemplateVariablePrefix: string;
       angularTemplateVariableName: string;
+      angularExpressionOperatorsAndNavigatorsColor: string;
       seeAngularTags: string;
     };
     svg: {
+      svgTags: string;
       svgDAttributePathCommands: string;
     };
     xml: {

@@ -3,7 +3,7 @@ export interface PackageNls {
   'ext.settings.html.htmlDoctypeAttributes': string;
   'ext.settings.html.htmlDoctypeExclamation': string;
   'ext.settings.html.htmlDoctypeElement': string;
-  'ext.settings.html.htmlEntitiesAmperstand': string;
+  'ext.settings.html.htmlEntitiesAmpersand': string;
   'ext.settings.html.htmlEntitiesSemicolon': string;
   'ext.settings.html.htmlGenericAttributesFollowedByParameter': string;
   'ext.settings.html.htmlEventsAttributes': string;

@@ -17,7 +17,7 @@ const buildJson = (lang: Lang): PackageNls => {
     'ext.settings.html.htmlDoctypeAttributes': `${json.settings.html.htmlDoctypeAttributes}${markdown.settings.html.htmlDoctypeAttributes}${json.settings.general.leaveEmpty}`,
     'ext.settings.html.htmlDoctypeExclamation': `${json.settings.html.htmlDoctypeExclamation}${markdown.settings.html.htmlDoctypeExclamation}${json.settings.general.leaveEmpty}`,
     'ext.settings.html.htmlDoctypeElement': `${json.settings.html.htmlDoctypeElement}${markdown.settings.html.htmlDoctypeElement}${json.settings.general.leaveEmpty}`,
-    'ext.settings.html.htmlEntitiesAmperstand': `${json.settings.html.htmlEntitiesAmperstand}${markdown.settings.html.htmlEntitiesAmperstand}${json.settings.general.leaveEmpty}`,
+    'ext.settings.html.htmlEntitiesAmpersand': `${json.settings.html.htmlEntitiesAmpersand}${markdown.settings.html.htmlEntitiesAmpersand}${json.settings.general.leaveEmpty}`,
     'ext.settings.html.htmlEntitiesSemicolon': `${json.settings.html.htmlEntitiesSemicolon}${markdown.settings.html.htmlEntitiesSemicolon}${json.settings.general.leaveEmpty}`,
     'ext.settings.html.htmlGenericAttributesFollowedByParameter': `${json.settings.html.htmlGenericAttributesFollowedByParameter} [${json.settings.html.seeHtmlEvents}](#ADD-LINK).${markdown.settings.html.htmlGenericAttributesFollowedByParameter}${json.settings.general.leaveEmpty}`,
     'ext.settings.html.htmlEventsAttributes': `${json.settings.html.htmlEventsAttributes} [${json.settings.html.seeHtmlEvents}](#ADD-LINK).${markdown.settings.html.htmlEventsAttributes}${json.settings.general.leaveEmpty}`,

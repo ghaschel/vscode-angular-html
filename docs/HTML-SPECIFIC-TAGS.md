@@ -1,0 +1,126 @@
+# HTML Specific Tags
+
+> List of HTML element tags which support custom syntax highlithging
+
+- Inline
+  - a
+  - abbr
+  - area
+  - b
+  - bdi
+  - bdo
+  - br
+  - cite
+  - code
+  - data
+  - del
+  - dfn
+  - em
+  - i
+  - ins
+  - kbd
+  - mark
+  - q
+  - rp
+  - rt
+  - ruby
+  - s
+  - samp
+  - small
+  - span
+  - strong
+  - sub
+  - sup
+  - time
+  - var
+  - wbr
+- Metadata
+  - base
+  - meta
+  - noscript
+- Object
+  - audio
+  - canvas
+  - embed
+  - iframe
+  - img
+  - object
+  - param
+  - picture
+  - source
+  - track
+  - video
+- Structure
+  - address
+  - article
+  - aside
+  - blockquote
+  - body
+  - button
+  - caption
+  - col
+  - colgroup
+  - datalist
+  - dd
+  - details
+  - dialog
+  - div
+  - dl
+  - dt
+  - fieldset
+  - figcaption
+  - figure
+  - footer
+  - form
+  - h1
+  - h2
+  - h3
+  - h4
+  - h5
+  - h6
+  - head
+  - header
+  - hgroup
+  - hr
+  - html
+  - input
+  - label
+  - legend
+  - li
+  - link
+  - main
+  - map
+  - menu
+  - meter
+  - nav
+  - ol
+  - optgroup
+  - option
+  - output
+  - p
+  - pre
+  - progress
+  - section
+  - select
+  - summary
+  - table
+  - tbody
+  - td
+  - template
+  - textarea
+  - tfoot
+  - th
+  - thead
+  - tr
+  - ul
+
+## Reference
+
+- [HTML+ W3 Specs](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_1.html)
+- [HTML 2.0 W3 Specs](https://www.w3.org/MarkUp/html-spec/)
+- [HTML 3.2 W3 Specs](https://www.w3.org/TR/2018/SPSD-html32-20180315/)
+- [HTML 4.01 W3 Specs](https://www.w3.org/TR/html4/)
+- [HTML 5 W3C Working Draft](https://www.w3.org/TR/2011/WD-html5-20110405/)
+- [XHTML 1.0 W3 Specs](https://www.w3.org/TR/xhtml1/)
+- [XHTML 1.1 W3 Specs](https://www.w3.org/TR/xhtml11/)
+- [MDN HTML Webdocs](https://developer.mozilla.org/en-US/docs/Web/HTML)

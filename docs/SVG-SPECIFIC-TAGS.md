@@ -1,0 +1,85 @@
+# SVG Specific Tags
+
+> List of SVG element tags which support custom syntax highlithging
+
+- Structure
+  - animateMotion
+  - clipPath
+  - defs
+  - feComponentTransfer
+  - feDiffuseLighting
+  - feMerge
+  - feSpecularLighting
+  - filter
+  - g
+  - hatch
+  - linearGradient
+  - marker
+  - mask
+  - mesh
+  - meshgradient
+  - meshpatch
+  - meshrow
+  - pattern
+  - radialGradient
+  - switch
+  - text
+  - textPath
+- Metadata
+  - color-profile
+  - desc
+  - metadata
+  - title
+- Inline
+  - a
+  - animate
+  - discard
+  - feBlend
+  - feColorMatrix
+  - feComposite
+  - feConvolveMatrix
+  - feDisplacementMap
+  - feDistantLight
+  - feDropShadow
+  - feFlood
+  - feFuncA
+  - feFuncB
+  - feFuncG
+  - feFuncR
+  - feGaussianBlur
+  - feMergeNode
+  - feMorphology
+  - feOffset
+  - fePointLight
+  - feSpotLight
+  - feTile
+  - feTurbulence
+  - hatchPath
+  - mpath
+  - set
+  - solidcolor
+  - stop
+- Object
+  - circle
+  - ellipse
+  - feImage
+  - foreignObject
+  - image
+  - line
+  - path
+  - polygon
+  - polyline
+  - rect
+  - symbol
+  - use
+  - view
+- Other
+  - animateTransform
+  - glyphRef
+  - tspan
+
+## Reference
+
+- [SVG W3 Specs](https://www.w3.org/Graphics/SVG/)
+- [SVG 2 W3 Specs](https://www.w3.org/TR/SVG2/)
+- [MDN SVG Specs](https://developer.mozilla.org/en-US/docs/Web/SVG)

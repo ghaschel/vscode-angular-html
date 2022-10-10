@@ -10,7 +10,7 @@
       "htmlDoctypeAttributes": "Matches the DOCTYPE attributes:",
       "htmlDoctypeExclamation": "Matches the exclamation point preceding the DOCTYPE tag:",
       "htmlDoctypeElement": "Matches the DOCTYPE tag:",
-      "htmlEntitiesAmperstand": "Matches the amperstand in HTML entities:",
+      "htmlEntitiesAmpersand": "Matches the ampersand in HTML entities:",
       "htmlEntitiesSemicolon": "Matches the semicolon in HTML entities:",
       "htmlGenericAttributesFollowedByParameter": "Matches HTML attributes followed by equals and a parameter.\nIt does not matches the HTML and SVG events attributes.",
       "htmlEventsAttributes": "Matches HTML event attributes.",

@@ -38,7 +38,7 @@
           include: '#tag-stuff',
         },
       ],
-      begin: '(</?)(feComponentTransfer|feMerge|hatch|mesh|meshgradient|meshpatch|meshrow)(:)?([\\w\\-\\_$]+)?\\b',
+      begin: '(</?)(feComponentTransfer|feMerge|hatch|mesh\\b|meshgradient|meshpatch|meshrow)(:)?([\\w\\-\\_$]+)?\\b',
       endCaptures: {
         '0': {
           name: 'meta.tag.structure.svg.$2.end.html',

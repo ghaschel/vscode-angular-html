@@ -10,7 +10,7 @@
     },
     {
       scope: 'html-template.ng.qualifier.dtd',
-      name: 'vscode-angular-html.dtdDoctypeQualifier',
+      configRule: 'vscode-angular-html.dtdDoctypeQualifier',
     },
     {
       scope: 'html-template.ng.occurrence.dtd',

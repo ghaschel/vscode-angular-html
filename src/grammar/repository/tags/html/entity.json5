@@ -5,7 +5,7 @@
         {
           captures: {
             '1': {
-              name: 'punctuation.definition.entity.html html-template.ng.entities.amperstand',
+              name: 'punctuation.definition.entity.html html-template.ng.entities.ampersand',
             },
             '912': {
               name: 'punctuation.definition.entity.html html-template.ng.entities.semicolon',
@@ -17,7 +17,7 @@
         {
           captures: {
             '1': {
-              name: 'punctuation.definition.entity.html html-template.ng.entities.amperstand',
+              name: 'punctuation.definition.entity.html html-template.ng.entities.ampersand',
             },
             '2': {
               name: 'punctuation.definition.entity.html html-template.ng.entities.semicolon',
@@ -29,7 +29,7 @@
         {
           captures: {
             '1': {
-              name: 'punctuation.definition.entity.html html-template.ng.entities.amperstand',
+              name: 'punctuation.definition.entity.html html-template.ng.entities.ampersand',
             },
             '3': {
               name: 'punctuation.definition.entity.html html-template.ng.entities.semicolon',

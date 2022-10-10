@@ -5,173 +5,280 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ghaschel/vscode-angular-html/blob/master/LICENSE)
 [![Build status](https://travis-ci.org/ghaschel/vscode-angular-html.svg?branch=master)](https://travis-ci.org/ghaschel/vscode-angular-html.svg?branch=master)
 [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
-[![Version](https://vsmarketplacebadge.apphb.com/version-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html) [![Greenkeeper badge](https://badges.greenkeeper.io/ghaschel/vscode-angular-html.svg)](https://greenkeeper.io/)
+[![Version](https://vsmarketplacebadge.apphb.com/version-short/ghaschel.vscode-angular-html.svg?style=flat&color=blue)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html) [![Known Vulnerabilities](https://snyk.io/test/github/ghaschel/vscode-angular-html/badge.svg)](https://snyk.io/test/github/ghaschel/vscode-angular-html)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-html.png" title="vscode-angular-html" alt="Logo" />
+    <img src="assets/angular-html.png" title="vscode-angular-html" alt="Logo" />
 </div>
 
 ## Angular HTML Template Syntax Highlighting
 
-This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events and emphasizes deprecated and obsolete tags and attributes usage according to the current status of HTML.
+This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events, SVG, XML (with DTD and namespaces support), emphasizes deprecated and obsolete tags and attributes usage according to the current status of HTML. Also supports custom colors for extra-matched scopes. See [color customizations](docs/COLOR-CUSTOMIZATIONS.MD)
 
-> Note: VSCode's default Dark+ theme doesn't have the highlighting displayed in these images. For that effect I recommend using [dark-plus-syntax](https://marketplace.visualstudio.com/items?itemName=dunstontc.dark-plus-syntax) theme.
-> Other themes that have similar highlighting: [cobalt2](https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2), [dracula / dracula soft](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula) and [and old hope classic](https://marketplace.visualstudio.com/items?itemName=dustinsanders.an-old-hope-theme-vscode).
+> Note: VSCode's default Dark+ theme doesn't have the highlighting displayed in these images. For that effect, run the `vscode-angular-html: Set legacy color customizations` command".
 
-## Summary
+<br />
 
-- [vscode-angular-html](#vscode-angular-html)
-  - [Angular HTML Template Syntax Highlighting](#angular-html-template-syntax-highlighting)
-  - [Summary](#summary)
-    - [Angular directives](#angular-directives)
-    - [Doctype](#doctype)
-    - [Comments](#comments)
-    - [Invalid attributes see complete list](#invalid-attributes-see-complete-list)
-    - [Angular interpolations (with safe navigation operator)](#angular-interpolations-with-safe-navigation-operator)
-    - [Angular structural tags](#angular-structural-tags)
-    - [Entities](#entities)
-    - [Regex](#regex)
-    - [Deprecated tags see complete list](#deprecated-tags-see-complete-list)
-    - [DOM events see complete list](#dom-events-see-complete-list)
-    - [Style inline](#style-inline)
-    - [Style tag (scss/stylus)](#style-tag-scssstylus)
-    - [Script tag](#script-tag)
-    - [Generic attributes](#generic-attributes)
-  - [Disclaimer](#disclaimer)
-  - [Changelog](#changelog)
-- [title](#title)
+# Summary
 
-### Angular directives
+- [General](#general)
+  - [Element differentiation (HTML/SVG/Custom/Angular)](#element-differentiation-htmlsvgcustomangular)
+  - [Customizations](#customizations)
+- [Angular](#angular)
+  - [Directives](#directives)
+  - [Interpolations](#interpolations)
+  - [Structural tags](#structural-tags)
+- [HTML](#html)
+  - [Doctype](#doctype)
+  - [Comments](#comments)
+  - [Entities](#entities)
+  - [Custom components](#custom-components)
+  - [DOM events](#dom-events)
+  - [Generic attributes](#generic-attributes)
+  - [Style inline](#style-inline)
+  - [Regex](#regex)
+  - [Deprecated attributes](#deprecated-attributes)
+  - [Deprecated tags](#deprecated-tags)
+- [SVG](#svg)
+  - [Non-string attributes](#non-string-attributes)
+  - [Deprecated tags](#deprecated-tags-1)
+  - [Deprecated attributes](#deprecated-attributes-1)
+- [XML](#xml)
+  - [DTD, elements and attributes namespace](#dtd-elements-and-attributes-namespace)
+  - [Stylesheet](#stylesheet)
+- [Style tags (CSS/SASS/PostCSS/SCSS/Stylus)](#style-tags-csssasspostcssscssstylus)
+  - [CSS](#css)
+  - [SCSS](#scss)
+  - [LESS](#less)
+  - [SASS](#sass)
+  - [Stylus](#stylus)
+  - [PostCSS](#postcss)
+  - [CSS Fallback](#css-fallback)
+- [Script tag (Javascript/Typescript/Coffeescript/Dart)](#script-tag-javascripttypescriptcoffeescriptdart)
+  - [Javascript](#javascript)
+  - [Typescript](#typescript)
+  - [Coffeescript](#coffeescript)
+  - [Dart](#dart)
+  - [Javascript fallback](#javascript-fallback)
+- [Theming](#theming)
+- [Translate](#translate)
+- [Changelog](#changelog)
 
-<span name="angular-directives"></span>
+<br />
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-directives.gif" title="Angular directives" alt="Angular directives" />
+# General
 
-### Doctype
+## Element differentiation (HTML/SVG/Custom/Angular)
 
-<span name="doctype"></span>
+> The highlighting displayed in this specific section is not part of the legacy color customization, and can be achieved by changing this [extension' settings](docs/SETTINGS.md).
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/doctype.png" title="vscode-angular-html" alt="Doctype" />
+> See [Angular-specific list](docs/ANGULAR-SPECIFIC-TAGS.md)
 
-### Comments
+> See [HTML-specific list](docs/HTML-SPECIFIC-TAGS.md)
 
-<span name="comments"></span>
+> See [SVG-specific list](docs/SVG-SPECIFIC-TAGS.md)
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/comments.png" title="vscode-angular-html" alt="Comments" />
+<img src="assets/tag-differentiation.png" title="Element differentiation" alt="Element differentiation" />
 
-### Invalid attributes [see complete list](DEPRECATED-ATTRIBUTES.md)
+## Customizations
 
-<span name="invalid-attributes"></span>
+> There are a ton of customizations available, and everything can be changed in this [extension' settings](docs/SETTINGS.md).
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/invalid-attributes.png" title="Invalid attributes" alt="Invalid attributes" />
+<br />
 
-### Angular interpolations (with safe navigation operator)
+# Angular
 
-<span name="angular-interpolations"></span>
+## Directives
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-interpolations.png" title="Angular Interpolations" alt="Angular Interpolations" />
+<img src="assets/angular-directives.gif" title="Angular directives" alt="Angular directives" />
 
-### Angular structural tags
+## Interpolations
 
-<span name="angular-structural-tags"></span>
+<img src="assets/angular-interpolations.png" title="Angular Interpolations" alt="Angular Interpolations" />
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/angular-structural-tags.png" title="Angular Structural Tags" alt="Angular Structural Tags" />
+## Structural tags
 
-### Entities
+> See the [complete list](docs/ANGULAR-SPECIFIC-TAGS.md)
 
-<span name="html-entities"></span>
+<img src="assets/angular-structural-tags.png" title="Angular Structural Tags" alt="Angular Structural Tags" />
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/html-entities.png" title="HTML Entities" alt="HTML Entities" />
+<br />
 
-### Regex
+# HTML
 
-<span name="regex"></span>
+## Doctype
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/regex.png" title="vscode-angular-html" alt="Regex" />
+<img src="assets/doctype.png" title="vscode-angular-html" alt="Doctype" />
 
-### Deprecated tags [see complete list](DEPRECATED-TAGS.md)
+## Comments
 
-<span name="deprecated-tags"></span>
+<img src="assets/comments.png" title="vscode-angular-html" alt="Comments" />
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/deprecated-tags.png" title="Deprecated tags" alt="Deprecated tags" />
+## Entities
 
-### DOM events [see complete list](DOM-EVENTS.md)
+> See the [complete list](docs/HTML-ENTITIES.md)
 
-<span name="dom-events"></span>
+<img src="assets/html-entities.png" title="HTML Entities" alt="HTML Entities" />
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/dom-events.png" title="DOM events" alt="DOM events" />
+## Custom components
 
-### Style inline
+> See [color-customization](docs/SETTINGS.MD)
 
-<span name="style-inline"></span>
+<img src="assets/custom-components.png" title="Custom Components" alt="Custom Component">
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/style-inline.png" title="Style inline" alt="Style inline" />
+## DOM events
 
-### Style tag (scss/stylus)
+> See the [complete list](docs/DOM-EVENTS.md)
 
-<span name="style-tag"></span>
+<img src="assets/dom-events.png" title="DOM events" alt="DOM events" />
 
-> Note: stylus is only supported via [language-stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus)
+## Generic attributes
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/style-tag.png" title="Style tag" alt="Style tag" />
+<img src="assets/generic-attributes.png" title="Generic attributes" alt="Generic attributes" />
 
-### Script tag
+## Style inline
 
-<span name="script-tags"></span>
+<img src="assets/style-inline-normal.png" title="Style inline" alt="Style inline" />
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/script-tag.png" title="Script tags" alt="Script tag" />
+And with [colorize support](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize):
 
-### Generic attributes
+<img src="assets/style-inline-colorize.png" title="Style inline" alt="Style inline with colorize">
 
-<span name="generic-attributes"></span>
+> See [colorize settings](docs/COLORIZE-SETTINGS.md)
 
-<img src="https://raw.githubusercontent.com/ghaschel/vscode-angular-html/master/assets/generic-attributes.png" title="Generic attributes" alt="Generic attributes" />
+## Regex
 
-## Disclaimer
+<img src="assets/regex.png" title="vscode-angular-html" alt="Regex" />
 
-> The development of this plugin serves as a way for me to train Regex, so may not be 100% correct. Feel free to submit a pull request if needed.
+## Deprecated attributes
 
-> Based in the original work of [dunstontc](https://github.com/dunstontc/vscode-angular-syntax)
+> See the [complete list](docs/DEPRECATED-HTML-ATTRIBUTES.md)
 
-## [Changelog](CHANGELOG.md)
+<img src="assets/invalid-attributes.png" title="Invalid attributes" alt="Invalid attributes" />
 
-# title
+## Deprecated tags
 
-```less
-@variable: test;
-@variable: test;
+> See the [complete list](docs/DEPRECATED-HTML-TAGS.md)
 
-body {
-  &:extends(.test) {
-    color: gray;
-    display: block;
-  }
-}
-```
+<img src="assets/deprecated-html-tags.png" title="Deprecated tags" alt="Deprecated tags" />
 
-```scss
-@mixin test {
-  $variable: test;
+<br />
 
-  @return $variable;
-}
+# SVG
 
-body {
-  color: gray;
-  display: block;
+## Non-string attributes
 
-  @include test();
-}
-```
+> See [SVG's non string attributes](docs/SVG-NONSTRING-ATTRIBUTES.md)
 
-```stylus
-test()
-  $variable
+> Elements like stroke can benefit from the [colorize settings](docs/COLORIZE-SETTINGS.md) as the [style inline](#style-inline) section.
 
-body
-  color gray
-  display block
-  test()
+<img src="assets/svg-processing.png" title="SVG Processing" alt="SVG Processing"/>
 
-```
+## Deprecated tags
+
+> See the [complete list](docs/DEPRECATED-SVG-TAGS.md)
+
+<img src="assets/svg-deprecated-tags.png" title="SVG deprecated tags" alt="SVG deprecated tags"/>
+
+## Deprecated attributes
+
+> See the [complete list](docs/DEPRECATED-SVG-ATTRIBUTES.md)
+
+<img src="assets/svg-deprecated-attributes.png" title="SVG invalid attributes" alt="SVG invalid attributes"/>
+
+<br />
+
+# XML
+
+## DTD, elements and attributes namespace
+
+<img src="assets/xml-dtd-namespace.png" title="XML Processing" alt="XML Processing">
+
+## Stylesheet
+
+<img src="assets/xml-stylesheet.png" title="XML Stylesheet" alt="XML Stylesheet">
+
+<br />
+
+# Style tags (CSS/SASS/PostCSS/SCSS/Stylus)
+
+> See [scripts and style mime-types](docs/MIME-TYPES.md)
+
+> Every style tag in this section can also benefit from the [colorize settings](docs/COLORIZE-SETTINGS.md) as the [style inline](#style-inline) section
+
+## CSS
+
+<img src="assets/style-tag-css.png" title="Style tag" alt="Style tag" />
+
+## SCSS
+
+> The displayed highlighting is achieved via [vscode-angular-scss](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-scss) and it fallbacks to the default one if not installed.
+
+<img src="assets/style-tag-scss.png" title="Style tag" alt="Style tag" />
+
+## LESS
+
+<img src="assets/style-tag-less.png" title="Style tag" alt="Style tag" />
+
+## SASS
+
+<img src="assets/style-tag-sass.png" title="Style tag" alt="Style tag" />
+
+## Stylus
+
+<img src="assets/style-tag-stylus.png" title="Style tag" alt="Style tag" />
+
+## PostCSS
+
+> The displayed highlighting is achieved via [language-postcss](https://marketplace.visualstudio.com/items?itemName=cpylua.language-postcss) and it may be replaced with another extension as soon as [this merge](https://github.com/csstools/postcss-language/pull/13) is released in a new version of the plugin
+
+<img src="assets/style-tag-postcss.png" title="Style tag" alt="Style tag" />
+
+## CSS Fallback
+
+<img src="assets/style-tag-css-fallback.png" title="Style tag" alt="Style tag" />
+
+<br />
+
+# Script tag (Javascript/Typescript/Coffeescript/Dart)
+
+> See [scripts and style mime-types](docs/MIME-TYPES.md)
+
+## Javascript
+
+<img src="assets/script-tag-javascript.png" title="Script tags" alt="Script tag" />
+
+## Typescript
+
+<img src="assets/script-tag-typescript.png" title="Script tags" alt="Script tag" />
+
+## Coffeescript
+
+<img src="assets/script-tag-coffeescript.png" title="Script tags" alt="Script tag" />
+
+## Dart
+
+<img src="assets/script-tag-dart.png" title="Script tags" alt="Script tag" />
+
+## Javascript fallback
+
+<img src="assets/script-tag-javascript-fallback.png" title="Script tags" alt="Script tag" />
+
+<br />
+
+# Theming
+
+> If you want to create a theme and support this extension, please checkout the [theming docs](docs/THEMING.md)
+
+<br />
+
+# Translate
+
+> If you want to help translating this extension, please checkout the [localization docs](docs/LOCALIZATION.md)
+
+<br />
+
+# Changelog
+
+> See the [changelog](CHANGELOG.md)

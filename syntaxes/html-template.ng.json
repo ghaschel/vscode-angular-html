@@ -326,7 +326,7 @@
           "end": "(?=\")",
           "patterns": [
             {
-              "match": "([[:alpha:]0-9\\s\\-_&$@!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})",
+              "match": "([[:alpha:]0-9\\s\\-_&$@\\#\\%\\^\\;\\+\\*!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})",
               "name": "string.quoted.double.html"
             },
             {
@@ -961,7 +961,7 @@
           "end": "(?=\")",
           "patterns": [
             {
-              "match": "([[:alpha:]0-9\\s\\-_&$@!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})",
+              "match": "([[:alpha:]0-9\\s\\-_&$@\\#\\%\\^\\;\\+\\*!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})",
               "name": "string.quoted.double.html"
             },
             {
@@ -1945,7 +1945,7 @@
         {
           "captures": {
             "1": {
-              "name": "punctuation.definition.entity.html html-template.ng.entities.amperstand"
+              "name": "punctuation.definition.entity.html html-template.ng.entities.ampersand"
             },
             "912": {
               "name": "punctuation.definition.entity.html html-template.ng.entities.semicolon"
@@ -1957,7 +1957,7 @@
         {
           "captures": {
             "1": {
-              "name": "punctuation.definition.entity.html html-template.ng.entities.amperstand"
+              "name": "punctuation.definition.entity.html html-template.ng.entities.ampersand"
             },
             "2": {
               "name": "punctuation.definition.entity.html html-template.ng.entities.semicolon"
@@ -1969,7 +1969,7 @@
         {
           "captures": {
             "1": {
-              "name": "punctuation.definition.entity.html html-template.ng.entities.amperstand"
+              "name": "punctuation.definition.entity.html html-template.ng.entities.ampersand"
             },
             "3": {
               "name": "punctuation.definition.entity.html html-template.ng.entities.semicolon"
@@ -2625,7 +2625,7 @@
           "include": "#tag-stuff"
         }
       ],
-      "begin": "(</?)(feComponentTransfer|feMerge|hatch|mesh|meshgradient|meshpatch|meshrow)(:)?([\\w\\-\\_$]+)?\\b",
+      "begin": "(</?)(feComponentTransfer|feMerge|hatch|mesh\\b|meshgradient|meshpatch|meshrow)(:)?([\\w\\-\\_$]+)?\\b",
       "endCaptures": {
         "0": {
           "name": "meta.tag.structure.svg.$2.end.html"

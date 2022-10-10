@@ -10,7 +10,7 @@ export interface LocaleKeys {
       htmlDoctypeAttributes: string;
       htmlDoctypeExclamation: string;
       htmlDoctypeElement: string;
-      htmlEntitiesAmperstand: string;
+      htmlEntitiesAmpersand: string;
       htmlEntitiesSemicolon: string;
       htmlGenericAttributesFollowedByParameter: string;
       htmlEventsAttributes: string;

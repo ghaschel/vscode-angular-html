@@ -10,7 +10,7 @@
       "htmlDoctypeAttributes": "Corresponde aos attributos da tag DOCTYPE",
       "htmlDoctypeExclamation": "Corresponde ao ponto de exclamação precedente à tag DOCTYPE:",
       "htmlDoctypeElement": "Corresponde à tag DOCTYPE:",
-      "htmlEntitiesAmperstand": "Corresponde ao e comercial nas entidades HTML:",
+      "htmlEntitiesAmpersand": "Corresponde ao e comercial nas entidades HTML:",
       "htmlEntitiesSemicolon": "Corresponde ao ponto e virgula nas entidades HTML:",
       "htmlGenericAttributesFollowedByParameter": "Corresponde a atributos html seguidos por igual e um parâmetro.\nNão corresponde aos atributos de evento HTML e SVG.",
       "htmlEventsAttributes": "Corresponde a atributos de evento HTML e SVG.",

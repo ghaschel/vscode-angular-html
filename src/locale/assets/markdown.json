@@ -4,7 +4,7 @@
       "htmlDoctypeAttributes": "\n\n* <&#x21;DOCTYPE `html` `PUBLIC`>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\n",
       "htmlDoctypeExclamation": "\n\n* <`!`DOCTYPE html PUBLIC>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\n",
       "htmlDoctypeElement": "\n\n* <&#x21;`DOCTYPE` html PUBLIC>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\n",
-      "htmlEntitiesAmperstand": "\n\n* `&`amp;\n\n* `&`#174;\n\n```html\n\n&amp;\n&#174;\n\n\n```\n",
+      "htmlEntitiesAmpersand": "\n\n* `&`amp;\n\n* `&`#174;\n\n```html\n\n&amp;\n&#174;\n\n\n```\n",
       "htmlEntitiesSemicolon": "\n\n* &amp;amp`;`\n\n* &amp;#174`;`\n\n```html\n\n&amp;\n&#174;\n\n\n```\n",
       "htmlGenericAttributesFollowedByParameter": "\n\n* &#60;div `class`=\"class\"&#62;&#60;/div&#62;\n\n* &#60;div `generic-attribute`=\"parameter\"&#62;&#60;/div&#62;\n\n```html\n\n<div class=\"class\"></div>\n<div generic-attribute=\"parameter\"></div>\n\n\n```\n",
       "htmlEventsAttributes": "\n\n* &#60;div `onpointercancel`=\"callback()\"&#62;&#60;/div&#62;\n\n* &#60;div `onclick`=\"callback('with-parameters', variable)\"&#62;&#60;/div&#62;\n\n```html\n\n<div onpointercancel=\"callback()\"></div>\n<div onclick=\"callback('with-parameters', variable)\"></div>\n\n\n```\n",

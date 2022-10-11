@@ -113,7 +113,7 @@
                   ],
                 },
                 {
-                  begin: '(?=(type(?=[\\s=][\'"]((module)|(text/(javascript|x-javascript)|application/((x-)?javascript)))[\\s"\'])|(lang(?=[\\s=][\'"]javascript[\\s"\']))))',
+                  begin: '(?=(type(?=[\\s=][\'"]((module)|(text/(ecmascript|x-ecmascript|javascript|x-javascript)|application/((x-)?javascript|ecmascript)))[\\s"\'])|(lang(?=[\\s=][\'"]javascript[\\s"\']))))',
                   end: '(?=<(?=/(?=script>)))',
                   patterns: [
                     {

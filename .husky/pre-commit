@@ -3,6 +3,7 @@
 
 npm run lint:ts;
 # npm run lint:style;
+# npm run lint:html
 npm run clean;
 npm run compile;
 

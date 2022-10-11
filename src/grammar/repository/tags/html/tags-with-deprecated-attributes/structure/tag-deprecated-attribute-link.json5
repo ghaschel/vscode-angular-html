@@ -42,6 +42,9 @@
           },
         },
         {
+          include: '#style-type-attribute',
+        },
+        {
           include: '#tag-stuff',
         },
       ],

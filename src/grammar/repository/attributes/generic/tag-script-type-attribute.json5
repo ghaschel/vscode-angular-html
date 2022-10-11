@@ -3,7 +3,7 @@
     'script-type-attribute': {
       patterns: [
         {
-          match: '[\\s]*(type)(=)(")((text|application)/((x-)?(javascript|typescript|coffeescript|dart))|(module))(")',
+          match: '[\\s]*(type)(=)(")((text|application)/((x-)?(javascript|typescript|coffeescript|dart|ecmascript))|(module))(")',
           captures: {
             '0': {
               name: 'meta.attribute.$1.html',
@@ -32,7 +32,7 @@
           },
         },
         {
-          match: "[\\s]*(type)(=)(')((text|application)/((x-)?(javascript|typescript|coffeescript|dart))|(module))(')",
+          match: "[\\s]*(type)(=)(')((text|application)/((x-)?(javascript|typescript|coffeescript|dart|ecmascript))|(module))(')",
           captures: {
             '0': {
               name: 'meta.attribute.$1.html',

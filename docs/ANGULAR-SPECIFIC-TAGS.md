@@ -2,112 +2,114 @@
 
 > List of Angular and Angular Material element tags which support custom syntax highlithging
 
-- ng-container
-- ng-content
-- ng-template
-- router-outlet
-- mat-accordion
-- mat-action-list
-- mat-action-row
-- mat-autocomplete
-- mat-card-actions
-- mat-card-content
-- mat-card-header
-- mat-card-footer
-- mat-card-subtitle
-- mat-card-title
-- mat-card-title-group
-- mat-card
-- mat-checkbox
-- mat-chip-list
-- mat-datepicker-toggle
-- mat-datepicker
-- mat-drawer-content
-- mat-drawer
-- mat-divider
-- mat-error
-- mat-expansion-panel-header
-- mat-expansion-panel
-- mat-form-field
-- mat-grid-list
-- mat-grid-tile-footer
-- mat-grid-tile-header
-- mat-grid-title
-- mat-hint
-- mat-icon
-- mat-label
-- mat-list-item
-- mat-list-option
-- mat-list
-- mat-menu
-- mat-nav-list
-- mat-optgroup
-- mat-option
-- mat-panel-description
-- mat-panel-title
-- mat-radio-button
-- mat-radio-group
-- mat-selection-list
-- mat-select-trigger
-- mat-select
-- mat-sidenav-content
-- mat-sidenav-container
-- mat-sidenav
-- mat-slide-toggle
-- mat-slider
-- mat-toolbar-row
-- mat-toolbar
-- mat-horizontal-stepper
-- mat-pseudo-checkbox
-- mat-step
-- mat-vertical-stepper
-- mat-tab-group
-- mat-tab
-- mat-nav-tab-bar
-- mat-tree-node
-- mat-tree
-- mat-nested-tree-node
-- mat-button-toggle-group
-- mat-button-toggle
-- mat-chip-list
-- mat-chip
-- mat-basic-chip
-- mat-progress-spinner
-- mat-spinner
-- mat-progress-bar
-- mat-dialog-content
-- mat-dialog-actions
-- mat-paginator
-- mat-text-column
-- mat-header-row
-- mat-header-cell
-- mat-table
-- mat-cell
-- mat-row
-- cdk-step
-- cdk-virtual-scroll-viewport
-- cdk-header-cell
-- cdk-cell
-- cdk-table
-- cdk-header-row
-- cdk-row
-- cdk-tree-node
-- cdk-tree
-- cdk-nested-tree-node
-- mat-chip-list
-- mat-chip-avatar
-- mat-date-range-input
-- mat-date-range-picker
-- mat-datepicker-actions
-- mat-calendar
-- mat-grid-tile
-- mat-drawer-container
-- mat-stepper
-- mat-tab-nav-panel
-- cdk-accordion
-- cdk-accordion-item
-- cdk-footer-cell
-- cdk-footer-row
+- Angular
+  - ng-container
+  - ng-content
+  - ng-template
+  - router-outlet
+- Angular Material
+  - mat-accordion
+  - mat-action-list
+  - mat-action-row
+  - mat-autocomplete
+  - mat-card-actions
+  - mat-card-content
+  - mat-card-header
+  - mat-card-footer
+  - mat-card-subtitle
+  - mat-card-title
+  - mat-card-title-group
+  - mat-card
+  - mat-checkbox
+  - mat-chip-list
+  - mat-datepicker-toggle
+  - mat-datepicker
+  - mat-drawer-content
+  - mat-drawer
+  - mat-divider
+  - mat-error
+  - mat-expansion-panel-header
+  - mat-expansion-panel
+  - mat-form-field
+  - mat-grid-list
+  - mat-grid-tile-footer
+  - mat-grid-tile-header
+  - mat-grid-title
+  - mat-hint
+  - mat-icon
+  - mat-label
+  - mat-list-item
+  - mat-list-option
+  - mat-list
+  - mat-menu
+  - mat-nav-list
+  - mat-optgroup
+  - mat-option
+  - mat-panel-description
+  - mat-panel-title
+  - mat-radio-button
+  - mat-radio-group
+  - mat-selection-list
+  - mat-select-trigger
+  - mat-select
+  - mat-sidenav-content
+  - mat-sidenav-container
+  - mat-sidenav
+  - mat-slide-toggle
+  - mat-slider
+  - mat-toolbar-row
+  - mat-toolbar
+  - mat-horizontal-stepper
+  - mat-pseudo-checkbox
+  - mat-step
+  - mat-vertical-stepper
+  - mat-tab-group
+  - mat-tab
+  - mat-nav-tab-bar
+  - mat-tree-node
+  - mat-tree
+  - mat-nested-tree-node
+  - mat-button-toggle-group
+  - mat-button-toggle
+  - mat-chip-list
+  - mat-chip
+  - mat-basic-chip
+  - mat-progress-spinner
+  - mat-spinner
+  - mat-progress-bar
+  - mat-dialog-content
+  - mat-dialog-actions
+  - mat-paginator
+  - mat-text-column
+  - mat-header-row
+  - mat-header-cell
+  - mat-table
+  - mat-cell
+  - mat-row
+  - cdk-step
+  - cdk-virtual-scroll-viewport
+  - cdk-header-cell
+  - cdk-cell
+  - cdk-table
+  - cdk-header-row
+  - cdk-row
+  - cdk-tree-node
+  - cdk-tree
+  - cdk-nested-tree-node
+  - mat-chip-list
+  - mat-chip-avatar
+  - mat-date-range-input
+  - mat-date-range-picker
+  - mat-datepicker-actions
+  - mat-calendar
+  - mat-grid-tile
+  - mat-drawer-container
+  - mat-stepper
+  - mat-tab-nav-panel
+  - cdk-accordion
+  - cdk-accordion-item
+  - cdk-footer-cell
+  - cdk-footer-row
 
 ## Reference
 

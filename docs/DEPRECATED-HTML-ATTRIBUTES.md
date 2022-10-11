@@ -1,47 +1,170 @@
-# Deprecated attributes
+# Deprecated HTML attributes
 
-> List of attributes marked as deprecated by this plugin - read as tag (attributes)
+> List of per-element deprecated attributes
 
-- a (charset, coords, rev, shape)
-- area (nohref)
-- body (alink, background, bgcolor, link, vlink)
-- br (clear)
-- caption (align)
-- col (char, charoff, valign, width)
-- colgroup (align, char, charoff, valign, width)
-- div (align)
-- dl (compact)
-- h1 (align)
-- h2 (align)
-- h3 (align)
-- h4 (align)
-- h5 (align)
-- h6 (align)
-- head (profile)
-- hr (align, noshade, size, width)
-- html (version)
-- iframe (align, frameborder, longdesc, marginheight, marginwidth, scrolling)
-- img (align, hspace, longdesc, name, vspace)
-- input (align)
-- legend (align)
-- li (type)
-- link (charset, rev, target)
-- menu (compact)
-- object (archive, border, classid, codebase, codetype, declare, hspace, standby, vspace, align)
-- ol (compact, type)
-- p (align)
-- param (type, valuetype)
-- pre (width)
-- t (abbr, axis)
-- table (bgcolor, border, cellpadding, cellspacing, frame, rules, scheme, width)
-- tbody (align, char, charoff, valign)
-- td (abbr, align, axis, bgcolor, char, charoff, nowrap, scope, valign, width)
-- tfoot (align, char, charoff, valign)
-- th (align, bgcolor, char, charoff, nowrap, valign, width)
-- thead (align, char, charoff, valign)
-- tr (align, bgcolor, char, charoff, valign)
-- ul (compact, type)
+- Inline
+  - a
+    - charset
+    - coords
+    - rev
+    - shape
+  - area
+    - nohref
+  - br
+    - clear
+- Structure
+  - body
+    - alink
+    - background
+    - bgcolor
+    - link
+    - vlink
+  - caption
+    - align
+  - col
+    - char
+    - charoff
+    - valign
+    - width
+  - colgroup
+    - align
+    - char
+    - charoff
+    - valign
+    - width
+  - div
+    - align
+  - dl
+    - compact
+  - h1
+    - align
+  - h2
+    - align
+  - h3
+    - align
+  - h4
+    - align
+  - h5
+    - align
+  - h6
+    - align
+  - head
+    - profile
+  - hr
+    - align
+    - noshade
+    - size
+    - width
+  - html
+    - version
+  - input
+    - align
+  - legend
+    - align
+  - li
+    - type
+  - link
+    - charset
+    - rev
+    - target
+  - menu
+    - compact
+  - ol
+    - compact
+    - type
+  - p
+    - align
+  - pre
+    - width
+  - table
+    - bgcolor
+    - border
+    - cellpadding
+    - cellspacing
+    - frame
+    - rules
+    - scheme
+    - width
+  - tbody
+    - align
+    - char
+    - charoff
+    - valign
+  - td
+    - abbr
+    - align
+    - axis
+    - bgcolor
+    - char
+    - charoff
+    - nowrap
+    - scope
+    - valign
+    - width
+  - tfoot
+    - align
+    - char
+    - charoff
+    - valign
+  - th
+    - align
+    - bgcolor
+    - char
+    - charoff
+    - nowrap
+    - valign
+    - width
+  - thead
+    - align
+    - char
+    - charoff
+    - valign
+  - tr
+    - align
+    - bgcolor
+    - char
+    - charoff
+    - valign
+  - ul
+  - compact
+  - type
+- Object
+  - iframe
+    - align
+    - frameborder
+    - longdesc
+    - marginheight
+    - marginwidth
+    - scrolling
+  - img
+    - align
+    - hspace
+    - longdesc
+    - name
+    - vspace
+  - object
+    - align
+    - archive
+    - border
+    - classid
+    - codebase
+    - codetype
+    - declare
+    - hspace
+    - standby
+    - vspace
+  - param
+    - type
+    - valuetype
 
 ## Reference
 
 - [WhatWg](https://html-differences.whatwg.org/#obsolete-attributes)
+- [HTML+ W3 Specs](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_1.html)
+- [HTML 2.0 W3 Specs](https://www.w3.org/MarkUp/html-spec/)
+- [HTML 3.2 W3 Specs](https://www.w3.org/TR/2018/SPSD-html32-20180315/)
+- [HTML 4.01 W3 Specs](https://www.w3.org/TR/html4/)
+- [HTML 5 W3C Working Draft](https://www.w3.org/TR/2011/WD-html5-20110405/)
+- [XHTML 1.0 W3 Specs](https://www.w3.org/TR/xhtml1/)
+- [XHTML 1.1 W3 Specs](https://www.w3.org/TR/xhtml11/)
+- [MDN HTML Webdocs](https://developer.mozilla.org/en-US/docs/Web/HTML)

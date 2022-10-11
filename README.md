@@ -18,10 +18,11 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 
 > Note: VSCode's default Dark+ theme doesn't have the highlighting displayed in these images. For that effect, run the `vscode-angular-html: Set legacy color customizations` command".
 
-<br />
-
 # Summary
 
+- [vscode-angular-html](#vscode-angular-html)
+  - [Angular HTML Template Syntax Highlighting](#angular-html-template-syntax-highlighting)
+- [Summary](#summary)
 - [General](#general)
   - [Element differentiation (HTML/SVG/Custom/Angular)](#element-differentiation-htmlsvgcustomangular)
   - [Customizations](#customizations)
@@ -65,8 +66,6 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 - [Translate](#translate)
 - [Changelog](#changelog)
 
-<br />
-
 # General
 
 ## Element differentiation (HTML/SVG/Custom/Angular)
@@ -85,8 +84,6 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 
 > There are a ton of customizations available, and everything can be changed in this [extension' settings](docs/SETTINGS.md).
 
-<br />
-
 # Angular
 
 ## Directives
@@ -102,8 +99,6 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 > See the [complete list](docs/ANGULAR-SPECIFIC-TAGS.md)
 
 <img src="assets/angular-structural-tags.png" title="Angular Structural Tags" alt="Angular Structural Tags" />
-
-<br />
 
 # HTML
 
@@ -163,8 +158,6 @@ And with [colorize support](https://marketplace.visualstudio.com/items?itemName=
 
 <img src="assets/deprecated-html-tags.png" title="Deprecated tags" alt="Deprecated tags" />
 
-<br />
-
 # SVG
 
 ## Non-string attributes
@@ -187,8 +180,6 @@ And with [colorize support](https://marketplace.visualstudio.com/items?itemName=
 
 <img src="assets/svg-deprecated-attributes.png" title="SVG invalid attributes" alt="SVG invalid attributes"/>
 
-<br />
-
 # XML
 
 ## DTD, elements and attributes namespace
@@ -199,11 +190,11 @@ And with [colorize support](https://marketplace.visualstudio.com/items?itemName=
 
 <img src="assets/xml-stylesheet.png" title="XML Stylesheet" alt="XML Stylesheet">
 
-<br />
-
 # Style tags (CSS/SASS/PostCSS/SCSS/Stylus)
 
-> See [scripts and style mime-types](docs/MIME-TYPES.md)
+> See [scripts and style MIME-types](docs/MIME-TYPES.md)
+
+> Every MIME-type shown in this section also will be highlighted in `<link>` elements
 
 > Every style tag in this section can also benefit from the [colorize settings](docs/COLORIZE-SETTINGS.md) as the [style inline](#style-inline) section
 
@@ -239,8 +230,6 @@ And with [colorize support](https://marketplace.visualstudio.com/items?itemName=
 
 <img src="assets/style-tag-css-fallback.png" title="Style tag" alt="Style tag" />
 
-<br />
-
 # Script tag (Javascript/Typescript/Coffeescript/Dart)
 
 > See [scripts and style mime-types](docs/MIME-TYPES.md)
@@ -265,19 +254,13 @@ And with [colorize support](https://marketplace.visualstudio.com/items?itemName=
 
 <img src="assets/script-tag-javascript-fallback.png" title="Script tags" alt="Script tag" />
 
-<br />
-
 # Theming
 
 > If you want to create a theme and support this extension, please checkout the [theming docs](docs/THEMING.md)
 
-<br />
-
 # Translate
 
 > If you want to help translating this extension, please checkout the [localization docs](docs/LOCALIZATION.md)
-
-<br />
 
 # Changelog
 

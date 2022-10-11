@@ -1,6 +1,6 @@
-# DOM Events
+# HTML and SVG DOM Events
 
-> List of DOM Events supported by this plugin
+> List of supported HTML and SVG DOM Events
 
 - DOMMenuItemActive
 - DOMMenuItemInactive
@@ -18,22 +18,23 @@
 - onblur
 - onbounce
 - onbroadcast
+- oncancel
 - oncanplay
 - oncanplaythrough
 - oncellchange
 - onchange
 - onclick
 - onclose
-- oncommand
 - oncommandupdate
+- oncommand
 - oncontextmenu
 - oncopy
+- oncuechange
 - oncut
 - ondataavailable
 - ondatasetchanged
 - ondatasetcomplete
 - ondblclick
-- ondrag
 - ondragdrop
 - ondragend
 - ondragenter
@@ -42,12 +43,13 @@
 - ondragleave
 - ondragover
 - ondragstart
+- ondrag
 - ondrop
 - ondurationchange
 - onemptied
 - onended
-- onerror
 - onerrorupdate
+- onerror
 - onfilterchange
 - onfinish
 - onfocus
@@ -60,24 +62,26 @@
 - onkeydown
 - onkeypress
 - onkeyup
-- onload
 - onloadeddata
 - onloadedmetadata
 - onloadstart
+- onload
 - onlosecapture
 - onlostpointercapture
 - onmousedown
+- onmouseenter
+- onmouseleave
 - onmousemove
 - onmouseout
 - onmouseover
 - onmouseup
 - onmousewheel
-- onoverflow
 - onoverflowchanged
+- onoverflow
 - onpaste
 - onpause
-- onplay
 - onplaying
+- onplay
 - onpointercancel
 - onpointerdown
 - onpointerenter
@@ -103,8 +107,8 @@
 - onscroll
 - onseeked
 - onseeking
-- onselect
 - onselectstart
+- onselect
 - onshow
 - onstalled
 - onstart
@@ -112,6 +116,7 @@
 - onsubmit
 - onsuspend
 - ontimeupdate
+- ontoggle
 - onunderflow
 - onunload
 - onvolumechange
@@ -123,3 +128,5 @@
 - [Wikipedia - Pointer Events](https://en.wikipedia.org/wiki/DOM_events#Pointer_events[8])
 - [Wikipedia - Internet Explorer Specific Events](https://en.wikipedia.org/wiki/DOM_events#Internet_Explorer-specific_events)
 - [Wikipedia - XUL Events](https://en.wikipedia.org/wiki/DOM_events#XUL_events)
+- [MDN Web Docs - SVG Events](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Events)
+- [MDN Web Docs - HTML Elements Events](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement#events)

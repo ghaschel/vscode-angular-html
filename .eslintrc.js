@@ -301,16 +301,16 @@ var baseTsRules = {
     },
   ],
   '@typescript-eslint/no-extra-semi': ['error'],
-  '@typescript-eslint/no-implied-eval': ['error'],
+  '@typescript-eslint/no-implied-eval': 'off',
   '@typescript-eslint/no-invalid-this': ['error'],
   '@typescript-eslint/no-loop-func': ['error'],
   '@typescript-eslint/no-magic-numbers': 'off',
-  '@typescript-eslint/return-await': 'error',
+  '@typescript-eslint/return-await': 'off',
   '@typescript-eslint/no-shadow': ['error'],
-  '@typescript-eslint/no-throw-literal': ['error'],
+  '@typescript-eslint/no-throw-literal': 'off',
   '@typescript-eslint/no-unused-expressions': ['error'],
   '@typescript-eslint/no-useless-constructor': ['error'],
-  '@typescript-eslint/require-await': 'error',
+  '@typescript-eslint/require-await': 'off',
   '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
   '@typescript-eslint/indent': 'off',
   '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
@@ -341,18 +341,7 @@ var baseTsRules = {
     },
   ],
   '@typescript-eslint/space-infix-ops': ['error', { int32Hint: false }],
-  '@typescript-eslint/strict-boolean-expressions': [
-    'error',
-    {
-      allowString: true,
-      allowNumber: true,
-      allowNullableObject: true,
-      allowNullableBoolean: false,
-      allowNullableString: true,
-      allowNullableNumber: false,
-      allowAny: false,
-    },
-  ],
+  '@typescript-eslint/strict-boolean-expressions': 'off',
   '@typescript-eslint/consistent-type-imports': 'error',
   '@typescript-eslint/ban-tslint-comment': 'warn',
   '@typescript-eslint/class-literal-property-style': ['error', 'getters'],
@@ -486,7 +475,12 @@ var tsRules = {
 module.exports = {
   root: true,
   ignorePatterns: ['*.js'],
-  plugins: ['@typescript-eslint', 'html', 'prettier', 'import'],
+  plugins: ['@typescript-eslint', 'prettier', 'import'],
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    project: './tsconfig.json',
+    createDefaultProgram: true,
+  },
   settings: {
     'import/resolver': {
       typescript: {
@@ -497,23 +491,8 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts'],
-      parserOptions: {
-        project: ['tsconfig.json'],
-        createDefaultProgram: true,
-      },
       extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
       rules: tsRules,
-    },
-    {
-      files: ['*.html'],
-      parserOptions: {
-        parser: 'angular', // original parser goes here (you must specify one to use this option).
-        sourceType: 'module', // any original parser config options you had.
-        ecmaVersion: 6,
-      },
-      excludedFiles: ['*inline-template-*.component.html'],
-      extends: ['plugin:prettier/recommended'],
-      rules: {},
     },
   ],
 };

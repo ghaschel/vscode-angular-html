@@ -3,7 +3,7 @@
     'tag-double-way-non-standard': {
       captures: {
         '0': {
-          name: 'meta.ng-binding.two-way-non-standard.html',
+          name: 'meta.ng-binding.two-way-non-standard.html entity.other.attribute-name.html',
         },
         '1': {
           name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.begin.html',

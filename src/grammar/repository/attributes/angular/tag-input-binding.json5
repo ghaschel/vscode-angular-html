@@ -3,7 +3,7 @@
     'tag-input-binding': {
       captures: {
         '0': {
-          name: 'meta.ng-binding.property.html',
+          name: 'meta.ng-binding.property.html entity.other.attribute-name.html',
         },
         '1': {
           name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.begin.html',
@@ -12,7 +12,7 @@
           name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html html-template.ng.attributes.input-binding.animationTrigger.prefix',
         },
         '3': {
-          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html	entity.other.ng-binding-name.$3.html html-template.ng.attributes.input-binding.first-level',
+          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html entity.other.ng-binding-name.$3.html html-template.ng.attributes.input-binding.first-level',
         },
         '4': {
           name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html	entity.other.ng-binding-name.$4.html html-template.ng.attributes.input-binding.second-level',

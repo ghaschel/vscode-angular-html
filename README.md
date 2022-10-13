@@ -194,6 +194,8 @@ And with [colorize support](https://marketplace.visualstudio.com/items?itemName=
 
 > See [scripts and style MIME-types](docs/MIME-TYPES.md)
 
+> See [linting tips](docs/LINTING.md)
+
 > Every MIME-type shown in this section also will be highlighted in `<link>` elements
 
 > Every style tag in this section can also benefit from the [colorize settings](docs/COLORIZE-SETTINGS.md) as the [style inline](#style-inline) section

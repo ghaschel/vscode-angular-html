@@ -797,7 +797,8 @@ SVG DEPRECATED TAGS AND ATTRIBUTES
   <font:face
     vert-adv-y=""
     d="0 t"
-  ></font>
+  ></font:face>
+  
   <font-face
     alphabetic=""
     test=""
@@ -1206,6 +1207,7 @@ SCRIPT TAGS
 
   /* <![CDATA[ */
   const number = 42
+  const number = 42
   const opposite = true
   /* ]]> */
 
@@ -1256,7 +1258,7 @@ SCRIPT TAGS
    */
 
   /* <![CDATA[ */
-  let number = 42
+  let a = 42
   const opposite = true
   /* ]]> */
 
@@ -1264,7 +1266,7 @@ SCRIPT TAGS
   const secondTest = 123;
   new Class();
 
-  function test() {
+  function testFn() {
     test.callback();
   }
 
@@ -1280,7 +1282,7 @@ SCRIPT TAGS
   const opposite2 = true
   /* ]]> */
 
-  let test = '123';
+  let testvar = '123';
   const secondTest2 = 123;
   new Class();
 

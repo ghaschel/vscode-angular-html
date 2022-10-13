@@ -19,6 +19,12 @@
       "source.fixAll": true
     }
   },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "html.format.extraLiners": "head, body, /html, fieldset",
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "html.format.indentInnerHtml": true,
   "stylelint.snippet": [
     "css",
     "postcss",
@@ -37,7 +43,8 @@
   "stylelint.configFile": ".stylelintrc",
   "stylelint.validate": [
     "html"
-  ]
+  ],
+  "html.autoCreateQuotes": false
   //   "postcss",
   //   "less",
   //   "pcss",

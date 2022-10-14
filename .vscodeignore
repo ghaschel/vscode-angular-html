@@ -1,11 +1,11 @@
 .github/**
 .husky/**
 .vscode/**
-node_modules/**
 scripts/**
 src/**
 test/**
 out/test/**
+out/**/*.map
 .gikeep
 .vscode-test/**/*
 .editorconfig

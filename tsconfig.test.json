@@ -1,6 +1,6 @@
 {
   "compileOnSave": true,
-  "include": ["./src/ts/**/*"],
+  "include": ["./src/test/**/*"],
   "compilerOptions": {
     "paths": {
       "vscode": ["./node_modules/@types/vscode"]
@@ -20,7 +20,7 @@
     "module": "CommonJS",
     "outDir": "out",
     "lib": ["ES2020"],
-    "rootDir": "src/ts",
+    "rootDir": "src",
     "strict": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true

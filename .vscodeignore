@@ -5,7 +5,9 @@ node_modules/**
 scripts/**
 src/**
 test/**
+out/test/**
 .gikeep
+.vscode-test/**/*
 .editorconfig
 .gitattributes
 .gitignore

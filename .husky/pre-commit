@@ -2,10 +2,9 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npm run lint:ts;
-# npm run lint:style;
-# npm run lint:html
+npm run lint:html
 npm run clean;
 npm run compile;
 
-npm test;
-# npx pretty-quick --staged
+npm run test;
+npx pretty-quick --staged

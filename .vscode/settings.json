@@ -3,16 +3,9 @@
     "out": true
   },
   "eslint.options": {
-    "extensions": [
-      ".ts"
-    ]
+    "extensions": [".ts"]
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["typescript", "typescriptreact"],
   "[typescript]": {
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
@@ -25,33 +18,7 @@
   "html.format.extraLiners": "head, body, /html, fieldset",
   "html.format.wrapAttributes": "force-expand-multiline",
   "html.format.indentInnerHtml": true,
-  "stylelint.snippet": [
-    "css",
-    "postcss",
-    "stylus",
-    "styl",
-    "scss",
-    "sass",
-    "less",
-    "html"
-  ],
   "scss.validate": false,
   "css.validate": false,
-  "less.validate": false,
-  "stylelint.enable": true,
-  "stylelint.packageManager": "npm",
-  "stylelint.configFile": ".stylelintrc",
-  "stylelint.validate": [
-    "html"
-  ],
-  "html.autoCreateQuotes": false
-  //   "postcss",
-  //   "less",
-  //   "pcss",
-  //   "stylus",
-  //   "styl",
-  //   "css",
-  //   "sass",
-  //   "scss"
-  // ]
+  "less.validate": false
 }

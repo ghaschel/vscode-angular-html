@@ -35,7 +35,7 @@
     "update-snapshots": "npx vscode-tmgrammar-snap -s html-template.ng -g syntaxes/html-template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json -g test/externalGrammars/source.js.tmLanguage.json -g test/externalGrammars/source.coffee.tmLanguage.json -g test/externalGrammars/source.dart.tmLanguage.json -g test/externalGrammars/source.postcss.tmLanguage.plist -g test/externalGrammars/source.sass.tmLanguage.json -g test/externalGrammars/source.js.regexp.tmLanguage.plist --updateSnapshot test/*.html"
   },
   "engines": {
-    "vscode": "^1.68.0"
+    "vscode": "^1.72.0"
   },
   "categories": [
     "Programming Languages"

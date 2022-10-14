@@ -1,0 +1,14 @@
+{
+  repository: {
+    'ts-string': {
+      patterns: [
+        {
+          include: '#qstring-single',
+        },
+        {
+          include: '#qstring-double',
+        },
+      ],
+    },
+  },
+}

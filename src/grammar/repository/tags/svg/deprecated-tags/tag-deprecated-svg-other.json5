@@ -1,0 +1,48 @@
+{
+  repository: {
+    'tag-deprecated-svg-other': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.tag.other.svg.$2.begin.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'invalid.deprecated.tag',
+        },
+      },
+      endCaptures: {
+        '0': {
+          name: 'meta.tag.other.svg.$2.end.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      begin: '(<\\/?)(altGlyphItem|altGlyphDef|font-face-src)(?!(?:[\\w-]))\\b',
+      end: '(\\/?>)',
+      name: 'invalid.deprecated.tag',
+      patterns: [
+        {
+          name: 'meta.attribute.$1.svg',
+          match: '[\\s\\n\\r\\t]*(\\b(xml:space|xml:lang|xml:base)\\b)(=)?',
+          captures: {
+            '2': {
+              name: 'invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.svg.$1',
+            },
+            '3': {
+              name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+            },
+          },
+        },
+        {
+          include: '#svg-non-string-attributes',
+        },
+        {
+          include: '#tag-stuff',
+        },
+      ],
+    },
+  },
+}

@@ -1,0 +1,21 @@
+{
+  repository: {
+    'tag-boolean-template-input-variable': {
+      captures: {
+        '0': {
+          name: 'meta.ng-binding.template.input.variable.boolean.html',
+        },
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.let',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.name',
+        },
+        '3': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs',
+        },
+      },
+      match: '(let\\-)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?',
+    },
+  },
+}

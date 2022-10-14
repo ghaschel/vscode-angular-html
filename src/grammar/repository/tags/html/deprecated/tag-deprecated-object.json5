@@ -1,0 +1,34 @@
+{
+  repository: {
+    'tag-deprecated-object': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.tag.object.$2.start.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'invalid.deprecated.tag',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+      },
+      endCaptures: {
+        '0': {
+          name: 'meta.tag.object.$2.end.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      begin: '(<\\/?)(applet)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b',
+      end: '(\\/?>)',
+      patterns: [{ include: '#tag-stuff' }],
+    },
+  },
+}

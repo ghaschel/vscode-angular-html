@@ -1,0 +1,21 @@
+{
+  repository: {
+    'tag-minified-boolean-attributes': {
+      captures: {
+        '0': {
+          name: 'meta.attribute.$1.boolean.html',
+        },
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.colon',
+        },
+        '3': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix',
+        },
+      },
+      match: '(?<!\\S)(?!(?:ref|let)?-)([\\w-]+)(:)?([\\w\\-\\_$]+)?\\b(?!=)',
+    },
+  },
+}

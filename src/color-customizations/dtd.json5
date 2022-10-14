@@ -1,0 +1,20 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.exclamation.dtd',
+      configRule: 'vscode-angular-html.dtdDoctypeExclamation',
+    },
+    {
+      scope: 'html-template.ng.dtd',
+      configRule: 'vscode-angular-html.dtdDoctypeElement',
+    },
+    {
+      scope: 'html-template.ng.qualifier.dtd',
+      configRule: 'vscode-angular-html.dtdDoctypeQualifier',
+    },
+    {
+      scope: 'html-template.ng.occurrence.dtd',
+      configRule: 'vscode-angular-html.dtdDoctypeQuantifier',
+    },
+  ],
+}

@@ -1,0 +1,100 @@
+{
+  repository: {
+    'script-type-attribute': {
+      patterns: [
+        {
+          match: '[\\s]*(type)(=)(")((text|application)/((x-)?(javascript|typescript|coffeescript|dart|ecmascript))|(module))(")',
+          captures: {
+            '0': {
+              name: 'meta.attribute.$1.html',
+            },
+            '1': {
+              name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+            },
+            '2': {
+              name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+            },
+            '3': {
+              name: 'string.quoted.double.html',
+            },
+            '4': {
+              name: 'string.quoted.double.html',
+            },
+            '6': {
+              name: 'html-template.ng.script.language.identifier',
+            },
+            '9': {
+              name: 'html-template.ng.script.language.identifier',
+            },
+            '10': {
+              name: 'string.quoted.double.html',
+            },
+          },
+        },
+        {
+          match: "[\\s]*(type)(=)(')((text|application)/((x-)?(javascript|typescript|coffeescript|dart|ecmascript))|(module))(')",
+          captures: {
+            '0': {
+              name: 'meta.attribute.$1.html',
+            },
+            '1': {
+              name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+            },
+            '2': {
+              name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+            },
+            '3': {
+              name: 'string.quoted.double.html',
+            },
+            '4': {
+              name: 'string.quoted.double.html',
+            },
+            '6': {
+              name: 'html-template.ng.script.language.identifier',
+            },
+            '9': {
+              name: 'html-template.ng.script.language.identifier',
+            },
+            '10': {
+              name: 'string.quoted.double.html',
+            },
+          },
+        },
+        {
+          match: '[\\s]*(lang)(=)("(javascript|typescript|coffeescript|dart)")',
+          captures: {
+            '1': {
+              name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+            },
+            '2': {
+              name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+            },
+            '3': {
+              name: 'string.quoted.double.html',
+            },
+            '4': {
+              name: 'string.quoted.double.html html-template.ng.script.language.identifier',
+            },
+          },
+        },
+        {
+          match: "[\\s]*(lang)(=)('(javascript|typescript|coffeescript|dart)')",
+          captures: {
+            '1': {
+              name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+            },
+            '2': {
+              name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+            },
+            '3': {
+              name: 'string.quoted.single.html',
+            },
+            '4': {
+              name: 'html-template.ng.script.language.identifier',
+            },
+          },
+        },
+      ],
+    },
+  },
+}

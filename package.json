@@ -13,19 +13,39 @@
     "url": "https://github.com/ghaschel/vscode-angular-html/issues"
   },
   "scripts": {
-    "watch": "gulp watch",
-    "compile-json": "gulp compile-json",
+    "clean": "rimraf out/**/* && rimraf src/ts/resources/*.json && rimraf package.nls*.json && rimraf syntaxes/*",
+    "vscode:prepublish": "npm run clean && npm run compile",
+    "compile": "npm run clean && npm run compile:assets && tsc -p tsconfig.json && npm run compile:test",
+    "compile:test": "tsc -p tsconfig.test.json",
+    "watch": "npm run clean && npm run compile:assets && tsc -watch -p tsconfig.json",
+    "compile:assets": "npm run compile:color-customizations && npm run compile:grammar:prod && npm run compile:locale",
+    "compile:locale": "ts-node src/locale",
+    "compile:grammar:dev": "gulp compile:grammar && gulp copy",
+    "compile:grammar:prod": "gulp compile:grammar",
+    "compile:color-customizations": "gulp compile:color-customizations",
+    "lint:ts": "eslint src/**/*.ts",
+    "lint:html": "htmlhint test/test.component.html",
     "publish": "standard-version && git push --follow-tags origin master && vsce publish",
-    "postinstall": "node scripts/postinstall.js",
-    "prepare": "husky install",
-    "test": "npx vscode-tmgrammar-test -g syntaxes/html-template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json test/*.html",
-    "update-snapshots": "npx vscode-tmgrammar-snap -s html-template.ng -g syntaxes/html-template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json --updateSnapshot test/*.html"
+    "postinstall": "node -e \"process.env.NODE_ENV != 'production' && process.exit(1)\" || npm run postinstall:dev",
+    "postinstall:dev": "node scripts/postinstall.js",
+    "prepare": "node -e \"process.env.NODE_ENV != 'production' && process.exit(1)\" || npm run prepare:dev",
+    "prepare:dev": "husky install",
+    "pretest": "npm run compile:test",
+    "test": "node ./out/test/runTest.js && npx vscode-tmgrammar-test -g syntaxes/html-template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json -g test/externalGrammars/source.js.tmLanguage.json -g test/externalGrammars/source.coffee.tmLanguage.json -g test/externalGrammars/source.dart.tmLanguage.json -g test/externalGrammars/source.postcss.tmLanguage.plist -g test/externalGrammars/source.sass.tmLanguage.json -g test/externalGrammars/source.js.regexp.tmLanguage.plist test/*.html",
+    "update-snapshots": "npx vscode-tmgrammar-snap -s html-template.ng -g syntaxes/html-template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json -g test/externalGrammars/source.js.tmLanguage.json -g test/externalGrammars/source.coffee.tmLanguage.json -g test/externalGrammars/source.dart.tmLanguage.json -g test/externalGrammars/source.postcss.tmLanguage.plist -g test/externalGrammars/source.sass.tmLanguage.json -g test/externalGrammars/source.js.regexp.tmLanguage.plist --updateSnapshot test/*.html"
   },
   "engines": {
-    "vscode": "^1.20.0"
+    "vscode": "^1.68.0"
   },
   "categories": [
     "Programming Languages"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:vscode-angular-html.updateTokenCustomization",
+    "onCommand:vscode-angular-html.disableTokenCustomization",
+    "onCommand:vscode-angular-html.addLegacyColorCustomizations"
   ],
   "contributes": {
     "grammars": [
@@ -33,10 +53,283 @@
         "language": "html",
         "scopeName": "html-template.ng",
         "path": "./syntaxes/html-template.ng.json",
+        "embeddedLanguages": {
+          "source.coffee": "coffeescript",
+          "source.js": "javascript",
+          "source.ts": "typescript",
+          "source.dart": "dart",
+          "source.css": "css",
+          "source.css.less": "less",
+          "source.postcss": "postcss",
+          "source.sass": "sass",
+          "source.css.scss": "scss",
+          "source.stylus": "stylus"
+        },
         "injectTo": [
           "text.html",
           "template.ng"
         ]
+      }
+    ],
+    "configuration": [
+      {
+        "title": "Color Customizations",
+        "properties": {
+          "vscode-angular-html.colorCustomizations": {
+            "markdownDescription": "%ext.settings.colorCustomizations.description%",
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      {
+        "title": "HTML",
+        "properties": {
+          "vscode-angular-html.htmlTags": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlTags%"
+          },
+          "vscode-angular-html.htmlCustomTags": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlCustomTags%"
+          },
+          "vscode-angular-html.htmlDoctypeAttributes": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlDoctypeAttributes%"
+          },
+          "vscode-angular-html.htmlDoctypeExclamation": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlDoctypeExclamation%"
+          },
+          "vscode-angular-html.htmlDoctypeElement": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlDoctypeElement%"
+          },
+          "vscode-angular-html.htmlEntitiesAmpersand": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlEntitiesAmpersand%"
+          },
+          "vscode-angular-html.htmlEntitiesSemicolon": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlEntitiesSemicolon%"
+          },
+          "vscode-angular-html.htmlGenericAttributesFollowedByParameter": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlGenericAttributesFollowedByParameter%"
+          },
+          "vscode-angular-html.htmlEventsAttributes": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlEventsAttributes%"
+          },
+          "vscode-angular-html.htmlAttributeValueSeparator": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlAttributeValueSeparator%"
+          },
+          "vscode-angular-html.htmlStyleAttributesLanguageIdentifier": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlStyleAttributesLanguageIdentifier%"
+          },
+          "vscode-angular-html.htmlScriptAttributesLanguageIdentifier": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlScriptAttributesLanguageIdentifier%"
+          }
+        }
+      },
+      {
+        "title": "Angular-specific",
+        "properties": {
+          "vscode-angular-html.angularExpression": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularExpression%"
+          },
+          "vscode-angular-html.angularExpressionOperatorsAndNavigatorsColor": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularExpressionOperatorsAndNavigatorsColor%"
+          },
+          "vscode-angular-html.angularAndAngularMaterialElementTags": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularAndAngularMaterialElementTags%"
+          },
+          "vscode-angular-html.angularAnimationTriggerPrefix": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularAnimationTriggerPrefix%"
+          },
+          "vscode-angular-html.angularAnimationTriggerVariableName": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularAnimationTriggerVariableName%"
+          },
+          "vscode-angular-html.angularBindingAttributeDelimiter": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularBindingAttributeDelimiter%"
+          },
+          "vscode-angular-html.angularEventHandlerName": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularEventHandlerName%"
+          },
+          "vscode-angular-html.angularOneWayBindingAnimationTriggerDecorator": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularOneWayBindingAnimationTriggerDecorator%"
+          },
+          "vscode-angular-html.angularOneWayBindingFirstLevelDepth": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularOneWayBindingFirstLevelDepth%"
+          },
+          "vscode-angular-html.angularOneWayBindingSecondLevelDepth": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularOneWayBindingSecondLevelDepth%"
+          },
+          "vscode-angular-html.angularOneWayBindingThirdLevelDepth": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularOneWayBindingThirdLevelDepth%"
+          },
+          "vscode-angular-html.angularPrefixedAttributesLetPrefix": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesLetPrefix%"
+          },
+          "vscode-angular-html.angularPrefixedAttributesRefPrefix": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesRefPrefix%"
+          },
+          "vscode-angular-html.angularPrefixedAttributesVariableName": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesVariableName%"
+          },
+          "vscode-angular-html.angularPrefixedAttributesRxjsSuffix": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularPrefixedAttributesRxjsSuffix%"
+          },
+          "vscode-angular-html.angularSyntaxSugarAttributesPrefix": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularSyntaxSugarAttributesPrefix%"
+          },
+          "vscode-angular-html.angularSyntaxSugarAttributesName": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularSyntaxSugarAttributesName%"
+          },
+          "vscode-angular-html.angularTemplateVariablePrefix": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularTemplateVariablePrefix%"
+          },
+          "vscode-angular-html.angularTemplateVariableName": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.angularTemplateVariableName%"
+          }
+        }
+      },
+      {
+        "title": "SVG",
+        "properties": {
+          "vscode-angular-html.svgTags": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.svg.svgTags%"
+          },
+          "vscode-angular-html.svgDAttributePathCommands": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.svg.svgDAttributePathCommands%"
+          }
+        }
+      },
+      {
+        "title": "XML",
+        "properties": {
+          "vscode-angular-html.xmlTagNamespaceDivider": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.xml.xmlTagNamespaceDivider%"
+          },
+          "vscode-angular-html.xmlTagNamespaceSuffix": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.xml.xmlTagNamespaceSuffix%"
+          },
+          "vscode-angular-html.xmlAttributeNamespaceDivider": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.xml.xmlAttributeNamespaceDivider%"
+          },
+          "vscode-angular-html.xmlAttributeNamespaceSuffix": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.xml.xmlAttributeNamespaceSuffix%"
+          },
+          "vscode-angular-html.xmlStylesheetAttributesLanguageIdentifier": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.xml.xmlStylesheetAttributesLanguageIdentifier%"
+          }
+        }
+      },
+      {
+        "title": "DTD",
+        "properties": {
+          "vscode-angular-html.dtdDoctypeExclamation": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.dtd.dtdDoctypeExclamation%"
+          },
+          "vscode-angular-html.dtdDoctypeElement": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.dtd.dtdDoctypeElement%"
+          },
+          "vscode-angular-html.dtdDoctypeQualifier": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.dtd.dtdDoctypeQualifier%"
+          },
+          "vscode-angular-html.dtdDoctypeQuantifier": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.dtd.dtdDoctypeQuantifier%"
+          }
+        }
+      }
+    ],
+    "commands": [
+      {
+        "command": "vscode-angular-html.updateTokenCustomization",
+        "title": "%ext.command.updateTokenCustomization.title%"
+      },
+      {
+        "command": "vscode-angular-html.disableTokenCustomization",
+        "title": "%ext.command.disableTokenCustomization.title%"
+      },
+      {
+        "command": "vscode-angular-html.addLegacyColorCustomizations",
+        "title": "%ext.command.addLegacyColorCustomizations.title%"
       }
     ],
     "configurationDefaults": {
@@ -53,24 +346,50 @@
   },
   "icon": "assets/angular-html.png",
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@prettier/plugin-xml": "^2.2.0",
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "18.x",
+    "@types/semver": "^7.3.12",
+    "@types/vscode": "^1.72.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "@vscode/test-electron": "^2.1.5",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "glob": "^8.0.3",
     "gulp": "^4.0.2",
     "gulp-json-editor": "^2.5.6",
     "gulp-json5-to-json": "^0.2.1",
     "gulp-merge-json": "^2.1.2",
     "gulp-prettier": "^4.0.0",
-    "husky": "^7.0.0",
+    "htmlhint": "^1.1.4",
+    "husky": "^8.0.1",
     "json-beautify": "^1.1.1",
+    "mocha": "^10.0.0",
     "prettier": "^2.7.1",
     "pretty-quick": "^3.1.3",
+    "rimraf": "^3.0.2",
     "standard-version": "^9.5.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4",
     "vscode-tmgrammar-test": "^0.1.1"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.2.0",
+    "semver": "^7.3.8",
+    "vscode-nls": "^5.2.0",
+    "vscode-nls-i18n": "^0.2.4"
   }
 }

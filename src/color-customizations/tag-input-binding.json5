@@ -1,0 +1,20 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.attributes.input-binding.animationTrigger.prefix',
+      configRule: 'vscode-angular-html.angularOneWayBindingAnimationTriggerDecorator',
+    },
+    {
+      scope: 'html-template.ng.attributes.input-binding.first-level',
+      configRule: 'vscode-angular-html.angularOneWayBindingFirstLevelDepth',
+    },
+    {
+      scope: 'html-template.ng.attributes.input-binding.second-level',
+      configRule: 'vscode-angular-html.angularOneWayBindingSecondLevelDepth',
+    },
+    {
+      scope: 'html-template.ng.attributes.input-binding.third-level',
+      configRule: 'vscode-angular-html.angularOneWayBindingThirdLevelDepth',
+    },
+  ],
+}

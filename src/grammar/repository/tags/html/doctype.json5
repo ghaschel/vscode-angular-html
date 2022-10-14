@@ -1,0 +1,51 @@
+{
+  repository: {
+    doctype: {
+      patterns: [
+        {
+          endCaptures: {
+            '1': {
+              name: 'punctuation.definition.tag.end.html',
+            },
+          },
+          beginCaptures: {
+            '1': {
+              name: 'punctuation.definition.tag.begin.html',
+            },
+            '2': {
+              name: 'punctuation.definition.tag.begin.html html-template.ng.exclamation.doctype',
+            },
+            '3': {
+              name: 'entity.name.tag.html.doctype html-template.ng.doctype',
+            },
+          },
+          begin: '(<)(!)((?i:doctype))',
+          end: '(>)',
+          // using another scope different from the one it fits to differentiate in color from objects and variables
+          name: 'meta.tag.metadata.doctype.html',
+          patterns: [
+            {
+              begin: '(\\[)',
+              beginCaptures: {
+                name: 'punctuation.definition.dtd.begin.html',
+              },
+              end: '(\\])',
+              endCaptures: {
+                name: 'punctuation.definition.dtd.end.html',
+              },
+              patterns: [{ include: '#xml-dtd' }],
+            },
+            {
+              include: '#string-double-quoted-capture',
+            },
+            {
+              match: '[^\\s>]+',
+              name: 'entity.other.attribute-name.html html-template.ng.attribute.doctype',
+            },
+          ],
+        },
+      ],
+    },
+  },
+}
+

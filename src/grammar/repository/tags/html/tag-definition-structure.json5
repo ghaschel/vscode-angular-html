@@ -1,0 +1,39 @@
+{
+  repository: {
+    'tag-definition-structure': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.tag.structure.$2.start.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'meta.tag.structure.html entity.name.tag.html html-template.tag.html',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+      },
+      patterns: [
+        {
+          include: '#tag-stuff',
+        },
+      ],
+      begin: '(</?)(textarea|template|summary|select|section|progress|output|option|optgroup|nav|meter|map|main|label|hgroup|header|form|footer|figure|figcaption|fieldset|dt|dialog|details|dd|datalist|button|blockquote|aside|article|address)(:)?([\\w\\-\\_$]+)?\\b',
+      endCaptures: {
+        '0': {
+          name: 'meta.tag.structure.$2.end.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      end: '(/?>)',
+      name: 'meta.element.structure.html',
+    },
+  },
+}

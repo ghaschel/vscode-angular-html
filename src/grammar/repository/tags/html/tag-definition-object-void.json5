@@ -1,0 +1,39 @@
+{
+  repository: {
+    'tag-definition-object-void': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.tag.object.$2.void.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'meta.tag.object.html entity.name.tag.html html-template.tag.html',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+      },
+      patterns: [
+        {
+          include: '#tag-stuff',
+        },
+      ],
+      begin: '(</?)(track|source|embed)(:)?([\\w\\-\\_$]+)?\\b',
+      endCaptures: {
+        '0': {
+          name: 'meta.tag.object.$2.void.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      end: '(/?>)',
+      name: 'meta.element.object.html',
+    },
+  },
+}

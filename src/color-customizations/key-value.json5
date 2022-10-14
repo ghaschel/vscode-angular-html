@@ -1,0 +1,8 @@
+{
+  textMateRules: [
+    {
+      scope: 'punctuation.separator.key-value.html-template.ng',
+      configRule: 'vscode-angular-html.htmlAttributeValueSeparator',
+    },
+  ],
+}

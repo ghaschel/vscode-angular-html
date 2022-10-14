@@ -1,0 +1,16 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.exclamation.doctype',
+      configRule: 'vscode-angular-html.htmlDoctypeExclamation',
+    },
+    {
+      scope: 'html-template.ng.doctype',
+      configRule: 'vscode-angular-html.htmlDoctypeElement',
+    },
+    {
+      scope: 'html-template.ng.attribute.doctype',
+      configRule: 'vscode-angular-html.htmlDoctypeAttributes',
+    },
+  ],
+}

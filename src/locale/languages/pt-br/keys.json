@@ -1,0 +1,80 @@
+{
+  "settings": {
+    "general": {
+      "leaveEmpty": "Deixe em branco para desativar para este item."
+    },
+    "colorCustomizations": {
+      "description": "Gerencie caracteres extras e customizações de cores. Marque como `falso` para desabilitar"
+    },
+    "html": {
+      "htmlDoctypeAttributes": "Corresponde aos attributos da tag DOCTYPE",
+      "htmlDoctypeExclamation": "Corresponde ao ponto de exclamação precedente à tag DOCTYPE:",
+      "htmlDoctypeElement": "Corresponde à tag DOCTYPE:",
+      "htmlEntitiesAmpersand": "Corresponde ao e comercial nas entidades HTML:",
+      "htmlEntitiesSemicolon": "Corresponde ao ponto e virgula nas entidades HTML:",
+      "htmlGenericAttributesFollowedByParameter": "Corresponde a atributos html seguidos por igual e um parâmetro.\nNão corresponde aos atributos de evento HTML e SVG.",
+      "htmlEventsAttributes": "Corresponde a atributos de evento HTML e SVG.",
+      "htmlAttributeValueSeparator": "Corresponde ao separador de atributo-valor (=) HTML.\nEsta é uma correspondência global.",
+      "htmlStyleAttributesLanguageIdentifier": "Corresponde ao identificador de linguagem no atributo type da tag script.",
+      "htmlScriptAttributesLanguageIdentifier": "Corresponde ao identificador de linguagem no atributo type da tag style.",
+      "htmlTags": "Corresponde a elementos conhecidos do HTML.",
+      "htmlCustomTags": "Corresponde a elements não conhecidos do HTML.",
+      "seeHtmlEvents": "Ver Eventos HTML"
+    },
+    "angular": {
+      "angularExpression": "Corresponde às chaves precedendo e sucedendo uma expressão do angular.\nTanto para interpolação quanto para expressões de templates.",
+      "angularAndAngularMaterialElementTags": "Corresponde a tags especificas do Angular e do Angular Material.",
+      "angularAnimationTriggerPrefix": "Corresponde ao decorador do atributo do tipo gatilho de animação.",
+      "angularAnimationTriggerVariableName": "Corresponde ao nome do atributo do tipo gatilho de animação..",
+      "angularBindingAttributeDelimiter": "Corresponde aos delimitadores do tipo parênteses e colchetes nas vinculações do Angular\nIsto corresponde a todos os delimitadores de vinculação.",
+      "angularEventHandlerName": "Corresponde ao nome do evento do Angular.",
+      "angularOneWayBindingAnimationTriggerDecorator": "Corresponde ao decorador de um atributo do tipo gatilho de animação que esteja dentro de uma vinculação de uma via.",
+      "angularOneWayBindingFirstLevelDepth": "Corresponde a propriedades de profundidade de primeiro nivel em vinculações de uma via.",
+      "angularOneWayBindingSecondLevelDepth": "Corresponde a propriedades de profundidade de segundo nivel em vinculaçÕes de uma via.",
+      "angularOneWayBindingThirdLevelDepth": "Corresponde a propriedades de profundidade de terceiro nivel em vinculações de uma via.",
+      "angularPrefixedAttributesLetPrefix": "Corresponde a atributos do angular que sejam prefixados por let-.",
+      "angularPrefixedAttributesRefPrefix": "Corresponde a atributos do angular que sejam prefixados por ref-.",
+      "angularPrefixedAttributesVariableName": "Corresponde ao nome da variavel dos atributos prefixados por let- e ref-.",
+      "angularPrefixedAttributesRxjsSuffix": "Corresponde ao sufixo RxJS de atributos prefixados por ref- e let-.",
+      "angularSyntaxSugarAttributesPrefix": "Corresponde ao decorador dos atributos do tipo syntax sugar do Angular.",
+      "angularSyntaxSugarAttributesName": "Corresponde ao nome dos atributos do tipo syntax sugar do Angular.",
+      "angularTemplateVariablePrefix": "Corresponde ao decorador de variaveis de template do Angular.",
+      "angularTemplateVariableName": "Corresponde ao nome das variaveis de template do Angular.",
+      "angularExpressionOperatorsAndNavigatorsColor": "Corresponde aos operadores e navegadores das expressoes Angular.",
+      "seeAngularTags": "Ver tags específicas do Angular"
+    },
+    "svg": {
+      "svgTags": "Corresponde a elementos conhecidos do SVG.",
+      "svgDAttributePathCommands": "Corresponde a comandos do atributo d de tags path no SVG."
+    },
+    "xml": {
+      "xmlTagNamespaceDivider": "Corresponde ao separador de namespace dois pontos de elementos XML/HTML.",
+      "xmlTagNamespaceSuffix": "Corresponde ao sufixo de namespace de elementos XML/HTML.",
+      "xmlAttributeNamespaceDivider": "Corresponde ao separador de namespace dois pontos de atributos de elementos XML/HTML.",
+      "xmlAttributeNamespaceSuffix": "Corresponde ao sufixo de namespace de atributos de elemtentos XML/HTML.",
+      "xmlStylesheetAttributesLanguageIdentifier": "Corresponde ao identificador de linguagem no atributo type da tag xml-stylesheet."
+    },
+    "dtd": {
+      "dtdDoctypeExclamation": "Corresponde ao ponto de exclamação precedente a tags de elemento DTD:",
+      "dtdDoctypeElement": "Corresponde a tags de elemento DTD:",
+      "dtdDoctypeQualifier": "Corresponde aos qualificadores DTD:",
+      "dtdDoctypeQuantifier": "Corresponde aos quantificadores DTD:"
+    }
+  },
+  "command": {
+    "updateTokenCustomization": {
+      "title": "vscode-angular-html: Atualizar customização de cores"
+    },
+    "disableTokenCustomization": {
+      "title": "vscode-angular-html: Desabilitar customização de cores"
+    },
+    "addLegacyColorCustomizations": {
+      "title": "vscode-angular-html: Setar customização de cores de legado"
+    }
+  },
+  "messages": {
+    "updateNotice": "vscode-angular-html foi atualizado e agora suporta customização de cores 🎉!  Por favor, dê uma olhada na página de configurações :)",
+    "enableLegacyColors": "Habilitar cores de legado",
+    "goToSettingsPage": "Ir para página de configurações"
+  }
+}

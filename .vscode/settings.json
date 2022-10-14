@@ -1,0 +1,24 @@
+{
+  "search.exclude": {
+    "out": true
+  },
+  "eslint.options": {
+    "extensions": [".ts"]
+  },
+  "eslint.validate": ["typescript", "typescriptreact"],
+  "[typescript]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "html.format.extraLiners": "head, body, /html, fieldset",
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "html.format.indentInnerHtml": true,
+  "scss.validate": false,
+  "css.validate": false,
+  "less.validate": false
+}

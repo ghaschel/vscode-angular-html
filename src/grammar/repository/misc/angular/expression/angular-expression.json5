@@ -1,0 +1,46 @@
+{
+  repository: {
+    'angular-expression': {
+      // name: 'meta.expression.ts',
+      name: 'expression.ng',
+      patterns: [
+        {
+          include: '#var-keywords',
+        },
+        {
+          include: '#operator-navigator',
+        },
+        {
+          include: '#ts-string',
+        },
+        {
+          include: '#literal',
+        },
+        {
+          include: '#ternary-expression',
+        },
+        {
+          include: '#object-literal',
+        },
+        {
+          include: '#expression-operators',
+        },
+        {
+          include: '#function-call',
+        },
+        {
+          include: '#identifiers',
+        },
+        {
+          include: '#paren-expression',
+        },
+        {
+          include: '#punctuation-comma',
+        },
+        {
+          include: '#punctuation-accessor',
+        },
+      ],
+    },
+  },
+}

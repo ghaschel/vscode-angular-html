@@ -1,0 +1,11 @@
+{
+  repository: {
+    'binding-element': {
+      patterns: [
+        {
+          include: '#variable-initializer',
+        },
+      ],
+    },
+  },
+}

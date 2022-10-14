@@ -1,0 +1,132 @@
+# HTML and SVG DOM Events
+
+> List of supported HTML and SVG DOM Events
+
+- DOMMenuItemActive
+- DOMMenuItemInactive
+- DOMMouseScroll
+- onabort
+- onafterprint
+- onafterupdate
+- onbeforecopy
+- onbeforecut
+- onbeforeeditfocus
+- onbeforepaste
+- onbeforeprint
+- onbeforeunload
+- onbeforeupdate
+- onblur
+- onbounce
+- onbroadcast
+- oncancel
+- oncanplay
+- oncanplaythrough
+- oncellchange
+- onchange
+- onclick
+- onclose
+- oncommandupdate
+- oncommand
+- oncontextmenu
+- oncopy
+- oncuechange
+- oncut
+- ondataavailable
+- ondatasetchanged
+- ondatasetcomplete
+- ondblclick
+- ondragdrop
+- ondragend
+- ondragenter
+- ondragexit
+- ondraggesture
+- ondragleave
+- ondragover
+- ondragstart
+- ondrag
+- ondrop
+- ondurationchange
+- onemptied
+- onended
+- onerrorupdate
+- onerror
+- onfilterchange
+- onfinish
+- onfocus
+- onformchange
+- onforminput
+- ongotpointercapture
+- onhelp
+- oninput
+- oninvalid
+- onkeydown
+- onkeypress
+- onkeyup
+- onloadeddata
+- onloadedmetadata
+- onloadstart
+- onload
+- onlosecapture
+- onlostpointercapture
+- onmousedown
+- onmouseenter
+- onmouseleave
+- onmousemove
+- onmouseout
+- onmouseover
+- onmouseup
+- onmousewheel
+- onoverflowchanged
+- onoverflow
+- onpaste
+- onpause
+- onplaying
+- onplay
+- onpointercancel
+- onpointerdown
+- onpointerenter
+- onpointerleave
+- onpointermove
+- onpointerout
+- onpointerover
+- onpointerup
+- onpopuphidden
+- onpopuphiding
+- onpopupshowing
+- onpopupshown
+- onprogress
+- onpropertychange
+- onratechange
+- onreadystatechange
+- onreset
+- onresize
+- onrowenter
+- onrowexit
+- onrowinserted
+- onrowsdelete
+- onscroll
+- onseeked
+- onseeking
+- onselectstart
+- onselect
+- onshow
+- onstalled
+- onstart
+- onstop
+- onsubmit
+- onsuspend
+- ontimeupdate
+- ontoggle
+- onunderflow
+- onunload
+- onvolumechange
+- onwaiting
+
+## Reference
+
+- [Wikipedia - HTML Events](https://en.wikipedia.org/wiki/DOM_events#HTML_events)
+- [Wikipedia - Pointer Events](https://en.wikipedia.org/wiki/DOM_events#Pointer_events[8])
+- [Wikipedia - Internet Explorer Specific Events](https://en.wikipedia.org/wiki/DOM_events#Internet_Explorer-specific_events)
+- [Wikipedia - XUL Events](https://en.wikipedia.org/wiki/DOM_events#XUL_events)
+- [MDN Web Docs - SVG Events](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Events)
+- [MDN Web Docs - HTML Elements Events](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement#events)

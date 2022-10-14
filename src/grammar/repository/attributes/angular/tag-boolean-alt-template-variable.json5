@@ -1,0 +1,21 @@
+{
+  repository: {
+    'tag-boolean-alt-template-variable': {
+      captures: {
+        '0': {
+          name: 'meta.ng-binding.template.variable.boolean.alt.html',
+        },
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.prefix.ref',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.name',
+        },
+        '3': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs',
+        },
+      },
+      match: '(ref\\-)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?',
+    },
+  },
+}

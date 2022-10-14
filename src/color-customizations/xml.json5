@@ -1,0 +1,20 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.tag.colon',
+      configRule: 'vscode-angular-html.xmlTagNamespaceDivider',
+    },
+    {
+      scope: 'html-template.ng.tag.suffix',
+      configRule: 'vscode-angular-html.xmlTagNamespaceSuffix',
+    },
+    {
+      scope: 'html-template.ng.attributes.colon',
+      configRule: 'vscode-angular-html.xmlAttributeNamespaceDivider',
+    },
+    {
+      scope: 'html-template.ng.attributes.suffix',
+      configRule: 'vscode-angular-html.xmlAttributeNamespaceSuffix',
+    },
+  ],
+}

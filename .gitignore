@@ -1,8 +1,15 @@
 node_modules
 .vsix
 .DS_store
-.vscode
 *.sh
 .hushlogin
 test/externalGrammars/*.json
 test/externalGrammars/*.plist
+*.todo
+out/
+.vscode-test/
+
+# PostCSS plist file is kept for testing as the repository got deleted
+# This will be reverted as soon as the current most used postcss extension
+# their scope injection
+!test/externalGrammars/source.postcss.tmLanguage.plist

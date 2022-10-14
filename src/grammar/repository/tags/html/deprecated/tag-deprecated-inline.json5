@@ -1,0 +1,34 @@
+{
+  repository: {
+    'tag-deprecated-inline': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.tag.inline.$2.start.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'invalid.deprecated.tag',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+      },
+      endCaptures: {
+        '0': {
+          name: 'meta.tag.inline.$2.end.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      begin: '(<\\/?)(acronym|big|font|strike|tt|u)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b',
+      end: '(\\/?>)',
+      patterns: [{ include: '#tag-stuff' }],
+    },
+  },
+}

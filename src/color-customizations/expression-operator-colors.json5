@@ -1,0 +1,32 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.expression.operator.logical',
+      configRule: 'vscode-angular-html.angularExpressionOperatorsAndNavigatorsColor',
+    },
+    {
+      scope: 'html-template.ng.expression.operator.compound',
+      configRule: 'vscode-angular-html.angularExpressionOperatorsAndNavigatorsColor',
+    },
+    {
+      scope: 'html-template.ng.expression.operator.bitwise',
+      configRule: 'vscode-angular-html.angularExpressionOperatorsAndNavigatorsColor',
+    },
+    {
+      scope: 'html-template.ng.expression.operator.comparison',
+      configRule: 'vscode-angular-html.angularExpressionOperatorsAndNavigatorsColor',
+    },
+    {
+      scope: 'html-template.ng.expression.operator.relational',
+      configRule: 'vscode-angular-html.angularExpressionOperatorsAndNavigatorsColor',
+    },
+    {
+      scope: 'html-template.ng.expression.operator.arithmetic',
+      configRule: 'vscode-angular-html.angularExpressionOperatorsAndNavigatorsColor',
+    },
+    {
+      scope: 'html-template.ng.expression.operator.navigator',
+      configRule: 'vscode-angular-html.angularExpressionOperatorsAndNavigatorsColor',
+    },
+  ],
+}

@@ -1,0 +1,72 @@
+{
+  repository: {
+    'string-double-quoted-capture-between': {
+      begin: '(?<=")',
+      end: '(?=")',
+      name: 'string.quoted.double.html',
+      patterns: [
+        {
+          include: '#angular-interpolations',
+        },
+        {
+          include: '#entities',
+        },
+      ],
+    },
+    'string-double-quoted-capture': {
+      begin: '(")',
+      beginCaptures: {
+        '0': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      end: '(")',
+      endCaptures: {
+        '0': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      patterns: [
+        {
+          begin: '(?<=")',
+          end: '(?=")',
+          patterns: [
+            {
+              match: '([[:alpha:]0-9\\s\\-_&$@\\#\\%\\^\\;\\+\\*!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})',
+              name: 'string.quoted.double.html',
+            },
+            {
+              include: '#angular-interpolations',
+            },
+            {
+              include: '#entities',
+            },
+          ],
+        },
+      ],
+    },
+    'string-double-quoted': {
+      beginCaptures: {
+        '0': {
+          name: 'punctuation.definition.string.begin.html',
+        },
+      },
+      patterns: [
+        {
+          include: '#angular-interpolations',
+        },
+        {
+          include: '#entities',
+        },
+      ],
+      begin: '"',
+      endCaptures: {
+        '0': {
+          name: 'punctuation.definition.string.end.html',
+        },
+      },
+      end: '"',
+      name: 'string.quoted.double.html',
+    },
+  },
+}

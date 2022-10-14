@@ -1,0 +1,12 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.attributes.prefix.sugar',
+      configRule: 'vscode-angular-html.angularSyntaxSugarAttributesPrefix',
+    },
+    {
+      scope: 'html-template.ng.attributes.suffix.sugar',
+      configRule: 'vscode-angular-html.angularSyntaxSugarAttributesName',
+    },
+  ],
+}

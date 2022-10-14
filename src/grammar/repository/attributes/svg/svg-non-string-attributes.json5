@@ -1,0 +1,87 @@
+{
+  repository: {
+    'svg-non-string-attributes': {
+      patterns: [
+        {
+          name: 'meta.element.attribute.$2.svg',
+          begin: '[\\s\\n\\r\\t]*(\\b(?i:(d))\\b(?![\\w-]))(=)(")',
+          beginCaptures: {
+            '0': {
+              name: 'meta.attribute.svg.$2.html',
+            },
+            '2': {
+              name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+            },
+            '3': {
+              name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+            },
+            '4': {
+              name: 'string.quoted.double.html',
+            },
+          },
+          end: '(")',
+          endCaptures: {
+            '1': {
+              name: 'string.quoted.double.html',
+            },
+          },
+          patterns: [
+            {
+              match: '([0-9]+)|([MmLlHhVvCcSsQqTtAaZz]+)|([\\.\\,\\-]+)',
+              captures: {
+                '1': {
+                  name: 'constant.numeric.css',
+                },
+                '2': {
+                  name: 'keyword.other.commands.path.svg html-template.ng.svg.path.commands',
+                },
+                '3': {
+                  name: 'punctuation.separator.delimiter.scss',
+                },
+              },
+            },
+          ],
+        },
+        {
+          name: 'meta.element.attribute.$2.svg',
+          begin: '[\\s\\n\\r\\t]*(\\b(?i:(amplitude|azimuth|baseFrequency|begin|bias|by|clip-path|color|cursor|cx|cy|diffuseConstant|divisor|dur|dx|dy|elevation|end|exponent|fill-opacity|fill|filter|flood-color|flood-opacity|font-size-adjust|font-size|font-weight|from|fr|fx|fy|gradientTransform|hatchpath|height|intercept|k1|k2|k3|k4|kernelMatrix|keyPoints|keySplines|keyTimes|letter-spacing|lighting-color|limitingConeAngle|marker-end|marker-mid|marker-start|markerHeight|markerWidth|mask|max|media|min|numOctaves|offset|opacity|order|overline-position|overline-thickness|pathLength|patternTransform|pointsAtX|pointsAtY|pointsAtZ|points|radius|refX|refY|repeatCount|repeatDur|rotate|rx|ry|r|scale|seed|solid-color|solid-opacity|specularConstant|specularExponent|startOffset|stdDeviation|stop-color|stop-opacity|strikethrough-position|strikethrough-thickness|stroke-dashoffset|stroke-dassharray|stroke-miterlimit|stroke-width|stroke|surfaceScale|tabindex|tableValues|targetX|targetY|textLength|to|transform-origin|transform2|transform|underline-position|underline-thickness|values|viewbox|width|word-spacing|x1|x2|x|y1|y2|y|z))\\b(?![\\w-]))(=)(")',
+          beginCaptures: {
+            '2': {
+              name: 'entity.other.attribute-name.html html-template.ng.attributes.generic',
+            },
+            '3': {
+              name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+            },
+            '4': {
+              name: 'string.quoted.double.html',
+            },
+          },
+          end: '(")',
+          endCaptures: {
+            '1': {
+              name: 'string.quoted.double.html',
+            },
+          },
+          patterns: [
+            {
+              begin: '(?<=")',
+              end: '(?=")',
+              name: 'string.quoted.double.html',
+              patterns: [
+                {
+                  include: 'source.css.scss#property_values',
+                },
+                {
+                  include: '#angular-interpolations',
+                },
+                {
+                  include: '#entities',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+}

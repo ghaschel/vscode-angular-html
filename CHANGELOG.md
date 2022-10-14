@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/ghaschel/vscode-angular-html/compare/v1.8.4...v2.0.0) (2022-10-14)
+
+### ⚠ BREAKING CHANGES
+
+- **scope customization:** same as before
+- **wrong scope names:** same as before
+- **script tag:** same as before
+- **localization:** same as before
+- **settings page:** same as before
+- **settings-page:** same breaking changes as before
+- **multiple items:** the whole grammar is changing
+
+### Features
+
+- **localization:** added localization structure ([b29611c](https://github.com/ghaschel/vscode-angular-html/commit/b29611cc9b9146c0576d2e45e5bc503ef6403a8c))
+- **scope customization:** new scope customization (html, custom-elements, svg, ng operators) ([71d978d](https://github.com/ghaschel/vscode-angular-html/commit/71d978d6e05b33492ff0b17ede67f8a037ef046b))
+- **script tag:** finished script and style tags ([3cabca6](https://github.com/ghaschel/vscode-angular-html/commit/3cabca6090d005eb09b6772895d2197480a3d027))
+- **settings page:** functional development is done ([c078d2f](https://github.com/ghaschel/vscode-angular-html/commit/c078d2f7d54959dfedbedf74837297f12f08660f))
+- **settings-page:** first working version ([1e2d533](https://github.com/ghaschel/vscode-angular-html/commit/1e2d533d82644f1981663d26f2cb6340259bb9b6))
+- **svg and xml support:** svg almost done, xml id say half done ([aef5dc3](https://github.com/ghaschel/vscode-angular-html/commit/aef5dc3bda89a436a7b3be598b9232493d215f4e))
+- **xml and svg support:** finished implementation of SVG, XML and DTD matching ([26c963b](https://github.com/ghaschel/vscode-angular-html/commit/26c963ba71f365791cca03e94eedd21454fd4c45))
+
+### Bug Fixes
+
+- **config naming:** fixed config naming not associating to some rules ([be485c4](https://github.com/ghaschel/vscode-angular-html/commit/be485c484e47033f1249a8c97ce275542ebe547a))
+- **wrong scope names:** fixed a bunch of scope names ([4054765](https://github.com/ghaschel/vscode-angular-html/commit/40547656d91a1ce8d2f82e6a33016da0b58018ab))
+
+- **multiple items:** first step of current refactor ([06a462b](https://github.com/ghaschel/vscode-angular-html/commit/06a462bd48041aba8d43361deed6b7b6fc879f43)), closes [#55](https://github.com/ghaschel/vscode-angular-html/issues/55) [#54](https://github.com/ghaschel/vscode-angular-html/issues/54) [#53](https://github.com/ghaschel/vscode-angular-html/issues/53)
+
 ### [1.8.4](https://github.com/ghaschel/vscode-angular-html/compare/v1.8.3...v1.8.4) (2022-08-11)
 
 ### Bug Fixes

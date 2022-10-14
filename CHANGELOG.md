@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/ghaschel/vscode-angular-html/compare/v2.0.0...v2.0.2) (2022-10-14)
+
+### Bug Fixes
+
+- **missing node_modules:** attempt to fix runtime error ([02eb620](https://github.com/ghaschel/vscode-angular-html/commit/02eb620c19aa63b5a046e3b6f3ed87e45136a6b2))
+
+### [2.0.1](https://github.com/ghaschel/vscode-angular-html/compare/v2.0.0...v2.0.1) (2022-10-14)
+
+### Bug Fixes
+
+- **missing node_modules:** attempt to fix runtime error ([02eb620](https://github.com/ghaschel/vscode-angular-html/commit/02eb620c19aa63b5a046e3b6f3ed87e45136a6b2))
+
 ## [2.0.0](https://github.com/ghaschel/vscode-angular-html/compare/v1.8.4...v2.0.0) (2022-10-14)
 
 ### ⚠ BREAKING CHANGES

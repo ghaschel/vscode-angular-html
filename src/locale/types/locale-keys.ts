@@ -43,6 +43,9 @@ export interface LocaleKeys {
       angularExpressionOperatorsAndNavigatorsColor: string;
       seeAngularTags: string;
     };
+    primeng: {
+      primeNgElementTags: string;
+    };
     svg: {
       svgTags: string;
       svgDAttributePathCommands: string;

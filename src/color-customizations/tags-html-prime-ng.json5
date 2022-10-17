@@ -1,0 +1,8 @@
+{
+  textMateRules: [
+    {
+      scope: 'entity.name.tag.html.primeng',
+      configRule: 'vscode-angular-html.primeNgElementTags',
+    },
+  ],
+}

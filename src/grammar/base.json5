@@ -52,6 +52,7 @@
     { include: '#tag-deprecated-object' },
     { include: '#tag-deprecated-structure' },
     { include: '#tag-definition-angular' },
+    { include: '#tag-definition-primeng' },
     { include: '#tag-definition-custom' },
     { include: '#tag-definition-structure' },
     { include: '#tag-definition-object' },

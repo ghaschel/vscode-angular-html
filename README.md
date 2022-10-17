@@ -34,6 +34,7 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
   - [Doctype](#doctype)
   - [Comments](#comments)
   - [Entities](#entities)
+  - [PrimeNG](#primeng)
   - [Custom components](#custom-components)
   - [DOM events](#dom-events)
   - [Generic attributes](#generic-attributes)
@@ -78,6 +79,8 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 
 > See [SVG-specific list](docs/SVG-SPECIFIC-TAGS.md)
 
+> See [PrimeNG-specific list](docs/PRIMENG.md)
+
 <img src="assets/tag-differentiation.png" title="Element differentiation" alt="Element differentiation" />
 
 ## Customizations
@@ -115,6 +118,12 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 > See the [complete list](docs/HTML-ENTITIES.md)
 
 <img src="assets/html-entities.png" title="HTML Entities" alt="HTML Entities" />
+
+## PrimeNG
+
+> See the [complete list](docs/PRIMENG.md)
+
+<img src="assets/prime-ng-tags.png" title="Prime NG Tags" alt="Prime NG Tags" />
 
 ## Custom components
 

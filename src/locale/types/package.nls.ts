@@ -31,6 +31,7 @@ export interface PackageNls {
   'ext.settings.angular.angularTemplateVariablePrefix': string;
   'ext.settings.angular.angularTemplateVariableName': string;
   'ext.settings.angular.angularExpressionOperatorsAndNavigatorsColor': string;
+  'ext.settings.primeng.primeNgElementTags': string;
   'ext.settings.svg.svgTags': string;
   'ext.settings.svg.svgDAttributePathCommands': string;
   'ext.settings.xml.xmlTagNamespaceDivider': string;

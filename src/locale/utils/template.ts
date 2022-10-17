@@ -45,6 +45,7 @@ const buildJson = (lang: Lang): PackageNls => {
     'ext.settings.angular.angularTemplateVariablePrefix': `${json.settings.angular.angularTemplateVariablePrefix}${markdown.settings.angular.angularTemplateVariablePrefix}${json.settings.general.leaveEmpty}`,
     'ext.settings.angular.angularTemplateVariableName': `${json.settings.angular.angularTemplateVariableName}${markdown.settings.angular.angularTemplateVariableName}${json.settings.general.leaveEmpty}`,
     'ext.settings.angular.angularExpressionOperatorsAndNavigatorsColor': `${json.settings.angular.angularExpressionOperatorsAndNavigatorsColor}${markdown.settings.angular.angularExpressionOperatorsAndNavigatorsColor}${json.settings.general.leaveEmpty}`,
+    'ext.settings.primeng.primeNgElementTags': `${json.settings.primeng.primeNgElementTags}${markdown.settings.primeng.primeNgElementTags}${json.settings.general.leaveEmpty}`,
     'ext.settings.svg.svgTags': `${json.settings.svg.svgTags}${markdown.settings.svg.svgTags}${json.settings.general.leaveEmpty}`,
     'ext.settings.svg.svgDAttributePathCommands': `${json.settings.svg.svgDAttributePathCommands}${markdown.settings.svg.svgDAttributePathCommands}${json.settings.general.leaveEmpty}`,
     'ext.settings.xml.xmlTagNamespaceDivider': `${json.settings.xml.xmlTagNamespaceDivider}${markdown.settings.xml.xmlTagNamespaceDivider}${json.settings.general.leaveEmpty}`,

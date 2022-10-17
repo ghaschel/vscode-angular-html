@@ -43,6 +43,9 @@
       "angularExpressionOperatorsAndNavigatorsColor": "Corresponde aos operadores e navegadores das expressoes Angular.",
       "seeAngularTags": "Ver tags específicas do Angular"
     },
+    "primeng": {
+      "primeNgElementTags": "Corresponde a tags específicas do PrimeNG"
+    },
     "svg": {
       "svgTags": "Corresponde a elementos conhecidos do SVG.",
       "svgDAttributePathCommands": "Corresponde a comandos do atributo d de tags path no SVG."

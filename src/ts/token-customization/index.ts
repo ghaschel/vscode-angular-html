@@ -36,6 +36,7 @@ const removeLegacyColorCustomizations = async (): Promise<void> => {
   await updateConfiguration('angularAndAngularMaterialElementTags', '', true);
   await updateConfiguration('htmlScriptAttributesLanguageIdentifier', '', true);
   await updateConfiguration('htmlStyleAttributesLanguageIdentifier', '', true);
+  await updateConfiguration('primeNgElementTags', '', true);
   await updateConfiguration('svgTags', '', true);
   await updateConfiguration('svgDAttributePathCommands', '', true);
   await updateConfiguration('angularAnimationTriggerPrefix', '', true);
@@ -148,6 +149,7 @@ const addLegacyColorCustomizations = async (): Promise<void> => {
   await updateConfiguration('angularAndAngularMaterialElementTags', '#D7BA7D', true);
   await updateConfiguration('htmlScriptAttributesLanguageIdentifier', '#DCDCAA', true);
   await updateConfiguration('htmlStyleAttributesLanguageIdentifier', '#DCDCAA', true);
+  await updateConfiguration('primeNgElementTags', '#D7BA7D', true);
   await updateConfiguration('svgTags', '#569CD6', true);
   await updateConfiguration('svgDAttributePathCommands', '#C586C0', true);
   await updateConfiguration('angularAnimationTriggerPrefix', '#D16969', true);

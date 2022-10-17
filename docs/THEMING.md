@@ -11,6 +11,7 @@
 - [Angular](#angular)
   - [Directives](#directives)
   - [Interpolations](#interpolations)
+- [PrimeNG](#primeng)
 - [HTML](#html)
   - [Doctype](#doctype)
   - [Entities](#entities)
@@ -103,6 +104,12 @@
 - `?`, `:` - html-template.ng.expression.operator.navigator
 - `??`, `&` - html-template.ng.expression.operator.bitwise
 - `}}` - html-template.ng.interpolation.end
+
+# PrimeNG
+
+<img src="../assets/prime-ng-tags.png" title="Prime NG Tags" alt="Prime NG Tags" />
+
+- `p-calendar` - entity.name.tag.html.primeng
 
 # HTML
 

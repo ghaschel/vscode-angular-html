@@ -248,6 +248,16 @@
         }
       },
       {
+        "title": "PrimeNG",
+        "properties": {
+          "vscode-angular-html.primeNgElementTags": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.primeng.primeNgElementTags%"
+          }
+        }
+      },
+      {
         "title": "SVG",
         "properties": {
           "vscode-angular-html.svgTags": {

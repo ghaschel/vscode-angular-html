@@ -1,0 +1,39 @@
+{
+  repository: {
+    'tag-definition-primeng': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.tag.primeng.$2.start.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'meta.tag.structure.html entity.name.tag.html.primeng entity.name.tag.html.primeng.$2',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+      },
+      patterns: [
+        {
+          include: '#tag-stuff',
+        },
+      ],
+      begin: '(</?)(p-accordionTab|p-accordion|p-autocomplete|p-avatarGroup|p-avatar|p-badge|p-blockUI|p-breadcrumb|p-button|p-calendar|p-captcha|p-card|p-carousel|p-cascadeSelect|p-cellEditor|p-chart|p-checkbox|p-chips|p-chip|p-colorPicker|p-columnFilter|p-confirmDialog|p-confirmPopup|p-contextMenu|p-dataView|p-dialog|p-divider|p-dock|p-dropdown|p-editor|p-fieldset|p-fileUpload|p-fullCalendar|p-galleria|p-gmap|p-image|p-inplace|p-inputMask|p-inputNumber|p-inputSwitch|p-knob|p-listbox|p-megaMenu|p-menubar|p-menu|p-messages|p-message|p-multiSelect|p-orderList|p-organizationChart|p-overlayPanel|p-paginator|p-panelMenu|p-panel|p-password|p-pickList|p-progressBar|p-progressSpinner|p-radioButton|p-rating|p-scroller|p-scrollPanel|p-scrollTop|p-selectButton|p-skeleton|p-slideMenu|p-slider|p-sortIcon|p-speedDial|p-splitButton|p-splitter|p-steps|p-tableCheckbox|p-tableHeaderCheckbox|p-tableRadioButton|p-table|p-tabMenu|p-tabPanel|p-tabView|p-tag|p-terminal|p-tieredMenu|p-timeline|p-toast|p-toggleButton|p-toolbar|p-treeSelect|p-treeTableCellEditor|p-treeTableCheckbox|p-treeTableSortIcon|p-treeTableToggler|p-treeTable|p-tree|p-triStateCheckbox|p-virtualScroller)(:)?([\\w\\-\\_$]+)?\\b',
+      endCaptures: {
+        '0': {
+          name: 'meta.tag.primeng.$2.end.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      end: '(/?>)',
+      name: 'meta.element.primeng.html',
+    },
+  },
+}

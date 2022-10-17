@@ -234,6 +234,12 @@
     }
   },
   {
+    "scope": "entity.name.tag.html.primeng",
+    "settings": {
+      "foreground": "#D7BA7D"
+    }
+  },
+  {
     "scope": "html-template.tag.svg",
     "settings": {
       "foreground": "#569CD6"

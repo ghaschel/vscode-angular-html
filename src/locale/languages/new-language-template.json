@@ -43,6 +43,9 @@
       "angularExpressionOperatorsAndNavigatorsColor": "",
       "seeAngularTags": ""
     },
+    "primeng": {
+      "primeNgElementTags": ""
+    },
     "svg": {
       "svgTags": "",
       "svgDAttributePathCommands": ""

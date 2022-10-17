@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.0.2...v2.1.0) (2022-10-17)
+
+### Features
+
+- **primeng support:** fixes an issue with custom-elements matching and adds support for primeng ([67429aa](https://github.com/ghaschel/vscode-angular-html/commit/67429aa799d9861a9f96ae571745657fac02cf2c)), closes [#65](https://github.com/ghaschel/vscode-angular-html/issues/65) [#63](https://github.com/ghaschel/vscode-angular-html/issues/63)
+
 ### [2.0.2](https://github.com/ghaschel/vscode-angular-html/compare/v2.0.0...v2.0.2) (2022-10-14)
 
 ### Bug Fixes

@@ -2,7 +2,7 @@
   repository: {
     'var-keywords': {
       match: '\\blet\\b\\s',
-      name: 'keyword.operator.expression.let.js',
+      name: 'storage.type.ts',
     },
   },
 }

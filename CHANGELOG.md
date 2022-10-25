@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.1.0...v2.2.0) (2022-10-25)
+
+### Features
+
+- **per-theme support:** per-theme support. some performance improvements ([9106151](https://github.com/ghaschel/vscode-angular-html/commit/9106151e11e84ede3d3b73018670aa8f402315ee)), closes [#63](https://github.com/ghaschel/vscode-angular-html/issues/63) [#64](https://github.com/ghaschel/vscode-angular-html/issues/64) [#65](https://github.com/ghaschel/vscode-angular-html/issues/65) [#68](https://github.com/ghaschel/vscode-angular-html/issues/68)
+
 ## [2.1.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.0.2...v2.1.0) (2022-10-17)
 
 ### Features

@@ -48,5 +48,6 @@
   "ext.command.addLegacyColorCustomizations.title": "vscode-angular-html: Set legacy color customizations",
   "ext.messages.updateNotice": "vscode-angular-html was updated and it now allows color customizations 🎉!  Please check-out the settings page :)",
   "ext.messages.enableLegacyColors": "Enable Legacy Colors",
-  "ext.messages.goToSettingsPage": "Go to Settings Page"
+  "ext.messages.goToSettingsPage": "Go to Settings Page",
+  "ext.messages.settingsNotice": "Please, close any open settings.json or Settings UI page before proceeding."
 }

@@ -49,4 +49,5 @@ export interface PackageNls {
   'ext.messages.updateNotice': string;
   'ext.messages.enableLegacyColors': string;
   'ext.messages.goToSettingsPage': string;
+  'ext.messages.settingsNotice': string;
 }

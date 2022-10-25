@@ -1,7 +1,11 @@
 import * as tokens from '../resources/tokens.json';
+import { getSettingsJSON, setSettingsJSON } from '../settings';
+import { updateScopeColors } from '../themes';
 
 import * as vscode from 'vscode';
+import { localize } from 'vscode-nls-i18n';
 
+import type { SettingsDictionary } from '../interfaces/settings-dictionary';
 import type { TextMateRule } from '../interfaces/textmate-rules';
 import type { TokenRule } from '../interfaces/tokens-rules';
 
@@ -14,73 +18,93 @@ const getTextMateRulesWithoutEmptyOnes = (
   return currentRules.filter(rule => !scopesToBeRemoved.includes(rule.scope));
 };
 
-const updateConfiguration = async (settings: string, value: string, flag: boolean): Promise<void> =>
-  vscode.workspace.getConfiguration('vscode-angular-html').update(settings, value, flag);
+const removeLegacyColorCustomizations = async (): Promise<SettingsDictionary> => {
+  const settings = await getSettingsJSON();
 
-const removeLegacyColorCustomizations = async (): Promise<void> => {
-  await updateConfiguration('angularExpression', '', true);
-  await updateConfiguration('htmlDoctypeExclamation', '', true);
-  await updateConfiguration('htmlDoctypeElement', '', true);
-  await updateConfiguration('htmlDoctypeAttributes', '', true);
-  await updateConfiguration('dtdDoctypeExclamation', '', true);
-  await updateConfiguration('dtdDoctypeElement', '', true);
-  await updateConfiguration('dtdDoctypeQuantifier', '', true);
-  await updateConfiguration('dtdDoctypeQualifier', '', true);
-  await updateConfiguration('htmlEntitiesAmpersand', '', true);
-  await updateConfiguration('htmlEntitiesSemicolon', '', true);
-  await updateConfiguration('htmlGenericAttributesFollowedByParameter', '', true);
-  await updateConfiguration('htmlEventsAttributes', '', true);
-  await updateConfiguration('htmlAttributeValueSeparator', '', true);
-  await updateConfiguration('htmlTags', '', true);
-  await updateConfiguration('htmlCustomTags', '', true);
-  await updateConfiguration('angularAndAngularMaterialElementTags', '', true);
-  await updateConfiguration('htmlScriptAttributesLanguageIdentifier', '', true);
-  await updateConfiguration('htmlStyleAttributesLanguageIdentifier', '', true);
-  await updateConfiguration('primeNgElementTags', '', true);
-  await updateConfiguration('svgTags', '', true);
-  await updateConfiguration('svgDAttributePathCommands', '', true);
-  await updateConfiguration('angularAnimationTriggerPrefix', '', true);
-  await updateConfiguration('angularAnimationTriggerVariableName', '', true);
-  await updateConfiguration('angularEventHandlerName', '', true);
-  await updateConfiguration('angularBindingAttributeDelimiter', '', true);
-  await updateConfiguration('angularOneWayBindingAnimationTriggerDecorator', '', true);
-  await updateConfiguration('angularOneWayBindingFirstLevelDepth', '', true);
-  await updateConfiguration('angularOneWayBindingSecondLevelDepth', '', true);
-  await updateConfiguration('angularOneWayBindingThirdLevelDepth', '', true);
-  await updateConfiguration('angularPrefixedAttributesLetPrefix', '', true);
-  await updateConfiguration('angularPrefixedAttributesRefPrefix', '', true);
-  await updateConfiguration('angularPrefixedAttributesVariableName', '', true);
-  await updateConfiguration('angularPrefixedAttributesRxjsSuffix', '', true);
-  await updateConfiguration('angularSyntaxSugarAttributesPrefix', '', true);
-  await updateConfiguration('angularSyntaxSugarAttributesName', '', true);
-  await updateConfiguration('angularTemplateVariablePrefix', '', true);
-  await updateConfiguration('angularTemplateVariableName', '', true);
-  await updateConfiguration('angularExpressionOperatorsAndNavigatorsColor', '', true);
-  await updateConfiguration('xmlStylesheetAttributesLanguageIdentifier', '', true);
-  await updateConfiguration('xmlTagNamespaceDivider', '', true);
-  await updateConfiguration('xmlTagNamespaceSuffix', '', true);
-  await updateConfiguration('xmlAttributeNamespaceDivider', '', true);
-  await updateConfiguration('xmlAttributeNamespaceSuffix', '', true);
+  settings['vscode-angular-html.angularAndAngularMaterialElementTags'] = '';
+  settings['vscode-angular-html.angularAnimationTriggerPrefix'] = '';
+  settings['vscode-angular-html.angularAnimationTriggerVariableName'] = '';
+  settings['vscode-angular-html.angularBindingAttributeDelimiter'] = '';
+  settings['vscode-angular-html.angularEventHandlerName'] = '';
+  settings['vscode-angular-html.angularExpression'] = '';
+  settings['vscode-angular-html.angularExpressionOperatorsAndNavigatorsColor'] = '';
+  settings['vscode-angular-html.angularOneWayBindingAnimationTriggerDecorator'] = '';
+  settings['vscode-angular-html.angularOneWayBindingFirstLevelDepth'] = '';
+  settings['vscode-angular-html.angularOneWayBindingSecondLevelDepth'] = '';
+  settings['vscode-angular-html.angularOneWayBindingThirdLevelDepth'] = '';
+  settings['vscode-angular-html.angularPrefixedAttributesLetPrefix'] = '';
+  settings['vscode-angular-html.angularPrefixedAttributesRefPrefix'] = '';
+  settings['vscode-angular-html.angularPrefixedAttributesRxjsSuffix'] = '';
+  settings['vscode-angular-html.angularPrefixedAttributesVariableName'] = '';
+  settings['vscode-angular-html.angularSyntaxSugarAttributesName'] = '';
+  settings['vscode-angular-html.angularSyntaxSugarAttributesPrefix'] = '';
+  settings['vscode-angular-html.angularTemplateVariableName'] = '';
+  settings['vscode-angular-html.angularTemplateVariablePrefix'] = '';
+  settings['vscode-angular-html.dtdDoctypeElement'] = '';
+  settings['vscode-angular-html.dtdDoctypeExclamation'] = '';
+  settings['vscode-angular-html.dtdDoctypeQualifier'] = '';
+  settings['vscode-angular-html.dtdDoctypeQuantifier'] = '';
+  settings['vscode-angular-html.htmlAttributeValueSeparator'] = '';
+  settings['vscode-angular-html.htmlCustomTags'] = '';
+  settings['vscode-angular-html.htmlDoctypeAttributes'] = '';
+  settings['vscode-angular-html.htmlDoctypeElement'] = '';
+  settings['vscode-angular-html.htmlDoctypeExclamation'] = '';
+  settings['vscode-angular-html.htmlEntitiesAmpersand'] = '';
+  settings['vscode-angular-html.htmlEntitiesSemicolon'] = '';
+  settings['vscode-angular-html.htmlEventsAttributes'] = '';
+  settings['vscode-angular-html.htmlGenericAttributesFollowedByParameter'] = '';
+  settings['vscode-angular-html.htmlScriptAttributesLanguageIdentifier'] = '';
+  settings['vscode-angular-html.htmlStyleAttributesLanguageIdentifier'] = '';
+  settings['vscode-angular-html.htmlTags'] = '';
+  settings['vscode-angular-html.primeNgElementTags'] = '';
+  settings['vscode-angular-html.svgDAttributePathCommands'] = '';
+  settings['vscode-angular-html.svgTags'] = '';
+  settings['vscode-angular-html.xmlAttributeNamespaceDivider'] = '';
+  settings['vscode-angular-html.xmlAttributeNamespaceSuffix'] = '';
+  settings['vscode-angular-html.xmlStylesheetAttributesLanguageIdentifier'] = '';
+  settings['vscode-angular-html.xmlTagNamespaceDivider'] = '';
+  settings['vscode-angular-html.xmlTagNamespaceSuffix'] = '';
+
+  return settings;
+};
+
+const getOpenTabs = (): string[] =>
+  vscode.window.tabGroups.all
+    .map(tabGroup => tabGroup.tabs)
+    .map(tabs => tabs.map(tab => tab.label))
+    .flat();
+
+const checkOpenTabs = (openTabs: string[]): boolean =>
+  openTabs.some(openTab => ['Settings', 'settings.json'].includes(openTab));
+
+const displayTabsMessage = (): void => {
+  vscode.window.showErrorMessage(
+    localize(
+      'ext.messages.settingsNotice',
+      'Please, close any open settings.json or Settings UI page before proceeding.',
+    ),
+  );
 };
 
 const disableTokenCustomization = async (): Promise<void> => {
-  await removeLegacyColorCustomizations();
-  const config = vscode.workspace.getConfiguration();
+  const openTabs = getOpenTabs();
 
-  const tokenColorCustomizations = config.get('editor.tokenColorCustomizations') as {
-    textMateRules?: TextMateRule[];
-  };
+  if (checkOpenTabs(openTabs)) {
+    displayTabsMessage();
 
-  const activeRules = tokenColorCustomizations.textMateRules ?? [];
-  const currentRules = getTextMateRulesWithoutEmptyOnes(activeRules, tokens.textMateRules);
+    return;
+  }
 
-  await config.update(
-    'editor.tokenColorCustomizations',
-    { textMateRules: [...currentRules] },
-    vscode.ConfigurationTarget.Global,
-  );
+  const settings = await removeLegacyColorCustomizations();
+  const activeCustomizations = settings['editor.tokenColorCustomizations']?.textMateRules ?? [];
+  const currentRules = getTextMateRulesWithoutEmptyOnes(activeCustomizations, tokens.textMateRules);
 
-  await config.update('vscode-angular-html.colorCustomizations', false, vscode.ConfigurationTarget.Global);
+  settings['editor.tokenColorCustomizations'] = { textMateRules: [...currentRules] };
+  settings['vscode-angular-html.colorCustomizations'] = false;
+
+  console.log(settings);
+
+  await setSettingsJSON(settings);
 };
 
 const getActiveRulesFromSettings = (configs: vscode.WorkspaceConfiguration): TextMateRule[] => {
@@ -102,6 +126,14 @@ const getActiveRulesFromSettings = (configs: vscode.WorkspaceConfiguration): Tex
 };
 
 const updateTokenCustomization = async (): Promise<void> => {
+  const openTabs = getOpenTabs();
+
+  if (checkOpenTabs(openTabs)) {
+    displayTabsMessage();
+
+    return;
+  }
+
   const config = vscode.workspace.getConfiguration();
   let currentRules: TextMateRule[] = [];
 
@@ -129,52 +161,16 @@ const enableColorCustomization = async (): Promise<void> => {
   await vscode.workspace.getConfiguration('vscode-angular-html').update('colorCustomizations', true, true);
 };
 
-// prettier-ignore
 const addLegacyColorCustomizations = async (): Promise<void> => {
-  await updateConfiguration('angularExpression', '#D16969', true);
-  await updateConfiguration('htmlDoctypeExclamation', '#C586C0', true);
-  await updateConfiguration('htmlDoctypeElement', '#D7BA7D', true);
-  await updateConfiguration('htmlDoctypeAttributes', '#4EC9B0', true);
-  await updateConfiguration('dtdDoctypeExclamation', '#C586C0', true);
-  await updateConfiguration('dtdDoctypeElement', '#D7BA7D', true);
-  await updateConfiguration('dtdDoctypeQuantifier', '#D16969', true);
-  await updateConfiguration('dtdDoctypeQualifier', '#C586C0', true);
-  await updateConfiguration('htmlEntitiesAmpersand', '#C586C0', true);
-  await updateConfiguration('htmlEntitiesSemicolon', '#C586C0', true);
-  await updateConfiguration('htmlGenericAttributesFollowedByParameter', '#4EC9B0', true);
-  await updateConfiguration('htmlEventsAttributes', '#4EC9B0', true);
-  await updateConfiguration('htmlAttributeValueSeparator', '#D7BA7D', true);
-  await updateConfiguration('htmlTags', '#569CD6', true);
-  await updateConfiguration('htmlCustomTags', '#569CD6', true);
-  await updateConfiguration('angularAndAngularMaterialElementTags', '#D7BA7D', true);
-  await updateConfiguration('htmlScriptAttributesLanguageIdentifier', '#DCDCAA', true);
-  await updateConfiguration('htmlStyleAttributesLanguageIdentifier', '#DCDCAA', true);
-  await updateConfiguration('primeNgElementTags', '#D7BA7D', true);
-  await updateConfiguration('svgTags', '#569CD6', true);
-  await updateConfiguration('svgDAttributePathCommands', '#C586C0', true);
-  await updateConfiguration('angularAnimationTriggerPrefix', '#D16969', true);
-  await updateConfiguration('angularAnimationTriggerVariableName', '#DCDCAA', true);
-  await updateConfiguration('angularEventHandlerName', '#DCDCAA', true);
-  await updateConfiguration('angularBindingAttributeDelimiter', '#D16969', true);
-  await updateConfiguration('angularOneWayBindingAnimationTriggerDecorator', '#D7BA7D', true);
-  await updateConfiguration('angularOneWayBindingFirstLevelDepth', '#DCDCAA', true);
-  await updateConfiguration('angularOneWayBindingSecondLevelDepth', '#C586C0', true);
-  await updateConfiguration('angularOneWayBindingThirdLevelDepth', '#DCDCAA', true);
-  await updateConfiguration('angularPrefixedAttributesLetPrefix', '#569CD6', true);
-  await updateConfiguration('angularPrefixedAttributesRefPrefix', '#D16969', true);
-  await updateConfiguration('angularPrefixedAttributesVariableName', '#4EC9B0', true);
-  await updateConfiguration('angularPrefixedAttributesRxjsSuffix', '#C586C0', true);
-  await updateConfiguration('angularSyntaxSugarAttributesPrefix', '#D16969', true);
-  await updateConfiguration('angularSyntaxSugarAttributesName', '#DCDCAA', true);
-  await updateConfiguration('angularTemplateVariablePrefix', '#D16969', true);
-  await updateConfiguration('angularTemplateVariableName', '#DCDCAA', true);
-  await updateConfiguration('angularExpressionOperatorsAndNavigatorsColor', '#C586C0', true);
-  await updateConfiguration('xmlStylesheetAttributesLanguageIdentifier', '#DCDCAA', true);
-  await updateConfiguration('xmlTagNamespaceDivider', '#D16969', true);
-  await updateConfiguration('xmlTagNamespaceSuffix', '#C586C0', true);
-  await updateConfiguration('xmlAttributeNamespaceDivider', '#D16969', true);
-  await updateConfiguration('xmlAttributeNamespaceSuffix', '#C586C0', true);
-  await enableColorCustomization();
+  const openTabs = getOpenTabs();
+
+  if (checkOpenTabs(openTabs)) {
+    displayTabsMessage();
+
+    return;
+  }
+
+  await updateScopeColors();
   await updateTokenCustomization();
 };
 
@@ -182,7 +178,7 @@ export {
   updateTokenCustomization,
   addLegacyColorCustomizations,
   disableTokenCustomization,
-  updateConfiguration,
   enableColorCustomization,
   removeLegacyColorCustomizations,
+  getTextMateRulesWithoutEmptyOnes,
 };

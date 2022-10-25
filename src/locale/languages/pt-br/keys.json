@@ -78,6 +78,7 @@
   "messages": {
     "updateNotice": "vscode-angular-html foi atualizado e agora suporta customização de cores 🎉!  Por favor, dê uma olhada na página de configurações :)",
     "enableLegacyColors": "Habilitar cores de legado",
-    "goToSettingsPage": "Ir para página de configurações"
+    "goToSettingsPage": "Ir para página de configurações",
+    "settingsNotice": "Por favor, feche quaisquer settings.json ou página de configurações que estejam abertos antes de prosseguir."
   }
 }

@@ -78,6 +78,7 @@
   "messages": {
     "updateNotice": "vscode-angular-html was updated and it now allows color customizations 🎉!  Please check-out the settings page :)",
     "enableLegacyColors": "Enable Legacy Colors",
-    "goToSettingsPage": "Go to Settings Page"
+    "goToSettingsPage": "Go to Settings Page",
+    "settingsNotice": "Please, close any open settings.json or Settings UI page before proceeding."
   }
 }

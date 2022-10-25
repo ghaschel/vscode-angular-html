@@ -79,5 +79,6 @@ export interface LocaleKeys {
     updateNotice: string;
     enableLegacyColors: string;
     goToSettingsPage: string;
+    settingsNotice: string;
   };
 }

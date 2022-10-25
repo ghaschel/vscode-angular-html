@@ -13,12 +13,18 @@
           name: 'entity.other.attribute-name.html entity.other.ng-binding-name.event.html	entity.other.ng-binding-name.$2.html html-template.ng.attributes.event-handler',
         },
         '3': {
-          name: 'entity.other.attribute-name.html entity.other.ng-binding-name.event.html punctuation.definition.ng-binding-name.end.html',
+          name: 'entity.other.attribute-name.property.html entity.other.ng-binding-name.binding.html	entity.other.ng-binding-name.$4.html html-template.ng.attributes.input-binding.second-level',
         },
         '4': {
-          name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+          name: 'entity.other.attribute-name.property.html entity.other.ng-binding-name.binding.html	entity.other.ng-binding-name.$5.html html-template.ng.attributes.input-binding.third-level',
         },
         '5': {
+          name: 'entity.other.attribute-name.html entity.other.ng-binding-name.event.html punctuation.definition.ng-binding-name.end.html',
+        },
+        '6': {
+          name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+        },
+        '7': {
           name: 'string.quoted.double.html',
         },
       },
@@ -30,7 +36,7 @@
           name: 'string.quoted.double.html',
         },
       },
-      begin: '(?<!\\[)(\\()([a-zA-Z0-9\\-_\\$]+)*(\\))(=)(")',
+      begin: '(?<!\\[)(\\()([a-zA-Z0-9\\-_\\$]+)(?:\\.([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*(\\))(=)(")',
       end: '(")',
       patterns: [
         {

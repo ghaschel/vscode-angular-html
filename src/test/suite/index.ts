@@ -6,7 +6,7 @@ import * as path from 'path';
 const run = async (): Promise<void> => {
   // Create the mocha test
   const mocha = new Mocha({
-    timeout: 10000,
+    timeout: 100000,
     ui: 'tdd',
   });
 

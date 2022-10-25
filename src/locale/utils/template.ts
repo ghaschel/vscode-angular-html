@@ -63,6 +63,7 @@ const buildJson = (lang: Lang): PackageNls => {
     'ext.messages.updateNotice': `${json.messages.updateNotice}`,
     'ext.messages.enableLegacyColors': `${json.messages.enableLegacyColors}`,
     'ext.messages.goToSettingsPage': `${json.messages.goToSettingsPage}`,
+    'ext.messages.settingsNotice': `${json.messages.settingsNotice}`,
   };
 };
 

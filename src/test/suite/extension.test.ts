@@ -1,19 +1,8 @@
-import * as tokens from './legacy-colors.json';
-
-import {
-  addLegacyColorCustomizations,
-  disableTokenCustomization,
-  enableColorCustomization,
-  removeLegacyColorCustomizations,
-  updateConfiguration,
-  updateTokenCustomization,
-} from '../../ts/token-customization/';
+import { getTextMateRulesWithoutEmptyOnes } from '../../ts/token-customization/';
 
 import * as vscode from 'vscode';
 
 import * as assert from 'assert';
-
-import type { TextMateRule } from '../../ts/interfaces/textmate-rules';
 
 /*
  * You can import and use all API from the 'vscode' module
@@ -25,41 +14,99 @@ import type { TextMateRule } from '../../ts/interfaces/textmate-rules';
 suite('Extension Test Suite', () => {
   vscode.window.showInformationMessage('Start all tests.');
 
-  test('Enable legacy color customizations', async () => {
-    await addLegacyColorCustomizations();
-    const config = vscode.workspace.getConfiguration();
-    const tokenColorCustomizations = config.get('editor.tokenColorCustomizations') as { textMateRules: TextMateRule[] };
-    const isColorCustomizationEnabled = config.get('vscode-angular-html.colorCustomizations');
-    assert.deepStrictEqual(tokenColorCustomizations.textMateRules, tokens);
-    assert.strictEqual(isColorCustomizationEnabled, true);
-  });
-
-  test('Disable token customizations', async () => {
-    await disableTokenCustomization();
-    const config = vscode.workspace.getConfiguration();
-    const tokenColorCustomizations = config.get('editor.tokenColorCustomizations') as { textMateRules: TextMateRule[] };
-    const isColorCustomizationEnabled = config.get('vscode-angular-html.colorCustomizations');
-    assert.deepStrictEqual(tokenColorCustomizations.textMateRules, []);
-    assert.strictEqual(isColorCustomizationEnabled, false);
-  });
-
-  test('Change token color customizations', async () => {
-    await removeLegacyColorCustomizations();
-    await disableTokenCustomization();
-    await enableColorCustomization();
-    await updateConfiguration('htmlTags', '#000000', true);
-    await updateTokenCustomization();
-    const config = vscode.workspace.getConfiguration();
-    const isColorCustomizationEnabled = config.get('vscode-angular-html.colorCustomizations');
-    const tokenColorCustomizations = config.get('editor.tokenColorCustomizations') as { textMateRules: TextMateRule[] };
-    assert.deepStrictEqual(tokenColorCustomizations.textMateRules, [
+  test('getTextMateRulesWithoutEmptyOnes', async () => {
+    const currentRules = [
       {
         scope: 'html-template.tag.html',
         settings: {
-          foreground: '#000000',
+          foreground: '#569CD6',
+        },
+      },
+      {
+        scope: 'html-template.tag.custom',
+        settings: {
+          foreground: '#569CD6',
+        },
+      },
+    ];
+
+    const ruleToBeRemoved = [
+      {
+        scope: 'html-template.tag.custom',
+        settings: {
+          foreground: '#569CD6',
+        },
+      },
+    ];
+    const newRules = getTextMateRulesWithoutEmptyOnes(currentRules, ruleToBeRemoved);
+
+    assert.deepStrictEqual(newRules, [
+      {
+        scope: 'html-template.tag.html',
+        settings: {
+          foreground: '#569CD6',
         },
       },
     ]);
-    assert.strictEqual(isColorCustomizationEnabled, true);
   });
+
+  /*
+   * Test('Disable token customizations', async () => {
+   *   await disableTokenCustomization();
+   *   const config = vscode.workspace.getConfiguration();
+   *   const tokenColorCustomizations = config.get('editor.tokenColorCustomizations') as {
+   *      textMateRules: TextMateRule[],
+   *   };
+   *   const isColorCustomizationEnabled = config.get('vscode-angular-html.colorCustomizations');
+   *   assert.deepStrictEqual(tokenColorCustomizations.textMateRules, []);
+   *   assert.strictEqual(isColorCustomizationEnabled, false);
+   * });
+   */
+
+  /*
+   * Test('Enable legacy color customizations', async () => {
+   *   await addLegacyColorCustomizations();
+   *   const config = vscode.workspace.getConfiguration();
+   *   const tokenColorCustomizations = config.get('editor.tokenColorCustomizations') as {
+   *     textMateRules: TextMateRule[];
+   *   };
+   *   const isColorCustomizationEnabled = config.get('vscode-angular-html.colorCustomizations');
+   *   assert.deepStrictEqual(tokenColorCustomizations.textMateRules, tokens);
+   *   assert.strictEqual(isColorCustomizationEnabled, true);
+   * });
+   */
+
+  /*
+   * Test('Change token color customizations', async () => {
+   *   await removeLegacyColorCustomizations();
+   *   const settings = await getSettingsJSON();
+   *   settings['vscode-angular-html.htmlTags'] = '#000000';
+   *   await setSettingsJSON(settings);
+   */
+
+  //   // Await vscode.commands.executeCommand('vscode-angular-html.updateTokenCustomization');
+
+  //   await updateTokenCustomization();
+
+  /*
+   *   const config = vscode.workspace.getConfiguration();
+   *   const isColorCustomizationEnabled = config.get('vscode-angular-html.colorCustomizations');
+   *   const tokenColorCustomizations = config.get<{ textMateRules: TextMateRule[] }>(
+   *     'editor.tokenColorCustomizations',
+   *   ) ?? { textMateRules: [] };
+   */
+
+  /*
+   *   assert.deepStrictEqual(
+   *     tokenColorCustomizations.textMateRules.find(s => s.scope === 'html-template.tag.html'),
+   *     {
+   *       scope: 'html-template.tag.html',
+   *       settings: {
+   *         foreground: '#000000',
+   *       },
+   *     },
+   *   );
+   *   assert.strictEqual(isColorCustomizationEnabled, true);
+   * });
+   */
 });

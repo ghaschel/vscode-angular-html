@@ -27,11 +27,11 @@
             {
               begin: '(\\[)',
               beginCaptures: {
-                name: 'punctuation.definition.dtd.begin.html',
+                '0': 'punctuation.definition.dtd.begin.html',
               },
               end: '(\\])',
               endCaptures: {
-                name: 'punctuation.definition.dtd.end.html',
+                '0': 'punctuation.definition.dtd.end.html',
               },
               patterns: [{ include: '#xml-dtd' }],
             },
@@ -48,4 +48,3 @@
     },
   },
 }
-

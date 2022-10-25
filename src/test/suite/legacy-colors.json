@@ -62,13 +62,13 @@
   {
     "scope": "html-template.ng.style.language.identifier",
     "settings": {
-      "foreground": "#DCDCAA"
+      "foreground": "#B5CEA8"
     }
   },
   {
     "scope": "html-template.ng.script.language.identifier",
     "settings": {
-      "foreground": "#DCDCAA"
+      "foreground": "#B5CEA8"
     }
   },
   {
@@ -140,7 +140,7 @@
   {
     "scope": "html-template.ng.attributes.animationtrigger.variable",
     "settings": {
-      "foreground": "#DCDCAA"
+      "foreground": "#B5CEA8"
     }
   },
   {
@@ -158,7 +158,7 @@
   {
     "scope": "html-template.ng.attributes.event-handler",
     "settings": {
-      "foreground": "#DCDCAA"
+      "foreground": "#B5CEA8"
     }
   },
   {
@@ -170,7 +170,7 @@
   {
     "scope": "html-template.ng.attributes.input-binding.first-level",
     "settings": {
-      "foreground": "#DCDCAA"
+      "foreground": "#B5CEA8"
     }
   },
   {
@@ -182,7 +182,7 @@
   {
     "scope": "html-template.ng.attributes.input-binding.third-level",
     "settings": {
-      "foreground": "#DCDCAA"
+      "foreground": "#D7BA7D"
     }
   },
   {
@@ -206,7 +206,7 @@
   {
     "scope": "html-template.ng.attributes.suffix.rxjs",
     "settings": {
-      "foreground": "#C586C0"
+      "foreground": "#D7BA7D"
     }
   },
   {
@@ -218,7 +218,7 @@
   {
     "scope": "html-template.ng.attributes.suffix.sugar",
     "settings": {
-      "foreground": "#DCDCAA"
+      "foreground": "#B5CEA8"
     }
   },
   {
@@ -230,7 +230,7 @@
   {
     "scope": "html-template.ng.attributes.template.variable",
     "settings": {
-      "foreground": "#DCDCAA"
+      "foreground": "#B5CEA8"
     }
   },
   {
@@ -278,7 +278,7 @@
   {
     "scope": "html-template.ng.xmlStylesheet.language.identifier",
     "settings": {
-      "foreground": "#DCDCAA"
+      "foreground": "#B5CEA8"
     }
   },
   {
@@ -296,7 +296,7 @@
   {
     "scope": "html-template.ng.qualifier.dtd",
     "settings": {
-      "foreground": "#C586C0"
+      "foreground": "#569CD6"
     }
   },
   {

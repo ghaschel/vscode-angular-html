@@ -1,6 +1,23 @@
 <!-- SYNTAX TEST "html-template.ng"
 -->
 
+'keyword.operator.punctuation': #
+'constant.character.entity.html': #
+'support.type.object.html-attribute': #
+<!DOCTYPE html>
+
+'entity.name.tag.other.html': #
+'constant.numeric.angular-directive': #
+'keyword.operator.entity.html': #
+<div [test.test.test]=""></div>
+
+'string.regexp': #
+{{ test }}
+
+'keyword.operator.expression.let.js': #
+<div *ngIf="let a of test;"></div>
+
+
 DOCTYPE
 
 <!DOCTYPE html>
@@ -55,7 +72,7 @@ INVALID ATTRIBUTES
   width=""
 ></colgroup>
 
-<div align="" (click)=""></div>
+<div align="" (click.test)=""></div>
 
 <dl compact=""></dl>
 
@@ -209,6 +226,8 @@ CUSTOM ELEMENTS
 
 <custom-component
   (click)="callback()"
+  (click.test)="callback()"
+  (click.test.test)="callback()"
 ></custom-component>
 
 <menu-test></menu-test>
@@ -983,6 +1002,8 @@ PRIMENG ELEMENTS
 <p-accordion></p-accordion>
 <p-accordionTab></p-accordionTab>
 <p-autocomplete></p-autocomplete>
+<p-autoComplete></p-autoComplete>
+<p-autoComplete></p-autoComplete>
 <p-avatar></p-avatar>
 <p-avatarGroup></p-avatarGroup>
 <p-badge></p-badge>
@@ -994,6 +1015,7 @@ PRIMENG ELEMENTS
 <p-card></p-card>
 <p-carousel></p-carousel>
 <p-cascadeSelect></p-cascadeSelect>
+<p-cascadeSelectSub></p-cascadeSelectSub>
 <p-cellEditor></p-cellEditor>
 <p-chart></p-chart>
 <p-checkbox></p-checkbox>
@@ -1004,35 +1026,44 @@ PRIMENG ELEMENTS
 <p-confirmDialog></p-confirmDialog>
 <p-confirmPopup></p-confirmPopup>
 <p-contextMenu></p-contextMenu>
+<p-contextMenuSub></p-contextMenuSub>
 <p-dataView></p-dataView>
 <p-dialog></p-dialog>
 <p-divider></p-divider>
 <p-dock></p-dock>
 <p-dropdown></p-dropdown>
+<p-dropdownItem></p-dropdownItem>
+<p-dynamicDialog></p-dynamicDialog>
 <p-editor></p-editor>
 <p-fieldset></p-fieldset>
 <p-fileUpload></p-fileUpload>
 <p-fullCalendar></p-fullCalendar>
 <p-galleria></p-galleria>
 <p-gmap></p-gmap>
+<p-header></p-header>
 <p-image></p-image>
 <p-inplace></p-inplace>
+<p-inplaceDisplay></p-inplaceDisplay>
 <p-inputMask></p-inputMask>
 <p-inputNumber></p-inputNumber>
 <p-inputSwitch></p-inputSwitch>
 <p-knob></p-knob>
+<p-lightbox></p-lightbox>
 <p-listbox></p-listbox>
 <p-megaMenu></p-megaMenu>
 <p-menu></p-menu>
 <p-menubar></p-menubar>
+<p-menubarSub></p-menubarSub>
 <p-messages></p-messages>
 <p-multiSelect></p-multiSelect>
+<p-multiSelectItem></p-multiSelectItem>
 <p-orderList></p-orderList>
 <p-organizationChart></p-organizationChart>
 <p-overlayPanel></p-overlayPanel>
 <p-paginator></p-paginator>
 <p-panel></p-panel>
 <p-panelMenu></p-panelMenu>
+<p-panelMenuSub></p-panelMenuSub>
 <p-password></p-password>
 <p-pickList></p-pickList>
 <p-progressBar></p-progressBar>
@@ -1043,11 +1074,14 @@ PRIMENG ELEMENTS
 <p-scrollPanel></p-scrollPanel>
 <p-scrollTop></p-scrollTop>
 <p-selectButton></p-selectButton>
+<p-sidebar></p-sidebar>
 <p-skeleton></p-skeleton>
 <p-slideMenu></p-slideMenu>
+<p-slideMenuSub></p-slideMenuSub>
 <p-slider></p-slider>
 <p-sortIcon></p-sortIcon>
 <p-speedDial></p-speedDial>
+<p-spinner></p-spinner>
 <p-splitButton></p-splitButton>
 <p-splitter></p-splitter>
 <p-steps></p-steps>
@@ -1061,11 +1095,14 @@ PRIMENG ELEMENTS
 <p-tag></p-tag>
 <p-terminal></p-terminal>
 <p-tieredMenu></p-tieredMenu>
+<p-tieredMenuSub></p-tieredMenuSub>
 <p-timeline></p-timeline>
 <p-toast></p-toast>
+<p-toastItem></p-toastItem>
 <p-toggleButton></p-toggleButton>
 <p-toolbar></p-toolbar>
 <p-tree></p-tree>
+<p-treeNode></p-treeNode>
 <p-treeSelect></p-treeSelect>
 <p-treeTable></p-treeTable>
 <p-treeTableCellEditor></p-treeTableCellEditor>
@@ -1387,3 +1424,4 @@ SCRIPT TAGS
     test.callback();
   }
 </script>
+

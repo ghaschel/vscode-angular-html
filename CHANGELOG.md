@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://github.com/ghaschel/vscode-angular-html/compare/v2.2.0...v2.2.1) (2022-10-25)
+
+### Bug Fixes
+
+- **package.json:** fixed entry file ([e2d6f37](https://github.com/ghaschel/vscode-angular-html/commit/e2d6f376ffa777de9f7920bb4503b4c5aa8d728a))
+
 ## [2.2.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.1.0...v2.2.0) (2022-10-25)
 
 ### Features

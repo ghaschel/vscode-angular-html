@@ -12,11 +12,11 @@
     <img src="assets/angular-html.png" title="vscode-angular-html" alt="Logo" />
 </div>
 
+> Note: No theme will have the highlighting displayed in these images. For that effect, run the `vscode-angular-html: Set legacy color customizations` command from the command pallete and you're good to go.
+
 ## Angular HTML Template Syntax Highlighting
 
 This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events, SVG, XML (with DTD and namespaces support), emphasizes deprecated and obsolete tags and attributes usage according to the current status of HTML. Also supports custom colors for extra-matched scopes. See [color customizations](docs/COLOR-CUSTOMIZATIONS.MD)
-
-> Note: VSCode's default Dark+ theme doesn't have the highlighting displayed in these images. For that effect, run the `vscode-angular-html: Set legacy color customizations` command".
 
 # Summary
 

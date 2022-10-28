@@ -22,7 +22,7 @@ Please, read the [F.A.Q.](../../docs/FAQ.md) before. Your bug might not be a bug
 **List of installed/enabled extensions**
 Provide a list of installed/enabled extensions. Also, try to pinpoint which extension might be conflicting with the current one if that's the case.
 
-- Provide an extension list screenshot of extensions ids [e.g. `ghaschel.vscode-angular-html`]
+- Use the `code --list-extensions` command to export a list.
 
 **OS (please provide the following information):**
 

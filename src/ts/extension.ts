@@ -75,9 +75,9 @@ const activate = function activate(context: vscode.ExtensionContext): void {
       const isCustomizationEnabled = config.get('colorCustomizations') as boolean;
 
       if (isCustomizationEnabled) {
-        updateTokenCustomization();
+        updateTokenCustomization(true);
       } else {
-        disableTokenCustomization();
+        disableTokenCustomization(true);
       }
     }
   });

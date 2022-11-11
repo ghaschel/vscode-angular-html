@@ -68,14 +68,17 @@ const removeLegacyColorCustomizations = async (): Promise<SettingsDictionary> =>
   return settings;
 };
 
-const getOpenTabs = (): string[] =>
-  vscode.window.tabGroups.all
-    .map(tabGroup => tabGroup.tabs)
-    .map(tabs => tabs.map(tab => tab.label))
-    .flat();
+const getOpenTabs = (): string[] => {
+  const labelList = vscode.window.tabGroups.all.map(tabGroup => tabGroup.tabs).map(tabs => tabs.map(tab => tab.label));
 
-const checkOpenTabs = (openTabs: string[]): boolean =>
-  openTabs.some(openTab => ['Settings', 'settings.json'].includes(openTab));
+  return labelList.flat();
+};
+
+const checkOpenTabs = (openTabs: string[], fromSettingsChange = false): boolean => {
+  const labelsList = fromSettingsChange ? ['settings.json'] : ['Settings', 'settings.json'];
+
+  return openTabs.some(openTab => labelsList.includes(openTab));
+};
 
 const displayTabsMessage = (): void => {
   vscode.window.showErrorMessage(
@@ -86,10 +89,10 @@ const displayTabsMessage = (): void => {
   );
 };
 
-const disableTokenCustomization = async (): Promise<void> => {
+const disableTokenCustomization = async (fromSettingsChange = false): Promise<void> => {
   const openTabs = getOpenTabs();
 
-  if (checkOpenTabs(openTabs)) {
+  if (checkOpenTabs(openTabs, fromSettingsChange)) {
     displayTabsMessage();
 
     return;
@@ -125,10 +128,10 @@ const getActiveRulesFromSettings = (configs: vscode.WorkspaceConfiguration): Tex
   return rules;
 };
 
-const updateTokenCustomization = async (): Promise<void> => {
+const updateTokenCustomization = async (fromSettingsChange = false): Promise<void> => {
   const openTabs = getOpenTabs();
 
-  if (checkOpenTabs(openTabs)) {
+  if (checkOpenTabs(openTabs, fromSettingsChange)) {
     displayTabsMessage();
 
     return;

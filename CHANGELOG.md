@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.2](https://github.com/ghaschel/vscode-angular-html/compare/v2.2.1...v2.2.2) (2022-11-11)
+
+### Bug Fixes
+
+- **settings:** fixed an issue with changing settings through the settings page ([9b46e62](https://github.com/ghaschel/vscode-angular-html/commit/9b46e62b5d8760022836c52dd83dd2018b287483)), closes [#72](https://github.com/ghaschel/vscode-angular-html/issues/72)
+
 ### [2.2.1](https://github.com/ghaschel/vscode-angular-html/compare/v2.2.0...v2.2.1) (2022-10-25)
 
 ### Bug Fixes

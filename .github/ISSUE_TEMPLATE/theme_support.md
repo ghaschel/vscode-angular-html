@@ -4,10 +4,10 @@ about: Ask for support for a specific theme, or a change in a specific theme.
 title: Support extra-matched characters colors for XYZ theme
 labels: theme support
 assignees: ghaschel
-
 ---
 
 **Is your request a change or a new theme?**
+
 - [ ] Change
 - [ ] Request
 

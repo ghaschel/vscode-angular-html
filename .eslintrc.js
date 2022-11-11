@@ -470,6 +470,7 @@ var tsRules = {
   ...baseTsRules,
   'max-classes-per-file': ['error', { ignoreExpressions: true, max: 1 }],
   '@typescript-eslint/no-require-imports': ['error'],
+  'prettier/prettier': 2,
 };
 
 module.exports = {

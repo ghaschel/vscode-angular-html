@@ -1,10 +1,12 @@
 {
   "search.exclude": {
-    "out": true
+    "out": true,
+    "node_modules": true
   },
   "eslint.options": {
     "extensions": [".ts"]
   },
+  "editor.formatOnSave": true,
   "eslint.validate": ["typescript", "typescriptreact"],
   "[typescript]": {
     "editor.formatOnSave": false,
@@ -17,8 +19,5 @@
   },
   "html.format.extraLiners": "head, body, /html, fieldset",
   "html.format.wrapAttributes": "force-expand-multiline",
-  "html.format.indentInnerHtml": true,
-  "scss.validate": false,
-  "css.validate": false,
-  "less.validate": false
+  "html.format.indentInnerHtml": true
 }

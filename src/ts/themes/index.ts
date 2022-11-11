@@ -114,7 +114,7 @@ const updateScopeColors = async (): Promise<void> => {
     '',
   ) as unknown as SupportedThemes;
 
-  if (supportedThemes.includes(theme as unknown as string)) {
+  if (supportedThemes.includes(theme)) {
     scopeColors = await import(`./${theme}`);
   } else {
     const themeColors = await fetchThemeColors();

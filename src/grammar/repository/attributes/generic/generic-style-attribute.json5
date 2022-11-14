@@ -21,7 +21,7 @@
           name: 'string.quoted.double.html',
         },
       },
-      begin: '(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)\\b(style)+\\b(=)(")',
+      begin: '(?<!\\S)(?!(?:ref|let|data|aria)?-)(?<!\\*|\\#)\\b(style)+\\b(=)(")',
       end: '.?(")',
       patterns: [
         {

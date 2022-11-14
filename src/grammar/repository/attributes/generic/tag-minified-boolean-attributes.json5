@@ -15,7 +15,7 @@
           name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix',
         },
       },
-      match: '(?<!\\S)(?!(?:ref|let)?-)([\\w-]+)(:)?([\\w\\-\\_$]+)?\\b(?!=)',
+      match: '(?<!\\S)(?!(?:ref|let|data|aria)?-)([\\w-]+)(:)?([\\w\\-\\_$]+)?\\b(?!=)',
     },
   },
 }

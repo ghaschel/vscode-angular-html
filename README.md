@@ -42,6 +42,8 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
   - [Regex](#regex)
   - [Deprecated attributes](#deprecated-attributes)
   - [Deprecated tags](#deprecated-tags)
+  - [ARIA-prefixed attributes](#aria-prefixed-attributes)
+  - [Data attributes](#data-attributes)
 - [SVG](#svg)
   - [Non-string attributes](#non-string-attributes)
   - [Deprecated tags](#deprecated-tags-1)
@@ -166,6 +168,16 @@ And with [colorize support](https://marketplace.visualstudio.com/items?itemName=
 > See the [complete list](docs/DEPRECATED-HTML-TAGS.md)
 
 <img src="assets/deprecated-html-tags.png" title="Deprecated tags" alt="Deprecated tags" />
+
+## ARIA-prefixed attributes
+
+> See the [complete list](docs/ARIA-ATTRIBUTES.md)
+
+<img src="assets/aria-attributes.png" title="Aria attributes" alt="Aria attributes" />
+
+## Data attributes
+
+<img src="assets/data-attributes.png" title="Data attributes" alt="Data attributes" />
 
 # SVG
 

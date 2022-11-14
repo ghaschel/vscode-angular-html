@@ -1,0 +1,12 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.data-attribute.prefix',
+      configRule: 'vscode-angular-html.dataAttributePrefix',
+    },
+    {
+      scope: 'html-template.ng.data-attribute.suffix',
+      configRule: 'vscode-angular-html.dataAttributeSuffix',
+    },
+  ],
+}

@@ -94,6 +94,11 @@ const applyScopeColors = async (scopeColors: Scopes): Promise<void> => {
   settings['vscode-angular-html.htmlStyleAttributesLanguageIdentifier'] =
     scopeColors[LegacyScopes.htmlStyleAttributesLanguageIdentifier];
   settings['vscode-angular-html.htmlTags'] = scopeColors[LegacyScopes.htmlTags];
+  settings['vscode-angular-html.ariaAttributePrefix'] = scopeColors[LegacyScopes.ariaAttributePrefix];
+  settings['vscode-angular-html.ariaAttributeSuffix'] = scopeColors[LegacyScopes.ariaAttributeSuffix];
+  settings['vscode-angular-html.dataAttributePrefix'] = scopeColors[LegacyScopes.dataAttributePrefix];
+  settings['vscode-angular-html.dataAttributeSuffix'] = scopeColors[LegacyScopes.dataAttributeSuffix];
+  settings['vscode-angular-html.htmlTags'] = scopeColors[LegacyScopes.htmlTags];
   settings['vscode-angular-html.primeNgElementTags'] = scopeColors[LegacyScopes.primeNgElementTags];
   settings['vscode-angular-html.svgDAttributePathCommands'] = scopeColors[LegacyScopes.svgDAttributePathCommands];
   settings['vscode-angular-html.svgTags'] = scopeColors[LegacyScopes.svgTags];
@@ -114,7 +119,7 @@ const updateScopeColors = async (): Promise<void> => {
     '',
   ) as unknown as SupportedThemes;
 
-  if (supportedThemes.includes(theme as unknown as string)) {
+  if (supportedThemes.includes(theme)) {
     scopeColors = await import(`./${theme}`);
   } else {
     const themeColors = await fetchThemeColors();

@@ -12,6 +12,10 @@ export interface PackageNls {
   'ext.settings.html.htmlScriptAttributesLanguageIdentifier': string;
   'ext.settings.html.htmlTags': string;
   'ext.settings.html.htmlCustomTags': string;
+  'ext.settings.html.ariaAttributePrefix': string;
+  'ext.settings.html.ariaAttributeSuffix': string;
+  'ext.settings.html.dataAttributePrefix': string;
+  'ext.settings.html.dataAttributeSuffix': string;
   'ext.settings.angular.angularExpression': string;
   'ext.settings.angular.angularAndAngularMaterialElementTags': string;
   'ext.settings.angular.angularAnimationTriggerPrefix': string;

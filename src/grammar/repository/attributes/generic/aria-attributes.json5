@@ -1,0 +1,45 @@
+{
+  repository: {
+    'aria-attributes': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.attribute.$2.html',
+        },
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.aria-attribute.prefix',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.aria-attribute.suffix',
+        },
+        '3': {
+          name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+        },
+        '4': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      endCaptures: {
+        '1': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      begin: '(?<!\\S)(aria-)(valuetext|valuenow|valuemin|valuemax|sort|setsize|selected|rowspan|rowindex|rowcount|roledescription|required|relevant|readonly|pressed|posinset|placeholder|owns|orientation|multiselectable|multiline|modal|live|level|labelledby|label|keyshortcuts|invalid|hidden|haspopup|grabbed|flowto|expanded|errormessage|dropeffect|disabled|details|description|describedby|current|controls|colspan|colindex|colcount|checked|busy|autocomplete|atomic|activedescendant)\\b(=)(")',
+      end: '(")',
+      patterns: [
+        {
+          begin: '(?<=")',
+          end: '(?=")',
+          patterns: [
+            {
+              match: '([[:alpha:]0-9\\s\\-_&$@\\#\\%\\^\\;\\+\\*!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})',
+              name: 'string.quoted.double.html',
+            },
+            {
+              include: '#angular-interpolations',
+            },
+          ],
+        },
+      ],
+    },
+  },
+}

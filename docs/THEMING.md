@@ -19,6 +19,8 @@
   - [Entities](#entities)
   - [DOM events](#dom-events)
   - [Generic attributes](#generic-attributes)
+  - [ARIA attributes](#aria-attributes)
+  - [Data attributes](#data-attributes)
 - [SVG](#svg)
   - [Non-string attributes](#non-string-attributes)
 - [XML](#xml)
@@ -141,6 +143,20 @@
 <img src="../assets/generic-attributes.png" title="Generic attributes" alt="Generic attributes" />
 
 - `class` - html-template.ng.attributes.generic
+
+## ARIA attributes
+
+<img src="../assets/aria-attributes.png" title="Aria attributes" alt="Aria attributes" />
+
+- `aria-` - html-template.ng.aria-attribute.prefix
+- `sort` - html-template.ng.aria-attribute.suffix
+
+## Data attributes
+
+<img src="../assets/data-attributes.png" title="Data attributes" alt="Data attributes" />
+
+- `data-` - html-template.ng.data-attribute.prefix
+- `test` - html-template.ng.data-attribute.suffix
 
 # SVG
 

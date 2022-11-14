@@ -1,0 +1,18 @@
+{
+  repository: {
+    'aria-boolean-attributes': {
+      captures: {
+        '0': {
+          name: 'meta.attribute.$2.html',
+        },
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.aria-attribute.prefix',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.aria-attribute.suffix',
+        },
+      },
+      match: '(?<!\\S)(aria-)(valuetext|valuenow|valuemin|valuemax|sort|setsize|selected|rowspan|rowindex|rowcount|roledescription|required|relevant|readonly|pressed|posinset|placeholder|owns|orientation|multiselectable|multiline|modal|live|level|labelledby|label|keyshortcuts|invalid|hidden|haspopup|grabbed|flowto|expanded|errormessage|dropeffect|disabled|details|description|describedby|current|controls|colspan|colindex|colcount|checked|busy|autocomplete|atomic|activedescendant)\\b(?!=)',
+    },
+  },
+}

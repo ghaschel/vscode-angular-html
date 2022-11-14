@@ -19,7 +19,11 @@
       "htmlScriptAttributesLanguageIdentifier": "",
       "htmlTags": "",
       "htmlCustomTags": "",
-      "seeHtmlEvents": ""
+      "seeHtmlEvents": "",
+      "ariaAttributePrefix": "",
+      "ariaAttributeSuffix": "",
+      "dataAttributePrefix": "",
+      "dataAttributeSuffix": ""
     },
     "angular": {
       "angularExpression": "",

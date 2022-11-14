@@ -25,6 +25,8 @@ export enum LegacyScopes {
   htmlGenericAttributesFollowedByParameter = 'support.type.object.html-attribute',
   angularPrefixedAttributesVariableName = 'support.type.object.html-attribute',
   htmlEventsAttributes = 'support.type.object.html-attribute',
+  ariaAttributeSuffix = 'support.type.object.html-attribute',
+  dataAttributeSuffix = 'support.type.object.html-attribute',
 
   htmlDoctypeElement = 'constant.character.entity.html',
   dtdDoctypeElement = 'constant.character.entity.html',
@@ -48,8 +50,10 @@ export enum LegacyScopes {
   angularSyntaxSugarAttributesName = 'constant.numeric.angular-directive',
   angularTemplateVariableName = 'constant.numeric.angular-directive',
   xmlStylesheetAttributesLanguageIdentifier = 'constant.numeric.angular-directive',
+  dataAttributePrefix = 'constant.numeric.angular-directive',
 
   angularPrefixedAttributesLetPrefix = 'keyword.operator.expression.let.js',
+  ariaAttributePrefix = 'keyword.operator.expression.let.js',
 }
 
 export interface Scopes {

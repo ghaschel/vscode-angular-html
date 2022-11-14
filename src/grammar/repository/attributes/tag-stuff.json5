@@ -2,6 +2,10 @@
   repository: {
     'tag-stuff': {
       patterns: [
+        { include: '#aria-attributes' },
+        { include: '#aria-boolean-attributes' },
+        { include: '#data-attributes' },
+        { include: '#data-boolean-attributes' },
         { include: '#generic-style-attribute' },
         { include: '#tag-double-way-non-standard' },
         { include: '#tag-double-way-standard' },

@@ -16,3 +16,11 @@ out/**/*.map
 commitlint.config.js
 gulpfile.js
 package-lock.json
+tsconfig.json
+tsconfig.test.json
+node_modules
+webpack.config.js
+*.todo
+.hushlogin
+.eslintrc.js
+.prettierignore

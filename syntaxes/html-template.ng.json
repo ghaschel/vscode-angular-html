@@ -203,6 +203,18 @@
     "tag-stuff": {
       "patterns": [
         {
+          "include": "#aria-attributes"
+        },
+        {
+          "include": "#aria-boolean-attributes"
+        },
+        {
+          "include": "#data-attributes"
+        },
+        {
+          "include": "#data-boolean-attributes"
+        },
+        {
           "include": "#generic-style-attribute"
         },
         {
@@ -365,6 +377,977 @@
       "end": "\"",
       "name": "string.quoted.double.html"
     },
+    "tag-alt-template-variable": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.ng-binding.template.variable.alt.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        },
+        "4": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "5": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.ng-binding.template.variable.alt.html"
+        },
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(ref\\-)\\b([\\w\\-\\_]+)([$]*)(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-expression"
+        }
+      ]
+    },
+    "tag-annimation-trigger": {
+      "captures": {
+        "0": {
+          "name": "meta.ng-animation-trigger.property.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.animationtrigger.prefix"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.animationtrigger.variable"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        }
+      },
+      "match": "(?<!\\[|\\()(@)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
+    },
+    "tag-boolean-alt-template-variable": {
+      "captures": {
+        "0": {
+          "name": "meta.ng-binding.template.variable.boolean.alt.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        }
+      },
+      "match": "(ref\\-)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
+    },
+    "tag-boolean-sugar-attributes": {
+      "captures": {
+        "0": {
+          "name": "meta.ng-binding.template.sugar.boolean.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.sugar"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.sugar"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        }
+      },
+      "match": "(\\*)([\\w\\-\\_]+)?([$]*)?(?!=)[\\s]?"
+    },
+    "tag-boolean-template-input-variable": {
+      "captures": {
+        "0": {
+          "name": "meta.ng-binding.template.input.variable.boolean.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        }
+      },
+      "match": "(let\\-)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
+    },
+    "tag-boolean-template-variable": {
+      "captures": {
+        "0": {
+          "name": "meta.ng-binding.template.variable.boolean.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.template.prefix"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.template.variable"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        }
+      },
+      "match": "(#)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
+    },
+    "tag-double-way-non-standard": {
+      "captures": {
+        "0": {
+          "name": "meta.ng-binding.two-way-non-standard.html entity.other.attribute-name.html"
+        },
+        "1": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.begin.html"
+        },
+        "2": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html html-template.ng.attributes.input-binding.animationTrigger.prefix"
+        },
+        "3": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$3.html html-template.ng.attributes.input-binding.first-level"
+        },
+        "4": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$4.html html-template.ng.attributes.input-binding.second-level"
+        },
+        "5": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$5.html html-template.ng.attributes.input-binding.third-level"
+        },
+        "6": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.end.html"
+        },
+        "7": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "8": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.ng-binding.two-way-non-standard.html"
+        },
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\()(\\(\\[)(@)?([a-zA-Z0-9\\-_\\$]+)(?:[\\:\\.]([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*(\\]\\))(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-expression"
+        }
+      ]
+    },
+    "tag-double-way-standard": {
+      "captures": {
+        "0": {
+          "name": "meta.ng-binding.two-way.html entity.other.attribute-name.html"
+        },
+        "1": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.begin.html"
+        },
+        "2": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html html-template.ng.attributes.input-binding.animationTrigger.prefix"
+        },
+        "3": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$3.html html-template.ng.attributes.input-binding.first-level"
+        },
+        "4": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$4.html html-template.ng.attributes.input-binding.second-level"
+        },
+        "5": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$5.html html-template.ng.attributes.input-binding.third-level"
+        },
+        "6": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.end.html"
+        },
+        "7": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "8": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.ng-binding.two-way.html"
+        },
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\()(\\[\\()(@)?([a-zA-Z0-9\\-_\\$]+)(?:[\\:\\.]([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*(\\)\\])(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-expression"
+        }
+      ]
+    },
+    "tag-event-handler": {
+      "name": "meta.ng-binding.event.html",
+      "captures": {
+        "0": {
+          "name": "meta.ng-binding.event.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html entity.other.ng-binding-name.event.html punctuation.definition.ng-binding-name.begin.html"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html entity.other.ng-binding-name.event.html\tentity.other.ng-binding-name.$2.html html-template.ng.attributes.event-handler"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.property.html entity.other.ng-binding-name.binding.html\tentity.other.ng-binding-name.$4.html html-template.ng.attributes.input-binding.second-level"
+        },
+        "4": {
+          "name": "entity.other.attribute-name.property.html entity.other.ng-binding-name.binding.html\tentity.other.ng-binding-name.$5.html html-template.ng.attributes.input-binding.third-level"
+        },
+        "5": {
+          "name": "entity.other.attribute-name.html entity.other.ng-binding-name.event.html punctuation.definition.ng-binding-name.end.html"
+        },
+        "6": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "7": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.ng-binding.event.html"
+        },
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\[)(\\()([a-zA-Z0-9\\-_\\$]+)(?:\\.([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*(\\))(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-expression"
+        }
+      ]
+    },
+    "tag-input-binding": {
+      "captures": {
+        "0": {
+          "name": "meta.ng-binding.property.html entity.other.attribute-name.html"
+        },
+        "1": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.begin.html"
+        },
+        "2": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html html-template.ng.attributes.input-binding.animationTrigger.prefix"
+        },
+        "3": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html entity.other.ng-binding-name.$3.html html-template.ng.attributes.input-binding.first-level"
+        },
+        "4": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html\tentity.other.ng-binding-name.$4.html html-template.ng.attributes.input-binding.second-level"
+        },
+        "5": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html\tentity.other.ng-binding-name.$5.html html-template.ng.attributes.input-binding.third-level"
+        },
+        "6": {
+          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.end.html"
+        },
+        "7": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "8": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.ng-binding.property.html"
+        },
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\()(\\[)(@)?([a-zA-Z0-9\\-_\\$]+)(?:\\.([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*(\\])(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-expression"
+        }
+      ]
+    },
+    "tag-sugar-attributes": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.ng-binding.template.sugar.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.sugar"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.sugar"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        },
+        "4": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "5": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.ng-binding.template.sugar.html"
+        },
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(\\*)\\b([\\w\\-\\_]+)([$]*)(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-expression"
+        }
+      ]
+    },
+    "tag-template-input-variable": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.ng-binding.template.input.variable.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        },
+        "4": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "5": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.ng-binding.template.variable.alt.html"
+        },
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(let\\-)\\b([\\w\\-\\_]+)([$]*)(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-expression"
+        }
+      ]
+    },
+    "tag-template-variable": {
+      "captures": {
+        "0": {
+          "name": "meta.ng-binding.template.variable.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.template.prefix"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.template.variable"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
+        },
+        "4": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "5": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.ng-binding.template.variable.html"
+        },
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(#)\\b([\\w\\-\\_]+)([$]*)(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "include": "#angular-expression"
+        }
+      ]
+    },
+    "aria-attributes": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.attribute.$2.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.aria-attribute.prefix"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.aria-attribute.suffix"
+        },
+        "3": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "4": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\S)(aria-)(valuetext|valuenow|valuemin|valuemax|sort|setsize|selected|rowspan|rowindex|rowcount|roledescription|required|relevant|readonly|pressed|posinset|placeholder|owns|orientation|multiselectable|multiline|modal|live|level|labelledby|label|keyshortcuts|invalid|hidden|haspopup|grabbed|flowto|expanded|errormessage|dropeffect|disabled|details|description|describedby|current|controls|colspan|colindex|colcount|checked|busy|autocomplete|atomic|activedescendant)\\b(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "begin": "(?<=\")",
+          "end": "(?=\")",
+          "patterns": [
+            {
+              "match": "([[:alpha:]0-9\\s\\-_&$@\\#\\%\\^\\;\\+\\*!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})",
+              "name": "string.quoted.double.html"
+            },
+            {
+              "include": "#angular-interpolations"
+            }
+          ]
+        }
+      ]
+    },
+    "aria-boolean-attributes": {
+      "captures": {
+        "0": {
+          "name": "meta.attribute.$2.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.aria-attribute.prefix"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.aria-attribute.suffix"
+        }
+      },
+      "match": "(?<!\\S)(aria-)(valuetext|valuenow|valuemin|valuemax|sort|setsize|selected|rowspan|rowindex|rowcount|roledescription|required|relevant|readonly|pressed|posinset|placeholder|owns|orientation|multiselectable|multiline|modal|live|level|labelledby|label|keyshortcuts|invalid|hidden|haspopup|grabbed|flowto|expanded|errormessage|dropeffect|disabled|details|description|describedby|current|controls|colspan|colindex|colcount|checked|busy|autocomplete|atomic|activedescendant)\\b(?!=)"
+    },
+    "data-attributes": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.attribute.$2.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.data-attribute.prefix"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.data-attribute.suffix"
+        },
+        "3": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "4": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\S)(data-)([\\w\\-\\_$]+)\\b(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "begin": "(?<=\")",
+          "end": "(?=\")",
+          "patterns": [
+            {
+              "match": "([[:alpha:]0-9\\s\\-_&$@\\#\\%\\^\\;\\+\\*!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})",
+              "name": "string.quoted.double.html"
+            },
+            {
+              "include": "#angular-interpolations"
+            }
+          ]
+        }
+      ]
+    },
+    "data-boolean-attributes": {
+      "captures": {
+        "0": {
+          "name": "meta.attribute.$2.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.data-attribute.prefix"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.data-attribute.suffix"
+        }
+      },
+      "match": "(?<!\\S)(data-)([\\w\\-\\_$]+)\\b(?!=)"
+    },
+    "generic-style-attribute": {
+      "name": "meta.property-list.scss",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.attribute.style.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+        },
+        "2": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "3": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\S)(?!(?:ref|let|data|aria)?-)(?<!\\*|\\#)\\b(style)+\\b(=)(\")",
+      "end": ".?(\")",
+      "patterns": [
+        {
+          "begin": "(?<![-a-z]|\\(|, |:)(?=[-a-z])",
+          "end": "$|(?![-a-z])",
+          "name": "meta.embeded.line.css meta.property-name.scss",
+          "patterns": [
+            {
+              "match": "\\b(source|scroll-offsets|syntax|initialvalue|inherits)\\b",
+              "name": "support.type.property-name.css"
+            },
+            {
+              "include": "source.css#property-names"
+            }
+          ]
+        },
+        {
+          "begin": "(:)\\s*(?!(\\s*{))",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.separator.key-value.scss"
+            }
+          },
+          "end": "\\s*(;|(?=\"|\\)))",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.terminator.rule.scss"
+            }
+          },
+          "contentName": "meta.property-value.scss",
+          "patterns": [
+            {
+              "match": "\\b(false|true)\\b",
+              "name": "constant.language.boolean.css"
+            },
+            {
+              "begin": "\\b(selector)(\\()",
+              "beginCaptures": {
+                "1": {
+                  "name": "support.function.misc.scss"
+                },
+                "2": {
+                  "name": "punctuation.section.function.scss"
+                }
+              },
+              "end": "(\\))",
+              "endCaptures": {
+                "1": {
+                  "name": "punctuation.section.function.scss"
+                }
+              },
+              "patterns": [
+                {
+                  "include": "source.css.scss#selectors"
+                }
+              ]
+            },
+            {
+              "include": "source.css.scss#general"
+            },
+            {
+              "include": "source.css.scss#property_values"
+            }
+          ]
+        }
+      ]
+    },
+    "tag-events-attribute": {
+      "captures": {
+        "0": {
+          "name": "meta.attribute.event-handler.$1.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.events"
+        },
+        "2": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        }
+      },
+      "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting)+(=)",
+      "end": "(?<='|\")|(?=[\\s<>`])",
+      "patterns": [
+        {
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.html"
+            },
+            "1": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#angular-expression"
+            }
+          ],
+          "begin": "(\")",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.html"
+            },
+            "1": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "end": "(\")"
+        },
+        {
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.html"
+            },
+            "1": {
+              "name": "string.quoted.single.html"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#angular-expression"
+            }
+          ],
+          "begin": "(')",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.html"
+            },
+            "1": {
+              "name": "string.quoted.single.html"
+            }
+          },
+          "end": "(')"
+        }
+      ]
+    },
+    "tag-generic-attribute": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.attribute.$2.html"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+        },
+        "4": {
+          "name": "entity.other.attribute.name.html html-template.ng.attributes.generic html-template.ng.attributes.input-binding.second-level"
+        },
+        "5": {
+          "name": "entity.other.attribute.name.html html-template.ng.attributes.generic html-template.ng.attributes.input-binding.third-level"
+        },
+        "6": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
+        },
+        "7": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
+        },
+        "8": {
+          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+        },
+        "9": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.double.html"
+        }
+      },
+      "begin": "(?<!\\S)(?!(?:ref|let|data|aria)?-)(?<!\\*|\\#)(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b(([a-zA-Z0-9\\-_\\$]+)(?:[\\.]([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))?)(:)?([\\w\\-\\_$]+)?\\b(=)(\")",
+      "end": "(\")",
+      "patterns": [
+        {
+          "begin": "(?<=\")",
+          "end": "(?=\")",
+          "patterns": [
+            {
+              "match": "([[:alpha:]0-9\\s\\-_&$@\\#\\%\\^\\;\\+\\*!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})",
+              "name": "string.quoted.double.html"
+            },
+            {
+              "include": "#angular-interpolations"
+            }
+          ]
+        }
+      ]
+    },
+    "tag-minified-boolean-attributes": {
+      "captures": {
+        "0": {
+          "name": "meta.attribute.$1.boolean.html"
+        },
+        "1": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
+        }
+      },
+      "match": "(?<!\\S)(?!(?:ref|let|data|aria)?-)([\\w-]+)(:)?([\\w\\-\\_$]+)?\\b(?!=)"
+    },
+    "script-type-attribute": {
+      "patterns": [
+        {
+          "match": "[\\s]*(type)(=)(\")((text|application)/((x-)?(javascript|typescript|coffeescript|dart|ecmascript))|(module))(\")",
+          "captures": {
+            "0": {
+              "name": "meta.attribute.$1.html"
+            },
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "3": {
+              "name": "string.quoted.double.html"
+            },
+            "4": {
+              "name": "string.quoted.double.html"
+            },
+            "6": {
+              "name": "html-template.ng.script.language.identifier"
+            },
+            "9": {
+              "name": "html-template.ng.script.language.identifier"
+            },
+            "10": {
+              "name": "string.quoted.double.html"
+            }
+          }
+        },
+        {
+          "match": "[\\s]*(type)(=)(')((text|application)/((x-)?(javascript|typescript|coffeescript|dart|ecmascript))|(module))(')",
+          "captures": {
+            "0": {
+              "name": "meta.attribute.$1.html"
+            },
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "3": {
+              "name": "string.quoted.double.html"
+            },
+            "4": {
+              "name": "string.quoted.double.html"
+            },
+            "6": {
+              "name": "html-template.ng.script.language.identifier"
+            },
+            "9": {
+              "name": "html-template.ng.script.language.identifier"
+            },
+            "10": {
+              "name": "string.quoted.double.html"
+            }
+          }
+        },
+        {
+          "match": "[\\s]*(lang)(=)(\"(javascript|typescript|coffeescript|dart)\")",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "3": {
+              "name": "string.quoted.double.html"
+            },
+            "4": {
+              "name": "string.quoted.double.html html-template.ng.script.language.identifier"
+            }
+          }
+        },
+        {
+          "match": "[\\s]*(lang)(=)('(javascript|typescript|coffeescript|dart)')",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "3": {
+              "name": "string.quoted.single.html"
+            },
+            "4": {
+              "name": "html-template.ng.script.language.identifier"
+            }
+          }
+        }
+      ]
+    },
+    "style-type-attribute": {
+      "patterns": [
+        {
+          "match": "[\\s]*(type)(=)(\"(text|stylesheet)/(css|scss|less|sass|stylus|styl|postcss)\")",
+          "captures": {
+            "0": {
+              "name": "meta.attribute.$1.html"
+            },
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "3": {
+              "name": "string.quoted.double.html"
+            },
+            "5": {
+              "name": "string.quoted.double.html html-template.ng.style.language.identifier"
+            }
+          }
+        },
+        {
+          "match": "[\\s]*(lang)(=)(\"(css|scss|less|sass|stylus|styl|postcss)\")",
+          "captures": {
+            "0": {
+              "name": "meta.attribute.$1.html"
+            },
+            "1": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "3": {
+              "name": "string.quoted.single.html"
+            },
+            "4": {
+              "name": "html-template.ng.style.language.identifier"
+            }
+          }
+        }
+      ]
+    },
+    "svg-non-string-attributes": {
+      "patterns": [
+        {
+          "name": "meta.element.attribute.$2.svg",
+          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(d))\\b(?![\\w-]))(=)(\")",
+          "beginCaptures": {
+            "0": {
+              "name": "meta.attribute.svg.$2.html"
+            },
+            "2": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "4": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "end": "(\")",
+          "endCaptures": {
+            "1": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "patterns": [
+            {
+              "match": "([0-9]+)|([MmLlHhVvCcSsQqTtAaZz]+)|([\\.\\,\\-]+)",
+              "captures": {
+                "1": {
+                  "name": "constant.numeric.css"
+                },
+                "2": {
+                  "name": "keyword.other.commands.path.svg html-template.ng.svg.path.commands"
+                },
+                "3": {
+                  "name": "punctuation.separator.delimiter.scss"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "meta.element.attribute.$2.svg",
+          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(amplitude|azimuth|baseFrequency|begin|bias|by|clip-path|color|cursor|cx|cy|diffuseConstant|divisor|dur|dx|dy|elevation|end|exponent|fill-opacity|fill|filter|flood-color|flood-opacity|font-size-adjust|font-size|font-weight|from|fr|fx|fy|gradientTransform|hatchpath|height|intercept|k1|k2|k3|k4|kernelMatrix|keyPoints|keySplines|keyTimes|letter-spacing|lighting-color|limitingConeAngle|marker-end|marker-mid|marker-start|markerHeight|markerWidth|mask|max|media|min|numOctaves|offset|opacity|order|overline-position|overline-thickness|pathLength|patternTransform|pointsAtX|pointsAtY|pointsAtZ|points|radius|refX|refY|repeatCount|repeatDur|rotate|rx|ry|r|scale|seed|solid-color|solid-opacity|specularConstant|specularExponent|startOffset|stdDeviation|stop-color|stop-opacity|strikethrough-position|strikethrough-thickness|stroke-dashoffset|stroke-dassharray|stroke-miterlimit|stroke-width|stroke|surfaceScale|tabindex|tableValues|targetX|targetY|textLength|to|transform-origin|transform2|transform|underline-position|underline-thickness|values|viewbox|width|word-spacing|x1|x2|x|y1|y2|y|z))\\b(?![\\w-]))(=)(\")",
+          "beginCaptures": {
+            "2": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "4": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "end": "(\")",
+          "endCaptures": {
+            "1": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "patterns": [
+            {
+              "begin": "(?<=\")",
+              "end": "(?=\")",
+              "name": "string.quoted.double.html",
+              "patterns": [
+                {
+                  "include": "source.css.scss#property_values"
+                },
+                {
+                  "include": "#angular-interpolations"
+                },
+                {
+                  "include": "#entities"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "tag-definition-angular": {
       "beginCaptures": {
         "0": {
@@ -435,6 +1418,41 @@
       "end": "(/?>)",
       "name": "meta.element.custom.html"
     },
+    "tag-definition-primeng": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.primeng.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "meta.tag.structure.html entity.name.tag.html.primeng entity.name.tag.html.primeng.$2"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ],
+      "begin": "(</?)(p-accordionTab|p-accordion|p-autocomplete|p-autoComplete|p-avatarGroup|p-avatar|p-badge|p-blockUI|p-breadcrumb|p-button|p-calendar|p-captcha|p-card|p-carousel|p-cascadeSelectSub|p-cascadeSelect|p-cellEditor|p-chart|p-checkbox|p-chips|p-chip|p-colorPicker|p-columnFilter|p-confirmDialog|p-confirmPopup|p-contextMenuSub|p-contextMenu|p-dataView|p-dialog|p-divider|p-dock|p-dropdownItem|p-dropdown|p-dynamicDialog|p-editor|p-fieldset|p-fileUpload|p-fullCalendar|p-galleria|p-gmap|p-header|p-image|p-inplaceDisplay|p-inplace|p-inputMask|p-inputNumber|p-inputSwitch|p-knob|p-lightbox|p-listbox|p-megaMenu|p-menubarSub|p-menubar|p-menu|p-messages|p-message|p-multiSelectItem|p-multiSelect|p-orderList|p-organizationChart|p-overlayPanel|p-paginator|p-panelMenuSub|p-panelMenu|p-panel|p-password|p-pickList|p-progressBar|p-progressSpinner|p-radioButton|p-rating|p-scroller|p-scrollPanel|p-scrollTop|p-selectButton|p-sidebar|p-skeleton|p-slideMenuSub|p-slideMenu|p-slider|p-sortIcon|p-speedDial|p-spinner|p-splitButton|p-splitter|p-steps|p-tableCheckbox|p-tableHeaderCheckbox|p-tableRadioButton|p-table|p-tabMenu|p-tabPanel|p-tabView|p-tag|p-terminal|p-tieredMenuSub|p-tieredMenu|p-timeline|p-toastItem|p-toast|p-toggleButton|p-toolbar|p-treeNode|p-treeSelect|p-treeTableCellEditor|p-treeTableCheckbox|p-treeTableSortIcon|p-treeTableToggler|p-treeTable|p-tree|p-triStateCheckbox|p-virtualScroller)(:)?([\\w\\-\\_$]+)?\\b",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.primeng.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "end": "(/?>)",
+      "name": "meta.element.primeng.html"
+    },
     "comment": {
       "patterns": [
         {
@@ -485,11 +1503,15 @@
             {
               "begin": "(\\[)",
               "beginCaptures": {
-                "0": "punctuation.definition.dtd.begin.html"
+                "0": {
+                  "name": "punctuation.definition.dtd.begin.html"
+                }
               },
               "end": "(\\])",
               "endCaptures": {
-                "0": "punctuation.definition.dtd.end.html"
+                "0": {
+                  "name": "punctuation.definition.dtd.end.html"
+                }
               },
               "patterns": [
                 {
@@ -800,41 +1822,6 @@
       },
       "end": "(/?>)",
       "name": "meta.element.structure.html"
-    },
-    "tag-definition-primeng": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.primeng.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "meta.tag.structure.html entity.name.tag.html.primeng entity.name.tag.html.primeng.$2"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ],
-      "begin": "(</?)(p-accordionTab|p-accordion|p-autocomplete|p-autoComplete|p-avatarGroup|p-avatar|p-badge|p-blockUI|p-breadcrumb|p-button|p-calendar|p-captcha|p-card|p-carousel|p-cascadeSelectSub|p-cascadeSelect|p-cellEditor|p-chart|p-checkbox|p-chips|p-chip|p-colorPicker|p-columnFilter|p-confirmDialog|p-confirmPopup|p-contextMenuSub|p-contextMenu|p-dataView|p-dialog|p-divider|p-dock|p-dropdownItem|p-dropdown|p-dynamicDialog|p-editor|p-fieldset|p-fileUpload|p-fullCalendar|p-galleria|p-gmap|p-header|p-image|p-inplaceDisplay|p-inplace|p-inputMask|p-inputNumber|p-inputSwitch|p-knob|p-lightbox|p-listbox|p-megaMenu|p-menubarSub|p-menubar|p-menu|p-messages|p-message|p-multiSelectItem|p-multiSelect|p-orderList|p-organizationChart|p-overlayPanel|p-paginator|p-panelMenuSub|p-panelMenu|p-panel|p-password|p-pickList|p-progressBar|p-progressSpinner|p-radioButton|p-rating|p-scroller|p-scrollPanel|p-scrollTop|p-selectButton|p-sidebar|p-skeleton|p-slideMenuSub|p-slideMenu|p-slider|p-sortIcon|p-speedDial|p-spinner|p-splitButton|p-splitter|p-steps|p-tableCheckbox|p-tableHeaderCheckbox|p-tableRadioButton|p-table|p-tabMenu|p-tabPanel|p-tabView|p-tag|p-terminal|p-tieredMenuSub|p-tieredMenu|p-timeline|p-toastItem|p-toast|p-toggleButton|p-toolbar|p-treeNode|p-treeSelect|p-treeTableCellEditor|p-treeTableCheckbox|p-treeTableSortIcon|p-treeTableToggler|p-treeTable|p-tree|p-triStateCheckbox|p-virtualScroller)(:)?([\\w\\-\\_$]+)?\\b",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.primeng.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "end": "(/?>)",
-      "name": "meta.element.primeng.html"
     },
     "tag-svg": {
       "begin": "(^[\\t]+)?(?=<(?i:svg)\\b(?!(?:[\\w-])))",
@@ -1449,1692 +2436,37 @@
         }
       ]
     },
-    "tag-alt-template-variable": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.ng-binding.template.variable.alt.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        },
-        "4": {
-          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-        },
-        "5": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.ng-binding.template.variable.alt.html"
-        },
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(ref\\-)\\b([\\w\\-\\_]+)([$]*)(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-expression"
-        }
-      ]
-    },
-    "tag-annimation-trigger": {
-      "captures": {
-        "0": {
-          "name": "meta.ng-animation-trigger.property.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.animationtrigger.prefix"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.animationtrigger.variable"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        }
-      },
-      "match": "(?<!\\[|\\()(@)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
-    },
-    "tag-boolean-alt-template-variable": {
-      "captures": {
-        "0": {
-          "name": "meta.ng-binding.template.variable.boolean.alt.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.ref"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        }
-      },
-      "match": "(ref\\-)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
-    },
-    "tag-boolean-sugar-attributes": {
-      "captures": {
-        "0": {
-          "name": "meta.ng-binding.template.sugar.boolean.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.sugar"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.sugar"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        }
-      },
-      "match": "(\\*)([\\w\\-\\_]+)?([$]*)?(?!=)[\\s]?"
-    },
-    "tag-boolean-template-input-variable": {
-      "captures": {
-        "0": {
-          "name": "meta.ng-binding.template.input.variable.boolean.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        }
-      },
-      "match": "(let\\-)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
-    },
-    "tag-boolean-template-variable": {
-      "captures": {
-        "0": {
-          "name": "meta.ng-binding.template.variable.boolean.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.template.prefix"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.template.variable"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        }
-      },
-      "match": "(#)\\b([\\w\\-\\_]+)([$]*)(?!=)[\\s]?"
-    },
-    "tag-double-way-non-standard": {
-      "captures": {
-        "0": {
-          "name": "meta.ng-binding.two-way-non-standard.html entity.other.attribute-name.html"
-        },
-        "1": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.begin.html"
-        },
-        "2": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html html-template.ng.attributes.input-binding.animationTrigger.prefix"
-        },
-        "3": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$3.html html-template.ng.attributes.input-binding.first-level"
-        },
-        "4": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$4.html html-template.ng.attributes.input-binding.second-level"
-        },
-        "5": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$5.html html-template.ng.attributes.input-binding.third-level"
-        },
-        "6": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.end.html"
-        },
-        "7": {
-          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-        },
-        "8": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.ng-binding.two-way-non-standard.html"
-        },
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(?<!\\()(\\(\\[)(@)?([a-zA-Z0-9\\-_\\$]+)(?:[\\:\\.]([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*(\\]\\))(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-expression"
-        }
-      ]
-    },
-    "tag-double-way-standard": {
-      "captures": {
-        "0": {
-          "name": "meta.ng-binding.two-way.html entity.other.attribute-name.html"
-        },
-        "1": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.begin.html"
-        },
-        "2": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html html-template.ng.attributes.input-binding.animationTrigger.prefix"
-        },
-        "3": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$3.html html-template.ng.attributes.input-binding.first-level"
-        },
-        "4": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$4.html html-template.ng.attributes.input-binding.second-level"
-        },
-        "5": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html\tentity.other.ng-binding-name.$5.html html-template.ng.attributes.input-binding.third-level"
-        },
-        "6": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.end.html"
-        },
-        "7": {
-          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-        },
-        "8": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.ng-binding.two-way.html"
-        },
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(?<!\\()(\\[\\()(@)?([a-zA-Z0-9\\-_\\$]+)(?:[\\:\\.]([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*(\\)\\])(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-expression"
-        }
-      ]
-    },
-    "tag-event-handler": {
-      "name": "meta.ng-binding.event.html",
-      "captures": {
-        "0": {
-          "name": "meta.ng-binding.event.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html entity.other.ng-binding-name.event.html punctuation.definition.ng-binding-name.begin.html"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html entity.other.ng-binding-name.event.html\tentity.other.ng-binding-name.$2.html html-template.ng.attributes.event-handler"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.property.html entity.other.ng-binding-name.binding.html\tentity.other.ng-binding-name.$4.html html-template.ng.attributes.input-binding.second-level"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.property.html entity.other.ng-binding-name.binding.html\tentity.other.ng-binding-name.$5.html html-template.ng.attributes.input-binding.third-level"
-        },
-        "5": {
-          "name": "entity.other.attribute-name.html entity.other.ng-binding-name.event.html punctuation.definition.ng-binding-name.end.html"
-        },
-        "6": {
-          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-        },
-        "7": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.ng-binding.event.html"
-        },
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(?<!\\[)(\\()([a-zA-Z0-9\\-_\\$]+)(?:\\.([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*(\\))(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-expression"
-        }
-      ]
-    },
-    "tag-input-binding": {
-      "captures": {
-        "0": {
-          "name": "meta.ng-binding.property.html entity.other.attribute-name.html"
-        },
-        "1": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.begin.html"
-        },
-        "2": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html html-template.ng.attributes.input-binding.animationTrigger.prefix"
-        },
-        "3": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html entity.other.ng-binding-name.$3.html html-template.ng.attributes.input-binding.first-level"
-        },
-        "4": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html\tentity.other.ng-binding-name.$4.html html-template.ng.attributes.input-binding.second-level"
-        },
-        "5": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html\tentity.other.ng-binding-name.$5.html html-template.ng.attributes.input-binding.third-level"
-        },
-        "6": {
-          "name": "entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.end.html"
-        },
-        "7": {
-          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-        },
-        "8": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.ng-binding.property.html"
-        },
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(?<!\\()(\\[)(@)?([a-zA-Z0-9\\-_\\$]+)(?:\\.([a-zA-Z0-9\\-_\\%]+))?(?:\\.([a-zA-Z0-9\\-_\\%]+))*(\\])(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-expression"
-        }
-      ]
-    },
-    "tag-sugar-attributes": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.ng-binding.template.sugar.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.sugar"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.sugar"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        },
-        "4": {
-          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-        },
-        "5": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.ng-binding.template.sugar.html"
-        },
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(\\*)\\b([\\w\\-\\_]+)([$]*)(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-expression"
-        }
-      ]
-    },
-    "tag-template-input-variable": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.ng-binding.template.input.variable.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.prefix.let"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.name"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        },
-        "4": {
-          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-        },
-        "5": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.ng-binding.template.variable.alt.html"
-        },
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(let\\-)\\b([\\w\\-\\_]+)([$]*)(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-expression"
-        }
-      ]
-    },
-    "tag-template-variable": {
-      "captures": {
-        "0": {
-          "name": "meta.ng-binding.template.variable.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.template.prefix"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.template.variable"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs"
-        },
-        "4": {
-          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-        },
-        "5": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.ng-binding.template.variable.html"
-        },
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(#)\\b([\\w\\-\\_]+)([$]*)(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "include": "#angular-expression"
-        }
-      ]
-    },
-    "generic-style-attribute": {
-      "name": "meta.property-list.scss",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.attribute.style.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-        },
-        "2": {
-          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-        },
-        "3": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)\\b(style)+\\b(=)(\")",
-      "end": ".?(\")",
-      "patterns": [
-        {
-          "begin": "(?<![-a-z]|\\(|, |:)(?=[-a-z])",
-          "end": "$|(?![-a-z])",
-          "name": "meta.embeded.line.css meta.property-name.scss",
-          "patterns": [
-            {
-              "match": "\\b(source|scroll-offsets|syntax|initialvalue|inherits)\\b",
-              "name": "support.type.property-name.css"
-            },
-            {
-              "include": "source.css#property-names"
-            }
-          ]
-        },
-        {
-          "begin": "(:)\\s*(?!(\\s*{))",
-          "beginCaptures": {
-            "1": {
-              "name": "punctuation.separator.key-value.scss"
-            }
-          },
-          "end": "\\s*(;|(?=\"|\\)))",
-          "endCaptures": {
-            "1": {
-              "name": "punctuation.terminator.rule.scss"
-            }
-          },
-          "contentName": "meta.property-value.scss",
-          "patterns": [
-            {
-              "match": "\\b(false|true)\\b",
-              "name": "constant.language.boolean.css"
-            },
-            {
-              "begin": "\\b(selector)(\\()",
-              "beginCaptures": {
-                "1": {
-                  "name": "support.function.misc.scss"
-                },
-                "2": {
-                  "name": "punctuation.section.function.scss"
-                }
-              },
-              "end": "(\\))",
-              "endCaptures": {
-                "1": {
-                  "name": "punctuation.section.function.scss"
-                }
-              },
-              "patterns": [
-                {
-                  "include": "source.css.scss#selectors"
-                }
-              ]
-            },
-            {
-              "include": "source.css.scss#general"
-            },
-            {
-              "include": "source.css.scss#property_values"
-            }
-          ]
-        }
-      ]
-    },
-    "tag-events-attribute": {
-      "captures": {
-        "0": {
-          "name": "meta.attribute.event-handler.$1.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.events"
-        },
-        "2": {
-          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-        }
-      },
-      "begin": "(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting)+(=)",
-      "end": "(?<='|\")|(?=[\\s<>`])",
+    "angular-interpolations": {
       "patterns": [
         {
           "beginCaptures": {
             "0": {
-              "name": "punctuation.definition.string.begin.html"
+              "name": "expression.ng"
             },
             "1": {
-              "name": "string.quoted.double.html"
+              "name": "punctuation.definition.block.ts html-template.ng.interpolation.begin"
             }
           },
           "patterns": [
+            {
+              "match": "\\?\\.|\\!\\.|\\.|\\!|\\?|\\:",
+              "name": "keyword.operator.navigation html-template.ng.expression.operator.navigator"
+            },
             {
               "include": "#angular-expression"
             }
           ],
-          "begin": "(\")",
+          "begin": "(\\{\\{\\{?)",
           "endCaptures": {
             "0": {
-              "name": "punctuation.definition.string.end.html"
+              "name": "expression.ng"
             },
             "1": {
-              "name": "string.quoted.double.html"
+              "name": "punctuation.definition.block.ts html-template.ng.interpolation.end"
             }
           },
-          "end": "(\")"
-        },
-        {
-          "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.begin.html"
-            },
-            "1": {
-              "name": "string.quoted.single.html"
-            }
-          },
-          "patterns": [
-            {
-              "include": "#angular-expression"
-            }
-          ],
-          "begin": "(')",
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.end.html"
-            },
-            "1": {
-              "name": "string.quoted.single.html"
-            }
-          },
-          "end": "(')"
-        }
-      ]
-    },
-    "tag-generic-attribute": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.attribute.$2.html"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
-        },
-        "5": {
-          "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-        },
-        "6": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "endCaptures": {
-        "1": {
-          "name": "string.quoted.double.html"
-        }
-      },
-      "begin": "(?<!\\S)(?!(?:ref|let)?-)(?<!\\*|\\#)(?!(DOMMenuItemActive|DOMMenuItemInactive|DOMMouseScroll|onabort|onafterprint|onafterupdate|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeprint|onbeforeunload|onbeforeupdate|onblur|onbounce|onbroadcast|oncancel|oncanplay|oncanplaythrough|oncellchange|onchange|onclick|onclose|oncommandupdate|oncommand|oncontextmenu|oncopy|oncuechange|oncut|ondataavailable|ondatasetchanged|ondatasetcomplete|ondblclick|ondragdrop|ondragend|ondragenter|ondragexit|ondraggesture|ondragleave|ondragover|ondragstart|ondrag|ondrop|ondurationchange|onemptied|onended|onerrorupdate|onerror|onfilterchange|onfinish|onfocus|onformchange|onforminput|ongotpointercapture|onhelp|oninput|oninvalid|onkeydown|onkeypress|onkeyup|onloadeddata|onloadedmetadata|onloadstart|onload|onlosecapture|onlostpointercapture|onmousedown|onmouseenter|onmouseleave|onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onoverflowchanged|onoverflow|onpaste|onpause|onplaying|onplay|onpointercancel|onpointerdown|onpointerenter|onpointerleave|onpointermove|onpointerout|onpointerover|onpointerup|onpopuphidden|onpopuphiding|onpopupshowing|onpopupshown|onprogress|onpropertychange|onratechange|onreadystatechange|onreset|onresize|onrowenter|onrowexit|onrowinserted|onrowsdelete|onscroll|onseeked|onseeking|onselectstart|onselect|onshow|onstalled|onstart|onstop|onsubmit|onsuspend|ontimeupdate|ontoggle|onunderflow|onunload|onvolumechange|onwaiting|style)\\b)\\b([\\w\\-\\_$]+)(:)?([\\w\\-\\_$]+)?\\b(=)(\")",
-      "end": "(\")",
-      "patterns": [
-        {
-          "begin": "(?<=\")",
-          "end": "(?=\")",
-          "patterns": [
-            {
-              "match": "([[:alpha:]0-9\\s\\-_&$@\\#\\%\\^\\;\\+\\*!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})",
-              "name": "string.quoted.double.html"
-            },
-            {
-              "include": "#angular-interpolations"
-            }
-          ]
-        }
-      ]
-    },
-    "tag-minified-boolean-attributes": {
-      "captures": {
-        "0": {
-          "name": "meta.attribute.$1.boolean.html"
-        },
-        "1": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.colon"
-        },
-        "3": {
-          "name": "entity.other.attribute-name.html html-template.ng.attributes.suffix"
-        }
-      },
-      "match": "(?<!\\S)(?!(?:ref|let)?-)([\\w-]+)(:)?([\\w\\-\\_$]+)?\\b(?!=)"
-    },
-    "script-type-attribute": {
-      "patterns": [
-        {
-          "match": "[\\s]*(type)(=)(\")((text|application)/((x-)?(javascript|typescript|coffeescript|dart|ecmascript))|(module))(\")",
-          "captures": {
-            "0": {
-              "name": "meta.attribute.$1.html"
-            },
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "3": {
-              "name": "string.quoted.double.html"
-            },
-            "4": {
-              "name": "string.quoted.double.html"
-            },
-            "6": {
-              "name": "html-template.ng.script.language.identifier"
-            },
-            "9": {
-              "name": "html-template.ng.script.language.identifier"
-            },
-            "10": {
-              "name": "string.quoted.double.html"
-            }
-          }
-        },
-        {
-          "match": "[\\s]*(type)(=)(')((text|application)/((x-)?(javascript|typescript|coffeescript|dart|ecmascript))|(module))(')",
-          "captures": {
-            "0": {
-              "name": "meta.attribute.$1.html"
-            },
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "3": {
-              "name": "string.quoted.double.html"
-            },
-            "4": {
-              "name": "string.quoted.double.html"
-            },
-            "6": {
-              "name": "html-template.ng.script.language.identifier"
-            },
-            "9": {
-              "name": "html-template.ng.script.language.identifier"
-            },
-            "10": {
-              "name": "string.quoted.double.html"
-            }
-          }
-        },
-        {
-          "match": "[\\s]*(lang)(=)(\"(javascript|typescript|coffeescript|dart)\")",
-          "captures": {
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "3": {
-              "name": "string.quoted.double.html"
-            },
-            "4": {
-              "name": "string.quoted.double.html html-template.ng.script.language.identifier"
-            }
-          }
-        },
-        {
-          "match": "[\\s]*(lang)(=)('(javascript|typescript|coffeescript|dart)')",
-          "captures": {
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "3": {
-              "name": "string.quoted.single.html"
-            },
-            "4": {
-              "name": "html-template.ng.script.language.identifier"
-            }
-          }
-        }
-      ]
-    },
-    "style-type-attribute": {
-      "patterns": [
-        {
-          "match": "[\\s]*(type)(=)(\"(text|stylesheet)/(css|scss|less|sass|stylus|styl|postcss)\")",
-          "captures": {
-            "0": {
-              "name": "meta.attribute.$1.html"
-            },
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "3": {
-              "name": "string.quoted.double.html"
-            },
-            "5": {
-              "name": "string.quoted.double.html html-template.ng.style.language.identifier"
-            }
-          }
-        },
-        {
-          "match": "[\\s]*(lang)(=)(\"(css|scss|less|sass|stylus|styl|postcss)\")",
-          "captures": {
-            "0": {
-              "name": "meta.attribute.$1.html"
-            },
-            "1": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "2": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "3": {
-              "name": "string.quoted.single.html"
-            },
-            "4": {
-              "name": "html-template.ng.style.language.identifier"
-            }
-          }
-        }
-      ]
-    },
-    "svg-non-string-attributes": {
-      "patterns": [
-        {
-          "name": "meta.element.attribute.$2.svg",
-          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(d))\\b(?![\\w-]))(=)(\")",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.attribute.svg.$2.html"
-            },
-            "2": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "4": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "end": "(\")",
-          "endCaptures": {
-            "1": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "patterns": [
-            {
-              "match": "([0-9]+)|([MmLlHhVvCcSsQqTtAaZz]+)|([\\.\\,\\-]+)",
-              "captures": {
-                "1": {
-                  "name": "constant.numeric.css"
-                },
-                "2": {
-                  "name": "keyword.other.commands.path.svg html-template.ng.svg.path.commands"
-                },
-                "3": {
-                  "name": "punctuation.separator.delimiter.scss"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "meta.element.attribute.$2.svg",
-          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(amplitude|azimuth|baseFrequency|begin|bias|by|clip-path|color|cursor|cx|cy|diffuseConstant|divisor|dur|dx|dy|elevation|end|exponent|fill-opacity|fill|filter|flood-color|flood-opacity|font-size-adjust|font-size|font-weight|from|fr|fx|fy|gradientTransform|hatchpath|height|intercept|k1|k2|k3|k4|kernelMatrix|keyPoints|keySplines|keyTimes|letter-spacing|lighting-color|limitingConeAngle|marker-end|marker-mid|marker-start|markerHeight|markerWidth|mask|max|media|min|numOctaves|offset|opacity|order|overline-position|overline-thickness|pathLength|patternTransform|pointsAtX|pointsAtY|pointsAtZ|points|radius|refX|refY|repeatCount|repeatDur|rotate|rx|ry|r|scale|seed|solid-color|solid-opacity|specularConstant|specularExponent|startOffset|stdDeviation|stop-color|stop-opacity|strikethrough-position|strikethrough-thickness|stroke-dashoffset|stroke-dassharray|stroke-miterlimit|stroke-width|stroke|surfaceScale|tabindex|tableValues|targetX|targetY|textLength|to|transform-origin|transform2|transform|underline-position|underline-thickness|values|viewbox|width|word-spacing|x1|x2|x|y1|y2|y|z))\\b(?![\\w-]))(=)(\")",
-          "beginCaptures": {
-            "2": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "4": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "end": "(\")",
-          "endCaptures": {
-            "1": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "patterns": [
-            {
-              "begin": "(?<=\")",
-              "end": "(?=\")",
-              "name": "string.quoted.double.html",
-              "patterns": [
-                {
-                  "include": "source.css.scss#property_values"
-                },
-                {
-                  "include": "#angular-interpolations"
-                },
-                {
-                  "include": "#entities"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "tag-script": {
-      "begin": "(^[\\t]+)?(?=<(?i:script)\\b(?!-))",
-      "beginCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.leading.html"
-        }
-      },
-      "end": "(</)[\\s]*((?i:script))[\\s]*(>)\\n?",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.metadata.script.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "meta.tag.metadata.html entity.name.tag.html html-template.tag.html"
-        },
-        "3": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "begin": "(<)((?i:script))(>)",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.script.start.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html html-template.tag.html"
-            },
-            "3": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "end": "(?=(?=<(?=/(?=script(?=>)))))",
-          "name": "source.js",
-          "patterns": [
-            {
-              "include": "#cdata"
-            },
-            {
-              "include": "source.js"
-            }
-          ]
-        },
-        {
-          "begin": "(<)((?i:script))\\b",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.script.start.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html html-template.tag.html"
-            }
-          },
-          "end": "(?=(?=<(?=/(?=script(?=>)))))",
-          "patterns": [
-            {
-              "begin": "\\G",
-              "end": "(?=<(?=/(?=script(?=>))))",
-              "patterns": [
-                {
-                  "begin": "(?=(type(?=[\\s=]['\"](text/(typescript|x-typescript)|application/((x-)?typescript))[\\s\"'])|(lang(?=[\\s=]['\"]typescript[\\s\"']))))",
-                  "end": "(?=<(?=/(?=script>)))",
-                  "patterns": [
-                    {
-                      "begin": "\\G",
-                      "end": "(?=<(?=/script>))",
-                      "patterns": [
-                        {
-                          "begin": "\\G",
-                          "end": "(>)",
-                          "endCaptures": {
-                            "1": {
-                              "name": "punctuation.definition.tag.end.html"
-                            }
-                          },
-                          "name": "meta.tag.metadata.script.start.html",
-                          "patterns": [
-                            {
-                              "include": "#script-type-attribute"
-                            },
-                            {
-                              "include": "#tag-stuff"
-                            }
-                          ]
-                        },
-                        {
-                          "begin": "(?!\\G)",
-                          "end": "(?=</script>)",
-                          "name": "source.ts",
-                          "patterns": [
-                            {
-                              "include": "#cdata"
-                            },
-                            {
-                              "include": "source.ts"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "begin": "(?=(type(?=[\\s=]['\"]((module)|(text/(ecmascript|x-ecmascript|javascript|x-javascript)|application/((x-)?javascript|ecmascript)))[\\s\"'])|(lang(?=[\\s=]['\"]javascript[\\s\"']))))",
-                  "end": "(?=<(?=/(?=script>)))",
-                  "patterns": [
-                    {
-                      "begin": "\\G",
-                      "end": "(?=<(?=/script>))",
-                      "patterns": [
-                        {
-                          "begin": "\\G",
-                          "end": "(>)",
-                          "endCaptures": {
-                            "1": {
-                              "name": "punctuation.definition.tag.end.html"
-                            }
-                          },
-                          "name": "meta.tag.metadata.script.start.html",
-                          "patterns": [
-                            {
-                              "include": "#script-type-attribute"
-                            },
-                            {
-                              "include": "#tag-stuff"
-                            }
-                          ]
-                        },
-                        {
-                          "begin": "(?!\\G)",
-                          "end": "(?=</script>)",
-                          "name": "source.js",
-                          "patterns": [
-                            {
-                              "include": "#cdata"
-                            },
-                            {
-                              "include": "source.js"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "begin": "(?=(type(?=[\\s=]['\"](text/(coffeescript|x-coffeescript)|application/((x-)?coffeescript))[\\s\"'])|(lang(?=[\\s=]['\"]coffeescript[\\s\"']))))",
-                  "end": "(?=<(?=/(?=script>)))",
-                  "patterns": [
-                    {
-                      "begin": "\\G",
-                      "end": "(?=<(?=/script>))",
-                      "patterns": [
-                        {
-                          "begin": "\\G",
-                          "end": "(>)",
-                          "endCaptures": {
-                            "1": {
-                              "name": "punctuation.definition.tag.end.html"
-                            }
-                          },
-                          "name": "meta.tag.metadata.script.start.html",
-                          "patterns": [
-                            {
-                              "include": "#script-type-attribute"
-                            },
-                            {
-                              "include": "#tag-stuff"
-                            }
-                          ]
-                        },
-                        {
-                          "begin": "(?!\\G)",
-                          "end": "(?=</script>)",
-                          "name": "source.coffee",
-                          "patterns": [
-                            {
-                              "include": "#cdata"
-                            },
-                            {
-                              "include": "source.coffee"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "begin": "(?=(type(?=[\\s=]['\"](text/(dart|x-dart)|application/((x-)?dart))[\\s\"'])|(lang(?=[\\s=]['\"]dart[\\s\"']))))",
-                  "end": "(?=<(?=/(?=script>)))",
-                  "patterns": [
-                    {
-                      "begin": "\\G",
-                      "end": "(?=<(?=/script>))",
-                      "patterns": [
-                        {
-                          "begin": "\\G",
-                          "end": "(>)",
-                          "endCaptures": {
-                            "1": {
-                              "name": "punctuation.definition.tag.end.html"
-                            }
-                          },
-                          "name": "meta.tag.metadata.script.start.html",
-                          "patterns": [
-                            {
-                              "include": "#script-type-attribute"
-                            },
-                            {
-                              "include": "#tag-stuff"
-                            }
-                          ]
-                        },
-                        {
-                          "begin": "(?!\\G)",
-                          "end": "(?=</script>)",
-                          "name": "source.dart",
-                          "patterns": [
-                            {
-                              "include": "#cdata"
-                            },
-                            {
-                              "include": "source.dart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "include": "#tag-stuff"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "tag-style": {
-      "begin": "(^[\\t]+)?(?=<(?i:style)\\b(?!-))",
-      "beginCaptures": {
-        "1": {
-          "name": "punctuation.whitespace.embedded.leading.html"
-        }
-      },
-      "end": "(</)[\\s]*((?i:style))[\\s]*(>)\\n?",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.metadata.style.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "meta.tag.metadata.html entity.name.tag.html html-template.tag.html"
-        },
-        "3": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "begin": "(<)((?i:style))(>)",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.start.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            },
-            "3": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "end": "(?=(?=<(?=/(?=style(?=>)))))",
-          "name": "source.css",
-          "patterns": [
-            {
-              "include": "#cdata"
-            },
-            {
-              "include": "source.css"
-            }
-          ]
-        },
-        {
-          "begin": "(<)((?i:style))\\b",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.tag.metadata.style.start.html"
-            },
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            }
-          },
-          "end": "(?=(?=<(?=/(?=style(?=>)))))",
-          "patterns": [
-            {
-              "begin": "\\G",
-              "end": "(?=<(?=/(?=style(?=>))))",
-              "patterns": [
-                {
-                  "begin": "(?=(type(?=[\\s=]['\"](text/css[\\s\"'>]))|(lang(?=[\\s=]['\"]css[\\s\"'>]))))",
-                  "end": "(?=<(?=/(?=style>)))",
-                  "patterns": [
-                    {
-                      "begin": "\\G",
-                      "end": "(?=<(?=/style>))",
-                      "patterns": [
-                        {
-                          "begin": "\\G",
-                          "end": "(>)",
-                          "endCaptures": {
-                            "1": {
-                              "name": "punctuation.definition.tag.end.html"
-                            }
-                          },
-                          "name": "meta.tag.metadata.style.start.html",
-                          "patterns": [
-                            {
-                              "include": "#style-type-attribute"
-                            },
-                            {
-                              "include": "#tag-stuff"
-                            }
-                          ]
-                        },
-                        {
-                          "begin": "(?!\\G)",
-                          "end": "(?=</style>)",
-                          "name": "source.css",
-                          "patterns": [
-                            {
-                              "include": "#cdata"
-                            },
-                            {
-                              "include": "source.css"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "begin": "(?=(type(?=[\\s=]['\"](text/less[\\s\"'>]))|(lang(?=[\\s=]['\"]less[\\s\"'>]))))",
-                  "end": "(?=<(?=/(?=style>)))",
-                  "patterns": [
-                    {
-                      "begin": "\\G",
-                      "end": "(?=<(?=/style>))",
-                      "patterns": [
-                        {
-                          "begin": "\\G",
-                          "end": "(>)",
-                          "endCaptures": {
-                            "1": {
-                              "name": "punctuation.definition.tag.end.html"
-                            }
-                          },
-                          "name": "meta.tag.metadata.style.start.html",
-                          "patterns": [
-                            {
-                              "include": "#style-type-attribute"
-                            },
-                            {
-                              "include": "#tag-stuff"
-                            }
-                          ]
-                        },
-                        {
-                          "begin": "(?!\\G)",
-                          "end": "(?=</style>)",
-                          "name": "source.css.less",
-                          "patterns": [
-                            {
-                              "include": "#cdata"
-                            },
-                            {
-                              "include": "source.css.less"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "begin": "(?=(type(?=[\\s=]['\"](text/postcss[\\s\"'>]))|(lang(?=[\\s=]['\"]postcss[\\s\"'>]))))",
-                  "end": "(?=<(?=/(?=style>)))",
-                  "patterns": [
-                    {
-                      "begin": "\\G",
-                      "end": "(?=<(?=/style>))",
-                      "patterns": [
-                        {
-                          "begin": "\\G",
-                          "end": "(>)",
-                          "endCaptures": {
-                            "1": {
-                              "name": "punctuation.definition.tag.end.html"
-                            }
-                          },
-                          "name": "meta.tag.metadata.style.start.html",
-                          "patterns": [
-                            {
-                              "include": "#style-type-attribute"
-                            },
-                            {
-                              "include": "#tag-stuff"
-                            }
-                          ]
-                        },
-                        {
-                          "begin": "(?!\\G)",
-                          "end": "(?=</style>)",
-                          "name": "source.postcss",
-                          "patterns": [
-                            {
-                              "include": "#cdata"
-                            },
-                            {
-                              "include": "source.postcss"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "begin": "(?=(type(?=[\\s=]['\"](text/sass[\\s\"'>]))|(lang(?=[\\s=]['\"]sass[\\s\"'>]))))",
-                  "end": "(?=<(?=/(?=style>)))",
-                  "patterns": [
-                    {
-                      "begin": "\\G",
-                      "end": "(?=<(?=/style>))",
-                      "patterns": [
-                        {
-                          "begin": "\\G",
-                          "end": "(>)",
-                          "endCaptures": {
-                            "1": {
-                              "name": "punctuation.definition.tag.end.html"
-                            }
-                          },
-                          "name": "meta.tag.metadata.style.start.html",
-                          "patterns": [
-                            {
-                              "include": "#style-type-attribute"
-                            },
-                            {
-                              "include": "#tag-stuff"
-                            }
-                          ]
-                        },
-                        {
-                          "begin": "(?!\\G)",
-                          "end": "(?=</style>)",
-                          "name": "source.sass",
-                          "patterns": [
-                            {
-                              "include": "#cdata"
-                            },
-                            {
-                              "include": "source.sass"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "begin": "(?=(type(?=[\\s=]['\"](text/scss[\\s\"'>]))|(lang(?=[\\s=]['\"]scss[\\s\"'>]))))",
-                  "end": "(?=<(?=/(?=style>)))",
-                  "patterns": [
-                    {
-                      "begin": "\\G",
-                      "end": "(?=<(?=/style>))",
-                      "patterns": [
-                        {
-                          "begin": "\\G",
-                          "end": "(>)",
-                          "endCaptures": {
-                            "1": {
-                              "name": "punctuation.definition.tag.end.html"
-                            }
-                          },
-                          "name": "meta.tag.metadata.style.start.html",
-                          "patterns": [
-                            {
-                              "include": "#style-type-attribute"
-                            },
-                            {
-                              "include": "#tag-stuff"
-                            }
-                          ]
-                        },
-                        {
-                          "begin": "(?!\\G)",
-                          "end": "(?=</style>)",
-                          "name": "source.css.scss",
-                          "patterns": [
-                            {
-                              "include": "#cdata"
-                            },
-                            {
-                              "include": "source.css.scss"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "begin": "(?=(type(?=[\\s=]['\"](text/styl(us)?[\\s\"'>]))|(lang(?=[\\s=]['\"]styl(us)?[\\s\"'>]))))",
-                  "end": "(?=<(?=/(?=style>)))",
-                  "patterns": [
-                    {
-                      "begin": "\\G",
-                      "end": "(?=<(?=/style>))",
-                      "patterns": [
-                        {
-                          "begin": "\\G",
-                          "end": "(>)",
-                          "endCaptures": {
-                            "1": {
-                              "name": "punctuation.definition.tag.end.html"
-                            }
-                          },
-                          "name": "meta.tag.metadata.style.start.html",
-                          "patterns": [
-                            {
-                              "include": "#style-type-attribute"
-                            },
-                            {
-                              "include": "#tag-stuff"
-                            }
-                          ]
-                        },
-                        {
-                          "begin": "(?!\\G)",
-                          "end": "(?=</style>)",
-                          "name": "source.stylus",
-                          "patterns": [
-                            {
-                              "include": "#cdata"
-                            },
-                            {
-                              "include": "source.stylus"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "include": "#tag-stuff"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "tag-deprecated-inline": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.inline.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.inline.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(acronym|big|font|strike|tt|u)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-metadata-void": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.metadata.$2.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.metadata.$2.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(basefont|isindex)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-object-void": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.$2.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.$2.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(frame)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-object": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(applet)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-other": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.other.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.other.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(dir)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-structure": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.structure.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.structure.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(center|frameset|noframes)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-other": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.other.svg.$2.begin.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.other.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(altGlyphItem|altGlyphDef|font-face-src)(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "name": "invalid.deprecated.tag",
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.svg.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
+          "end": "(\\}\\}\\}?)",
+          "name": "expression.ng html-template.ng.interpolation.expression"
         }
       ]
     },
@@ -4169,52 +3501,602 @@
         }
       ]
     },
-    "angular-interpolations": {
+    "tag-script": {
+      "begin": "(^[\\t]+)?(?=<(?i:script)\\b(?!-))",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.whitespace.embedded.leading.html"
+        }
+      },
+      "end": "(</)[\\s]*((?i:script))[\\s]*(>)\\n?",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.metadata.script.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "meta.tag.metadata.html entity.name.tag.html html-template.tag.html"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
       "patterns": [
         {
+          "begin": "(<)((?i:script))(>)",
           "beginCaptures": {
             "0": {
-              "name": "expression.ng"
+              "name": "meta.tag.metadata.script.start.html"
             },
             "1": {
-              "name": "punctuation.definition.block.ts html-template.ng.interpolation.begin"
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.html html-template.tag.html"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.end.html"
             }
           },
+          "end": "(?=(?=<(?=/(?=script(?=>)))))",
+          "name": "source.js",
           "patterns": [
             {
-              "match": "\\?\\.|\\!\\.|\\.|\\!|\\?|\\:",
-              "name": "keyword.operator.navigation html-template.ng.expression.operator.navigator"
+              "include": "#cdata"
             },
             {
-              "include": "#angular-expression"
+              "include": "source.js"
             }
-          ],
-          "begin": "(\\{\\{\\{?)",
-          "endCaptures": {
+          ]
+        },
+        {
+          "begin": "(<)((?i:script))\\b",
+          "beginCaptures": {
             "0": {
-              "name": "expression.ng"
+              "name": "meta.tag.metadata.script.start.html"
             },
             "1": {
-              "name": "punctuation.definition.block.ts html-template.ng.interpolation.end"
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.html html-template.tag.html"
             }
           },
-          "end": "(\\}\\}\\}?)",
-          "name": "expression.ng html-template.ng.interpolation.expression"
+          "end": "(?=(?=<(?=/(?=script(?=>)))))",
+          "patterns": [
+            {
+              "begin": "\\G",
+              "end": "(?=<(?=/(?=script(?=>))))",
+              "patterns": [
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/(typescript|x-typescript)|application/((x-)?typescript))[\\s\"'])|(lang(?=[\\s=]['\"]typescript[\\s\"']))))",
+                  "end": "(?=<(?=/(?=script>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/script>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.script.start.html",
+                          "patterns": [
+                            {
+                              "include": "#script-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</script>)",
+                          "name": "source.ts",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.ts"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"]((module)|(text/(ecmascript|x-ecmascript|javascript|x-javascript)|application/((x-)?javascript|ecmascript)))[\\s\"'])|(lang(?=[\\s=]['\"]javascript[\\s\"']))))",
+                  "end": "(?=<(?=/(?=script>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/script>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.script.start.html",
+                          "patterns": [
+                            {
+                              "include": "#script-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</script>)",
+                          "name": "source.js",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.js"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/(coffeescript|x-coffeescript)|application/((x-)?coffeescript))[\\s\"'])|(lang(?=[\\s=]['\"]coffeescript[\\s\"']))))",
+                  "end": "(?=<(?=/(?=script>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/script>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.script.start.html",
+                          "patterns": [
+                            {
+                              "include": "#script-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</script>)",
+                          "name": "source.coffee",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.coffee"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/(dart|x-dart)|application/((x-)?dart))[\\s\"'])|(lang(?=[\\s=]['\"]dart[\\s\"']))))",
+                  "end": "(?=<(?=/(?=script>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/script>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.script.start.html",
+                          "patterns": [
+                            {
+                              "include": "#script-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</script>)",
+                          "name": "source.dart",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.dart"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "include": "#tag-stuff"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
-    "tag-deprecated-attribute-a": {
-      "begin": "(<\\/?)(a)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
-      "end": "(\\/?>)",
+    "tag-style": {
+      "begin": "(^[\\t]+)?(?=<(?i:style)\\b(?!-))",
       "beginCaptures": {
+        "1": {
+          "name": "punctuation.whitespace.embedded.leading.html"
+        }
+      },
+      "end": "(</)[\\s]*((?i:style))[\\s]*(>)\\n?",
+      "endCaptures": {
         "0": {
-          "name": "meta.tag.inline.a.start.html"
+          "name": "meta.tag.metadata.style.start.html"
         },
         "1": {
           "name": "punctuation.definition.tag.begin.html"
         },
         "2": {
-          "name": "entity.name.tag.html html-template.tag.html"
+          "name": "meta.tag.metadata.html entity.name.tag.html html-template.tag.html"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "begin": "(<)((?i:style))(>)",
+          "beginCaptures": {
+            "0": {
+              "name": "meta.tag.metadata.style.start.html"
+            },
+            "1": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.html"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.end.html"
+            }
+          },
+          "end": "(?=(?=<(?=/(?=style(?=>)))))",
+          "name": "source.css",
+          "patterns": [
+            {
+              "include": "#cdata"
+            },
+            {
+              "include": "source.css"
+            }
+          ]
+        },
+        {
+          "begin": "(<)((?i:style))\\b",
+          "beginCaptures": {
+            "0": {
+              "name": "meta.tag.metadata.style.start.html"
+            },
+            "1": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.html"
+            }
+          },
+          "end": "(?=(?=<(?=/(?=style(?=>)))))",
+          "patterns": [
+            {
+              "begin": "\\G",
+              "end": "(?=<(?=/(?=style(?=>))))",
+              "patterns": [
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/css[\\s\"'>]))|(lang(?=[\\s=]['\"]css[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "name": "source.css",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.css"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/less[\\s\"'>]))|(lang(?=[\\s=]['\"]less[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "name": "source.css.less",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.css.less"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/postcss[\\s\"'>]))|(lang(?=[\\s=]['\"]postcss[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "name": "source.postcss",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.postcss"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/sass[\\s\"'>]))|(lang(?=[\\s=]['\"]sass[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "name": "source.sass",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.sass"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/scss[\\s\"'>]))|(lang(?=[\\s=]['\"]scss[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "name": "source.css.scss",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.css.scss"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "begin": "(?=(type(?=[\\s=]['\"](text/styl(us)?[\\s\"'>]))|(lang(?=[\\s=]['\"]styl(us)?[\\s\"'>]))))",
+                  "end": "(?=<(?=/(?=style>)))",
+                  "patterns": [
+                    {
+                      "begin": "\\G",
+                      "end": "(?=<(?=/style>))",
+                      "patterns": [
+                        {
+                          "begin": "\\G",
+                          "end": "(>)",
+                          "endCaptures": {
+                            "1": {
+                              "name": "punctuation.definition.tag.end.html"
+                            }
+                          },
+                          "name": "meta.tag.metadata.style.start.html",
+                          "patterns": [
+                            {
+                              "include": "#style-type-attribute"
+                            },
+                            {
+                              "include": "#tag-stuff"
+                            }
+                          ]
+                        },
+                        {
+                          "begin": "(?!\\G)",
+                          "end": "(?=</style>)",
+                          "name": "source.stylus",
+                          "patterns": [
+                            {
+                              "include": "#cdata"
+                            },
+                            {
+                              "include": "source.stylus"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "include": "#tag-stuff"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "tag-deprecated-inline": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.inline.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "invalid.deprecated.tag"
         },
         "3": {
           "name": "entity.name.tag.html html-template.ng.tag.colon"
@@ -4225,42 +4107,30 @@
       },
       "endCaptures": {
         "0": {
-          "name": "meta.tag.inline.a.end.html"
+          "name": "meta.tag.inline.$2.end.html"
         },
         "1": {
           "name": "punctuation.definition.tag.end.html"
         }
       },
+      "begin": "(<\\/?)(acronym|big|font|strike|tt|u)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
       "patterns": [
-        {
-          "name": "meta.attribute.$1.html",
-          "match": "[\\s\\n\\r\\t]*(\\b(charset|coords|rev|shape)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.a.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
         {
           "include": "#tag-stuff"
         }
       ]
     },
-    "tag-deprecated-attribute-area": {
-      "begin": "(<\\/?)(area)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
-      "end": "(\\/?>)",
+    "tag-deprecated-metadata-void": {
       "beginCaptures": {
         "0": {
-          "name": "meta.tag.inline.area.void.html"
+          "name": "meta.tag.metadata.$2.void.html"
         },
         "1": {
           "name": "punctuation.definition.tag.begin.html"
         },
         "2": {
-          "name": "entity.name.tag.html html-template.tag.html"
+          "name": "invalid.deprecated.tag"
         },
         "3": {
           "name": "entity.name.tag.html html-template.ng.tag.colon"
@@ -4271,42 +4141,30 @@
       },
       "endCaptures": {
         "0": {
-          "name": "meta.tag.inline.area.void.html"
+          "name": "meta.tag.metadata.$2.void.html"
         },
         "1": {
           "name": "punctuation.definition.tag.end.html"
         }
       },
+      "begin": "(<\\/?)(basefont|isindex)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
       "patterns": [
-        {
-          "name": "meta.attribute.$1.html",
-          "match": "[\\s\\n\\r\\t]*(\\b(nohref)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.area.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
         {
           "include": "#tag-stuff"
         }
       ]
     },
-    "tag-deprecated-attribute-br": {
-      "begin": "(<\\/?)(br)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
-      "end": "(\\/?>)",
+    "tag-deprecated-object-void": {
       "beginCaptures": {
         "0": {
-          "name": "meta.tag.inline.br.void.html"
+          "name": "meta.tag.object.$2.void.html"
         },
         "1": {
           "name": "punctuation.definition.tag.begin.html"
         },
         "2": {
-          "name": "entity.name.tag.html html-template.tag.html"
+          "name": "invalid.deprecated.tag"
         },
         "3": {
           "name": "entity.name.tag.html html-template.ng.tag.colon"
@@ -4317,24 +4175,160 @@
       },
       "endCaptures": {
         "0": {
-          "name": "meta.tag.inline.br.void.html"
+          "name": "meta.tag.object.$2.void.html"
         },
         "1": {
           "name": "punctuation.definition.tag.end.html"
         }
       },
+      "begin": "(<\\/?)(frame)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
       "patterns": [
         {
-          "name": "meta.attribute.$1.html",
-          "match": "[\\s\\n\\r\\t]*(\\b(clear)\\b)(=)?",
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-object": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "begin": "(<\\/?)(applet)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-other": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.other.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.other.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "begin": "(<\\/?)(dir)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-structure": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.structure.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.structure.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "begin": "(<\\/?)(center|frameset|noframes)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-other": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.other.svg.$2.begin.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "invalid.deprecated.tag"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.other.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "begin": "(<\\/?)(altGlyphItem|altGlyphDef|font-face-src)(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
+      "name": "invalid.deprecated.tag",
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(xml:space|xml:lang|xml:base)\\b)(=)?",
           "captures": {
             "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.br.$1"
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.svg.$1"
             },
             "3": {
               "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
             }
           }
+        },
+        {
+          "include": "#svg-non-string-attributes"
         },
         {
           "include": "#tag-stuff"
@@ -4514,6 +4508,144 @@
           "captures": {
             "2": {
               "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.param.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-attribute-a": {
+      "begin": "(<\\/?)(a)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.inline.a.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.inline.a.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.html",
+          "match": "[\\s\\n\\r\\t]*(\\b(charset|coords|rev|shape)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.a.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-attribute-area": {
+      "begin": "(<\\/?)(area)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.inline.area.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.inline.area.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.html",
+          "match": "[\\s\\n\\r\\t]*(\\b(nohref)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.area.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-attribute-br": {
+      "begin": "(<\\/?)(br)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.inline.br.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.inline.br.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.html",
+          "match": "[\\s\\n\\r\\t]*(\\b(clear)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.br.$1"
             },
             "3": {
               "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"

@@ -20,6 +20,10 @@ export interface LocaleKeys {
       htmlTags: string;
       htmlCustomTags: string;
       seeHtmlEvents: string;
+      ariaAttributePrefix: string;
+      ariaAttributeSuffix: string;
+      dataAttributePrefix: string;
+      dataAttributeSuffix: string;
     };
     angular: {
       angularExpression: string;

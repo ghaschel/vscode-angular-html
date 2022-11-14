@@ -1,0 +1,18 @@
+{
+  repository: {
+    'data-boolean-attributes': {
+      captures: {
+        '0': {
+          name: 'meta.attribute.$2.html',
+        },
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.data-attribute.prefix',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.data-attribute.suffix',
+        },
+      },
+      match: '(?<!\\S)(data-)([\\w\\-\\_$]+)\\b(?!=)',
+    },
+  },
+}

@@ -1,0 +1,45 @@
+{
+  repository: {
+    'data-attributes': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.attribute.$2.html',
+        },
+        '1': {
+          name: 'entity.other.attribute-name.html html-template.ng.data-attribute.prefix',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.data-attribute.suffix',
+        },
+        '3': {
+          name: 'punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng',
+        },
+        '4': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      endCaptures: {
+        '1': {
+          name: 'string.quoted.double.html',
+        },
+      },
+      begin: '(?<!\\S)(data-)([\\w\\-\\_$]+)\\b(=)(")',
+      end: '(")',
+      patterns: [
+        {
+          begin: '(?<=")',
+          end: '(?=")',
+          patterns: [
+            {
+              match: '([[:alpha:]0-9\\s\\-_&$@\\#\\%\\^\\;\\+\\*!?()\\[\\]:\\/\\\\\\.\\,-]+)(?![^{]*\\})',
+              name: 'string.quoted.double.html',
+            },
+            {
+              include: '#angular-interpolations',
+            },
+          ],
+        },
+      ],
+    },
+  },
+}

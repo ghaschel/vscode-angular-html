@@ -21,17 +21,20 @@
           },
           begin: '(<)(!)((?i:doctype))',
           end: '(>)',
-          // using another scope different from the one it fits to differentiate in color from objects and variables
           name: 'meta.tag.metadata.doctype.html',
           patterns: [
             {
               begin: '(\\[)',
               beginCaptures: {
-                '0': 'punctuation.definition.dtd.begin.html',
+                '0': {
+                  name: 'punctuation.definition.dtd.begin.html',
+                },
               },
               end: '(\\])',
               endCaptures: {
-                '0': 'punctuation.definition.dtd.end.html',
+                '0': {
+                  name: 'punctuation.definition.dtd.end.html',
+                },
               },
               patterns: [{ include: '#xml-dtd' }],
             },

@@ -1,0 +1,12 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.aria-attribute.prefix',
+      configRule: 'vscode-angular-html.ariaAttributePrefix',
+    },
+    {
+      scope: 'html-template.ng.aria-attribute.suffix',
+      configRule: 'vscode-angular-html.ariaAttributeSuffix',
+    },
+  ],
+}

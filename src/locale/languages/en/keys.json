@@ -19,7 +19,11 @@
       "htmlScriptAttributesLanguageIdentifier": "Matches HTML Script Type Attribute language identifier.",
       "htmlTags": "Matches HTML known elements.",
       "htmlCustomTags": "Matches non-standard HTML elements.",
-      "seeHtmlEvents": "See HTML and SVG Events"
+      "seeHtmlEvents": "See HTML and SVG Events",
+      "ariaAttributePrefix": "Matches aria-attributes aria prefix.",
+      "ariaAttributeSuffix": "Matches aria-attributes suffix.",
+      "dataAttributePrefix": "Matches data-attributes data prefix.",
+      "dataAttributeSuffix": "Matches data-attributes suffix."
     },
     "angular": {
       "angularExpression": "Matches the curly braces preceding and succeeding an angular expression.\nFor both template string interpolation and temlate expressions.",

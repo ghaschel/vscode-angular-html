@@ -3630,16 +3630,15 @@
 #      ^^^^ html-template.ng string.quoted.double.html
 #          ^ html-template.ng string.quoted.double.html
 >  aria-test=""
-#^^ html-template.ng
-#  ^^^^^^^^^ html-template.ng meta.attribute.aria-test.html entity.other.attribute-name.html html-template.ng.attributes.generic
-#           ^ html-template.ng meta.attribute.aria-test.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
-#            ^ html-template.ng meta.attribute.aria-test.html string.quoted.double.html
+#^^^^^^^^^^^^ html-template.ng
+#            ^ html-template.ng string.quoted.double.html
 #             ^ html-template.ng string.quoted.double.html
 >  aria-label="test"
 #^^ html-template.ng
-#  ^^^^^^^^^^ html-template.ng meta.attribute.aria-label.html entity.other.attribute-name.html html-template.ng.attributes.generic
-#            ^ html-template.ng meta.attribute.aria-label.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
-#             ^ html-template.ng meta.attribute.aria-label.html string.quoted.double.html
+#  ^^^^^ html-template.ng meta.attribute.label.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^ html-template.ng meta.attribute.label.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#            ^ html-template.ng meta.attribute.label.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#             ^ html-template.ng meta.attribute.label.html string.quoted.double.html
 #              ^^^^ html-template.ng string.quoted.double.html
 #                  ^ html-template.ng string.quoted.double.html
 >  no-value
@@ -3671,11 +3670,10 @@
 # ^^^^^ html-template.ng meta.element.structure.html meta.tag.structure.label.start.html meta.tag.structure.html entity.name.tag.html html-template.tag.html
 >  data-element:suffix_test="with-value"
 #^^ html-template.ng meta.element.structure.html
-#  ^^^^^^^^^^^^ html-template.ng meta.element.structure.html meta.attribute.data-element.html entity.other.attribute-name.html html-template.ng.attributes.generic
-#              ^ html-template.ng meta.element.structure.html meta.attribute.data-element.html entity.other.attribute-name.html html-template.ng.attributes.colon
-#               ^^^^^^^^^^^ html-template.ng meta.element.structure.html meta.attribute.data-element.html entity.other.attribute-name.html html-template.ng.attributes.suffix
-#                          ^ html-template.ng meta.element.structure.html meta.attribute.data-element.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
-#                           ^ html-template.ng meta.element.structure.html meta.attribute.data-element.html string.quoted.double.html
+#  ^^^^^ html-template.ng meta.element.structure.html meta.attribute.element.html entity.other.attribute-name.html html-template.ng.data-attribute.prefix
+#       ^^^^^^^ html-template.ng meta.element.structure.html meta.attribute.element.html entity.other.attribute-name.html html-template.ng.data-attribute.suffix
+#              ^^^^^^^^^^^^^ html-template.ng meta.element.structure.html
+#                           ^ html-template.ng meta.element.structure.html string.quoted.double.html
 #                            ^^^^^^^^^^ html-template.ng meta.element.structure.html string.quoted.double.html
 #                                      ^ html-template.ng meta.element.structure.html string.quoted.double.html
 >  test:element
@@ -3802,7 +3800,7 @@
 #         ^ html-template.ng meta.tag.metadata.doctype.html
 #          ^^^^^^^^^^ html-template.ng meta.tag.metadata.doctype.html entity.other.attribute-name.html html-template.ng.attribute.doctype
 #                    ^ html-template.ng meta.tag.metadata.doctype.html
-#                     ^ html-template.ng meta.tag.metadata.doctype.html
+#                     ^ html-template.ng meta.tag.metadata.doctype.html punctuation.definition.dtd.begin.html
 >  <!ELEMENT TVSCHEDULE (CHANNEL+)>
 #^^ html-template.ng meta.tag.metadata.doctype.html
 #  ^ html-template.ng meta.tag.metadata.doctype.html meta.tag.type.dtd punctuation.definition.tag.begin.dtd
@@ -4006,7 +4004,7 @@
 #                                 ^^^^^^^^ html-template.ng meta.tag.metadata.doctype.html meta.tag.type.dtd constant.language.dtd
 #                                         ^ html-template.ng meta.tag.metadata.doctype.html meta.tag.type.dtd punctuation.definition.tag.begin.dtd
 >]>
-#^ html-template.ng meta.tag.metadata.doctype.html
+#^ html-template.ng meta.tag.metadata.doctype.html punctuation.definition.dtd.end.html
 # ^ html-template.ng meta.tag.metadata.doctype.html punctuation.definition.tag.end.html
 >
 ><SoftwareEngineer>
@@ -12445,6 +12443,391 @@
 #                     ^^^^^^^^^^^^^^^^^ html-template.ng meta.element.primeng.html meta.tag.primeng.p-virtualScroller.start.html meta.tag.structure.html entity.name.tag.html.primeng entity.name.tag.html.primeng.p-virtualScroller
 #                                      ^ html-template.ng meta.element.primeng.html meta.tag.primeng.$2.end.html punctuation.definition.tag.end.html
 >
+>ARIA ATTRIBUTES
+#^^^^^^^^^^^^^^^^ html-template.ng
+>
+><div
+#^ html-template.ng meta.tag.structure.div.start.html punctuation.definition.tag.begin.html
+# ^^^ html-template.ng meta.tag.structure.div.start.html entity.name.tag.html html-template.tag.html
+>  aria-valuetext=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.valuetext.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^ html-template.ng meta.attribute.valuetext.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                ^ html-template.ng meta.attribute.valuetext.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                 ^ html-template.ng meta.attribute.valuetext.html string.quoted.double.html
+#                  ^ html-template.ng string.quoted.double.html
+>  aria-valuenow=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.valuenow.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.valuenow.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.valuenow.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.valuenow.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-valuemin=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.valuemin.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.valuemin.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.valuemin.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.valuemin.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-valuemax=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.valuemax.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.valuemax.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.valuemax.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.valuemax.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-sort=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.sort.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^ html-template.ng meta.attribute.sort.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#           ^ html-template.ng meta.attribute.sort.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#            ^ html-template.ng meta.attribute.sort.html string.quoted.double.html
+#             ^ html-template.ng string.quoted.double.html
+>  aria-setsize=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.setsize.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^ html-template.ng meta.attribute.setsize.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#              ^ html-template.ng meta.attribute.setsize.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#               ^ html-template.ng meta.attribute.setsize.html string.quoted.double.html
+#                ^ html-template.ng string.quoted.double.html
+>  aria-selected=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.selected.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.selected.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.selected.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.selected.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-rowspan=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.rowspan.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^ html-template.ng meta.attribute.rowspan.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#              ^ html-template.ng meta.attribute.rowspan.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#               ^ html-template.ng meta.attribute.rowspan.html string.quoted.double.html
+#                ^ html-template.ng string.quoted.double.html
+>  aria-rowindex=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.rowindex.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.rowindex.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.rowindex.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.rowindex.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-rowcount=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.rowcount.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.rowcount.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.rowcount.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.rowcount.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-roledescription=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.roledescription.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^^^^^^ html-template.ng meta.attribute.roledescription.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                      ^ html-template.ng meta.attribute.roledescription.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                       ^ html-template.ng meta.attribute.roledescription.html string.quoted.double.html
+#                        ^ html-template.ng string.quoted.double.html
+>  aria-required=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.required.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.required.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.required.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.required.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-relevant=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.relevant.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.relevant.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.relevant.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.relevant.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-readonly=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.readonly.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.readonly.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.readonly.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.readonly.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-pressed=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.pressed.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^ html-template.ng meta.attribute.pressed.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#              ^ html-template.ng meta.attribute.pressed.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#               ^ html-template.ng meta.attribute.pressed.html string.quoted.double.html
+#                ^ html-template.ng string.quoted.double.html
+>  aria-posinset=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.posinset.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.posinset.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.posinset.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.posinset.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-placeholder=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.placeholder.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^^ html-template.ng meta.attribute.placeholder.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                  ^ html-template.ng meta.attribute.placeholder.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                   ^ html-template.ng meta.attribute.placeholder.html string.quoted.double.html
+#                    ^ html-template.ng string.quoted.double.html
+>  aria-owns=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.owns.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^ html-template.ng meta.attribute.owns.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#           ^ html-template.ng meta.attribute.owns.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#            ^ html-template.ng meta.attribute.owns.html string.quoted.double.html
+#             ^ html-template.ng string.quoted.double.html
+>  aria-orientation=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.orientation.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^^ html-template.ng meta.attribute.orientation.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                  ^ html-template.ng meta.attribute.orientation.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                   ^ html-template.ng meta.attribute.orientation.html string.quoted.double.html
+#                    ^ html-template.ng string.quoted.double.html
+>  aria-multiselectable=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.multiselectable.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^^^^^^ html-template.ng meta.attribute.multiselectable.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                      ^ html-template.ng meta.attribute.multiselectable.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                       ^ html-template.ng meta.attribute.multiselectable.html string.quoted.double.html
+#                        ^ html-template.ng string.quoted.double.html
+>  aria-multiline=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.multiline.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^ html-template.ng meta.attribute.multiline.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                ^ html-template.ng meta.attribute.multiline.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                 ^ html-template.ng meta.attribute.multiline.html string.quoted.double.html
+#                  ^ html-template.ng string.quoted.double.html
+>  aria-modal=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.modal.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^ html-template.ng meta.attribute.modal.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#            ^ html-template.ng meta.attribute.modal.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#             ^ html-template.ng meta.attribute.modal.html string.quoted.double.html
+#              ^ html-template.ng string.quoted.double.html
+>  aria-live=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.live.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^ html-template.ng meta.attribute.live.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#           ^ html-template.ng meta.attribute.live.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#            ^ html-template.ng meta.attribute.live.html string.quoted.double.html
+#             ^ html-template.ng string.quoted.double.html
+>  aria-level=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.level.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^ html-template.ng meta.attribute.level.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#            ^ html-template.ng meta.attribute.level.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#             ^ html-template.ng meta.attribute.level.html string.quoted.double.html
+#              ^ html-template.ng string.quoted.double.html
+>  aria-labelledby=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.labelledby.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^ html-template.ng meta.attribute.labelledby.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                 ^ html-template.ng meta.attribute.labelledby.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                  ^ html-template.ng meta.attribute.labelledby.html string.quoted.double.html
+#                   ^ html-template.ng string.quoted.double.html
+>  aria-label=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.label.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^ html-template.ng meta.attribute.label.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#            ^ html-template.ng meta.attribute.label.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#             ^ html-template.ng meta.attribute.label.html string.quoted.double.html
+#              ^ html-template.ng string.quoted.double.html
+>  aria-keyshortcuts=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.keyshortcuts.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^^^ html-template.ng meta.attribute.keyshortcuts.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                   ^ html-template.ng meta.attribute.keyshortcuts.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                    ^ html-template.ng meta.attribute.keyshortcuts.html string.quoted.double.html
+#                     ^ html-template.ng string.quoted.double.html
+>  aria-invalid=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.invalid.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^ html-template.ng meta.attribute.invalid.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#              ^ html-template.ng meta.attribute.invalid.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#               ^ html-template.ng meta.attribute.invalid.html string.quoted.double.html
+#                ^ html-template.ng string.quoted.double.html
+>  aria-hidden=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.hidden.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^ html-template.ng meta.attribute.hidden.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#             ^ html-template.ng meta.attribute.hidden.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#              ^ html-template.ng meta.attribute.hidden.html string.quoted.double.html
+#               ^ html-template.ng string.quoted.double.html
+>  aria-haspopup=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.haspopup.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.haspopup.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.haspopup.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.haspopup.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-grabbed=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.grabbed.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^ html-template.ng meta.attribute.grabbed.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#              ^ html-template.ng meta.attribute.grabbed.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#               ^ html-template.ng meta.attribute.grabbed.html string.quoted.double.html
+#                ^ html-template.ng string.quoted.double.html
+>  aria-flowto=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.flowto.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^ html-template.ng meta.attribute.flowto.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#             ^ html-template.ng meta.attribute.flowto.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#              ^ html-template.ng meta.attribute.flowto.html string.quoted.double.html
+#               ^ html-template.ng string.quoted.double.html
+>  aria-expanded=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.expanded.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.expanded.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.expanded.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.expanded.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-errormessage=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.errormessage.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^^^ html-template.ng meta.attribute.errormessage.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                   ^ html-template.ng meta.attribute.errormessage.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                    ^ html-template.ng meta.attribute.errormessage.html string.quoted.double.html
+#                     ^ html-template.ng string.quoted.double.html
+>  aria-dropeffect=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.dropeffect.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^ html-template.ng meta.attribute.dropeffect.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                 ^ html-template.ng meta.attribute.dropeffect.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                  ^ html-template.ng meta.attribute.dropeffect.html string.quoted.double.html
+#                   ^ html-template.ng string.quoted.double.html
+>  aria-disabled=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.disabled.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.disabled.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.disabled.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.disabled.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-details=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.details.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^ html-template.ng meta.attribute.details.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#              ^ html-template.ng meta.attribute.details.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#               ^ html-template.ng meta.attribute.details.html string.quoted.double.html
+#                ^ html-template.ng string.quoted.double.html
+>  aria-description=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.description.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^^ html-template.ng meta.attribute.description.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                  ^ html-template.ng meta.attribute.description.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                   ^ html-template.ng meta.attribute.description.html string.quoted.double.html
+#                    ^ html-template.ng string.quoted.double.html
+>  aria-describedby=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.describedby.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^^ html-template.ng meta.attribute.describedby.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                  ^ html-template.ng meta.attribute.describedby.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                   ^ html-template.ng meta.attribute.describedby.html string.quoted.double.html
+#                    ^ html-template.ng string.quoted.double.html
+>  aria-current=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.current.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^ html-template.ng meta.attribute.current.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#              ^ html-template.ng meta.attribute.current.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#               ^ html-template.ng meta.attribute.current.html string.quoted.double.html
+#                ^ html-template.ng string.quoted.double.html
+>  aria-controls=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.controls.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.controls.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.controls.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.controls.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-colspan=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.colspan.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^ html-template.ng meta.attribute.colspan.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#              ^ html-template.ng meta.attribute.colspan.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#               ^ html-template.ng meta.attribute.colspan.html string.quoted.double.html
+#                ^ html-template.ng string.quoted.double.html
+>  aria-colindex=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.colindex.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.colindex.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.colindex.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.colindex.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-colcount=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.colcount.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^ html-template.ng meta.attribute.colcount.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#               ^ html-template.ng meta.attribute.colcount.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                ^ html-template.ng meta.attribute.colcount.html string.quoted.double.html
+#                 ^ html-template.ng string.quoted.double.html
+>  aria-checked=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.checked.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^ html-template.ng meta.attribute.checked.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#              ^ html-template.ng meta.attribute.checked.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#               ^ html-template.ng meta.attribute.checked.html string.quoted.double.html
+#                ^ html-template.ng string.quoted.double.html
+>  aria-busy=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.busy.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^ html-template.ng meta.attribute.busy.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#           ^ html-template.ng meta.attribute.busy.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#            ^ html-template.ng meta.attribute.busy.html string.quoted.double.html
+#             ^ html-template.ng string.quoted.double.html
+>  aria-autocomplete=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.autocomplete.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^^^ html-template.ng meta.attribute.autocomplete.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                   ^ html-template.ng meta.attribute.autocomplete.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                    ^ html-template.ng meta.attribute.autocomplete.html string.quoted.double.html
+#                     ^ html-template.ng string.quoted.double.html
+>  aria-atomic=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.atomic.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^ html-template.ng meta.attribute.atomic.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#             ^ html-template.ng meta.attribute.atomic.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#              ^ html-template.ng meta.attribute.atomic.html string.quoted.double.html
+#               ^ html-template.ng string.quoted.double.html
+>  aria-activedescendant=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.activedescendant.html entity.other.attribute-name.html html-template.ng.aria-attribute.prefix
+#       ^^^^^^^^^^^^^^^^ html-template.ng meta.attribute.activedescendant.html entity.other.attribute-name.html html-template.ng.aria-attribute.suffix
+#                       ^ html-template.ng meta.attribute.activedescendant.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                        ^ html-template.ng meta.attribute.activedescendant.html string.quoted.double.html
+#                         ^ html-template.ng string.quoted.double.html
+>></div>
+#^ html-template.ng meta.tag.structure.div.end.html punctuation.definition.tag.end.html
+# ^^ html-template.ng meta.tag.structure.div.start.html punctuation.definition.tag.begin.html
+#   ^^^ html-template.ng meta.tag.structure.div.start.html entity.name.tag.html html-template.tag.html
+#      ^ html-template.ng meta.tag.structure.div.end.html punctuation.definition.tag.end.html
+>
+>DATA ATTRIBUTES
+#^^^^^^^^^^^^^^^^ html-template.ng
+>
+><div
+#^ html-template.ng meta.tag.structure.div.start.html punctuation.definition.tag.begin.html
+# ^^^ html-template.ng meta.tag.structure.div.start.html entity.name.tag.html html-template.tag.html
+>  data-test=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.test.html entity.other.attribute-name.html html-template.ng.data-attribute.prefix
+#       ^^^^ html-template.ng meta.attribute.test.html entity.other.attribute-name.html html-template.ng.data-attribute.suffix
+#           ^ html-template.ng meta.attribute.test.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#            ^ html-template.ng meta.attribute.test.html string.quoted.double.html
+#             ^ html-template.ng string.quoted.double.html
+>  data-color=""
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.color.html entity.other.attribute-name.html html-template.ng.data-attribute.prefix
+#       ^^^^^ html-template.ng meta.attribute.color.html entity.other.attribute-name.html html-template.ng.data-attribute.suffix
+#            ^ html-template.ng meta.attribute.color.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#             ^ html-template.ng meta.attribute.color.html string.quoted.double.html
+#              ^ html-template.ng string.quoted.double.html
+>  data-boolean
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.boolean.html entity.other.attribute-name.html html-template.ng.data-attribute.prefix
+#       ^^^^^^^ html-template.ng meta.attribute.boolean.html entity.other.attribute-name.html html-template.ng.data-attribute.suffix
+>></div>
+#^ html-template.ng meta.tag.structure.div.end.html punctuation.definition.tag.end.html
+# ^^ html-template.ng meta.tag.structure.div.start.html punctuation.definition.tag.begin.html
+#   ^^^ html-template.ng meta.tag.structure.div.start.html entity.name.tag.html html-template.tag.html
+#      ^ html-template.ng meta.tag.structure.div.end.html punctuation.definition.tag.end.html
+>
 >STYLE TAGS
 #^^^^^^^^^^^ html-template.ng
 >
@@ -13030,6 +13413,18 @@
 >  }
 #^^ html-template.ng source.css.scss meta.property-list.scss
 #  ^ html-template.ng source.css.scss meta.property-list.scss punctuation.section.property-list.end.bracket.curly.scss
+></style>
+#^^ html-template.ng meta.tag.metadata.style.start.html punctuation.definition.tag.begin.html
+#  ^^^^^ html-template.ng meta.tag.metadata.style.start.html meta.tag.metadata.html entity.name.tag.html html-template.tag.html
+#       ^ html-template.ng meta.tag.metadata.style.start.html punctuation.definition.tag.end.html
+>
+><style randomarrtr>
+#^ html-template.ng meta.tag.metadata.style.start.html punctuation.definition.tag.begin.html
+# ^^^^^ html-template.ng meta.tag.metadata.style.start.html entity.name.tag.html
+#      ^ html-template.ng
+#       ^^^^^^^^^^^ html-template.ng meta.attribute.randomarrtr.boolean.html entity.other.attribute-name.html html-template.ng.attributes.generic
+#                  ^^ html-template.ng
+>
 ></style>
 #^^ html-template.ng meta.tag.metadata.style.start.html punctuation.definition.tag.begin.html
 #  ^^^^^ html-template.ng meta.tag.metadata.style.start.html meta.tag.metadata.html entity.name.tag.html html-template.tag.html

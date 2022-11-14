@@ -19,7 +19,11 @@
       "htmlScriptAttributesLanguageIdentifier": "Corresponde ao identificador de linguagem no atributo type da tag style.",
       "htmlTags": "Corresponde a elementos conhecidos do HTML.",
       "htmlCustomTags": "Corresponde a elements não conhecidos do HTML.",
-      "seeHtmlEvents": "Ver Eventos HTML"
+      "seeHtmlEvents": "Ver Eventos HTML",
+      "ariaAttributePrefix": "Corresponde ao prefixo aria de atributos de acessibilidade.",
+      "ariaAttributeSuffix": "Corresponde ao sufixo aria de atributos de acessibilidade.",
+      "dataAttributePrefix": "Corresponde ao prefixo data de atributos data.",
+      "dataAttributeSuffix": "Corresponde ao sufixo de atributos data."
     },
     "angular": {
       "angularExpression": "Corresponde às chaves precedendo e sucedendo uma expressão do angular.\nTanto para interpolação quanto para expressões de templates.",

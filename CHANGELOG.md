@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.2.2...v2.3.0) (2022-11-14)
+
+### Features
+
+- **performance:** also added support for data and aria prefixed attributes ([5feb30f](https://github.com/ghaschel/vscode-angular-html/commit/5feb30f2b42c5f6d1c62163ac2b72ded44b9a8de)), closes [#74](https://github.com/ghaschel/vscode-angular-html/issues/74)
+
+### Bug Fixes
+
+- **settings:** fixed an issue with changing settings through the settings page ([d0d9714](https://github.com/ghaschel/vscode-angular-html/commit/d0d9714f79410c46207aa6d381350ef7b1a34c95)), closes [#72](https://github.com/ghaschel/vscode-angular-html/issues/72)
+
 ### [2.2.2](https://github.com/ghaschel/vscode-angular-html/compare/v2.2.1...v2.2.2) (2022-11-11)
 
 ### Bug Fixes

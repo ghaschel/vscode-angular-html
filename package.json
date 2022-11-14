@@ -15,8 +15,8 @@
   "scripts": {
     "clean": "rimraf out/**/* && rimraf src/ts/resources/*.json && rimraf package.nls*.json && rimraf syntaxes/*",
     "vscode:prepublish": "npm run clean && npm run compile",
-    "compile": "npm run clean && npm run compile:assets && npm run compile:ts && npm run compile:test",
-    "compile:ts": "tsc -p tsconfig.json",
+    "compile": "npm run clean && npm run compile:assets && npm run package && npm run compile:test",
+    "compile:ts": "webpack-dev",
     "compile:test": "tsc -p tsconfig.test.json",
     "watch": "npm run clean && npm run compile:assets && tsc -watch -p tsconfig.json",
     "compile:assets": "npm run compile:color-customizations && npm run compile:grammar:prod && npm run compile:locale",

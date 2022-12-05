@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.2](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.1...v2.3.2) (2022-12-05)
+
+### Bug Fixes
+
+- **animation callback:** fixed annimation callback not working ([6ae55ea](https://github.com/ghaschel/vscode-angular-html/commit/6ae55eae2b19dca50f768ad2231151da8e4e1027))
+
 ### [2.3.1](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.0...v2.3.1) (2022-11-14)
 
 ## [2.3.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.2.2...v2.3.0) (2022-11-14)

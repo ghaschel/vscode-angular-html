@@ -39,7 +39,7 @@
     "package": "npx webpack --mode production --devtool hidden-source-map"
   },
   "engines": {
-    "vscode": "^1.72.0"
+    "vscode": "^1.73.0"
   },
   "categories": [
     "Programming Languages"

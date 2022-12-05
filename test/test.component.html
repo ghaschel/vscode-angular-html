@@ -238,6 +238,9 @@ ANGULAR DIRECTIVES
   [binding]="to.element"
   [binding]="to.function('with-parameter')"
   @animationTrigger
+  [@.done]="test"
+  (@rightCardTransition.done)="rightCardTransition = 'static'"
+  (@.done)="test"
   [element_binding]="to.function_with_underline('with-parameter')"
   (click)="to.function(with.parameter)"
   (click)="to.function(with!.parameter)"

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.4](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.3...v2.3.4) (2022-12-14)
+
+### Bug Fixes
+
+- **legacy-colors-command:** fixed the legacy-colors-command ([48b6855](https://github.com/ghaschel/vscode-angular-html/commit/48b6855b67230d5b72b457f80aff177639b75517))
+
 ### [2.3.3](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.2...v2.3.3) (2022-12-05)
 
 ### [2.3.2](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.1...v2.3.2) (2022-12-05)

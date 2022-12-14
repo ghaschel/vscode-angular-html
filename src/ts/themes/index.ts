@@ -120,7 +120,7 @@ const updateScopeColors = async (): Promise<void> => {
   ) as unknown as SupportedThemes;
 
   if (supportedThemes.includes(theme)) {
-    scopeColors = await import(`./${theme}`);
+    scopeColors = require(`./${theme}`);
   } else {
     const themeColors = await fetchThemeColors();
     scopeColors = fetchScopeColors(themeColors);

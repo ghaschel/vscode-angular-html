@@ -35,8 +35,8 @@
     "test": "node ./out/test/runTest.js && npx vscode-tmgrammar-test -g syntaxes/html-template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json -g test/externalGrammars/source.js.tmLanguage.json -g test/externalGrammars/source.coffee.tmLanguage.json -g test/externalGrammars/source.dart.tmLanguage.json -g test/externalGrammars/source.postcss.tmLanguage.plist -g test/externalGrammars/source.sass.tmLanguage.json -g test/externalGrammars/source.js.regexp.tmLanguage.plist test/*.html",
     "update-snapshots": "npx vscode-tmgrammar-snap -s html-template.ng -g syntaxes/html-template.ng.json -g test/externalGrammars/source.css.tmLanguage.json -g test/externalGrammars/source.ts.tmLanguage.json -g test/externalGrammars/source.css.scss.tmLanguage.json -g test/externalGrammars/source.css.less.tmLanguage.json -g test/externalGrammars/source.stylus.tmLanguage.json -g test/externalGrammars/source.sassdoc.tmLanguage.json -g test/externalGrammars/source.js.tmLanguage.json -g test/externalGrammars/source.coffee.tmLanguage.json -g test/externalGrammars/source.dart.tmLanguage.json -g test/externalGrammars/source.postcss.tmLanguage.plist -g test/externalGrammars/source.sass.tmLanguage.json -g test/externalGrammars/source.js.regexp.tmLanguage.plist --updateSnapshot test/*.html",
     "webpack": "npx webpack --mode development",
-    "webpack-dev": "npx webpack --mode development --watch",
-    "package": "npx webpack --mode production --devtool hidden-source-map"
+    "webpack-dev": "npx webpack --mode development --watch --stats-error-details",
+    "package": "npx webpack --mode production"
   },
   "engines": {
     "vscode": "^1.73.0"

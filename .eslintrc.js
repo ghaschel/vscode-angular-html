@@ -32,7 +32,7 @@ var baseTsRules = {
     'error',
     'always',
     {
-      ignorePattern: 'pragma|ignore|prettier-ignore',
+      ignorePattern: 'pragma|ignore|prettier-ignore|webpack',
       ignoreInlineComments: true,
       ignoreConsecutiveComments: true,
     },
@@ -205,7 +205,7 @@ var baseTsRules = {
   ],
   'keyword-spacing': 'off',
   'lines-around-comment': [
-    'error',
+    'off',
     {
       beforeBlockComment: true,
       afterBlockComment: false,
@@ -219,7 +219,7 @@ var baseTsRules = {
       allowArrayEnd: false,
       beforeLineComment: true,
       allowBlockStart: true,
-      ignorePattern: 'pragma|ignore|prettier-ignore',
+      ignorePattern: 'pragma|ignore|prettier-ignore|Webpack|webpack',
     },
   ],
   'lines-between-class-members': 'off',
@@ -469,7 +469,7 @@ var baseTsRules = {
 var tsRules = {
   ...baseTsRules,
   'max-classes-per-file': ['error', { ignoreExpressions: true, max: 1 }],
-  '@typescript-eslint/no-require-imports': ['error'],
+  '@typescript-eslint/no-require-imports': ['off'],
   'prettier/prettier': 2,
 };
 

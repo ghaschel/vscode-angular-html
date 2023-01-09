@@ -119,8 +119,11 @@ const updateScopeColors = async (): Promise<void> => {
     '',
   ) as unknown as SupportedThemes;
 
+  console.log(theme);
+
   if (supportedThemes.includes(theme)) {
-    scopeColors = require(`./${theme}`);
+    scopeColors = await require(`./${theme}`);
+    console.log(scopeColors);
   } else {
     const themeColors = await fetchThemeColors();
     scopeColors = fetchScopeColors(themeColors);

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.5](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.4...v2.3.5) (2023-01-09)
+
+### Bug Fixes
+
+- **color generation:** fixed color customization generation ([1e3ccc9](https://github.com/ghaschel/vscode-angular-html/commit/1e3ccc94312647ac4e8f4b5d2b8fba472688bd85))
+
 ### [2.3.4](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.3...v2.3.4) (2022-12-14)
 
 ### Bug Fixes

@@ -8,7 +8,7 @@ assignees: ghaschel
 
 Please provide the maximum amount of information in order for me to be able to fix it quicker.
 
-Please, read the [F.A.Q.](../../docs/FAQ.md) before. Your bug might not be a bug.
+Please, read the [F.A.Q.](https://github.com/ghaschel/vscode-angular-html/blob/master/docs/FAQ.md) before. Your bug might not be a bug.
 
 **Have you read the F.A.Q.?**
 

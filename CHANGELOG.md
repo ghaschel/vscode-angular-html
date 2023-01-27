@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.7...v2.4.0) (2023-01-27)
+
+### Features
+
+- **image mime types:** added link rel type support ([9a17427](https://github.com/ghaschel/vscode-angular-html/commit/9a174272c218d56b79ef8c83e719ddf1a19a29bd))
+
 ### [2.3.7](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.6...v2.3.7) (2023-01-09)
 
 ### [2.3.6](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.5...v2.3.6) (2023-01-09)

@@ -31,6 +31,7 @@
   - [Stylesheet](#stylesheet)
 - [Style tags](#style-tags)
 - [Script tags](#script-tags)
+- [Link tags](#link-tags)
 
 # General
 
@@ -219,3 +220,10 @@
   - `javascript` - html-template.ng.script.language.identifier
 - `lang="javascript"`
   - `javascript` - html-template.ng.script.language.identifier
+
+# Link tags
+
+<img src="../assets/link-tag-icon" title="Link tags" alt="Link tag" />
+
+- `type="image/x-icon"`
+  - `x-icon` - html-template.ng.link.myme-type

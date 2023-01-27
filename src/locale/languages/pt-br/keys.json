@@ -17,6 +17,7 @@
       "htmlAttributeValueSeparator": "Corresponde ao separador de atributo-valor (=) HTML.\nEsta é uma correspondência global.",
       "htmlStyleAttributesLanguageIdentifier": "Corresponde ao identificador de linguagem no atributo type da tag script.",
       "htmlScriptAttributesLanguageIdentifier": "Corresponde ao identificador de linguagem no atributo type da tag style.",
+      "htmlLinkAttributesMimeType": "Corresponde ao identificador de MIME Type no attributo type da tag link.",
       "htmlTags": "Corresponde a elementos conhecidos do HTML.",
       "htmlCustomTags": "Corresponde a elements não conhecidos do HTML.",
       "seeHtmlEvents": "Ver Eventos HTML",

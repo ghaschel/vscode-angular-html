@@ -17,6 +17,7 @@
       "htmlAttributeValueSeparator": "Matches HTML attribute-value separator (=).\nThis is a global match.",
       "htmlStyleAttributesLanguageIdentifier": "Matches HTML Style Type Attribute language identifier.",
       "htmlScriptAttributesLanguageIdentifier": "Matches HTML Script Type Attribute language identifier.",
+      "htmlLinkAttributesMimeType": "Matches HTML link tag type attribute icon MIME type.",
       "htmlTags": "Matches HTML known elements.",
       "htmlCustomTags": "Matches non-standard HTML elements.",
       "seeHtmlEvents": "See HTML and SVG Events",

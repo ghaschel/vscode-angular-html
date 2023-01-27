@@ -10,6 +10,7 @@ export interface PackageNls {
   'ext.settings.html.htmlAttributeValueSeparator': string;
   'ext.settings.html.htmlStyleAttributesLanguageIdentifier': string;
   'ext.settings.html.htmlScriptAttributesLanguageIdentifier': string;
+  'ext.settings.html.htmlLinkAttributesMimeType': string;
   'ext.settings.html.htmlTags': string;
   'ext.settings.html.htmlCustomTags': string;
   'ext.settings.html.ariaAttributePrefix': string;

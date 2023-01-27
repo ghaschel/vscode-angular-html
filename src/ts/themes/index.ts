@@ -91,6 +91,7 @@ const applyScopeColors = async (scopeColors: Scopes): Promise<void> => {
     scopeColors[LegacyScopes.htmlGenericAttributesFollowedByParameter];
   settings['vscode-angular-html.htmlScriptAttributesLanguageIdentifier'] =
     scopeColors[LegacyScopes.htmlScriptAttributesLanguageIdentifier];
+  settings['vscode-angular-html.htmlLinkAttributesMimeType'] = scopeColors[LegacyScopes.htmlLinkAttributesMimeType];
   settings['vscode-angular-html.htmlStyleAttributesLanguageIdentifier'] =
     scopeColors[LegacyScopes.htmlStyleAttributesLanguageIdentifier];
   settings['vscode-angular-html.htmlTags'] = scopeColors[LegacyScopes.htmlTags];

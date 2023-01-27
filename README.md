@@ -67,6 +67,7 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
   - [Coffeescript](#coffeescript)
   - [Dart](#dart)
   - [Javascript fallback](#javascript-fallback)
+- [Link tags](#link-tags)
 - [Theming](#theming)
 - [Translate](#translate)
 - [Changelog](#changelog)
@@ -278,6 +279,10 @@ And with [colorize support](https://marketplace.visualstudio.com/items?itemName=
 ## Javascript fallback
 
 <img src="assets/script-tag-javascript-fallback.png" title="Script tags" alt="Script tag" />
+
+# Link tags
+
+<img src="assets/link-tag-icon" title="Link tags" alt="Link tag" />
 
 # Theming
 

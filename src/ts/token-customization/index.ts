@@ -54,6 +54,7 @@ const removeLegacyColorCustomizations = async (): Promise<SettingsDictionary> =>
   settings['vscode-angular-html.htmlEventsAttributes'] = '';
   settings['vscode-angular-html.htmlGenericAttributesFollowedByParameter'] = '';
   settings['vscode-angular-html.htmlScriptAttributesLanguageIdentifier'] = '';
+  settings['vscode-angular-html.htmlLinkAttributesMimeType'] = '';
   settings['vscode-angular-html.htmlStyleAttributesLanguageIdentifier'] = '';
   settings['vscode-angular-html.htmlTags'] = '';
   settings['vscode-angular-html.primeNgElementTags'] = '';

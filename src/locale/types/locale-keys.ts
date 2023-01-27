@@ -17,6 +17,7 @@ export interface LocaleKeys {
       htmlAttributeValueSeparator: string;
       htmlStyleAttributesLanguageIdentifier: string;
       htmlScriptAttributesLanguageIdentifier: string;
+      htmlLinkAttributesMimeType: string;
       htmlTags: string;
       htmlCustomTags: string;
       seeHtmlEvents: string;

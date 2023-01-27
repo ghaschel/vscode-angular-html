@@ -44,6 +44,7 @@ export enum LegacyScopes {
 
   htmlScriptAttributesLanguageIdentifier = 'constant.numeric.angular-directive',
   htmlStyleAttributesLanguageIdentifier = 'constant.numeric.angular-directive',
+  htmlLinkAttributesMimeType = 'constant.numeric.angular-directive',
   angularAnimationTriggerVariableName = 'constant.numeric.angular-directive',
   angularEventHandlerName = 'constant.numeric.angular-directive',
   angularOneWayBindingFirstLevelDepth = 'constant.numeric.angular-directive',

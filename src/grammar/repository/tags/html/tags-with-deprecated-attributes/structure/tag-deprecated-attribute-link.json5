@@ -45,6 +45,9 @@
           include: '#style-type-attribute',
         },
         {
+          include: '#link-type-attribute',
+        },
+        {
           include: '#tag-stuff',
         },
       ],

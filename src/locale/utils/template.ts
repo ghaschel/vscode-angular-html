@@ -24,6 +24,7 @@ const buildJson = (lang: Lang): PackageNls => {
     'ext.settings.html.htmlAttributeValueSeparator': `${json.settings.html.htmlAttributeValueSeparator}${markdown.settings.html.htmlAttributeValueSeparator}${json.settings.general.leaveEmpty}`,
     'ext.settings.html.htmlStyleAttributesLanguageIdentifier': `${json.settings.html.htmlStyleAttributesLanguageIdentifier}${markdown.settings.html.htmlStyleAttributesLanguageIdentifier}${json.settings.general.leaveEmpty}`,
     'ext.settings.html.htmlScriptAttributesLanguageIdentifier': `${json.settings.html.htmlScriptAttributesLanguageIdentifier}${markdown.settings.html.htmlScriptAttributesLanguageIdentifier}${json.settings.general.leaveEmpty}`,
+    'ext.settings.html.htmlLinkAttributesMimeType': `${json.settings.html.htmlLinkAttributesMimeType}${markdown.settings.html.htmlLinkAttributesMimeType}${json.settings.general.leaveEmpty}`,
     'ext.settings.html.htmlTags': `${json.settings.html.htmlTags}${markdown.settings.html.htmlTags}${json.settings.general.leaveEmpty}`,
     'ext.settings.html.htmlCustomTags': `${json.settings.html.htmlCustomTags}${markdown.settings.html.htmlCustomTags}${json.settings.general.leaveEmpty}`,
     'ext.settings.html.ariaAttributePrefix': `${json.settings.html.ariaAttributePrefix}${markdown.settings.html.ariaAttributePrefix}${json.settings.general.leaveEmpty}`,

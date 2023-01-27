@@ -1,0 +1,8 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.link.myme-type',
+      configRule: 'vscode-angular-html.htmlLinkAttributesMimeType',
+    },
+  ],
+}

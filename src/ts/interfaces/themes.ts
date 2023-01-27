@@ -1,5 +1,6 @@
 export type SupportedThemes = [
   | 'Abyss'
+  | 'Angular Theme'
   | 'Atom One Dark'
   | 'Ayu Dark'
   | 'Ayu Dark Bordered'

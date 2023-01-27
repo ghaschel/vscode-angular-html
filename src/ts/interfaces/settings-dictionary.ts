@@ -24,6 +24,7 @@ export interface SettingsDictionary {
   'vscode-angular-html.angularAndAngularMaterialElementTags'?: string;
   'vscode-angular-html.htmlScriptAttributesLanguageIdentifier'?: string;
   'vscode-angular-html.htmlStyleAttributesLanguageIdentifier'?: string;
+  'vscode-angular-html.htmlLinkAttributesMimeType'?: string;
   'vscode-angular-html.ariaAttributePrefix'?: string;
   'vscode-angular-html.ariaAttributeSuffix'?: string;
   'vscode-angular-html.dataAttributePrefix'?: string;

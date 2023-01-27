@@ -149,6 +149,11 @@
             "default": "",
             "markdownDescription": "%ext.settings.html.htmlScriptAttributesLanguageIdentifier%"
           },
+          "vscode-angular-html.htmlLinkAttributesMimeType": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.html.htmlLinkAttributesMimeType%"
+          },
           "vscode-angular-html.ariaAttributePrefix": {
             "type": "string",
             "default": "",

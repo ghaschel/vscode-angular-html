@@ -42,17 +42,6 @@
             },
           },
         },
-        // {
-        //   match: "(\\?\\.|\\!\\.|\\.)\\s*([_$[:alpha:]][_$[:alnum:]]*)",
-        //   captures: {
-        //     "1": {
-        //       name: "punctuation.accessor.ts",
-        //     },
-        //     "2": {
-        //       name: "variable.other.property.ts",
-        //     },
-        //   },
-        // },
         {
           match: '(?x)(?:\n  ([[:upper:]][_$[:digit:][:upper:]]*) |\n  ([_$[:alpha:]][_$[:alnum:]]*)\n)(?=\\s*\\.\\s*[_$[:alpha:]][_$[:alnum:]]*)',
           captures: {

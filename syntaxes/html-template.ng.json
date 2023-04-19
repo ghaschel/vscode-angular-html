@@ -795,6 +795,89 @@
         }
       ]
     },
+    "svg-non-string-attributes": {
+      "patterns": [
+        {
+          "name": "meta.element.attribute.$2.svg",
+          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(d))\\b(?![\\w-]))(=)(\")",
+          "beginCaptures": {
+            "0": {
+              "name": "meta.attribute.svg.$2.html"
+            },
+            "2": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "4": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "end": "(\")",
+          "endCaptures": {
+            "1": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "patterns": [
+            {
+              "match": "([0-9]+)|([MmLlHhVvCcSsQqTtAaZz]+)|([\\.\\,\\-]+)",
+              "captures": {
+                "1": {
+                  "name": "constant.numeric.css"
+                },
+                "2": {
+                  "name": "keyword.other.commands.path.svg html-template.ng.svg.path.commands"
+                },
+                "3": {
+                  "name": "punctuation.separator.delimiter.scss"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "meta.element.attribute.$2.svg",
+          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(amplitude|azimuth|baseFrequency|begin|bias|by|clip-path|color|cursor|cx|cy|diffuseConstant|divisor|dur|dx|dy|elevation|end|exponent|fill-opacity|fill|filter|flood-color|flood-opacity|font-size-adjust|font-size|font-weight|from|fr|fx|fy|gradientTransform|hatchpath|height|intercept|k1|k2|k3|k4|kernelMatrix|keyPoints|keySplines|keyTimes|letter-spacing|lighting-color|limitingConeAngle|marker-end|marker-mid|marker-start|markerHeight|markerWidth|mask|max|media|min|numOctaves|offset|opacity|order|overline-position|overline-thickness|pathLength|patternTransform|pointsAtX|pointsAtY|pointsAtZ|points|radius|refX|refY|repeatCount|repeatDur|rotate|rx|ry|r|scale|seed|solid-color|solid-opacity|specularConstant|specularExponent|startOffset|stdDeviation|stop-color|stop-opacity|strikethrough-position|strikethrough-thickness|stroke-dashoffset|stroke-dassharray|stroke-miterlimit|stroke-width|stroke|surfaceScale|tabindex|tableValues|targetX|targetY|textLength|to|transform-origin|transform2|transform|underline-position|underline-thickness|values|viewbox|width|word-spacing|x1|x2|x|y1|y2|y|z))\\b(?![\\w-]))(=)(\")",
+          "beginCaptures": {
+            "2": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "4": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "end": "(\")",
+          "endCaptures": {
+            "1": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "patterns": [
+            {
+              "begin": "(?<=\")",
+              "end": "(?=\")",
+              "name": "string.quoted.double.html",
+              "patterns": [
+                {
+                  "include": "source.css.scss#property_values"
+                },
+                {
+                  "include": "#angular-interpolations"
+                },
+                {
+                  "include": "#entities"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "aria-attributes": {
       "beginCaptures": {
         "0": {
@@ -1298,89 +1381,6 @@
               "name": "html-template.ng.style.language.identifier"
             }
           }
-        }
-      ]
-    },
-    "svg-non-string-attributes": {
-      "patterns": [
-        {
-          "name": "meta.element.attribute.$2.svg",
-          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(d))\\b(?![\\w-]))(=)(\")",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.attribute.svg.$2.html"
-            },
-            "2": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "4": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "end": "(\")",
-          "endCaptures": {
-            "1": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "patterns": [
-            {
-              "match": "([0-9]+)|([MmLlHhVvCcSsQqTtAaZz]+)|([\\.\\,\\-]+)",
-              "captures": {
-                "1": {
-                  "name": "constant.numeric.css"
-                },
-                "2": {
-                  "name": "keyword.other.commands.path.svg html-template.ng.svg.path.commands"
-                },
-                "3": {
-                  "name": "punctuation.separator.delimiter.scss"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "meta.element.attribute.$2.svg",
-          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(amplitude|azimuth|baseFrequency|begin|bias|by|clip-path|color|cursor|cx|cy|diffuseConstant|divisor|dur|dx|dy|elevation|end|exponent|fill-opacity|fill|filter|flood-color|flood-opacity|font-size-adjust|font-size|font-weight|from|fr|fx|fy|gradientTransform|hatchpath|height|intercept|k1|k2|k3|k4|kernelMatrix|keyPoints|keySplines|keyTimes|letter-spacing|lighting-color|limitingConeAngle|marker-end|marker-mid|marker-start|markerHeight|markerWidth|mask|max|media|min|numOctaves|offset|opacity|order|overline-position|overline-thickness|pathLength|patternTransform|pointsAtX|pointsAtY|pointsAtZ|points|radius|refX|refY|repeatCount|repeatDur|rotate|rx|ry|r|scale|seed|solid-color|solid-opacity|specularConstant|specularExponent|startOffset|stdDeviation|stop-color|stop-opacity|strikethrough-position|strikethrough-thickness|stroke-dashoffset|stroke-dassharray|stroke-miterlimit|stroke-width|stroke|surfaceScale|tabindex|tableValues|targetX|targetY|textLength|to|transform-origin|transform2|transform|underline-position|underline-thickness|values|viewbox|width|word-spacing|x1|x2|x|y1|y2|y|z))\\b(?![\\w-]))(=)(\")",
-          "beginCaptures": {
-            "2": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "4": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "end": "(\")",
-          "endCaptures": {
-            "1": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "patterns": [
-            {
-              "begin": "(?<=\")",
-              "end": "(?=\")",
-              "name": "string.quoted.double.html",
-              "patterns": [
-                {
-                  "include": "source.css.scss#property_values"
-                },
-                {
-                  "include": "#angular-interpolations"
-                },
-                {
-                  "include": "#entities"
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -2472,6 +2472,40 @@
         }
       ]
     },
+    "angular-interpolations": {
+      "patterns": [
+        {
+          "beginCaptures": {
+            "0": {
+              "name": "expression.ng"
+            },
+            "1": {
+              "name": "punctuation.definition.block.ts html-template.ng.interpolation.begin"
+            }
+          },
+          "patterns": [
+            {
+              "match": "\\?\\.|\\!\\.|\\.|\\!|\\?|\\:",
+              "name": "keyword.operator.navigation html-template.ng.expression.operator.navigator"
+            },
+            {
+              "include": "#angular-expression"
+            }
+          ],
+          "begin": "(\\{\\{\\{?)",
+          "endCaptures": {
+            "0": {
+              "name": "expression.ng"
+            },
+            "1": {
+              "name": "punctuation.definition.block.ts html-template.ng.interpolation.end"
+            }
+          },
+          "end": "(\\}\\}\\}?)",
+          "name": "expression.ng html-template.ng.interpolation.expression"
+        }
+      ]
+    },
     "angular-expression": {
       "name": "expression.ng",
       "patterns": [
@@ -3503,40 +3537,6 @@
         }
       ]
     },
-    "angular-interpolations": {
-      "patterns": [
-        {
-          "beginCaptures": {
-            "0": {
-              "name": "expression.ng"
-            },
-            "1": {
-              "name": "punctuation.definition.block.ts html-template.ng.interpolation.begin"
-            }
-          },
-          "patterns": [
-            {
-              "match": "\\?\\.|\\!\\.|\\.|\\!|\\?|\\:",
-              "name": "keyword.operator.navigation html-template.ng.expression.operator.navigator"
-            },
-            {
-              "include": "#angular-expression"
-            }
-          ],
-          "begin": "(\\{\\{\\{?)",
-          "endCaptures": {
-            "0": {
-              "name": "expression.ng"
-            },
-            "1": {
-              "name": "punctuation.definition.block.ts html-template.ng.interpolation.end"
-            }
-          },
-          "end": "(\\}\\}\\}?)",
-          "name": "expression.ng html-template.ng.interpolation.expression"
-        }
-      ]
-    },
     "tag-script": {
       "begin": "(^[\\t]+)?(?=<(?i:script)\\b(?!-))",
       "beginCaptures": {
@@ -3762,7 +3762,7 @@
                           ]
                         },
                         {
-                          "begin": ">",
+                          "begin": "(?!\\G)",
                           "end": "(?=</script>)",
                           "name": "source.dart",
                           "patterns": [
@@ -4371,144 +4371,6 @@
         }
       ]
     },
-    "tag-deprecated-attribute-a": {
-      "begin": "(<\\/?)(a)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.inline.a.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.html"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.inline.a.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.html",
-          "match": "[\\s\\n\\r\\t]*(\\b(charset|coords|rev|shape)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.a.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-attribute-area": {
-      "begin": "(<\\/?)(area)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.inline.area.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.html"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.inline.area.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.html",
-          "match": "[\\s\\n\\r\\t]*(\\b(nohref)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.area.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-attribute-br": {
-      "begin": "(<\\/?)(br)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.inline.br.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.html"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.inline.br.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.html",
-          "match": "[\\s\\n\\r\\t]*(\\b(clear)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.br.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
     "tag-deprecated-attribute-iframe": {
       "begin": "(<\\/?)(iframe)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
       "end": "(\\/?>)",
@@ -4682,6 +4544,144 @@
           "captures": {
             "2": {
               "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.param.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-attribute-a": {
+      "begin": "(<\\/?)(a)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.inline.a.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.inline.a.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.html",
+          "match": "[\\s\\n\\r\\t]*(\\b(charset|coords|rev|shape)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.a.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-attribute-area": {
+      "begin": "(<\\/?)(area)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.inline.area.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.inline.area.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.html",
+          "match": "[\\s\\n\\r\\t]*(\\b(nohref)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.area.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-attribute-br": {
+      "begin": "(<\\/?)(br)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.inline.br.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.inline.br.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.html",
+          "match": "[\\s\\n\\r\\t]*(\\b(clear)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.br.$1"
             },
             "3": {
               "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"

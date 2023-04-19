@@ -18,6 +18,7 @@ export type SupportedThemes = [
   | 'Community Material Theme Ocean High Contrast'
   | 'Community Material Theme Palenight'
   | 'Community Material Theme Palenight High Contrast'
+  | 'Darcula'
   | 'Darcula - Black Edition'
   | 'Darcula - WebStorm Edition'
   | 'Dark (Visual Studio - CC++)'
@@ -110,6 +111,7 @@ export const supportedThemes = [
   'Community Material Theme Ocean High Contrast',
   'Community Material Theme Palenight',
   'Community Material Theme Palenight High Contrast',
+  'Darcula',
   'Darcula - Black Edition',
   'Darcula - WebStorm Edition',
   'Dark (Visual Studio - CC++)',

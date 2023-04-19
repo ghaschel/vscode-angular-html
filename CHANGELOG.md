@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.4.0...v2.5.0) (2023-04-19)
+
+### Features
+
+- **theme:** added darcula theme support ([b9587f2](https://github.com/ghaschel/vscode-angular-html/commit/b9587f28d05506e957c3505c1c730dfe86b5082a))
+
 ## [2.4.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.7...v2.4.0) (2023-01-27)
 
 ### Features

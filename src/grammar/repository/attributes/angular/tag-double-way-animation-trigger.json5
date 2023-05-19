@@ -1,0 +1,27 @@
+{
+  repository: {
+    'tag-double-way-annimation-trigger': {
+      captures: {
+        '0': {
+          name: 'meta.ng-animation-trigger.property.html',
+        },
+        '1': {
+          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.begin.html',
+        },
+        '2': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.animationtrigger.prefix',
+        },
+        '3': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.animationtrigger.variable',
+        },
+        '4': {
+          name: 'entity.other.attribute-name.html html-template.ng.attributes.suffix.rxjs',
+        },
+        '5': {
+          name: 'entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.end.html',
+        },
+      },
+      match: '(?<!\\()(\\[)(@)\\b([\\w\\-\\_]+)([$]*)(\\])(?!=)[\\s]?',
+    },
+  },
+}

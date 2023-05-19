@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.6.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.5.0...v2.6.0) (2023-05-19)
+
+### Features
+
+- **material-elements:** added new material elements tags and a missing pattern detection ([df47e1c](https://github.com/ghaschel/vscode-angular-html/commit/df47e1c1752219a96889e0f6cbdd185f8e0015bc))
+
 ## [2.5.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.4.0...v2.5.0) (2023-04-19)
 
 ### Features

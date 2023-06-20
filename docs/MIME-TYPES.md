@@ -3,6 +3,7 @@
 > This are the allowed mime-types for script, style xml-stylesheet and link tags
 
 ## Summary
+
 - [Script tag](#script-tag)
   - [Lang attribute](#lang-attribute)
   - [Type attribute](#type-attribute)
@@ -135,5 +136,6 @@
 - text/postcss
 
 ## Reference
+
 - [MIMEtype.io](https://mimetype.io/)
 - [IANA.org](https://www.iana.org/assignments/media-types/media-types.xhtml)

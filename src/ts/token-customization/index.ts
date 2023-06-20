@@ -60,6 +60,10 @@ const removeLegacyColorCustomizations = async (): Promise<SettingsDictionary> =>
   settings['vscode-angular-html.primeNgElementTags'] = '';
   settings['vscode-angular-html.svgDAttributePathCommands'] = '';
   settings['vscode-angular-html.svgTags'] = '';
+  settings['vscode-angular-html.ariaAttributePrefix'] = '';
+  settings['vscode-angular-html.ariaAttributeSuffix'] = '';
+  settings['vscode-angular-html.dataAttributePrefix'] = '';
+  settings['vscode-angular-html.dataAttributeSuffix'] = '';
   settings['vscode-angular-html.xmlAttributeNamespaceDivider'] = '';
   settings['vscode-angular-html.xmlAttributeNamespaceSuffix'] = '';
   settings['vscode-angular-html.xmlStylesheetAttributesLanguageIdentifier'] = '';

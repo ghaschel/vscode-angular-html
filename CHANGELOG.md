@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.7.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.6.1...v2.7.0) (2023-11-20)
+
+
+### Features
+
+* **theme support, debug:** added missing theme support and debug mode ([10576b8](https://github.com/ghaschel/vscode-angular-html/commit/10576b8e790eecc34a34140d362dbc05f4eff0d6))
+
+
+### Bug Fixes
+
+* upgrade semver from 7.3.8 to 7.4.0 ([0a100db](https://github.com/ghaschel/vscode-angular-html/commit/0a100db2e9b8aa82b70ed28c3ba181c57b85ff8e))
+
 ### [2.6.1](https://github.com/ghaschel/vscode-angular-html/compare/v2.6.0...v2.6.1) (2023-06-20)
 
 ### Bug Fixes

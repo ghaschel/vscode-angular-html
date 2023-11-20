@@ -1,2 +1,2 @@
 export const availableLangs: string[] = ['pt-br', 'en'];
-export type Lang = typeof availableLangs[number];
+export type Lang = (typeof availableLangs)[number];

@@ -24,11 +24,13 @@ export type SupportedThemes = [
   | 'Dark (Visual Studio - CC++)'
   | 'Dark (Visual Studio)'
   | 'Dark High Contrast'
+  | 'Dark Modern'
   | 'Dark Purple - Black Edition'
   | 'Dark Purple - Webstorm'
   | 'dark-plus-syntax'
   | 'dark-plus-syntax (high contrast)'
   | 'Default Dark+'
+  | 'Default Dark Modern'
   | 'Default Light+'
   | 'Dracula'
   | 'Dracula Soft'
@@ -122,6 +124,7 @@ export const supportedThemes = [
   'dark-plus-syntax',
   'dark-plus-syntax (high contrast)',
   'Default Dark+',
+  'Default Dark Modern',
   'Default Light+',
   'Dracula',
   'Dracula Soft',

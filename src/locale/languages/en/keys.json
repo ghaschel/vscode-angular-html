@@ -3,6 +3,9 @@
     "general": {
       "leaveEmpty": "Leave it empty to disable for this item only"
     },
+    "debug": {
+      "description": "Enable or disable debug mode"
+    },
     "colorCustomizations": {
       "description": "Manage extra matched characters color customizations. Set to `false` to turn it off"
     },

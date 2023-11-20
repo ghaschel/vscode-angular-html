@@ -5,6 +5,7 @@ export interface SettingsDictionary {
   'editor.tokenColorCustomizations'?: {
     textMateRules?: TextMateRule[];
   };
+  'vscode-angular-html.debug'?: boolean;
   'vscode-angular-html.colorCustomizations'?: boolean;
   'vscode-angular-html.angularExpression'?: string;
   'vscode-angular-html.htmlDoctypeExclamation'?: string;

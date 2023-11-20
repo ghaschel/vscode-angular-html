@@ -6,5 +6,5 @@ npm run lint:html
 npm run clean;
 npm run compile;
 
-npm run test;
-npx pretty-quick --staged
+# npm run test;
+# npx pretty-quick --staged

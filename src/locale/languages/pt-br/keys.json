@@ -3,6 +3,9 @@
     "general": {
       "leaveEmpty": "Deixe em branco para desativar para este item."
     },
+    "debug": {
+      "description": "Habilitar ou desabilitar modo de depuração"
+    },
     "colorCustomizations": {
       "description": "Gerencie caracteres extras e customizações de cores. Marque como `falso` para desabilitar"
     },

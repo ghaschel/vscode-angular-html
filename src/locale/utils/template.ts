@@ -13,6 +13,7 @@ const buildJson = (lang: Lang): PackageNls => {
   const json: LocaleKeys = JSON.parse(jsonText);
 
   return {
+    'ext.settings.debug.description': `${json.settings.debug.description}`,
     'ext.settings.colorCustomizations.description': `${json.settings.colorCustomizations.description}`,
     'ext.settings.html.htmlDoctypeAttributes': `${json.settings.html.htmlDoctypeAttributes}${markdown.settings.html.htmlDoctypeAttributes}${json.settings.general.leaveEmpty}`,
     'ext.settings.html.htmlDoctypeExclamation': `${json.settings.html.htmlDoctypeExclamation}${markdown.settings.html.htmlDoctypeExclamation}${json.settings.general.leaveEmpty}`,

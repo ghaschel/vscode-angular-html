@@ -274,6 +274,7 @@ var baseTsRules = {
   'yield-star-spacing': ['error', 'before'],
   'dot-notation': 'off',
   'no-unused-vars': 'off',
+  '@typescript-eslint/no-inferrable-types': 'off',
   '@typescript-eslint/no-use-before-define': [
     'error',
     {

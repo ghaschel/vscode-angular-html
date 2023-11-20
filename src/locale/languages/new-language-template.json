@@ -3,6 +3,9 @@
     "general": {
       "leaveEmpty": ""
     },
+    "debug": {
+      "description": ""
+    },
     "colorCustomizations": {
       "description": ""
     },

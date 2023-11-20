@@ -3,6 +3,7 @@ import {
   disableTokenCustomization,
   updateTokenCustomization,
 } from './token-customization';
+import { Debug } from './tools';
 
 import * as semver from 'semver';
 import * as vscode from 'vscode';
@@ -10,6 +11,8 @@ import { localize, init as nlsInit } from 'vscode-nls-i18n';
 
 const activate = function activate(context: vscode.ExtensionContext): void {
   nlsInit(context.extensionPath);
+
+  const debug = new Debug();
 
   const versionKey = 'shown.version';
   const updateMessage = 'updateMessage.shown';
@@ -54,17 +57,17 @@ const activate = function activate(context: vscode.ExtensionContext): void {
 
   const tokenCustomizationCommand = vscode.commands.registerCommand(
     'vscode-angular-html.updateTokenCustomization',
-    async () => updateTokenCustomization(),
+    async () => updateTokenCustomization(debug),
   );
 
   const addLegacyColorCustomizationsCommand = vscode.commands.registerCommand(
     'vscode-angular-html.addLegacyColorCustomizations',
-    async () => addLegacyColorCustomizations(),
+    async () => addLegacyColorCustomizations(debug),
   );
 
   const disableTokenCustomizationCommand = vscode.commands.registerCommand(
     'vscode-angular-html.disableTokenCustomization',
-    async () => disableTokenCustomization(),
+    async () => disableTokenCustomization(debug),
   );
 
   const configurationChange = vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
@@ -74,10 +77,12 @@ const activate = function activate(context: vscode.ExtensionContext): void {
       const config = vscode.workspace.getConfiguration('vscode-angular-html');
       const isCustomizationEnabled = config.get('colorCustomizations') as boolean;
 
+      debug.updateStatus();
+
       if (isCustomizationEnabled) {
-        updateTokenCustomization(true);
+        updateTokenCustomization(debug, true);
       } else {
-        disableTokenCustomization(true);
+        disableTokenCustomization(debug, true);
       }
     }
   });
@@ -88,8 +93,9 @@ const activate = function activate(context: vscode.ExtensionContext): void {
   context.subscriptions.push(disableTokenCustomizationCommand);
 };
 
-const deactivate = function deactivate(): void {
-  disableTokenCustomization();
+const deactivate = function deactivate(debug: Debug): void {
+  debug.dispose();
+  disableTokenCustomization(debug);
 };
 
 export { activate, deactivate };

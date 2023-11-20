@@ -1,4 +1,5 @@
 {
+  "ext.settings.debug.description": "Enable or disable debug mode",
   "ext.settings.colorCustomizations.description": "Manage extra matched characters color customizations. Set to `false` to turn it off",
   "ext.settings.html.htmlDoctypeAttributes": "Matches the DOCTYPE attributes:\n\n* <&#x21;DOCTYPE `html` `PUBLIC`>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\nLeave it empty to disable for this item only",
   "ext.settings.html.htmlDoctypeExclamation": "Matches the exclamation point preceding the DOCTYPE tag:\n\n* <`!`DOCTYPE html PUBLIC>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\nLeave it empty to disable for this item only",

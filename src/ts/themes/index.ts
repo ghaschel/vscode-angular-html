@@ -7,6 +7,7 @@ import * as vscode from 'vscode';
 
 import type { GeneratedTheme, Scopes } from '../interfaces/legacy-scopes-per-rule';
 import type { SupportedThemes } from '../interfaces/themes';
+import type { Debug } from '../tools';
 
 const fetchThemeColors = async (): Promise<GeneratedTheme[]> => {
   await vscode.commands.executeCommand('workbench.action.generateColorTheme');
@@ -36,7 +37,7 @@ const fetchScopeColors = (themeColors: GeneratedTheme[]): Scopes => ({
     ?.settings.foreground as string,
 });
 
-const applyScopeColors = async (scopeColors: Scopes): Promise<void> => {
+const applyScopeColors = async (scopeColors: Scopes, debug: Debug): Promise<void> => {
   const settings = await getSettingsJSON();
 
   settings['vscode-angular-html.angularAndAngularMaterialElementTags'] =
@@ -110,24 +111,38 @@ const applyScopeColors = async (scopeColors: Scopes): Promise<void> => {
   settings['vscode-angular-html.xmlTagNamespaceDivider'] = scopeColors[LegacyScopes.xmlTagNamespaceDivider];
   settings['vscode-angular-html.xmlTagNamespaceSuffix'] = scopeColors[LegacyScopes.xmlTagNamespaceSuffix];
 
+  debug.log('settings');
+  debug.log(settings);
+
   await setSettingsJSON(settings);
 };
 
-const updateScopeColors = async (): Promise<void> => {
+const updateScopeColors = async (debug: Debug): Promise<void> => {
   let scopeColors: Scopes;
   const theme = ((await vscode.workspace.getConfiguration().get('workbench.colorTheme')) as string).replace(
     '/',
     '',
   ) as unknown as SupportedThemes;
 
+  debug.log(`Theme: ${theme}`);
+
   if (supportedThemes.includes(theme)) {
     scopeColors = await require(`./${theme}`);
+
+    debug.log('Theme is supported');
+    debug.log(scopeColors);
   } else {
     const themeColors = await fetchThemeColors();
     scopeColors = fetchScopeColors(themeColors);
+
+    debug.log('Theme is not supported');
+    debug.log('scopeColors');
+    debug.log(scopeColors);
+    debug.log('themeColors');
+    debug.log(themeColors);
   }
 
-  await applyScopeColors(scopeColors);
+  await applyScopeColors(scopeColors, debug);
 };
 
 export { fetchScopeColors, fetchThemeColors, updateScopeColors, applyScopeColors };

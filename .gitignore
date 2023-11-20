@@ -8,6 +8,7 @@ test/externalGrammars/*.plist
 *.todo
 out/
 .vscode-test/
+.history/
 
 # PostCSS plist file is kept for testing as the repository got deleted
 # This will be reverted as soon as the current most used postcss extension

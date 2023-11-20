@@ -8,6 +8,7 @@ import { localize } from 'vscode-nls-i18n';
 import type { SettingsDictionary } from '../interfaces/settings-dictionary';
 import type { TextMateRule } from '../interfaces/textmate-rules';
 import type { TokenRule } from '../interfaces/tokens-rules';
+import type { Debug } from '../tools';
 
 const getTextMateRulesWithoutEmptyOnes = (
   currentRules: TextMateRule[],
@@ -94,8 +95,11 @@ const displayTabsMessage = (): void => {
   );
 };
 
-const disableTokenCustomization = async (fromSettingsChange = false): Promise<void> => {
+const disableTokenCustomization = async (debug: Debug, fromSettingsChange = false): Promise<void> => {
   const openTabs = getOpenTabs();
+
+  debug.log('openTabs');
+  debug.log(openTabs);
 
   if (checkOpenTabs(openTabs, fromSettingsChange)) {
     displayTabsMessage();
@@ -107,10 +111,18 @@ const disableTokenCustomization = async (fromSettingsChange = false): Promise<vo
   const activeCustomizations = settings['editor.tokenColorCustomizations']?.textMateRules ?? [];
   const currentRules = getTextMateRulesWithoutEmptyOnes(activeCustomizations, tokens.textMateRules);
 
+  debug.log('currentRules');
+  debug.log(currentRules);
+  debug.log('activeCustomizations');
+  debug.log(activeCustomizations);
+  debug.log('tokens.textMateRules');
+  debug.log(tokens.textMateRules);
+
   settings['editor.tokenColorCustomizations'] = { textMateRules: [...currentRules] };
   settings['vscode-angular-html.colorCustomizations'] = false;
 
-  console.log(settings);
+  debug.log('settings');
+  debug.log(settings);
 
   await setSettingsJSON(settings);
 };
@@ -133,8 +145,11 @@ const getActiveRulesFromSettings = (configs: vscode.WorkspaceConfiguration): Tex
   return rules;
 };
 
-const updateTokenCustomization = async (fromSettingsChange = false): Promise<void> => {
+const updateTokenCustomization = async (debug: Debug, fromSettingsChange = false): Promise<void> => {
   const openTabs = getOpenTabs();
+
+  debug.log('openTabs');
+  debug.log(openTabs);
 
   if (checkOpenTabs(openTabs, fromSettingsChange)) {
     displayTabsMessage();
@@ -149,13 +164,22 @@ const updateTokenCustomization = async (fromSettingsChange = false): Promise<voi
     config.get('vscode-angular-html') as vscode.WorkspaceConfiguration,
   );
 
+  debug.log('textMateRulesToBeAdded');
+  debug.log(textMateRulesToBeAdded);
+
   const tokenColorCustomizations = config.get<{
     textMateRules?: TextMateRule[];
   }>('editor.tokenColorCustomizations');
 
+  debug.log('tokenColorCustomizations');
+  debug.log(tokenColorCustomizations);
+
   if ((tokenColorCustomizations?.textMateRules?.length as number) > -1) {
     const activeRules = tokenColorCustomizations!.textMateRules as TextMateRule[];
     currentRules = getTextMateRulesWithoutEmptyOnes(activeRules, tokens.textMateRules);
+
+    debug.log('currentRules');
+    debug.log(currentRules);
   }
 
   await config.update(
@@ -169,8 +193,11 @@ const enableColorCustomization = async (): Promise<void> => {
   await vscode.workspace.getConfiguration('vscode-angular-html').update('colorCustomizations', true, true);
 };
 
-const addLegacyColorCustomizations = async (): Promise<void> => {
+const addLegacyColorCustomizations = async (debug: Debug): Promise<void> => {
   const openTabs = getOpenTabs();
+
+  debug.log('openTabs');
+  debug.log(openTabs);
 
   if (checkOpenTabs(openTabs)) {
     displayTabsMessage();
@@ -178,8 +205,8 @@ const addLegacyColorCustomizations = async (): Promise<void> => {
     return;
   }
 
-  await updateScopeColors();
-  await updateTokenCustomization();
+  await updateScopeColors(debug);
+  await updateTokenCustomization(debug);
 };
 
 export {

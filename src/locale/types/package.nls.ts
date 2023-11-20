@@ -1,4 +1,5 @@
 export interface PackageNls {
+  'ext.settings.debug.description': string;
   'ext.settings.colorCustomizations.description': string;
   'ext.settings.html.htmlDoctypeAttributes': string;
   'ext.settings.html.htmlDoctypeExclamation': string;

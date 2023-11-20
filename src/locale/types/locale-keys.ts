@@ -3,6 +3,9 @@ export interface LocaleKeys {
     general: {
       leaveEmpty: string;
     };
+    debug: {
+      description: string;
+    };
     colorCustomizations: {
       description: string;
     };

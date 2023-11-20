@@ -1,4 +1,5 @@
 {
+  "ext.settings.debug.description": "Habilitar ou desabilitar modo de depuração",
   "ext.settings.colorCustomizations.description": "Gerencie caracteres extras e customizações de cores. Marque como `falso` para desabilitar",
   "ext.settings.html.htmlDoctypeAttributes": "Corresponde aos attributos da tag DOCTYPE\n\n* <&#x21;DOCTYPE `html` `PUBLIC`>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\nDeixe em branco para desativar para este item.",
   "ext.settings.html.htmlDoctypeExclamation": "Corresponde ao ponto de exclamação precedente à tag DOCTYPE:\n\n* <`!`DOCTYPE html PUBLIC>\n\n```html\n\n<!DOCTYPE html PUBLIC>\n\n\n```\nDeixe em branco para desativar para este item.",

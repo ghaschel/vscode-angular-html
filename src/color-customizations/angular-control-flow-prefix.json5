@@ -1,0 +1,8 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.control-flow.prefix',
+      configRule: 'vscode-angular-html.controlFlowPrefix',
+    },
+  ],
+}

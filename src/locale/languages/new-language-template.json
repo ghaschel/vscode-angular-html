@@ -49,6 +49,8 @@
       "angularTemplateVariablePrefix": "",
       "angularTemplateVariableName": "",
       "angularExpressionOperatorsAndNavigatorsColor": "",
+      "controlFlowPrefix": "",
+      "controlFlowKeyword": "",
       "seeAngularTags": ""
     },
     "primeng": {

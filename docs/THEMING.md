@@ -13,6 +13,7 @@
 - [Angular](#angular)
   - [Directives](#directives)
   - [Interpolations](#interpolations)
+  - [Control Flow](#control-flow)
 - [PrimeNG](#primeng)
 - [HTML](#html)
   - [Doctype](#doctype)
@@ -109,6 +110,13 @@
 - `?`, `:` - html-template.ng.expression.operator.navigator
 - `??`, `&` - html-template.ng.expression.operator.bitwise
 - `}}` - html-template.ng.interpolation.end
+
+## Control Flow
+
+<img src="../assets/angular-control-flow.png" title="Angular Control Flow" alt="Angular Control Flow" />
+
+- `@` - html-template.ng.control-flow.prefix
+- `for`, `switch`, `if`, `[...]` - html-template.ng.control-flow.keyword
 
 # PrimeNG
 

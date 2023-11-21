@@ -1,0 +1,14 @@
+{
+  repository: {
+    'angular-control-flow': {
+      patterns: [
+        {
+          include: '#control-flow-expression-parenthesis',
+        },
+        {
+          include: '#control-flow-expression-no-parenthesis',
+        },
+      ],
+    },
+  },
+}

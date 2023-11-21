@@ -49,6 +49,8 @@ export interface LocaleKeys {
       angularTemplateVariablePrefix: string;
       angularTemplateVariableName: string;
       angularExpressionOperatorsAndNavigatorsColor: string;
+      controlFlowPrefix: string;
+      controlFlowKeyword: string;
       seeAngularTags: string;
     };
     primeng: {

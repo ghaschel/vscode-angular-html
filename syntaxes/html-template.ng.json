@@ -4,6 +4,9 @@
   "scopeName": "html-template.ng",
   "patterns": [
     {
+      "include": "#angular-control-flow"
+    },
+    {
       "include": "#angular-interpolations"
     },
     {
@@ -821,89 +824,6 @@
         }
       ]
     },
-    "svg-non-string-attributes": {
-      "patterns": [
-        {
-          "name": "meta.element.attribute.$2.svg",
-          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(d))\\b(?![\\w-]))(=)(\")",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.attribute.svg.$2.html"
-            },
-            "2": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "4": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "end": "(\")",
-          "endCaptures": {
-            "1": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "patterns": [
-            {
-              "match": "([0-9]+)|([MmLlHhVvCcSsQqTtAaZz]+)|([\\.\\,\\-]+)",
-              "captures": {
-                "1": {
-                  "name": "constant.numeric.css"
-                },
-                "2": {
-                  "name": "keyword.other.commands.path.svg html-template.ng.svg.path.commands"
-                },
-                "3": {
-                  "name": "punctuation.separator.delimiter.scss"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "meta.element.attribute.$2.svg",
-          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(amplitude|azimuth|baseFrequency|begin|bias|by|clip-path|color|cursor|cx|cy|diffuseConstant|divisor|dur|dx|dy|elevation|end|exponent|fill-opacity|fill|filter|flood-color|flood-opacity|font-size-adjust|font-size|font-weight|from|fr|fx|fy|gradientTransform|hatchpath|height|intercept|k1|k2|k3|k4|kernelMatrix|keyPoints|keySplines|keyTimes|letter-spacing|lighting-color|limitingConeAngle|marker-end|marker-mid|marker-start|markerHeight|markerWidth|mask|max|media|min|numOctaves|offset|opacity|order|overline-position|overline-thickness|pathLength|patternTransform|pointsAtX|pointsAtY|pointsAtZ|points|radius|refX|refY|repeatCount|repeatDur|rotate|rx|ry|r|scale|seed|solid-color|solid-opacity|specularConstant|specularExponent|startOffset|stdDeviation|stop-color|stop-opacity|strikethrough-position|strikethrough-thickness|stroke-dashoffset|stroke-dassharray|stroke-miterlimit|stroke-width|stroke|surfaceScale|tabindex|tableValues|targetX|targetY|textLength|to|transform-origin|transform2|transform|underline-position|underline-thickness|values|viewbox|width|word-spacing|x1|x2|x|y1|y2|y|z))\\b(?![\\w-]))(=)(\")",
-          "beginCaptures": {
-            "2": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "4": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "end": "(\")",
-          "endCaptures": {
-            "1": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "patterns": [
-            {
-              "begin": "(?<=\")",
-              "end": "(?=\")",
-              "name": "string.quoted.double.html",
-              "patterns": [
-                {
-                  "include": "source.css.scss#property_values"
-                },
-                {
-                  "include": "#angular-interpolations"
-                },
-                {
-                  "include": "#entities"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "aria-attributes": {
       "beginCaptures": {
         "0": {
@@ -1410,6 +1330,89 @@
         }
       ]
     },
+    "svg-non-string-attributes": {
+      "patterns": [
+        {
+          "name": "meta.element.attribute.$2.svg",
+          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(d))\\b(?![\\w-]))(=)(\")",
+          "beginCaptures": {
+            "0": {
+              "name": "meta.attribute.svg.$2.html"
+            },
+            "2": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "4": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "end": "(\")",
+          "endCaptures": {
+            "1": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "patterns": [
+            {
+              "match": "([0-9]+)|([MmLlHhVvCcSsQqTtAaZz]+)|([\\.\\,\\-]+)",
+              "captures": {
+                "1": {
+                  "name": "constant.numeric.css"
+                },
+                "2": {
+                  "name": "keyword.other.commands.path.svg html-template.ng.svg.path.commands"
+                },
+                "3": {
+                  "name": "punctuation.separator.delimiter.scss"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "meta.element.attribute.$2.svg",
+          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(amplitude|azimuth|baseFrequency|begin|bias|by|clip-path|color|cursor|cx|cy|diffuseConstant|divisor|dur|dx|dy|elevation|end|exponent|fill-opacity|fill|filter|flood-color|flood-opacity|font-size-adjust|font-size|font-weight|from|fr|fx|fy|gradientTransform|hatchpath|height|intercept|k1|k2|k3|k4|kernelMatrix|keyPoints|keySplines|keyTimes|letter-spacing|lighting-color|limitingConeAngle|marker-end|marker-mid|marker-start|markerHeight|markerWidth|mask|max|media|min|numOctaves|offset|opacity|order|overline-position|overline-thickness|pathLength|patternTransform|pointsAtX|pointsAtY|pointsAtZ|points|radius|refX|refY|repeatCount|repeatDur|rotate|rx|ry|r|scale|seed|solid-color|solid-opacity|specularConstant|specularExponent|startOffset|stdDeviation|stop-color|stop-opacity|strikethrough-position|strikethrough-thickness|stroke-dashoffset|stroke-dassharray|stroke-miterlimit|stroke-width|stroke|surfaceScale|tabindex|tableValues|targetX|targetY|textLength|to|transform-origin|transform2|transform|underline-position|underline-thickness|values|viewbox|width|word-spacing|x1|x2|x|y1|y2|y|z))\\b(?![\\w-]))(=)(\")",
+          "beginCaptures": {
+            "2": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "4": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "end": "(\")",
+          "endCaptures": {
+            "1": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "patterns": [
+            {
+              "begin": "(?<=\")",
+              "end": "(?=\")",
+              "name": "string.quoted.double.html",
+              "patterns": [
+                {
+                  "include": "source.css.scss#property_values"
+                },
+                {
+                  "include": "#angular-interpolations"
+                },
+                {
+                  "include": "#entities"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "tag-definition-angular": {
       "beginCaptures": {
         "0": {
@@ -1849,6 +1852,41 @@
       },
       "end": "(/?>)",
       "name": "meta.element.structure.html"
+    },
+    "tag-definition-primeng": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.primeng.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "meta.tag.structure.html entity.name.tag.html.primeng entity.name.tag.html.primeng.$2"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ],
+      "begin": "(</?)(p-accordionTab|p-accordion|p-autocomplete|p-autoComplete|p-avatarGroup|p-avatar|p-badge|p-blockUI|p-breadcrumb|p-button|p-calendar|p-captcha|p-card|p-carousel|p-cascadeSelectSub|p-cascadeSelect|p-cellEditor|p-chart|p-checkbox|p-chips|p-chip|p-colorPicker|p-columnFilter|p-confirmDialog|p-confirmPopup|p-contextMenuSub|p-contextMenu|p-dataView|p-dialog|p-divider|p-dock|p-dropdownItem|p-dropdown|p-dynamicDialog|p-editor|p-fieldset|p-fileUpload|p-fullCalendar|p-galleria|p-gmap|p-header|p-image|p-inplaceDisplay|p-inplace|p-inputMask|p-inputNumber|p-inputSwitch|p-knob|p-lightbox|p-listbox|p-megaMenu|p-menubarSub|p-menubar|p-menu|p-messages|p-message|p-multiSelectItem|p-multiSelect|p-orderList|p-organizationChart|p-overlayPanel|p-paginator|p-panelMenuSub|p-panelMenu|p-panel|p-password|p-pickList|p-progressBar|p-progressSpinner|p-radioButton|p-rating|p-scroller|p-scrollPanel|p-scrollTop|p-selectButton|p-sidebar|p-skeleton|p-slideMenuSub|p-slideMenu|p-slider|p-sortIcon|p-speedDial|p-spinner|p-splitButton|p-splitter|p-steps|p-tableCheckbox|p-tableHeaderCheckbox|p-tableRadioButton|p-table|p-tabMenu|p-tabPanel|p-tabView|p-tag|p-terminal|p-tieredMenuSub|p-tieredMenu|p-timeline|p-toastItem|p-toast|p-toggleButton|p-toolbar|p-treeNode|p-treeSelect|p-treeTableCellEditor|p-treeTableCheckbox|p-treeTableSortIcon|p-treeTableToggler|p-treeTable|p-tree|p-triStateCheckbox|p-virtualScroller)(:)?([\\w\\-\\_$]+)?\\b",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.primeng.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "end": "(/?>)",
+      "name": "meta.element.primeng.html"
     },
     "tag-svg": {
       "begin": "(^[\\t]+)?(?=<(?i:svg)\\b(?!(?:[\\w-])))",
@@ -2463,40 +2501,85 @@
         }
       ]
     },
-    "tag-definition-primeng": {
+    "angular-control-flow": {
+      "patterns": [
+        {
+          "include": "#control-flow-expression-parenthesis"
+        },
+        {
+          "include": "#control-flow-expression-no-parenthesis"
+        }
+      ]
+    },
+    "control-flow-expression-no-parenthesis": {
+      "name": "control-flow.ng",
+      "begin": "((@)([a-zA-Z]+))\\s*(?!\\()",
       "beginCaptures": {
-        "0": {
-          "name": "meta.tag.primeng.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
         "2": {
-          "name": "meta.tag.structure.html entity.name.tag.html.primeng entity.name.tag.html.primeng.$2"
+          "name": "entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.prefix"
         },
         "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
+          "name": "entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.keyword"
         },
         "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+          "name": "meta.brace.round.ts"
+        }
+      },
+      "end": "(\\s*\\{)",
+      "endCaptures": {
+        "0": {
+          "name": "meta.brace.curly.ts"
         }
       },
       "patterns": [
         {
-          "include": "#tag-stuff"
-        }
-      ],
-      "begin": "(</?)(p-accordionTab|p-accordion|p-autocomplete|p-autoComplete|p-avatarGroup|p-avatar|p-badge|p-blockUI|p-breadcrumb|p-button|p-calendar|p-captcha|p-card|p-carousel|p-cascadeSelectSub|p-cascadeSelect|p-cellEditor|p-chart|p-checkbox|p-chips|p-chip|p-colorPicker|p-columnFilter|p-confirmDialog|p-confirmPopup|p-contextMenuSub|p-contextMenu|p-dataView|p-dialog|p-divider|p-dock|p-dropdownItem|p-dropdown|p-dynamicDialog|p-editor|p-fieldset|p-fileUpload|p-fullCalendar|p-galleria|p-gmap|p-header|p-image|p-inplaceDisplay|p-inplace|p-inputMask|p-inputNumber|p-inputSwitch|p-knob|p-lightbox|p-listbox|p-megaMenu|p-menubarSub|p-menubar|p-menu|p-messages|p-message|p-multiSelectItem|p-multiSelect|p-orderList|p-organizationChart|p-overlayPanel|p-paginator|p-panelMenuSub|p-panelMenu|p-panel|p-password|p-pickList|p-progressBar|p-progressSpinner|p-radioButton|p-rating|p-scroller|p-scrollPanel|p-scrollTop|p-selectButton|p-sidebar|p-skeleton|p-slideMenuSub|p-slideMenu|p-slider|p-sortIcon|p-speedDial|p-spinner|p-splitButton|p-splitter|p-steps|p-tableCheckbox|p-tableHeaderCheckbox|p-tableRadioButton|p-table|p-tabMenu|p-tabPanel|p-tabView|p-tag|p-terminal|p-tieredMenuSub|p-tieredMenu|p-timeline|p-toastItem|p-toast|p-toggleButton|p-toolbar|p-treeNode|p-treeSelect|p-treeTableCellEditor|p-treeTableCheckbox|p-treeTableSortIcon|p-treeTableToggler|p-treeTable|p-tree|p-triStateCheckbox|p-virtualScroller)(:)?([\\w\\-\\_$]+)?\\b",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.primeng.$2.end.html"
+          "name": "keyword.control.on.ts",
+          "match": "\\s*(on)\\s*"
         },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
+        {
+          "name": "entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.keyword",
+          "match": "\\s*(if)\\s*"
+        },
+        {
+          "include": "#angular-expression"
+        },
+        {
+          "include": "#punctuation-comma"
+        }
+      ]
+    },
+    "control-flow-expression-parenthesis": {
+      "name": "meta.ng.control-flow.expression",
+      "begin": "((@)([a-zA-Z]+))\\s*(\\()",
+      "beginCaptures": {
+        "2": {
+          "name": "entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.prefix"
+        },
+        "3": {
+          "name": "entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.keyword"
+        },
+        "4": {
+          "name": "meta.brace.round.ts"
         }
       },
-      "end": "(/?>)",
-      "name": "meta.element.primeng.html"
+      "end": "(\\))",
+      "endCaptures": {
+        "0": {
+          "name": "meta.brace.round.ts"
+        }
+      },
+      "patterns": [
+        {
+          "name": "keyword.control.on.ts",
+          "match": "\\s*(on)\\s*"
+        },
+        {
+          "include": "#angular-expression"
+        },
+        {
+          "include": "#punctuation-comma"
+        }
+      ]
     },
     "angular-expression": {
       "name": "expression.ng",
@@ -3529,6 +3612,40 @@
         }
       ]
     },
+    "angular-interpolations": {
+      "patterns": [
+        {
+          "beginCaptures": {
+            "0": {
+              "name": "expression.ng"
+            },
+            "1": {
+              "name": "punctuation.definition.block.ts html-template.ng.interpolation.begin"
+            }
+          },
+          "patterns": [
+            {
+              "match": "\\?\\.|\\!\\.|\\.|\\!|\\?|\\:",
+              "name": "keyword.operator.navigation html-template.ng.expression.operator.navigator"
+            },
+            {
+              "include": "#angular-expression"
+            }
+          ],
+          "begin": "(\\{\\{\\{?)",
+          "endCaptures": {
+            "0": {
+              "name": "expression.ng"
+            },
+            "1": {
+              "name": "punctuation.definition.block.ts html-template.ng.interpolation.end"
+            }
+          },
+          "end": "(\\}\\}\\}?)",
+          "name": "expression.ng html-template.ng.interpolation.expression"
+        }
+      ]
+    },
     "tag-script": {
       "begin": "(^[\\t]+)?(?=<(?i:script)\\b(?!-))",
       "beginCaptures": {
@@ -4115,40 +4232,6 @@
         }
       ]
     },
-    "angular-interpolations": {
-      "patterns": [
-        {
-          "beginCaptures": {
-            "0": {
-              "name": "expression.ng"
-            },
-            "1": {
-              "name": "punctuation.definition.block.ts html-template.ng.interpolation.begin"
-            }
-          },
-          "patterns": [
-            {
-              "match": "\\?\\.|\\!\\.|\\.|\\!|\\?|\\:",
-              "name": "keyword.operator.navigation html-template.ng.expression.operator.navigator"
-            },
-            {
-              "include": "#angular-expression"
-            }
-          ],
-          "begin": "(\\{\\{\\{?)",
-          "endCaptures": {
-            "0": {
-              "name": "expression.ng"
-            },
-            "1": {
-              "name": "punctuation.definition.block.ts html-template.ng.interpolation.end"
-            }
-          },
-          "end": "(\\}\\}\\}?)",
-          "name": "expression.ng html-template.ng.interpolation.expression"
-        }
-      ]
-    },
     "tag-deprecated-inline": {
       "beginCaptures": {
         "0": {
@@ -4397,6 +4480,144 @@
         }
       ]
     },
+    "tag-deprecated-attribute-a": {
+      "begin": "(<\\/?)(a)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.inline.a.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.inline.a.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.html",
+          "match": "[\\s\\n\\r\\t]*(\\b(charset|coords|rev|shape)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.a.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-attribute-area": {
+      "begin": "(<\\/?)(area)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.inline.area.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.inline.area.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.html",
+          "match": "[\\s\\n\\r\\t]*(\\b(nohref)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.area.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-attribute-br": {
+      "begin": "(<\\/?)(br)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.inline.br.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.html"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.inline.br.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.html",
+          "match": "[\\s\\n\\r\\t]*(\\b(clear)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.br.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
     "tag-deprecated-attribute-iframe": {
       "begin": "(<\\/?)(iframe)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
       "end": "(\\/?>)",
@@ -4570,144 +4791,6 @@
           "captures": {
             "2": {
               "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.param.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-attribute-a": {
-      "begin": "(<\\/?)(a)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.inline.a.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.html"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.inline.a.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.html",
-          "match": "[\\s\\n\\r\\t]*(\\b(charset|coords|rev|shape)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.a.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-attribute-area": {
-      "begin": "(<\\/?)(area)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.inline.area.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.html"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.inline.area.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.html",
-          "match": "[\\s\\n\\r\\t]*(\\b(nohref)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.area.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-attribute-br": {
-      "begin": "(<\\/?)(br)(?!-)\\b(:)?([\\w\\-\\_$]+)?",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.inline.br.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.html"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.inline.br.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.html",
-          "match": "[\\s\\n\\r\\t]*(\\b(clear)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.br.$1"
             },
             "3": {
               "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
@@ -6406,6 +6489,669 @@
         }
       ]
     },
+    "tag-deprecated-svg-attribute-circle": {
+      "begin": "(<\\/?)((?i:circle))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the circle element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.circle.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-ellipse": {
+      "begin": "(<\\/?)((?i:ellipse))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the ellipse element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.ellipse.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-feImage": {
+      "begin": "(<\\/?)((?i:feImage))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the feImage element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(xlink:arcrole|xlink:href|xlink:title|xlink:type|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.feImage.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-foreignObject": {
+      "begin": "(<\\/?)((?i:foreignObject))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the foreignObject element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(clip|requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.foreignObject.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-image": {
+      "begin": "(<\\/?)((?i:image))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the image element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(clip|color-profile|requiredFeatures|xlink:arcrole|xlink:href|xlink:title|xlink:type|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.image.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-line": {
+      "begin": "(<\\/?)((?i:line))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the line element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.line.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-path": {
+      "begin": "(<\\/?)((?i:path))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the path element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.path.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-polygon": {
+      "begin": "(<\\/?)((?i:polygon))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the polygon element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.polygon.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-polyline": {
+      "begin": "(<\\/?)((?i:polyline))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the polyline element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.polyline.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-rect": {
+      "begin": "(<\\/?)((?i:rect))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the rect element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.rect.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-symbol": {
+      "begin": "(<\\/?)((?i:symbol))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the symbol element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(enable-background|clip|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.symbol.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-use": {
+      "begin": "(<\\/?)((?i:use))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the use element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xlink:arcrole|xlink:href|xlink:title|xlink:type|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.use.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-svg-attribute-view": {
+      "begin": "(<\\/?)((?i:view))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the view element and it's attributes when within a SVG element",
+      "end": "(\\/?>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html html-template.tag.svg"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "name": "meta.element.object.svg.html",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.svg.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.attribute.$1.svg",
+          "match": "[\\s\\n\\r\\t]*(\\b(zoomAndPan|viewTarget|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "captures": {
+            "2": {
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.view.$1"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            }
+          }
+        },
+        {
+          "include": "#svg-non-string-attributes"
+        },
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
     "tag-deprecated-svg-attribute-animateTransform": {
       "begin": "(<\\/?)((?i:animateTransform))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
       "comment": "This refers only for the animateTransform element and it's attributes when within a SVG element",
@@ -7273,19 +8019,19 @@
         }
       ]
     },
-    "tag-deprecated-svg-attribute-circle": {
-      "begin": "(<\\/?)((?i:circle))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the circle element and it's attributes when within a SVG element",
+    "tag-deprecated-svg-attribute-missing-glyph": {
+      "begin": "(<\\/?)((?i:missing-glyph))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
+      "comment": "This refers only for the missing-glyph element and it's attributes when within a SVG element",
       "end": "(\\/?>)",
       "beginCaptures": {
         "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
+          "name": "meta.tag.other.svg.$2.start.html"
         },
         "1": {
           "name": "punctuation.definition.tag.begin.html"
         },
         "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
+          "name": "invalid.deprecated.tag"
         },
         "3": {
           "name": "entity.name.tag.html html-template.ng.tag.colon"
@@ -7294,10 +8040,10 @@
           "name": "entity.name.tag.html html-template.ng.tag.suffix"
         }
       },
-      "name": "meta.element.object.svg.html",
+      "name": "meta.element.other.svg.html",
       "endCaptures": {
         "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
+          "name": "meta.tag.other.svg.$2.end.html"
         },
         "1": {
           "name": "punctuation.definition.tag.end.html"
@@ -7306,622 +8052,10 @@
       "patterns": [
         {
           "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
+          "match": "[\\s\\n\\r\\t]*(\\b(horiz-adv-x|vert-adv-y|enable-background|xml:space|xml:lang|xml:base)\\b)(=)?",
           "captures": {
             "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.circle.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-ellipse": {
-      "begin": "(<\\/?)((?i:ellipse))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the ellipse element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.ellipse.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-feImage": {
-      "begin": "(<\\/?)((?i:feImage))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the feImage element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(xlink:arcrole|xlink:href|xlink:title|xlink:type|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.feImage.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-foreignObject": {
-      "begin": "(<\\/?)((?i:foreignObject))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the foreignObject element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(clip|requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.foreignObject.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-image": {
-      "begin": "(<\\/?)((?i:image))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the image element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(clip|color-profile|requiredFeatures|xlink:arcrole|xlink:href|xlink:title|xlink:type|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.image.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-line": {
-      "begin": "(<\\/?)((?i:line))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the line element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.line.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-path": {
-      "begin": "(<\\/?)((?i:path))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the path element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.path.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-polygon": {
-      "begin": "(<\\/?)((?i:polygon))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the polygon element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.polygon.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-polyline": {
-      "begin": "(<\\/?)((?i:polyline))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the polyline element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.polyline.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-rect": {
-      "begin": "(<\\/?)((?i:rect))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the rect element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.rect.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-symbol": {
-      "begin": "(<\\/?)((?i:symbol))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the symbol element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(enable-background|clip|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.symbol.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-use": {
-      "begin": "(<\\/?)((?i:use))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the use element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(requiredFeatures|xlink:arcrole|xlink:href|xlink:title|xlink:type|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.use.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-view": {
-      "begin": "(<\\/?)((?i:view))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the view element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html html-template.tag.svg"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.object.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(zoomAndPan|viewTarget|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.view.$1"
+              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.missing-glyph.$1"
             },
             "3": {
               "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
@@ -8534,57 +8668,6 @@
           "captures": {
             "2": {
               "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.vkern.$1"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            }
-          }
-        },
-        {
-          "include": "#svg-non-string-attributes"
-        },
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-svg-attribute-missing-glyph": {
-      "begin": "(<\\/?)((?i:missing-glyph))\\b(?![\\w-])(:)?([\\w\\-\\_$]+)?\\b",
-      "comment": "This refers only for the missing-glyph element and it's attributes when within a SVG element",
-      "end": "(\\/?>)",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.other.svg.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "name": "meta.element.other.svg.html",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.other.svg.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "patterns": [
-        {
-          "name": "meta.attribute.$1.svg",
-          "match": "[\\s\\n\\r\\t]*(\\b(horiz-adv-x|vert-adv-y|enable-background|xml:space|xml:lang|xml:base)\\b)(=)?",
-          "captures": {
-            "2": {
-              "name": "invalid.deprecated.entity.other.attribute-name.html invalid.deprecated.missing-glyph.$1"
             },
             "3": {
               "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"

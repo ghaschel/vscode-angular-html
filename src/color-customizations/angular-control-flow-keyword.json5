@@ -1,0 +1,8 @@
+{
+  textMateRules: [
+    {
+      scope: 'html-template.ng.control-flow.keyword',
+      configRule: 'vscode-angular-html.controlFlowKeyword',
+    },
+  ],
+}

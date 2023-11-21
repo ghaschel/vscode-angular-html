@@ -283,6 +283,16 @@
             "type": "string",
             "default": "",
             "markdownDescription": "%ext.settings.angular.angularTemplateVariableName%"
+          },
+          "vscode-angular-html.controlFlowPrefix": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.controlFlowPrefix%"
+          },
+          "vscode-angular-html.controlFlowKeyword": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.angular.controlFlowKeyword%"
           }
         }
       },

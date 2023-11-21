@@ -1,0 +1,41 @@
+{
+  repository: {
+    'control-flow-expression-no-parenthesis': {
+      name: 'control-flow.ng',
+      begin: '((@)([a-zA-Z]+))\\s*(?!\\()',
+      beginCaptures: {
+        '2': {
+          name: 'entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.prefix',
+        },
+        '3': {
+          name: 'entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.keyword',
+        },
+        '4': {
+          name: 'meta.brace.round.ts',
+        },
+      },
+      end: '(\\s*\\{)',
+      endCaptures: {
+        '0': {
+          name: 'meta.brace.curly.ts',
+        },
+      },
+      patterns: [
+        {
+          name: 'keyword.control.on.ts',
+          match: '\\s*(on)\\s*',
+        },
+        {
+          name: 'entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.keyword',
+          match: '\\s*(if)\\s*',
+        },
+        {
+          include: '#angular-expression',
+        },
+        {
+          include: '#punctuation-comma',
+        },
+      ],
+    },
+  },
+}

@@ -3,6 +3,7 @@
   name: 'angular-html',
   scopeName: 'html-template.ng',
   patterns: [
+    { include: '#angular-control-flow' },
     { include: '#angular-interpolations' },
     { include: '#tag-svg' },
     { include: '#tag-script' },

@@ -38,7 +38,9 @@
       "angularSyntaxSugarAttributesName": "\n\n* &#60;div *`ngFor`=\"let obs of observable | async as test\"&#62;&#60;/div&#62;\n\n```html\n\n<div \n\t*ngFor=\"let obs of observable | async as test\"\n\t *matHeaderCellDef\n>\n</div>\n\n\n```\n",
       "angularTemplateVariablePrefix": "\n\n* &#60;div `#`menu=\"parsedMenu\"&#62;&#60;/div&#62;\n\n```html\n\n<div #menu=\"parsedMenu\"></div>\n\n\n```\n",
       "angularTemplateVariableName": "\n\n* &#60;div #`menu`=\"parsedMenu\"&#62;&#60;/div&#62;\n\n```html\n\n<div #menu=\"parsedMenu\"></div>\n\n\n```\n",
-      "angularExpressionOperatorsAndNavigatorsColor": "\n\n* {{ if (key`?.`value `||` condition `&&` condition) {} }}\n\n* {{ if (key`.`value `!==` '') {} }}\n\n* {{ if (key`!.`value `===` '') {} }}\n\n```html{{\n\n{{\n\tif (key?.value || condition && condition) {}\n\tif (key.value !== '') {}\n\tif (key!.value === '') {}\n}}\n\n\n```\n"
+      "angularExpressionOperatorsAndNavigatorsColor": "\n\n* {{ if (key`?.`value `||` condition `&&` condition) {} }}\n\n* {{ if (key`.`value `!==` '') {} }}\n\n* {{ if (key`!.`value `===` '') {} }}\n\n```html{{\n\n{{\n\tif (key?.value || condition && condition) {}\n\tif (key.value !== '') {}\n\tif (key!.value === '') {}\n}}\n\n\n```\n",
+      "controlFlowPrefix": "\n\n* `@`if (showBody) { &#60;body-cmp/&#62; }\n\n* `@`else if (showSummary) { &#60;summary-cmp/&#62; }\n\n* `@`else { Nothing to see here }\n\n```html\n\n@if (showBody) {\n\t<body-cmp />\n} @else if (showSummary) {\n\t<summary-cmp />\n} @else {\n\tNothing to see here\n}\n```\n",
+      "controlFlowKeyword": "\n\n* @`if` (showBody) { &#60;body-cmp/&#62; }\n\n* @`else if` (showSummary) { &#60;summary-cmp/&#62; }\n\n* @`else` { Nothing to see here }\n\n```html\n\n@if (showBody) {\n\t<body-cmp />\n} @else if (showSummary) {\n\t<summary-cmp />\n} @else {\n\tNothing to see here\n}\n```\n"
     },
     "primeng": {
       "primeNgElementTags": "\n\n* &#60;`p-calendar`&#62;&#60;/`p-calendar`&#62;\n\n* &#60;`p-button`&#62;&#60;/`p-button`&#62;\n\n```html\n\n<p-calendar></p-calendar>\n<p-button></p-button>\n\n\n```\n"

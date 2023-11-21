@@ -55,4 +55,6 @@ export interface SettingsDictionary {
   'vscode-angular-html.xmlTagNamespaceSuffix'?: string;
   'vscode-angular-html.xmlAttributeNamespaceDivider'?: string;
   'vscode-angular-html.xmlAttributeNamespaceSuffix'?: string;
+  'vscode-angular-html.controlFlowPrefix'?: string;
+  'vscode-angular-html.controlFlowKeyword'?: string;
 }

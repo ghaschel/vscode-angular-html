@@ -49,6 +49,8 @@
       "angularTemplateVariablePrefix": "Corresponde ao decorador de variaveis de template do Angular.",
       "angularTemplateVariableName": "Corresponde ao nome das variaveis de template do Angular.",
       "angularExpressionOperatorsAndNavigatorsColor": "Corresponde aos operadores e navegadores das expressoes Angular.",
+      "controlFlowPrefix": "Corresponde ao prefixo de palavras-chave de fluxo de controle do Angular (@).",
+      "controlFlowKeyword": "Corresponde a palavras-chave de fluxo de controle do Angular.",
       "seeAngularTags": "Ver tags específicas do Angular"
     },
     "primeng": {

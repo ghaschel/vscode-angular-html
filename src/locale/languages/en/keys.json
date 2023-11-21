@@ -49,6 +49,8 @@
       "angularTemplateVariablePrefix": "Matches Angular template variable decorator.",
       "angularTemplateVariableName": "Matches Angular template variable name.",
       "angularExpressionOperatorsAndNavigatorsColor": "Matches Angular expressions' operators and navigators.",
+      "controlFlowPrefix": "Matches Angular's control flow keyword prefix (@).",
+      "controlFlowKeyword": "Matches Angular's control flow keywords.",
       "seeAngularTags": "See Angular-specific tags"
     },
     "primeng": {

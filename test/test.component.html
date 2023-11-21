@@ -317,6 +317,185 @@ ANGULAR INTERPOLATIONS
 {{ user?.name | uppercase }}
 {{ user!.preferences!.nickName | uppercase }}
 
+
+ANGULAR CONTROL FLOW
+
+@if (
+  {
+    isLoading: isLoading$ignal(),
+    standards: isLoading$ignal() && standards$ignal().length === 0 ? standardsLoadingPlaceholders : standards$ignal(),
+    noStandardsMessage: noStandardsMessage$ignal(),
+    lastGetStandardsErrored: lastGetStandardsErrored$ignal(),
+    isSuperAdministrator: user$ignal().isSuperAdministrator
+  };
+  as vm
+) {
+  @if (vm.standards.length > 0) {
+    <p-table [value]="vm.standards">
+      <ng-template pTemplate="header">
+        <tr>
+          @for (c of columns; track c) {
+            <th class="text-center">{{ c.header }}</th>
+          }
+        </tr>
+      </ng-template>
+
+      <ng-template
+        pTemplate="body"
+        [primeNgTableRow]="vm.standards"
+        let-standard
+        let-rowIndex="rowIndex"
+      >
+        @if (!vm.isLoading) {
+          <tr>
+            @for (c of columns; track c) {
+              @if (c.name === 'order') {
+                <td class="py-0 w-4rem text-center">
+                  <div>
+                    <p-button
+                      [rounded]="true"
+                      [text]="true"
+                      [icon]="PrimeIcons.CHEVRON_UP"
+                      (onClick)="orderStandard(Direction.Forward, standard.extId)"
+                      [disabled]="rowIndex === 0"
+                    />
+                  </div>
+                </td>
+              }
+              @if (c.name === 'actions1') {
+                <td class="p-0 w-2rem text-center"></td>
+              }
+            }
+          </tr>
+        }
+
+        @if (vm.isLoading) {
+          <tr>
+            @for (c of columns; track c) {
+              <td><p-skeleton /></td>
+            }
+          </tr>
+        }
+      </ng-template>
+    </p-table>
+  }
+
+  @if (vm.standards.length === 0) {
+    @if (!vm.lastGetStandardsErrored) {
+      <p-message
+        severity="info"
+        [text]="vm.noStandardsMessage"
+      />
+    }
+    @if (vm.lastGetStandardsErrored) {
+      <p-message
+        severity="error"
+        text="Error Loading Standards"
+      />
+    }
+  }
+}
+
+<header-cmp />
+@if (showBody) {
+  <body-cmp />
+} @else if (showSummary) {
+  <summary-cmp />
+} @else {
+  Nothing to see here...
+}
+<footer-cmp />
+
+<ul>
+  @for item of item; track item.id {
+    <li>{{ item.name }}</li>
+  } @empty {
+    <li>No items...</li>
+  }
+</ul>
+
+@switch kind {
+  @case 'human' {
+    <human-cmp />
+  }
+  @case 'robot' {
+    <robot-cmp />
+  }
+  @default {
+    <alien-cmp />
+  }
+}
+
+@defer (on viewport) {
+  @main {
+    <heavy-cmp />
+  }
+  @placeholder {
+    <img src="ph.png">
+  }
+  @loading {
+    <loading-spinner />
+  }
+}
+
+@defer on viewport {
+  @main {
+    <heavy-cmp />
+  }
+  @placeholder {
+    <img src="ph.png">
+  }
+  @loading {
+    <loading-spinner />
+  }
+}
+
+@if (a > b) {
+  {{a}} is greater than {{b}}
+}
+
+@if (a > b) {
+  {{a}} is greater than {{b}}
+} @else if (b > a) {
+  {{a}} is less than {{b}}
+} @else {
+  {{a}} is equal to {{b}}
+}
+
+@if (users$ | async; as users) {
+  {{ users.length }}
+}
+
+@for (item of items; track item.id) {
+  {{ item.name }}
+}
+
+@for (item of items; track item.id; let idx = $index, e = $even) {
+  Item #{{ idx }}: {{ item.name }}
+}
+
+@for (item of items; track item.name) {
+  <li> {{ item.name }}</li>
+} @empty {
+  <li> There are no items.</li>
+}
+
+@switch (condition) {
+  @case (caseA) {
+    Case A.
+  }
+  @case (caseB) {
+    Case B.
+  }
+  @default {
+    Default case.
+  }
+}
+
+@for (item of items; track itemId($index, item)) {
+  {{ item.name }}
+}
+
 ANGULAR STRUCTURAL TAGS
 
 <ng-content>

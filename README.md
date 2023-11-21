@@ -12,7 +12,7 @@
 
 <div align="center">
     <img src="assets/angular-html.png" title="vscode-angular-html" alt="Logo" />
-</div>
+</div>z
 
 > Note: No theme will have the highlighting displayed in these images. For that effect, run the `vscode-angular-html: Set legacy color customizations` command from the command pallete and you're good to go.
 
@@ -31,6 +31,7 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 - [Angular](#angular)
   - [Directives](#directives)
   - [Interpolations](#interpolations)
+  - [Control Flow](#control-flow)
   - [Structural tags](#structural-tags)
 - [HTML](#html)
   - [Doctype](#doctype)
@@ -101,6 +102,10 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 ## Interpolations
 
 <img src="assets/angular-interpolations.png" title="Angular Interpolations" alt="Angular Interpolations" />
+
+## Control Flow
+
+<img src="assets/angular-control-flow.png" title="Angular Control Flow" alt="Angular Control Flow" />
 
 ## Structural tags
 
@@ -282,7 +287,7 @@ And with [colorize support](https://marketplace.visualstudio.com/items?itemName=
 
 # Link tags
 
-<img src="assets/link-tag-icon" title="Link tags" alt="Link tag" />
+<img src="assets/link-tag-icon.png" title="Link tags" alt="Link tag" />
 
 # Theming
 

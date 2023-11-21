@@ -41,6 +41,8 @@ const removeLegacyColorCustomizations = async (): Promise<SettingsDictionary> =>
   settings['vscode-angular-html.angularSyntaxSugarAttributesPrefix'] = '';
   settings['vscode-angular-html.angularTemplateVariableName'] = '';
   settings['vscode-angular-html.angularTemplateVariablePrefix'] = '';
+  settings['vscode-angular-html.controlFlowPrefix'] = '';
+  settings['vscode-angular-html.controlFlowKeyword'] = '';
   settings['vscode-angular-html.dtdDoctypeElement'] = '';
   settings['vscode-angular-html.dtdDoctypeExclamation'] = '';
   settings['vscode-angular-html.dtdDoctypeQualifier'] = '';

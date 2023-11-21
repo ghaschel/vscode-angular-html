@@ -110,6 +110,8 @@ const applyScopeColors = async (scopeColors: Scopes, debug: Debug): Promise<void
     scopeColors[LegacyScopes.xmlStylesheetAttributesLanguageIdentifier];
   settings['vscode-angular-html.xmlTagNamespaceDivider'] = scopeColors[LegacyScopes.xmlTagNamespaceDivider];
   settings['vscode-angular-html.xmlTagNamespaceSuffix'] = scopeColors[LegacyScopes.xmlTagNamespaceSuffix];
+  settings['vscode-angular-html.controlFlowPrefix'] = scopeColors[LegacyScopes.controlFlowPrefix];
+  settings['vscode-angular-html.controlFlowKeyword'] = scopeColors[LegacyScopes.controlFlowKeyword];
 
   debug.log('settings');
   debug.log(settings);

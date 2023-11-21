@@ -9,6 +9,7 @@ export enum LegacyScopes {
   angularTemplateVariablePrefix = 'string.regexp',
   xmlTagNamespaceDivider = 'string.regexp',
   xmlAttributeNamespaceDivider = 'string.regexp',
+  controlFlowPrefix = 'string.regexp',
 
   svgDAttributePathCommands = 'keyword.operator.entity.html',
   angularOneWayBindingSecondLevelDepth = 'keyword.operator.entity.html',
@@ -52,6 +53,7 @@ export enum LegacyScopes {
   angularTemplateVariableName = 'constant.numeric.angular-directive',
   xmlStylesheetAttributesLanguageIdentifier = 'constant.numeric.angular-directive',
   dataAttributePrefix = 'constant.numeric.angular-directive',
+  controlFlowKeyword = 'constant.numeric.angular-directive',
 
   angularPrefixedAttributesLetPrefix = 'keyword.operator.expression.let.js',
   ariaAttributePrefix = 'keyword.operator.expression.let.js',

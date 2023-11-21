@@ -86,6 +86,7 @@ export type SupportedThemes = [
   // eslint-disable-next-line @typescript-eslint/quotes
   | "SynthWave '84"
   | 'Tomorrow Night Blue'
+  | 'Visual Studio 2019 Dark plus syntax'
   | 'Winter is Coming (Dark Black - No Italics)'
   | 'Winter is Coming (Dark Black)'
   | 'Winter is Coming (Dark Blue - No Italics)'
@@ -181,6 +182,7 @@ export const supportedThemes = [
   // eslint-disable-next-line @typescript-eslint/quotes
   "SynthWave '84",
   'Tomorrow Night Blue',
+  'Visual Studio 2019 Dark plus syntax',
   'Winter is Coming (Dark Black - No Italics)',
   'Winter is Coming (Dark Black)',
   'Winter is Coming (Dark Blue - No Italics)',

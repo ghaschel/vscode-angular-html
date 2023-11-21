@@ -25,5 +25,6 @@
 - [Darcula Theme - Black Edition](https://marketplace.visualstudio.com/items?itemName=rexebin.dracula-black)
 - [Dark Purple - Black Edition](https://marketplace.visualstudio.com/items?itemName=rexebin.darkpurple-black)
 - [One Dark Pro Monokai Darker Theme](https://marketplace.visualstudio.com/items?itemName=eserozvataf.one-dark-pro-monokai-darker)
+- [Visual Studio 2019 Dark plus syntax](https://marketplace.visualstudio.com/items?itemName=skyletoft.theme-custom-colour)
 - All the default ones
 - Generic Fallback

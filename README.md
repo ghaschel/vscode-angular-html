@@ -12,7 +12,7 @@
 
 <div align="center">
     <img src="assets/angular-html.png" title="vscode-angular-html" alt="Logo" />
-</div>z
+</div>
 
 > Note: No theme will have the highlighting displayed in these images. For that effect, run the `vscode-angular-html: Set legacy color customizations` command from the command pallete and you're good to go.
 

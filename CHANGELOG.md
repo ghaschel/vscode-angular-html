@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.9.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.8.0...v2.9.0) (2023-11-21)
+
+
+### Features
+
+* **theme support:** added support for a requested theme ([5d27f6c](https://github.com/ghaschel/vscode-angular-html/commit/5d27f6cb5a602c8dcdad6f343c7d9cb89e7225ac))
+
 ## [2.8.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.7.1...v2.8.0) (2023-11-21)
 
 

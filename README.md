@@ -18,7 +18,7 @@
 
 ## Angular HTML Template Syntax Highlighting
 
-This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events, SVG, XML (with DTD and namespaces support), emphasizes deprecated and obsolete tags and attributes usage according to the current status of HTML. Also supports custom colors for extra-matched scopes. See [color customizations](docs/COLOR-CUSTOMIZATIONS.MD)
+This plugin adds syntax highlighting for angular HTML template files in VS Code. It supports the angular syntax itself, HTML DOM events, SVG, XML (with DTD and namespaces support), emphasizes deprecated and obsolete tags and attributes usage according to the current status of HTML. Also supports custom colors for extra-matched scopes. See [settings](docs/SETTINGS.MD)
 
 # Summary
 

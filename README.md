@@ -3,10 +3,10 @@
 [![SemVer](https://img.shields.io/github/tag/ghaschel/vscode-angular-html.svg)](https://img.shields.io/github/tag/ghaschel/vscode-angular-html.svg)
 [![GitHub issues](https://img.shields.io/github/issues/ghaschel/vscode-angular-html.svg)](https://github.com/ghaschel/vscode-angular-html/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ghaschel/vscode-angular-html/blob/master/LICENSE)
-[![Build status](https://travis-ci.org/ghaschel/vscode-angular-html.svg?branch=master)](https://travis-ci.org/ghaschel/vscode-angular-html.svg?branch=master)
+[![NodeJS with Gulp](https://github.com/ghaschel/vscode-angular-html/actions/workflows/npm-gulp.yml/badge.svg?event=push)](https://github.com/ghaschel/vscode-angular-html/actions/workflows/npm-gulp.yml)
 [![Downloads](https://vsmarketplacebadges.dev/downloads-short/ghaschel.vscode-angular-html.png)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
-[![Installs](https://vsmarketplacebadges.dev/downloads-short/ghaschel.vscode-angular-html.png)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
-[![Version](https://vsmarketplacebadges.dev/downloads-short/ghaschel.vscode-angular-html.png)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
+[![Installs](https://vsmarketplacebadges.dev/installs-short/ghaschel.vscode-angular-html.png)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
+[![Version](https://vsmarketplacebadges.dev/version-short/ghaschel.vscode-angular-html.png)](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html)
 [![Known Vulnerabilities](https://snyk.io/test/github/ghaschel/vscode-angular-html/badge.svg)](https://snyk.io/test/github/ghaschel/vscode-angular-html)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 

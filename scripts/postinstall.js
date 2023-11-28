@@ -2,9 +2,9 @@ const https = require('https'); // or 'https' for https:// URLs
 const fs = require('fs');
 
 const grammarConfigs = {
-  vscode: '1.72.0',
+  vscode: '1.79.1',
   stylus: '1.16.0',
-  scss: 'v0.0.3',
+  scss: 'master',
   sass: 'master',
 };
 

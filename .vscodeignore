@@ -24,3 +24,4 @@ webpack.config.js
 .hushlogin
 .eslintrc.js
 .prettierignore
+.history/**

@@ -65,16 +65,18 @@ gulp.task('copy', done => {
   scopes.forEach(scope => {
     gulp
       .src(`./syntaxes/${scope}.json`)
-      .pipe(gulp.dest(`${homedir}/.vscode/extensions/ghaschel.vscode-angular-html-${package.version}/syntaxes`));
+      .pipe(
+        gulp.dest(`${homedir}/.vscode/extensions/${package.publisher}.${package.name}-${package.version}/syntaxes`),
+      );
   });
 
   gulp
     .src(['./out/**/*'])
-    .pipe(gulp.dest(`${homedir}/.vscode/extensions/ghaschel.vscode-angular-html-${package.version}/out`));
+    .pipe(gulp.dest(`${homedir}/.vscode/extensions/${package.publisher}.${package.name}-${package.version}/out`));
 
   gulp
     .src(`./package.json`)
-    .pipe(gulp.dest(`${homedir}/.vscode/extensions/ghaschel.vscode-angular-html-${package.version}`));
+    .pipe(gulp.dest(`${homedir}/.vscode/extensions/${package.publisher}.${package.name}-${package.version}`));
 
   done();
 });

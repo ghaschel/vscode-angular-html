@@ -476,7 +476,7 @@ var tsRules = {
 
 module.exports = {
   root: true,
-  ignorePatterns: ['*.js'],
+  ignorePatterns: ['*.js', 'src/locale/*.ts', 'src/test/*.ts'],
   plugins: ['@typescript-eslint', 'prettier', 'import'],
   parserOptions: {
     parser: '@typescript-eslint/parser',

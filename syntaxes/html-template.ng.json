@@ -1454,6 +1454,41 @@
       "end": "(/?>)",
       "name": "meta.element.custom.html"
     },
+    "tag-definition-angular": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.ng.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "meta.tag.structure.html entity.name.tag.html.ng entity.name.tag.html.ng.$2"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ],
+      "begin": "(</?)(youtube-player|simple-snack-bar|router-outlet|ng-template|ng-content|ng-container|mat-year-view|mat-vertical-stepper|mat-tree-node|mat-tree|mat-tooltip-component|mat-toolbar-row|mat-toolbar|mat-text-column|mat-table|mat-tab-nav-panel|mat-tab-nav-barm|mat-tab-link|mat-tab-header|mat-tab-group|mat-tab-body|mat-tab|mat-stepper|mat-step-header|mat-step|mat-spinner|mat-snack-bar-container|mat-slider-visual-thumb|mat-slider|mat-slide-toggle|mat-sidenav-content|mat-sidenav-container|mat-sidenav|mat-selection-list|mat-selection-column|mat-select-trigger|mat-select|mat-row|mat-radio-group|mat-radio-button|mat-pseudo-checkbox|mat-progress-spinner|mat-progress-bar|mat-panel-title|mat-panel-description|mat-paginator|mat-option|mat-optgroup|mat-nested-tree-node|mat-nav-tab-bar|mat-nav-list|mat-multi-year-view|mat-month-view|mat-menubar-item|mat-menubar|mat-menu|mat-list-option|mat-list-item|mat-list|mat-label|mat-icon|mat-horizontal-stepper|mat-hint|mat-header-row|mat-header-cell|mat-grid-title|mat-grid-tile-header|mat-grid-tile-footer|mat-grid-tile|mat-grid-list|mat-form-field|mat-footer-row|mat-expansion-panel-header|mat-expansion-panel|mat-error|mat-drawer-content|mat-drawer-container|mat-drawer|mat-divider|mat-dialog-content|mat-dialog-container|mat-dialog-actions|mat-datepicker-toggle|mat-datepicker-content|mat-datepicker-actions|mat-datepicker|mat-date-range-picker-actions|mat-date-range-picker|mat-date-range-input|mat-chip-set|mat-chip-row|mat-chip-option|mat-chip-listbox|mat-chip-list|mat-chip-grid|mat-chip-avatar|mat-chip|mat-checkbox|mat-cell|mat-card-title-group|mat-card-title|mat-card-subtitle|mat-card-header|mat-card-footer|mat-card-content|mat-card-actions|mat-card|mat-calendar-header|mat-calendar|mat-button-toggle-group|mat-button-toggle|mat-bottom-sheet-container|mat-basic-chip-row|mat-basic-chip-option|mat-basic-chip|mat-autocomplete|mat-action-row|mat-action-list|mat-accordion|map-marker-clusterer|google-map|cdk-virtual-scroll-viewport|cdk-tree-node|cdk-tree|cdk-text-column|cdk-table|cdk-step|cdk-selection-column|cdk-row|cdk-nested-tree-node|cdk-header-row|cdk-header-cell|cdk-footer-row|cdk-footer-cell|cdk-cell|cdk-accordion-item|cdk-accordion)(:)?([\\w\\-\\_$]+)?\\b",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.ng.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "end": "(/?>)",
+      "name": "meta.element.ng.html"
+    },
     "comment": {
       "patterns": [
         {
@@ -1823,41 +1858,6 @@
       },
       "end": "(/?>)",
       "name": "meta.element.structure.html"
-    },
-    "tag-definition-angular": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.ng.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "meta.tag.structure.html entity.name.tag.html.ng entity.name.tag.html.ng.$2"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ],
-      "begin": "(</?)(youtube-player|simple-snack-bar|router-outlet|ng-template|ng-content|ng-container|mat-year-view|mat-vertical-stepper|mat-tree-node|mat-tree|mat-tooltip-component|mat-toolbar-row|mat-toolbar|mat-text-column|mat-table|mat-tab-nav-panel|mat-tab-nav-barm|mat-tab-link|mat-tab-header|mat-tab-group|mat-tab-body|mat-tab|mat-stepper|mat-step-header|mat-step|mat-spinner|mat-snack-bar-container|mat-slider-visual-thumb|mat-slider|mat-slide-toggle|mat-sidenav-content|mat-sidenav-container|mat-sidenav|mat-selection-list|mat-selection-column|mat-select-trigger|mat-select|mat-row|mat-radio-group|mat-radio-button|mat-pseudo-checkbox|mat-progress-spinner|mat-progress-bar|mat-panel-title|mat-panel-description|mat-paginator|mat-option|mat-optgroup|mat-nested-tree-node|mat-nav-tab-bar|mat-nav-list|mat-multi-year-view|mat-month-view|mat-menubar-item|mat-menubar|mat-menu|mat-list-option|mat-list-item|mat-list|mat-label|mat-icon|mat-horizontal-stepper|mat-hint|mat-header-row|mat-header-cell|mat-grid-title|mat-grid-tile-header|mat-grid-tile-footer|mat-grid-tile|mat-grid-list|mat-form-field|mat-footer-row|mat-expansion-panel-header|mat-expansion-panel|mat-error|mat-drawer-content|mat-drawer-container|mat-drawer|mat-divider|mat-dialog-content|mat-dialog-container|mat-dialog-actions|mat-datepicker-toggle|mat-datepicker-content|mat-datepicker-actions|mat-datepicker|mat-date-range-picker-actions|mat-date-range-picker|mat-date-range-input|mat-chip-set|mat-chip-row|mat-chip-option|mat-chip-listbox|mat-chip-list|mat-chip-grid|mat-chip-avatar|mat-chip|mat-checkbox|mat-cell|mat-card-title-group|mat-card-title|mat-card-subtitle|mat-card-header|mat-card-footer|mat-card-content|mat-card-actions|mat-card|mat-calendar-header|mat-calendar|mat-button-toggle-group|mat-button-toggle|mat-bottom-sheet-container|mat-basic-chip-row|mat-basic-chip-option|mat-basic-chip|mat-autocomplete|mat-action-row|mat-action-list|mat-accordion|map-marker-clusterer|google-map|cdk-virtual-scroll-viewport|cdk-tree-node|cdk-tree|cdk-text-column|cdk-table|cdk-step|cdk-selection-column|cdk-row|cdk-nested-tree-node|cdk-header-row|cdk-header-cell|cdk-footer-row|cdk-footer-cell|cdk-cell|cdk-accordion-item|cdk-accordion)(:)?([\\w\\-\\_$]+)?\\b",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.ng.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "end": "(/?>)",
-      "name": "meta.element.ng.html"
     },
     "tag-definition-kendo": {
       "beginCaptures": {
@@ -2577,6 +2577,40 @@
         }
       ]
     },
+    "angular-interpolations": {
+      "patterns": [
+        {
+          "beginCaptures": {
+            "0": {
+              "name": "expression.ng"
+            },
+            "1": {
+              "name": "punctuation.definition.block.ts html-template.ng.interpolation.begin"
+            }
+          },
+          "patterns": [
+            {
+              "match": "\\?\\.|\\!\\.|\\.|\\!|\\?|\\:",
+              "name": "keyword.operator.navigation html-template.ng.expression.operator.navigator"
+            },
+            {
+              "include": "#angular-expression"
+            }
+          ],
+          "begin": "(\\{\\{\\{?)",
+          "endCaptures": {
+            "0": {
+              "name": "expression.ng"
+            },
+            "1": {
+              "name": "punctuation.definition.block.ts html-template.ng.interpolation.end"
+            }
+          },
+          "end": "(\\}\\}\\}?)",
+          "name": "expression.ng html-template.ng.interpolation.expression"
+        }
+      ]
+    },
     "angular-control-flow": {
       "patterns": [
         {
@@ -2654,40 +2688,6 @@
         },
         {
           "include": "#punctuation-comma"
-        }
-      ]
-    },
-    "angular-interpolations": {
-      "patterns": [
-        {
-          "beginCaptures": {
-            "0": {
-              "name": "expression.ng"
-            },
-            "1": {
-              "name": "punctuation.definition.block.ts html-template.ng.interpolation.begin"
-            }
-          },
-          "patterns": [
-            {
-              "match": "\\?\\.|\\!\\.|\\.|\\!|\\?|\\:",
-              "name": "keyword.operator.navigation html-template.ng.expression.operator.navigator"
-            },
-            {
-              "include": "#angular-expression"
-            }
-          ],
-          "begin": "(\\{\\{\\{?)",
-          "endCaptures": {
-            "0": {
-              "name": "expression.ng"
-            },
-            "1": {
-              "name": "punctuation.definition.block.ts html-template.ng.interpolation.end"
-            }
-          },
-          "end": "(\\}\\}\\}?)",
-          "name": "expression.ng html-template.ng.interpolation.expression"
         }
       ]
     },

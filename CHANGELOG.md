@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.10.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.9.0...v2.10.0) (2024-01-30)
+
+
+### Features
+
+* **libraries:** added support for kendo ui and ng bootstrap ([3662af2](https://github.com/ghaschel/vscode-angular-html/commit/3662af2728cf685189358bade94a71fc5218cd8a))
+
 ## [2.9.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.8.0...v2.9.0) (2023-11-21)
 
 

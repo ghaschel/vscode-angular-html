@@ -38,6 +38,8 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
   - [Comments](#comments)
   - [Entities](#entities)
   - [PrimeNG](#primeng)
+  - [NG Bootstrap](#ng-bootstrap)
+  - [Kendo UI](#kendo-ui)
   - [Custom components](#custom-components)
   - [DOM events](#dom-events)
   - [Generic attributes](#generic-attributes)
@@ -134,6 +136,18 @@ This plugin adds syntax highlighting for angular HTML template files in VS Code.
 > See the [complete list](docs/PRIMENG.md)
 
 <img src="assets/prime-ng-tags.png" title="Prime NG Tags" alt="Prime NG Tags" />
+
+## NG Bootstrap
+
+> See the [complete list](docs/NG-BOOTSTRAP.md)
+
+<img src="assets/ng-bootstrap-tags.png" title="NG Bootstrap Tags" alt="NG Bootstrap Tags" />
+
+## Kendo UI
+
+> See the [complete list](docs/KENDO-UI.md)
+
+<img src="assets/kendo-ui-tags.png" title="Kendo UI Tags" alt="Kendo UI Tags" />
 
 ## Custom components
 

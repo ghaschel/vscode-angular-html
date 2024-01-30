@@ -56,6 +56,12 @@
     "primeng": {
       "primeNgElementTags": "Matches PrimeNG-specific element tags."
     },
+    "ngBootstrap": {
+      "ngBootstrapElementTags": "Matches NG Bootstrap-specific element tags."
+    },
+    "kendo": {
+      "kendoUiElementTags": "Matches Kendo UI-specific element tags."
+    },
     "svg": {
       "svgTags": "Matches known SVG elements.",
       "svgDAttributePathCommands": "Matches SVG d attribute path commands."

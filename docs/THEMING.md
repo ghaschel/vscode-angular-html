@@ -15,6 +15,8 @@
   - [Interpolations](#interpolations)
   - [Control Flow](#control-flow)
 - [PrimeNG](#primeng)
+- [NG Bootstrap](#ng-bootstrap)
+- [Kendo UI](#kendo-ui)
 - [HTML](#html)
   - [Doctype](#doctype)
   - [Entities](#entities)
@@ -123,6 +125,18 @@
 <img src="../assets/prime-ng-tags.png" title="Prime NG Tags" alt="Prime NG Tags" />
 
 - `p-calendar` - entity.name.tag.html.primeng
+
+# NG Bootstrap
+
+<img src="../assets/ng-bootstrap-tags.png" title="NG Bootstrap Tags" alt="NG Bootstrap Tags" />
+
+- `ngb-toast` - entity.name.tag.html.ng-bootstrap
+
+# Kendo UI
+
+<img src="../assets/kendo-ui-tags.png" title="Kendo UI Tags" alt="Kendo UI Tags" />
+
+- `kendo-editor` - entity.name.tag.html.kendo
 
 # HTML
 

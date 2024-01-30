@@ -1,0 +1,39 @@
+{
+  repository: {
+    'tag-definition-ng-bootstrap': {
+      beginCaptures: {
+        '0': {
+          name: 'meta.tag.ng-bootstrap.$2.start.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.begin.html',
+        },
+        '2': {
+          name: 'meta.tag.structure.html entity.name.tag.html.ng-bootstrap entity.name.tag.html.ng-bootstrap.$2',
+        },
+        '3': {
+          name: 'entity.name.tag.html html-template.ng.tag.colon',
+        },
+        '4': {
+          name: 'entity.name.tag.html html-template.ng.tag.suffix',
+        },
+      },
+      patterns: [
+        {
+          include: '#tag-stuff',
+        },
+      ],
+      begin: '(</?)(ngb-typeahead-window|ngb-tooltip-window|ngb-toast|ngb-timepicker|ngb-rating|ngb-progressbar-stacked|ngb-progressbar|ngb-popover-window|ngb-pagination|ngb-offcanvas-panel|ngb-offcanvas-backdrop|ngb-modal-window|ngb-modal-backdrop|ngb-highlight|ngb-datepicker-navigation-select|ngb-datepicker-navigation|ngb-datepicker-month|ngb-datepicker|ngb-carousel|ngb-alert)(:)?([\\w\\-\\_$]+)?\\b',
+      endCaptures: {
+        '0': {
+          name: 'meta.tag.ng-bootstrap.$2.end.html',
+        },
+        '1': {
+          name: 'punctuation.definition.tag.end.html',
+        },
+      },
+      end: '(/?>)',
+      name: 'meta.element.ng-bootstrap.html',
+    },
+  },
+}

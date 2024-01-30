@@ -37,6 +37,8 @@ export enum LegacyScopes {
   angularAndAngularMaterialElementTags = 'constant.character.entity.html',
   angularOneWayBindingThirdLevelDepth = 'constant.character.entity.html',
   primeNgElementTags = 'constant.character.entity.html',
+  ngBootstrapElementTags = 'constant.character.entity.html',
+  kendoUiElementTags = 'constant.character.entity.html',
 
   dtdDoctypeQualifier = 'entity.name.tag.other.html',
   htmlTags = 'entity.name.tag.other.html',

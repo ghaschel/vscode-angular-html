@@ -31,6 +31,8 @@ export interface SettingsDictionary {
   'vscode-angular-html.dataAttributePrefix'?: string;
   'vscode-angular-html.dataAttributeSuffix'?: string;
   'vscode-angular-html.primeNgElementTags'?: string;
+  'vscode-angular-html.ngBootstrapElementTags'?: string;
+  'vscode-angular-html.kendoUiElementTags'?: string;
   'vscode-angular-html.svgTags'?: string;
   'vscode-angular-html.svgDAttributePathCommands'?: string;
   'vscode-angular-html.angularAnimationTriggerPrefix'?: string;

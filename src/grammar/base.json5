@@ -54,6 +54,8 @@
     { include: '#tag-deprecated-structure' },
     { include: '#tag-definition-angular' },
     { include: '#tag-definition-primeng' },
+    { include: '#tag-definition-kendo' },
+    { include: '#tag-definition-ng-bootstrap' },
     { include: '#tag-definition-custom' },
     { include: '#tag-definition-structure' },
     { include: '#tag-definition-object' },

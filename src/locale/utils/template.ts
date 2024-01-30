@@ -54,6 +54,8 @@ const buildJson = (lang: Lang): PackageNls => {
     'ext.settings.angular.controlFlowPrefix': `${json.settings.angular.controlFlowPrefix}${markdown.settings.angular.controlFlowPrefix}${json.settings.general.leaveEmpty}`,
     'ext.settings.angular.controlFlowKeyword': `${json.settings.angular.controlFlowKeyword}${markdown.settings.angular.controlFlowKeyword}${json.settings.general.leaveEmpty}`,
     'ext.settings.primeng.primeNgElementTags': `${json.settings.primeng.primeNgElementTags}${markdown.settings.primeng.primeNgElementTags}${json.settings.general.leaveEmpty}`,
+    'ext.settings.ngBootstrap.ngBootstrapElementTags': `${json.settings.ngBootstrap.ngBootstrapElementTags}${markdown.settings.ngBootstrap.ngBootstrapElementTags}${json.settings.general.leaveEmpty}`,
+    'ext.settings.kendo.kendoUiElementTags': `${json.settings.kendo.kendoUiElementTags}${markdown.settings.kendo.kendoUiElementTags}${json.settings.general.leaveEmpty}`,
     'ext.settings.svg.svgTags': `${json.settings.svg.svgTags}${markdown.settings.svg.svgTags}${json.settings.general.leaveEmpty}`,
     'ext.settings.svg.svgDAttributePathCommands': `${json.settings.svg.svgDAttributePathCommands}${markdown.settings.svg.svgDAttributePathCommands}${json.settings.general.leaveEmpty}`,
     'ext.settings.xml.xmlTagNamespaceDivider': `${json.settings.xml.xmlTagNamespaceDivider}${markdown.settings.xml.xmlTagNamespaceDivider}${json.settings.general.leaveEmpty}`,

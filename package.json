@@ -307,6 +307,26 @@
         }
       },
       {
+        "title": "NG Bootstrap",
+        "properties": {
+          "vscode-angular-html.ngBootstrapElementTags": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.ngBootstrap.ngBootstrapElementTags%"
+          }
+        }
+      },
+      {
+        "title": "Kendo UI",
+        "properties": {
+          "vscode-angular-html.kendoUiElementTags": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "%ext.settings.kendo.kendoUiElementTags%"
+          }
+        }
+      },
+      {
         "title": "SVG",
         "properties": {
           "vscode-angular-html.svgTags": {

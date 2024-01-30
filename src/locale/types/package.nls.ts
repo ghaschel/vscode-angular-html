@@ -40,6 +40,8 @@ export interface PackageNls {
   'ext.settings.angular.controlFlowPrefix': string;
   'ext.settings.angular.controlFlowKeyword': string;
   'ext.settings.primeng.primeNgElementTags': string;
+  'ext.settings.ngBootstrap.ngBootstrapElementTags': string;
+  'ext.settings.kendo.kendoUiElementTags': string;
   'ext.settings.svg.svgTags': string;
   'ext.settings.svg.svgDAttributePathCommands': string;
   'ext.settings.xml.xmlTagNamespaceDivider': string;

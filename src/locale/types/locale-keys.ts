@@ -56,6 +56,12 @@ export interface LocaleKeys {
     primeng: {
       primeNgElementTags: string;
     };
+    ngBootstrap: {
+      ngBootstrapElementTags: string;
+    },
+    kendo: {
+      kendoUiElementTags: string;
+    },
     svg: {
       svgTags: string;
       svgDAttributePathCommands: string;

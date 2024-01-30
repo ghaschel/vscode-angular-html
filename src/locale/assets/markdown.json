@@ -45,6 +45,12 @@
     "primeng": {
       "primeNgElementTags": "\n\n* &#60;`p-calendar`&#62;&#60;/`p-calendar`&#62;\n\n* &#60;`p-button`&#62;&#60;/`p-button`&#62;\n\n```html\n\n<p-calendar></p-calendar>\n<p-button></p-button>\n\n\n```\n"
     },
+    "ngBootstrap": {
+      "ngBootstrapElementTags": "\n\n* &#60;`ngb-alert`&#62;&#60;/`ngb-alert`&#62;\n\n* &#60;`ngb-carousel`&#62;&#60;/`ngb-carousel`&#62;\n\n```html\n\n<ngb-alert></ngb-alert>\n<ngb-carousel></ngb-carousel>\n\n\n```\n"
+    },
+    "kendo": {
+      "kendoUiElementTags": "\n\n* &#60;`kendo-window`&#62;&#60;/`kendo-window`&#62;\n\n* &#60;`kendo-upload`&#62;&#60;/`kendo-upload`&#62;\n\n```html\n\n<kendo-window></kendo-window>\n<kendo-upload></kendo-upload>\n\n\n```\n"
+    },
     "svg": {
       "svgTags": "\n\n* &#60;`circle`&#62;&#60;/`circle`&#62;\n\n* &#60;`path`&#62;&#60;/`path`&#62;\n\n```html\n\n<circle></circle>\n<svg>\n\t<circle></circle>\n\t<path></path>\n</svg>\n\n\n```\n",
       "svgDAttributePathCommands": "\n\n* &#60;path d=\"`M`202.35,163.64`l`-4.38-13.1`h`-2.13`v`-3.85`h`9.1`v`3.85`h`-1.82`l`2.05,6.2`l`3.41-10.05\" /&#62;\n\n```html\n\n<svg>\n\t<path d=\"M202.35,163.64l-4.38-13.1h-2.13v-3.85h9.1v3.85h-1.82l2.05,6.2l3.41-10.05\" />\n</svg>\n\n\n```\n"

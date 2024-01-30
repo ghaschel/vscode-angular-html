@@ -56,6 +56,12 @@
     "primeng": {
       "primeNgElementTags": ""
     },
+    "ngBootstrap": {
+      "ngBootstrapElementTags": ""
+    },
+    "kendo": {
+      "kendoUiElementTags": ""
+    },
     "svg": {
       "svgTags": "",
       "svgDAttributePathCommands": ""

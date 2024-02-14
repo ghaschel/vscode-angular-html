@@ -69,6 +69,9 @@
           "source.css.scss": "scss",
           "source.stylus": "stylus"
         },
+        "tokenTypes": {
+          "string.quoted.double.html": "other"
+        },
         "injectTo": [
           "text.html",
           "template.ng"

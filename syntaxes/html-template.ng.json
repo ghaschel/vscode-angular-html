@@ -830,6 +830,89 @@
         }
       ]
     },
+    "svg-non-string-attributes": {
+      "patterns": [
+        {
+          "name": "meta.element.attribute.$2.svg",
+          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(d))\\b(?![\\w-]))(=)(\")",
+          "beginCaptures": {
+            "0": {
+              "name": "meta.attribute.svg.$2.html"
+            },
+            "2": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "4": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "end": "(\")",
+          "endCaptures": {
+            "1": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "patterns": [
+            {
+              "match": "([0-9]+)|([MmLlHhVvCcSsQqTtAaZz]+)|([\\.\\,\\-]+)",
+              "captures": {
+                "1": {
+                  "name": "constant.numeric.css"
+                },
+                "2": {
+                  "name": "keyword.other.commands.path.svg html-template.ng.svg.path.commands"
+                },
+                "3": {
+                  "name": "punctuation.separator.delimiter.scss"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "meta.element.attribute.$2.svg",
+          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(amplitude|azimuth|baseFrequency|begin|bias|by|clip-path|color|cursor|cx|cy|diffuseConstant|divisor|dur|dx|dy|elevation|end|exponent|fill-opacity|fill|filter|flood-color|flood-opacity|font-size-adjust|font-size|font-weight|from|fr|fx|fy|gradientTransform|hatchpath|height|intercept|k1|k2|k3|k4|kernelMatrix|keyPoints|keySplines|keyTimes|letter-spacing|lighting-color|limitingConeAngle|marker-end|marker-mid|marker-start|markerHeight|markerWidth|mask|max|media|min|numOctaves|offset|opacity|order|overline-position|overline-thickness|pathLength|patternTransform|pointsAtX|pointsAtY|pointsAtZ|points|radius|refX|refY|repeatCount|repeatDur|rotate|rx|ry|r|scale|seed|solid-color|solid-opacity|specularConstant|specularExponent|startOffset|stdDeviation|stop-color|stop-opacity|strikethrough-position|strikethrough-thickness|stroke-dashoffset|stroke-dassharray|stroke-miterlimit|stroke-width|stroke|surfaceScale|tabindex|tableValues|targetX|targetY|textLength|to|transform-origin|transform2|transform|underline-position|underline-thickness|values|viewbox|width|word-spacing|x1|x2|x|y1|y2|y|z))\\b(?![\\w-]))(=)(\")",
+          "beginCaptures": {
+            "2": {
+              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
+            },
+            "3": {
+              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
+            },
+            "4": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "end": "(\")",
+          "endCaptures": {
+            "1": {
+              "name": "string.quoted.double.html"
+            }
+          },
+          "patterns": [
+            {
+              "begin": "(?<=\")",
+              "end": "(?=\")",
+              "name": "string.quoted.double.html",
+              "patterns": [
+                {
+                  "include": "source.css.scss#property_values"
+                },
+                {
+                  "include": "#angular-interpolations"
+                },
+                {
+                  "include": "#entities"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "aria-attributes": {
       "beginCaptures": {
         "0": {
@@ -1336,124 +1419,6 @@
         }
       ]
     },
-    "svg-non-string-attributes": {
-      "patterns": [
-        {
-          "name": "meta.element.attribute.$2.svg",
-          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(d))\\b(?![\\w-]))(=)(\")",
-          "beginCaptures": {
-            "0": {
-              "name": "meta.attribute.svg.$2.html"
-            },
-            "2": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "4": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "end": "(\")",
-          "endCaptures": {
-            "1": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "patterns": [
-            {
-              "match": "([0-9]+)|([MmLlHhVvCcSsQqTtAaZz]+)|([\\.\\,\\-]+)",
-              "captures": {
-                "1": {
-                  "name": "constant.numeric.css"
-                },
-                "2": {
-                  "name": "keyword.other.commands.path.svg html-template.ng.svg.path.commands"
-                },
-                "3": {
-                  "name": "punctuation.separator.delimiter.scss"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "meta.element.attribute.$2.svg",
-          "begin": "[\\s\\n\\r\\t]*(\\b(?i:(amplitude|azimuth|baseFrequency|begin|bias|by|clip-path|color|cursor|cx|cy|diffuseConstant|divisor|dur|dx|dy|elevation|end|exponent|fill-opacity|fill|filter|flood-color|flood-opacity|font-size-adjust|font-size|font-weight|from|fr|fx|fy|gradientTransform|hatchpath|height|intercept|k1|k2|k3|k4|kernelMatrix|keyPoints|keySplines|keyTimes|letter-spacing|lighting-color|limitingConeAngle|marker-end|marker-mid|marker-start|markerHeight|markerWidth|mask|max|media|min|numOctaves|offset|opacity|order|overline-position|overline-thickness|pathLength|patternTransform|pointsAtX|pointsAtY|pointsAtZ|points|radius|refX|refY|repeatCount|repeatDur|rotate|rx|ry|r|scale|seed|solid-color|solid-opacity|specularConstant|specularExponent|startOffset|stdDeviation|stop-color|stop-opacity|strikethrough-position|strikethrough-thickness|stroke-dashoffset|stroke-dassharray|stroke-miterlimit|stroke-width|stroke|surfaceScale|tabindex|tableValues|targetX|targetY|textLength|to|transform-origin|transform2|transform|underline-position|underline-thickness|values|viewbox|width|word-spacing|x1|x2|x|y1|y2|y|z))\\b(?![\\w-]))(=)(\")",
-          "beginCaptures": {
-            "2": {
-              "name": "entity.other.attribute-name.html html-template.ng.attributes.generic"
-            },
-            "3": {
-              "name": "punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng"
-            },
-            "4": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "end": "(\")",
-          "endCaptures": {
-            "1": {
-              "name": "string.quoted.double.html"
-            }
-          },
-          "patterns": [
-            {
-              "begin": "(?<=\")",
-              "end": "(?=\")",
-              "name": "string.quoted.double.html",
-              "patterns": [
-                {
-                  "include": "source.css.scss#property_values"
-                },
-                {
-                  "include": "#angular-interpolations"
-                },
-                {
-                  "include": "#entities"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "tag-definition-custom": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.custom.$4.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "4": {
-          "name": "meta.tag.structure.html entity.name.tag.html html-template.tag.custom"
-        },
-        "5": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "6": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ],
-      "begin": "(<\\/?)((?!(youtube-player|wbr|video|var|ul|u|track|tr|time|thead|th|textarea|template|td|tbody|table|svg|sup|summary|sub|style|strong|span|source|small|simple-snack-bar|select|section|script|samp|s|ruby|rt|rp|router-outlet|q|progress|pre|picture|param|p|output|option|optgroup|ol|object|noscript|ngb-typeahead-window|ngb-tooltip-window|ngb-toast|ngb-timepicker|ngb-rating|ngb-progressbar-stacked|ngb-progressbar|ngb-popover-window|ngb-pagination|ngb-offcanvas-panel|ngb-offcanvas-backdrop|ngb-modal-window|ngb-modal-backdrop|ngb-highlight|ngb-datepicker-navigation-select|ngb-datepicker-navigation|ngb-datepicker-month|ngb-datepicker|ngb-carousel|ngb-alert|ng-template|ng-content|ng-container|nav|meter|meta|mat-year-view|mat-vertical-stepper|mat-tree-node|mat-tree|mat-tooltip-component|mat-toolbar-row|mat-toolbar|mat-text-column|mat-table|mat-tab-nav-panel|mat-tab-nav-barm|mat-tab-link|mat-tab-header|mat-tab-group|mat-tab-body|mat-tab|mat-stepper|mat-step-header|mat-step|mat-spinner|mat-snack-bar-container|mat-slider-visual-thumb|mat-slider|mat-slide-toggle|mat-sidenav-content|mat-sidenav-container|mat-sidenav|mat-selection-list|mat-selection-column|mat-select-trigger|mat-select|mat-row|mat-radio-group|mat-radio-button|mat-pseudo-checkbox|mat-progress-spinner|mat-progress-bar|mat-panel-title|mat-panel-description|mat-paginator|mat-option|mat-optgroup|mat-nested-tree-node|mat-nav-tab-bar|mat-nav-list|mat-multi-year-view|mat-month-view|mat-menubar-item|mat-menubar|mat-menu|mat-list-option|mat-list-item|mat-list|mat-label|mat-icon|mat-horizontal-stepper|mat-hint|mat-header-row|mat-header-cell|mat-grid-title|mat-grid-tile-header|mat-grid-tile-footer|mat-grid-tile|mat-grid-list|mat-form-field|mat-footer-row|mat-expansion-panel-header|mat-expansion-panel|mat-error|mat-drawer-content|mat-drawer-container|mat-drawer|mat-divider|mat-dialog-content|mat-dialog-container|mat-dialog-actions|mat-datepicker-toggle|mat-datepicker-content|mat-datepicker-actions|mat-datepicker|mat-date-range-picker-actions|mat-date-range-picker|mat-date-range-input|mat-chip-set|mat-chip-row|mat-chip-option|mat-chip-listbox|mat-chip-list|mat-chip-grid|mat-chip-avatar|mat-chip|mat-checkbox|mat-cell|mat-card-title-group|mat-card-title|mat-card-subtitle|mat-card-header|mat-card-footer|mat-card-content|mat-card-actions|mat-card|mat-calendar-header|mat-calendar|mat-button-toggle-group|mat-button-toggle|mat-bottom-sheet-container|mat-basic-chip-row|mat-basic-chip-option|mat-basic-chip|mat-autocomplete|mat-action-row|mat-action-list|mat-accordion|mark|map-marker-clusterer|map|main|link|li|legend|label|kendo-window|kendo-upload|kendo-treeview|kendo-treelist-spacer|kendo-treelist-pdf|kendo-treelist-excel|kendo-treelist-column|kendo-treelist-checkbox-column|kendo-treelist|kendo-toolbar-splitbutton|kendo-toolbar-spacer|kendo-toolbar-separator|kendo-toolbar-dropdownbutton|kendo-toolbar-buttongroup|kendo-toolbar-button|kendo-toolbar|kendo-timepicker|kendo-tilelayout-item-body|kendo-tilelayout-item|kendo-tilelayout|kendo-textbox|kendo-textarea|kendo-tabstrip-tab|kendo-tabstrip|kendo-switch|kendo-svgicon|kendo-stepper|kendo-stacklayout|kendo-spreadsheet|kendo-splitter-pane|kendo-splitter|kendo-splitbutton|kendo-sparkline|kendo-sortable|kendo-slider-messages|kendo-slider|kendo-skeleton|kendo-signature|kendo-scrollview|kendo-scheduler-week-view|kendo-scheduler-timeline-view|kendo-scheduler-month-view|kendo-scheduler-day-view|kendo-scheduler-agenda-view|kendo-scheduler|kendo-rating|kendo-rangeslider|kendo-radialgauge|kendo-qrcode|kendo-progressbar|kendo-popup|kendo-popover|kendo-pivotgrid|kendo-pdfviewer|kendo-pdf-export|kendo-panelbar-item|kendo-panelbar|kendo-numerictextbox|kendo-multiviewcalendar|kendo-multiselecttree|kendo-multiselect|kendo-multicolumncombobox|kendo-menu|kendo-maskedtextbox|kendo-map-tile-layer|kendo-map-shape-layer|kendo-map-marker-layer|kendo-map-layers|kendo-map-bubble-layer|kendo-map|kendo-loader|kendo-listview|kendo-listbox|kendo-lineargauge|kendo-label|kendo-icon|kendo-gridlayout-item|kendo-gridlayout|kendo-grid-spacer|kendo-grid-pdf|kendo-grid-excel|kendo-grid-column-group|kendo-grid-column|kendo-grid-checkbox-column|kendo-grid|kendo-gantt-timeline-week-view|kendo-gantt-timeline-month-view|kendo-gantt-timeline-day-view|kendo-gantt-column-group|kendo-gantt-column|kendo-gantt|kendo-formhint|kendo-formfield|kendo-formerror|kendo-floatinglabel|kendo-floatingactionbutton|kendo-flatcolorpicker|kendo-filter|kendo-fileselect|kendo-expansionpanel|kendo-excelexport-column|kendo-excelexport|kendo-editor|kendo-dropdowntree|kendo-dropdownlist|kendo-dropdownbutton|kendo-drawer-content|kendo-drawer-container|kendo-drawer|kendo-dialog-actions|kendo-dialog|kendo-datetimepicker|kendo-daterange|kendo-datepicker|kendo-dateinput|kendo-datapager|kendo-contextmenu|kendo-combobox-column|kendo-combobox|kendo-colorpicker|kendo-colorpalette|kendo-colorgradient|kendo-circularprogressbar|kendo-circulargauge|kendo-chunkprogressbar|kendo-chiplist|kendo-chip|kendo-chat|kendo-chart-y-axis-item-crosshair-tooltip|kendo-chart-y-axis-item-crosshair|kendo-chart-y-axis-item|kendo-chart-y-axis|kendo-chart-x-axis-item-crosshair-tooltip|kendo-chart-x-axis-item-crosshair|kendo-chart-x-axis-item|kendo-chart-x-axis|kendo-chart-value-axis-item|kendo-chart-value-axis|kendo-chart-tooltip|kendo-chart-title|kendo-chart-series-item-tooltip|kendo-chart-series-item-markers|kendo-chart-series-item-labels-to|kendo-chart-series-item-labels-from|kendo-chart-series-item-labels|kendo-chart-series-item|kendo-chart-series-defaults|kendo-chart-series|kendo-chart-legend|kendo-chart-category-axis-item|kendo-chart-category-axis|kendo-chart-area|kendo-chart|kendo-card-header|kendo-card-footer|kendo-card-body|kendo-card-actions|kendo-card|kendo-calendar|kendo-buttongroup|kendo-button|kendo-breadcrumb|kendo-bottomnavigation|kendo-barcode|kendo-badge-container|kendo-badge|kendo-avatar|kendo-autocomplete|kendo-arcgauge|kendo-appbar-spacer|kendo-appbar-section|kendo-appbar|kendo-actionsheet|kbd|ins|input|img|iframe|i|html|hr|hgroup|header|head|h1|google-map|form|footer|figure|figcaption|fieldset|embed|em|dt|dl|div|dialog|dfn|details|del|dd|datalist|data|colgroup|col|code|cite|cdk-virtual-scroll-viewport|cdk-tree-node|cdk-tree|cdk-text-column|cdk-table|cdk-step|cdk-selection-column|cdk-row|cdk-nested-tree-node|cdk-header-row|cdk-header-cell|cdk-footer-row|cdk-footer-cell|cdk-cell|cdk-accordion-item|cdk-accordion|caption|canvas|button|br|body|blockquote|bdo|bdi|base|b|audio|aside|article|area|address|abbr|a)(?!-)\\b)([a-zA-Z0-9\\-\\_]+)(:)?([\\w\\-\\_$]+)?)\\b",
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.custom.$4.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "end": "(/?>)",
-      "name": "meta.element.custom.html"
-    },
     "tag-definition-angular": {
       "beginCaptures": {
         "0": {
@@ -1858,6 +1823,41 @@
       },
       "end": "(/?>)",
       "name": "meta.element.structure.html"
+    },
+    "tag-definition-custom": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.custom.$4.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "4": {
+          "name": "meta.tag.structure.html entity.name.tag.html html-template.tag.custom"
+        },
+        "5": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "6": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ],
+      "begin": "(<\\/?)((?!(youtube-player|wbr|video|var|ul|u|track|tr|time|thead|th|textarea|template|td|tbody|table|svg|sup|summary|sub|style|strong|span|source|small|simple-snack-bar|select|section|script|samp|s|ruby|rt|rp|router-outlet|q|progress|pre|picture|param|p|output|option|optgroup|ol|object|noscript|ngb-typeahead-window|ngb-tooltip-window|ngb-toast|ngb-timepicker|ngb-rating|ngb-progressbar-stacked|ngb-progressbar|ngb-popover-window|ngb-pagination|ngb-offcanvas-panel|ngb-offcanvas-backdrop|ngb-modal-window|ngb-modal-backdrop|ngb-highlight|ngb-datepicker-navigation-select|ngb-datepicker-navigation|ngb-datepicker-month|ngb-datepicker|ngb-carousel|ngb-alert|ng-template|ng-content|ng-container|nav|meter|meta|mat-year-view|mat-vertical-stepper|mat-tree-node|mat-tree|mat-tooltip-component|mat-toolbar-row|mat-toolbar|mat-text-column|mat-table|mat-tab-nav-panel|mat-tab-nav-barm|mat-tab-link|mat-tab-header|mat-tab-group|mat-tab-body|mat-tab|mat-stepper|mat-step-header|mat-step|mat-spinner|mat-snack-bar-container|mat-slider-visual-thumb|mat-slider|mat-slide-toggle|mat-sidenav-content|mat-sidenav-container|mat-sidenav|mat-selection-list|mat-selection-column|mat-select-trigger|mat-select|mat-row|mat-radio-group|mat-radio-button|mat-pseudo-checkbox|mat-progress-spinner|mat-progress-bar|mat-panel-title|mat-panel-description|mat-paginator|mat-option|mat-optgroup|mat-nested-tree-node|mat-nav-tab-bar|mat-nav-list|mat-multi-year-view|mat-month-view|mat-menubar-item|mat-menubar|mat-menu|mat-list-option|mat-list-item|mat-list|mat-label|mat-icon|mat-horizontal-stepper|mat-hint|mat-header-row|mat-header-cell|mat-grid-title|mat-grid-tile-header|mat-grid-tile-footer|mat-grid-tile|mat-grid-list|mat-form-field|mat-footer-row|mat-expansion-panel-header|mat-expansion-panel|mat-error|mat-drawer-content|mat-drawer-container|mat-drawer|mat-divider|mat-dialog-content|mat-dialog-container|mat-dialog-actions|mat-datepicker-toggle|mat-datepicker-content|mat-datepicker-actions|mat-datepicker|mat-date-range-picker-actions|mat-date-range-picker|mat-date-range-input|mat-chip-set|mat-chip-row|mat-chip-option|mat-chip-listbox|mat-chip-list|mat-chip-grid|mat-chip-avatar|mat-chip|mat-checkbox|mat-cell|mat-card-title-group|mat-card-title|mat-card-subtitle|mat-card-header|mat-card-footer|mat-card-content|mat-card-actions|mat-card|mat-calendar-header|mat-calendar|mat-button-toggle-group|mat-button-toggle|mat-bottom-sheet-container|mat-basic-chip-row|mat-basic-chip-option|mat-basic-chip|mat-autocomplete|mat-action-row|mat-action-list|mat-accordion|mark|map-marker-clusterer|map|main|link|li|legend|label|kendo-window|kendo-upload|kendo-treeview|kendo-treelist-spacer|kendo-treelist-pdf|kendo-treelist-excel|kendo-treelist-column|kendo-treelist-checkbox-column|kendo-treelist|kendo-toolbar-splitbutton|kendo-toolbar-spacer|kendo-toolbar-separator|kendo-toolbar-dropdownbutton|kendo-toolbar-buttongroup|kendo-toolbar-button|kendo-toolbar|kendo-timepicker|kendo-tilelayout-item-body|kendo-tilelayout-item|kendo-tilelayout|kendo-textbox|kendo-textarea|kendo-tabstrip-tab|kendo-tabstrip|kendo-switch|kendo-svgicon|kendo-stepper|kendo-stacklayout|kendo-spreadsheet|kendo-splitter-pane|kendo-splitter|kendo-splitbutton|kendo-sparkline|kendo-sortable|kendo-slider-messages|kendo-slider|kendo-skeleton|kendo-signature|kendo-scrollview|kendo-scheduler-week-view|kendo-scheduler-timeline-view|kendo-scheduler-month-view|kendo-scheduler-day-view|kendo-scheduler-agenda-view|kendo-scheduler|kendo-rating|kendo-rangeslider|kendo-radialgauge|kendo-qrcode|kendo-progressbar|kendo-popup|kendo-popover|kendo-pivotgrid|kendo-pdfviewer|kendo-pdf-export|kendo-panelbar-item|kendo-panelbar|kendo-numerictextbox|kendo-multiviewcalendar|kendo-multiselecttree|kendo-multiselect|kendo-multicolumncombobox|kendo-menu|kendo-maskedtextbox|kendo-map-tile-layer|kendo-map-shape-layer|kendo-map-marker-layer|kendo-map-layers|kendo-map-bubble-layer|kendo-map|kendo-loader|kendo-listview|kendo-listbox|kendo-lineargauge|kendo-label|kendo-icon|kendo-gridlayout-item|kendo-gridlayout|kendo-grid-spacer|kendo-grid-pdf|kendo-grid-excel|kendo-grid-column-group|kendo-grid-column|kendo-grid-checkbox-column|kendo-grid|kendo-gantt-timeline-week-view|kendo-gantt-timeline-month-view|kendo-gantt-timeline-day-view|kendo-gantt-column-group|kendo-gantt-column|kendo-gantt|kendo-formhint|kendo-formfield|kendo-formerror|kendo-floatinglabel|kendo-floatingactionbutton|kendo-flatcolorpicker|kendo-filter|kendo-fileselect|kendo-expansionpanel|kendo-excelexport-column|kendo-excelexport|kendo-editor|kendo-dropdowntree|kendo-dropdownlist|kendo-dropdownbutton|kendo-drawer-content|kendo-drawer-container|kendo-drawer|kendo-dialog-actions|kendo-dialog|kendo-datetimepicker|kendo-daterange|kendo-datepicker|kendo-dateinput|kendo-datapager|kendo-contextmenu|kendo-combobox-column|kendo-combobox|kendo-colorpicker|kendo-colorpalette|kendo-colorgradient|kendo-circularprogressbar|kendo-circulargauge|kendo-chunkprogressbar|kendo-chiplist|kendo-chip|kendo-chat|kendo-chart-y-axis-item-crosshair-tooltip|kendo-chart-y-axis-item-crosshair|kendo-chart-y-axis-item|kendo-chart-y-axis|kendo-chart-x-axis-item-crosshair-tooltip|kendo-chart-x-axis-item-crosshair|kendo-chart-x-axis-item|kendo-chart-x-axis|kendo-chart-value-axis-item|kendo-chart-value-axis|kendo-chart-tooltip|kendo-chart-title|kendo-chart-series-item-tooltip|kendo-chart-series-item-markers|kendo-chart-series-item-labels-to|kendo-chart-series-item-labels-from|kendo-chart-series-item-labels|kendo-chart-series-item|kendo-chart-series-defaults|kendo-chart-series|kendo-chart-legend|kendo-chart-category-axis-item|kendo-chart-category-axis|kendo-chart-area|kendo-chart|kendo-card-header|kendo-card-footer|kendo-card-body|kendo-card-actions|kendo-card|kendo-calendar|kendo-buttongroup|kendo-button|kendo-breadcrumb|kendo-bottomnavigation|kendo-barcode|kendo-badge-container|kendo-badge|kendo-avatar|kendo-autocomplete|kendo-arcgauge|kendo-appbar-spacer|kendo-appbar-section|kendo-appbar|kendo-actionsheet|kbd|ins|input|img|iframe|i|html|hr|hgroup|header|head|h1|google-map|form|footer|figure|figcaption|fieldset|embed|em|dt|dl|div|dialog|dfn|details|del|dd|datalist|data|colgroup|col|code|cite|cdk-virtual-scroll-viewport|cdk-tree-node|cdk-tree|cdk-text-column|cdk-table|cdk-step|cdk-selection-column|cdk-row|cdk-nested-tree-node|cdk-header-row|cdk-header-cell|cdk-footer-row|cdk-footer-cell|cdk-cell|cdk-accordion-item|cdk-accordion|caption|canvas|button|br|body|blockquote|bdo|bdi|base|b|audio|aside|article|area|address|abbr|a)(?!-)\\b)([a-zA-Z0-9\\-\\_]+)(:)?([\\w\\-\\_$]+)?)\\b",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.custom.$4.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "end": "(/?>)",
+      "name": "meta.element.custom.html"
     },
     "tag-definition-kendo": {
       "beginCaptures": {
@@ -2577,40 +2577,6 @@
         }
       ]
     },
-    "angular-interpolations": {
-      "patterns": [
-        {
-          "beginCaptures": {
-            "0": {
-              "name": "expression.ng"
-            },
-            "1": {
-              "name": "punctuation.definition.block.ts html-template.ng.interpolation.begin"
-            }
-          },
-          "patterns": [
-            {
-              "match": "\\?\\.|\\!\\.|\\.|\\!|\\?|\\:",
-              "name": "keyword.operator.navigation html-template.ng.expression.operator.navigator"
-            },
-            {
-              "include": "#angular-expression"
-            }
-          ],
-          "begin": "(\\{\\{\\{?)",
-          "endCaptures": {
-            "0": {
-              "name": "expression.ng"
-            },
-            "1": {
-              "name": "punctuation.definition.block.ts html-template.ng.interpolation.end"
-            }
-          },
-          "end": "(\\}\\}\\}?)",
-          "name": "expression.ng html-template.ng.interpolation.expression"
-        }
-      ]
-    },
     "angular-control-flow": {
       "patterns": [
         {
@@ -2688,6 +2654,40 @@
         },
         {
           "include": "#punctuation-comma"
+        }
+      ]
+    },
+    "angular-interpolations": {
+      "patterns": [
+        {
+          "beginCaptures": {
+            "0": {
+              "name": "expression.ng"
+            },
+            "1": {
+              "name": "punctuation.definition.block.ts html-template.ng.interpolation.begin"
+            }
+          },
+          "patterns": [
+            {
+              "match": "\\?\\.|\\!\\.|\\.|\\!|\\?|\\:",
+              "name": "keyword.operator.navigation html-template.ng.expression.operator.navigator"
+            },
+            {
+              "include": "#angular-expression"
+            }
+          ],
+          "begin": "(\\{\\{\\{?)",
+          "endCaptures": {
+            "0": {
+              "name": "expression.ng"
+            },
+            "1": {
+              "name": "punctuation.definition.block.ts html-template.ng.interpolation.end"
+            }
+          },
+          "end": "(\\}\\}\\}?)",
+          "name": "expression.ng html-template.ng.interpolation.expression"
         }
       ]
     },
@@ -3722,6 +3722,210 @@
         }
       ]
     },
+    "tag-deprecated-inline": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.inline.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.inline.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "begin": "(<\\/?)(acronym|big|font|strike|tt|u)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-metadata-void": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.metadata.$2.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.metadata.$2.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "begin": "(<\\/?)(basefont|isindex)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-object-void": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.$2.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.$2.void.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "begin": "(<\\/?)(frame)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-object": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.object.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.object.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "begin": "(<\\/?)(applet)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-other": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.other.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.other.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "begin": "(<\\/?)(dir)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
+    "tag-deprecated-structure": {
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.structure.$2.start.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "invalid.deprecated.tag"
+        },
+        "3": {
+          "name": "entity.name.tag.html html-template.ng.tag.colon"
+        },
+        "4": {
+          "name": "entity.name.tag.html html-template.ng.tag.suffix"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.structure.$2.end.html"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "begin": "(<\\/?)(center|frameset|noframes)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
+      "end": "(\\/?>)",
+      "patterns": [
+        {
+          "include": "#tag-stuff"
+        }
+      ]
+    },
     "tag-script": {
       "begin": "(^[\\t]+)?(?=<(?i:script)\\b(?!-))",
       "beginCaptures": {
@@ -4305,210 +4509,6 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    "tag-deprecated-inline": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.inline.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.inline.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(acronym|big|font|strike|tt|u)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-metadata-void": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.metadata.$2.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.metadata.$2.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(basefont|isindex)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-object-void": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.$2.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.$2.void.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(frame)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-object": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.object.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.object.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(applet)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-other": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.other.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.other.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(dir)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
-        }
-      ]
-    },
-    "tag-deprecated-structure": {
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.structure.$2.start.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "invalid.deprecated.tag"
-        },
-        "3": {
-          "name": "entity.name.tag.html html-template.ng.tag.colon"
-        },
-        "4": {
-          "name": "entity.name.tag.html html-template.ng.tag.suffix"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.structure.$2.end.html"
-        },
-        "1": {
-          "name": "punctuation.definition.tag.end.html"
-        }
-      },
-      "begin": "(<\\/?)(center|frameset|noframes)\\b(:)?([\\w\\_$]+)?(?!(?:[\\w-]))\\b",
-      "end": "(\\/?>)",
-      "patterns": [
-        {
-          "include": "#tag-stuff"
         }
       ]
     },

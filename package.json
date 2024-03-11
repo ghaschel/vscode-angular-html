@@ -465,7 +465,7 @@
     }
   },
   "dependencies": {
-    "jsonc-parser": "^3.2.0",
+    "jsonc-parser": "^3.2.1",
     "semver": "^7.6.0",
     "vscode-nls": "^5.2.0",
     "vscode-nls-i18n": "^0.2.4"

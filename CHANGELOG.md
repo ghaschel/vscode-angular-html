@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.10.2](https://github.com/ghaschel/vscode-angular-html/compare/v2.10.1...v2.10.2) (2024-02-14)
+
+
+### Bug Fixes
+
+* **intelisense:** fixed on-type intelisense ([24ea055](https://github.com/ghaschel/vscode-angular-html/commit/24ea0555c4d1e03c0e839d1e5ed2e6fa8da83699)), closes [#94](https://github.com/ghaschel/vscode-angular-html/issues/94)
+
 ### [2.10.1](https://github.com/ghaschel/vscode-angular-html/compare/v2.10.0...v2.10.1) (2024-01-30)
 
 ## [2.10.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.9.0...v2.10.0) (2024-01-30)

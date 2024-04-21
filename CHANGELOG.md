@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.11.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.10.2...v2.11.0) (2024-04-21)
+
+
+### Features
+
+* **theme support:** added support for nord theme ([120a3f6](https://github.com/ghaschel/vscode-angular-html/commit/120a3f6d8af8938881c94c5bf49a410cc2d7a175))
+
+
+### Bug Fixes
+
+* upgrade jsonc-parser from 3.2.0 to 3.2.1 ([850fed1](https://github.com/ghaschel/vscode-angular-html/commit/850fed1caab887a011a4859c0efe57e015b2c290))
+* upgrade semver from 7.5.4 to 7.6.0 ([7a6c5a4](https://github.com/ghaschel/vscode-angular-html/commit/7a6c5a4d730d28be1abad6961b36fd9327a3853d))
+
 ### [2.10.2](https://github.com/ghaschel/vscode-angular-html/compare/v2.10.1...v2.10.2) (2024-02-14)
 
 

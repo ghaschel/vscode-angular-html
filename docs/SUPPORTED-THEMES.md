@@ -26,5 +26,6 @@
 - [Dark Purple - Black Edition](https://marketplace.visualstudio.com/items?itemName=rexebin.darkpurple-black)
 - [One Dark Pro Monokai Darker Theme](https://marketplace.visualstudio.com/items?itemName=eserozvataf.one-dark-pro-monokai-darker)
 - [Visual Studio 2019 Dark plus syntax](https://marketplace.visualstudio.com/items?itemName=skyletoft.theme-custom-colour)
+- [Nord](https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code)
 - All the default ones
 - Generic Fallback

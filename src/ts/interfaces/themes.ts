@@ -74,6 +74,7 @@ export type SupportedThemes = [
   | 'Night Owl (No Italics)'
   | 'Night Owl Light'
   | 'Night Owl Light (No Italics)'
+  | 'Nord'
   | 'One Dark Pro'
   | 'One Dark Pro Darker'
   | 'One Dark Pro Flat'
@@ -170,6 +171,7 @@ export const supportedThemes = [
   'Night Owl (No Italics)',
   'Night Owl Light',
   'Night Owl Light (No Italics)',
+  'Nord',
   'One Dark Pro',
   'One Dark Pro Darker',
   'One Dark Pro Flat',

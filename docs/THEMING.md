@@ -2,7 +2,7 @@
 
 > This file aims to be used as a way to point out the extra-matched scopes for themes to be able to support them.
 
-> This extension also has support for specific themes when enabling legacy colors customization, and as a fallback, it **_tries_** to generate a color-pallete based on the current theme. For the list of supported themes, please refer to [supported themes](SUPPORTED-THEMES.md).
+> This extension also has support for specific themes when enabling custom colors customization, and as a fallback, it **_tries_** to generate a color-pallete based on the current theme. For the list of supported themes, please refer to [supported themes](SUPPORTED-THEMES.md).
 
 ## Summary
 

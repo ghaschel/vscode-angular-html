@@ -1,11 +1,11 @@
-import { LegacyScopes } from '../interfaces/legacy-scopes-per-rule';
+import { LegacyScopes } from '../interfaces/custom-scopes-per-rule';
 import { supportedThemes } from '../interfaces/themes';
 import { getSettingsJSON, setSettingsJSON } from '../settings';
 
 import * as JSONC from 'jsonc-parser';
 import * as vscode from 'vscode';
 
-import type { GeneratedTheme, Scopes } from '../interfaces/legacy-scopes-per-rule';
+import type { GeneratedTheme, Scopes } from '../interfaces/custom-scopes-per-rule';
 import type { SupportedThemes } from '../interfaces/themes';
 import type { Debug } from '../tools';
 

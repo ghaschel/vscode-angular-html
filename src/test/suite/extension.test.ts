@@ -64,7 +64,7 @@ suite('Extension Test Suite', () => {
    */
 
   /*
-   * Test('Enable legacy color customizations', async () => {
+   * Test('Enable custom color customizations', async () => {
    *   await addLegacyColorCustomizations();
    *   const config = vscode.workspace.getConfiguration();
    *   const tokenColorCustomizations = config.get('editor.tokenColorCustomizations') as {

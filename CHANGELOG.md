@@ -4,60 +4,52 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.11.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.10.2...v2.11.0) (2024-04-21)
 
-
 ### Features
 
-* **theme support:** added support for nord theme ([120a3f6](https://github.com/ghaschel/vscode-angular-html/commit/120a3f6d8af8938881c94c5bf49a410cc2d7a175))
-
+- **theme support:** added support for nord theme ([120a3f6](https://github.com/ghaschel/vscode-angular-html/commit/120a3f6d8af8938881c94c5bf49a410cc2d7a175))
 
 ### Bug Fixes
 
-* upgrade jsonc-parser from 3.2.0 to 3.2.1 ([850fed1](https://github.com/ghaschel/vscode-angular-html/commit/850fed1caab887a011a4859c0efe57e015b2c290))
-* upgrade semver from 7.5.4 to 7.6.0 ([7a6c5a4](https://github.com/ghaschel/vscode-angular-html/commit/7a6c5a4d730d28be1abad6961b36fd9327a3853d))
+- upgrade jsonc-parser from 3.2.0 to 3.2.1 ([850fed1](https://github.com/ghaschel/vscode-angular-html/commit/850fed1caab887a011a4859c0efe57e015b2c290))
+- upgrade semver from 7.5.4 to 7.6.0 ([7a6c5a4](https://github.com/ghaschel/vscode-angular-html/commit/7a6c5a4d730d28be1abad6961b36fd9327a3853d))
 
 ### [2.10.2](https://github.com/ghaschel/vscode-angular-html/compare/v2.10.1...v2.10.2) (2024-02-14)
 
-
 ### Bug Fixes
 
-* **intelisense:** fixed on-type intelisense ([24ea055](https://github.com/ghaschel/vscode-angular-html/commit/24ea0555c4d1e03c0e839d1e5ed2e6fa8da83699)), closes [#94](https://github.com/ghaschel/vscode-angular-html/issues/94)
+- **intelisense:** fixed on-type intelisense ([24ea055](https://github.com/ghaschel/vscode-angular-html/commit/24ea0555c4d1e03c0e839d1e5ed2e6fa8da83699)), closes [#94](https://github.com/ghaschel/vscode-angular-html/issues/94)
 
 ### [2.10.1](https://github.com/ghaschel/vscode-angular-html/compare/v2.10.0...v2.10.1) (2024-01-30)
 
 ## [2.10.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.9.0...v2.10.0) (2024-01-30)
 
-
 ### Features
 
-* **libraries:** added support for kendo ui and ng bootstrap ([3662af2](https://github.com/ghaschel/vscode-angular-html/commit/3662af2728cf685189358bade94a71fc5218cd8a))
+- **libraries:** added support for kendo ui and ng bootstrap ([3662af2](https://github.com/ghaschel/vscode-angular-html/commit/3662af2728cf685189358bade94a71fc5218cd8a))
 
 ## [2.9.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.8.0...v2.9.0) (2023-11-21)
 
-
 ### Features
 
-* **theme support:** added support for a requested theme ([5d27f6c](https://github.com/ghaschel/vscode-angular-html/commit/5d27f6cb5a602c8dcdad6f343c7d9cb89e7225ac))
+- **theme support:** added support for a requested theme ([5d27f6c](https://github.com/ghaschel/vscode-angular-html/commit/5d27f6cb5a602c8dcdad6f343c7d9cb89e7225ac))
 
 ## [2.8.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.7.1...v2.8.0) (2023-11-21)
 
-
 ### Features
 
-* **control flow:** added control flow syntax support ([f7a8702](https://github.com/ghaschel/vscode-angular-html/commit/f7a870276077b1970a64aca7635ff52caf5231bf))
+- **control flow:** added control flow syntax support ([f7a8702](https://github.com/ghaschel/vscode-angular-html/commit/f7a870276077b1970a64aca7635ff52caf5231bf))
 
 ### [2.7.1](https://github.com/ghaschel/vscode-angular-html/compare/v2.7.0...v2.7.1) (2023-11-20)
 
 ## [2.7.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.6.1...v2.7.0) (2023-11-20)
 
-
 ### Features
 
-* **theme support, debug:** added missing theme support and debug mode ([10576b8](https://github.com/ghaschel/vscode-angular-html/commit/10576b8e790eecc34a34140d362dbc05f4eff0d6))
-
+- **theme support, debug:** added missing theme support and debug mode ([10576b8](https://github.com/ghaschel/vscode-angular-html/commit/10576b8e790eecc34a34140d362dbc05f4eff0d6))
 
 ### Bug Fixes
 
-* upgrade semver from 7.3.8 to 7.4.0 ([0a100db](https://github.com/ghaschel/vscode-angular-html/commit/0a100db2e9b8aa82b70ed28c3ba181c57b85ff8e))
+- upgrade semver from 7.3.8 to 7.4.0 ([0a100db](https://github.com/ghaschel/vscode-angular-html/commit/0a100db2e9b8aa82b70ed28c3ba181c57b85ff8e))
 
 ### [2.6.1](https://github.com/ghaschel/vscode-angular-html/compare/v2.6.0...v2.6.1) (2023-06-20)
 
@@ -97,7 +89,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-- **legacy-colors-command:** fixed the legacy-colors-command ([48b6855](https://github.com/ghaschel/vscode-angular-html/commit/48b6855b67230d5b72b457f80aff177639b75517))
+- **custom-colors-command:** fixed the custom-colors-command ([48b6855](https://github.com/ghaschel/vscode-angular-html/commit/48b6855b67230d5b72b457f80aff177639b75517))
 
 ### [2.3.3](https://github.com/ghaschel/vscode-angular-html/compare/v2.3.2...v2.3.3) (2022-12-05)
 

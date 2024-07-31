@@ -55,9 +55,9 @@
   "ext.settings.dtd.dtdDoctypeQuantifier": "Matches the DTD quantifiers:\n\n* <&#x21;ELEMENT DAY (DATE,(HOLIDAY`|`PROGRAMSLOT`+`)`*`)>\n\n* <&#x21;ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION`?`)>\n\n```html\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE TVSCHEDULE [\n\t<!ELEMENT BANNER (#PCDATA)>\n\t<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)*)>\n\t<!ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION?)>\n]>\n\n\n```\nLeave it empty to disable for this item only",
   "ext.command.updateTokenCustomization.title": "vscode-angular-html: Update color customizations",
   "ext.command.disableTokenCustomization.title": "vscode-angular-html: Disable color customizations",
-  "ext.command.addLegacyColorCustomizations.title": "vscode-angular-html: Set legacy color customizations",
+  "ext.command.addLegacyColorCustomizations.title": "vscode-angular-html: Set custom colors customizations",
   "ext.messages.updateNotice": "vscode-angular-html was updated and it now allows color customizations 🎉!  Please check-out the settings page :)",
-  "ext.messages.enableLegacyColors": "Enable Legacy Colors",
+  "ext.messages.enableLegacyColors": "Enable Custom Colors",
   "ext.messages.goToSettingsPage": "Go to Settings Page",
   "ext.messages.settingsNotice": "Please, close any open settings.json or Settings UI page before proceeding."
 }

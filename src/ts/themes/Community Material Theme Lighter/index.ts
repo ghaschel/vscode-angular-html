@@ -1,4 +1,4 @@
-import type { Scopes } from '../../interfaces/legacy-scopes-per-rule';
+import type { Scopes } from '../../interfaces/custom-scopes-per-rule';
 
 export = {
   'constant.character.entity.html': '#F76D47',

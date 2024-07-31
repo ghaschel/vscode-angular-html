@@ -88,12 +88,12 @@
       "title": "vscode-angular-html: Desabilitar customização de cores"
     },
     "addLegacyColorCustomizations": {
-      "title": "vscode-angular-html: Setar customização de cores de legado"
+      "title": "vscode-angular-html: Setar customização de cores"
     }
   },
   "messages": {
     "updateNotice": "vscode-angular-html foi atualizado e agora suporta customização de cores 🎉!  Por favor, dê uma olhada na página de configurações :)",
-    "enableLegacyColors": "Habilitar cores de legado",
+    "enableLegacyColors": "Habilitar cores personalizadas",
     "goToSettingsPage": "Ir para página de configurações",
     "settingsNotice": "Por favor, feche quaisquer settings.json ou página de configurações que estejam abertos antes de prosseguir."
   }

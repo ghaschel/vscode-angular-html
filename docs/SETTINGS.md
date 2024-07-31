@@ -8,7 +8,7 @@ The settings are separated into language-specific topics
 
 ## Enable/Disable
 
-You can enable or disable the extra-matched color customizations. You can manually make changes to your liking, or you can choose the Legacy colors via the command `Enable Legacy Colors`
+You can enable or disable the extra-matched color customizations. You can manually make changes to your liking, or you can choose the Custom colors via the command `Enable Custom Colors`
 
 <img src="../assets/enable-disable.png" alt="Toggle Color Customizations" title="Toggle Color Customizations" />
 

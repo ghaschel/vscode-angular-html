@@ -33,12 +33,12 @@ const activate = function activate(context: vscode.ExtensionContext): void {
           'ext.messages.updateNotice',
           'vscode-angular-html was updated and it now allows color customizations 🎉!  Please, check-out the settings page :)',
         ),
-        localize('ext.messages.enableLegacyColors', 'Enable Legacy Colors'),
+        localize('ext.messages.enableLegacyColors', 'Enable Custom Colors'),
         localize('ext.messages.goToSettingsPage', 'Go to Settings Page'),
       )
       .then(value => {
         switch (value) {
-          case localize('ext.messages.enableLegacyColors', 'Enable Legacy Colors'): {
+          case localize('ext.messages.enableLegacyColors', 'Enable Custom Colors'): {
             vscode.commands.executeCommand('vscode-angular-html.addLegacyColorCustomizations');
             break;
           }

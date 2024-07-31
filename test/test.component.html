@@ -380,7 +380,48 @@ as vm
     }
   </ng-template>
 </p-table>
-}
+
+<ng-template #sideNavContent>
+  @let collapsedVar = navService.isCollapsed && !navService.navIsMobile;
+
+  @if (user$ | async; as user) {
+  @if (lessons$ | async; as lesson) {
+
+  } @else if (course$ | async; as course) {
+
+  } @else {
+
+  }
+  }
+
+  <div class="sidenav">
+    <div class="header">
+      <div class="top-logo-wrapper">
+        @if (collapsedVar) {
+        <a
+          href="#"
+          class="logo"
+        >
+          <img
+            src="assets/images/logo.svg"
+            alt="logo"
+          />
+        </a>
+        } @else {
+        <a
+          href="#"
+          class="logo"
+        >
+          <img
+            src="assets/images/logo.svg"
+            alt="logo"
+          />
+        </a>
+        }
+      </div>
+    </div>
+  </div>
+</ng-template>
 
 @if (vm.standards.length === 0) {
 @if (!vm.lastGetStandardsErrored) {

@@ -88,12 +88,12 @@
       "title": "vscode-angular-html: Disable color customizations"
     },
     "addLegacyColorCustomizations": {
-      "title": "vscode-angular-html: Set legacy color customizations"
+      "title": "vscode-angular-html: Set custom colors customizations"
     }
   },
   "messages": {
     "updateNotice": "vscode-angular-html was updated and it now allows color customizations 🎉!  Please check-out the settings page :)",
-    "enableLegacyColors": "Enable Legacy Colors",
+    "enableLegacyColors": "Enable Custom Colors",
     "goToSettingsPage": "Go to Settings Page",
     "settingsNotice": "Please, close any open settings.json or Settings UI page before proceeding."
   }

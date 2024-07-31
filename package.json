@@ -439,7 +439,7 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-prettier": "^5.0.1",
     "glob": "^10.3.10",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-json-editor": "^2.5.7",
     "gulp-json5-to-json": "^0.2.1",
     "gulp-merge-json": "^2.1.2",

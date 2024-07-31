@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.12.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.11.0...v2.12.0) (2024-07-31)
+
+
+### Features
+
+* **@let operator support:** implemented [@let](https://github.com/let) operator support and renamed the main command ([03b133d](https://github.com/ghaschel/vscode-angular-html/commit/03b133d5be99081cf47f6b78b6787135002d798e))
+
 ## [2.11.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.10.2...v2.11.0) (2024-04-21)
 
 ### Features

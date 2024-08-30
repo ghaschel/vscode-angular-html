@@ -456,7 +456,7 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.3.2",
     "vscode-tmgrammar-test": "^0.1.2",
-    "webpack": "^5.89.0",
+    "webpack": "^5.94.0",
     "webpack-cli": "^5.1.4"
   },
   "config": {

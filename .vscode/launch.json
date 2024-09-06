@@ -10,8 +10,8 @@
       "type": "extensionHost",
       "request": "launch",
       "args": ["${workspaceFolder}/out", "--extensionDevelopmentPath=${workspaceFolder}"],
-      "outFiles": ["${workspaceFolder}/out/**/*.js"]
-      // "preLaunchTask": "${defaultBuildTask}"
+      "outFiles": ["${workspaceFolder}/out/**/*.js"],
+      "preLaunchTask": "${defaultBuildTask}"
     },
     {
       "name": "Run Extension Tests",

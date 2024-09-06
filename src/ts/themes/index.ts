@@ -2,7 +2,7 @@ import { LegacyScopes } from '../interfaces/custom-scopes-per-rule';
 import { supportedThemes } from '../interfaces/themes';
 import { getSettingsJSON, setSettingsJSON } from '../settings';
 
-import * as JSONC from 'jsonc-parser';
+import * as jsonC from 'jsonc-parser';
 import * as vscode from 'vscode';
 
 import type { GeneratedTheme, Scopes } from '../interfaces/custom-scopes-per-rule';
@@ -11,7 +11,7 @@ import type { Debug } from '../tools';
 
 const fetchThemeColors = async (): Promise<GeneratedTheme[]> => {
   await vscode.commands.executeCommand('workbench.action.generateColorTheme');
-  const content = JSONC.parse(vscode.window.activeTextEditor?.document.getText() as string);
+  const content = jsonC.parse(vscode.window.activeTextEditor?.document.getText() as string);
   await vscode.commands.executeCommand('editor.action.selectAll');
   await vscode.commands.executeCommand('editor.action.clipboardCutAction');
   await vscode.commands.executeCommand('workbench.action.closeActiveEditor');

@@ -27,5 +27,9 @@
 - [One Dark Pro Monokai Darker Theme](https://marketplace.visualstudio.com/items?itemName=eserozvataf.one-dark-pro-monokai-darker)
 - [Visual Studio 2019 Dark plus syntax](https://marketplace.visualstudio.com/items?itemName=skyletoft.theme-custom-colour)
 - [Nord](https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code)
+- [Catppuccin Mocha](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
+- [Catppuccin Macchiato](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
+- [Catppuccin Frappé](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
+- [Catppuccin Latte](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
 - All the default ones
 - Generic Fallback

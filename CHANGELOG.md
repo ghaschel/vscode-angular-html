@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.13.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.12.0...v2.13.0) (2024-09-06)
+
+
+### Features
+
+* **catppuccin support:** added support for catppuccin themes ([5855fe0](https://github.com/ghaschel/vscode-angular-html/commit/5855fe08991474419a3ffbfe038bc03d6b2bbb37))
+
 ## [2.12.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.11.0...v2.12.0) (2024-07-31)
 
 

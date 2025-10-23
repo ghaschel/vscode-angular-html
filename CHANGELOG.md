@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.13.1](https://github.com/ghaschel/vscode-angular-html/compare/v2.13.0...v2.13.1) (2025-10-23)
+
+
+### Bug Fixes
+
+* **double binding tailwind and template literals:** fixes for template literal detection and tailwin ([59bf5b4](https://github.com/ghaschel/vscode-angular-html/commit/59bf5b4df748f6a2de48b9a2fa016147ef73463a)), closes [#107](https://github.com/ghaschel/vscode-angular-html/issues/107) [#108](https://github.com/ghaschel/vscode-angular-html/issues/108)
+
 ## [2.13.0](https://github.com/ghaschel/vscode-angular-html/compare/v2.12.0...v2.13.0) (2024-09-06)
 
 

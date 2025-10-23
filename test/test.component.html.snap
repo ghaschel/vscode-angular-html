@@ -4,12 +4,18 @@
 >-->
 #^^^ html-template.ng comment.block.html punctuation.definition.comment.end.html
 >
->'keyword.operator.punctuation': #
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng
->'constant.character.entity.html': ##
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng
->'support.type.object.html-attribute': #81A1C1
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng
+><!-- 'keyword.operator.punctuation': #CA9EE6 s -->
+#^^^^ html-template.ng comment.block.html punctuation.definition.comment.begin.html
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng comment.block.html
+#                                               ^^^ html-template.ng comment.block.html punctuation.definition.comment.end.html
+><!-- 'constant.character.entity.html': #CA9EE6 s -->
+#^^^^ html-template.ng comment.block.html punctuation.definition.comment.begin.html
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng comment.block.html
+#                                                 ^^^ html-template.ng comment.block.html punctuation.definition.comment.end.html
+><!-- 'support.type.object.html-attribute': #E5C890 s -->
+#^^^^ html-template.ng comment.block.html punctuation.definition.comment.begin.html
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng comment.block.html
+#                                                     ^^^ html-template.ng comment.block.html punctuation.definition.comment.end.html
 ><!DOCTYPE html>
 #^ html-template.ng meta.tag.metadata.doctype.html punctuation.definition.tag.begin.html
 # ^ html-template.ng meta.tag.metadata.doctype.html punctuation.definition.tag.begin.html html-template.ng.exclamation.doctype
@@ -18,12 +24,18 @@
 #          ^^^^ html-template.ng meta.tag.metadata.doctype.html entity.other.attribute-name.html html-template.ng.attribute.doctype
 #              ^ html-template.ng meta.tag.metadata.doctype.html punctuation.definition.tag.end.html
 >
->'entity.name.tag.other.html': #81A1C1
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng
->'constant.numeric.angular-directive': #B48EAD
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng
->'keyword.operator.entity.html': #B48EAD
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng
+><!-- 'entity.name.tag.other.html': #8CAAEE s -->
+#^^^^ html-template.ng comment.block.html punctuation.definition.comment.begin.html
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng comment.block.html
+#                                             ^^^ html-template.ng comment.block.html punctuation.definition.comment.end.html
+><!-- 'constant.numeric.angular-directive': #E5C890 s -->
+#^^^^ html-template.ng comment.block.html punctuation.definition.comment.begin.html
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng comment.block.html
+#                                                     ^^^ html-template.ng comment.block.html punctuation.definition.comment.end.html
+><!-- 'keyword.operator.entity.html': #81C8BE s -->
+#^^^^ html-template.ng comment.block.html punctuation.definition.comment.begin.html
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng comment.block.html
+#                                               ^^^ html-template.ng comment.block.html punctuation.definition.comment.end.html
 ><div [test.test.test]=""></div>
 #^ html-template.ng meta.tag.structure.div.start.html punctuation.definition.tag.begin.html
 # ^^^ html-template.ng meta.tag.structure.div.start.html entity.name.tag.html html-template.tag.html
@@ -48,8 +60,10 @@
 # ^^^^ html-template.ng constant.character.entity.named.nbsp.html
 #     ^ html-template.ng constant.character.entity.named.nbsp.html punctuation.definition.entity.html html-template.ng.entities.semicolon
 >
->'string.regexp': #EBCB8B
-#^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng
+><!-- 'string.regexp': #F4B8E4 s -->
+#^^^^ html-template.ng comment.block.html punctuation.definition.comment.begin.html
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng comment.block.html
+#                                ^^^ html-template.ng comment.block.html punctuation.definition.comment.end.html
 >{{ test }}
 #^^ html-template.ng expression.ng html-template.ng.interpolation.expression expression.ng punctuation.definition.block.ts html-template.ng.interpolation.begin
 #  ^ html-template.ng expression.ng html-template.ng.interpolation.expression
@@ -57,8 +71,10 @@
 #       ^ html-template.ng expression.ng html-template.ng.interpolation.expression
 #        ^^ html-template.ng expression.ng html-template.ng.interpolation.expression expression.ng punctuation.definition.block.ts html-template.ng.interpolation.end
 >
->'keyword.operator.expression.let.js': #81A1C1
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng
+><!-- 'keyword.operator.expression.let.js': #CA9EE6 s -->
+#^^^^ html-template.ng comment.block.html punctuation.definition.comment.begin.html
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng comment.block.html
+#                                                     ^^^ html-template.ng comment.block.html punctuation.definition.comment.end.html
 ><div *ngIf="let a of test;"></div>
 #^ html-template.ng meta.tag.structure.div.start.html punctuation.definition.tag.begin.html
 # ^^^ html-template.ng meta.tag.structure.div.start.html entity.name.tag.html html-template.tag.html
@@ -80,6 +96,10 @@
 #                              ^^^ html-template.ng meta.tag.structure.div.start.html entity.name.tag.html html-template.tag.html
 #                                 ^ html-template.ng meta.tag.structure.div.end.html punctuation.definition.tag.end.html
 >
+>/test/
+#^ html-template.ng string.regexp.ts punctuation.definition.string.begin.ts
+# ^^^^ html-template.ng string.regexp.ts
+#     ^ html-template.ng string.regexp.ts punctuation.definition.string.end.ts
 >
 >DOCTYPE
 #^^^^^^^^ html-template.ng
@@ -1253,6 +1273,28 @@
 #^^ html-template.ng
 #  ^ html-template.ng meta.ng-animation-trigger.property.html entity.other.attribute-name.html html-template.ng.attributes.animationtrigger.prefix
 #   ^^^^^^^^^^^^^^^^ html-template.ng meta.ng-animation-trigger.property.html entity.other.attribute-name.html html-template.ng.attributes.animationtrigger.variable
+>  [class.text-danger-dark]="isError"
+#^^ html-template.ng
+#  ^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.begin.html
+#   ^^^^^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html entity.other.ng-binding-name.class.html html-template.ng.attributes.input-binding.first-level
+#        ^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html
+#         ^^^^^^^^^^^^^^^^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html	entity.other.ng-binding-name.text-danger-dark.html html-template.ng.attributes.input-binding.second-level
+#                         ^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.end.html
+#                          ^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                           ^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html string.quoted.double.html
+#                            ^^^^^^^ html-template.ng variable.other.property.ts
+#                                   ^ html-template.ng meta.ng-binding.property.html string.quoted.double.html
+>  [class.hover:dark:text-danger-dark]="isError"
+#^^ html-template.ng
+#  ^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.begin.html
+#   ^^^^^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html entity.other.ng-binding-name.class.html html-template.ng.attributes.input-binding.first-level
+#        ^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html
+#         ^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html	entity.other.ng-binding-name.hover:dark:text-danger-dark.html html-template.ng.attributes.input-binding.second-level
+#                                    ^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.end.html
+#                                     ^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#                                      ^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html string.quoted.double.html
+#                                       ^^^^^^^ html-template.ng variable.other.property.ts
+#                                              ^ html-template.ng meta.ng-binding.property.html string.quoted.double.html
 >  [@.done]="test"
 #^^ html-template.ng
 #  ^ html-template.ng meta.ng-binding.property.html entity.other.attribute-name.html entity.other.ng-binding-name.property.html entity.other.ng-binding-name.binding.html punctuation.definition.ng-binding-name.begin.html
@@ -1440,6 +1482,13 @@
 #                                 ^ html-template.ng meta.brace.round.ts
 #                                  ^ html-template.ng meta.brace.round.ts
 #                                   ^ html-template.ng meta.ng-binding.property.html string.quoted.double.html
+>  class="hover:dark:text-xl"
+#^^ html-template.ng
+#  ^^^^^ html-template.ng meta.attribute.class.html entity.other.attribute-name.html html-template.ng.attributes.generic
+#       ^ html-template.ng meta.attribute.class.html punctuation.separator.key-value.html punctuation.separator.key-value.html-template.ng
+#        ^ html-template.ng meta.attribute.class.html string.quoted.double.html
+#         ^^^^^^^^^^^^^^^^^^ html-template.ng string.quoted.double.html
+#                           ^ html-template.ng string.quoted.double.html
 >  [(binding)]="to.function('with-parameter')"
 #^^ html-template.ng
 #  ^^ html-template.ng meta.ng-binding.two-way.html entity.other.attribute-name.html entity.other.ng-binding-name.property.html entity.other.ng-binding-name.two-way.html punctuation.definition.ng-binding-name.begin.html
@@ -2008,6 +2057,52 @@
 #                                 ^^^^^^^^^ html-template.ng expression.ng html-template.ng.interpolation.expression entity.name.function.pipe.ng
 #                                          ^ html-template.ng expression.ng html-template.ng.interpolation.expression
 #                                           ^^ html-template.ng expression.ng html-template.ng.interpolation.expression expression.ng punctuation.definition.block.ts html-template.ng.interpolation.end
+>{{ `hello ${a() + `${test?.asdf()}`} me * 6` }}
+#^^ html-template.ng expression.ng html-template.ng.interpolation.expression expression.ng punctuation.definition.block.ts html-template.ng.interpolation.begin
+#  ^ html-template.ng expression.ng html-template.ng.interpolation.expression
+#   ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts punctuation.definition.string.template.begin.ts
+#    ^^^^^^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts
+#          ^^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts punctuation.definition.template-expression.begin.ts
+#            ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts meta.function-call.ts entity.name.function.ts
+#             ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts meta.brace.round.ts
+#              ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts meta.brace.round.ts
+#               ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts
+#                ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts keyword.operator.arithmetic.ts
+#                 ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts
+#                  ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts string.template.ts punctuation.definition.string.template.begin.ts
+#                   ^^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts string.template.ts meta.template.expression.ts punctuation.definition.template-expression.begin.ts
+#                     ^^^^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts string.template.ts meta.template.expression.ts meta.embedded.line.ts meta.function-call.ts variable.other.object.ts
+#                         ^^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts string.template.ts meta.template.expression.ts meta.embedded.line.ts meta.function-call.ts punctuation.accessor.optional.ts
+#                           ^^^^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts string.template.ts meta.template.expression.ts meta.embedded.line.ts meta.function-call.ts entity.name.function.ts
+#                               ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts string.template.ts meta.template.expression.ts meta.embedded.line.ts meta.brace.round.ts
+#                                ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts string.template.ts meta.template.expression.ts meta.embedded.line.ts meta.brace.round.ts
+#                                 ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts string.template.ts meta.template.expression.ts punctuation.definition.template-expression.end.ts
+#                                  ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts meta.embedded.line.ts string.template.ts punctuation.definition.string.template.end.ts
+#                                   ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts meta.template.expression.ts punctuation.definition.template-expression.end.ts
+#                                    ^^^^^^^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts
+#                                           ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.template.ts punctuation.definition.string.template.end.ts
+#                                            ^ html-template.ng expression.ng html-template.ng.interpolation.expression
+#                                             ^^ html-template.ng expression.ng html-template.ng.interpolation.expression expression.ng punctuation.definition.block.ts html-template.ng.interpolation.end
+>{{ 'hello' + a() + 'me * 6' }}
+#^^ html-template.ng expression.ng html-template.ng.interpolation.expression expression.ng punctuation.definition.block.ts html-template.ng.interpolation.begin
+#  ^ html-template.ng expression.ng html-template.ng.interpolation.expression
+#   ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.quoted.single.ts punctuation.definition.string.begin.ts
+#    ^^^^^ html-template.ng expression.ng html-template.ng.interpolation.expression string.quoted.single.ts
+#         ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.quoted.single.ts punctuation.definition.string.end.ts
+#          ^ html-template.ng expression.ng html-template.ng.interpolation.expression
+#           ^ html-template.ng expression.ng html-template.ng.interpolation.expression keyword.operator.arithmetic.ts html-template.ng.expression.operator.arithmetic
+#            ^ html-template.ng expression.ng html-template.ng.interpolation.expression
+#             ^ html-template.ng expression.ng html-template.ng.interpolation.expression entity.name.function.ts
+#              ^ html-template.ng expression.ng html-template.ng.interpolation.expression meta.brace.round.ts
+#               ^ html-template.ng expression.ng html-template.ng.interpolation.expression meta.brace.round.ts
+#                ^ html-template.ng expression.ng html-template.ng.interpolation.expression
+#                 ^ html-template.ng expression.ng html-template.ng.interpolation.expression keyword.operator.arithmetic.ts html-template.ng.expression.operator.arithmetic
+#                  ^ html-template.ng expression.ng html-template.ng.interpolation.expression
+#                   ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.quoted.single.ts punctuation.definition.string.begin.ts
+#                    ^^^^^^ html-template.ng expression.ng html-template.ng.interpolation.expression string.quoted.single.ts
+#                          ^ html-template.ng expression.ng html-template.ng.interpolation.expression string.quoted.single.ts punctuation.definition.string.end.ts
+#                           ^ html-template.ng expression.ng html-template.ng.interpolation.expression
+#                            ^^ html-template.ng expression.ng html-template.ng.interpolation.expression expression.ng punctuation.definition.block.ts html-template.ng.interpolation.end
 >
 >
 >ANGULAR CONTROL FLOW
@@ -2085,11 +2180,14 @@
 #                                   ^^^^^^^^^^^^^^^^^^^^ html-template.ng meta.ng.control-flow.expression meta.objectliteral.ts meta.object.member.ts variable.other.property.ts
 >};
 #^ html-template.ng meta.ng.control-flow.expression meta.objectliteral.ts punctuation.definition.block.ts
-# ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+# ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
 >as vm
-#^^^^^^ html-template.ng
+#^^ html-template.ng meta.ng.control-flow.expression keyword.control.as.ts
+#  ^ html-template.ng meta.ng.control-flow.expression
+#   ^^ html-template.ng meta.ng.control-flow.expression entity.name.type.ts
 >) {
-#^^^^ html-template.ng
+#^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+# ^^^ html-template.ng
 >@if (vm.standards.length > 0) {
 #^ html-template.ng meta.ng.control-flow.expression entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.prefix
 # ^^ html-template.ng meta.ng.control-flow.expression entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.keyword
@@ -2147,8 +2245,13 @@
 #              ^^ html-template.ng meta.ng.control-flow.expression keyword.operator.expression.of.ts
 #                ^ html-template.ng meta.ng.control-flow.expression
 #                 ^^^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
-#                        ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
-#                         ^^^^^^^^^^^^ html-template.ng
+#                        ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                         ^ html-template.ng meta.ng.control-flow.expression
+#                          ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                               ^ html-template.ng meta.ng.control-flow.expression
+#                                ^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                 ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                                  ^^^ html-template.ng
 >      <th class="text-center">{{ c.header }}</th>
 #^^^^^^ html-template.ng
 #      ^ html-template.ng meta.tag.structure.th.start.html punctuation.definition.tag.begin.html
@@ -2248,8 +2351,13 @@
 #              ^^ html-template.ng meta.ng.control-flow.expression keyword.operator.expression.of.ts
 #                ^ html-template.ng meta.ng.control-flow.expression
 #                 ^^^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
-#                        ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
-#                         ^^^^^^^^^^^^ html-template.ng
+#                        ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                         ^ html-template.ng meta.ng.control-flow.expression
+#                          ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                               ^ html-template.ng meta.ng.control-flow.expression
+#                                ^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                 ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                                  ^^^ html-template.ng
 >      @if (c.name === 'order') {
 #^^^^^^ html-template.ng
 #      ^ html-template.ng meta.ng.control-flow.expression entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.prefix
@@ -2433,8 +2541,13 @@
 #              ^^ html-template.ng meta.ng.control-flow.expression keyword.operator.expression.of.ts
 #                ^ html-template.ng meta.ng.control-flow.expression
 #                 ^^^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
-#                        ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
-#                         ^^^^^^^^^^^^ html-template.ng
+#                        ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                         ^ html-template.ng meta.ng.control-flow.expression
+#                          ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                               ^ html-template.ng meta.ng.control-flow.expression
+#                                ^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                 ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                                  ^^^ html-template.ng
 >      <td><p-skeleton /></td>
 #^^^^^^ html-template.ng
 #      ^ html-template.ng meta.tag.structure.td.start.html punctuation.definition.tag.begin.html
@@ -2493,6 +2606,75 @@
 #                                                           ^ html-template.ng control-flow.ng keyword.operator.punctuation html-template.ng.expression.operator.navigator
 #                                                            ^^^^^^^^^^^ html-template.ng control-flow.ng variable.other.property.ts
 #                                                                       ^ html-template.ng control-flow.ng meta.brace.curly.ts
+>
+>  @if (user$ | async; as user) {
+#^^ html-template.ng
+#  ^ html-template.ng meta.ng.control-flow.expression entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.prefix
+#   ^^ html-template.ng meta.ng.control-flow.expression entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.keyword
+#     ^ html-template.ng meta.ng.control-flow.expression
+#      ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#       ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#            ^ html-template.ng meta.ng.control-flow.expression
+#             ^ html-template.ng meta.ng.control-flow.expression keyword.operator.logical.ts html-template.ng.expression.operator.logical
+#              ^ html-template.ng meta.ng.control-flow.expression
+#               ^^^^^ html-template.ng meta.ng.control-flow.expression entity.name.function.pipe.ng
+#                    ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                     ^ html-template.ng meta.ng.control-flow.expression
+#                      ^^ html-template.ng meta.ng.control-flow.expression keyword.control.as.ts
+#                        ^ html-template.ng meta.ng.control-flow.expression
+#                         ^^^^ html-template.ng meta.ng.control-flow.expression entity.name.type.ts
+#                             ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                              ^^^ html-template.ng
+>  @if (lessons$ | async; as lesson) {
+#^^ html-template.ng
+#  ^ html-template.ng meta.ng.control-flow.expression entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.prefix
+#   ^^ html-template.ng meta.ng.control-flow.expression entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.keyword
+#     ^ html-template.ng meta.ng.control-flow.expression
+#      ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#       ^^^^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#               ^ html-template.ng meta.ng.control-flow.expression
+#                ^ html-template.ng meta.ng.control-flow.expression keyword.operator.logical.ts html-template.ng.expression.operator.logical
+#                 ^ html-template.ng meta.ng.control-flow.expression
+#                  ^^^^^ html-template.ng meta.ng.control-flow.expression entity.name.function.pipe.ng
+#                       ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                        ^ html-template.ng meta.ng.control-flow.expression
+#                         ^^ html-template.ng meta.ng.control-flow.expression keyword.control.as.ts
+#                           ^ html-template.ng meta.ng.control-flow.expression
+#                            ^^^^^^ html-template.ng meta.ng.control-flow.expression entity.name.type.ts
+#                                  ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                                   ^^^ html-template.ng
+>
+>  } @else if (course$ | async; as course) {
+#^^^^ html-template.ng
+#    ^ html-template.ng control-flow.ng entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.prefix
+#     ^^^^ html-template.ng control-flow.ng entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.keyword
+#         ^ html-template.ng control-flow.ng
+#          ^^^ html-template.ng control-flow.ng entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.keyword
+#             ^ html-template.ng control-flow.ng meta.brace.round.ts
+#              ^^^^^^^ html-template.ng control-flow.ng variable.other.property.ts
+#                     ^ html-template.ng control-flow.ng
+#                      ^ html-template.ng control-flow.ng keyword.operator.logical.ts html-template.ng.expression.operator.logical
+#                       ^ html-template.ng control-flow.ng
+#                        ^^^^^ html-template.ng control-flow.ng entity.name.function.pipe.ng
+#                             ^ html-template.ng control-flow.ng keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                              ^ html-template.ng control-flow.ng
+#                               ^^ html-template.ng control-flow.ng keyword.control.as.ts
+#                                 ^ html-template.ng control-flow.ng
+#                                  ^^^^^^ html-template.ng control-flow.ng entity.name.type.ts
+#                                        ^ html-template.ng control-flow.ng meta.brace.round.ts
+#                                         ^^ html-template.ng control-flow.ng meta.brace.curly.ts
+>
+>  } @else {
+#^^^^ html-template.ng
+#    ^ html-template.ng control-flow.ng entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.prefix
+#     ^^^^ html-template.ng control-flow.ng entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.keyword
+#         ^ html-template.ng control-flow.ng
+#          ^ html-template.ng control-flow.ng meta.brace.curly.ts
+>
+>  }
+#^^^^ html-template.ng
+>  }
+#^^^^ html-template.ng
 >
 >  <div class="sidenav">
 #^^ html-template.ng
@@ -2657,8 +2839,6 @@
 #^^ html-template.ng meta.element.ng.html meta.tag.ng.ng-template.start.html punctuation.definition.tag.begin.html
 #  ^^^^^^^^^^^ html-template.ng meta.element.ng.html meta.tag.ng.ng-template.start.html meta.tag.structure.html entity.name.tag.html.ng entity.name.tag.html.ng.ng-template
 #             ^ html-template.ng meta.element.ng.html meta.tag.ng.$2.end.html punctuation.definition.tag.end.html
->}
-#^^ html-template.ng
 >
 >@if (vm.standards.length === 0) {
 #^ html-template.ng meta.ng.control-flow.expression entity.other.html.ng.control-flow meta.ng-control-flow.prefix.html html-template.ng.control-flow.prefix
@@ -3097,8 +3277,13 @@
 #            ^ html-template.ng meta.ng.control-flow.expression keyword.operator.logical.ts html-template.ng.expression.operator.logical
 #             ^ html-template.ng meta.ng.control-flow.expression
 #              ^^^^^ html-template.ng meta.ng.control-flow.expression entity.name.function.pipe.ng
-#                   ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
-#                    ^^^^^^^^^^^^^ html-template.ng
+#                   ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                    ^ html-template.ng meta.ng.control-flow.expression
+#                     ^^ html-template.ng meta.ng.control-flow.expression keyword.control.as.ts
+#                       ^ html-template.ng meta.ng.control-flow.expression
+#                        ^^^^^ html-template.ng meta.ng.control-flow.expression entity.name.type.ts
+#                             ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                              ^^^ html-template.ng
 >{{ users.length }}
 #^^ html-template.ng expression.ng html-template.ng.interpolation.expression expression.ng punctuation.definition.block.ts html-template.ng.interpolation.begin
 #  ^ html-template.ng expression.ng html-template.ng.interpolation.expression
@@ -3120,8 +3305,15 @@
 #           ^^ html-template.ng meta.ng.control-flow.expression keyword.operator.expression.of.ts
 #             ^ html-template.ng meta.ng.control-flow.expression
 #              ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
-#                   ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
-#                    ^^^^^^^^^^^^^^^^^^ html-template.ng
+#                   ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                    ^ html-template.ng meta.ng.control-flow.expression
+#                     ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                          ^ html-template.ng meta.ng.control-flow.expression
+#                           ^^^^ html-template.ng meta.ng.control-flow.expression variable.other.object.ts
+#                               ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                                ^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                  ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                                   ^^^ html-template.ng
 >{{ item.name }}
 #^^ html-template.ng expression.ng html-template.ng.interpolation.expression expression.ng punctuation.definition.block.ts html-template.ng.interpolation.begin
 #  ^ html-template.ng expression.ng html-template.ng.interpolation.expression
@@ -3143,8 +3335,30 @@
 #           ^^ html-template.ng meta.ng.control-flow.expression keyword.operator.expression.of.ts
 #             ^ html-template.ng meta.ng.control-flow.expression
 #              ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
-#                   ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
-#                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng
+#                   ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                    ^ html-template.ng meta.ng.control-flow.expression
+#                     ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                          ^ html-template.ng meta.ng.control-flow.expression
+#                           ^^^^ html-template.ng meta.ng.control-flow.expression variable.other.object.ts
+#                               ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                                ^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                  ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                                   ^ html-template.ng meta.ng.control-flow.expression
+#                                    ^^^^ html-template.ng meta.ng.control-flow.expression storage.type.ts
+#                                        ^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                           ^ html-template.ng meta.ng.control-flow.expression
+#                                            ^ html-template.ng meta.ng.control-flow.expression keyword.operator.assignment.ts
+#                                             ^ html-template.ng meta.ng.control-flow.expression
+#                                              ^^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                                    ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                                                     ^ html-template.ng meta.ng.control-flow.expression
+#                                                      ^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                                       ^ html-template.ng meta.ng.control-flow.expression
+#                                                        ^ html-template.ng meta.ng.control-flow.expression keyword.operator.assignment.ts
+#                                                         ^ html-template.ng meta.ng.control-flow.expression
+#                                                          ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                                               ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                                                                ^^^ html-template.ng
 >Item #{{ idx }}: {{ item.name }}
 #^^^^^^ html-template.ng
 #      ^^ html-template.ng expression.ng html-template.ng.interpolation.expression expression.ng punctuation.definition.block.ts html-template.ng.interpolation.begin
@@ -3173,8 +3387,15 @@
 #           ^^ html-template.ng meta.ng.control-flow.expression keyword.operator.expression.of.ts
 #             ^ html-template.ng meta.ng.control-flow.expression
 #              ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
-#                   ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
-#                    ^^^^^^^^^^^^^^^^^^^^ html-template.ng
+#                   ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                    ^ html-template.ng meta.ng.control-flow.expression
+#                     ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                          ^ html-template.ng meta.ng.control-flow.expression
+#                           ^^^^ html-template.ng meta.ng.control-flow.expression variable.other.object.ts
+#                               ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                                ^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                    ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                                     ^^^ html-template.ng
 ><li> {{ item.name }}</li>
 #^ html-template.ng meta.tag.structure.li.start.html punctuation.definition.tag.begin.html
 # ^^ html-template.ng meta.tag.structure.li.start.html entity.name.tag.html html-template.tag.html
@@ -3261,8 +3482,19 @@
 #           ^^ html-template.ng meta.ng.control-flow.expression keyword.operator.expression.of.ts
 #             ^ html-template.ng meta.ng.control-flow.expression
 #              ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
-#                   ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
-#                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng
+#                   ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                    ^ html-template.ng meta.ng.control-flow.expression
+#                     ^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                          ^ html-template.ng meta.ng.control-flow.expression
+#                           ^^^^^^ html-template.ng meta.ng.control-flow.expression entity.name.function.ts
+#                                 ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                                  ^^^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                        ^ html-template.ng meta.ng.control-flow.expression keyword.operator.punctuation html-template.ng.expression.operator.navigator
+#                                         ^ html-template.ng meta.ng.control-flow.expression
+#                                          ^^^^ html-template.ng meta.ng.control-flow.expression variable.other.property.ts
+#                                              ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                                               ^ html-template.ng meta.ng.control-flow.expression meta.brace.round.ts
+#                                                ^^^ html-template.ng
 >{{ item.name }}
 #^^ html-template.ng expression.ng html-template.ng.interpolation.expression expression.ng punctuation.definition.block.ts html-template.ng.interpolation.begin
 #  ^ html-template.ng expression.ng html-template.ng.interpolation.expression
@@ -16458,165 +16690,169 @@
 #                            ^ html-template.ng meta.tag.metadata.style.start.html punctuation.definition.tag.end.html
 >                              /*
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ html-template.ng source.css.less
-#                              ^^ html-template.ng source.css.less comment.block.css punctuation.definition.comment.begin.css
+#                              ^^ html-template.ng source.css.less comment.block.less punctuation.definition.comment.less
 >   * LESS
-#^^^^^^^^^^ html-template.ng source.css.less comment.block.css
+#^^^^^^^^^^ html-template.ng source.css.less comment.block.less
 >   */
-#^^^ html-template.ng source.css.less comment.block.css
-#   ^^ html-template.ng source.css.less comment.block.css punctuation.definition.comment.end.css
+#^^^ html-template.ng source.css.less comment.block.less
+#   ^^ html-template.ng source.css.less comment.block.less punctuation.definition.comment.less
 >
 >   /* <![CDATA[ */
 #^^^ html-template.ng source.css.less
-#   ^^ html-template.ng source.css.less comment.block.css punctuation.definition.comment.begin.css
-#     ^^^^^^^^^^^ html-template.ng source.css.less comment.block.css
-#                ^^ html-template.ng source.css.less comment.block.css punctuation.definition.comment.end.css
+#   ^^ html-template.ng source.css.less comment.block.less punctuation.definition.comment.less
+#     ^^^^^^^^^^^ html-template.ng source.css.less comment.block.less
+#                ^^ html-template.ng source.css.less comment.block.less punctuation.definition.comment.less
 >    .container {
 #^^^^ html-template.ng source.css.less
-#    ^ html-template.ng source.css.less entity.other.attribute-name.class.css punctuation.definition.entity.css
-#     ^^^^^^^^^ html-template.ng source.css.less entity.other.attribute-name.class.css
-#              ^ html-template.ng source.css.less
-#               ^ html-template.ng source.css.less meta.property-list.css punctuation.section.property-list.begin.bracket.curly.css
+#    ^ html-template.ng source.css.less meta.selector.less entity.other.attribute-name.class.less punctuation.definition.entity.less
+#     ^^^^^^^^^ html-template.ng source.css.less meta.selector.less entity.other.attribute-name.class.less
+#              ^ html-template.ng source.css.less meta.selector.less
+#               ^ html-template.ng source.css.less meta.property-list.less punctuation.definition.block.begin.less
 >      padding: 15px;
-#^^^^^^ html-template.ng source.css.less meta.property-list.css
-#      ^^^^^^^ html-template.ng source.css.less meta.property-list.css support.type.property-name.css
-#             ^ html-template.ng source.css.less meta.property-list.css punctuation.separator.key-value.css
-#              ^ html-template.ng source.css.less meta.property-list.css
-#               ^^ html-template.ng source.css.less meta.property-list.css meta.property-value.css constant.numeric.css
-#                 ^^ html-template.ng source.css.less meta.property-list.css meta.property-value.css constant.numeric.css keyword.other.unit.px.css
-#                   ^ html-template.ng source.css.less meta.property-list.css punctuation.terminator.rule.css
+#^^^^^^ html-template.ng source.css.less meta.property-list.less
+#      ^^^^^^^ html-template.ng source.css.less meta.property-list.less support.type.property-name.less
+#             ^ html-template.ng source.css.less meta.property-list.less punctuation.separator.key-value.less
+#              ^ html-template.ng source.css.less meta.property-list.less meta.property-value.less
+#               ^^ html-template.ng source.css.less meta.property-list.less meta.property-value.less constant.numeric.less
+#                 ^^ html-template.ng source.css.less meta.property-list.less meta.property-value.less constant.numeric.less keyword.other.unit.less
+#                   ^ html-template.ng source.css.less meta.property-list.less punctuation.terminator.rule.less
 >      background-color: red;
-#^^^^^^ html-template.ng source.css.less meta.property-list.css
-#      ^^^^^^^^^^^^^^^^ html-template.ng source.css.less meta.property-list.css support.type.property-name.css
-#                      ^ html-template.ng source.css.less meta.property-list.css punctuation.separator.key-value.css
-#                       ^ html-template.ng source.css.less meta.property-list.css
-#                        ^^^ html-template.ng source.css.less meta.property-list.css meta.property-value.css support.constant.color.w3c-standard-color-name.css
-#                           ^ html-template.ng source.css.less meta.property-list.css punctuation.terminator.rule.css
+#^^^^^^ html-template.ng source.css.less meta.property-list.less
+#      ^^^^^^^^^^^^^^^^ html-template.ng source.css.less meta.property-list.less support.type.property-name.less
+#                      ^ html-template.ng source.css.less meta.property-list.less punctuation.separator.key-value.less
+#                       ^ html-template.ng source.css.less meta.property-list.less meta.property-value.less
+#                        ^^^ html-template.ng source.css.less meta.property-list.less meta.property-value.less support.constant.color.w3c-standard-color-name.less
+#                           ^ html-template.ng source.css.less meta.property-list.less punctuation.terminator.rule.less
 >      color: blue;
-#^^^^^^ html-template.ng source.css.less meta.property-list.css
-#      ^^^^^ html-template.ng source.css.less meta.property-list.css support.type.property-name.css
-#           ^ html-template.ng source.css.less meta.property-list.css punctuation.separator.key-value.css
-#            ^ html-template.ng source.css.less meta.property-list.css
-#             ^^^^ html-template.ng source.css.less meta.property-list.css meta.property-value.css support.constant.color.w3c-standard-color-name.css
-#                 ^ html-template.ng source.css.less meta.property-list.css punctuation.terminator.rule.css
+#^^^^^^ html-template.ng source.css.less meta.property-list.less
+#      ^^^^^ html-template.ng source.css.less meta.property-list.less support.type.property-name.less
+#           ^ html-template.ng source.css.less meta.property-list.less punctuation.separator.key-value.less
+#            ^ html-template.ng source.css.less meta.property-list.less meta.property-value.less
+#             ^^^^ html-template.ng source.css.less meta.property-list.less meta.property-value.less support.constant.color.w3c-standard-color-name.less
+#                 ^ html-template.ng source.css.less meta.property-list.less punctuation.terminator.rule.less
 >    }
-#^^^^ html-template.ng source.css.less meta.property-list.css
-#    ^ html-template.ng source.css.less meta.property-list.css punctuation.section.property-list.end.bracket.curly.css
+#^^^^ html-template.ng source.css.less
+#    ^ html-template.ng source.css.less punctuation.definition.block.end.less
 >  /* ]]> */
 #^^ html-template.ng source.css.less
-#  ^^ html-template.ng source.css.less comment.block.css punctuation.definition.comment.begin.css
-#    ^^^^^ html-template.ng source.css.less comment.block.css
-#         ^^ html-template.ng source.css.less comment.block.css punctuation.definition.comment.end.css
+#  ^^ html-template.ng source.css.less comment.block.less punctuation.definition.comment.less
+#    ^^^^^ html-template.ng source.css.less comment.block.less
+#         ^^ html-template.ng source.css.less comment.block.less punctuation.definition.comment.less
 >
 >
 >   @red: red;
 #^^^ html-template.ng source.css.less
-#   ^ html-template.ng source.css.less variable.other.less punctuation.definition.variable.less
-#    ^^^ html-template.ng source.css.less variable.other.less
-#       ^ html-template.ng source.css.less punctuation.separator.key-value.css
-#        ^ html-template.ng source.css.less
-#         ^^^ html-template.ng source.css.less support.constant.color.w3c-standard-color-name.css
-#            ^ html-template.ng source.css.less punctuation.terminator.rule.css
+#   ^ html-template.ng source.css.less meta.property-value.less variable.other.readwrite.less punctuation.definition.variable.less
+#    ^^^ html-template.ng source.css.less meta.property-value.less variable.other.readwrite.less support.other.variable.less
+#       ^ html-template.ng source.css.less meta.property-value.less punctuation.separator.key-value.less
+#        ^ html-template.ng source.css.less meta.property-value.less meta.property-value.less
+#         ^^^ html-template.ng source.css.less meta.property-value.less support.constant.color.w3c-standard-color-name.less
+#            ^ html-template.ng source.css.less meta.property-value.less punctuation.terminator.rule.less
 >
 >   .test {
 #^^^ html-template.ng source.css.less
-#   ^ html-template.ng source.css.less entity.other.attribute-name.class.css punctuation.definition.entity.css
-#    ^^^^ html-template.ng source.css.less entity.other.attribute-name.class.css
-#        ^ html-template.ng source.css.less
-#         ^ html-template.ng source.css.less meta.property-list.css punctuation.section.property-list.begin.bracket.curly.css
+#   ^ html-template.ng source.css.less meta.selector.less entity.other.attribute-name.class.less punctuation.definition.entity.less
+#    ^^^^ html-template.ng source.css.less meta.selector.less entity.other.attribute-name.class.less
+#        ^ html-template.ng source.css.less meta.selector.less
+#         ^ html-template.ng source.css.less meta.property-list.less punctuation.definition.block.begin.less
 >      color: @red;
-#^^^^^^ html-template.ng source.css.less meta.property-list.css
-#      ^^^^^ html-template.ng source.css.less meta.property-list.css support.type.property-name.css
-#           ^ html-template.ng source.css.less meta.property-list.css punctuation.separator.key-value.css
-#            ^ html-template.ng source.css.less meta.property-list.css
-#             ^ html-template.ng source.css.less meta.property-list.css meta.property-value.css variable.other.less punctuation.definition.variable.less
-#              ^^^ html-template.ng source.css.less meta.property-list.css meta.property-value.css variable.other.less
-#                 ^ html-template.ng source.css.less meta.property-list.css punctuation.terminator.rule.css
+#^^^^^^ html-template.ng source.css.less meta.property-list.less
+#      ^^^^^ html-template.ng source.css.less meta.property-list.less support.type.property-name.less
+#           ^ html-template.ng source.css.less meta.property-list.less punctuation.separator.key-value.less
+#            ^ html-template.ng source.css.less meta.property-list.less meta.property-value.less
+#             ^ html-template.ng source.css.less meta.property-list.less meta.property-value.less variable.other.readwrite.less punctuation.definition.variable.less
+#              ^^^ html-template.ng source.css.less meta.property-list.less meta.property-value.less variable.other.readwrite.less support.other.variable.less
+#                 ^ html-template.ng source.css.less meta.property-list.less punctuation.terminator.rule.less
 >   }
-#^^^ html-template.ng source.css.less meta.property-list.css
-#   ^ html-template.ng source.css.less meta.property-list.css punctuation.section.property-list.end.bracket.curly.css
+#^^^ html-template.ng source.css.less
+#   ^ html-template.ng source.css.less punctuation.definition.block.end.less
 >
 >  @header-font: Arial;
 #^^ html-template.ng source.css.less
-#  ^ html-template.ng source.css.less variable.other.less punctuation.definition.variable.less
-#   ^^^^^^^^^^^ html-template.ng source.css.less variable.other.less
-#              ^ html-template.ng source.css.less punctuation.separator.key-value.css
-#               ^ html-template.ng source.css.less
-#                ^^^^^ html-template.ng source.css.less support.constant.font-name.css
-#                     ^ html-template.ng source.css.less punctuation.terminator.rule.css
+#  ^ html-template.ng source.css.less meta.property-value.less variable.other.readwrite.less punctuation.definition.variable.less
+#   ^^^^^^^^^^^ html-template.ng source.css.less meta.property-value.less variable.other.readwrite.less support.other.variable.less
+#              ^ html-template.ng source.css.less meta.property-value.less punctuation.separator.key-value.less
+#               ^ html-template.ng source.css.less meta.property-value.less meta.property-value.less
+#                ^ html-template.ng source.css.less meta.property-value.less string.unquoted.less
+#                 ^ html-template.ng source.css.less meta.property-value.less string.unquoted.less
+#                  ^ html-template.ng source.css.less meta.property-value.less string.unquoted.less
+#                   ^ html-template.ng source.css.less meta.property-value.less string.unquoted.less
+#                    ^ html-template.ng source.css.less meta.property-value.less string.unquoted.less
+#                     ^ html-template.ng source.css.less meta.property-value.less punctuation.terminator.rule.less
 >
 >  h1 {
 #^^ html-template.ng source.css.less
-#  ^^ html-template.ng source.css.less entity.name.tag.css
-#    ^ html-template.ng source.css.less
-#     ^ html-template.ng source.css.less meta.property-list.css punctuation.section.property-list.begin.bracket.curly.css
+#  ^^ html-template.ng source.css.less meta.selector.less entity.name.tag.less
+#    ^ html-template.ng source.css.less meta.selector.less
+#     ^ html-template.ng source.css.less meta.property-list.less punctuation.definition.block.begin.less
 >    display: block;
-#^^^^ html-template.ng source.css.less meta.property-list.css
-#    ^^^^^^^ html-template.ng source.css.less meta.property-list.css support.type.property-name.css
-#           ^ html-template.ng source.css.less meta.property-list.css punctuation.separator.key-value.css
-#            ^ html-template.ng source.css.less meta.property-list.css
-#             ^^^^^ html-template.ng source.css.less meta.property-list.css meta.property-value.css support.constant.property-value.css
-#                  ^ html-template.ng source.css.less meta.property-list.css punctuation.terminator.rule.css
+#^^^^ html-template.ng source.css.less meta.property-list.less
+#    ^^^^^^^ html-template.ng source.css.less meta.property-list.less support.type.property-name.less
+#           ^ html-template.ng source.css.less meta.property-list.less punctuation.separator.key-value.less
+#            ^ html-template.ng source.css.less meta.property-list.less meta.property-value.less
+#             ^^^^^ html-template.ng source.css.less meta.property-list.less meta.property-value.less support.constant.property-value.less
+#                  ^ html-template.ng source.css.less meta.property-list.less punctuation.terminator.rule.less
 >    color: @red;
-#^^^^ html-template.ng source.css.less meta.property-list.css
-#    ^^^^^ html-template.ng source.css.less meta.property-list.css support.type.property-name.css
-#         ^ html-template.ng source.css.less meta.property-list.css punctuation.separator.key-value.css
-#          ^ html-template.ng source.css.less meta.property-list.css
-#           ^ html-template.ng source.css.less meta.property-list.css meta.property-value.css variable.other.less punctuation.definition.variable.less
-#            ^^^ html-template.ng source.css.less meta.property-list.css meta.property-value.css variable.other.less
-#               ^ html-template.ng source.css.less meta.property-list.css punctuation.terminator.rule.css
+#^^^^ html-template.ng source.css.less meta.property-list.less
+#    ^^^^^ html-template.ng source.css.less meta.property-list.less support.type.property-name.less
+#         ^ html-template.ng source.css.less meta.property-list.less punctuation.separator.key-value.less
+#          ^ html-template.ng source.css.less meta.property-list.less meta.property-value.less
+#           ^ html-template.ng source.css.less meta.property-list.less meta.property-value.less variable.other.readwrite.less punctuation.definition.variable.less
+#            ^^^ html-template.ng source.css.less meta.property-list.less meta.property-value.less variable.other.readwrite.less support.other.variable.less
+#               ^ html-template.ng source.css.less meta.property-list.less punctuation.terminator.rule.less
 >
 >    &:extend(.test) {
-#^^^^ html-template.ng source.css.less meta.property-list.css
-#    ^ html-template.ng source.css.less meta.property-list.css entity.other.attribute-name.parent-selector.css punctuation.definition.entity.css
-#     ^ html-template.ng source.css.less meta.property-list.css punctuation.separator.key-value.css
-#      ^^^^^^ html-template.ng source.css.less meta.property-list.css
-#            ^ html-template.ng source.css.less meta.property-list.css meta.brace.round.css
-#             ^ html-template.ng source.css.less meta.property-list.css entity.other.attribute-name.class.css punctuation.definition.entity.css
-#              ^^^^ html-template.ng source.css.less meta.property-list.css entity.other.attribute-name.class.css
-#                  ^ html-template.ng source.css.less meta.property-list.css meta.brace.round.css
-#                   ^ html-template.ng source.css.less meta.property-list.css
-#                    ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css punctuation.section.property-list.begin.bracket.curly.css
+#^^^^ html-template.ng source.css.less meta.property-list.less
+#    ^ html-template.ng source.css.less meta.property-list.less meta.selector.less entity.other.attribute-name.parent.less punctuation.definition.entity.less
+#     ^ html-template.ng source.css.less meta.property-list.less meta.selector.less meta.function-call.less punctuation.definition.entity.less
+#      ^^^^^^ html-template.ng source.css.less meta.property-list.less meta.selector.less meta.function-call.less entity.other.attribute-name.pseudo-class.extend.less
+#            ^ html-template.ng source.css.less meta.property-list.less meta.selector.less meta.function-call.less punctuation.definition.group.begin.less
+#             ^ html-template.ng source.css.less meta.property-list.less meta.selector.less meta.function-call.less entity.other.attribute-name.class.less punctuation.definition.entity.less
+#              ^^^^ html-template.ng source.css.less meta.property-list.less meta.selector.less meta.function-call.less entity.other.attribute-name.class.less
+#                  ^ html-template.ng source.css.less meta.property-list.less meta.selector.less meta.function-call.less punctuation.definition.group.end.less
+#                   ^ html-template.ng source.css.less meta.property-list.less meta.selector.less
+#                    ^ html-template.ng source.css.less meta.property-list.less meta.property-list.less punctuation.definition.block.begin.less
 >      font-family: @header-font;
-#^^^^^^ html-template.ng source.css.less meta.property-list.css meta.property-list.css
-#      ^^^^^^^^^^^ html-template.ng source.css.less meta.property-list.css meta.property-list.css support.type.property-name.css
-#                 ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css punctuation.separator.key-value.css
-#                  ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css
-#                   ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css meta.property-value.css variable.other.less punctuation.definition.variable.less
-#                    ^^^^^^^^^^^ html-template.ng source.css.less meta.property-list.css meta.property-list.css meta.property-value.css variable.other.less
-#                               ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css punctuation.terminator.rule.css
+#^^^^^^ html-template.ng source.css.less meta.property-list.less meta.property-list.less
+#      ^^^^^^^^^^^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less support.type.property-name.less
+#                 ^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less punctuation.separator.key-value.less
+#                  ^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less meta.property-value.less
+#                   ^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less variable.other.readwrite.less punctuation.definition.variable.less
+#                    ^^^^^^^^^^^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less variable.other.readwrite.less support.other.variable.less
+#                               ^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less punctuation.terminator.rule.less
 >    }
-#^^^^ html-template.ng source.css.less meta.property-list.css meta.property-list.css
-#    ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css punctuation.section.property-list.end.bracket.curly.css
+#^^^^ html-template.ng source.css.less meta.property-list.less
+#    ^ html-template.ng source.css.less meta.property-list.less punctuation.definition.block.end.less
 >  }
-#^^ html-template.ng source.css.less meta.property-list.css
-#  ^ html-template.ng source.css.less meta.property-list.css punctuation.section.property-list.end.bracket.curly.css
+#^^ html-template.ng source.css.less
+#  ^ html-template.ng source.css.less punctuation.definition.block.end.less
 >
 >  .concrete {
 #^^ html-template.ng source.css.less
-#  ^ html-template.ng source.css.less entity.other.attribute-name.class.css punctuation.definition.entity.css
-#   ^^^^^^^^ html-template.ng source.css.less entity.other.attribute-name.class.css
-#           ^ html-template.ng source.css.less
-#            ^ html-template.ng source.css.less meta.property-list.css punctuation.section.property-list.begin.bracket.curly.css
+#  ^ html-template.ng source.css.less meta.selector.less entity.other.attribute-name.class.less punctuation.definition.entity.less
+#   ^^^^^^^^ html-template.ng source.css.less meta.selector.less entity.other.attribute-name.class.less
+#           ^ html-template.ng source.css.less meta.selector.less
+#            ^ html-template.ng source.css.less meta.property-list.less punctuation.definition.block.begin.less
 >    .test {
-#^^^^ html-template.ng source.css.less meta.property-list.css
-#    ^ html-template.ng source.css.less meta.property-list.css entity.other.attribute-name.class.css punctuation.definition.entity.css
-#     ^^^^ html-template.ng source.css.less meta.property-list.css entity.other.attribute-name.class.css
-#         ^ html-template.ng source.css.less meta.property-list.css
-#          ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css punctuation.section.property-list.begin.bracket.curly.css
+#^^^^ html-template.ng source.css.less meta.property-list.less
+#    ^ html-template.ng source.css.less meta.property-list.less meta.selector.less entity.other.attribute-name.class.less punctuation.definition.entity.less
+#     ^^^^ html-template.ng source.css.less meta.property-list.less meta.selector.less entity.other.attribute-name.class.less
+#         ^ html-template.ng source.css.less meta.property-list.less meta.selector.less
+#          ^ html-template.ng source.css.less meta.property-list.less meta.property-list.less punctuation.definition.block.begin.less
 >      font-family: @header-font;
-#^^^^^^ html-template.ng source.css.less meta.property-list.css meta.property-list.css
-#      ^^^^^^^^^^^ html-template.ng source.css.less meta.property-list.css meta.property-list.css support.type.property-name.css
-#                 ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css punctuation.separator.key-value.css
-#                  ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css
-#                   ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css meta.property-value.css variable.other.less punctuation.definition.variable.less
-#                    ^^^^^^^^^^^ html-template.ng source.css.less meta.property-list.css meta.property-list.css meta.property-value.css variable.other.less
-#                               ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css punctuation.terminator.rule.css
+#^^^^^^ html-template.ng source.css.less meta.property-list.less meta.property-list.less
+#      ^^^^^^^^^^^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less support.type.property-name.less
+#                 ^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less punctuation.separator.key-value.less
+#                  ^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less meta.property-value.less
+#                   ^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less variable.other.readwrite.less punctuation.definition.variable.less
+#                    ^^^^^^^^^^^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less variable.other.readwrite.less support.other.variable.less
+#                               ^ html-template.ng source.css.less meta.property-list.less meta.property-list.less meta.property-name.less punctuation.terminator.rule.less
 >    }
-#^^^^ html-template.ng source.css.less meta.property-list.css meta.property-list.css
-#    ^ html-template.ng source.css.less meta.property-list.css meta.property-list.css punctuation.section.property-list.end.bracket.curly.css
+#^^^^ html-template.ng source.css.less meta.property-list.less
+#    ^ html-template.ng source.css.less meta.property-list.less punctuation.definition.block.end.less
 >  }
-#^^ html-template.ng source.css.less meta.property-list.css
-#  ^ html-template.ng source.css.less meta.property-list.css punctuation.section.property-list.end.bracket.curly.css
+#^^ html-template.ng source.css.less
+#  ^ html-template.ng source.css.less punctuation.definition.block.end.less
 ></style>
 #^^ html-template.ng meta.tag.metadata.style.start.html punctuation.definition.tag.begin.html
 #  ^^^^^ html-template.ng meta.tag.metadata.style.start.html meta.tag.metadata.html entity.name.tag.html html-template.tag.html

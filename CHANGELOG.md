@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.13.2](https://github.com/ghaschel/vscode-angular-html/compare/v2.13.1...v2.13.2) (2025-10-23)
+
+
+### Bug Fixes
+
+* **updated vscode engine requirement:** engine ([320509e](https://github.com/ghaschel/vscode-angular-html/commit/320509e73a9c0c442b502717f56f563e2bd52f7d))
+
 ### [2.13.1](https://github.com/ghaschel/vscode-angular-html/compare/v2.13.0...v2.13.1) (2025-10-23)
 
 

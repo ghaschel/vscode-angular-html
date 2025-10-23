@@ -252,6 +252,8 @@ ANGULAR DIRECTIVES
   [binding]="to.element"
   [binding]="to.function('with-parameter')"
   @animationTrigger
+  [class.text-danger-dark]="isError"
+  [class.hover:dark:text-danger-dark]="isError"
   [@.done]="test"
   (@rightCardTransition.done)="rightCardTransition = 'static'"
   (@.done)="test"
@@ -266,6 +268,7 @@ ANGULAR DIRECTIVES
   [@$visi_bility]="module.$visibility"
   [@visibility]="getMenuState()"
   [@visibility.done]="doSomething()"
+  class="hover:dark:text-xl"
   [(binding)]="to.function('with-parameter')"
   ([test])="to.function('with-parameter')"
   (click)="callback(parameter.test)"
@@ -319,6 +322,8 @@ ANGULAR INTERPOLATIONS
 {{ user?.preferences?.avatar }}
 {{ user?.name | uppercase }}
 {{ user!.preferences!.nickName | uppercase }}
+{{ `hello ${a() + `${test?.asdf()}`} me * 6` }}
+{{ 'hello' + a() + 'me * 6' }}
 
 
 ANGULAR CONTROL FLOW

@@ -3,11 +3,11 @@
     "out": true,
     "node_modules": true
   },
-  "eslint.options": {
-    "extensions": [".ts"]
-  },
   "editor.formatOnSave": true,
-  "eslint.validate": ["typescript", "typescriptreact"],
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact"
+  ],
   "[typescript]": {
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
@@ -20,5 +20,8 @@
   "html.format.extraLiners": "head, body, /html, fieldset",
   "html.format.wrapAttributes": "force-expand-multiline",
   "html.format.indentInnerHtml": true,
-  "i18n-ally.localesPaths": ["src/locale", "src/locale/languages"]
+  "i18n-ally.localesPaths": [
+    "src/locale",
+    "src/locale/languages"
+  ]
 }

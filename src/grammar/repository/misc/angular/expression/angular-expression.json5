@@ -5,6 +5,9 @@
       name: 'expression.ng',
       patterns: [
         {
+          include: 'source.ts#template'
+        },
+        {
           include: '#var-keywords',
         },
         {

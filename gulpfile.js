@@ -1,18 +1,20 @@
-const gulp = require('gulp');
-const merge = require('gulp-merge-json');
-const json5 = require('gulp-json5-to-json');
-const package = require('./package.json');
-const homedir = require('os').homedir();
-const edit = require('gulp-json-editor');
-const prettier = require('gulp-prettier');
-const prettierConfig = require('./.prettierrc.json');
-const scopes = package.contributes.grammars.map(scope => scope.scopeName);
+import gulp from 'gulp';
+import merge from 'gulp-merge-json';
+import json5 from 'gulp-json5-to-json'
+import packageJson from './package.json' with { type: "json" };
+import { homedir as home } from 'os';
+import edit from 'gulp-json-editor'
+import prettier from 'gulp-prettier'
+import prettierConfig from './.prettierrc.json' with { type: "json" };
+const scopes = packageJson.contributes.grammars.map(scope => scope.scopeName);
+const homedir = home();
 
 function watch() {
   return gulp.watch('./src/grammar/**/*.json5', gulp.series(['compile:grammar']));
 }
 
 gulp.task('compile', done => {
+  console.log(prettier.default)
   scopes.forEach(scope => {
     gulp
       .src('./src/grammar/**/*.json5')
@@ -66,17 +68,17 @@ gulp.task('copy', done => {
     gulp
       .src(`./syntaxes/${scope}.json`)
       .pipe(
-        gulp.dest(`${homedir}/.vscode/extensions/${package.publisher}.${package.name}-${package.version}/syntaxes`),
+        gulp.dest(`${homedir}/.vscode/extensions/${packageJson.publisher}.${packageJson.name}-${packageJson.version}/syntaxes`),
       );
   });
 
   gulp
     .src(['./out/**/*'])
-    .pipe(gulp.dest(`${homedir}/.vscode/extensions/${package.publisher}.${package.name}-${package.version}/out`));
+    .pipe(gulp.dest(`${homedir}/.vscode/extensions/${packageJson.publisher}.${packageJson.name}-${packageJson.version}/out`));
 
   gulp
     .src(`./package.json`)
-    .pipe(gulp.dest(`${homedir}/.vscode/extensions/${package.publisher}.${package.name}-${package.version}`));
+    .pipe(gulp.dest(`${homedir}/.vscode/extensions/${packageJson.publisher}.${packageJson.name}-${packageJson.version}`));
 
   done();
 });

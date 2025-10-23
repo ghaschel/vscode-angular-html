@@ -39,7 +39,7 @@
     "package": "npx webpack --mode production"
   },
   "engines": {
-    "vscode": "^1.84.2"
+    "vscode": "^1.105.0"
   },
   "categories": [
     "Programming Languages"
